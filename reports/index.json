@@ -4,5 +4,23 @@
     "agent": "listing",
     "name": "Listing Writer",
     "date": "2026-11-05"
+  },
+  {
+    "file": "2026-11-05-ideas.md",
+    "agent": "ideas",
+    "name": "Product Ideas",
+    "date": "2026-11-05"
+  },
+  {
+    "file": "2026-11-05-content.md",
+    "agent": "content",
+    "name": "Content Planner",
+    "date": "2026-11-05"
+  },
+  {
+    "file": "2026-11-05-daily-task.md",
+    "agent": "daily-task",
+    "name": "Daily Focus",
+    "date": "2026-11-05"
   }
 ]
