@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-05-credit-scout.md",
+    "agent": "credit-scout",
+    "name": "Credit Scout",
+    "date": "2026-11-05"
+  },
+  {
     "file": "2026-11-05-daily-task.md",
     "agent": "daily-task",
     "name": "Daily Focus",
