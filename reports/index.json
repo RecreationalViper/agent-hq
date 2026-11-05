@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-05-review.md",
+    "agent": "review",
+    "name": "Weekly Review (Manager)",
+    "date": "2026-11-05"
+  },
+  {
     "file": "2026-11-05-listing.md",
     "agent": "listing",
     "name": "Listing Writer",
