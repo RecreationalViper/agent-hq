@@ -98,47 +98,62 @@ async function main() {
   console.log(`Model: ${models[0]}`);
   await fs.mkdir("reports", { recursive: true });
   let index = await readJson("reports/index.json", []);
-  let failures = 0;
 
   // Run team members first, the manager-style "reads" agents last so they see today's work.
   due.sort((a, b) => Boolean(a.reads) - Boolean(b.reads));
 
+  async function runAgent(agent) {
+    let task = `Today is ${date}.\n\nYour job: ${agent.instructions}`;
+    if (agent.reads) task += `\n\nThis week's team reports:${await weekOfReports(index, date)}`;
+    const body = JSON.stringify({
+      systemInstruction: { parts: [{ text: `You are "${agent.name}", an agent on a small AI team.\n\nBusiness context: ${cfg.context}\n\n${RULES}` }] },
+      contents: [{ role: "user", parts: [{ text: task }] }],
+      generationConfig: { temperature: 0.8 }
+    });
+    // Try the best model first. Retired models are dropped for good; busy ones are
+    // skipped. Whichever model answers moves to the front so later agents start there.
+    let data, lastErr;
+    for (let i = 0; i < models.length && i < 5 && !data; ) {
+      const m = models[i];
+      try {
+        data = await api(`/${m}:generateContent`, { method: "POST", body });
+        if (i) { console.log(`  answered by ${m} (using it first from now on)`); models = [m, ...models.filter((x) => x !== m)]; }
+      } catch (err) {
+        lastErr = err;
+        if (RETIRED.test(err.message)) { console.log(`  ${m} is retired, skipping it`); models = models.filter((x) => x !== m); continue; }
+        if (err.message.startsWith("BUSY") && models[i + 1]) { console.log(`  ${m} is busy, trying ${models[i + 1]}`); i++; continue; }
+        throw err;
+      }
+    }
+    if (!data) throw lastErr || new Error("no model answered");
+    const text = (data.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").trim();
+    if (!text) throw new Error("empty reply");
+    const file = `${date}-${agent.id}.md`;
+    await fs.writeFile(`reports/${file}`, `# ${agent.name} - ${date}\n\n${text}\n`);
+    index = [{ file, agent: agent.id, name: agent.name, date }, ...index.filter((r) => r.file !== file)].slice(0, 300);
+    await fs.writeFile("reports/index.json", JSON.stringify(index, null, 2));
+    console.log(`  saved reports/${file}`);
+  }
+
+  // First pass, then one retry pass for anything that failed (busy spikes usually pass).
+  let failed = [];
   for (const agent of due) {
     console.log(`Running ${agent.name}...`);
-    try {
-      let task = `Today is ${date}.\n\nYour job: ${agent.instructions}`;
-      if (agent.reads) task += `\n\nThis week's team reports:${await weekOfReports(index, date)}`;
-      const body = JSON.stringify({
-        systemInstruction: { parts: [{ text: `You are "${agent.name}", an agent on a small AI team.\n\nBusiness context: ${cfg.context}\n\n${RULES}` }] },
-        contents: [{ role: "user", parts: [{ text: task }] }],
-        generationConfig: { temperature: 0.8 }
-      });
-      // Try the best model first. Retired models are dropped for good;
-      // busy ones are skipped for this agent only, since demand spikes pass.
-      let data, lastErr;
-      for (let i = 0; i < models.length && i < 4 && !data; ) {
-        const m = models[i];
-        try { data = await api(`/${m}:generateContent`, { method: "POST", body }); if (i) console.log(`  answered by ${m}`); }
-        catch (err) {
-          lastErr = err;
-          if (RETIRED.test(err.message)) { console.log(`  ${m} is retired, skipping it`); models = models.filter((x) => x !== m); continue; }
-          if (err.message.startsWith("BUSY") && models[i + 1]) { console.log(`  ${m} is busy, trying ${models[i + 1]}`); i++; continue; }
-          throw err;
-        }
-      }
-      if (!data) throw lastErr || new Error("no model answered");
-      const text = (data.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").trim();
-      if (!text) throw new Error("empty reply");
-      const file = `${date}-${agent.id}.md`;
-      await fs.writeFile(`reports/${file}`, `# ${agent.name} - ${date}\n\n${text}\n`);
-      index = [{ file, agent: agent.id, name: agent.name, date }, ...index.filter((r) => r.file !== file)].slice(0, 300);
-      await fs.writeFile("reports/index.json", JSON.stringify(index, null, 2));
-      console.log(`  saved reports/${file}`);
-    } catch (e) {
-      failures++;
-      console.error(`  ${agent.name} failed: ${e.message}`);
+    try { await runAgent(agent); }
+    catch (e) { failed.push(agent); console.error(`  ${agent.name} failed: ${e.message}`); }
+  }
+  if (failed.length) {
+    console.log(`Retrying ${failed.length} agent(s) in 90 seconds...`);
+    await sleep(90000);
+    const again = failed; failed = [];
+    for (const agent of again) {
+      console.log(`Retrying ${agent.name}...`);
+      try { await runAgent(agent); }
+      catch (e) { failed.push(agent); console.error(`  ${agent.name} failed again: ${e.message}`); }
     }
   }
+  const failures = failed.length;
+  console.log(`Done: ${due.length - failures} of ${due.length} agent(s) saved a report.`);
   if (failures === due.length) throw new Error("Every agent failed this run.");
 }
 
