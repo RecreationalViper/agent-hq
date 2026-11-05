@@ -30,10 +30,17 @@ function isDue(agent, dow) {
 }
 
 async function api(path, init = {}) {
-  for (let attempt = 1; attempt <= 3; attempt++) {
-    const res = await fetch(API + path, { ...init, headers: { "Content-Type": "application/json", "x-goog-api-key": KEY, ...(init.headers || {}) } });
-    if ((res.status === 429 || res.status === 503) && attempt < 3) { console.log(`  rate limited (${res.status}), waiting...`); await sleep(30000 * attempt); continue; }
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    let res;
+    try {
+      res = await fetch(API + path, { ...init, signal: AbortSignal.timeout(120000), headers: { "Content-Type": "application/json", "x-goog-api-key": KEY, ...(init.headers || {}) } });
+    } catch (e) {
+      if (attempt < 2) { console.log("  no answer, retrying..."); continue; }
+      throw new Error("BUSY: Google didn't answer in time.");
+    }
+    if ((res.status === 429 || res.status === 503) && attempt < 2) { console.log(`  busy (${res.status}), waiting...`); await sleep(20000); continue; }
     const data = await res.json().catch(() => ({}));
+    if (res.status === 429 || res.status === 503) throw new Error("BUSY: " + (data?.error?.message || `HTTP ${res.status}`));
     if (!res.ok) throw new Error(data?.error?.message || `HTTP ${res.status}`);
     return data;
   }
@@ -106,15 +113,20 @@ async function main() {
         contents: [{ role: "user", parts: [{ text: task }] }],
         generationConfig: { temperature: 0.8 }
       });
-      let data;
-      while (true) {
-        try { data = await api(`/${models[0]}:generateContent`, { method: "POST", body }); break; }
+      // Try the best model first. Retired models are dropped for good;
+      // busy ones are skipped for this agent only, since demand spikes pass.
+      let data, lastErr;
+      for (let i = 0; i < models.length && i < 4 && !data; ) {
+        const m = models[i];
+        try { data = await api(`/${m}:generateContent`, { method: "POST", body }); if (i) console.log(`  answered by ${m}`); }
         catch (err) {
-          if (!RETIRED.test(err.message) || models.length < 2) throw err;
-          console.log(`  ${models[0]} is unavailable, switching to ${models[1]}`);
-          models = models.slice(1);
+          lastErr = err;
+          if (RETIRED.test(err.message)) { console.log(`  ${m} is retired, skipping it`); models = models.filter((x) => x !== m); continue; }
+          if (err.message.startsWith("BUSY") && models[i + 1]) { console.log(`  ${m} is busy, trying ${models[i + 1]}`); i++; continue; }
+          throw err;
         }
       }
+      if (!data) throw lastErr || new Error("no model answered");
       const text = (data.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").trim();
       if (!text) throw new Error("empty reply");
       const file = `${date}-${agent.id}.md`;

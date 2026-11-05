@@ -219,17 +219,20 @@ details summary{cursor:pointer;color:var(--mute);font-size:14px}
   async function gemini(systemText, contents, opts = {}) {
     try { return await geminiOnce(systemText, contents, opts); }
     catch (e) {
-      // If the saved model was retired by Google, move to the next one and try again.
-      if (!/no longer available|not found|is not supported|has been retired/i.test(e.message)) throw e;
+      const retired = /no longer available|not found|is not supported|has been retired/i.test(e.message);
+      const busy = /high demand|overloaded|Free limit reached/i.test(e.message);
+      if (!retired && !busy) throw e;
       const next = modelList.filter(n => n !== model)[0];
       if (!next) throw e;
-      model = next; store.set("model", model);
+      if (busy) return geminiOnce(systemText, contents, opts, next); // just this once
+      model = next; store.set("model", model); // retired: switch for good
       const sel = document.getElementById("model"); if (sel) sel.value = model;
       return geminiOnce(systemText, contents, opts);
     }
   }
 
-  async function geminiOnce(systemText, contents, { json = false } = {}) {
+  async function geminiOnce(systemText, contents, { json = false } = {}, useModel) {
+    const m = useModel || model;
     if (!apiKey) throw new Error("Add your free API key in Settings first.");
     if (!model) throw new Error("Pick a model in Settings first.");
     const body = {
@@ -238,14 +241,14 @@ details summary{cursor:pointer;color:var(--mute);font-size:14px}
       generationConfig: { temperature: 0.7 }
     };
     if (json) body.generationConfig.responseMimeType = "application/json";
-    for (let attempt = 0; attempt < 3; attempt++) {
-      const res = await fetch(API + "/" + model + ":generateContent", {
+    for (let attempt = 0; attempt < 2; attempt++) {
+      const res = await fetch(API + "/" + m + ":generateContent", {
         method: "POST",
         headers: { "Content-Type": "application/json", "x-goog-api-key": apiKey },
         body: JSON.stringify(body)
       });
       if (res.status === 429 || res.status === 503) {
-        if (attempt === 2) throw new Error("Free limit reached for now (" + res.status + "). Wait a minute, or try again tomorrow if it's the daily limit.");
+        if (attempt === 1) throw new Error("Free limit reached for now (" + res.status + "). Wait a minute, or try again tomorrow if it's the daily limit.");
         await sleep(20000 * (attempt + 1));
         continue;
       }
