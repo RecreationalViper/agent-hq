@@ -105,16 +105,25 @@ async function main() {
   // Run team members first, the manager-style "reads" agents last so they see today's work.
   due.sort((a, b) => Boolean(a.reads) - Boolean(b.reads));
 
-  async function runAgent(agent) {
+  async function runAgent(agent, noSearch = false) {
+    if (agent.search && !noSearch) {
+      try { return await runAgent(agent, "try"); }
+      catch (e) {
+        if (!/quota/i.test(e.message)) throw e;
+        console.log("  web search limit hit, answering without web search");
+        return runAgent(agent, true);
+      }
+    }
+    const search = agent.search && noSearch !== true;
     let task = `Today is ${date}.\n\nYour job: ${agent.instructions}`;
     if (agent.reads) task += `\n\nThis week's team reports:${await weekOfReports(index, date, new Set(cfg.agents.filter((a) => a.context).map((a) => a.id)))}`;
     // Agents with "search": true can use Google Search (free on Gemini) and must cite sources.
-    const rules = agent.search ? RULES.replace(/You have no live internet access:[^.]*\./, "You can search the web with Google Search: use it, prefer official sources, include the link for every claim, and say when something could not be confirmed.") : RULES;
+    const rules = search ? RULES.replace(/You have no live internet access:[^.]*\./, "You can search the web with Google Search: use it, prefer official sources, include the link for every claim, and say when something could not be confirmed.") : RULES;
     const body = JSON.stringify({
       systemInstruction: { parts: [{ text: `You are "${agent.name}", an agent on a small AI team.\n\nContext: ${agent.context || cfg.context}\n\n${rules}` }] },
       contents: [{ role: "user", parts: [{ text: task }] }],
-      ...(agent.search ? { tools: [{ google_search: {} }] } : {}),
-      generationConfig: { temperature: agent.search ? 0.3 : 0.8 }
+      ...(search ? { tools: [{ google_search: {} }] } : {}),
+      generationConfig: { temperature: search ? 0.3 : 0.8 }
     });
     // Try the best model first. Retired models are dropped for good; busy ones are
     // skipped. Whichever model answers moves to the front so later agents start there.
@@ -141,6 +150,7 @@ async function main() {
       sources += `\n- [${(w.title || w.uri).replace(/[\[\]]/g, "")}](${w.uri})`;
     }
     if (sources) text += `\n\n## Sources${sources}`;
+    if (agent.search && !search) text = `> ⚠️ Web search was unavailable today, so this is from memory and may be out of date. Check the official links before acting.\n\n${text}`;
     const file = `${date}-${agent.id}.md`;
     await fs.writeFile(`reports/${file}`, `# ${agent.name} - ${date}\n\n${text}\n`);
     index = [{ file, agent: agent.id, name: agent.name, date }, ...index.filter((r) => r.file !== file)].slice(0, 300);
