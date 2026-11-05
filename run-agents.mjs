@@ -74,9 +74,9 @@ async function readJson(path, fallback) {
   try { return JSON.parse(await fs.readFile(path, "utf8")); } catch { return fallback; }
 }
 
-async function weekOfReports(index, date) {
+async function weekOfReports(index, date, skip = new Set()) {
   const cutoff = new Date(date + "T00:00:00Z").getTime() - 7 * 86400000;
-  const recent = index.filter((r) => new Date(r.date + "T00:00:00Z").getTime() >= cutoff && r.agent !== "review").slice(0, 20);
+  const recent = index.filter((r) => new Date(r.date + "T00:00:00Z").getTime() >= cutoff && r.agent !== "review" && !skip.has(r.agent)).slice(0, 20);
   let text = "";
   for (const r of recent) {
     const body = await fs.readFile(`reports/${r.file}`, "utf8").catch(() => "");
@@ -104,11 +104,14 @@ async function main() {
 
   async function runAgent(agent) {
     let task = `Today is ${date}.\n\nYour job: ${agent.instructions}`;
-    if (agent.reads) task += `\n\nThis week's team reports:${await weekOfReports(index, date)}`;
+    if (agent.reads) task += `\n\nThis week's team reports:${await weekOfReports(index, date, new Set(cfg.agents.filter((a) => a.context).map((a) => a.id)))}`;
+    // Agents with "search": true can use Google Search (free on Gemini) and must cite sources.
+    const rules = agent.search ? RULES.replace(/You have no live internet access:[^.]*\./, "You can search the web with Google Search: use it, prefer official sources, include the link for every claim, and say when something could not be confirmed.") : RULES;
     const body = JSON.stringify({
-      systemInstruction: { parts: [{ text: `You are "${agent.name}", an agent on a small AI team.\n\nBusiness context: ${cfg.context}\n\n${RULES}` }] },
+      systemInstruction: { parts: [{ text: `You are "${agent.name}", an agent on a small AI team.\n\nContext: ${agent.context || cfg.context}\n\n${rules}` }] },
       contents: [{ role: "user", parts: [{ text: task }] }],
-      generationConfig: { temperature: 0.8 }
+      ...(agent.search ? { tools: [{ google_search: {} }] } : {}),
+      generationConfig: { temperature: agent.search ? 0.3 : 0.8 }
     });
     // Try the best model first. Retired models are dropped for good; busy ones are
     // skipped. Whichever model answers moves to the front so later agents start there.
@@ -126,8 +129,15 @@ async function main() {
       }
     }
     if (!data) throw lastErr || new Error("no model answered");
-    const text = (data.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").trim();
+    let text = (data.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").trim();
     if (!text) throw new Error("empty reply");
+    let sources = "";
+    const seen = new Set();
+    for (const c of data.candidates?.[0]?.groundingMetadata?.groundingChunks || []) {
+      const w = c.web; if (!w?.uri || seen.has(w.uri)) continue; seen.add(w.uri);
+      sources += `\n- [${(w.title || w.uri).replace(/[\[\]]/g, "")}](${w.uri})`;
+    }
+    if (sources) text += `\n\n## Sources${sources}`;
     const file = `${date}-${agent.id}.md`;
     await fs.writeFile(`reports/${file}`, `# ${agent.name} - ${date}\n\n${text}\n`);
     index = [{ file, agent: agent.id, name: agent.name, date }, ...index.filter((r) => r.file !== file)].slice(0, 300);

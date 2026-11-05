@@ -27,6 +27,14 @@
       "instructions": "Pick one product from our kits or this week's product ideas and draft a complete Etsy listing: a title under 140 characters, exactly 13 tags of 20 characters or fewer, a description with a clear 'What you get' list and this AI disclosure line: 'Designed by me with the help of AI tools; previews show the real files you receive.' Mark it DRAFT - owner must review and publish."
     },
     {
+      "id": "credit-scout",
+      "name": "Credit Scout",
+      "schedule": "weekly:mon",
+      "search": true,
+      "context": "The owner uses Emergent (emergent.sh), an AI app builder that runs on credits, and wants as many free credits as possible without paying. Owner works only from an iPhone and has a $0 budget.",
+      "instructions": "Search the web for every current, legitimate way to get free or bonus Emergent credits: the free plan's daily credits, the official referral program, official promotions or events, hackathons, contests, startup/perk programs, and student or creator offers. For each one: what you get, who qualifies, the exact steps to claim it on an iPhone, any deadline, and the official link. Put the easiest and most valuable ones first. Mark anything found only on coupon or third-party sites as 'unverified'. Never suggest extra or fake accounts, fake referrals, or anything against Emergent's terms. End with 'What changed since last week' if you can tell, and one action to take today."
+    },
+    {
       "id": "review",
       "name": "Weekly Review (Manager)",
       "schedule": "weekly:sun",
