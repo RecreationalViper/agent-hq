@@ -73,6 +73,18 @@ async function pickModels(wanted) {
   return usable;
 }
 
+// Fetch a public web page as plain text so agents can read real, current info.
+async function pageText(url) {
+  try {
+    const res = await fetch(url, { signal: AbortSignal.timeout(30000), headers: { "User-Agent": "Mozilla/5.0 (compatible; AgentHQ)" } });
+    if (!res.ok) return `(could not load: HTTP ${res.status})`;
+    const html = await res.text();
+    return html.replace(/<(script|style|noscript|svg)[\s\S]*?<\/\1>/gi, " ").replace(/<[^>]+>/g, " ")
+      .replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&#39;|&rsquo;/g, "'").replace(/&quot;/g, '"')
+      .replace(/\s+/g, " ").trim().slice(0, 8000) || "(page was empty)";
+  } catch (e) { return `(could not load: ${e.message})`; }
+}
+
 async function readJson(path, fallback) {
   try { return JSON.parse(await fs.readFile(path, "utf8")); } catch { return fallback; }
 }
@@ -116,6 +128,10 @@ async function main() {
     }
     const search = agent.search && noSearch !== true;
     let task = `Today is ${date}.\n\nYour job: ${agent.instructions}`;
+    if (Array.isArray(agent.pages) && agent.pages.length) {
+      task += "\n\nToday's copies of these web pages (real and current - base your answer on them, link the page for each claim, and say when a page could not be loaded):";
+      for (const url of agent.pages) task += `\n\n### ${url}\n${await pageText(url)}`;
+    }
     if (agent.reads) task += `\n\nThis week's team reports:${await weekOfReports(index, date, new Set(cfg.agents.filter((a) => a.context).map((a) => a.id)))}`;
     // Agents with "search": true can use Google Search (free on Gemini) and must cite sources.
     const rules = search ? RULES.replace(/You have no live internet access:[^.]*\./, "You can search the web with Google Search: use it, prefer official sources, include the link for every claim, and say when something could not be confirmed.") : RULES;
