@@ -1,84 +1,61 @@
 # Credit Scout - 2026-11-05
 
-> ⚠️ Web search was unavailable today, so this is from memory and may be out of date. Check the official links before acting.
+Here is the breakdown of all current, legitimate ways to get free or bonus Emergent credits based strictly on the provided web pages.
 
-Hey boss! **Credit Scout** here with your zero-budget guide to legitimate Emergent (`emergent.sh`) credits, formatted specifically for your iPhone.
-
-*Disclaimer: I do not have live internet access. Website details, fees, and promotional offers may have updated since my last training data. I cannot visit sites or claim credits for you—you will need to perform the actions below.*
+*Note: All 5 provided pages loaded successfully.*
 
 ---
 
-### 1. Daily Free Tier Allowance (Easiest & Instant)
-* **What you get:** Default daily/monthly credit reset for active free-tier accounts.
-* **Who qualifies:** Anyone with a standard Emergent account.
-* **iPhone Steps:** 
-  1. Open **Safari** or your mobile browser.
-  2. Navigate to `emergent.sh` and log into your dashboard.
-  3. Confirm your daily credit balance has refreshed before starting new builds.
-* **Deadline:** Resets daily (ongoing).
-* **Official Link:** [emergent.sh](https://emergent.sh) *(Needs Owner Action)*
+### 1. Free Tier Monthly Credits (Official)
+*   **What you get:** 10 free credits per month.
+*   **Who qualifies:** Anyone who creates a free account.
+*   **Steps to claim on iPhone:**
+    1. Open Safari and go to [Emergent Pricing](https://emergent.sh/pricing).
+    2. Tap **Get started** under the **Free** tier column.
+    3. Sign up with your email or Google account.
+    4. Your 10 monthly credits will automatically apply to your account workspace.
+*   **Deadline:** None (ongoing).
+*   **Official Link:** [https://emergent.sh/pricing](https://emergent.sh/pricing)
 
 ---
 
-### 2. Emergent Referral Program (Highest Value)
-* **What you get:** Bonus credits credited to your account whenever a new user signs up using your personal invite link.
-* **Who qualifies:** All registered users. *(Strictly 1 account per person—never create secondary/alt accounts to self-refer, as this violates terms and risks a ban).*
-* **iPhone Steps:**
-  1. Go to your Emergent **Account Settings** or **Dashboard**.
-  2. Tap **Copy Referral Link**.
-  3. Use the iOS Share Sheet to send your link to builder groups, social accounts, or friends.
-* **Deadline:** Ongoing.
-* **Official Link:** [emergent.sh/account](https://emergent.sh) *(Needs Owner Action)*
+### 2. Startup Credit Grant ($12,500) — UNVERIFIED
+*   **Status:** **Unverified** (listed on a third-party site, `getaiperks.com`).
+*   **What you get:** Up to $12,500 in free Emergent credits (roughly 47,000 to 62,000 credits).
+*   **Who qualifies:** Early-stage startups. Specific qualification depends on your startup stage and funding status.
+*   **Steps to claim on iPhone:**
+    1. Open Safari and visit [Get AI Perks - Emergent](https://www.getaiperks.com/en/perks/emergent).
+    2. Review the startup eligibility requirements.
+    3. Tap **Get this perk** to submit your application directly through their partner application form.
+*   **Deadline:** Not specified.
+*   **Link:** [https://www.getaiperks.com/en/perks/emergent](https://www.getaiperks.com/en/perks/emergent)
 
 ---
 
-### 3. Community Discord & Hackathon Grants
-* **What you get:** Event credits (often $50–$500+ value) for participating in official build-athons or community challenges.
-* **Who qualifies:** Open to all registered builders entering sponsored events (e.g., via Devpost, Lablab.ai, or Emergent's official Discord).
-* **iPhone Steps:**
-  1. Open the **Discord app** on your iPhone.
-  2. Join the official Emergent Discord community.
-  3. Turn on notifications for the **#announcements** or **#hackathons** channels.
-  4. Submit projects via mobile form links provided during active events.
-* **Deadline:** Event-specific.
-* **Official Link:** Check Emergent’s official social links / Discord server. *(Needs Owner Action)*
+### 3. Emergent Affiliate & Referral Program (Official Payouts)
+*   **What you get:** Up to $150 per successful referral OR 20% recurring cash commission on subscription revenue for the first 6 months, plus eligibility for weekly performance competition bonuses. *(Note: This pays out cash via PayPal, which you can use to purchase credit top-ups).*
+*   **Who qualifies:** Anyone at least 18 years old with a legitimate website, blog, or social media presence (subject to approval by Emergent). Self-referrals and fake accounts are strictly prohibited.
+*   **Steps to claim on iPhone:**
+    1. Open Safari and go to [Emergent Affiliates](https://emergent.sh/affiliates).
+    2. Tap **Join as Affiliate**.
+    3. Complete the application form.
+    4. Once approved, copy your unique referral link from your affiliate dashboard and share it with your audience.
+*   **Deadline:** Ongoing (payouts processed monthly by the 15th for balances over $100).
+*   **Official Link:** [https://emergent.sh/affiliates](https://emergent.sh/affiliates)
 
 ---
 
-### 4. Student & Educator Credit Requests
-* **What you get:** Supplemental building credits for learning or research.
-* **Who qualifies:** Anyone with a valid `.edu` or accredited academic email address.
-* **iPhone Steps:**
-  1. Open **Mail app** on your iPhone using your official student/educator email.
-  2. Send a polite request to official Emergent support detailing your building goals/projects.
-  3. Request an academic credit top-up.
-* **Deadline:** Ongoing.
-* **Official Link:** Support / Contact form on [emergent.sh](https://emergent.sh) *(Needs Owner Action)*
+### Worth Checking (No Promises)
+
+*   **Emergent AI Contests & Hackathons:** Links titled "AI Contest - Join build projects and win" appear in the site header/footer on [Emergent Pricing](https://emergent.sh/pricing), but specific active credit rewards or terms are not detailed on the provided pages.
+*   **Student / Creator Discounts:** Not mentioned in the provided documentation. 
 
 ---
 
-### 5. Startup Perk Programs (Secret / AWS / Incubators)
-* **What you get:** High-tier startup credit packages.
-* **Who qualifies:** Early-stage startup founders registered with partner perk networks (e.g., JoinSecret, Product Hunt Ship, or accredited accelerators).
-* **iPhone Steps:**
-  1. Log into your startup perk provider account on Safari.
-  2. Search for **Emergent** in the perks directory.
-  3. Claim the redemption code and paste it into your Emergent billing settings.
-* **Deadline:** Provider-dependent.
-* **Official Link:** Partner dashboards. *(Needs Owner Action)*
+### What Changed Since Last Week
+*   *Unknown / No prior baseline:* Because this is the first documented review of these specific pages, no changes relative to last week can be confirmed.
 
 ---
 
-### ⚠️ Unverified / Third-Party Offers
-* **Warning:** Any promo codes listed on third-party coupon aggregators (e.g., RetailMeNot, CouponAnnie) are **unverified**. Emergent rarely issues public discount codes on coupon sites. 
-* **Rule:** Never pay for a promo code or share your login credentials on any external site.
-
----
-
-### 🔄 What Changed Since Last Week?
-Because I do not have live web access, I cannot automatically pull today’s live site updates. Check the official Discord **#announcements** tab from your phone to verify if any flash weekend promos were posted.
-
----
-
-### 🎯 One Action to Take Today
-**Copy your official Emergent referral link** from your account dashboard on your iPhone, and save it to your iOS Notes app so you can share it quickly whenever someone asks what builder platform you use.
+### One Action to Take Today
+**Sign up for the Free Tier on your iPhone.** Go to [https://emergent.sh/pricing](https://emergent.sh/pricing) and create your account to immediately claim your 10 free recurring monthly credits.
