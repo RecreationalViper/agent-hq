@@ -39,13 +39,28 @@ async function api(path, init = {}) {
   }
 }
 
-async function pickModel(wanted) {
-  if (wanted && wanted !== "auto") return wanted.startsWith("models/") ? wanted : `models/${wanted}`;
+// Newest version first, e.g. gemini-3.8-flash before gemini-2.5-flash.
+function version(name) {
+  const m = name.match(/gemini-(\d+(?:\.\d+)?)/i);
+  return m ? parseFloat(m[1]) : 0;
+}
+
+const RETIRED = /no longer available|not found|is not supported|deprecated|has been retired/i;
+
+// Returns models to try, best first. Retired models are skipped automatically at run time.
+async function pickModels(wanted) {
   const { models = [] } = await api("/models?pageSize=200");
-  const usable = models.filter((m) => (m.supportedGenerationMethods || []).includes("generateContent") && /gemini/i.test(m.name) && !/image|tts|audio|live|embed/i.test(m.name));
-  const pick = usable.find((m) => /flash/i.test(m.name) && !/lite|preview|exp/i.test(m.name)) || usable.find((m) => /flash/i.test(m.name)) || usable[0];
-  if (!pick) throw new Error("No usable Gemini model found for this key.");
-  return pick.name;
+  const usable = models
+    .filter((m) => (m.supportedGenerationMethods || []).includes("generateContent") && /gemini/i.test(m.name) && !/image|tts|audio|live|embed/i.test(m.name))
+    .map((m) => m.name);
+  const rank = (n) => (/flash/i.test(n) ? 0 : 2) + (/lite|preview|exp/i.test(n) ? 1 : 0);
+  usable.sort((a, b) => rank(a) - rank(b) || version(b) - version(a));
+  if (wanted && wanted !== "auto") {
+    const w = wanted.startsWith("models/") ? wanted : `models/${wanted}`;
+    return [w, ...usable.filter((n) => n !== w)];
+  }
+  if (!usable.length) throw new Error("No usable Gemini model found for this key.");
+  return usable;
 }
 
 async function readJson(path, fallback) {
@@ -72,8 +87,8 @@ async function main() {
   console.log(`Date ${date} (${dow}), mode "${MODE}": ${due.length} agent(s) due -> ${due.map((a) => a.id).join(", ") || "none"}`);
   if (!due.length) return;
 
-  const model = await pickModel(cfg.model);
-  console.log(`Model: ${model}`);
+  let models = await pickModels(cfg.model);
+  console.log(`Model: ${models[0]}`);
   await fs.mkdir("reports", { recursive: true });
   let index = await readJson("reports/index.json", []);
   let failures = 0;
@@ -86,14 +101,20 @@ async function main() {
     try {
       let task = `Today is ${date}.\n\nYour job: ${agent.instructions}`;
       if (agent.reads) task += `\n\nThis week's team reports:${await weekOfReports(index, date)}`;
-      const data = await api(`/${model}:generateContent`, {
-        method: "POST",
-        body: JSON.stringify({
-          systemInstruction: { parts: [{ text: `You are "${agent.name}", an agent on a small AI team.\n\nBusiness context: ${cfg.context}\n\n${RULES}` }] },
-          contents: [{ role: "user", parts: [{ text: task }] }],
-          generationConfig: { temperature: 0.8 }
-        })
+      const body = JSON.stringify({
+        systemInstruction: { parts: [{ text: `You are "${agent.name}", an agent on a small AI team.\n\nBusiness context: ${cfg.context}\n\n${RULES}` }] },
+        contents: [{ role: "user", parts: [{ text: task }] }],
+        generationConfig: { temperature: 0.8 }
       });
+      let data;
+      while (true) {
+        try { data = await api(`/${models[0]}:generateContent`, { method: "POST", body }); break; }
+        catch (err) {
+          if (!RETIRED.test(err.message) || models.length < 2) throw err;
+          console.log(`  ${models[0]} is unavailable, switching to ${models[1]}`);
+          models = models.slice(1);
+        }
+      }
       const text = (data.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").trim();
       if (!text) throw new Error("empty reply");
       const file = `${date}-${agent.id}.md`;

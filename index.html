@@ -215,7 +215,21 @@ details summary{cursor:pointer;color:var(--mute);font-size:14px}
   // ---------- Gemini ----------
   const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
-  async function gemini(systemText, contents, { json = false } = {}) {
+  let modelList = [];
+  async function gemini(systemText, contents, opts = {}) {
+    try { return await geminiOnce(systemText, contents, opts); }
+    catch (e) {
+      // If the saved model was retired by Google, move to the next one and try again.
+      if (!/no longer available|not found|is not supported|has been retired/i.test(e.message)) throw e;
+      const next = modelList.filter(n => n !== model)[0];
+      if (!next) throw e;
+      model = next; store.set("model", model);
+      const sel = document.getElementById("model"); if (sel) sel.value = model;
+      return geminiOnce(systemText, contents, opts);
+    }
+  }
+
+  async function geminiOnce(systemText, contents, { json = false } = {}) {
     if (!apiKey) throw new Error("Add your free API key in Settings first.");
     if (!model) throw new Error("Pick a model in Settings first.");
     const body = {
@@ -262,8 +276,14 @@ details summary{cursor:pointer;color:var(--mute);font-size:14px}
       sel.innerHTML = "";
       list.forEach(m => { const o = document.createElement("option"); o.value = m.name; o.textContent = (m.displayName || m.name) + " — " + m.name.replace("models/", ""); sel.appendChild(o); });
       if (!list.length) throw new Error("No usable models found for this key.");
+      const ver = (n) => { const v = n.match(/gemini-(\d+(?:\.\d+)?)/i); return v ? parseFloat(v[1]) : 0; };
+      const rank = (n) => (/flash/i.test(n) ? 0 : 2) + (/lite|preview|exp/i.test(n) ? 1 : 0);
+      list.sort((a, b) => rank(a.name) - rank(b.name) || ver(b.name) - ver(a.name));
+      sel.innerHTML = "";
+      list.forEach(m => { const o = document.createElement("option"); o.value = m.name; o.textContent = (m.displayName || m.name) + " — " + m.name.replace("models/", ""); sel.appendChild(o); });
+      modelList = list.map(m => m.name);
       const keep = list.find(m => m.name === model);
-      const flash = list.find(m => /flash/i.test(m.name) && !/lite|preview|exp/i.test(m.name)) || list.find(m => /flash/i.test(m.name)) || list[0];
+      const flash = list[0];
       model = keep ? keep.name : flash.name;
       sel.value = model;
       store.set("model", model);
