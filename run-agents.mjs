@@ -40,7 +40,10 @@ async function api(path, init = {}) {
     }
     if ((res.status === 429 || res.status === 503) && attempt < 2) { console.log(`  busy (${res.status}), waiting...`); await sleep(20000); continue; }
     const data = await res.json().catch(() => ({}));
-    if (res.status === 429 || res.status === 503) throw new Error("BUSY: " + (data?.error?.message || `HTTP ${res.status}`));
+    if (res.status === 429 || res.status === 503) {
+      const quota = (data?.error?.details || []).flatMap((d) => d.violations || []).map((v) => v.quotaId).filter(Boolean);
+      throw new Error("BUSY: " + (data?.error?.message || `HTTP ${res.status}`).split(" For more information")[0] + (quota.length ? ` [limit: ${[...new Set(quota)].join(", ")}]` : ""));
+    }
     if (!res.ok) throw new Error(data?.error?.message || `HTTP ${res.status}`);
     return data;
   }
