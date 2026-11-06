@@ -1,0 +1,57 @@
+# GitHub Radar — runs on its own, all day and all night, with zero AI tokens.
+#
+# It searches GitHub every 3 hours for agent skills, AI enhancements, legitimate
+# free tokens/credits and cost-cutting tools, filters out scams, and commits only
+# what's genuinely new. The daily "GitHub Radar" agent then reads scout/latest.md
+# and turns it into a short phone-friendly report.
+#
+# Nothing runs on your phone or computer. GitHub's free Actions minutes do the work.
+name: GitHub Radar
+on:
+  schedule:
+    - cron: "23 */3 * * *" # every 3 hours (00:23, 03:23, … UTC)
+  workflow_dispatch:
+    inputs:
+      queries:
+        description: "How many saved searches to run (1-40). Blank = the normal rotating slice."
+        default: ""
+permissions:
+  contents: write
+concurrency: agent-hq
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      # Catches a broken config (or a scam filter that stopped matching) before it
+      # silently wastes a day of scanning.
+      - name: Check the filters still work
+        run: node scout/scan.mjs --selftest
+
+      - name: Scan GitHub
+        run: node scout/scan.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RADAR_QUERY_LIMIT: ${{ github.event.inputs.queries }}
+
+      # Shows today's digest right in the Actions tab, which is readable on a phone.
+      - name: Show digest in the run summary
+        if: always()
+        run: |
+          if [ -f scout/latest.md ]; then
+            cat scout/latest.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No digest was written this run (nothing changed, or the scan failed)." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Save findings
+        if: always()
+        run: |
+          git config user.name "agent-hq-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A scout reports
+          git diff --cached --quiet || (git commit -m "GitHub radar update" && git pull --rebase && git push)

@@ -1,0 +1,153 @@
+{
+  "note": "Settings for the GitHub Radar (scout/scan.mjs). Edit this file to steer what gets scanned. Queries use normal GitHub search syntax. {since} is replaced automatically with a rolling date so results stay fresh.",
+  "limits": {
+    "queriesPerRun": 12,
+    "minStars": 8,
+    "maxReportPerCategory": 5,
+    "shortlistSize": 5,
+    "queryDelayMs": 2200,
+    "inspectSkillFiles": 4,
+    "seenCap": 1500
+  },
+  "targets": {
+    "skills": [
+      "topic:claude-skills stars:>5 pushed:>{since}",
+      "topic:agent-skills stars:>5 pushed:>{since}",
+      "topic:skills in:name,description,readme stars:>15 pushed:>{since}",
+      "\"SKILL.md\" agent skills in:readme stars:>10 pushed:>{since}",
+      "topic:mcp-server stars:>200 pushed:>{since}",
+      "awesome agent skills in:name,description stars:>150 pushed:>{since}",
+      "topic:agent-toolkit stars:>5 pushed:>{since}"
+    ],
+    "enhancement": [
+      "topic:llm-tooling stars:>150 pushed:>{since}",
+      "topic:prompt-engineering stars:>300 pushed:>{since}",
+      "topic:context-engineering stars:>20 pushed:>{since}",
+      "topic:ai-agents stars:>500 pushed:>{since}",
+      "\"model agnostic\" llm in:description stars:>80 pushed:>{since}",
+      "topic:llm-evaluation stars:>200 pushed:>{since}",
+      "topic:ai-coding-agent stars:>200 pushed:>{since}"
+    ],
+    "free-tokens": [
+      "\"free tier\" llm api in:readme stars:>150 pushed:>{since}",
+      "topic:free-llm-api stars:>5 pushed:>{since}",
+      "\"free credits\" llm in:description stars:>30 pushed:>{since}",
+      "\"free tokens\" llm in:description,readme stars:>30 pushed:>{since}",
+      "topic:openrouter stars:>30 pushed:>{since}",
+      "topic:free-api stars:>30 pushed:>{since}",
+      "\"no api key required\" llm in:description stars:>100 pushed:>{since}"
+    ],
+    "efficiency": [
+      "topic:llm-cost stars:>10 pushed:>{since}",
+      "token reduction llm in:name,description stars:>20 pushed:>{since}",
+      "topic:prompt-compression stars:>5 pushed:>{since}",
+      "topic:llm-router stars:>50 pushed:>{since}",
+      "topic:semantic-cache stars:>100 pushed:>{since}",
+      "topic:llm-gateway stars:>150 pushed:>{since}",
+      "\"context compression\" in:readme stars:>50 pushed:>{since}",
+      "topic:local-llm stars:>500 pushed:>{since}"
+    ]
+  },
+  "trustedOrgs": [
+    "openai",
+    "anthropics",
+    "google",
+    "googleapis",
+    "google-gemini",
+    "microsoft",
+    "meta-llama",
+    "facebookresearch",
+    "huggingface",
+    "nvidia",
+    "aws",
+    "cloudflare",
+    "github",
+    "modelcontextprotocol",
+    "langchain-ai",
+    "ollama",
+    "ggml-org",
+    "qwenlm",
+    "deepseek-ai",
+    "mistralai",
+    "xai-org",
+    "moonshotai",
+    "cohere-ai",
+    "togethercomputer",
+    "openrouter",
+    "berriai",
+    "vercel",
+    "simonw",
+    "obra",
+    "steipete",
+    "anthropic-experimental",
+    "google-gemini"
+  ],
+  "trustedHosts": [
+    "openrouter.ai",
+    "ai.google.dev",
+    "aistudio.google.com",
+    "cloud.google.com",
+    "anthropic.com",
+    "claude.ai",
+    "openai.com",
+    "platform.openai.com",
+    "mistral.ai",
+    "groq.com",
+    "cerebras.ai",
+    "together.ai",
+    "fireworks.ai",
+    "huggingface.co",
+    "deepinfra.com",
+    "sambanova.ai",
+    "nvidia.com",
+    "cloudflare.com",
+    "github.blog",
+    "docs.github.com",
+    "z.ai",
+    "moonshot.cn",
+    "x.ai",
+    "ollama.com",
+    "lmstudio.ai",
+    "litellm.ai",
+    "opencode.ai",
+    "crush.sh",
+    "windsurf.com",
+    "cursor.com"
+  ],
+  "blockPatterns": [
+    "(?i)(free|unlimited|no.?limit)[^.]{0,30}(api|openai|anthropic|claude|gemini)[^.]{0,30}(key|keys)[^.]{0,20}(gen|generator|giveaway|pool)",
+    "(?i)\\b(keygen|cracked|warez|nulled|patched.?premium|premium.?apk)\\b",
+    "(?i)(account|key|token).{0,12}(generator|rotator|farm|harvester)",
+    "(?i)\\b(carding|cvv|credential.?dump|stealer|phishing|otp.?bypass|sms.?bypass)\\b",
+    "(?i)(bypass|evade).{0,25}(verification|phone|sms|kYC|paywall|rate.?limit)",
+    "(?i)(scrape|scraper).{0,20}(api.?key|api.?keys|credential)",
+    "(?i)\\b(sell|selling|buy).{0,15}(api.?key|api.?keys|accounts?)\\b"
+  ],
+  "blockPatternsFreeTokensOnly": [
+    "(?i)\\b(airdrop|memecoin|presale|token.?sale|pump\\.fun|shitcoin)\\b",
+    "(?i)\\b(solana|ethereum|binance|web3)\\b.{0,30}\\b(free|earn|reward|claim)\\b",
+    "(?i)\\b(claim|earn|farm).{0,20}\\b(free )?(tokens|coins)\\b.{0,20}\\b(wallet|connect)\\b"
+  ],
+  "riskPatterns": [
+    {
+      "name": "third-party-proxy",
+      "pattern": "(?i)(reverse.?proxy|api.?proxy|relay|key.?pool|shared.?key|free.?key.?pool)",
+      "why": "Your prompts and data pass through someone else's server. Never paste your own API key into one."
+    },
+    {
+      "name": "tos-risk",
+      "pattern": "(?i)(reverse.?engineer|scrap(e|ing).{0,15}(cookie|session)|unofficial.?api|bypass)",
+      "why": "Built on scraping or unofficial access. Can break, and may breach the provider's terms."
+    },
+    {
+      "name": "hype-claims",
+      "pattern": "(?i)(unlimited|infinite|100% free forever|no limits)",
+      "why": "Big promise in the description. Verify the small print before relying on it."
+    },
+    {
+      "name": "self-host-required",
+      "pattern": "(?i)(docker compose|self-host|kubernetes|helm chart)",
+      "why": "Needs a server or a computer running. Fine for a laptop, not for an iPhone-only workflow."
+    }
+  ]
+}

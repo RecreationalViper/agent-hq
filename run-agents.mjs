@@ -132,6 +132,15 @@ async function main() {
       task += "\n\nToday's copies of these web pages (real and current - base your answer on them, link the page for each claim, and say when a page could not be loaded):";
       for (const url of agent.pages) task += `\n\n### ${url}\n${await pageText(url)}`;
     }
+    // Local files written by this repo's own scanners. Real output, so the agent
+    // reports facts instead of guessing — and it costs no extra API calls.
+    if (Array.isArray(agent.readsFiles) && agent.readsFiles.length) {
+      task += "\n\nFresh data collected by this repo's own scanners a few minutes ago:";
+      for (const path of agent.readsFiles) {
+        const body = await fs.readFile(path, "utf8").catch(() => "");
+        task += `\n\n### ${path}\n${body ? body.slice(0, 24000) : `(the file ${path} is missing - say so and do not invent findings)`}`;
+      }
+    }
     if (agent.reads) task += `\n\nThis week's team reports:${await weekOfReports(index, date, new Set(cfg.agents.filter((a) => a.context).map((a) => a.id)))}`;
     // Agents with "search": true can use Google Search (free on Gemini) and must cite sources.
     const rules = search ? RULES.replace(/You have no live internet access:[^.]*\./, "You can search the web with Google Search: use it, prefer official sources, include the link for every claim, and say when something could not be confirmed.") : RULES;
