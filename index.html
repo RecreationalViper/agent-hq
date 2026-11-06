@@ -50,6 +50,7 @@ details summary{cursor:pointer;color:var(--mute);font-size:14px}
   <h1>Agent HQ</h1>
   <nav id="nav">
     <button data-tab="routines" class="on">Routines</button>
+    <button data-tab="radar">Radar</button>
     <button data-tab="mission">Team mission</button>
     <button data-tab="chat">Chat</button>
     <button data-tab="agents">Agents</button>
@@ -66,6 +67,19 @@ details summary{cursor:pointer;color:var(--mute);font-size:14px}
     <div id="routineList"></div>
   </div>
   <div id="reportList"></div>
+</section>
+
+<section id="radar">
+  <div class="card">
+    <div class="agent-head"><b>GitHub Radar</b><button class="btn ghost" id="refreshRadar" style="margin-top:0">Refresh</button></div>
+    <p class="mute" id="radarMeta">Loading…</p>
+    <div class="row">
+      <button class="btn ghost" data-rscan="adopt">Only ADOPT</button>
+      <button class="btn ghost" data-rscan="all">Everything new</button>
+    </div>
+    <p class="mute">Scans GitHub every 3 hours by itself: agent skills, AI upgrades for any model, legitimate free tokens, and ways to spend less. Scams are filtered out. It costs no AI tokens to scan.</p>
+  </div>
+  <div id="radarList"></div>
 </section>
 
 <section id="mission">
@@ -305,6 +319,7 @@ details summary{cursor:pointer;color:var(--mute);font-size:14px}
     if (b.dataset.tab === "library") renderLibrary();
     if (b.dataset.tab === "routines") renderRoutines();
     if (b.dataset.tab === "agents") renderAgents();
+    if (b.dataset.tab === "radar") renderRadar();
   });
 
   // ---------- library ----------
@@ -540,6 +555,83 @@ details summary{cursor:pointer;color:var(--mute);font-size:14px}
       alert("Couldn't start it: " + e.message);
     }
   }
+  // ---------- github radar ----------
+  let radarData = null;
+  let radarFilter = "all";
+  const TIER = {
+    adopt: { label: "ADOPT", color: "var(--accent)" },
+    watch: { label: "WATCH", color: "var(--mute)" },
+    skip: { label: "SKIP", color: "var(--mute)" }
+  };
+  const FLAG_TEXT = {
+    "no-license": "No license — check before reusing.",
+    "third-party-proxy": "Your prompts pass through their server. Never paste your own key.",
+    "tos-risk": "Unofficial or scraping-based. May break or breach terms.",
+    "hype-claims": "Marketing language. Verify the limits.",
+    "self-host-required": "Needs a server running — not phone-only.",
+    "unverified-offer": "Third-party claim. Verify on the provider's own site.",
+    "crypto-noise": "'Tokens' may mean crypto here, not AI tokens.",
+    "brand-new": "Very new, little track record.",
+    "stale": "Not updated in a long time.",
+    "many-open-issues": "Lots of open issues.",
+    "learning-material": "Course or reading material, not a ready tool.",
+    "off-topic": "Not clearly on topic."
+  };
+  function radarCard(i) {
+    const d = document.createElement("div");
+    const tier = TIER[i.tier] || TIER.watch;
+    const notes = (i.flags || []).map(f => FLAG_TEXT[f]).filter(Boolean);
+    d.className = "card";
+    d.innerHTML =
+      '<div class="agent-head"><b><a href="' + esc(i.url) + '" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">' + esc(i.name) + '</a></b>' +
+      '<span class="pill" style="color:' + tier.color + ';border-color:' + tier.color + '">' + tier.label + '</span></div>' +
+      '<div class="mute" style="margin:4px 0">⭐ ' + i.stars.toLocaleString() + ' · ' + esc(i.license || "no license") + ' · updated ' + daysAgo(i.pushedAt) + 'd ago' + (i.skillFiles === true ? ' · has SKILL.md' : '') + '</div>' +
+      '<div>' + esc(i.description || "(no description)") + '</div>' +
+      (i.reasons && i.reasons.length ? '<div class="mute" style="margin-top:6px">Why: ' + esc(i.reasons.join(" · ")) + '</div>' : '') +
+      (notes.length ? '<div class="mute" style="margin-top:6px;color:var(--warn)">⚠ ' + esc(notes.join(" ")) + '</div>' : '') +
+      '<div class="row" style="margin-top:8px"><a class="btn ghost" href="' + esc(i.url) + '" target="_blank" rel="noopener">Open on GitHub</a></div>';
+    return d;
+  }
+  function daysAgo(iso) {
+    const n = Math.max(0, Math.round((Date.now() - new Date(iso).getTime()) / 86400000));
+    return n;
+  }
+  async function renderRadar() {
+    const list = $("radarList"), meta = $("radarMeta");
+    meta.textContent = "Loading…";
+    if (!radarData) {
+      try { radarData = await getJson("scout/latest.json"); }
+      catch { meta.textContent = "No radar scan yet. It runs every 3 hours on GitHub — or open Actions → GitHub Radar → Run workflow."; list.innerHTML = ""; return; }
+    }
+    const d = radarData;
+    const when = new Date(d.generatedAt);
+    meta.innerHTML = 'Last scan ' + esc(when.toLocaleString()) + ' · ' + d.searches.ran + ' searches · ' + d.apiCalls + ' GitHub calls · <b>0 AI tokens</b>';
+    const shortNames = new Set((d.shortlist || []).map(i => i.name));
+    const rest = Object.values(d.byCategory || {}).flat().filter(i => !shortNames.has(i.name));
+    let items = [...(d.shortlist || []), ...rest];
+    if (radarFilter === "adopt") items = items.filter(i => i.tier === "adopt");
+    list.innerHTML = "";
+    if (!items.length) {
+      list.innerHTML = '<div class="card mute">Quiet scan — nothing new cleared the quality bar. That is normal: the radar covers a different slice of its searches each run.</div>';
+    } else {
+      const head = document.createElement("div");
+      head.className = "mute";
+      head.style.padding = "0 4px 8px";
+      head.textContent = items.length + " new find" + (items.length === 1 ? "" : "s") + " today";
+      list.appendChild(head);
+      items.forEach(i => list.appendChild(radarCard(i)));
+    }
+    if ((d.blocked || []).length) {
+      const f = document.createElement("div");
+      f.className = "card";
+      f.innerHTML = '<b>Filtered out (' + d.blockedToday + ')</b><div class="mute" style="margin-top:6px">Scam filter caught: ' +
+        esc(d.blocked.map(b => b.name).join(", ")) + '. Excluded on purpose.</div>';
+      list.appendChild(f);
+    }
+  }
+  $("refreshRadar").onclick = () => { radarData = null; renderRadar(); };
+  document.querySelectorAll("[data-rscan]").forEach(b => b.onclick = () => { radarFilter = b.dataset.rscan; renderRadar(); });
+
   async function renderRoutines() {
     const list = $("routineList"), reports = $("reportList");
     list.innerHTML = '<p class="mute">Loading…</p>'; reports.innerHTML = "";
