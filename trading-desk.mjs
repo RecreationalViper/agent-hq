@@ -57,14 +57,22 @@ async function ask(role, prompt, json = false) {
     generationConfig: { temperature: 0.3, ...(json ? { responseMimeType: "application/json" } : {}) }
   });
   let lastErr;
-  for (let i = 0; i < models.length && i < 5; i++) {
-    try {
-      const data = await gemini(`/${models[i]}:generateContent`, { method: "POST", body });
-      if (i) models = [models[i], ...models.filter((x) => x !== models[i])];
-      const text = (data.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").trim();
-      if (!text) throw new Error("empty reply");
-      return json ? JSON.parse(text.replace(/^```(?:json)?|```$/g, "")) : text;
-    } catch (e) { lastErr = e; if (!/BUSY|retired|not found|no longer|empty|JSON/i.test(e.message)) throw e; }
+  for (let round = 0; round < 3; round++) {
+    if (round) { console.log("  all models busy, waiting 60s..."); await sleep(60000); }
+    for (const m of models.slice(0, 6)) {
+      try {
+        const data = await gemini(`/${m}:generateContent`, { method: "POST", body });
+        models = [m, ...models.filter((x) => x !== m)];
+        const text = (data.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").trim();
+        if (!text) throw new Error("empty reply");
+        return json ? JSON.parse(text.replace(/^```(?:json)?|```$/g, "")) : text;
+      } catch (e) {
+        lastErr = e;
+        if (/no longer|retired|not found|not supported|deprecated/i.test(e.message)) { models = models.filter((x) => x !== m); continue; }
+        if (/BUSY|empty|JSON|Unexpected/i.test(e.message)) continue;
+        throw e;
+      }
+    }
   }
   throw lastErr;
 }
