@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-06-backtest.md",
+    "agent": "backtest",
+    "name": "Backtest Analyst",
+    "date": "2026-11-06"
+  },
+  {
     "file": "2026-11-06-trading-desk.md",
     "agent": "trading-desk",
     "name": "Trading Desk",
