@@ -2,10 +2,11 @@ name: Trading Desk
 on:
   schedule:
     - cron: "35 15 * * 1-5" # weekdays, about 10:35am New York time
+    - cron: "5 15 * * 1" # Mondays before the desk: Backtest Analyst
   workflow_dispatch:
     inputs:
       action:
-        description: "run, pause, or resume"
+        description: "run, backtest, pause, or resume"
         default: "run"
 permissions:
   contents: write
@@ -19,12 +20,12 @@ jobs:
         with:
           node-version: 24
       - name: Run trading desk
-        run: node trading-desk.mjs
+        run: if [ "$DESK_ACTION" = backtest ]; then node backtest.mjs; else node trading-desk.mjs; fi
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ALPACA_KEY: ${{ secrets.ALPACA_KEY }}
           ALPACA_SECRET: ${{ secrets.ALPACA_SECRET }}
-          DESK_ACTION: ${{ github.event.inputs.action || 'run' }}
+          DESK_ACTION: ${{ github.event.schedule == '5 15 * * 1' && 'backtest' || github.event.inputs.action || 'run' }}
       - name: Save results
         if: always()
         run: |
