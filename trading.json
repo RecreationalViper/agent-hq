@@ -1,0 +1,10 @@
+{
+  "mode": "paper",
+  "paused": false,
+  "budgetUsd": 50,
+  "maxTradeUsd": 10,
+  "maxLossUsd": 5,
+  "maxTradesPerDay": 3,
+  "universe": ["SPY", "VOO", "VTI", "QQQ", "DIA", "IWM", "AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "BRK.B", "JPM", "COST"],
+  "notes": "mode: paper = practice money only. Live mode is locked in the code until an approval step exists. paused: true stops all trading."
+}
