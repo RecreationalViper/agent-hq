@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-06-trading-desk.md",
+    "agent": "trading-desk",
+    "name": "Trading Desk",
+    "date": "2026-11-06"
+  },
+  {
     "file": "2026-11-05-credit-scout.md",
     "agent": "credit-scout",
     "name": "Credit Scout",

@@ -1,4 +1,15 @@
 {
   "realizedUsd": 0,
-  "log": []
+  "log": [
+    {
+      "date": "2026-11-06",
+      "side": "buy",
+      "symbol": "AMZN"
+    },
+    {
+      "date": "2026-11-06",
+      "side": "buy",
+      "symbol": "COST"
+    }
+  ]
 }
