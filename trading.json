@@ -4,7 +4,58 @@
   "budgetUsd": 50,
   "maxTradeUsd": 10,
   "maxLossUsd": 5,
-  "maxTradesPerDay": 3,
-  "universe": ["SPY", "VOO", "VTI", "QQQ", "DIA", "IWM", "AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "BRK.B", "JPM", "COST"],
-  "notes": "mode: paper = practice money only. Live mode is locked in the code until an approval step exists. paused: true stops all trading."
+  "maxTradesPerDay": 5,
+  "universe": {
+    "Indexes": [
+      "SPY",
+      "QQQ",
+      "DIA",
+      "IWM",
+      "VTI",
+      "VEA",
+      "VWO"
+    ],
+    "Stocks": [
+      "AAPL",
+      "MSFT",
+      "NVDA",
+      "AMZN",
+      "GOOGL",
+      "META",
+      "BRK.B",
+      "JPM",
+      "COST",
+      "XOM",
+      "UNH",
+      "LLY"
+    ],
+    "Treasuries": [
+      "SGOV",
+      "SHY",
+      "IEF",
+      "TLT",
+      "TIP"
+    ],
+    "Bonds": [
+      "BND",
+      "LQD",
+      "HYG"
+    ],
+    "Commodities": [
+      "GLD",
+      "SLV",
+      "USO",
+      "DBC",
+      "CPER"
+    ],
+    "REITs": [
+      "VNQ",
+      "O",
+      "PLD",
+      "AMT"
+    ]
+  },
+  "notes": "mode: paper = practice money only. Live mode is locked in the code until an approval step exists. paused: true stops all trading. No leveraged or inverse funds.",
+  "maxStockPct": 40,
+  "maxFundPct": 60
 }

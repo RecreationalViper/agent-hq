@@ -52,7 +52,7 @@ async function pickModels() {
 }
 async function ask(role, prompt, json = false) {
   const body = JSON.stringify({
-    systemInstruction: { parts: [{ text: `You are the ${role} on a small AI trading desk managing a $50 practice account (paper money) on Alpaca. Be careful, plain-spoken and brief. You cannot see anything beyond the data given. Never promise returns.` }] },
+    systemInstruction: { parts: [{ text: `You are the ${role} on a small AI multi-asset trading desk (a mini Wall Street firm) managing a $50 practice account (paper money) on Alpaca. Be careful, plain-spoken and brief. You cannot see anything beyond the data given. Never promise returns.` }] },
     contents: [{ role: "user", parts: [{ text: prompt }] }],
     generationConfig: { temperature: 0.3, ...(json ? { responseMimeType: "application/json" } : {}) }
   });
@@ -90,6 +90,8 @@ function indicators(bars) {
   return { price: r(last), ret1d: r(ret(1)), ret5d: r(ret(5)), ret20d: r(ret(20)), sma20: r(sma(20)), sma50: r(sma(50)), rsi14: +rsi.toFixed(1) };
 }
 
+const money = (x) => +Number(x).toFixed(2);
+
 async function main() {
   const cfg = await readJson("trading.json", null);
   if (!cfg) throw new Error("trading.json is missing.");
@@ -107,10 +109,15 @@ async function main() {
   if (!KEY) throw new Error("Missing GEMINI_API_KEY secret.");
   const TRADE = process.env.ALPACA_TRADE_BASE || "https://paper-api.alpaca.markets";
 
-  // 1. Account + positions
+  // Asset classes -> symbols
+  const classOf = {};
+  for (const [cls, syms] of Object.entries(cfg.universe)) for (const s of syms) classOf[s] = cls;
+  const all = Object.keys(classOf);
+  const uni = new Set(all);
+
+  // 1. Operations: account, clock, positions
   const [account, clock, allPositions] = await Promise.all([alpaca(TRADE, "/v2/account"), alpaca(TRADE, "/v2/clock"), alpaca(TRADE, "/v2/positions")]);
   if (account.trading_blocked || account.account_blocked) throw new Error("Alpaca says this account is blocked from trading.");
-  const uni = new Set(cfg.universe);
   const positions = allPositions.filter((p) => uni.has(p.symbol));
   const unrealized = positions.reduce((a, p) => a + Number(p.unrealized_pl), 0);
   const invested = positions.reduce((a, p) => a + Number(p.cost_basis), 0);
@@ -119,11 +126,28 @@ async function main() {
   const lossUsd = cfg.budgetUsd - deskValue;
   console.log(`Market open: ${clock.is_open}. Desk ${pct(deskChange)}, ${positions.length} holding(s).`);
 
+  // 2. Market data (free IEX feed) + news
+  const start = new Date(Date.now() - 100 * 86400000).toISOString().slice(0, 10);
+  const market = {};
+  let token = "";
+  do {
+    const r = await alpaca(ALPACA_DATA, `/v2/stocks/bars?symbols=${encodeURIComponent(all.join(","))}&timeframe=1Day&start=${start}&limit=10000&feed=iex&adjustment=all${token ? "&page_token=" + token : ""}`);
+    for (const [sym, bars] of Object.entries(r.bars || {})) (market[sym] ||= []).push(...bars);
+    token = r.next_page_token || "";
+  } while (token);
+  for (const sym of Object.keys(market)) market[sym] = market[sym].length > 5 ? indicators(market[sym]) : undefined;
+
+  // 3. Performance Analyst (code): desk vs. simply holding SPY
+  if (!state.startDate && market.SPY) { state.startDate = date; state.spyStart = market.SPY.price; }
+  const spyChange = state.spyStart && market.SPY ? market.SPY.price / state.spyStart - 1 : 0;
+  const byClass = {};
+  for (const p of positions) byClass[classOf[p.symbol]] = (byClass[classOf[p.symbol]] || 0) + Number(p.market_value);
   const report = [`# Trading Desk - ${date}`, "", `> Practice money only (paper trading). Not financial advice.`, ""];
-  const holdingLines = positions.length
-    ? positions.map((p) => `- **${p.symbol}**: ${pct(Number(p.unrealized_plpc))} since bought, ${(Number(p.cost_basis) / cfg.budgetUsd * 100).toFixed(0)}% of budget`)
-    : ["- No holdings yet (all cash)."];
-  const header = [`## Scoreboard`, `- Desk since start: **${pct(deskChange)}**`, `- Invested: ${(invested / cfg.budgetUsd * 100).toFixed(0)}% of budget`, ...holdingLines, ""];
+  const header = [`## Scoreboard (Performance Analyst)`,
+    `- Desk since ${state.startDate || date}: **${pct(deskChange)}**`,
+    `- Benchmark (just holding SPY): ${pct(spyChange)} → desk is ${deskChange >= spyChange ? "**ahead**" : "**behind**"}`,
+    `- Invested: ${(invested / cfg.budgetUsd * 100).toFixed(0)}% of budget` + (Object.keys(byClass).length ? ` (${Object.entries(byClass).map(([c, v]) => `${c} ${(v / cfg.budgetUsd * 100).toFixed(0)}%`).join(", ")})` : ""),
+    ...(positions.length ? positions.map((p) => `- **${p.symbol}** (${classOf[p.symbol]}): ${pct(Number(p.unrealized_plpc))} since bought, ${(Number(p.market_value) / cfg.budgetUsd * 100).toFixed(0)}% of budget`) : ["- No holdings yet (all cash)."]), ""];
 
   // Kill switch
   if (!cfg.paused && lossUsd >= cfg.maxLossUsd) {
@@ -135,40 +159,55 @@ async function main() {
     report.push(...header, cfg.paused ? "Desk is **paused**: no trades today." : "Market is closed today: no trades.");
     return save(date, report, state);
   }
+  if (!Object.values(market).some(Boolean)) throw new Error("No market data came back from Alpaca.");
 
-  // 2. Market data (free IEX feed) + news
-  const start = new Date(Date.now() - 100 * 86400000).toISOString().slice(0, 10);
-  const barsRes = await alpaca(ALPACA_DATA, `/v2/stocks/bars?symbols=${encodeURIComponent(cfg.universe.join(","))}&timeframe=1Day&start=${start}&limit=10000&feed=iex&adjustment=all`);
-  const market = {};
-  for (const [sym, bars] of Object.entries(barsRes.bars || {})) if (bars.length > 5) market[sym] = indicators(bars);
   let news = [];
   try {
-    const n = await alpaca(ALPACA_DATA, `/v1beta1/news?symbols=${encodeURIComponent(cfg.universe.join(","))}&limit=25&sort=desc`);
+    const n = await alpaca(ALPACA_DATA, `/v1beta1/news?symbols=${encodeURIComponent(all.join(","))}&limit=40&sort=desc`);
     news = (n.news || []).map((x) => `- ${x.created_at.slice(0, 10)} [${(x.symbols || []).filter((s) => uni.has(s)).join(",")}] ${x.headline}`);
   } catch (e) { console.log("News unavailable:", e.message); }
-  if (!Object.keys(market).length) throw new Error("No market data came back from Alpaca.");
+
+  // 4. Quant Analyst (code): momentum ranking across every asset
+  const scored = all.filter((s) => market[s]).map((s) => {
+    const m = market[s];
+    const trend = (m.sma20 && m.price > m.sma20 ? 1 : 0) + (m.sma50 && m.price > m.sma50 ? 1 : 0);
+    const score = (m.ret20d ?? 0) * 0.6 + (m.ret5d ?? 0) * 0.4 + trend * 0.01 - (m.rsi14 > 75 ? 0.02 : 0);
+    return { s, cls: classOf[s], score, trend, m };
+  }).sort((a, b) => b.score - a.score);
+  const quantTable = scored.map((x, i) => `${i + 1}. ${x.s} (${x.cls}) 20d ${pct(x.m.ret20d ?? 0)}, 5d ${pct(x.m.ret5d ?? 0)}, trend ${x.trend}/2, RSI ${x.m.rsi14}`);
 
   await pickModels();
-  const held = positions.map((p) => ({ symbol: p.symbol, costUsd: +Number(p.cost_basis).toFixed(2), changeSinceBought: +Number(p.unrealized_plpc).toFixed(4) }));
-  const room = Math.max(0, cfg.budgetUsd - invested);
-  const facts = `Date: ${date}\nAllowed symbols: ${cfg.universe.join(", ")}\nIndicators (returns are decimals, e.g. 0.02 = +2%):\n${JSON.stringify(market)}\nCurrent holdings: ${JSON.stringify(held)}\nCash available to invest: $${room.toFixed(2)} of $${cfg.budgetUsd}\nRecent headlines:\n${news.join("\n") || "(none)"}`;
+  const dataFor = (cls) => JSON.stringify(Object.fromEntries(cfg.universe[cls].filter((s) => market[s]).map((s) => [s, market[s]])));
+  const newsFor = (cls) => news.filter((n) => cfg.universe[cls].some((s) => n.includes(s))).join("\n") || "(no headlines)";
 
-  // 3. Research Analyst
-  console.log("Research Analyst...");
-  const research = await ask("Research Analyst", `${facts}\n\nWrite a short market read (under 150 words): overall trend, the 3 strongest and 3 weakest symbols by the data, and any headline that matters. No trade calls.`);
+  // 5. Macro Economist
+  console.log("Macro Economist...");
+  const cross = ["SPY", "QQQ", "IWM", "TLT", "IEF", "SHY", "HYG", "GLD", "USO", "DBC", "VNQ"].filter((s) => market[s]).map((s) => `${s}: 5d ${pct(market[s].ret5d ?? 0)}, 20d ${pct(market[s].ret20d ?? 0)}`).join("\n");
+  const macro = await ask("Macro Economist", `Date: ${date}\nCross-asset moves:\n${cross}\nHeadlines:\n${news.join("\n") || "(none)"}\n\nIn under 120 words: is the market risk-on or risk-off, what bonds/treasuries say about rates, what gold/oil say about inflation, and which asset classes the backdrop favors. No trade calls.`);
 
-  // 4. Strategist
-  console.log("Strategist...");
-  const ideas = await ask("Strategist", `${facts}\n\nAnalyst notes:\n${research}\n\nPropose 0 to ${cfg.maxTradesPerDay} trades. Long-only, patient, trend-following; doing nothing is fine. Buys: whole dollars between 1 and ${cfg.maxTradeUsd}, never more than the cash available. Sells close an entire existing holding. Return JSON: {"trades":[{"symbol":"SPY","side":"buy","usd":10,"reason":"..."}],"summary":"one sentence"}`, true);
+  // 6. Asset-class analysts
+  const desks = { Equities: ["Indexes", "Stocks"], "Fixed Income": ["Treasuries", "Bonds"], Commodities: ["Commodities"], "Real Estate": ["REITs"] };
+  const views = {};
+  for (const [desk, classes] of Object.entries(desks)) {
+    console.log(`${desk} Analyst...`);
+    views[desk] = await ask(`${desk} Analyst`, `Macro view:\n${macro}\n\nYour symbols and indicators (returns are decimals, 0.02 = +2%):\n${classes.map((c) => `${c}: ${dataFor(c)}`).join("\n")}\nHeadlines:\n${classes.map(newsFor).join("\n")}\n\nIn under 100 words: your desk's outlook, your single best pick and why, and one symbol to avoid.`);
+  }
 
-  // 5. Risk Manager (AI review) - code limits are enforced again below regardless
+  // 7. Chief Investment Officer: allocation + trades
+  console.log("Chief Investment Officer...");
+  const held = positions.map((p) => ({ symbol: p.symbol, class: classOf[p.symbol], valueUsd: money(p.market_value), changeSinceBought: +Number(p.unrealized_plpc).toFixed(4) }));
+  const room = Math.max(0, cfg.budgetUsd + state.realizedUsd - invested);
+  const plan = await ask("Chief Investment Officer", `Goal: grow the portfolio and beat simply holding SPY, while staying diversified.\n\nMacro Economist:\n${macro}\n\n${Object.entries(views).map(([d, v]) => `${d} Analyst:\n${v}`).join("\n\n")}\n\nQuant momentum ranking (best first):\n${quantTable.slice(0, 15).join("\n")}\n...worst:\n${quantTable.slice(-5).join("\n")}\n\nCurrent holdings: ${JSON.stringify(held)}\nCash available: $${room.toFixed(2)} of $${cfg.budgetUsd}\n\nDecide a target mix by asset class, then 0 to ${cfg.maxTradesPerDay} trades to move toward it. Rules: buys are whole dollars from 1 to ${cfg.maxTradeUsd} and never exceed cash available; sells either close a holding (omit usd) or trim it (usd from 1 to its value); one single stock may not exceed ${cfg.maxStockPct}% of budget, one fund ${cfg.maxFundPct}%. Doing nothing is fine. Return JSON: {"targetMix":{"Stocks":30,"Indexes":30,"Treasuries":20,"Commodities":10,"REITs":10},"trades":[{"symbol":"GLD","side":"buy","usd":5,"reason":"..."}],"summary":["3 short bullets for the owner, percentages only"]}`, true);
+
+  // 8. Risk Manager
   console.log("Risk Manager...");
-  const proposed = Array.isArray(ideas?.trades) ? ideas.trades.slice(0, cfg.maxTradesPerDay) : [];
+  const proposed = Array.isArray(plan?.trades) ? plan.trades.slice(0, cfg.maxTradesPerDay) : [];
   let risk = { decisions: [] };
-  if (proposed.length) risk = await ask("Risk Manager", `${facts}\n\nProposed trades:\n${JSON.stringify(proposed)}\n\nApprove or veto each one. Veto anything chasing a big one-day jump, over-concentrating (more than 40% of budget in one stock, index funds excepted), or with a weak reason. Return JSON: {"decisions":[{"symbol":"SPY","approve":true,"why":"..."}]}`, true);
+  if (proposed.length) risk = await ask("Risk Manager", `Holdings: ${JSON.stringify(held)}\nCash available: $${room.toFixed(2)} of $${cfg.budgetUsd}\nQuant ranking:\n${quantTable.join("\n")}\nMacro: ${macro}\n\nProposed trades:\n${JSON.stringify(proposed)}\n\nApprove or veto each. Veto anything chasing a huge short-term spike (RSI over 80), adding to a clear downtrend without a reason, or making the portfolio lopsided. Return JSON: {"decisions":[{"symbol":"GLD","approve":true,"why":"..."}],"note":"one sentence on overall risk"}`, true);
 
-  // 6. Compliance (code): hard limits nobody can override
-  const heldSyms = new Set(positions.map((p) => p.symbol));
+  // 9. Compliance Officer (code): hard limits nobody can override
+  const pos = Object.fromEntries(positions.map((p) => [p.symbol, p]));
+  const value = Object.fromEntries(positions.map((p) => [p.symbol, Number(p.market_value)]));
   let cash = room;
   const orders = [], blocked = [];
   for (const t of proposed) {
@@ -178,42 +217,51 @@ async function main() {
     if (!uni.has(sym)) { why("not on the allowed list"); continue; }
     if (!d?.approve) { why(`Risk Manager veto${d?.why ? ": " + d.why : ""}`); continue; }
     if (side === "buy") {
+      const cap = (classOf[sym] === "Stocks" ? cfg.maxStockPct : cfg.maxFundPct) / 100 * cfg.budgetUsd;
       if (usd < 1 || usd > cfg.maxTradeUsd) { why(`size must be $1-$${cfg.maxTradeUsd}`); continue; }
       if (usd > cash) { why("not enough budget left"); continue; }
-      cash -= usd; orders.push({ sym, side, usd, reason: t.reason });
+      if ((value[sym] || 0) + usd > cap) { why(`would exceed the ${classOf[sym] === "Stocks" ? cfg.maxStockPct : cfg.maxFundPct}% limit for one holding`); continue; }
+      cash -= usd; value[sym] = (value[sym] || 0) + usd;
+      orders.push({ sym, side, usd, reason: t.reason });
     } else if (side === "sell") {
-      if (!heldSyms.has(sym)) { why("not held (no short selling)"); continue; }
-      orders.push({ sym, side, reason: t.reason });
+      if (!pos[sym]) { why("not held (no short selling)"); continue; }
+      const trim = usd >= 1 && usd < Number(pos[sym].market_value) - 1;
+      orders.push({ sym, side, usd: trim ? usd : null, reason: t.reason });
     } else why("unknown action");
   }
 
-  // 7. Trader (code): place orders on the paper account
+  // 10. Execution Trader (code): place orders on the paper account
   const done = [];
   for (const o of orders) {
     try {
       if (o.side === "buy") {
         const r = await alpaca(TRADE, "/v2/orders", { method: "POST", body: JSON.stringify({ symbol: o.sym, notional: String(o.usd), side: "buy", type: "market", time_in_force: "day" }) });
-        done.push(`- ✅ Bought ${o.sym} (${(o.usd / cfg.budgetUsd * 100).toFixed(0)}% of budget), order ${r.status}. Why: ${o.reason}`);
+        done.push(`- ✅ Bought ${o.sym} (${classOf[o.sym]}, ${(o.usd / cfg.budgetUsd * 100).toFixed(0)}% of budget), ${r.status}. Why: ${o.reason}`);
       } else {
-        const p = positions.find((x) => x.symbol === o.sym);
-        await alpaca(TRADE, `/v2/positions/${encodeURIComponent(o.sym)}`, { method: "DELETE" });
-        state.realizedUsd = +(state.realizedUsd + Number(p.unrealized_pl)).toFixed(2);
-        done.push(`- ✅ Sold all ${o.sym} (${pct(Number(p.unrealized_plpc))}). Why: ${o.reason}`);
+        const p = pos[o.sym], plpc = Number(p.unrealized_plpc);
+        if (o.usd) {
+          await alpaca(TRADE, "/v2/orders", { method: "POST", body: JSON.stringify({ symbol: o.sym, notional: String(o.usd), side: "sell", type: "market", time_in_force: "day" }) });
+          state.realizedUsd = money(state.realizedUsd + o.usd * plpc / (1 + plpc));
+          done.push(`- ✅ Trimmed ${o.sym} (${pct(plpc)} on that part). Why: ${o.reason}`);
+        } else {
+          await alpaca(TRADE, `/v2/positions/${encodeURIComponent(o.sym)}`, { method: "DELETE" });
+          state.realizedUsd = money(state.realizedUsd + Number(p.unrealized_pl));
+          done.push(`- ✅ Sold all ${o.sym} (${pct(plpc)}). Why: ${o.reason}`);
+        }
       }
       state.log = [{ date, side: o.side, symbol: o.sym }, ...(state.log || [])].slice(0, 500);
     } catch (e) { done.push(`- ⚠️ ${o.side} ${o.sym} failed: ${e.message}`); }
   }
 
-  // 8. Portfolio Manager summary
-  console.log("Portfolio Manager...");
-  const pm = await ask("Portfolio Manager", `Today's analyst notes:\n${research}\n\nStrategist summary: ${ideas?.summary || "none"}\nExecuted:\n${done.join("\n") || "none"}\nBlocked:\n${blocked.join("\n") || "none"}\nDesk change since start: ${pct(deskChange)}\n\nWrite 3 short bullet points for the owner: what the desk did and why, the main risk to watch, and what would change the plan. Use percentages, not dollar amounts.`);
-
+  const mix = plan?.targetMix ? Object.entries(plan.targetMix).map(([k, v]) => `${k} ${v}%`).join(", ") : "not set";
   report.push(...header,
-    `## Portfolio Manager`, pm, "",
-    `## Trades today`, ...(done.length ? done : ["- None. Sitting tight is a valid decision."]), "",
-    ...(blocked.length ? [`## Blocked by Risk / Compliance`, ...blocked, ""] : []),
-    `## Research Analyst`, research, "",
-    `## Desk rules`, `- Practice money, long-only, allowed list only`, `- Max ${(cfg.maxTradeUsd / cfg.budgetUsd * 100).toFixed(0)}% of budget per trade, ${cfg.maxTradesPerDay} trades a day`, `- Auto-pause if down ${(cfg.maxLossUsd / cfg.budgetUsd * 100).toFixed(0)}%`);
+    `## Chief Investment Officer`, ...(Array.isArray(plan?.summary) ? plan.summary.map((b) => `- ${b}`) : [String(plan?.summary || "")]), `- Target mix: ${mix}`, "",
+    `## Trades today (Execution Trader)`, ...(done.length ? done : ["- None. Sitting tight is a valid decision."]), "",
+    `## Risk Manager`, risk.note || (proposed.length ? "Reviewed all proposals." : "No trades to review."), ...(blocked.length ? ["", "Blocked by Risk / Compliance:", ...blocked] : []), "",
+    `## Macro Economist`, macro, "",
+    ...Object.entries(views).flatMap(([d, v]) => [`## ${d} Analyst`, v, ""]),
+    `## Quant Analyst: momentum ranking`, ...quantTable.slice(0, 10), "",
+    `## Desk rules (Compliance)`, `- Practice money, buy-only (no short selling), allowed list only`, `- Max ${(cfg.maxTradeUsd / cfg.budgetUsd * 100).toFixed(0)}% of budget per trade, ${cfg.maxTradesPerDay} trades a day`, `- One stock ≤ ${cfg.maxStockPct}%, one fund ≤ ${cfg.maxFundPct}% of budget`, `- Auto-pause if down ${(cfg.maxLossUsd / cfg.budgetUsd * 100).toFixed(0)}%`);
   return save(date, report, state);
 }
 
