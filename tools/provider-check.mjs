@@ -20,7 +20,7 @@ for (const [name, p] of Object.entries(providers)) {
   const lim = ["x-ratelimit-limit-requests", "x-ratelimit-limit-tokens"].map((h) => `${h.replace("x-ratelimit-limit-", "")}/limit: ${c.headers.get(h)}`).join(", ");
   console.log(`RESULT ${name}: WORKS. ${pick} replied "${(j.choices?.[0]?.message?.content || "").trim()}" (${lim})`);
 }
-if (!ok) process.exit(1);
+if (!ok) process.exitCode = 1;
 
 // Real end-to-end test of the backup path the agents use
 if (process.env.GROQ_API_KEY) {
