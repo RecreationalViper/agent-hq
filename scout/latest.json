@@ -1,633 +1,68 @@
 {
-  "generatedAt": "2026-11-06T20:53:58.676Z",
-  "date": "2026-11-06",
+  "generatedAt": "2026-11-07T00:59:37.045Z",
+  "date": "2026-11-07",
   "token": true,
   "searches": {
-    "ran": 29,
+    "ran": 12,
     "total": 29,
-    "ok": 29,
+    "ok": 12,
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 33,
-  "rateRemaining": 6,
-  "newItems": 292,
-  "blockedToday": 6,
-  "shortlist": [
+  "apiCalls": 12,
+  "rateRemaining": 19,
+  "newItems": 0,
+  "blockedToday": 0,
+  "shortlist": [],
+  "byCategory": {
+    "skills": [],
+    "enhancement": [],
+    "free-tokens": [],
+    "efficiency": []
+  },
+  "blocked": [],
+  "watching": [
     {
       "name": "anthropics/claude-plugins-official",
-      "url": "https://github.com/anthropics/claude-plugins-official",
-      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
-      "stars": 46293,
-      "forks": 4814,
-      "language": "Python",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-06T19:43:07Z",
-      "category": "skills",
       "score": 96,
       "tier": "adopt",
-      "reasons": [
-        "46,293 stars",
-        "updated this week",
-        "Apache-2.0 license",
-        "first-party / well-known maintainer",
-        "well established",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [],
-      "skillFiles": true
+      "category": "skills",
+      "first": "2026-11-06"
     },
     {
       "name": "modelcontextprotocol/python-sdk",
-      "url": "https://github.com/modelcontextprotocol/python-sdk",
-      "description": "The official Python SDK for Model Context Protocol servers and clients",
-      "stars": 24781,
-      "forks": 4103,
-      "language": "Python",
-      "license": "MIT",
-      "pushedAt": "2026-11-05T13:38:56Z",
-      "category": "skills",
       "score": 96,
       "tier": "adopt",
-      "reasons": [
-        "24,781 stars",
-        "updated this week",
-        "MIT license",
-        "first-party / well-known maintainer",
-        "well established",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [],
-      "skillFiles": true
+      "category": "skills",
+      "first": "2026-11-06"
     },
     {
       "name": "obra/superpowers",
-      "url": "https://github.com/obra/superpowers",
-      "description": "An agentic skills framework & software development methodology that works.",
-      "stars": 313551,
-      "forks": 27895,
-      "language": "Shell",
-      "license": "MIT",
-      "pushedAt": "2026-11-03T23:24:58Z",
-      "category": "skills",
       "score": 94,
       "tier": "adopt",
-      "reasons": [
-        "313,551 stars",
-        "updated this week",
-        "MIT license",
-        "first-party / well-known maintainer",
-        "well established",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [],
-      "skillFiles": true
+      "category": "skills",
+      "first": "2026-11-06"
     },
     {
       "name": "google/skills",
-      "url": "https://github.com/google/skills",
-      "description": "Agent Skills for Google products and technologies",
-      "stars": 22784,
-      "forks": 1919,
-      "language": "Python",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-06T20:28:13Z",
-      "category": "skills",
       "score": 94,
       "tier": "adopt",
-      "reasons": [
-        "22,784 stars",
-        "updated this week",
-        "Apache-2.0 license",
-        "first-party / well-known maintainer",
-        "well established",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [],
-      "skillFiles": true
+      "category": "skills",
+      "first": "2026-11-06"
     },
     {
       "name": "github/awesome-copilot",
-      "url": "https://github.com/github/awesome-copilot",
-      "description": "Community-contributed instructions, agents, skills, and configurations to help you make the most of GitHub Copilot.",
-      "stars": 40876,
-      "forks": 5304,
-      "language": "JavaScript",
-      "license": "MIT",
-      "pushedAt": "2026-11-06T20:42:51Z",
-      "category": "enhancement",
       "score": 84,
       "tier": "adopt",
-      "reasons": [
-        "40,876 stars",
-        "updated this week",
-        "MIT license",
-        "first-party / well-known maintainer",
-        "well established"
-      ],
-      "flags": [],
-      "skillFiles": null
+      "category": "enhancement",
+      "first": "2026-11-06"
+    },
+    {
+      "name": "google/adk-recipes",
+      "score": 84,
+      "tier": "adopt",
+      "category": "skills",
+      "first": "2026-11-06"
     }
-  ],
-  "byCategory": {
-    "skills": [
-      {
-        "name": "anthropics/claude-plugins-official",
-        "url": "https://github.com/anthropics/claude-plugins-official",
-        "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
-        "stars": 46293,
-        "forks": 4814,
-        "language": "Python",
-        "license": "Apache-2.0",
-        "pushedAt": "2026-11-06T19:43:07Z",
-        "category": "skills",
-        "score": 96,
-        "tier": "adopt",
-        "reasons": [
-          "46,293 stars",
-          "updated this week",
-          "Apache-2.0 license",
-          "first-party / well-known maintainer",
-          "well established",
-          "contains SKILL.md skill files"
-        ],
-        "flags": [],
-        "skillFiles": true
-      },
-      {
-        "name": "modelcontextprotocol/python-sdk",
-        "url": "https://github.com/modelcontextprotocol/python-sdk",
-        "description": "The official Python SDK for Model Context Protocol servers and clients",
-        "stars": 24781,
-        "forks": 4103,
-        "language": "Python",
-        "license": "MIT",
-        "pushedAt": "2026-11-05T13:38:56Z",
-        "category": "skills",
-        "score": 96,
-        "tier": "adopt",
-        "reasons": [
-          "24,781 stars",
-          "updated this week",
-          "MIT license",
-          "first-party / well-known maintainer",
-          "well established",
-          "contains SKILL.md skill files"
-        ],
-        "flags": [],
-        "skillFiles": true
-      },
-      {
-        "name": "obra/superpowers",
-        "url": "https://github.com/obra/superpowers",
-        "description": "An agentic skills framework & software development methodology that works.",
-        "stars": 313551,
-        "forks": 27895,
-        "language": "Shell",
-        "license": "MIT",
-        "pushedAt": "2026-11-03T23:24:58Z",
-        "category": "skills",
-        "score": 94,
-        "tier": "adopt",
-        "reasons": [
-          "313,551 stars",
-          "updated this week",
-          "MIT license",
-          "first-party / well-known maintainer",
-          "well established",
-          "contains SKILL.md skill files"
-        ],
-        "flags": [],
-        "skillFiles": true
-      },
-      {
-        "name": "google/skills",
-        "url": "https://github.com/google/skills",
-        "description": "Agent Skills for Google products and technologies",
-        "stars": 22784,
-        "forks": 1919,
-        "language": "Python",
-        "license": "Apache-2.0",
-        "pushedAt": "2026-11-06T20:28:13Z",
-        "category": "skills",
-        "score": 94,
-        "tier": "adopt",
-        "reasons": [
-          "22,784 stars",
-          "updated this week",
-          "Apache-2.0 license",
-          "first-party / well-known maintainer",
-          "well established",
-          "contains SKILL.md skill files"
-        ],
-        "flags": [],
-        "skillFiles": true
-      },
-      {
-        "name": "google/adk-recipes",
-        "url": "https://github.com/google/adk-recipes",
-        "description": "A collection of agent recipes, reference patterns, and vertical plugins built with Agent Development Kit (ADK)",
-        "stars": 10586,
-        "forks": 2954,
-        "language": "Python",
-        "license": "Apache-2.0",
-        "pushedAt": "2026-11-06T11:43:36Z",
-        "category": "skills",
-        "score": 84,
-        "tier": "adopt",
-        "reasons": [
-          "10,586 stars",
-          "updated this week",
-          "Apache-2.0 license",
-          "first-party / well-known maintainer",
-          "well established"
-        ],
-        "flags": [],
-        "skillFiles": null
-      }
-    ],
-    "enhancement": [
-      {
-        "name": "github/awesome-copilot",
-        "url": "https://github.com/github/awesome-copilot",
-        "description": "Community-contributed instructions, agents, skills, and configurations to help you make the most of GitHub Copilot.",
-        "stars": 40876,
-        "forks": 5304,
-        "language": "JavaScript",
-        "license": "MIT",
-        "pushedAt": "2026-11-06T20:42:51Z",
-        "category": "enhancement",
-        "score": 84,
-        "tier": "adopt",
-        "reasons": [
-          "40,876 stars",
-          "updated this week",
-          "MIT license",
-          "first-party / well-known maintainer",
-          "well established"
-        ],
-        "flags": [],
-        "skillFiles": null
-      },
-      {
-        "name": "google-gemini/gemini-cli",
-        "url": "https://github.com/google-gemini/gemini-cli",
-        "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-        "stars": 108753,
-        "forks": 14928,
-        "language": "TypeScript",
-        "license": "Apache-2.0",
-        "pushedAt": "2026-11-06T20:47:08Z",
-        "category": "enhancement",
-        "score": 84,
-        "tier": "adopt",
-        "reasons": [
-          "108,753 stars",
-          "updated this week",
-          "Apache-2.0 license",
-          "first-party / well-known maintainer",
-          "well established"
-        ],
-        "flags": [],
-        "skillFiles": null
-      },
-      {
-        "name": "deepseek-ai/deepseek-harness",
-        "url": "https://github.com/deepseek-ai/deepseek-harness",
-        "description": "DeepSeek Harness: Everything is a Plugin.",
-        "stars": 274844,
-        "forks": 33588,
-        "language": "TypeScript",
-        "license": "MIT",
-        "pushedAt": "2026-11-04T13:06:39Z",
-        "category": "enhancement",
-        "score": 84,
-        "tier": "adopt",
-        "reasons": [
-          "274,844 stars",
-          "updated this week",
-          "MIT license",
-          "first-party / well-known maintainer",
-          "well established"
-        ],
-        "flags": [],
-        "skillFiles": null
-      },
-      {
-        "name": "langchain-ai/langchain",
-        "url": "https://github.com/langchain-ai/langchain",
-        "description": "The agent engineering platform.",
-        "stars": 149130,
-        "forks": 25083,
-        "language": "Python",
-        "license": "MIT",
-        "pushedAt": "2026-11-06T17:38:37Z",
-        "category": "enhancement",
-        "score": 81,
-        "tier": "adopt",
-        "reasons": [
-          "149,130 stars",
-          "updated this week",
-          "MIT license",
-          "first-party / well-known maintainer",
-          "well established"
-        ],
-        "flags": [],
-        "skillFiles": null
-      },
-      {
-        "name": "google/elephant-goldfish-model",
-        "url": "https://github.com/google/elephant-goldfish-model",
-        "description": "Open-source plugin for designing and reviewing software with AI agents",
-        "stars": 13027,
-        "forks": 944,
-        "language": "Python",
-        "license": "Apache-2.0",
-        "pushedAt": "2026-11-06T20:48:19Z",
-        "category": "enhancement",
-        "score": 80,
-        "tier": "adopt",
-        "reasons": [
-          "13,027 stars",
-          "updated this week",
-          "Apache-2.0 license",
-          "first-party / well-known maintainer",
-          "well established"
-        ],
-        "flags": [],
-        "skillFiles": null
-      }
-    ],
-    "free-tokens": [
-      {
-        "name": "router-for-me/CLIProxyAPI",
-        "url": "https://github.com/router-for-me/CLIProxyAPI",
-        "description": "Wrap Antigravity, ChatGPT Codex, Claude Code, Grok Build, Muse Code, Devin as an OpenAI/Gemini/Claude/Codex compatible API service, allowing you to enjoy the free Gemini Series, GPT Series, Grok Series, Claude model through API",
-        "stars": 57805,
-        "forks": 8859,
-        "language": "Go",
-        "license": "MIT",
-        "pushedAt": "2026-11-06T20:39:11Z",
-        "category": "free-tokens",
-        "score": 64,
-        "tier": "watch",
-        "reasons": [
-          "57,805 stars",
-          "updated this week",
-          "MIT license",
-          "well established",
-          "third-party source, needs checking"
-        ],
-        "flags": [
-          "unverified-offer"
-        ],
-        "skillFiles": null
-      },
-      {
-        "name": "Panniantong/Agent-Reach",
-        "url": "https://github.com/Panniantong/Agent-Reach",
-        "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
-        "stars": 109648,
-        "forks": 9798,
-        "language": "Python",
-        "license": "MIT",
-        "pushedAt": "2026-11-06T12:57:05Z",
-        "category": "free-tokens",
-        "score": 64,
-        "tier": "watch",
-        "reasons": [
-          "109,648 stars",
-          "updated this week",
-          "MIT license",
-          "well established",
-          "third-party source, needs checking"
-        ],
-        "flags": [
-          "unverified-offer"
-        ],
-        "skillFiles": null
-      },
-      {
-        "name": "tashfeenahmed/freellmapi",
-        "url": "https://github.com/tashfeenahmed/freellmapi",
-        "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
-        "stars": 48381,
-        "forks": 6656,
-        "language": "TypeScript",
-        "license": "MIT",
-        "pushedAt": "2026-11-06T11:37:37Z",
-        "category": "free-tokens",
-        "score": 63,
-        "tier": "watch",
-        "reasons": [
-          "48,381 stars",
-          "updated this week",
-          "MIT license",
-          "well established",
-          "third-party source, needs checking"
-        ],
-        "flags": [
-          "unverified-offer"
-        ],
-        "skillFiles": null
-      },
-      {
-        "name": "Anil-matcha/AI-Youtube-Shorts-Generator",
-        "url": "https://github.com/Anil-matcha/AI-Youtube-Shorts-Generator",
-        "description": "Open-source alternative to Opus Clip, Vidyo.ai, Klap & SubMagic. Turn long-form YouTube videos into viral 9:16 shorts using LLM highlight detection, Whisper transcription, and auto vertical cropping — free, no watermarks, no per-clip credits.",
-        "stars": 5777,
-        "forks": 1052,
-        "language": "Python",
-        "license": "MIT",
-        "pushedAt": "2026-11-06T09:34:12Z",
-        "category": "free-tokens",
-        "score": 62,
-        "tier": "watch",
-        "reasons": [
-          "5,777 stars",
-          "updated this week",
-          "MIT license",
-          "well established",
-          "third-party source, needs checking"
-        ],
-        "flags": [
-          "unverified-offer"
-        ],
-        "skillFiles": null
-      },
-      {
-        "name": "decolua/9router",
-        "url": "https://github.com/decolua/9router",
-        "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.",
-        "stars": 32036,
-        "forks": 6255,
-        "language": "JavaScript",
-        "license": "MIT",
-        "pushedAt": "2026-10-28T09:45:26Z",
-        "category": "free-tokens",
-        "score": 61,
-        "tier": "watch",
-        "reasons": [
-          "32,036 stars",
-          "updated this month",
-          "MIT license",
-          "well established",
-          "third-party source, needs checking"
-        ],
-        "flags": [
-          "unverified-offer",
-          "hype-claims"
-        ],
-        "skillFiles": null
-      }
-    ],
-    "efficiency": [
-      {
-        "name": "QuantumNous/new-api",
-        "url": "https://github.com/QuantumNous/new-api",
-        "description": "Open-source AI gateway. Self-hosted LLM gateway with OpenAI-, Claude- and Gemini-compatible APIs, model routing, access control, usage tracking and cost accounting.",
-        "stars": 51505,
-        "forks": 12527,
-        "language": "Go",
-        "license": "AGPL-3.0",
-        "pushedAt": "2026-11-06T16:39:36Z",
-        "category": "efficiency",
-        "score": 80,
-        "tier": "watch",
-        "reasons": [
-          "51,505 stars",
-          "updated this week",
-          "AGPL-3.0 license",
-          "well established",
-          "directly cuts AI spend"
-        ],
-        "flags": [
-          "self-host-required"
-        ],
-        "skillFiles": null
-      },
-      {
-        "name": "maximhq/bifrost",
-        "url": "https://github.com/maximhq/bifrost",
-        "description": "Open-source, high-performance AI gateway that works as your LLM gateway, MCP gateway and agent gateway. One OpenAI-compatible API for 10,000+ models, with failover, load balancing, semantic caching, virtual keys, budgets and MCP Code Mode. Works with any SDK or agent and adds under 200µs of overhead at 5k RPS.",
-        "stars": 9409,
-        "forks": 1542,
-        "language": "Go",
-        "license": "Apache-2.0",
-        "pushedAt": "2026-11-06T20:39:53Z",
-        "category": "efficiency",
-        "score": 76,
-        "tier": "adopt",
-        "reasons": [
-          "9,409 stars",
-          "updated this week",
-          "Apache-2.0 license",
-          "well established",
-          "directly cuts AI spend"
-        ],
-        "flags": [],
-        "skillFiles": null
-      },
-      {
-        "name": "HKUDS/nanobot",
-        "url": "https://github.com/HKUDS/nanobot",
-        "description": "Your lightweight open-source personal agent.",
-        "stars": 49883,
-        "forks": 8715,
-        "language": "Python",
-        "license": "MIT",
-        "pushedAt": "2026-11-06T16:46:10Z",
-        "category": "efficiency",
-        "score": 74,
-        "tier": "watch",
-        "reasons": [
-          "49,883 stars",
-          "updated this week",
-          "MIT license",
-          "well established"
-        ],
-        "flags": [
-          "self-host-required"
-        ],
-        "skillFiles": null
-      },
-      {
-        "name": "mnfst/llm-gateway",
-        "url": "https://github.com/mnfst/llm-gateway",
-        "description": "Open Source LLM Gateway 🦚",
-        "stars": 7623,
-        "forks": 525,
-        "language": "TypeScript",
-        "license": "MIT",
-        "pushedAt": "2026-11-06T13:27:13Z",
-        "category": "efficiency",
-        "score": 73,
-        "tier": "adopt",
-        "reasons": [
-          "7,623 stars",
-          "updated this week",
-          "MIT license",
-          "well established",
-          "directly cuts AI spend"
-        ],
-        "flags": [],
-        "skillFiles": null
-      },
-      {
-        "name": "katanemo/plano",
-        "url": "https://github.com/katanemo/plano",
-        "description": "Plano is an AI-native proxy server and data plane for agentic apps. Smart LLM routing, observability, agent orchestration, and guardrails so you stay focused on your agents core logic.",
-        "stars": 7110,
-        "forks": 496,
-        "language": "Rust",
-        "license": "Apache-2.0",
-        "pushedAt": "2026-10-24T19:03:25Z",
-        "category": "efficiency",
-        "score": 71,
-        "tier": "watch",
-        "reasons": [
-          "7,110 stars",
-          "updated this month",
-          "Apache-2.0 license",
-          "well established",
-          "directly cuts AI spend"
-        ],
-        "flags": [],
-        "skillFiles": null
-      }
-    ]
-  },
-  "blocked": [
-    {
-      "name": "lightning-rod-labs/lightningrod-python-sdk",
-      "why": "repository is archived",
-      "stars": 57
-    },
-    {
-      "name": "memodb-io/Acontext",
-      "why": "repository is archived",
-      "stars": 3699
-    },
-    {
-      "name": "joesinvestments/gx10-bench-optimizer",
-      "why": "repository is archived",
-      "stars": 10
-    },
-    {
-      "name": "PleasePrompto/google-ai-mode-skill",
-      "why": "repository is archived",
-      "stars": 294
-    },
-    {
-      "name": "PleasePrompto/google-ai-mode-mcp",
-      "why": "repository is archived",
-      "stars": 154
-    },
-    {
-      "name": "nirholas/cryptocurrency.cv",
-      "why": "matched the scam / key-generator filter",
-      "stars": 332
-    }
-  ],
-  "watching": []
+  ]
 }
