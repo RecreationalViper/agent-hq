@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T00:59:37.045Z",
+  "generatedAt": "2026-11-07T17:51:54.897Z",
   "date": "2026-11-07",
   "token": true,
   "searches": {
@@ -10,13 +10,100 @@
     "failed": 0
   },
   "apiCalls": 12,
-  "rateRemaining": 19,
-  "newItems": 0,
+  "rateRemaining": 18,
+  "newItems": 2,
   "blockedToday": 0,
-  "shortlist": [],
+  "shortlist": [
+    {
+      "name": "gepa-ai/gepa",
+      "url": "https://github.com/gepa-ai/gepa",
+      "description": "Optimize prompts, code, and more with AI-powered Reflective Optimization",
+      "stars": 7328,
+      "forks": 611,
+      "language": "Jupyter Notebook",
+      "license": "MIT",
+      "pushedAt": "2026-11-07T03:23:54Z",
+      "category": "enhancement",
+      "score": 70,
+      "tier": "watch",
+      "reasons": [
+        "7,328 stars",
+        "updated this week",
+        "MIT license",
+        "well established"
+      ],
+      "flags": [],
+      "skillFiles": null
+    },
+    {
+      "name": "agentset-ai/agentset",
+      "url": "https://github.com/agentset-ai/agentset",
+      "description": "The open-source RAG platform: built-in citations, deep research, 22+ file formats, partitions, MCP server, and more.",
+      "stars": 2123,
+      "forks": 190,
+      "language": "TypeScript",
+      "license": "MIT",
+      "pushedAt": "2026-10-28T16:17:44Z",
+      "category": "skills",
+      "score": 55,
+      "tier": "watch",
+      "reasons": [
+        "filed under skills",
+        "2,123 stars",
+        "updated this month",
+        "MIT license"
+      ],
+      "flags": [],
+      "skillFiles": null
+    }
+  ],
   "byCategory": {
-    "skills": [],
-    "enhancement": [],
+    "skills": [
+      {
+        "name": "agentset-ai/agentset",
+        "url": "https://github.com/agentset-ai/agentset",
+        "description": "The open-source RAG platform: built-in citations, deep research, 22+ file formats, partitions, MCP server, and more.",
+        "stars": 2123,
+        "forks": 190,
+        "language": "TypeScript",
+        "license": "MIT",
+        "pushedAt": "2026-10-28T16:17:44Z",
+        "category": "skills",
+        "score": 55,
+        "tier": "watch",
+        "reasons": [
+          "filed under skills",
+          "2,123 stars",
+          "updated this month",
+          "MIT license"
+        ],
+        "flags": [],
+        "skillFiles": null
+      }
+    ],
+    "enhancement": [
+      {
+        "name": "gepa-ai/gepa",
+        "url": "https://github.com/gepa-ai/gepa",
+        "description": "Optimize prompts, code, and more with AI-powered Reflective Optimization",
+        "stars": 7328,
+        "forks": 611,
+        "language": "Jupyter Notebook",
+        "license": "MIT",
+        "pushedAt": "2026-11-07T03:23:54Z",
+        "category": "enhancement",
+        "score": 70,
+        "tier": "watch",
+        "reasons": [
+          "7,328 stars",
+          "updated this week",
+          "MIT license",
+          "well established"
+        ],
+        "flags": [],
+        "skillFiles": null
+      }
+    ],
     "free-tokens": [],
     "efficiency": []
   },

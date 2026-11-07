@@ -2,9 +2,14 @@
 
 > Scanned 12 of 29 saved searches (12 returned data, 0 unchanged, 0 failed). 12 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (0)
+## Start here (2)
 
-_Nothing new cleared the quality bar this scan. That is a normal, healthy result — the radar is rotating through its searches and will cover the rest next time._
+- **[gepa-ai/gepa](https://github.com/gepa-ai/gepa)** 🟡 WATCH · score 70/100 · ⭐ 7,328 · MIT · updated 1d ago
+  - Optimize prompts, code, and more with AI-powered Reflective Optimization
+  - Why: 7,328 stars; updated this week; MIT license; well established
+- **[agentset-ai/agentset](https://github.com/agentset-ai/agentset)** 🟡 WATCH · score 55/100 · ⭐ 2,123 · MIT · updated 10d ago
+  - The open-source RAG platform: built-in citations, deep research, 22+ file formats, partitions, MCP server, and more.
+  - Why: filed under skills; 2,123 stars; updated this month; MIT license
 
 ## Agent skills you could install (0)
 
