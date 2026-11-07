@@ -1,15 +1,13 @@
 # GitHub Radar — 2026-11-07
 
-> Scanned 12 of 29 saved searches (12 returned data, 0 unchanged, 0 failed). 12 GitHub API calls, authenticated. Zero AI tokens used.
+> Scanned 12 of 29 saved searches (12 returned data, 0 unchanged, 0 failed). 15 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (2)
+## Start here (1)
 
-- **[gepa-ai/gepa](https://github.com/gepa-ai/gepa)** 🟡 WATCH · score 70/100 · ⭐ 7,328 · MIT · updated 1d ago
-  - Optimize prompts, code, and more with AI-powered Reflective Optimization
-  - Why: 7,328 stars; updated this week; MIT license; well established
-- **[agentset-ai/agentset](https://github.com/agentset-ai/agentset)** 🟡 WATCH · score 55/100 · ⭐ 2,123 · MIT · updated 10d ago
-  - The open-source RAG platform: built-in citations, deep research, 22+ file formats, partitions, MCP server, and more.
-  - Why: filed under skills; 2,123 stars; updated this month; MIT license
+- **[alchaincyf/zhangxuefeng-skill](https://github.com/alchaincyf/zhangxuefeng-skill)** 🟢 ADOPT · score 75/100 · ⭐ 10,719 · MIT · updated 26d ago
+  - 张雪峰.skill — 张雪峰的认知操作系统。高考志愿/考研/职业规划的实战思维框架。由女娲.skill生成。
+  - Why: 10,719 stars; updated this month; MIT license; well established; contains SKILL.md skill files
+  - Confirmed: contains `SKILL.md` skill files
 
 ## Agent skills you could install (0)
 
