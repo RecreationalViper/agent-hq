@@ -1,6 +1,7 @@
 // Agent HQ routine runner — runs on GitHub Actions (free), calls Google Gemini (free tier),
 // and saves each agent's report into reports/ so the website can show it.
 import fs from "node:fs/promises";
+import { hasGroq, groqChat } from "./ai-fallback.mjs";
 
 const API = process.env.API_BASE || "https://generativelanguage.googleapis.com/v1beta";
 const KEY = process.env.GEMINI_API_KEY;
@@ -110,6 +111,7 @@ async function main() {
   if (!due.length) return;
 
   let models = await pickModels(cfg.model);
+  let geminiOut = false; // set once Gemini says its free daily limit is used up
   console.log(`Model: ${models[0]}`);
   await fs.mkdir("reports", { recursive: true });
   let index = await readJson("reports/index.json", []);
@@ -144,16 +146,17 @@ async function main() {
     if (agent.reads) task += `\n\nThis week's team reports:${await weekOfReports(index, date, new Set(cfg.agents.filter((a) => a.context).map((a) => a.id)))}`;
     // Agents with "search": true can use Google Search (free on Gemini) and must cite sources.
     const rules = search ? RULES.replace(/You have no live internet access:[^.]*\./, "You can search the web with Google Search: use it, prefer official sources, include the link for every claim, and say when something could not be confirmed.") : RULES;
+    const system = `You are "${agent.name}", an agent on a small AI team.\n\nContext: ${agent.context || cfg.context}\n\n${rules}`;
     const body = JSON.stringify({
-      systemInstruction: { parts: [{ text: `You are "${agent.name}", an agent on a small AI team.\n\nContext: ${agent.context || cfg.context}\n\n${rules}` }] },
+      systemInstruction: { parts: [{ text: system }] },
       contents: [{ role: "user", parts: [{ text: task }] }],
       ...(search ? { tools: [{ google_search: {} }] } : {}),
       generationConfig: { temperature: search ? 0.3 : 0.8 }
     });
     // Try the best model first. Retired models are dropped for good; busy ones are
     // skipped. Whichever model answers moves to the front so later agents start there.
-    let data, lastErr;
-    for (let i = 0; i < models.length && i < 5 && !data; ) {
+    let data, lastErr, backupText;
+    for (let i = 0; i < models.length && i < 5 && !data && !geminiOut; ) {
       const m = models[i];
       try {
         data = await api(`/${m}:generateContent`, { method: "POST", body });
@@ -162,15 +165,24 @@ async function main() {
         lastErr = err;
         if (RETIRED.test(err.message)) { console.log(`  ${m} is retired, skipping it`); models = models.filter((x) => x !== m); continue; }
         if (err.message.startsWith("BUSY") && models[i + 1]) { console.log(`  ${m} is busy, trying ${models[i + 1]}`); i++; continue; }
-        throw err;
+        if (!err.message.startsWith("BUSY")) throw err;
+        break;
       }
     }
-    if (!data) throw lastErr || new Error("no model answered");
-    let text = (data.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").trim();
+    if (!data && (geminiOut || lastErr?.message.startsWith("BUSY"))) {
+      // Search agents first retry without search (the search quota is separate).
+      if (search && !geminiOut && /quota/i.test(lastErr?.message || "")) throw lastErr;
+      if (/quota/i.test(lastErr?.message || "") && !geminiOut) { geminiOut = true; console.log("  Gemini's free daily limit is used up; switching the rest of today's agents to the backup AI"); }
+      if (!hasGroq()) throw lastErr || new Error("Gemini is out and no backup AI key is set");
+      if (search) throw new Error("quota: backup AI has no web search");
+      backupText = await groqChat(system, task, { temperature: 0.8 });
+    }
+    if (!data && !backupText) throw lastErr || new Error("no model answered");
+    let text = backupText || (data.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").trim();
     if (!text) throw new Error("empty reply");
     let sources = "";
     const seen = new Set();
-    for (const c of data.candidates?.[0]?.groundingMetadata?.groundingChunks || []) {
+    for (const c of data?.candidates?.[0]?.groundingMetadata?.groundingChunks || []) {
       const w = c.web; if (!w?.uri || seen.has(w.uri)) continue; seen.add(w.uri);
       sources += `\n- [${(w.title || w.uri).replace(/[\[\]]/g, "")}](${w.uri})`;
     }

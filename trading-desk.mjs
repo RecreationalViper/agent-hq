@@ -1,6 +1,7 @@
 // Agent HQ Trading Desk - runs on GitHub Actions, practice (paper) money on Alpaca.
 // AI agents research and propose; plain code enforces every safety limit and places orders.
 import fs from "node:fs/promises";
+import { hasGroq, groqChat } from "./ai-fallback.mjs";
 
 const GEMINI = process.env.API_BASE || "https://generativelanguage.googleapis.com/v1beta";
 const ALPACA_DATA = process.env.ALPACA_DATA_BASE || "https://data.alpaca.markets";
@@ -50,31 +51,42 @@ async function pickModels() {
     .map((m) => m.name).sort((a, b) => rank(a) - rank(b) || ver(b) - ver(a));
   if (!models.length) throw new Error("No Gemini model available.");
 }
+let geminiOut = false; // set once Gemini's free daily limit is used up
+const parse = (text, json) => json ? JSON.parse(text.replace(/^```(?:json)?|```$/g, "").trim()) : text;
 async function ask(role, prompt, json = false) {
+  const system = `You are the ${role} on a small AI multi-asset trading desk (a mini Wall Street firm) managing a $50 practice account (paper money) on Alpaca. Be careful, plain-spoken and brief. You cannot see anything beyond the data given. Never promise returns.`;
   const body = JSON.stringify({
-    systemInstruction: { parts: [{ text: `You are the ${role} on a small AI multi-asset trading desk (a mini Wall Street firm) managing a $50 practice account (paper money) on Alpaca. Be careful, plain-spoken and brief. You cannot see anything beyond the data given. Never promise returns.` }] },
+    systemInstruction: { parts: [{ text: system }] },
     contents: [{ role: "user", parts: [{ text: prompt }] }],
     generationConfig: { temperature: 0.3, ...(json ? { responseMimeType: "application/json" } : {}) }
   });
   let lastErr;
-  for (let round = 0; round < 3; round++) {
-    if (round) { console.log("  all models busy, waiting 60s..."); await sleep(60000); }
+  for (let round = 0; round < 3 && !geminiOut; round++) {
+    if (round) {
+      if (hasGroq()) break; // don't wait around: the backup AI takes over
+      console.log("  all models busy, waiting 60s..."); await sleep(60000);
+    }
     for (const m of models.slice(0, 6)) {
       try {
         const data = await gemini(`/${m}:generateContent`, { method: "POST", body });
         models = [m, ...models.filter((x) => x !== m)];
         const text = (data.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").trim();
         if (!text) throw new Error("empty reply");
-        return json ? JSON.parse(text.replace(/^```(?:json)?|```$/g, "")) : text;
+        return parse(text, json);
       } catch (e) {
         lastErr = e;
         if (/no longer|retired|not found|not supported|deprecated/i.test(e.message)) { models = models.filter((x) => x !== m); continue; }
+        if (/quota/i.test(e.message)) { geminiOut = true; console.log("  Gemini's free daily limit is used up; using the backup AI"); break; }
         if (/BUSY|empty|JSON|Unexpected/i.test(e.message)) continue;
         throw e;
       }
     }
   }
-  throw lastErr;
+  if (hasGroq()) {
+    const text = await groqChat(system, prompt, { json, temperature: 0.3 });
+    return parse(text, json);
+  }
+  throw lastErr || new Error("BUSY: no AI available");
 }
 
 // ---------- Indicators (computed in code, not by the AI) ----------
@@ -191,7 +203,7 @@ async function main() {
   }).sort((a, b) => b.score - a.score);
   const quantTable = scored.map((x, i) => `${i + 1}. ${x.s} (${x.cls}) 20d ${pct(x.m.ret20d ?? 0)}, 5d ${pct(x.m.ret5d ?? 0)}, trend ${x.trend}/2, RSI ${x.m.rsi14}`);
 
-  await pickModels();
+  try { await pickModels(); } catch (e) { if (!hasGroq()) throw e; geminiOut = true; console.log(`  Gemini unavailable (${e.message}); using the backup AI`); }
   const dataFor = (cls) => JSON.stringify(Object.fromEntries(cfg.universe[cls].filter((s) => market[s]).map((s) => [s, market[s]])));
   const newsFor = (cls) => news.filter((n) => cfg.universe[cls].some((s) => n.includes(s))).join("\n") || "(no headlines)";
 

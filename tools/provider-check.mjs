@@ -21,3 +21,12 @@ for (const [name, p] of Object.entries(providers)) {
   console.log(`RESULT ${name}: WORKS. ${pick} replied "${(j.choices?.[0]?.message?.content || "").trim()}" (${lim})`);
 }
 if (!ok) process.exit(1);
+
+// Real end-to-end test of the backup path the agents use
+if (process.env.GROQ_API_KEY) {
+  const { groqChat } = await import("../ai-fallback.mjs");
+  try {
+    const t = await groqChat("You are a test agent.", "Return JSON: {\"status\":\"ready\",\"agents\":7}", { json: true, temperature: 0 });
+    console.log(`RESULT backup path: WORKS, JSON reply ${t.replace(/\s+/g, " ").slice(0, 80)}`);
+  } catch (e) { console.log(`RESULT backup path: FAILED: ${e.message}`); process.exitCode = 1; }
+}
