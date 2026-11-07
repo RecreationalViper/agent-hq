@@ -1,14 +1,23 @@
-// Checks whether an AI provider key works and has credits. Never prints the key.
-const key = process.env.GROK_API_KEY;
-if (!key) { console.log("RESULT: GROK_API_KEY secret is missing or empty."); process.exit(1); }
-const H = { Authorization: `Bearer ${key}`, "Content-Type": "application/json" };
-const show = async (r) => { const t = await r.text(); try { const j = JSON.parse(t); return j.error?.message || j.error || j.code || t.slice(0, 300); } catch { return t.slice(0, 300); } };
-const m = await fetch("https://api.x.ai/v1/models", { headers: H });
-if (!m.ok) { console.log(`RESULT: key rejected (HTTP ${m.status}): ${await show(m)}`); process.exit(1); }
-const ids = ((await m.json()).data || []).map((x) => x.id);
-console.log(`Key accepted. ${ids.length} models: ${ids.join(", ")}`);
-const pick = ids.find((i) => /mini|fast/i.test(i) && !/image|vision|imagine/i.test(i)) || ids.find((i) => !/image|vision|imagine/i.test(i));
-const c = await fetch("https://api.x.ai/v1/chat/completions", { method: "POST", headers: H, body: JSON.stringify({ model: pick, messages: [{ role: "user", content: "Reply with the single word: ready" }], max_tokens: 5 }) });
-if (!c.ok) { console.log(`RESULT: model ${pick} refused (HTTP ${c.status}): ${await show(c)}`); process.exit(1); }
-const j = await c.json();
-console.log(`RESULT: WORKS. ${pick} replied "${j.choices?.[0]?.message?.content?.trim()}" (used ${j.usage?.total_tokens} tokens)`);
+// Checks whether AI provider keys work and have credits. Never prints a key.
+const providers = {
+  grok: { key: process.env.GROK_API_KEY, base: "https://api.x.ai/v1", secret: "GROK_API_KEY" },
+  groq: { key: process.env.GROQ_API_KEY, base: "https://api.groq.com/openai/v1", secret: "GROQ_API_KEY" }
+};
+let ok = true;
+for (const [name, p] of Object.entries(providers)) {
+  if (!p.key) { console.log(`RESULT ${name}: no key found (secret ${p.secret} missing or empty)`); continue; }
+  const H = { Authorization: `Bearer ${p.key}`, "Content-Type": "application/json" };
+  const show = async (r) => { const t = await r.text(); try { const j = JSON.parse(t); return j.error?.message || j.error || t.slice(0, 300); } catch { return t.slice(0, 300); } };
+  const m = await fetch(`${p.base}/models`, { headers: H });
+  if (!m.ok) { console.log(`RESULT ${name}: key rejected (HTTP ${m.status}): ${await show(m)}`); ok = false; continue; }
+  const ids = ((await m.json()).data || []).map((x) => x.id);
+  console.log(`${name}: key accepted. ${ids.length} models: ${ids.join(", ")}`);
+  const chat = ids.filter((i) => !/image|vision|imagine|whisper|tts|guard|embed|audio|playai|orpheus|compound/i.test(i));
+  const pick = chat.find((i) => /gpt-oss-120b|llama-3\.3-70b/i.test(i)) || chat.find((i) => /mini|fast|instant/i.test(i)) || chat[0];
+  const c = await fetch(`${p.base}/chat/completions`, { method: "POST", headers: H, body: JSON.stringify({ model: pick, messages: [{ role: "user", content: "Reply with the single word: ready" }], max_tokens: 20 }) });
+  if (!c.ok) { console.log(`RESULT ${name}: model ${pick} refused (HTTP ${c.status}): ${await show(c)}`); ok = false; continue; }
+  const j = await c.json();
+  const lim = ["x-ratelimit-limit-requests", "x-ratelimit-limit-tokens"].map((h) => `${h.replace("x-ratelimit-limit-", "")}/limit: ${c.headers.get(h)}`).join(", ");
+  console.log(`RESULT ${name}: WORKS. ${pick} replied "${(j.choices?.[0]?.message?.content || "").trim()}" (${lim})`);
+}
+if (!ok) process.exit(1);
