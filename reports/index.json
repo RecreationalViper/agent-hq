@@ -1,5 +1,17 @@
 [
   {
+    "file": "2026-11-08-review.md",
+    "agent": "review",
+    "name": "Weekly Review (Manager)",
+    "date": "2026-11-08"
+  },
+  {
+    "file": "2026-11-08-github-radar.md",
+    "agent": "github-radar",
+    "name": "GitHub Radar",
+    "date": "2026-11-08"
+  },
+  {
     "file": "2026-11-08-daily-task.md",
     "agent": "daily-task",
     "name": "Daily Focus",
