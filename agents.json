@@ -1,6 +1,6 @@
 {
   "model": "auto",
-  "context": "Etsy shop selling original printable memorial kits (funeral/celebration-of-life programs, welcome signs, share-a-memory cards) as editable Canva templates and PDFs. Styles: Classic Elegance, Modern Minimal, Soft Watercolor Sky, Soft Botanical. Owner works only from an iPhone, budget $0, goal is sustainable side income. Buyers are grieving families: tone must be calm, respectful and simple.",
+  "context": "Printable memorial kit business (funeral/celebration-of-life programs, welcome signs, share-a-memory cards) sold as editable Canva templates and PDFs. Styles: Classic Elegance, Modern Minimal, Soft Watercolor Sky, Soft Botanical. STATUS: no shop is open yet. Plan: sell first on Payhip (free to open, about 5% per sale), then open the Etsy shop ($15 fee) once sales cover it. Write listings so they work on both Payhip and Etsy, and never tell the owner to publish in an Etsy shop that doesn't exist yet. Owner works only from an iPhone, budget $0, goal is sustainable side income. The owner must approve before spending money, publishing listings or contacting customers. Buyers are grieving families: tone must be calm, respectful and simple.",
   "agents": [
     {
       "id": "daily-task",
