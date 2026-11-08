@@ -47,7 +47,8 @@ export async function macroSnapshot(key = process.env.FRED_API_KEY) {
       const latest = obs[0];
       const ago = (days) => obs.find((o) => Date.parse(o.date) <= Date.parse(latest.date) - days * 86400000);
       if (mode === "yoy") {
-        const y = ago(360), m = obs[1] && ago(390 - 30);
+        const y = ago(360);
+        const m = obs[1] && obs.find((o) => Date.parse(o.date) <= Date.parse(obs[1].date) - 360 * 86400000);
         const yoy = y ? (latest.v / y.v - 1) * 100 : null;
         const prevYoy = obs[1] && m ? (obs[1].v / m.v - 1) * 100 : null;
         if (yoy == null) throw new Error("not enough history");
