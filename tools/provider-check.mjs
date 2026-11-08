@@ -1,6 +1,6 @@
 // Checks whether AI provider keys work and have credits. Never prints a key.
 const providers = {
-  grok: { key: process.env.GROK_API_KEY, base: "https://api.x.ai/v1", secret: "GROK_API_KEY" },
+  // grok: paused by the owner; not used by any agent
   groq: { key: process.env.GROQ_API_KEY, base: "https://api.groq.com/openai/v1", secret: "GROQ_API_KEY" }
 };
 let ok = true;
