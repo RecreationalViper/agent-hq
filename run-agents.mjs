@@ -3,6 +3,7 @@
 import fs from "node:fs/promises";
 import { hasGroq, groqChat } from "./ai-fallback.mjs";
 import { hasGoogle, addUpdate, mdToLines } from "./gdocs.mjs";
+import { salesSummary } from "./sales.mjs";
 
 const API = process.env.API_BASE || "https://generativelanguage.googleapis.com/v1beta";
 const KEY = process.env.GEMINI_API_KEY;
@@ -120,6 +121,7 @@ async function main() {
   // Run team members first, the manager-style "reads" agents last so they see today's work.
   due.sort((a, b) => Boolean(a.reads) - Boolean(b.reads));
 
+  let salesText; // fetched once per run for the shop agents
   async function runAgent(agent, noSearch = false) {
     if (agent.search && !noSearch) {
       try { return await runAgent(agent, "try"); }
@@ -143,6 +145,10 @@ async function main() {
         const body = await fs.readFile(path, "utf8").catch(() => "");
         task += `\n\n### ${path}\n${body ? body.slice(0, 24000) : `(the file ${path} is missing - say so and do not invent findings)`}`;
       }
+    }
+    if (agent.doc === "etsy") {
+      salesText ??= await salesSummary().then((r) => r?.text || "").catch((e) => { console.log(`  sales feed unavailable: ${e.message}`); return ""; });
+      if (salesText) task += `\n\nReal store sales (Payhip, from the sales feed):\n${salesText}`;
     }
     if (agent.reads) task += `\n\nThis week's team reports:${await weekOfReports(index, date, new Set(cfg.agents.filter((a) => a.context).map((a) => a.id)))}`;
     // Agents with "search": true can use Google Search (free on Gemini) and must cite sources.
