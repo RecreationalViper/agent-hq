@@ -2,6 +2,7 @@
 // and saves each agent's report into reports/ so the website can show it.
 import fs from "node:fs/promises";
 import { hasGroq, groqChat } from "./ai-fallback.mjs";
+import { hasGoogle, addUpdate, mdToLines } from "./gdocs.mjs";
 
 const API = process.env.API_BASE || "https://generativelanguage.googleapis.com/v1beta";
 const KEY = process.env.GEMINI_API_KEY;
@@ -193,6 +194,12 @@ async function main() {
     index = [{ file, agent: agent.id, name: agent.name, date }, ...index.filter((r) => r.file !== file)].slice(0, 300);
     await fs.writeFile("reports/index.json", JSON.stringify(index, null, 2));
     console.log(`  saved reports/${file}`);
+    // Agents tied to a Google Doc (e.g. the Etsy team -> "Etsy Planning") add their update there too.
+    const doc = agent.doc && cfg.docs?.[agent.doc];
+    if (doc && hasGoogle()) {
+      try { await addUpdate(doc.id, doc.anchor || "Agent updates", `${date} · ${agent.name}`, mdToLines(text)); console.log(`  added to the ${doc.name || agent.doc} doc`); }
+      catch (e) { console.log(`  couldn't update the ${doc.name || agent.doc} doc: ${e.message}`); }
+    }
   }
 
   // First pass, then one retry pass for anything that failed (busy spikes usually pass).

@@ -6,25 +6,29 @@
       "id": "daily-task",
       "name": "Daily Focus",
       "schedule": "daily",
-      "instructions": "Give the owner ONE task for today that moves the shop forward and takes 30 minutes or less on an iPhone. Say exactly what to do, why it matters, and how to know it's done. Vary the task day to day across products, listings, marketing and records."
+      "instructions": "Give the owner ONE task for today that moves the shop forward and takes 30 minutes or less on an iPhone. Say exactly what to do, why it matters, and how to know it's done. Vary the task day to day across products, listings, marketing and records.",
+      "doc": "etsy"
     },
     {
       "id": "content",
       "name": "Content Planner",
       "schedule": "weekly:mon",
-      "instructions": "Plan this week's free marketing: 5 short TikTok or Pinterest post ideas for our memorial kits. For each: the hook (first line), a 20-30 second script or pin text, and what to show on screen. Tone: gentle, helpful, never salesy about grief."
+      "instructions": "Plan this week's free marketing: 5 short TikTok or Pinterest post ideas for our memorial kits. For each: the hook (first line), a 20-30 second script or pin text, and what to show on screen. Tone: gentle, helpful, never salesy about grief.",
+      "doc": "etsy"
     },
     {
       "id": "ideas",
       "name": "Product Ideas",
       "schedule": "weekly:wed",
-      "instructions": "Suggest 3 new original memorial printable products that fit our existing styles. For each: what it is, who buys it and when, the pages/sizes included, and a suggested price. No recipes, patterns or how-to instruction products."
+      "instructions": "Suggest 3 new original memorial printable products that fit our existing styles. For each: what it is, who buys it and when, the pages/sizes included, and a suggested price. No recipes, patterns or how-to instruction products.",
+      "doc": "etsy"
     },
     {
       "id": "listing",
       "name": "Listing Writer",
       "schedule": "weekly:fri",
-      "instructions": "Pick one product from our kits or this week's product ideas and draft a complete Etsy listing: a title under 140 characters, exactly 13 tags of 20 characters or fewer, a description with a clear 'What you get' list and this AI disclosure line: 'Designed by me with the help of AI tools; previews show the real files you receive.' Mark it DRAFT - owner must review and publish."
+      "instructions": "Pick one product from our kits or this week's product ideas and draft a complete Etsy listing: a title under 140 characters, exactly 13 tags of 20 characters or fewer, a description with a clear 'What you get' list and this AI disclosure line: 'Designed by me with the help of AI tools; previews show the real files you receive.' Mark it DRAFT - owner must review and publish.",
+      "doc": "etsy"
     },
     {
       "id": "credit-scout",
@@ -55,7 +59,15 @@
       "name": "Weekly Review (Manager)",
       "schedule": "weekly:sun",
       "reads": "all",
-      "instructions": "You are the manager. Read this week's reports from the team. Summarize: what was produced, the 3 best ideas, decisions the owner must make, anything needing approval (spending, publishing, contacting customers), and the top 3 priorities for next week."
+      "instructions": "You are the manager. Read this week's reports from the team. Summarize: what was produced, the 3 best ideas, decisions the owner must make, anything needing approval (spending, publishing, contacting customers), and the top 3 priorities for next week.",
+      "doc": "etsy"
     }
-  ]
+  ],
+  "docs": {
+    "etsy": {
+      "name": "Etsy Planning",
+      "id": "1qmAfGc3pvlMfBz7krioe4HydpaH6I09n8TRwXvB6nv8",
+      "anchor": "Agent updates"
+    }
+  }
 }

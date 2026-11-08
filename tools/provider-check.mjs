@@ -39,3 +39,10 @@ if (process.env.FRED_API_KEY) {
     console.log(`RESULT fred: WORKS. ${m.lines.length} indicators, e.g. ${m.lines[0]}; next releases: ${m.calendar.slice(0, 3).join("; ") || "none in 10 days"}${m.notes.length ? ` (missing: ${m.notes.join("; ")})` : ""}`);
   } catch (e) { console.log(`RESULT fred: FAILED: ${e.message}`); process.exitCode = 1; }
 } else console.log("RESULT fred: no key found (secret FRED_API_KEY missing or empty)");
+
+// Google Docs robot check (read-only)
+if (process.env.GOOGLE_SERVICE_ACCOUNT_JSON) {
+  const { checkAccess } = await import("../gdocs.mjs");
+  try { const r = await checkAccess("1qmAfGc3pvlMfBz7krioe4HydpaH6I09n8TRwXvB6nv8"); console.log(`RESULT google: WORKS. ${r.robot} can open "${r.title}"`); }
+  catch (e) { console.log(`RESULT google: FAILED: ${e.message}`); process.exitCode = 1; }
+} else console.log("RESULT google: no key found (secret GOOGLE_SERVICE_ACCOUNT_JSON missing or empty)");
