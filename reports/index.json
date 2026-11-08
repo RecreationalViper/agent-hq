@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-08-researcher.md",
+    "agent": "researcher",
+    "name": "Deep Researcher",
+    "date": "2026-11-08"
+  },
+  {
     "file": "2026-11-07-github-radar.md",
     "agent": "github-radar",
     "name": "GitHub Radar",
