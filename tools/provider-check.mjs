@@ -46,3 +46,14 @@ if (process.env.GOOGLE_SERVICE_ACCOUNT_JSON) {
   try { const r = await checkAccess("1qmAfGc3pvlMfBz7krioe4HydpaH6I09n8TRwXvB6nv8"); console.log(`RESULT google: WORKS. ${r.robot} can open "${r.title}"`); }
   catch (e) { console.log(`RESULT google: FAILED: ${e.message}`); process.exitCode = 1; }
 } else console.log("RESULT google: no key found (secret GOOGLE_SERVICE_ACCOUNT_JSON missing or empty)");
+
+// Cloudflare Workers AI check
+if (process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID) {
+  const { cloudflareModels, cloudflareChat } = await import("../ai-fallback.mjs");
+  try {
+    const ms = await cloudflareModels();
+    console.log(`cloudflare: ${ms.length} text models, top picks: ${ms.slice(0, 4).join(", ")}`);
+    const t = await cloudflareChat("You are a test agent.", "Return JSON: {\"status\":\"ready\"}", { json: true, temperature: 0 });
+    console.log(`RESULT cloudflare: WORKS, reply ${t.replace(/\s+/g, " ").slice(0, 80)}`);
+  } catch (e) { console.log(`RESULT cloudflare: FAILED: ${e.message}`); process.exitCode = 1; }
+} else console.log(`RESULT cloudflare: missing ${!process.env.CLOUDFLARE_API_TOKEN ? "CLOUDFLARE_API_TOKEN " : ""}${!process.env.CLOUDFLARE_ACCOUNT_ID ? "CLOUDFLARE_ACCOUNT_ID" : ""}`);
