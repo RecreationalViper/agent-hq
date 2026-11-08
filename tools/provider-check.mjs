@@ -81,3 +81,13 @@ if (process.env.OPENROUTER_API_KEY) {
     console.log(`RESULT openrouter: WORKS (free model), reply ${t.replace(/\s+/g, " ").replace(/[{}]/g, "").slice(0, 60)}`);
   } catch (e) { console.log(`RESULT openrouter: FAILED: ${e.message}`); process.exitCode = 1; }
 } else console.log("RESULT openrouter: no key found (secret OPENROUTER_API_KEY missing or empty)");
+
+// Payhip API key check (read-only: lists coupons)
+if (process.env.PAYHIP_API_KEY) {
+  try {
+    const r = await fetch("https://payhip.com/api/v2/coupons", { headers: { "payhip-api-key": process.env.PAYHIP_API_KEY.trim() } });
+    const j = await r.json().catch(() => ({}));
+    console.log(r.ok ? `RESULT payhip: WORKS. ${Array.isArray(j.data) ? j.data.length : 0} coupon(s) on the store` : `RESULT payhip: FAILED (HTTP ${r.status}): ${j.message || j.error || "rejected"}`);
+    if (!r.ok) process.exitCode = 1;
+  } catch (e) { console.log(`RESULT payhip: FAILED: ${e.message}`); process.exitCode = 1; }
+} else console.log("RESULT payhip: no key found (secret PAYHIP_API_KEY missing or empty)");
