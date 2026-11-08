@@ -91,3 +91,13 @@ if (process.env.PAYHIP_API_KEY) {
     if (!r.ok) process.exitCode = 1;
   } catch (e) { console.log(`RESULT payhip: FAILED: ${e.message}`); process.exitCode = 1; }
 } else console.log("RESULT payhip: no key found (secret PAYHIP_API_KEY missing or empty)");
+
+// Sales feed check (Cloudflare Worker): is it up, does it reject fakes, can agents read it?
+try {
+  const feed = JSON.parse(await (await import("node:fs/promises")).readFile("sales-feed.json", "utf8"));
+  const home = await fetch(feed.url + "/");
+  const fake = await fetch(feed.webhook, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ type: "paid", signature: "fake" }) });
+  const { salesSummary } = await import("../sales.mjs");
+  const s = await salesSummary();
+  console.log(`RESULT sales feed: ${home.ok ? "UP" : `DOWN (HTTP ${home.status})`}; fake sale rejected: ${fake.status === 401}; agents can read it: ${s ? `yes (${s.total} sale event(s))` : "no"}`);
+} catch (e) { console.log(`RESULT sales feed: FAILED: ${e.message}`); process.exitCode = 1; }
