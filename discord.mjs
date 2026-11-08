@@ -1,0 +1,88 @@
+// Discord reporting for Agent HQ through one bot (DISCORD_BOT_TOKEN secret).
+// The bot keeps an "Agent HQ" category with one channel per role, recorded in discord.json.
+import fs from "node:fs/promises";
+
+const API = process.env.DISCORD_API_BASE || "https://discord.com/api/v10";
+const SITE = "https://recreationalviper.github.io/agent-hq/";
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// Channel key -> name and topic. Add a role here and run "Discord Setup" to create its channel.
+export const CHANNELS = {
+  sales: ["sales", "Every Forever Held sale and refund, the moment it happens"],
+  "daily-focus": ["daily-focus", "Daily Focus: one shop task a day"],
+  listings: ["listings", "Listing Writer: titles, tags and descriptions ready to paste"],
+  content: ["content", "Content Planner: posts and videos to share"],
+  "product-ideas": ["product-ideas", "Product Ideas: new products to build"],
+  "weekly-review": ["weekly-review", "Weekly Review: how the shop did and what to decide"],
+  "trading-desk": ["trading-desk", "Trading Desk (paper money): daily trades, Head Trader reviews, backtests"],
+  research: ["research", "Deep Researcher, Credit Scout and GitHub Radar"],
+  alerts: ["alerts", "Anything that failed or needs your attention"]
+};
+// Which channel each agent reports to
+export const AGENT_CHANNEL = { "daily-task": "daily-focus", content: "content", ideas: "product-ideas", listing: "listings", review: "weekly-review", "credit-scout": "research", "github-radar": "research", researcher: "research", "trading-desk": "trading-desk", "head-trader": "trading-desk", backtest: "trading-desk" };
+
+export const hasDiscord = () => Boolean(process.env.DISCORD_BOT_TOKEN);
+
+async function api(path, init = {}) {
+  for (let attempt = 0; attempt < 4; attempt++) {
+    const res = await fetch(API + path, { ...init, signal: AbortSignal.timeout(20000), headers: { Authorization: `Bot ${process.env.DISCORD_BOT_TOKEN.trim()}`, "Content-Type": "application/json", "User-Agent": "AgentHQ (https://github.com/RecreationalViper/agent-hq, 1.0)" } });
+    if (res.status === 429) { const j = await res.json().catch(() => ({})); await sleep(Math.ceil((j.retry_after || 2) * 1000)); continue; }
+    const text = await res.text();
+    let data; try { data = text ? JSON.parse(text) : {}; } catch { data = {}; }
+    if (!res.ok) throw new Error(`Discord ${res.status}: ${data.message || text.slice(0, 150)}`);
+    return data;
+  }
+  throw new Error("Discord kept rate-limiting");
+}
+
+// Creates the category and any missing channels; saves their ids to discord.json.
+export async function setupChannels() {
+  const guilds = await api("/users/@me/guilds");
+  if (!guilds.length) throw new Error("The bot isn't in any server yet. Use the invite link first.");
+  const guild = guilds.find((g) => /agent hq/i.test(g.name)) || guilds[0];
+  const existing = await api(`/guilds/${guild.id}/channels`);
+  let cat = existing.find((c) => c.type === 4 && /agent hq/i.test(c.name));
+  if (!cat) cat = await api(`/guilds/${guild.id}/channels`, { method: "POST", body: JSON.stringify({ name: "Agent HQ", type: 4 }) });
+  const ids = {}, created = [];
+  for (const [key, [name, topic]] of Object.entries(CHANNELS)) {
+    let ch = existing.find((c) => c.type === 0 && c.name === name);
+    if (!ch) { ch = await api(`/guilds/${guild.id}/channels`, { method: "POST", body: JSON.stringify({ name, type: 0, topic, parent_id: cat.id }) }); created.push(name); }
+    ids[key] = ch.id;
+  }
+  await fs.writeFile("discord.json", JSON.stringify({ server: guild.name, serverId: guild.id, channels: ids }, null, 2) + "\n");
+  return { server: guild.name, created, total: Object.keys(ids).length };
+}
+
+async function channelId(key) {
+  try { return JSON.parse(await fs.readFile("discord.json", "utf8")).channels?.[key] || null; } catch { return null; }
+}
+
+// Turns a Markdown report into a Discord-friendly summary (Discord shows **bold**, bullets and links).
+function forDiscord(md, max = 3800) {
+  let t = md.replace(/^# .*\n+/, "").replace(/^>\s?/gm, "").replace(/^#{2,6}\s+(.*)$/gm, "**$1**").replace(/\n{3,}/g, "\n\n").trim();
+  if (t.length > max) t = t.slice(0, t.lastIndexOf("\n", max) > max * 0.6 ? t.lastIndexOf("\n", max) : max) + "\n\n…";
+  return t;
+}
+
+// Posts a report to the agent's channel. Never throws (reporting must not break agents).
+export async function report(agentKey, title, markdown, { color = 0x6d7f5f, file } = {}) {
+  if (!hasDiscord()) return false;
+  try {
+    const key = CHANNELS[agentKey] ? agentKey : AGENT_CHANNEL[agentKey] || "alerts";
+    const id = await channelId(key);
+    if (!id) { console.log("  Discord not set up yet (run the Discord Setup workflow)"); return false; }
+    await api(`/channels/${id}/messages`, { method: "POST", body: JSON.stringify({ embeds: [{ title: title.slice(0, 250), description: forDiscord(markdown), color, url: SITE + (file ? `#${file}` : ""), footer: { text: "Agent HQ · full report on the site" }, timestamp: new Date().toISOString() }] }) });
+    console.log(`  posted to Discord #${CHANNELS[key][0]}`);
+    return true;
+  } catch (e) { console.log(`  couldn't post to Discord: ${e.message}`); return false; }
+}
+
+export async function alert(text) {
+  if (!hasDiscord()) return false;
+  try {
+    const id = await channelId("alerts");
+    if (!id) return false;
+    await api(`/channels/${id}/messages`, { method: "POST", body: JSON.stringify({ content: text.slice(0, 1900) }) });
+    return true;
+  } catch (e) { console.log(`  couldn't post to Discord: ${e.message}`); return false; }
+}

@@ -7,6 +7,7 @@
 // "Confidence & gaps" section, 4) code checks every citation. Then it posts to Notion.
 import fs from "node:fs/promises";
 import { ask } from "./ai-ask.mjs";
+import { report as discordReport } from "./discord.mjs";
 
 const TZ = "America/New_York";
 const date = new Intl.DateTimeFormat("en-CA", { timeZone: TZ }).format(new Date());
@@ -212,6 +213,7 @@ async function main() {
   } else console.log("Notion not set up yet (NOTION_TOKEN secret missing); saved to the website only.");
   await writeJson("research/state.json", state);
   console.log(`Saved reports/${file}`);
+  await discordReport("researcher", `AI & Dev Brief · ${date}`, full, { file, color: 0x5865f2 });
 }
 
 main().catch((e) => { console.error("ERROR:", e.message); process.exit(1); });

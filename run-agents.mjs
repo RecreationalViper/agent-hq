@@ -4,6 +4,7 @@ import fs from "node:fs/promises";
 import { hasGroq, groqChat } from "./ai-fallback.mjs";
 import { hasGoogle, addUpdate, mdToLines } from "./gdocs.mjs";
 import { salesSummary } from "./sales.mjs";
+import { report as discordReport, alert as discordAlert } from "./discord.mjs";
 
 const API = process.env.API_BASE || "https://generativelanguage.googleapis.com/v1beta";
 const KEY = process.env.GEMINI_API_KEY;
@@ -200,6 +201,7 @@ async function main() {
     index = [{ file, agent: agent.id, name: agent.name, date }, ...index.filter((r) => r.file !== file)].slice(0, 300);
     await fs.writeFile("reports/index.json", JSON.stringify(index, null, 2));
     console.log(`  saved reports/${file}`);
+    await discordReport(agent.id, `${agent.name} · ${date}`, text, { file });
     // Agents tied to a Google Doc (e.g. the Etsy team -> "Etsy Planning") add their update there too.
     const doc = agent.doc && cfg.docs?.[agent.doc];
     if (doc && hasGoogle()) {
@@ -227,6 +229,7 @@ async function main() {
   }
   const failures = failed.length;
   console.log(`Done: ${due.length - failures} of ${due.length} agent(s) saved a report.`);
+  if (failures) await discordAlert(`⚠️ ${failures} agent(s) failed today: ${failed.map((a) => a.name).join(", ")}. The rest reported normally.`);
   if (failures === due.length) throw new Error("Every agent failed this run.");
 }
 

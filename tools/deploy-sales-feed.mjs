@@ -40,7 +40,12 @@ if (!sub) throw new Error("Couldn't set up a workers.dev address.");
 // 3. upload the Worker with its settings
 const readToken = crypto.createHash("sha256").update("read:" + PAYHIP).digest("hex");
 const bindings = [{ type: "kv_namespace", name: "SALES", namespace_id: kv.id }, { type: "secret_text", name: "PAYHIP_API_KEY", text: PAYHIP }, { type: "secret_text", name: "READ_TOKEN", text: readToken }];
-if (process.env.DISCORD_SALES_WEBHOOK) bindings.push({ type: "secret_text", name: "DISCORD_SALES_WEBHOOK", text: process.env.DISCORD_SALES_WEBHOOK.trim() });
+let salesChannel = null;
+try { salesChannel = JSON.parse(await fs.readFile("discord.json", "utf8")).channels?.sales || null; } catch {}
+if (process.env.DISCORD_BOT_TOKEN && salesChannel) {
+  bindings.push({ type: "secret_text", name: "DISCORD_BOT_TOKEN", text: process.env.DISCORD_BOT_TOKEN.trim() }, { type: "plain_text", name: "DISCORD_SALES_CHANNEL", text: salesChannel });
+  console.log("Sales will also post to Discord #sales");
+}
 const form = new FormData();
 form.append("metadata", new Blob([JSON.stringify({ main_module: "worker.js", compatibility_date: "2026-01-01", bindings })], { type: "application/json" }));
 form.append("worker.js", new Blob([await fs.readFile("workers/sales/worker.js", "utf8")], { type: "application/javascript+module" }), "worker.js");

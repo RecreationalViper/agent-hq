@@ -3,6 +3,7 @@
 import fs from "node:fs/promises";
 import { hasGroq, groqChat } from "./ai-fallback.mjs";
 import { macroSnapshot } from "./fred.mjs";
+import { report as discordReport } from "./discord.mjs";
 
 const GEMINI = process.env.API_BASE || "https://generativelanguage.googleapis.com/v1beta";
 const ALPACA_DATA = process.env.ALPACA_DATA_BASE || "https://data.alpaca.markets";
@@ -403,6 +404,7 @@ async function headTraderReview({ cfg, state, date, TRADE, positions, deskChange
   await writeJson("reports/index.json", [{ file, agent: "head-trader", name: "Head Trader", date }, ...index.filter((r) => r.file !== file)].slice(0, 300));
   await writeJson("trading/state.json", state);
   console.log(`Saved reports/${file}${priority ? " and standing orders for the CIO" : " (no Priority section found)"}`);
+  await discordReport("head-trader", `Head Trader review · ${date}`, text, { file, color: 0xb5651d });
 }
 
 async function save(date, report, state) {
@@ -414,6 +416,7 @@ async function save(date, report, state) {
   await writeJson("reports/index.json", [{ file, agent: "trading-desk", name: "Trading Desk", date }, ...index.filter((r) => r.file !== file)].slice(0, 300));
   await writeJson("trading/state.json", state);
   console.log(`Saved reports/${file}`);
+  await discordReport("trading-desk", `Trading Desk · ${date}`, report.join("\n"), { file, color: 0x2f6f8f });
 }
 
 main().catch((e) => { console.error("ERROR:", e.message); process.exit(1); });

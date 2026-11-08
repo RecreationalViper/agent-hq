@@ -27,9 +27,12 @@ export default {
         coupon: (e.items || []).map((i) => i.used_coupon || i.coupon_code).filter(Boolean)[0] || null
       };
       await env.SALES.put(`${record.type}:${record.date}:${record.id}`, JSON.stringify(record), { expirationTtl: 60 * 60 * 24 * 400 });
-      if (env.DISCORD_SALES_WEBHOOK) {
+      if (env.DISCORD_BOT_TOKEN && env.DISCORD_SALES_CHANNEL) {
         const what = record.items.map((i) => i.product).join(", ") || "an item";
-        await fetch(env.DISCORD_SALES_WEBHOOK, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ content: record.type === "paid" ? `🕊️ New Forever Held sale: ${what} (${record.currency} ${record.amount.toFixed(2)})` : `↩️ Refund: ${what} (${record.currency} ${record.refunded.toFixed(2)})` }) }).catch(() => {});
+        const content = record.type === "paid"
+          ? `🕊️ **New Forever Held sale:** ${what} for ${record.currency} ${record.amount.toFixed(2)}${record.coupon ? ` (code ${record.coupon})` : ""}`
+          : `↩️ **Refund:** ${what}, ${record.currency} ${record.refunded.toFixed(2)}`;
+        await fetch(`https://discord.com/api/v10/channels/${env.DISCORD_SALES_CHANNEL}/messages`, { method: "POST", headers: { Authorization: `Bot ${env.DISCORD_BOT_TOKEN}`, "content-type": "application/json" }, body: JSON.stringify({ content }) }).catch(() => {});
       }
       return json({ ok: true });
     }

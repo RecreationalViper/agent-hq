@@ -4,6 +4,7 @@
 // and save reproducible artifacts with a data fingerprint.
 import fs from "node:fs/promises";
 import crypto from "node:crypto";
+import { report as discordReport } from "./discord.mjs";
 
 const DATA = process.env.ALPACA_DATA_BASE || "https://data.alpaca.markets";
 const AK = process.env.ALPACA_KEY, AS = process.env.ALPACA_SECRET;
@@ -144,6 +145,7 @@ async function main() {
   await fs.writeFile(`reports/${file}`, report.join("\n") + "\n");
   const index = await readJson("reports/index.json", []);
   await fs.writeFile("reports/index.json", JSON.stringify([{ file, agent: "backtest", name: "Backtest Analyst", date }, ...index.filter((r) => r.file !== file)].slice(0, 300), null, 2) + "\n");
+  await discordReport("backtest", `Backtest Analyst · ${date}`, report.join("\n"), { file, color: 0x2f6f8f });
   console.log(`Backtest: ${pct(st.total)} vs SPY ${pct(sb.total)}, ${trades.length} trades. Saved reports/${file}`);
 }
 
