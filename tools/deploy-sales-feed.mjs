@@ -3,27 +3,25 @@
 // CLOUDFLARE_ACCOUNT_ID and PAYHIP_API_KEY. Optional: DISCORD_SALES_WEBHOOK.
 import fs from "node:fs/promises";
 import crypto from "node:crypto";
-const ACCT = (process.env.CLOUDFLARE_ACCOUNT_ID || "").trim(), TOKEN = (process.env.CLOUDFLARE_WORKERS_TOKEN || "").trim(), PAYHIP = (process.env.PAYHIP_API_KEY || "").trim();
-if (!ACCT || !TOKEN || !PAYHIP) { console.log(`Missing: ${[!TOKEN && "CLOUDFLARE_WORKERS_TOKEN", !ACCT && "CLOUDFLARE_ACCOUNT_ID", !PAYHIP && "PAYHIP_API_KEY"].filter(Boolean).join(", ")}`); process.exit(1); }
+const ACCT = (process.env.CLOUDFLARE_ACCOUNT_ID || "").trim(), PAYHIP = (process.env.PAYHIP_API_KEY || "").trim();
+// Use whichever saved Cloudflare token is valid for this account: the Workers token, else the Workers AI token.
+let TOKEN = "";
+for (const [name, t] of [["CLOUDFLARE_WORKERS_TOKEN", process.env.CLOUDFLARE_WORKERS_TOKEN], ["CLOUDFLARE_API_TOKEN", process.env.CLOUDFLARE_API_TOKEN]]) {
+  if (!t?.trim()) continue;
+  const H = { Authorization: `Bearer ${t.trim()}` };
+  const okUser = (await (await fetch("https://api.cloudflare.com/client/v4/user/tokens/verify", { headers: H })).json().catch(() => ({}))).result?.status === "active";
+  const okAcct = (await (await fetch(`https://api.cloudflare.com/client/v4/accounts/${ACCT}/tokens/verify`, { headers: H })).json().catch(() => ({}))).result?.status === "active";
+  const canKv = (await fetch(`https://api.cloudflare.com/client/v4/accounts/${ACCT}/storage/kv/namespaces?per_page=1`, { headers: H })).ok;
+  console.log(`${name}: valid ${okUser || okAcct}, can manage Workers storage on this account: ${canKv}`);
+  if (canKv) { TOKEN = t.trim(); console.log(`Using ${name}`); break; }
+}
+if (!ACCT || !TOKEN || !PAYHIP) { console.log(`RESULT: can't install yet. ${!TOKEN ? "No saved Cloudflare token has Workers Scripts + Workers KV Storage (Edit) permission on this account. " : ""}${!ACCT ? "CLOUDFLARE_ACCOUNT_ID missing. " : ""}${!PAYHIP ? "PAYHIP_API_KEY missing." : ""}`); process.exit(1); }
 const NAME = "foreverheld-sales", API = `https://api.cloudflare.com/client/v4/accounts/${ACCT}`;
 async function cf(path, init = {}) {
   const res = await fetch(API + path, { ...init, headers: { Authorization: `Bearer ${TOKEN}`, ...(init.body && !(init.body instanceof FormData) ? { "Content-Type": "application/json" } : {}), ...(init.headers || {}) } });
   const j = await res.json().catch(() => ({}));
   if (!res.ok || j.success === false) { const e = new Error(`${init.method || "GET"} ${path}: HTTP ${res.status} ${j.errors?.map((x) => `${x.code} ${x.message}`).join("; ") || ""}`); e.status = res.status; e.body = j; throw e; }
   return j.result;
-}
-// 0. check the token first (describes problems without printing it)
-{
-  const H = { Authorization: `Bearer ${TOKEN}` };
-  const v = await (await fetch("https://api.cloudflare.com/client/v4/user/tokens/verify", { headers: H })).json().catch(() => ({}));
-  const va = await (await fetch(`${API}/tokens/verify`, { headers: H })).json().catch(() => ({}));
-  const same = TOKEN === (process.env.CLOUDFLARE_API_TOKEN || "").trim();
-  console.log(`Token check: length ${TOKEN.length}; as profile token: ${v.result?.status || v.errors?.[0]?.message || "?"}; as account token: ${va.result?.status || va.errors?.[0]?.message || "?"}; same as the Workers AI token: ${same}`);
-  if (v.result?.status === "active") {
-    const m = await (await fetch("https://api.cloudflare.com/client/v4/memberships", { headers: H })).json().catch(() => ({}));
-    const accts = (m.result || []).map((x) => x.account?.id);
-    console.log(`Token can see ${accts.length} account(s); includes CLOUDFLARE_ACCOUNT_ID: ${accts.includes(ACCT)}`);
-  }
 }
 // 1. storage for sales
 const spaces = await cf("/storage/kv/namespaces?per_page=100");
