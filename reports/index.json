@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-08-daily-task.md",
+    "agent": "daily-task",
+    "name": "Daily Focus",
+    "date": "2026-11-08"
+  },
+  {
     "file": "2026-11-08-head-trader.md",
     "agent": "head-trader",
     "name": "Head Trader",
