@@ -30,3 +30,12 @@ if (process.env.GROQ_API_KEY) {
     console.log(`RESULT backup path: WORKS, JSON reply ${t.replace(/\s+/g, " ").slice(0, 80)}`);
   } catch (e) { console.log(`RESULT backup path: FAILED: ${e.message}`); process.exitCode = 1; }
 }
+
+// FRED (economic data) key check: no AI involved
+if (process.env.FRED_API_KEY) {
+  const { macroSnapshot } = await import("../fred.mjs");
+  try {
+    const m = await macroSnapshot();
+    console.log(`RESULT fred: WORKS. ${m.lines.length} indicators, e.g. ${m.lines[0]}; next releases: ${m.calendar.slice(0, 3).join("; ") || "none in 10 days"}${m.notes.length ? ` (missing: ${m.notes.join("; ")})` : ""}`);
+  } catch (e) { console.log(`RESULT fred: FAILED: ${e.message}`); process.exitCode = 1; }
+} else console.log("RESULT fred: no key found (secret FRED_API_KEY missing or empty)");
