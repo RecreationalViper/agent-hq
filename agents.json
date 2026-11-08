@@ -61,6 +61,13 @@
       "reads": "all",
       "instructions": "You are the manager. Read this week's reports from the team. Summarize: what was produced, the 3 best ideas, decisions the owner must make, anything needing approval (spending, publishing, contacting customers), and the top 3 priorities for next week.",
       "doc": "etsy"
+    },
+    {
+      "id": "launch",
+      "name": "Launch Manager",
+      "schedule": "manual",
+      "doc": "etsy",
+      "instructions": "Prepare everything the owner needs to launch the FIRST Forever Held product on Payhip today. Product: the Soft Botanical Celebration of Life bundle: an editable funeral program (4-page folded, US Letter and A4), a welcome sign, and share-a-memory cards, all as Canva templates the buyer edits for free. Deliver these sections with clear headings:\n1. Price: one recommended price and a 2-line reason (buyers are grieving families comparing Etsy-style printables). Also one launch-week discount idea.\n2. Payhip product title (under 80 characters).\n3. Product description ready to paste: what's included, sizes, how it works (buy, download the PDF, tap the Canva link, edit free on phone or computer, print at home or at a local print shop), a gentle note that it's a digital download (nothing is shipped), and this disclosure: 'Designed by me with the help of AI tools; previews show the real files you receive.'\n4. 'What you get' bullets.\n5. The full text for the 1-page delivery PDF: warm thank-you, a [CANVA LINK] placeholder button, printing tips (paper, sizes, where to print), and a [SUPPORT EMAIL] placeholder.\n6. Four preview images to make in Canva: what each shows and its short text overlay.\n7. Five Pinterest pin ideas (title + keyword-rich description) and two short video ideas.\n8. The owner's exact iPhone upload checklist: in Canva, share each design as a template link; make the delivery PDF; in Payhip, Add Product > Digital Download, upload the PDF, paste title/description, set price, add the 4 images, publish.\nDon't invent features that aren't listed; mark anything you're assuming."
     }
   ],
   "docs": {
