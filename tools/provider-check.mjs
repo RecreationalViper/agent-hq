@@ -55,5 +55,18 @@ if (process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID) {
     console.log(`cloudflare: ${ms.length} text models, top picks: ${ms.slice(0, 4).join(", ")}`);
     const t = await cloudflareChat("You are a test agent.", "Return JSON: {\"status\":\"ready\"}", { json: true, temperature: 0 });
     console.log(`RESULT cloudflare: WORKS, reply ${t.replace(/\s+/g, " ").slice(0, 80)}`);
-  } catch (e) { console.log(`RESULT cloudflare: FAILED: ${e.message}`); process.exitCode = 1; }
+  } catch (e) {
+    console.log(`RESULT cloudflare: FAILED: ${e.message}`); process.exitCode = 1;
+    // Diagnose without printing secrets
+    const t = process.env.CLOUDFLARE_API_TOKEN.trim(), acct = process.env.CLOUDFLARE_ACCOUNT_ID.trim();
+    console.log(`cloudflare diag: token length ${t.length}, has spaces ${/\s/.test(t)}; account id length ${acct.length}, looks like 32 hex ${/^[0-9a-f]{32}$/i.test(acct)}`);
+    const H = { Authorization: `Bearer ${t}` };
+    for (const [label, url] of [["user token", "https://api.cloudflare.com/client/v4/user/tokens/verify"], ["account token", `https://api.cloudflare.com/client/v4/accounts/${acct}/tokens/verify`]]) {
+      const r = await fetch(url, { headers: H }); const j = await r.json().catch(() => ({}));
+      console.log(`cloudflare diag: verify as ${label}: HTTP ${r.status} ${j.result?.status || ""} ${j.errors?.[0]?.message || ""}`);
+    }
+    const r = await fetch(`https://api.cloudflare.com/client/v4/accounts/${acct}/ai/run/@cf/meta/llama-3.1-8b-instruct`, { method: "POST", headers: { ...H, "Content-Type": "application/json" }, body: JSON.stringify({ prompt: "Say ready" }) });
+    const j = await r.json().catch(() => ({}));
+    console.log(`cloudflare diag: direct model run: HTTP ${r.status} ${j.errors?.[0]?.message || (j.result?.response ? "ok" : "")}`);
+  }
 } else console.log(`RESULT cloudflare: missing ${!process.env.CLOUDFLARE_API_TOKEN ? "CLOUDFLARE_API_TOKEN " : ""}${!process.env.CLOUDFLARE_ACCOUNT_ID ? "CLOUDFLARE_ACCOUNT_ID" : ""}`);
