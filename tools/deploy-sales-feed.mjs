@@ -12,6 +12,19 @@ async function cf(path, init = {}) {
   if (!res.ok || j.success === false) { const e = new Error(`${init.method || "GET"} ${path}: HTTP ${res.status} ${j.errors?.map((x) => `${x.code} ${x.message}`).join("; ") || ""}`); e.status = res.status; e.body = j; throw e; }
   return j.result;
 }
+// 0. check the token first (describes problems without printing it)
+{
+  const H = { Authorization: `Bearer ${TOKEN}` };
+  const v = await (await fetch("https://api.cloudflare.com/client/v4/user/tokens/verify", { headers: H })).json().catch(() => ({}));
+  const va = await (await fetch(`${API}/tokens/verify`, { headers: H })).json().catch(() => ({}));
+  const same = TOKEN === (process.env.CLOUDFLARE_API_TOKEN || "").trim();
+  console.log(`Token check: length ${TOKEN.length}; as profile token: ${v.result?.status || v.errors?.[0]?.message || "?"}; as account token: ${va.result?.status || va.errors?.[0]?.message || "?"}; same as the Workers AI token: ${same}`);
+  if (v.result?.status === "active") {
+    const m = await (await fetch("https://api.cloudflare.com/client/v4/memberships", { headers: H })).json().catch(() => ({}));
+    const accts = (m.result || []).map((x) => x.account?.id);
+    console.log(`Token can see ${accts.length} account(s); includes CLOUDFLARE_ACCOUNT_ID: ${accts.includes(ACCT)}`);
+  }
+}
 // 1. storage for sales
 const spaces = await cf("/storage/kv/namespaces?per_page=100");
 let kv = spaces.find((n) => n.title === NAME);
