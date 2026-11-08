@@ -115,7 +115,9 @@ export async function openRouterModels() {
   const data = await orCall("/models");
   const free = (data.data || []).filter((m) => /:free$/.test(m.id) && Number(m.pricing?.prompt || 0) === 0 && Number(m.pricing?.completion || 0) === 0 && !/vision|image|embed|guard/i.test(m.id));
   const rank = (i) => { const k = OR_PREFER.findIndex((r) => r.test(i)); return k < 0 ? 99 : k; };
-  orModels = free.map((m) => m.id).sort((a, b) => rank(a) - rank(b));
+  // then bigger models first (size from the name, e.g. "70b", "29b-a4b"; "super"/"large" count as big)
+  const size = (i) => { const n = [...i.matchAll(/(\d+(?:\.\d+)?)b(?![a-z])/gi)].map((m) => Number(m[1])); return n.length ? Math.max(...n) : /super|large|ultra|pro/i.test(i) ? 60 : /mini|small|lite|nano/i.test(i) ? 5 : 20; };
+  orModels = free.map((m) => m.id).sort((a, b) => rank(a) - rank(b) || size(b) - size(a));
   if (!orModels.length) throw new Error("OpenRouter has no free models available right now.");
   return orModels;
 }
