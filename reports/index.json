@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-08-launch.md",
+    "agent": "launch",
+    "name": "Launch Manager",
+    "date": "2026-11-08"
+  },
+  {
     "file": "2026-11-08-review.md",
     "agent": "review",
     "name": "Weekly Review (Manager)",
