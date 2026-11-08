@@ -3,10 +3,11 @@ on:
   schedule:
     - cron: "35 15 * * 1-5" # weekdays, about 10:35am New York time
     - cron: "5 15 * * 1" # Mondays before the desk: Backtest Analyst
+    - cron: "35 21 * * 5" # Fridays after the close: Head Trader review
   workflow_dispatch:
     inputs:
       action:
-        description: "run, backtest, pause, or resume"
+        description: "run, review, backtest, pause, or resume"
         default: "run"
 permissions:
   contents: write
@@ -26,7 +27,7 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY || secrets.GROQ_KEY || secrets.GROQ }}
           ALPACA_KEY: ${{ secrets.ALPACA_KEY }}
           ALPACA_SECRET: ${{ secrets.ALPACA_SECRET }}
-          DESK_ACTION: ${{ github.event.schedule == '5 15 * * 1' && 'backtest' || github.event.inputs.action || 'run' }}
+          DESK_ACTION: ${{ github.event.schedule == '5 15 * * 1' && 'backtest' || github.event.schedule == '35 21 * * 5' && 'review' || github.event.inputs.action || 'run' }}
       - name: Save results
         if: always()
         run: |

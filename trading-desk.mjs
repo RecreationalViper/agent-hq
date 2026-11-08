@@ -53,8 +53,8 @@ async function pickModels() {
 }
 let geminiOut = false; // set once Gemini's free daily limit is used up
 const parse = (text, json) => json ? JSON.parse(text.replace(/^```(?:json)?|```$/g, "").trim()) : text;
-async function ask(role, prompt, json = false) {
-  const system = `You are the ${role} on a small AI multi-asset trading desk (a mini Wall Street firm) managing a $50 practice account (paper money) on Alpaca. Be careful, plain-spoken and brief. You cannot see anything beyond the data given. Never promise returns.`;
+async function ask(role, prompt, json = false, systemOverride = null) {
+  const system = systemOverride || `You are the ${role} on a small AI multi-asset trading desk (a mini Wall Street firm) managing a $50 practice account (paper money) on Alpaca. Be careful, plain-spoken and brief. You cannot see anything beyond the data given. Never promise returns.`;
   const body = JSON.stringify({
     systemInstruction: { parts: [{ text: system }] },
     contents: [{ role: "user", parts: [{ text: prompt }] }],
@@ -134,13 +134,15 @@ async function main() {
   const [account, clock, allPositions] = await Promise.all([alpaca(TRADE, "/v2/account"), alpaca(TRADE, "/v2/clock"), alpaca(TRADE, "/v2/positions")]);
   if (account.trading_blocked || account.account_blocked || account.trade_suspended_by_user) throw new Error("Alpaca says this account can't trade right now.");
   if (account.status && !["ACTIVE", "PAPER_ONLY"].includes(account.status)) throw new Error(`Alpaca account status is ${account.status}, not ACTIVE.`);
-  const positions = allPositions.filter((p) => uni.has(p.symbol));
+  let positions = allPositions.filter((p) => uni.has(p.symbol));
   const unrealized = positions.reduce((a, p) => a + Number(p.unrealized_pl), 0);
-  const invested = positions.reduce((a, p) => a + Number(p.cost_basis), 0);
+  let invested = positions.reduce((a, p) => a + Number(p.cost_basis), 0);
   const deskValue = cfg.budgetUsd + state.realizedUsd + unrealized;
   const deskChange = deskValue / cfg.budgetUsd - 1;
   const lossUsd = cfg.budgetUsd - deskValue;
   console.log(`Market open: ${clock.is_open}. Desk ${pct(deskChange)}, ${positions.length} holding(s).`);
+
+  if (ACTION === "review") return headTraderReview({ cfg, state, date, TRADE, positions, deskChange, classOf });
 
   // Order follow-up: what happened to the last run's orders
   const followUp = [];
@@ -182,6 +184,31 @@ async function main() {
     await writeJson("trading.json", cfg);
     report.push(`## 🛑 Desk paused`, `Losses reached the safety limit (${(cfg.maxLossUsd / cfg.budgetUsd * 100).toFixed(0)}% of budget). No new trades until you resume it.`, "");
   }
+  // Stops (Day-trader skill: never hold through invalidation). Enforced in code, even when paused,
+  // because exiting only reduces risk. Positions without a stop get the default one.
+  state.stops ||= {};
+  const stopOuts = [];
+  for (const p of positions) {
+    if (!state.stops[p.symbol]) state.stops[p.symbol] = { stopPct: cfg.defaultStopPct, price: money(Number(p.avg_entry_price) * (1 - cfg.defaultStopPct / 100)), invalidation: `default ${cfg.defaultStopPct}% stop (bought before stops existed)`, set: date };
+    if (!clock.is_open) continue;
+    const st = state.stops[p.symbol];
+    if (Number(p.current_price) <= st.price) {
+      try {
+        await alpaca(TRADE, `/v2/positions/${encodeURIComponent(p.symbol)}`, { method: "DELETE" });
+        state.realizedUsd = money(state.realizedUsd + Number(p.unrealized_pl));
+        stopOuts.push(`- 🛑 Stopped out of ${p.symbol} at ${pct(Number(p.unrealized_plpc))}: price hit its invalidation level (${st.invalidation})`);
+        state.log = [{ date, side: "sell", symbol: p.symbol, reason: "stop hit", stop: st.price }, ...(state.log || [])].slice(0, 500);
+        delete state.stops[p.symbol];
+        invested -= Number(p.cost_basis);
+        p.__closed = true;
+      } catch (e) { stopOuts.push(`- ⚠️ ${p.symbol} hit its stop but the sell failed: ${e.message}`); }
+    }
+  }
+  positions = positions.filter((p) => !p.__closed);
+  for (const sym of Object.keys(state.stops)) if (!allPositions.some((p) => p.symbol === sym)) delete state.stops[sym];
+  const stopLines = [`## Stops (invalidation levels)`, ...(stopOuts.length ? stopOuts : []), ...(positions.length ? positions.map((p) => `- ${p.symbol}: exit if it falls ${(100 * (1 - state.stops[p.symbol].price / Number(p.current_price))).toFixed(1)}% more (${state.stops[p.symbol].invalidation})`) : ["- No open positions."]), ""];
+  header.push(...stopLines);
+
   if (cfg.paused || !clock.is_open) {
     report.push(...header, cfg.paused ? "Desk is **paused**: no trades today." : "Market is closed today: no trades.");
     return save(date, report, state);
@@ -226,12 +253,15 @@ async function main() {
   const bt = await readJson("trading/backtest/summary.json", null);
   const btLine = bt ? `Backtest Analyst (${bt.period.from} to ${bt.period.to}): the mechanical momentum rule returned ${pct(bt.strategyResult.total)} vs SPY ${pct(bt.benchmarkSPY.total)}, worst drop ${pct(bt.strategyResult.maxDrawdown)} vs SPY ${pct(bt.benchmarkSPY.maxDrawdown)}. Hypothetical only.` : "Backtest Analyst: no backtest yet.";
 
+  const ht = await readJson("trading/head-trader.json", null);
+  const htLine = ht?.priority ? `Head Trader's standing orders (review of ${ht.date}): ${ht.priority}` : "Head Trader: no review yet.";
+
   // 7. Chief Investment Officer: allocation + trades
   console.log("Chief Investment Officer...");
   const held = positions.map((p) => ({ symbol: p.symbol, class: classOf[p.symbol], valueUsd: money(p.market_value), changeSinceBought: +Number(p.unrealized_plpc).toFixed(4) }));
   const room = Math.max(0, cfg.budgetUsd + state.realizedUsd - invested);
   let plan;
-  try { plan = await ask("Chief Investment Officer", `Goal: grow the portfolio and beat simply holding SPY, while staying diversified.\n\nMacro Economist:\n${macro}\n\n${Object.entries(views).map(([d, v]) => `${d} Analyst:\n${v}`).join("\n\n")}\n\n${btLine}\n\nQuant momentum ranking (best first):\n${quantTable.slice(0, 15).join("\n")}\n...worst:\n${quantTable.slice(-5).join("\n")}\n\nCurrent holdings: ${JSON.stringify(held)}\nCash available: $${room.toFixed(2)} of $${cfg.budgetUsd}\n\nDecide a target mix by asset class, then 0 to ${cfg.maxTradesPerDay} trades to move toward it. Rules: buys are whole dollars from 1 to ${cfg.maxTradeUsd} and never exceed cash available; sells either close a holding (omit usd) or trim it (usd from 1 to its value); one single stock may not exceed ${cfg.maxStockPct}% of budget, one fund ${cfg.maxFundPct}%. Doing nothing is fine. Return JSON: {"targetMix":{"Stocks":30,"Indexes":30,"Treasuries":20,"Commodities":10,"REITs":10},"trades":[{"symbol":"GLD","side":"buy","usd":5,"reason":"..."}],"summary":["3 short bullets for the owner, percentages only"]}`, true);
+  try { plan = await ask("Chief Investment Officer", `Goal: grow the portfolio and beat simply holding SPY, while staying diversified.\n\nMacro Economist:\n${macro}\n\n${Object.entries(views).map(([d, v]) => `${d} Analyst:\n${v}`).join("\n\n")}\n\n${btLine}\n${htLine}\n\nQuant momentum ranking (best first):\n${quantTable.slice(0, 15).join("\n")}\n...worst:\n${quantTable.slice(-5).join("\n")}\n\nCurrent holdings: ${JSON.stringify(held)}\nCash available: $${room.toFixed(2)} of $${cfg.budgetUsd}\n\nDecide a target mix by asset class, then 0 to ${cfg.maxTradesPerDay} trades to move toward it. Rules: every buy must define its invalidation BEFORE entry: "stopPct" (exit if price falls this % below entry, ${cfg.minStopPct}-${cfg.maxStopPct}) and "invalidation" (what would prove the idea wrong). Risk per idea is capped at ${cfg.maxRiskPct}% of budget, so a buy can be at most $${(cfg.budgetUsd * cfg.maxRiskPct / 100).toFixed(2)} ÷ stopPct (e.g. 8% stop → $${Math.floor(cfg.budgetUsd * cfg.maxRiskPct / 8)}). Never add to a holding that is losing. Prefer fewer, high-quality trades. Buys are whole dollars from 1 to ${cfg.maxTradeUsd} and never exceed cash available; sells either close a holding (omit usd) or trim it (usd from 1 to its value); one single stock may not exceed ${cfg.maxStockPct}% of budget, one fund ${cfg.maxFundPct}%. Doing nothing is fine. Return JSON: {"targetMix":{"Stocks":30,"Indexes":30,"Treasuries":20,"Commodities":10,"REITs":10},"trades":[{"symbol":"GLD","side":"buy","usd":5,"stopPct":6,"invalidation":"closes below its 50-day average","reason":"..."}],"summary":["3 short bullets for the owner, percentages only"]}`, true);
   } catch (e) {
     if (!/BUSY|quota/i.test(e.message)) throw e;
     report.push(...header, `## AI team ran out of free Gemini quota before deciding`, `No trades today.`, "", `## Macro Economist`, macro, "", `## Quant Analyst: momentum ranking`, ...quantTable.slice(0, 10));
@@ -240,7 +270,7 @@ async function main() {
 
   // 8. Risk Manager
   console.log("Risk Manager...");
-  const tradesLeft = Math.max(0, cfg.maxTradesPerDay - (state.log || []).filter((l) => l.date === date).length);
+  const tradesLeft = Math.max(0, cfg.maxTradesPerDay - (state.log || []).filter((l) => l.date === date && l.reason !== "stop hit").length);
   const proposed = Array.isArray(plan?.trades) ? plan.trades.slice(0, tradesLeft) : [];
   let risk = { decisions: [] };
   if (proposed.length) try { risk = await ask("Risk Manager", `Holdings: ${JSON.stringify(held)}\nCash available: $${room.toFixed(2)} of $${cfg.budgetUsd}\nQuant ranking:\n${quantTable.join("\n")}\nMacro: ${macro}\n\nProposed trades:\n${JSON.stringify(proposed)}\n\nApprove or veto each. Veto anything chasing a huge short-term spike (RSI over 80), adding to a clear downtrend without a reason, or making the portfolio lopsided. Return JSON: {"decisions":[{"symbol":"GLD","approve":true,"why":"..."}],"note":"one sentence on overall risk"}`, true); } catch (e) {
@@ -254,18 +284,24 @@ async function main() {
   let cash = room;
   const orders = [], blocked = [];
   for (const t of proposed) {
-    const sym = String(t.symbol || "").toUpperCase(), side = String(t.side || "").toLowerCase(), usd = Math.floor(Number(t.usd) || 0);
+    const sym = String(t.symbol || "").toUpperCase(), side = String(t.side || "").toLowerCase();
+    let usd = Math.floor(Number(t.usd) || 0);
     const d = (risk.decisions || []).find((x) => String(x.symbol).toUpperCase() === sym);
     const why = (m) => blocked.push(`- ${side} ${sym}: ${m}`);
     if (!uni.has(sym)) { why("not on the allowed list"); continue; }
     if (!d?.approve) { why(`Risk Manager veto${d?.why ? ": " + d.why : ""}`); continue; }
     if (side === "buy") {
       const cap = (classOf[sym] === "Stocks" ? cfg.maxStockPct : cfg.maxFundPct) / 100 * cfg.budgetUsd;
+      const stopPct = Number(t.stopPct);
+      if (!(stopPct >= cfg.minStopPct && stopPct <= cfg.maxStopPct)) { why(`no valid invalidation defined before entry (stop must be ${cfg.minStopPct}-${cfg.maxStopPct}%)`); continue; }
+      if (pos[sym] && Number(pos[sym].unrealized_plpc) < 0) { why("no averaging down on a losing position"); continue; }
+      const riskCap = Math.floor((cfg.budgetUsd * cfg.maxRiskPct / 100) / (stopPct / 100));
+      if (usd > riskCap) { blocked.push(`- buy ${sym}: size cut from $${usd} to $${riskCap} so the loss at its ${stopPct}% stop stays within ${cfg.maxRiskPct}% of budget`); usd = riskCap; }
       if (usd < 1 || usd > cfg.maxTradeUsd) { why(`size must be $1-$${cfg.maxTradeUsd}`); continue; }
       if (usd > cash) { why("not enough budget left"); continue; }
       if ((value[sym] || 0) + usd > cap) { why(`would exceed the ${classOf[sym] === "Stocks" ? cfg.maxStockPct : cfg.maxFundPct}% limit for one holding`); continue; }
       cash -= usd; value[sym] = (value[sym] || 0) + usd;
-      orders.push({ sym, side, usd, reason: t.reason });
+      orders.push({ sym, side, usd, reason: t.reason, stopPct, invalidation: String(t.invalidation || `${stopPct}% below entry`).slice(0, 160) });
     } else if (side === "sell") {
       if (!pos[sym]) { why("not held (no short selling)"); continue; }
       const trim = usd >= 1 && usd < Number(pos[sym].market_value) - 1;
@@ -298,10 +334,16 @@ async function main() {
       const st = r.id ? await alpaca(TRADE, `/v2/orders/${r.id}`).catch(() => r) : r;
       const fill = st.status === "filled" ? ` at $${Number(st.filled_avg_price).toFixed(2)}/share` : ` (${st.status || "sent"})`;
       if (st.status !== "filled" && r.id) (state.pending ||= []).push({ id: r.id, symbol: o.sym, side: o.side });
-      if (o.side === "buy") done.push(`- ✅ Bought ${o.sym} (${classOf[o.sym]}, ${(o.usd / cfg.budgetUsd * 100).toFixed(0)}% of budget)${fill}. Why: ${o.reason}`);
+      if (o.side === "buy") {
+        const ref = st.status === "filled" ? Number(st.filled_avg_price) : market[o.sym]?.price;
+        const stopPrice = money(ref * (1 - o.stopPct / 100));
+        const prev = state.stops[o.sym];
+        state.stops[o.sym] = prev && prev.price > stopPrice ? prev : { stopPct: o.stopPct, price: stopPrice, invalidation: o.invalidation, set: date };
+        done.push(`- ✅ Bought ${o.sym} (${classOf[o.sym]}, ${(o.usd / cfg.budgetUsd * 100).toFixed(0)}% of budget)${fill}. Stop: ${o.stopPct}% below entry (${o.invalidation}). Why: ${o.reason}`);
+      }
       else if (o.usd) { state.realizedUsd = money(state.realizedUsd + o.usd * plpc / (1 + plpc)); done.push(`- ✅ Trimmed ${o.sym} (${pct(plpc)} on that part)${fill}. Why: ${o.reason}`); }
-      else { state.realizedUsd = money(state.realizedUsd + Number(p.unrealized_pl)); done.push(`- ✅ Sold all ${o.sym} (${pct(plpc)})${fill}. Why: ${o.reason}`); }
-      state.log = [{ date, side: o.side, symbol: o.sym, client_order_id: coid }, ...(state.log || [])].slice(0, 500);
+      else { state.realizedUsd = money(state.realizedUsd + Number(p.unrealized_pl)); delete state.stops[o.sym]; done.push(`- ✅ Sold all ${o.sym} (${pct(plpc)})${fill}. Why: ${o.reason}`); }
+      state.log = [{ date, side: o.side, symbol: o.sym, usd: o.usd || null, stopPct: o.stopPct || null, invalidation: o.invalidation || null, reason: String(o.reason || "").slice(0, 200), resultPct: o.side === "sell" ? +plpc.toFixed(4) : null, client_order_id: coid }, ...(state.log || [])].slice(0, 500);
     } catch (e) { done.push(`- ⚠️ ${o.side} ${o.sym} failed: ${explain(e)}`); }
   }
 
@@ -313,8 +355,44 @@ async function main() {
     `## Macro Economist`, macro, "",
     ...Object.entries(views).flatMap(([d, v]) => [`## ${d} Analyst`, v, ""]),
     `## Quant Analyst: momentum ranking`, ...quantTable.slice(0, 10), "",
-    `## Desk rules (Compliance)`, `- Practice money, buy-only (no short selling), allowed list only`, `- Max ${(cfg.maxTradeUsd / cfg.budgetUsd * 100).toFixed(0)}% of budget per trade, ${cfg.maxTradesPerDay} trades a day`, `- One stock ≤ ${cfg.maxStockPct}%, one fund ≤ ${cfg.maxFundPct}% of budget`, `- Auto-pause if down ${(cfg.maxLossUsd / cfg.budgetUsd * 100).toFixed(0)}%`);
+    `## Desk rules (Compliance)`, `- Practice money, buy-only (no short selling), allowed list only`, `- Max ${(cfg.maxTradeUsd / cfg.budgetUsd * 100).toFixed(0)}% of budget per trade, ${cfg.maxTradesPerDay} trades a day`, `- One stock ≤ ${cfg.maxStockPct}%, one fund ≤ ${cfg.maxFundPct}% of budget`, `- Every buy sets its stop before entry; risk to stop ≤ ${cfg.maxRiskPct}% of budget; no averaging down; stops enforced in code`, `- Auto-pause if down ${(cfg.maxLossUsd / cfg.budgetUsd * 100).toFixed(0)}%`);
   return save(date, report, state);
+}
+
+// Head Trader: weekly supervisor review using the day-trader skill (.claude/skills/day-trader/SKILL.md).
+async function headTraderReview({ cfg, state, date, TRADE, positions, deskChange, classOf }) {
+  const skill = (await fs.readFile(".claude/skills/day-trader/SKILL.md", "utf8").catch(() => "")).replace(/^---[\s\S]*?---\s*/, "").split("## How Agent HQ uses this skill")[0].trim();
+  if (!skill) throw new Error("The day-trader skill file is missing.");
+  const sinceDate = new Date(Date.now() - 14 * 86400000).toISOString();
+  let fills = [];
+  try {
+    const orders = await alpaca(TRADE, `/v2/orders?status=closed&limit=200&direction=desc&after=${sinceDate}`);
+    fills = orders.filter((o) => o.status === "filled").map((o) => ({ date: (o.filled_at || "").slice(0, 10), side: o.side, symbol: o.symbol, pctOfBudget: o.notional ? +(Number(o.notional) / cfg.budgetUsd * 100).toFixed(0) : null, price: +Number(o.filled_avg_price).toFixed(2) }));
+  } catch (e) { console.log("Couldn't load filled orders:", e.message); }
+  const journal = (state.log || []).filter((l) => l.date >= sinceDate.slice(0, 10)).map(({ client_order_id, ...rest }) => rest);
+  const index = await readJson("reports/index.json", []);
+  let excerpts = "";
+  for (const r of index.filter((x) => x.agent === "trading-desk").slice(0, 5)) {
+    const t = await fs.readFile(`reports/${r.file}`, "utf8").catch(() => "");
+    excerpts += `\n\n### Desk report ${r.date}\n${t.replace(/^#.*\n|^>.*\n/gm, "").slice(0, 2200)}`;
+  }
+  const bt = await readJson("trading/backtest/summary.json", null);
+  const prev = await readJson("trading/head-trader.json", null);
+  const rules = Object.fromEntries(["budgetUsd", "maxTradeUsd", "maxTradesPerDay", "maxStockPct", "maxFundPct", "maxLossUsd", "maxRiskPct", "defaultStopPct", "minStopPct", "maxStopPct"].map((k) => [k, cfg[k]]));
+  const holdings = positions.map((p) => ({ symbol: p.symbol, class: classOf[p.symbol], pctOfBudget: +(Number(p.market_value) / cfg.budgetUsd * 100).toFixed(0), changeSinceBought: +Number(p.unrealized_plpc).toFixed(4), stop: state.stops?.[p.symbol] || null }));
+  const system = `${skill}\n\nContext: you supervise the Agent HQ Trading Desk, a team of AI agents (research team, Quant, Chief Investment Officer, Risk Manager) plus code-enforced Compliance and Execution, trading a $50 PAPER account on Alpaca once each weekday. It is a learning system; the owner only has a phone. Ground every point in the data given; if there is too little history to judge edge, say so plainly instead of guessing.`;
+  const prompt = `Weekly review, ${date}. Desk since ${state.startDate || "start"}: ${pct(deskChange)}${state.spyStart ? "" : " (no benchmark yet)"}.\n\nDesk rules (config): ${JSON.stringify(rules)}\nHoldings now: ${JSON.stringify(holdings)}\nTrade journal (last 14 days, with stated stop/invalidation and reasons): ${JSON.stringify(journal)}\nFilled orders from Alpaca (last 14 days): ${JSON.stringify(fills)}\nBacktest of the desk's momentum rule: ${bt ? `${pct(bt.strategyResult.total)} vs SPY ${pct(bt.benchmarkSPY.total)}, max drawdown ${pct(bt.strategyResult.maxDrawdown)}, ${bt.trades} trades, win rate ${bt.winRate == null ? "n/a" : Math.round(bt.winRate * 100) + "%"}` : "none"}\nYour previous priority: ${prev?.priority || "none (first review)"}\n\nRecent desk reports (what the agents said and did):${excerpts || " none yet"}\n\nReview this like a junior trader's journal. Use exactly these headings: "## Summary", "## Strengths", "## Weaknesses / Leaks", "## Specific Fixes", "## Priority". Separate what happened from what should have happened. In Specific Fixes, name the exact rule or prompt change (e.g. a trading.json value) and keep it minimal. Priority: 1-3 short, concrete instructions the Chief Investment Officer must follow next week. Percentages only, no dollar amounts. Under 450 words.`;
+  try { await pickModels(); } catch (e) { if (!hasGroq()) throw e; geminiOut = true; }
+  console.log("Head Trader review...");
+  const text = String(await ask("Head Trader", prompt, false, system)).replace(/^#\s.*\n/, "").trim();
+  const priority = (text.match(/##\s*Priority\s*\n([\s\S]*?)(?=\n##\s|$)/i)?.[1] || "").trim().slice(0, 700);
+  await fs.mkdir("trading", { recursive: true });
+  if (priority) await writeJson("trading/head-trader.json", { date, priority });
+  const file = `${date}-head-trader.md`;
+  await fs.writeFile(`reports/${file}`, `# Head Trader - ${date}\n\n> Weekly supervisor review of the paper-trading desk (day-trader skill). Practice money only. Not investment advice.\n\n${text}\n`);
+  await writeJson("reports/index.json", [{ file, agent: "head-trader", name: "Head Trader", date }, ...index.filter((r) => r.file !== file)].slice(0, 300));
+  await writeJson("trading/state.json", state);
+  console.log(`Saved reports/${file}${priority ? " and standing orders for the CIO" : " (no Priority section found)"}`);
 }
 
 async function save(date, report, state) {

@@ -57,5 +57,9 @@
   },
   "notes": "mode: paper = practice money only. Live mode is locked in the code until an approval step exists. paused: true stops all trading. No leveraged or inverse funds.",
   "maxStockPct": 40,
-  "maxFundPct": 60
+  "maxFundPct": 60,
+  "maxRiskPct": 2,
+  "defaultStopPct": 8,
+  "minStopPct": 2,
+  "maxStopPct": 15
 }
