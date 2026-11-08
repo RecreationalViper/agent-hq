@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-07T22:02:51.714Z",
-  "date": "2026-11-07",
+  "generatedAt": "2026-11-08T06:21:02.059Z",
+  "date": "2026-11-08",
   "token": true,
   "searches": {
     "ran": 12,
@@ -9,59 +9,13 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 15,
-  "rateRemaining": 9,
-  "newItems": 1,
+  "apiCalls": 12,
+  "rateRemaining": 18,
+  "newItems": 0,
   "blockedToday": 0,
-  "shortlist": [
-    {
-      "name": "alchaincyf/zhangxuefeng-skill",
-      "url": "https://github.com/alchaincyf/zhangxuefeng-skill",
-      "description": "张雪峰.skill — 张雪峰的认知操作系统。高考志愿/考研/职业规划的实战思维框架。由女娲.skill生成。",
-      "stars": 10719,
-      "forks": 2686,
-      "language": "",
-      "license": "MIT",
-      "pushedAt": "2026-10-13T06:56:37Z",
-      "category": "skills",
-      "score": 75,
-      "tier": "adopt",
-      "reasons": [
-        "10,719 stars",
-        "updated this month",
-        "MIT license",
-        "well established",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [],
-      "skillFiles": true
-    }
-  ],
+  "shortlist": [],
   "byCategory": {
-    "skills": [
-      {
-        "name": "alchaincyf/zhangxuefeng-skill",
-        "url": "https://github.com/alchaincyf/zhangxuefeng-skill",
-        "description": "张雪峰.skill — 张雪峰的认知操作系统。高考志愿/考研/职业规划的实战思维框架。由女娲.skill生成。",
-        "stars": 10719,
-        "forks": 2686,
-        "language": "",
-        "license": "MIT",
-        "pushedAt": "2026-10-13T06:56:37Z",
-        "category": "skills",
-        "score": 75,
-        "tier": "adopt",
-        "reasons": [
-          "10,719 stars",
-          "updated this month",
-          "MIT license",
-          "well established",
-          "contains SKILL.md skill files"
-        ],
-        "flags": [],
-        "skillFiles": true
-      }
-    ],
+    "skills": [],
     "enhancement": [],
     "free-tokens": [],
     "efficiency": []

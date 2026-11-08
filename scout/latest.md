@@ -1,13 +1,10 @@
-# GitHub Radar — 2026-11-07
+# GitHub Radar — 2026-11-08
 
-> Scanned 12 of 29 saved searches (12 returned data, 0 unchanged, 0 failed). 15 GitHub API calls, authenticated. Zero AI tokens used.
+> Scanned 12 of 29 saved searches (12 returned data, 0 unchanged, 0 failed). 12 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (1)
+## Start here (0)
 
-- **[alchaincyf/zhangxuefeng-skill](https://github.com/alchaincyf/zhangxuefeng-skill)** 🟢 ADOPT · score 75/100 · ⭐ 10,719 · MIT · updated 26d ago
-  - 张雪峰.skill — 张雪峰的认知操作系统。高考志愿/考研/职业规划的实战思维框架。由女娲.skill生成。
-  - Why: 10,719 stars; updated this month; MIT license; well established; contains SKILL.md skill files
-  - Confirmed: contains `SKILL.md` skill files
+_Nothing new cleared the quality bar this scan. That is a normal, healthy result — the radar is rotating through its searches and will cover the rest next time._
 
 ## Agent skills you could install (0)
 
