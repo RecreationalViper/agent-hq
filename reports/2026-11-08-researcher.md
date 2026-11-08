@@ -43,13 +43,13 @@
 - Couldn't load the full page for [1]; those claims rest on the title and summary only.
 
 ## Sources
-1. [Claude Code's "Don't Ask Again" exposes passwords in 1,122 public GitHub files](https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again) — Hacker News · [discussion](https://news.ycombinator.com/item?id=50407882)
-2. [Donating Agent Skills to the Agentic AI Foundation](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation) — Anthropic
-3. [2026 Usage Policy update](https://www.anthropic.com/news/2026-usage-policy-update) — Anthropic
-4. [MaxxBench – "Nice DeepSWE score. But is it true?"](https://maxxbench.unlap.ai/research/why-maxxbench/) — Hacker News · [discussion](https://news.ycombinator.com/item?id=50406222)
-5. [The Components of Agent Memory](https://www.anthropic.com/research/components-of-agent-memory) — Hacker News · [discussion](https://news.ycombinator.com/item?id=50402212)
-6. [Anthropic files S-1 with the SEC for proposed initial public offering](https://www.anthropic.com/news/s1-sec) — Anthropic
-7. [GitHub New pull request overview page in public preview](https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview/) — Hacker News · [discussion](https://news.ycombinator.com/item?id=50408931)
-8. [Every Windows 11 app should kill Electron, and Discord just showed why](https://www.windowslatest.com/2026/11/06/every-windows-11-app-should-kill-electron-and-discord-just-showed-why-no-starting-screen-and-70-less-ram-even-with-two-accounts-signed-in/) — Hacker News · [discussion](https://news.ycombinator.com/item?id=50403507)
-10. [The end of Microsoft Research's AI Frontiers group](https://hunch.net/?p=13764006) — Hacker News · [discussion](https://news.ycombinator.com/item?id=50406563)
-11. [The AI sell-off compared to well-known stock market crashes](https://www.kadoa.com/companies/insights/ai-selloff-perspective) — Hacker News · [discussion](https://news.ycombinator.com/item?id=50401029)
+- [1] [Claude Code's "Don't Ask Again" exposes passwords in 1,122 public GitHub files](https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again) — Hacker News · [discussion](https://news.ycombinator.com/item?id=50407882)
+- [2] [Donating Agent Skills to the Agentic AI Foundation](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation) — Anthropic
+- [3] [2026 Usage Policy update](https://www.anthropic.com/news/2026-usage-policy-update) — Anthropic
+- [4] [MaxxBench – "Nice DeepSWE score. But is it true?"](https://maxxbench.unlap.ai/research/why-maxxbench/) — Hacker News · [discussion](https://news.ycombinator.com/item?id=50406222)
+- [5] [The Components of Agent Memory](https://www.anthropic.com/research/components-of-agent-memory) — Hacker News · [discussion](https://news.ycombinator.com/item?id=50402212)
+- [6] [Anthropic files S-1 with the SEC for proposed initial public offering](https://www.anthropic.com/news/s1-sec) — Anthropic
+- [7] [GitHub New pull request overview page in public preview](https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview/) — Hacker News · [discussion](https://news.ycombinator.com/item?id=50408931)
+- [8] [Every Windows 11 app should kill Electron, and Discord just showed why](https://www.windowslatest.com/2026/11/06/every-windows-11-app-should-kill-electron-and-discord-just-showed-why-no-starting-screen-and-70-less-ram-even-with-two-accounts-signed-in/) — Hacker News · [discussion](https://news.ycombinator.com/item?id=50403507)
+- [10] [The end of Microsoft Research's AI Frontiers group](https://hunch.net/?p=13764006) — Hacker News · [discussion](https://news.ycombinator.com/item?id=50406563)
+- [11] [The AI sell-off compared to well-known stock market crashes](https://www.kadoa.com/companies/insights/ai-selloff-perspective) — Hacker News · [discussion](https://news.ycombinator.com/item?id=50401029)
