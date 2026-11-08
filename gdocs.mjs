@@ -10,10 +10,16 @@ let cached;
 export const hasGoogle = () => Boolean(process.env.GOOGLE_SERVICE_ACCOUNT_JSON);
 
 function credentials() {
-  let raw = process.env.GOOGLE_SERVICE_ACCOUNT_JSON || "";
-  raw = raw.trim();
-  if (!raw.startsWith("{")) raw = Buffer.from(raw, "base64").toString("utf8"); // allow base64-encoded too
-  const c = JSON.parse(raw);
+  const original = (process.env.GOOGLE_SERVICE_ACCOUNT_JSON || "").trim();
+  let raw = original.replace(/[\u201C\u201D]/g, '"').replace(/[\u2018\u2019]/g, "'"); // undo "smart quotes" from phone pasting
+  if (!raw.includes("{")) { try { raw = Buffer.from(raw, "base64").toString("utf8"); } catch {} } // allow base64-encoded too
+  const start = raw.indexOf("{"), end = raw.lastIndexOf("}");
+  let c;
+  try { c = JSON.parse(raw.slice(start, end + 1)); }
+  catch (e) {
+    // Describe the shape only, never the contents.
+    throw new Error(`The saved key isn't readable JSON (length ${original.length}, has "{": ${original.includes("{")}, has "private_key": ${original.includes("private_key")}, has "client_email": ${original.includes("client_email")}, smart quotes: ${/[\u201C\u201D]/.test(original)}). ${e.message.split(",")[0]}`);
+  }
   if (!c.client_email || !c.private_key) throw new Error("The service account JSON is missing client_email or private_key.");
   return c;
 }
