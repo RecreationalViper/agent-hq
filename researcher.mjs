@@ -92,12 +92,12 @@ async function collect(since) {
 // ---------- Markdown -> Notion blocks ----------
 function richText(text) {
   const out = [];
-  const re = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)|\*\*([^*]+)\*\*/g;
+  const re = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)|\*\*([^*]+)\*\*|`([^`]+)`/g;
   let last = 0, m;
-  const push = (content, extra = {}) => { for (let i = 0; i < content.length; i += 1900) out.push({ type: "text", text: { content: content.slice(i, i + 1900), ...(extra.link ? { link: { url: extra.link } } : {}) }, ...(extra.bold ? { annotations: { bold: true } } : {}) }); };
+  const push = (content, extra = {}) => { for (let i = 0; i < content.length; i += 1900) out.push({ type: "text", text: { content: content.slice(i, i + 1900), ...(extra.link ? { link: { url: extra.link } } : {}) }, ...(extra.bold || extra.code ? { annotations: { bold: !!extra.bold, code: !!extra.code } } : {}) }); };
   while ((m = re.exec(text))) {
     if (m.index > last) push(text.slice(last, m.index));
-    m[1] ? push(m[1], { link: m[2] }) : push(m[3], { bold: true });
+    m[1] ? push(m[1], { link: m[2] }) : m[3] ? push(m[3], { bold: true }) : push(m[4], { code: true });
     last = re.lastIndex;
   }
   if (last < text.length) push(text.slice(last));
@@ -110,7 +110,12 @@ function toBlocks(md) {
     if (!line.trim()) continue;
     let m;
     if ((m = line.match(/^(#{1,3})\s+(.*)/))) { const t = `heading_${Math.min(3, m[1].length)}`; blocks.push({ type: t, [t]: { rich_text: richText(m[2]) } }); }
-    else if ((m = line.match(/^\s*[-*]\s+(.*)/))) blocks.push({ type: "bulleted_list_item", bulleted_list_item: { rich_text: richText(m[1]) } });
+    else if ((m = line.match(/^(\s*)[-*]\s+(.*)/))) {
+      const item = { type: "bulleted_list_item", bulleted_list_item: { rich_text: richText(m[2]) } };
+      const prev = blocks.at(-1);
+      if (m[1].length >= 2 && prev && /list_item/.test(prev.type)) (prev[prev.type].children ||= []).push(item);
+      else blocks.push(item);
+    }
     else if ((m = line.match(/^\s*\d+\.\s+(.*)/))) blocks.push({ type: "numbered_list_item", numbered_list_item: { rich_text: richText(m[1]) } });
     else if ((m = line.match(/^>\s?(.*)/))) blocks.push({ type: "quote", quote: { rich_text: richText(m[1]) } });
     else blocks.push({ type: "paragraph", paragraph: { rich_text: richText(line) } });
@@ -185,7 +190,7 @@ async function main() {
   report = report.replace(/\[(\d+)\]/g, (m, n) => sources.find((s) => s.id === Number(n)) ? m : "[unverified]");
   const weak = sources.filter((s) => used.has(s.id) && (AGGREGATORS.test(s.url) || s.kind === "discussion"));
   const unloaded = sources.filter((s) => used.has(s.id) && /^\(could not load/.test(s.text));
-  const srcList = sources.filter((s) => used.has(s.id)).map((s) => `${s.id}. [${s.title.slice(0, 120)}](${s.url}) — ${s.source}${s.kind === "paper" ? " (paper, abstract read)" : ""}${s.discussion && s.discussion !== s.url ? ` · [discussion](${s.discussion})` : ""}`);
+  const srcList = sources.filter((s) => used.has(s.id)).map((s) => `- [${s.id}] [${s.title.slice(0, 120)}](${s.url}) — ${s.source}${s.kind === "paper" ? " (paper, abstract read)" : ""}${s.discussion && s.discussion !== s.url ? ` · [discussion](${s.discussion})` : ""}`);
   const check = [`- ${used.size - bad.length} sources cited, ${sources.length} read${bad.length ? `; ${bad.length} citation(s) didn't match a real source and were marked [unverified]` : "; every citation matches a source that was read"}.`,
     weak.length ? `- No stronger source was available for: ${weak.map((s) => `[${s.id}]`).join(", ")} (discussion/aggregator).` : "- All cited sources are primary (official, paper or repository) or link straight to one.",
     unloaded.length ? `- Couldn't load the full page for ${unloaded.map((s) => `[${s.id}]`).join(", ")}; those claims rest on the title and summary only.` : null,
