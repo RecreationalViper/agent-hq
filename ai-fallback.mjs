@@ -11,7 +11,8 @@ let models;
 export const hasGroqKey = () => Boolean(process.env.GROQ_API_KEY);
 export const hasCloudflare = () => Boolean(process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID);
 // Any backup available? (Groq first, then Cloudflare Workers AI)
-export const hasGroq = () => hasGroqKey() || hasCloudflare();
+export const hasOpenRouter = () => Boolean(process.env.OPENROUTER_API_KEY);
+export const hasGroq = () => hasGroqKey() || hasCloudflare() || hasOpenRouter();
 
 async function call(path, init = {}) {
   const res = await fetch(BASE + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${process.env.GROQ_API_KEY}`, "Content-Type": "application/json" } });
@@ -98,10 +99,52 @@ export async function cloudflareChat(system, user, { json = false, temperature =
   throw lastErr || new Error("Cloudflare could not answer");
 }
 
-// Backup chain used by every agent: Groq, then Cloudflare.
-export async function groqChat(system, user, opts = {}) {
+// ---------- OpenRouter: FREE models only (ids ending in ":free", price $0) ----------
+const OR = process.env.OPENROUTER_API_BASE || "https://openrouter.ai/api/v1";
+const OR_PREFER = [/gpt-oss-120b/i, /llama-3\.3-70b/i, /deepseek.*(v3|chat)/i, /qwen3/i, /llama-4/i, /mistral-small/i, /gemma-3-27b/i];
+let orModels;
+async function orCall(path, init = {}) {
+  const res = await fetch(OR + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`, "Content-Type": "application/json", "X-Title": "Agent HQ" } });
+  const text = await res.text();
+  let data; try { data = JSON.parse(text); } catch { data = {}; }
+  if (!res.ok || data.error) { const e = new Error(`OpenRouter ${res.status}: ${data.error?.message || text.slice(0, 200)}`); e.status = data.error?.code || res.status; throw e; }
+  return data;
+}
+export async function openRouterModels() {
+  if (orModels) return orModels;
+  const data = await orCall("/models");
+  const free = (data.data || []).filter((m) => /:free$/.test(m.id) && Number(m.pricing?.prompt || 0) === 0 && Number(m.pricing?.completion || 0) === 0 && !/vision|image|embed|guard/i.test(m.id));
+  const rank = (i) => { const k = OR_PREFER.findIndex((r) => r.test(i)); return k < 0 ? 99 : k; };
+  orModels = free.map((m) => m.id).sort((a, b) => rank(a) - rank(b));
+  if (!orModels.length) throw new Error("OpenRouter has no free models available right now.");
+  return orModels;
+}
+export async function openRouterChat(system, user, { json = false, temperature = 0.7, maxChars = 24000 } = {}) {
+  const input = user.length > maxChars ? user.slice(0, maxChars) + "\n\n[Some input was trimmed to fit the backup AI's limits.]" : user;
   let lastErr;
-  if (hasGroqKey()) { try { return await groqOnly(system, user, opts); } catch (e) { lastErr = e; console.log(`  Groq failed (${e.message}); trying Cloudflare`); } }
-  if (hasCloudflare()) return cloudflareChat(system, user, opts);
+  for (const model of (await openRouterModels()).slice(0, 3)) {
+    if (!/:free$/.test(model)) continue; // never call a paid model
+    try {
+      const data = await orCall("/chat/completions", { method: "POST", body: JSON.stringify({
+        model, temperature, max_tokens: 2500,
+        messages: [{ role: "system", content: system + (json ? "\nReply with valid JSON only." : "") }, { role: "user", content: input }]
+      }) });
+      const text = (data.choices?.[0]?.message?.content || "").replace(/<think>[\s\S]*?<\/think>/g, "").replace(/^```(?:json)?\s*|\s*```$/g, "").trim();
+      if (!text) throw new Error("OpenRouter returned an empty reply");
+      console.log(`  answered by backup AI: OpenRouter ${model}`);
+      return text;
+    } catch (e) { lastErr = e; if (e.status === 401 || e.status === 402) break; }
+  }
+  throw lastErr || new Error("OpenRouter could not answer");
+}
+
+// Backup chain used by every agent: Groq, then Cloudflare, then OpenRouter (free models only).
+export async function groqChat(system, user, opts = {}) {
+  const chain = [["Groq", hasGroqKey, groqOnly], ["Cloudflare", hasCloudflare, cloudflareChat], ["OpenRouter", hasOpenRouter, openRouterChat]].filter(([, has]) => has());
+  let lastErr;
+  for (const [name, , fn] of chain) {
+    try { return await fn(system, user, opts); }
+    catch (e) { lastErr = e; console.log(`  ${name} failed (${e.message})${chain.at(-1)[0] === name ? "" : "; trying the next backup"}`); }
+  }
   throw lastErr || new Error("No backup AI key is set");
 }

@@ -70,3 +70,14 @@ if (process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID) {
     console.log(`cloudflare diag: direct model run: HTTP ${r.status} ${j.errors?.[0]?.message || (j.result?.response ? "ok" : "")}`);
   }
 } else console.log(`RESULT cloudflare: missing ${!process.env.CLOUDFLARE_API_TOKEN ? "CLOUDFLARE_API_TOKEN " : ""}${!process.env.CLOUDFLARE_ACCOUNT_ID ? "CLOUDFLARE_ACCOUNT_ID" : ""}`);
+
+// OpenRouter check (free models only)
+if (process.env.OPENROUTER_API_KEY) {
+  const { openRouterModels, openRouterChat } = await import("../ai-fallback.mjs");
+  try {
+    const ms = await openRouterModels();
+    console.log(`openrouter: ${ms.length} free models, top picks: ${ms.slice(0, 4).join(", ")}`);
+    const t = await openRouterChat("You are a test agent.", "Return JSON: {\"status\":\"ready\"}", { json: true, temperature: 0 });
+    console.log(`RESULT openrouter: WORKS (free model), reply ${t.replace(/\s+/g, " ").replace(/[{}]/g, "").slice(0, 60)}`);
+  } catch (e) { console.log(`RESULT openrouter: FAILED: ${e.message}`); process.exitCode = 1; }
+} else console.log("RESULT openrouter: no key found (secret OPENROUTER_API_KEY missing or empty)");
