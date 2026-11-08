@@ -52,7 +52,7 @@ const paraText = (p) => (p.elements || []).map((e) => e.textRun?.content || "").
 export function mdToLines(md, maxChars = 3500) {
   const lines = [];
   for (let line of md.split("\n")) {
-    line = line.replace(/\*\*([^*]+)\*\*/g, "$1").replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g, "$1").replace(/`([^`]+)`/g, "$1").replace(/^>\s?/, "").trimEnd();
+    line = line.replace(/\*\*([^*]+)\*\*/g, "$1").replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g, "$1").replace(/`([^`]+)`/g, "$1").replace(/(^|[^*\w])\*([^*\n]+)\*(?=[^*\w]|$)/g, "$1$2").replace(/(^|\W)_([^_\n]+)_(?=\W|$)/g, "$1$2").replace(/^>\s?/, "").trimEnd();
     if (!line.trim() || /^-{3,}$/.test(line.trim())) continue;
     let m;
     if ((m = line.match(/^#{1,6}\s+(.*)/))) lines.push(m[1].trim());
