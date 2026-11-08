@@ -132,6 +132,14 @@ async function postToNotion(parentId, title, md) {
 
 async function main() {
   const cfg = await readJson("research.json", {});
+  if (process.env.RESEARCH_MODE === "post") {
+    // Re-send today's saved brief to Notion without spending any AI calls.
+    if (!process.env.NOTION_TOKEN) throw new Error("NOTION_TOKEN secret is missing.");
+    const md = (await fs.readFile(`reports/${date}-researcher.md`, "utf8")).replace(/^#\s.*\n+/, "");
+    const url = await postToNotion(cfg.notionPageId, `AI & Dev Brief – ${date}`, md);
+    console.log(`Posted to Notion: ${url}`);
+    return;
+  }
   const state = await readJson("research/state.json", { covered: [] });
   const covered = new Set(state.covered);
   const now = Date.now();
