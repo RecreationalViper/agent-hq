@@ -12,7 +12,7 @@ export const hasGoogle = () => Boolean(process.env.GOOGLE_SERVICE_ACCOUNT_JSON);
 function credentials() {
   const original = (process.env.GOOGLE_SERVICE_ACCOUNT_JSON || "").trim();
   let raw = original.replace(/[\u201C\u201D]/g, '"').replace(/[\u2018\u2019]/g, "'"); // undo "smart quotes" from phone pasting
-  if (!raw.includes("{") && /"private_key"\s*:/.test(raw)) raw = `{${raw.replace(/,\s*$/, "")}}`; // outer braces lost when copying on a phone
+  if (!raw.includes("{") && /"private_key"\s*:/.test(raw)) raw = raw.trimEnd().endsWith("}") ? `{${raw}` : `{${raw.replace(/,\s*$/, "")}}`; // outer braces lost when copying on a phone
   else if (!raw.includes("{")) { try { raw = Buffer.from(raw, "base64").toString("utf8"); } catch {} } // allow base64-encoded too
   const start = raw.indexOf("{"), end = raw.lastIndexOf("}");
   let c;
