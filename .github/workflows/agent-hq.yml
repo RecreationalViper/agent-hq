@@ -785,6 +785,7 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           RUN_MODE: ${{ github.event.inputs.agent || 'due' }}
       - name: Save reports
         if: always()

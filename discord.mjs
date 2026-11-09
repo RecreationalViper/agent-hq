@@ -13,13 +13,14 @@ export const CHANNELS = {
   listings: ["listings", "Listing Writer: titles, tags and descriptions ready to paste"],
   content: ["content", "Content Planner: posts and videos to share"],
   "product-ideas": ["product-ideas", "Product Ideas: new products to build"],
+  seo: ["seo", "SEO Scout: keywords, titles, tags and pins from real Google data"],
   "weekly-review": ["weekly-review", "Weekly Review: how the shop did and what to decide"],
   "trading-desk": ["trading-desk", "Trading Desk (paper money): daily trades, Head Trader reviews, backtests"],
   research: ["research", "Deep Researcher, Credit Scout and GitHub Radar"],
   alerts: ["alerts", "Anything that failed or needs your attention"]
 };
 // Which channel each agent reports to
-export const AGENT_CHANNEL = { "daily-task": "daily-focus", content: "content", ideas: "product-ideas", listing: "listings", review: "weekly-review", "credit-scout": "research", "github-radar": "research", researcher: "research", "trading-desk": "trading-desk", "head-trader": "trading-desk", backtest: "trading-desk", launch: "listings" };
+export const AGENT_CHANNEL = { "daily-task": "daily-focus", content: "content", ideas: "product-ideas", listing: "listings", review: "weekly-review", "credit-scout": "research", "github-radar": "research", researcher: "research", "trading-desk": "trading-desk", "head-trader": "trading-desk", backtest: "trading-desk", launch: "listings", seo: "seo" };
 
 export const hasDiscord = () => Boolean(process.env.DISCORD_BOT_TOKEN);
 
