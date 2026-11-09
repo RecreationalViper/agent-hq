@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Forever Held">
+  <!-- Two cupped sprigs holding a small bud: "held" -->
+  <g fill="none" stroke="#6d7f5f" stroke-width="2.4" stroke-linecap="round">
+    <path d="M32 58C26 46 18 38 9 33"/>
+    <path d="M32 58C38 46 46 38 55 33"/>
+  </g>
+  <g fill="#6d7f5f">
+    <ellipse cx="17.5" cy="38.5" rx="6.2" ry="2.6" transform="rotate(-30 17.5 38.5)"/>
+    <ellipse cx="14.5" cy="31.5" rx="5.6" ry="2.4" transform="rotate(35 14.5 31.5)"/>
+    <ellipse cx="25" cy="46" rx="6" ry="2.5" transform="rotate(-45 25 46)"/>
+    <ellipse cx="46.5" cy="38.5" rx="6.2" ry="2.6" transform="rotate(30 46.5 38.5)"/>
+    <ellipse cx="49.5" cy="31.5" rx="5.6" ry="2.4" transform="rotate(-35 49.5 31.5)"/>
+    <ellipse cx="39" cy="46" rx="6" ry="2.5" transform="rotate(45 39 46)"/>
+  </g>
+  <path d="M32 40c-5-4-6.5-10-3.5-15 1.4-2.3 2.8-3.4 3.5-4.2.7.8 2.1 1.9 3.5 4.2 3 5 1.5 11-3.5 15z" fill="#d9b9a8"/>
+  <path d="M32 22v17" stroke="#b8927e" stroke-width="1.4" stroke-linecap="round"/>
+</svg>
