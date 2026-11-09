@@ -20,6 +20,8 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY || secrets.EXA_KEY || secrets.EXA || secrets.EXA_API_KEY_1 || secrets.EXA_KEY_1 || secrets.EXA1 }}
+          EXA_API_KEY_2: ${{ secrets.EXA_API_KEY_2 || secrets.EXA_API_KEY2 || secrets.EXA_KEY_2 || secrets.EXA_KEY2 || secrets.EXA2 || secrets.EXA_2 }}
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
           EXA_API_KEY_2: ${{ secrets.EXA_API_KEY_2 }}
           EXA_API_KEY2: ${{ secrets.EXA_API_KEY2 }}
