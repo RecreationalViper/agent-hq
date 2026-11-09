@@ -11,7 +11,7 @@ export const CHANNELS = {
   sales: ["sales", "Every Forever Held sale and refund, the moment it happens"],
   "daily-focus": ["daily-focus", "Daily Focus: one shop task a day"],
   listings: ["listings", "Listing Writer: titles, tags and descriptions ready to paste"],
-  content: ["content", "Content Planner: posts and videos to share"],
+  content: ["content", "Content Planner and Content Creator: ready-to-post pins, stories and captions to download"],
   "product-ideas": ["product-ideas", "Product Ideas: new products to build"],
   competitors: ["competitors", "Competitor Scout and Partner Finder: who else sells memorial printables, and who could recommend us"],
   seo: ["seo", "SEO Scout: keywords, titles, tags and pins from real Google data"],
@@ -22,7 +22,7 @@ export const CHANNELS = {
   alerts: ["alerts", "Anything that failed or needs your attention"]
 };
 // Which channel each agent reports to
-export const AGENT_CHANNEL = { "daily-task": "daily-focus", content: "content", ideas: "product-ideas", listing: "listings", review: "weekly-review", "credit-scout": "research", "github-radar": "research", researcher: "research", "trading-desk": "trading-desk", "head-trader": "trading-desk", backtest: "trading-desk", launch: "listings", seo: "seo", "competitor-scout": "competitors", "partner-finder": "competitors" };
+export const AGENT_CHANNEL = { "daily-task": "daily-focus", content: "content", ideas: "product-ideas", listing: "listings", review: "weekly-review", "credit-scout": "research", "github-radar": "research", researcher: "research", "trading-desk": "trading-desk", "head-trader": "trading-desk", backtest: "trading-desk", launch: "listings", seo: "seo", "competitor-scout": "competitors", "partner-finder": "competitors", "content-creator": "content" };
 
 export const hasDiscord = () => Boolean(process.env.DISCORD_BOT_TOKEN);
 
@@ -88,4 +88,25 @@ export async function alert(text) {
     await api(`/channels/${id}/messages`, { method: "POST", body: JSON.stringify({ content: text.slice(0, 1900) }) });
     return true;
   } catch (e) { console.log(`  couldn't post to Discord: ${e.message}`); return false; }
+}
+
+// Posts a message with image/file attachments (up to 10 per message) so they can be saved from the Discord app.
+// files: [{ name, data: Buffer, type }]. Never throws.
+export async function postFiles(agentKey, text, files = []) {
+  if (!hasDiscord()) return false;
+  try {
+    const key = CHANNELS[agentKey] ? agentKey : AGENT_CHANNEL[agentKey] || "alerts";
+    const id = await channelId(key);
+    if (!id) { console.log("  Discord not set up yet (run the Discord Setup workflow)"); return false; }
+    for (let attempt = 0; attempt < 4; attempt++) {
+      const form = new FormData();
+      form.append("payload_json", JSON.stringify({ content: text.slice(0, 1990), attachments: files.slice(0, 10).map((f, i) => ({ id: i, filename: f.name })) }));
+      files.slice(0, 10).forEach((f, i) => form.append(`files[${i}]`, new Blob([f.data], { type: f.type || "image/jpeg" }), f.name));
+      const res = await fetch(`${API}/channels/${id}/messages`, { method: "POST", body: form, signal: AbortSignal.timeout(60000), headers: { Authorization: `Bot ${process.env.DISCORD_BOT_TOKEN.trim()}`, "User-Agent": "AgentHQ (https://github.com/RecreationalViper/agent-hq, 1.0)" } });
+      if (res.status === 429) { const j = await res.json().catch(() => ({})); await sleep(Math.ceil((j.retry_after || 2) * 1000)); continue; }
+      if (!res.ok) throw new Error(`Discord ${res.status}: ${(await res.text()).slice(0, 150)}`);
+      return true;
+    }
+    throw new Error("Discord kept rate-limiting");
+  } catch (e) { console.log(`  couldn't post files to Discord: ${e.message}`); return false; }
 }

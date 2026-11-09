@@ -1,0 +1,52 @@
+name: Content Creator
+on:
+  schedule:
+    - cron: "23 15 * * 2,5" # Tuesday and Friday, about 10:23am New York time
+  workflow_dispatch:
+    inputs:
+      posts:
+        description: "How many posts to make"
+        default: "5"
+permissions:
+  contents: write
+concurrency: agent-hq
+jobs:
+  create:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Install the design browser
+        run: npm i --no-save --no-package-lock playwright@1.49.1 && npx playwright install --with-deps chromium
+      - name: Write, design and post this week's content
+        run: node content-creator.mjs
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY || secrets.GROQ_KEY || secrets.GROQ }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
+          EXA_API_KEY_2: ${{ secrets.EXA_API_KEY_2 || secrets.EXA_KEY_2 || secrets.EXA_API_KEY2 }}
+          ART_API_KEY: ${{ secrets.ART_API_KEY }}
+          CREATOR_POSTS: ${{ github.event.inputs.posts || '5' }}
+      - name: Keep the images for 30 days
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: content-images
+          path: content/*/*.jpg
+          retention-days: 30
+          if-no-files-found: ignore
+      - name: Save report and notes for the team
+        if: always()
+        run: |
+          git config user.name "agent-hq-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A reports content exa-usage.json
+          git diff --cached --quiet || (git commit -m "Content Creator update" && git pull --rebase && git push)

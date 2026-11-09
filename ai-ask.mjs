@@ -4,7 +4,7 @@ import { hasGroq, groqChat } from "./ai-fallback.mjs";
 
 const BASE = process.env.API_BASE || "https://generativelanguage.googleapis.com/v1beta";
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-let models = null, geminiOut = false;
+let models = null, strongModels = null, geminiOut = false;
 
 async function gemini(path, init = {}) {
   for (let attempt = 1; attempt <= 2; attempt++) {
@@ -22,9 +22,10 @@ async function gemini(path, init = {}) {
   }
 }
 
-async function pickModels() {
+async function pickModels(strong = false) {
   const ver = (n) => { const m = n.match(/gemini-(\d+(?:\.\d+)?)/i); return m ? parseFloat(m[1]) : 0; };
-  const rank = (n) => (/flash/i.test(n) ? 0 : 2) + (/lite|preview|exp/i.test(n) ? 1 : 0);
+  // Normal: fast "flash" models first. strong: the most capable "pro" models first, flash as backup.
+  const rank = (n) => (strong ? (/pro/i.test(n) ? 0 : /flash/i.test(n) && !/lite/i.test(n) ? 2 : 4) : (/flash/i.test(n) ? 0 : 2)) + (/lite|preview|exp/i.test(n) ? 1 : 0);
   const { models: list = [] } = await gemini("/models?pageSize=200");
   return list.filter((m) => (m.supportedGenerationMethods || []).includes("generateContent") && /gemini/i.test(m.name) && !/image|tts|audio|live|embed/i.test(m.name))
     .map((m) => m.name).sort((a, b) => rank(a) - rank(b) || ver(b) - ver(a));
@@ -32,27 +33,34 @@ async function pickModels() {
 
 const parse = (text, json) => json ? JSON.parse(text.replace(/^```(?:json)?\s*|\s*```$/g, "").trim()) : text;
 
-export async function ask(system, prompt, { json = false, temperature = 0.4 } = {}) {
+export async function ask(system, prompt, { json = false, temperature = 0.4, strong = false } = {}) {
   let lastErr;
   if (!geminiOut && process.env.GEMINI_API_KEY) {
-    try { models ||= await pickModels(); } catch (e) { lastErr = e; geminiOut = true; }
+    let list;
+    try { list = strong ? (strongModels ||= await pickModels(true)) : (models ||= await pickModels()); } catch (e) { lastErr = e; geminiOut = true; list = []; }
+    const save = (l) => { if (strong) strongModels = l; else models = l; list = l; };
     const body = JSON.stringify({
       systemInstruction: { parts: [{ text: system }] },
       contents: [{ role: "user", parts: [{ text: prompt }] }],
       generationConfig: { temperature, ...(json ? { responseMimeType: "application/json" } : {}) }
     });
-    for (const m of (models || []).slice(0, 5)) {
+    for (let i = 0; i < list.length && i < 6; ) {
+      const m = list[i];
       try {
         const data = await gemini(`/${m}:generateContent`, { method: "POST", body });
         const text = (data.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").trim();
         if (!text) throw new Error("BUSY: empty reply");
-        models = [m, ...models.filter((x) => x !== m)];
-        return parse(text, json);
+        const out = parse(text, json);
+        save([m, ...list.filter((x) => x !== m)]);
+        if (strong) console.log(`  written by ${m.replace("models/", "")}`);
+        return out;
       } catch (e) {
         lastErr = e;
-        if (/no longer|retired|not found|not supported|deprecated/i.test(e.message)) { models = models.filter((x) => x !== m); continue; }
+        if (/no longer|retired|not found|not supported|deprecated/i.test(e.message)) { save(list.filter((x) => x !== m)); continue; }
+        // Strong mode: a "pro" model's free limit is separate, so drop just the pro models and carry on with flash.
+        if (/quota/i.test(e.message) && strong && /pro/i.test(m)) { console.log(`  ${m.replace("models/", "")} free limit used up, using the next best model`); save(list.filter((x) => !/pro/i.test(x))); continue; }
         if (/quota/i.test(e.message)) { geminiOut = true; console.log("  Gemini's free daily limit is used up; using the backup AI"); break; }
-        if (/BUSY|JSON|Unexpected/i.test(e.message)) continue;
+        if (/BUSY|JSON|Unexpected/i.test(e.message)) { i++; continue; }
         throw e;
       }
     }
