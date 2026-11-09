@@ -1,0 +1,473 @@
+{
+ "products": [
+  {
+   "file": "01 Program - Soft Botanical (fill-in).pdf",
+   "title": "Memorial Program - Soft Botanical",
+   "bg": "program.pdf",
+   "fields": [
+    {
+     "name": "Thank you note",
+     "page": 1,
+     "left": 90,
+     "top": 188,
+     "width": 348,
+     "height": 132,
+     "size": 15,
+     "font": "I",
+     "color": "#4a4540",
+     "multiline": true,
+     "value": "Our family is deeply grateful for your kindness, your presence, and the many ways you have carried us through these days. Thank you for celebrating Eleanor with us.",
+     "lead": 1.65
+    },
+    {
+     "name": "Reception details",
+     "page": 1,
+     "left": 110,
+     "top": 405,
+     "width": 308,
+     "height": 84,
+     "size": 14,
+     "font": "R",
+     "color": "#4a4540",
+     "multiline": true,
+     "value": "Immediately following the service\nThe Garden Room at Willow Creek Hall\n214 Maple Lane, Fairview",
+     "lead": 1.65
+    },
+    {
+     "name": "Closing verse",
+     "page": 1,
+     "left": 120,
+     "top": 556,
+     "width": 288,
+     "height": 118,
+     "size": 15,
+     "font": "I",
+     "color": "#5f6e56",
+     "multiline": true,
+     "value": "Like the leaves that turn and fall, you return to the quiet earth — and still, in every spring, we will find you.",
+     "lead": 1.65
+    },
+    {
+     "name": "In lieu of flowers",
+     "page": 1,
+     "left": 70,
+     "top": 696,
+     "width": 388,
+     "height": 34,
+     "size": 9,
+     "font": "S",
+     "color": "#8a9a7b",
+     "multiline": true,
+     "value": "IN LIEU OF FLOWERS, DONATIONS MAY BE MADE TO THE FAIRVIEW PUBLIC LIBRARY",
+     "lead": 1.9
+    },
+    {
+     "name": "Photo",
+     "type": "photo",
+     "page": 1,
+     "left": 737,
+     "top": 180,
+     "width": 110,
+     "height": 110
+    },
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 596,
+     "top": 432,
+     "width": 392,
+     "height": 122,
+     "size": 46,
+     "font": "R",
+     "color": "#3f3b37",
+     "multiline": true,
+     "value": "Eleanor Grace Whitmore"
+    },
+    {
+     "name": "Years",
+     "page": 1,
+     "left": 640,
+     "top": 556,
+     "width": 304,
+     "height": 20,
+     "size": 11,
+     "font": "S",
+     "color": "#5f6e56",
+     "value": "1941  —  2026"
+    },
+    {
+     "name": "Service item 1",
+     "page": 2,
+     "left": 105,
+     "top": 160.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3f3b37",
+     "value": "Prelude"
+    },
+    {
+     "name": "Service item 1 detail",
+     "page": 2,
+     "left": 105,
+     "top": 183.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#7a746c",
+     "value": "“Morning Has Broken” · Piano"
+    },
+    {
+     "name": "Service item 2",
+     "page": 2,
+     "left": 105,
+     "top": 213.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3f3b37",
+     "value": "Welcome"
+    },
+    {
+     "name": "Service item 2 detail",
+     "page": 2,
+     "left": 105,
+     "top": 237.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#7a746c",
+     "value": "Daniel Brooks, celebrant"
+    },
+    {
+     "name": "Service item 3",
+     "page": 2,
+     "left": 105,
+     "top": 267.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3f3b37",
+     "value": "Opening Words"
+    },
+    {
+     "name": "Service item 3 detail",
+     "page": 2,
+     "left": 105,
+     "top": 290.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#7a746c",
+     "value": "Anna Whitmore Reyes, daughter"
+    },
+    {
+     "name": "Service item 4",
+     "page": 2,
+     "left": 105,
+     "top": 320.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3f3b37",
+     "value": "Reading"
+    },
+    {
+     "name": "Service item 4 detail",
+     "page": 2,
+     "left": 105,
+     "top": 344.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#7a746c",
+     "value": "A favorite poem, read by Thomas Whitmore"
+    },
+    {
+     "name": "Service item 5",
+     "page": 2,
+     "left": 105,
+     "top": 374.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3f3b37",
+     "value": "Musical Tribute"
+    },
+    {
+     "name": "Service item 5 detail",
+     "page": 2,
+     "left": 105,
+     "top": 397.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#7a746c",
+     "value": "“Over the Rainbow” · Lisa Chen"
+    },
+    {
+     "name": "Service item 6",
+     "page": 2,
+     "left": 105,
+     "top": 427.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3f3b37",
+     "value": "Life Reflection"
+    },
+    {
+     "name": "Service item 6 detail",
+     "page": 2,
+     "left": 105,
+     "top": 451.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#7a746c",
+     "value": "James Whitmore, son"
+    },
+    {
+     "name": "Service item 7",
+     "page": 2,
+     "left": 105,
+     "top": 481.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3f3b37",
+     "value": "Sharing of Memories"
+    },
+    {
+     "name": "Service item 7 detail",
+     "page": 2,
+     "left": 105,
+     "top": 504.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#7a746c",
+     "value": "All are welcome to speak"
+    },
+    {
+     "name": "Service item 8",
+     "page": 2,
+     "left": 105,
+     "top": 534.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3f3b37",
+     "value": "Moment of Silence"
+    },
+    {
+     "name": "Service item 8 detail",
+     "page": 2,
+     "left": 105,
+     "top": 558.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#7a746c",
+     "value": ""
+    },
+    {
+     "name": "Service item 9",
+     "page": 2,
+     "left": 105,
+     "top": 588.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3f3b37",
+     "value": "Closing Words"
+    },
+    {
+     "name": "Service item 9 detail",
+     "page": 2,
+     "left": 105,
+     "top": 611.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#7a746c",
+     "value": "Daniel Brooks, celebrant"
+    },
+    {
+     "name": "Service item 10",
+     "page": 2,
+     "left": 105,
+     "top": 641.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3f3b37",
+     "value": "Recessional"
+    },
+    {
+     "name": "Service item 10 detail",
+     "page": 2,
+     "left": 105,
+     "top": 665.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#7a746c",
+     "value": "“What a Wonderful World”"
+    },
+    {
+     "name": "Service date and place",
+     "page": 2,
+     "left": 95,
+     "top": 710,
+     "width": 340,
+     "height": 40,
+     "size": 9.5,
+     "font": "S",
+     "color": "#8a9a7b",
+     "multiline": true,
+     "value": "SATURDAY, OCTOBER 11, 2026 · 11:00 AM\nWILLOW CREEK HALL · FAIRVIEW",
+     "lead": 1.9
+    },
+    {
+     "name": "Name (inside)",
+     "page": 2,
+     "left": 596,
+     "top": 104,
+     "width": 398,
+     "height": 40,
+     "size": 30,
+     "font": "I",
+     "color": "#3f3b37",
+     "value": "Eleanor Grace Whitmore"
+    },
+    {
+     "name": "Full dates",
+     "page": 2,
+     "left": 645,
+     "top": 156,
+     "width": 300,
+     "height": 18,
+     "size": 12,
+     "font": "I",
+     "color": "#7a746c",
+     "value": "March 14, 1941  ·  October 2, 2026"
+    },
+    {
+     "name": "Life story",
+     "page": 2,
+     "left": 606,
+     "top": 212,
+     "width": 380,
+     "height": 410,
+     "size": 13.5,
+     "font": "R",
+     "color": "#4a4540",
+     "multiline": true,
+     "align": 0,
+     "value": "Eleanor was born on a spring morning in 1941 and spent her childhood on her family’s farm outside Fairview, where she learned to love early sunrises and tomato vines. She taught second grade for thirty-four years and could still name nearly every student she ever had.\n\nShe married her sweetheart, Robert, in 1963, and together they raised three children in a house that was never quiet and always smelled of coffee. Eleanor tended a garden the whole street admired, never missed a grandchild’s recital, and believed that a handwritten letter could fix almost anything.\n\nShe is survived by her children Anna, James and Thomas, seven grandchildren, and countless friends who were made to feel like family the moment they arrived.",
+     "lead": 1.65
+    }
+   ]
+  },
+  {
+   "file": "02 Welcome Sign - Soft Botanical (fill-in).pdf",
+   "title": "Welcome Sign - Soft Botanical",
+   "bg": "sign.pdf",
+   "fields": [
+    {
+     "name": "Subtitle",
+     "page": 1,
+     "left": 202,
+     "top": 1222,
+     "width": 1900,
+     "height": 66,
+     "size": 46,
+     "font": "S",
+     "color": "#5f6e56",
+     "value": "TO THE CELEBRATION OF LIFE FOR"
+    },
+    {
+     "name": "Photo",
+     "type": "photo",
+     "page": 1,
+     "left": 1002,
+     "top": 1487,
+     "width": 300,
+     "height": 300
+    },
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 380,
+     "top": 2190,
+     "width": 1544,
+     "height": 470,
+     "size": 178,
+     "font": "R",
+     "color": "#3f3b37",
+     "multiline": true,
+     "value": "Eleanor Grace Whitmore"
+    },
+    {
+     "name": "Years",
+     "page": 1,
+     "left": 700,
+     "top": 2662,
+     "width": 904,
+     "height": 72,
+     "size": 49,
+     "font": "S",
+     "color": "#5f6e56",
+     "value": "1941  —  2026"
+    }
+   ]
+  },
+  {
+   "file": "03 Memory Card - Soft Botanical (fill-in).pdf",
+   "title": "Share a Memory Card - Soft Botanical",
+   "bg": "card.pdf",
+   "fields": [
+    {
+     "name": "Name line",
+     "page": 1,
+     "left": 34,
+     "top": 150,
+     "width": 340,
+     "height": 16,
+     "size": 8,
+     "font": "S",
+     "color": "#5f6e56",
+     "value": "OF ELEANOR GRACE WHITMORE"
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 0.94
+   }
+  }
+ ]
+}
