@@ -107,6 +107,19 @@ for (const u of ["https://recreationalviper.github.io/agent-hq/", "https://recre
   try { const r = await fetch(u, { redirect: "follow" }); console.log(`RESULT site: ${r.status} ${u}`); } catch (e) { console.log(`RESULT site: FAILED ${u}: ${e.message}`); }
 }
 
+// Exa (AI web search) check: which secret names hold keys, and does each work (1 tiny search)
+{
+  const found = Object.keys(process.env).filter((k) => /^EXA/.test(k) && process.env[k]?.trim());
+  if (!found.length) console.log("RESULT exa: no key found");
+  for (const k of found) {
+    try {
+      const r = await fetch("https://api.exa.ai/search", { method: "POST", headers: { "x-api-key": process.env[k].trim(), "content-type": "application/json" }, body: JSON.stringify({ query: "funeral program template", numResults: 1, type: "auto" }) });
+      const j = await r.json().catch(() => ({}));
+      console.log(r.ok ? `RESULT exa (${k}): WORKS. Top result: ${j.results?.[0]?.title || "(none)"}${j.costDollars?.total != null ? ` · cost $${j.costDollars.total}` : ""}` : `RESULT exa (${k}): FAILED (HTTP ${r.status}): ${j.error || j.message || "rejected"}`);
+    } catch (e) { console.log(`RESULT exa (${k}): FAILED: ${e.message}`); }
+  }
+}
+
 // Apify (SEO research) check: account + free credit left
 if (process.env.APIFY_TOKEN) {
   try {

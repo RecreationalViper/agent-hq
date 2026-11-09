@@ -20,5 +20,20 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
+          EXA_API_KEY_2: ${{ secrets.EXA_API_KEY_2 }}
+          EXA_API_KEY2: ${{ secrets.EXA_API_KEY2 }}
+          EXA_KEY: ${{ secrets.EXA_KEY }}
+          EXA_KEY_2: ${{ secrets.EXA_KEY_2 }}
+          EXA: ${{ secrets.EXA }}
+          EXA_2: ${{ secrets.EXA_2 }}
+          EXA_AI_KEY: ${{ secrets.EXA_AI_KEY }}
+          EXA_AI_API_KEY: ${{ secrets.EXA_AI_API_KEY }}
+          EXA_SEARCH_KEY: ${{ secrets.EXA_SEARCH_KEY }}
+          EXA_SECOND_KEY: ${{ secrets.EXA_SECOND_KEY }}
+          EXA_API_KEY_1: ${{ secrets.EXA_API_KEY_1 }}
+          EXA_KEY_1: ${{ secrets.EXA_KEY_1 }}
+          EXA_AI: ${{ secrets.EXA_AI }}
+          EXAAI_API_KEY: ${{ secrets.EXAAI_API_KEY }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY || secrets.FRED_KEY || secrets.FRED }}
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
