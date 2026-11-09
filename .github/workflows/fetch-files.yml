@@ -1,0 +1,38 @@
+name: Fetch Files
+# Downloads files (e.g. Canva exports, which this repo's sandbox can't reach) into the repo.
+on:
+  workflow_dispatch:
+    inputs:
+      files:
+        description: 'JSON object {"repo/path": "https://url"}'
+        required: true
+permissions:
+  contents: write
+concurrency: agent-hq
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download
+        env:
+          FILES: ${{ github.event.inputs.files }}
+        run: |
+          node -e '
+            const fs = require("fs"), path = require("path");
+            const files = JSON.parse(process.env.FILES);
+            (async () => {
+              for (const [p, url] of Object.entries(files)) {
+                if (p.includes("..") || p.startsWith("/") || p.startsWith(".github")) throw new Error("bad path " + p);
+                const r = await fetch(url); if (!r.ok) throw new Error(p + ": HTTP " + r.status);
+                fs.mkdirSync(path.dirname(p), { recursive: true });
+                fs.writeFileSync(p, Buffer.from(await r.arrayBuffer()));
+                console.log("saved", p, fs.statSync(p).size, "bytes");
+              }
+            })().catch((e) => { console.error(e.message); process.exit(1); });'
+      - name: Save
+        run: |
+          git config user.name "agent-hq-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || (git commit -m "Fetch files" && git pull --rebase && git push)
