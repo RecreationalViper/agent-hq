@@ -1,10 +1,10 @@
-# Gmail Junk Sweeper — every hour, around the clock, on GitHub's free servers.
+# Gmail Junk Sweeper — once a day, in bulk, on GitHub's free servers.
 # Trashes junk, sends phishing to Spam, never touches mail from people. Setup: gmail/README.md
 # This repo is public, so this log shows counts only; details go to Discord #inbox.
 name: Gmail Junk Sweeper
 on:
   schedule:
-    - cron: "41 * * * *"
+    - cron: "41 10 * * *" # daily, 5:41 AM Eastern
   workflow_dispatch:
     inputs:
       dry_run:

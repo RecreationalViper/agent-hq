@@ -12,7 +12,7 @@ Budget: $0.
 | Radar analyst agent | Turns the latest scan into 3 adopt-now actions plus cost-cutting moves | daily |
 | Daily Focus, Content Planner, Product Ideas, Listing Writer, Credit Scout | Etsy shop work (see `agents.json`) | see `agents.json` |
 | Weekly Review | Manager summary of everything the team produced | Sundays |
-| **Gmail Junk Sweeper** | Trashes junk, sends phishing to Spam, keeps anything from a person. Rules first, AI only for leftovers. Setup: [`gmail/README.md`](gmail/README.md) | every hour |
+| **Gmail Junk Sweeper** | Trashes junk, sends phishing to Spam, keeps anything from a person. Rules first, AI only for leftovers. Setup: [`gmail/README.md`](gmail/README.md) | once a day |
 | Trading Desk | Paper-trading desk with a backtest analyst | weekdays |
 
 ## GitHub Radar — the "keep looking so I don't have to" agent

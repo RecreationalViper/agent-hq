@@ -1,4 +1,4 @@
-// Gmail Junk Sweeper — runs every hour on GitHub Actions (see .github/workflows/gmail-sweeper.yml).
+// Gmail Junk Sweeper — runs once a day, in bulk, on GitHub Actions (see .github/workflows/gmail-sweeper.yml).
 //
 // Rules first, AI last: almost every email is decided by sender, subject, Gmail's own
 // category and the sign-in checks Gmail already did, at zero AI cost. Only bulk mail the
@@ -185,7 +185,7 @@ async function main() {
   const R = await loadRules();
   if (process.argv.includes("--selftest")) return selftest(R);
   const missing = ["GMAIL_CLIENT_ID", "GMAIL_CLIENT_SECRET", "GMAIL_REFRESH_TOKEN"].filter((k) => !process.env[k]);
-  if (missing.length) { // not set up yet: skip quietly instead of failing (and alerting) every hour
+  if (missing.length) { // not set up yet: skip quietly instead of failing (and alerting) every day
     const msg = `Not set up yet: add ${missing.join(", ")} (see gmail/README.md). Skipping.`;
     console.log(msg);
     if (process.env.GITHUB_STEP_SUMMARY) await fs.appendFile(process.env.GITHUB_STEP_SUMMARY, `### Gmail Junk Sweeper\n${msg}\n`);

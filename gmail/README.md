@@ -5,7 +5,7 @@ Agents that work your Gmail from GitHub Actions. All of them share one Google si
 
 | Agent | What it does | Status |
 | --- | --- | --- |
-| **Junk Sweeper** (`sweep.mjs`) | Every hour: trashes junk, sends phishing to Spam, leaves anything from a person alone | live |
+| **Junk Sweeper** (`sweep.mjs`) | Once a day, in bulk: trashes junk, sends phishing to Spam, leaves anything from a person alone | live |
 | Inbox Organizer | Labels and sorts what's left (customers, orders, money, personal) | planned |
 | Customer Desk | Drafts replies to customer inquiries and posts a summary to Discord for your OK | planned |
 | Email Marketing | Drafts newsletters and promos for the shop for your approval | planned |
@@ -50,7 +50,7 @@ Wrong call? Add the sender's domain to the `GMAIL_KEEP_DOMAINS` or `GMAIL_JUNK_D
    More Gmail accounts: repeat step 4 signed in as each one and save the tokens as
    `GMAIL_REFRESH_TOKEN_2` … `_5`.
 6. **Test.** Go to *Actions → Gmail Junk Sweeper → Run workflow* and tick **Dry run**. You'll see
-   counts and nothing changes. Then run it for real, or just wait for the next hour.
+   counts and nothing changes. Then run it for real, or just wait for the next daily run.
 
 ```bash
 node gmail/sweep.mjs --selftest   # rules vs. sample emails, no network
