@@ -5,7 +5,8 @@ if (!key) { console.log("No PAYHIP_API_KEY secret"); process.exit(1); }
 const H = { "payhip-api-key": key };
 const code = (process.env.CODE || "").trim().toUpperCase();
 const list = await (await fetch("https://payhip.com/api/v2/coupons", { headers: H })).json().catch(() => ({}));
-const existing = (list.data || []).find((c) => String(c.code).toUpperCase() === code);
+const rows = Array.isArray(list.data) ? list.data : Array.isArray(list.data?.data) ? list.data.data : Array.isArray(list.data?.coupons) ? list.data.coupons : [];
+const existing = rows.find((c) => String(c.code).toUpperCase() === code);
 if (existing) { console.log(`RESULT: ${code} already exists (${existing.percent_off ?? ""}% off). Nothing changed.`); process.exit(0); }
 const body = new URLSearchParams({ code, percent_off: String(process.env.PERCENT || "25"), notes: process.env.NOTES || "Created by Agent HQ" });
 if (process.env.PRODUCT_KEY) { body.set("coupon_type", "single"); body.set("product_key", process.env.PRODUCT_KEY); } else body.set("coupon_type", "multi");
