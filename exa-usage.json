@@ -1,9 +1,10 @@
 {
   "month": "2026-11",
-  "spent": 0.035,
-  "calls": 5,
+  "spent": 0.056,
+  "calls": 8,
   "byAgent": {
     "provider-check": 0.007,
-    "competitor-scout": 0.028
+    "competitor-scout": 0.028,
+    "partner-finder": 0.021
   }
 }

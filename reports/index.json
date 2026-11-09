@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-09-partner-finder.md",
+    "agent": "partner-finder",
+    "name": "Partner Finder",
+    "date": "2026-11-09"
+  },
+  {
     "file": "2026-11-09-competitor-scout.md",
     "agent": "competitor-scout",
     "name": "Competitor Scout",
