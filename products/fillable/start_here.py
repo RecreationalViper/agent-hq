@@ -52,7 +52,34 @@ SECTIONS = [
 ]
 
 
-def build(out):
+ADDON_SECTIONS = [
+    ("Print the bookmarks", [
+        "Each bookmark is 2 x 7 in. Page 2 places four on one US Letter sheet: type once and all four fill in.",
+        "Print page 2 on cardstock at 100%, then cut along the small grey marks. Add a ribbon or tassel through a hole punch if you like.",
+    ]),
+    ("Print the thank-you cards", [
+        "Each card is 4.25 x 5.5 in, and page 2 prints four on one US Letter sheet. Cut along the grey marks.",
+        "They fit A2 envelopes (4.375 x 5.75 in), sold at most craft and office stores.",
+    ]),
+    ("Share the phone announcement", [
+        "This one is made for phones, not paper. Type the name, service details and note, add a photo on a computer if you like, then save.",
+        "Send the saved PDF by text or email, or take a screenshot of it and share the picture in messages or on social media.",
+    ]),
+    ("Print the guest book pages", [
+        "Type the name once, then print as many pages as you need on US Letter paper. Each page has room for 12 guests.",
+        "Three-hole punch the pages for a binder, or lay them on the welcome table with a pen.",
+    ]),
+]
+
+
+def build(out, complete=False):
+    sections = list(SECTIONS)
+    if complete:
+        sections[0] = ("Before you start", [
+            "Your Complete Suite has seven fill-in files: the folded program, welcome sign, share-a-memory card, bookmark, thank-you card, phone announcement and guest book page.",
+            SECTIONS[0][1][1],
+        ])
+        sections = sections[:-1] + ADDON_SECTIONS + sections[-1:]
     c = canvas.Canvas(out, pagesize=letter)
     c.setTitle("Start Here - Soft Botanical Memorial Kit"); c.setAuthor("Forever Held")
 
@@ -67,11 +94,11 @@ def build(out):
     c.setFillColor(MOSS); c.setFont(SERIF_I, 30); c.drawCentredString(W / 2, y, "Thank you, and start here")
     y -= 24
     c.setFillColor(SOFT); c.setFont(SERIF_I, 12)
-    c.drawCentredString(W / 2, y, "Soft Botanical memorial kit: program, welcome sign and share-a-memory card")
+    c.drawCentredString(W / 2, y, "Soft Botanical Complete Suite: seven matching memorial pieces" if complete else "Soft Botanical memorial kit: program, welcome sign and share-a-memory card")
     y -= 22
     c.setStrokeColor(SAGE); c.setLineWidth(0.7); c.line(W / 2 - 30, y, W / 2 + 30, y)
     y -= 30
-    for title, paras in SECTIONS:
+    for title, paras in sections:
         need = 26 + sum(len(simpleSplit(p, SERIF, 11, W - 2 * M - 16)) * 16 + 6 for p in paras)
         if y - need < 50:
             c.showPage(); new_page(); y = H - 70
@@ -88,4 +115,4 @@ def build(out):
 
 
 if __name__ == "__main__":
-    build(sys.argv[1])
+    build(sys.argv[1], complete="--complete" in sys.argv)

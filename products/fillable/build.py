@@ -176,22 +176,19 @@ def build(out_dir):
         if sheet:
             W, H = sheet["size"]
             s = sheet["scale"]
+            cols, rows = sheet.get("cols", 2), sheet.get("rows", 2)
             bw, bh = float(bg.pages[0].mediabox.width) * s, float(bg.pages[0].mediabox.height) * s
-            gx, gy = (W - 2 * bw) / 2, (H - 2 * bh) / 2
-            spots = [(gx + c * bw, gy + r * bh) for r in (1, 0) for c in (0, 1)]
+            gx, gy = (W - cols * bw) / 2, (H - rows * bh) / 2
+            spots = [(gx + c * bw, gy + r * bh) for r in reversed(range(rows)) for c in range(cols)]
             sp = b.add_bg_page(bg.pages[0], size=(W, H), placements=[(s, x, y) for x, y in spots])
-            # trim marks
-            marks = []
-            for x in (gx, gx + bw, gx + 2 * bw):
-                marks += [f"{x:.2f} 0 m {x:.2f} {gy - 6:.2f} l", f"{x:.2f} {H:.2f} m {x:.2f} {H - gy + 6:.2f} l"]
-            for y in (gy, gy + bh, gy + 2 * bh):
-                marks += [f"0 {y:.2f} m {gx - 6:.2f} {y:.2f} l", f"{W:.2f} {y:.2f} m {W - gx + 6:.2f} {y:.2f} l"]
+            xs = [gx + i * bw for i in range(cols + 1)]
+            ys = [gy + i * bh for i in range(rows + 1)]
             import io
             from reportlab.pdfgen import canvas as rl_canvas
             buf = io.BytesIO(); c = rl_canvas.Canvas(buf, pagesize=(W, H)); c.setStrokeColorRGB(.6, .6, .6); c.setLineWidth(.5)
-            for x in (gx, gx + bw, gx + 2 * bw):
+            for x in xs:
                 c.line(x, 0, x, gy - 6); c.line(x, H, x, H - gy + 6)
-            for y in (gy, gy + bh, gy + 2 * bh):
+            for y in ys:
                 c.line(0, y, gx - 6, y); c.line(W, y, W - gx + 6, y)
             c.save(); sp.merge_page(PdfReader(io.BytesIO(buf.getvalue())).pages[0])
             for x, y in spots:

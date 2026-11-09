@@ -468,6 +468,205 @@
     ],
     "scale": 0.94
    }
+  },
+  {
+   "file": "04 Bookmark - Soft Botanical (fill-in).pdf",
+   "title": "Memorial Bookmark - Soft Botanical",
+   "bg": "bookmark.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "left": 16,
+     "top": 122,
+     "width": 160,
+     "height": 58,
+     "size": 19,
+     "font": "R",
+     "color": "#3f3b37",
+     "multiline": true,
+     "lead": 1.15,
+     "value": "Eleanor Grace Whitmore",
+     "page": 1
+    },
+    {
+     "name": "Years",
+     "left": 16,
+     "top": 200,
+     "width": 160,
+     "height": 16,
+     "size": 8,
+     "font": "S",
+     "color": "#5f6e56",
+     "value": "1941  —  2026",
+     "page": 1
+    },
+    {
+     "name": "Verse",
+     "left": 18,
+     "top": 254,
+     "width": 156,
+     "height": 250,
+     "size": 11.5,
+     "font": "I",
+     "color": "#4a4540",
+     "multiline": true,
+     "lead": 1.7,
+     "value": "Those we love don’t go away, they walk beside us every day. Unseen, unheard, but always near, still loved, still missed and very dear.",
+     "page": 1
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 1,
+    "cols": 4,
+    "rows": 1
+   }
+  },
+  {
+   "file": "05 Thank-You Card - Soft Botanical (fill-in).pdf",
+   "title": "Thank-You Card - Soft Botanical",
+   "bg": "thankyou.pdf",
+   "fields": [
+    {
+     "name": "Thank you message",
+     "left": 44,
+     "top": 212,
+     "width": 320,
+     "height": 150,
+     "size": 13,
+     "font": "I",
+     "color": "#4a4540",
+     "multiline": true,
+     "lead": 1.7,
+     "value": "Your kind words, flowers and presence meant more to us than we can say. Thank you for honoring Eleanor’s life and for holding our family close.",
+     "page": 1
+    },
+    {
+     "name": "Signed",
+     "left": 44,
+     "top": 372,
+     "width": 320,
+     "height": 48,
+     "size": 13,
+     "font": "R",
+     "color": "#3f3b37",
+     "multiline": true,
+     "lead": 1.4,
+     "value": "With gratitude,\nthe Whitmore family",
+     "page": 1
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 0.94
+   }
+  },
+  {
+   "file": "06 Phone Announcement - Soft Botanical (fill-in).pdf",
+   "title": "Memorial Announcement for Phones - Soft Botanical",
+   "bg": "announcement.pdf",
+   "fields": [
+    {
+     "name": "Photo",
+     "type": "photo",
+     "left": 231,
+     "top": 318,
+     "width": 78,
+     "height": 78,
+     "page": 1
+    },
+    {
+     "name": "Name",
+     "left": 40,
+     "top": 556,
+     "width": 460,
+     "height": 80,
+     "size": 34,
+     "font": "R",
+     "color": "#3f3b37",
+     "multiline": true,
+     "lead": 1.1,
+     "value": "Eleanor Grace Whitmore",
+     "page": 1
+    },
+    {
+     "name": "Years",
+     "left": 120,
+     "top": 640,
+     "width": 300,
+     "height": 20,
+     "size": 11,
+     "font": "S",
+     "color": "#5f6e56",
+     "value": "1941  —  2026",
+     "page": 1
+    },
+    {
+     "name": "Gathering",
+     "left": 60,
+     "top": 684,
+     "width": 420,
+     "height": 26,
+     "size": 18,
+     "font": "I",
+     "color": "#5f6e56",
+     "value": "Celebration of Life",
+     "page": 1
+    },
+    {
+     "name": "Service details",
+     "left": 60,
+     "top": 714,
+     "width": 420,
+     "height": 96,
+     "size": 14,
+     "font": "R",
+     "color": "#4a4540",
+     "multiline": true,
+     "lead": 1.55,
+     "value": "Saturday, October 11, 2026 · 11:00 AM\nWillow Creek Hall\n214 Maple Lane, Fairview",
+     "page": 1
+    },
+    {
+     "name": "Note",
+     "left": 60,
+     "top": 812,
+     "width": 420,
+     "height": 34,
+     "size": 12,
+     "font": "I",
+     "color": "#7a746c",
+     "multiline": true,
+     "lead": 1.4,
+     "value": "All are welcome to join us as we remember her.",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "file": "07 Guest Book Page - Soft Botanical (fill-in).pdf",
+   "title": "Guest Book Page - Soft Botanical",
+   "bg": "guestbook.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "left": 108,
+     "top": 222,
+     "width": 600,
+     "height": 46,
+     "size": 30,
+     "font": "I",
+     "color": "#3f3b37",
+     "value": "Eleanor Grace Whitmore",
+     "page": 1
+    }
+   ]
   }
  ]
 }
