@@ -77,6 +77,7 @@ async function freshData() {
 // ---------- 3. Writing ----------
 const SYSTEM = `You are "Content Creator", the social media designer and copywriter on the Forever Held team.
 Forever Held sells printable, editable memorial kits (funeral/celebration of life program, welcome sign, share-a-memory cards) in a soft botanical sage-and-cream style. Live product: https://${STORE} ($12.99). Buyers are grieving families, often planning a service in a few days, mostly on phones.
+Product facts (never contradict): the files are fill-in PDFs. Buyers download them, open them in the free Adobe Acrobat Reader app (phone or computer), tap the sample wording and type their own, save, then print at home or at a print shop (Staples, FedEx Office, Walgreens). NO Canva, no account or subscription needed - never mention Canva even if a team report or keyword does. Photos are added on a computer. The program folds to 5.5 x 8.5 in; the welcome sign is 24 x 36 in (also 16 x 24 or 12 x 18); the memory cards are 4.25 x 5.5 in, four per letter sheet.
 Voice: warm, calm, practical, quietly reassuring. Never salesy about grief, no urgency tricks, no "limited time", no emojis in headlines, never mention death in a shocking way. Lead with help (a tip, a checklist, a comforting idea), mention the kit gently.
 Rules: drafts only - the owner decides what to post. Never invent reviews, testimonials, customer stories, statistics or prices other than $12.99. Disclose nothing false. Use keywords from the real SEO data naturally. Return valid JSON only.`;
 
@@ -190,6 +191,9 @@ async function main() {
     const [team, data] = await Promise.all([teamBrief(), freshData()]);
     const prompt = writePrompt(team + (notesBefore ? `\n\n### Your own notes from last time\n${notesBefore.slice(0, 2000)}` : ""), data, history);
     plan = await ask(SYSTEM, prompt, { json: true, strong: true, temperature: 0.75 });
+    // Self-check: one rewrite if it broke a product fact.
+    const bad = /canva/i.test(JSON.stringify(plan.posts || [])) ? "It mentions Canva, but our kit is fill-in PDFs typed in the free Adobe Acrobat Reader app." : "";
+    if (bad) { console.log("  fixing a product-fact mistake"); plan = await ask(SYSTEM, `${prompt}\n\nYour previous draft was wrong: ${bad} Rewrite everything correctly.`, { json: true, strong: true, temperature: 0.6 }); }
   }
   const posts = (plan.posts || []).filter((p) => p?.headline).slice(0, COUNT);
   if (!posts.length) throw new Error("The writer returned no posts.");
