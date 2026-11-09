@@ -11,5 +11,22 @@
       "side": "buy",
       "symbol": "COST"
     }
-  ]
+  ],
+  "pending": [],
+  "startDate": "2026-11-09",
+  "spyStart": 752.72,
+  "stops": {
+    "AMZN": {
+      "stopPct": 8,
+      "price": 241.62,
+      "invalidation": "default 8% stop (bought before stops existed)",
+      "set": "2026-11-09"
+    },
+    "COST": {
+      "stopPct": 8,
+      "price": 974.6,
+      "invalidation": "default 8% stop (bought before stops existed)",
+      "set": "2026-11-09"
+    }
+  }
 }
