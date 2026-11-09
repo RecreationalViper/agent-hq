@@ -19,5 +19,6 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY || secrets.FRED_KEY || secrets.FRED }}
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}

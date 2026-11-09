@@ -106,3 +106,15 @@ try {
 for (const u of ["https://recreationalviper.github.io/agent-hq/", "https://recreationalviper.github.io/agent-hq/store/", "https://recreationalviper.github.io/agent-hq/store/img/program-cover.png"]) {
   try { const r = await fetch(u, { redirect: "follow" }); console.log(`RESULT site: ${r.status} ${u}`); } catch (e) { console.log(`RESULT site: FAILED ${u}: ${e.message}`); }
 }
+
+// Apify (SEO research) check: account + free credit left
+if (process.env.APIFY_TOKEN) {
+  try {
+    const H = { Authorization: `Bearer ${process.env.APIFY_TOKEN.trim()}` };
+    const me = await (await fetch("https://api.apify.com/v2/users/me", { headers: H })).json();
+    const lim = await (await fetch("https://api.apify.com/v2/users/me/limits", { headers: H })).json().catch(() => ({}));
+    if (!me.data) throw new Error(me.error?.message || "token rejected");
+    const used = lim.data?.current?.monthlyUsageUsd, max = lim.data?.limits?.maxMonthlyUsageUsd;
+    console.log(`RESULT apify: WORKS. Plan: ${me.data.plan?.id || "?"}; used this month: $${used ?? "?"} of $${max ?? "?"}`);
+  } catch (e) { console.log(`RESULT apify: FAILED: ${e.message}`); process.exitCode = 1; }
+} else console.log("RESULT apify: no key found (secret APIFY_TOKEN missing or empty)");
