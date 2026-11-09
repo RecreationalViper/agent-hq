@@ -101,3 +101,8 @@ try {
   const s = await salesSummary();
   console.log(`RESULT sales feed: ${home.ok ? "UP" : `DOWN (HTTP ${home.status})`}; fake sale rejected: ${fake.status === 401}; agents can read it: ${s ? `yes (${s.total} sale event(s))` : "no"}`);
 } catch (e) { console.log(`RESULT sales feed: FAILED: ${e.message}`); process.exitCode = 1; }
+
+// Website check (GitHub Pages)
+for (const u of ["https://recreationalviper.github.io/agent-hq/", "https://recreationalviper.github.io/agent-hq/store/", "https://recreationalviper.github.io/agent-hq/store/img/program-cover.png"]) {
+  try { const r = await fetch(u, { redirect: "follow" }); console.log(`RESULT site: ${r.status} ${u}`); } catch (e) { console.log(`RESULT site: FAILED ${u}: ${e.message}`); }
+}
