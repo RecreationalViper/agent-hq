@@ -1,5 +1,19 @@
 {
   "covered": [
+    "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/",
+    "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
+    "https://featureddaily.com/news/openai-launches-gpt-6-1-terra-a-faster-cheaper-medium-sized-model",
+    "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/",
+    "https://aws.amazon.com/blogs/machine-learning/single-shot-and-agentic-retrieval-with-amazon-bedrock-managed-knowledge-base/",
+    "https://aws.amazon.com/blogs/machine-learning/pluggable-agentic-ai-framework-a-seven-layer-composable-enterprise-agentic-ai-reference-architecture-on-amazon-bedrock-agentcore/",
+    "https://aws.amazon.com/blogs/machine-learning/professional-work-deserves-professional-tools-meet-aws-quick/",
+    "https://github.blog/changelog/2026-11-09-secret-scanning-detects-secrets-in-github-actions-workflow-logs",
+    "https://devblogs.microsoft.com/blog/do-ai-coding-agents-care-about-semver/",
+    "https://agentlocker.ai/news/google-s-gemini-4-argon-will-cost-the-same-as-claude-opus-5-5-from-december-1",
+    "https://dev.to/brody_dung_077611aa75c9aa/your-free-model-will-disappear-tracking-openrouters-rotating-free-tier-1fkj",
+    "https://testedintelligence.com/lg-k-exaone-2-5-free-api/",
+    "https://research.meta.ai/blog/muse-ember",
+    "https://www.infoq.com/news/2026/11/topcoat-rust-framework/",
     "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
     "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
     "https://www.anthropic.com/news/2026-usage-policy-update",
@@ -12,5 +26,6 @@
     "https://hunch.net/?p=13764006",
     "https://www.kadoa.com/companies/insights/ai-selloff-perspective"
   ],
-  "lastRun": "2026-11-08"
+  "lastRun": "2026-11-09",
+  "lastNotion": "2026-11-09"
 }
