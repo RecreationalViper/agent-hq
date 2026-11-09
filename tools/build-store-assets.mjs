@@ -16,7 +16,7 @@ const mark = await fs.readFile("store/brand/mark.svg", "utf8");
 const font = `<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=block" rel="stylesheet">`;
 const logo = (w, h, layout, bg) => `<!doctype html><html><head>${font}<style>html,body{margin:0;width:${w}px;height:${h}px;background:${bg}}
 .l{width:100%;height:100%;display:flex;${layout === "wide" ? "flex-direction:row;gap:26px" : "flex-direction:column;gap:18px"};align-items:center;justify-content:center;font:500 ${layout === "wide" ? 92 : 64}px/1 Lora,serif;color:#3d4a36;letter-spacing:.01em}
-.l svg{width:${layout === "wide" ? 120 : 200}px;height:auto}</style></head><body><div class="l">${mark}<span>Forever Held</span></div></body></html>`;
+.l svg{width:${layout === "wide" ? 190 : 260}px;height:auto}</style></head><body><div class="l">${mark}<span>Forever Held</span></div></body></html>`;
 const browser = await chromium.launch();
 const page = await browser.newPage();
 for (const [file, w, h, layout, bg] of [["logo-wide.png", 1200, 300, "wide", "transparent"], ["logo-square.png", 800, 800, "square", "#f3efe7"]]) {
