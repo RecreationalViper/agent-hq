@@ -1,5 +1,29 @@
 [
   {
+    "file": "2026-11-09-github-radar.md",
+    "agent": "github-radar",
+    "name": "GitHub Radar",
+    "date": "2026-11-09"
+  },
+  {
+    "file": "2026-11-09-credit-scout.md",
+    "agent": "credit-scout",
+    "name": "Credit Scout",
+    "date": "2026-11-09"
+  },
+  {
+    "file": "2026-11-09-content.md",
+    "agent": "content",
+    "name": "Content Planner",
+    "date": "2026-11-09"
+  },
+  {
+    "file": "2026-11-09-daily-task.md",
+    "agent": "daily-task",
+    "name": "Daily Focus",
+    "date": "2026-11-09"
+  },
+  {
     "file": "2026-11-09-researcher.md",
     "agent": "researcher",
     "name": "Deep Researcher",
@@ -9,12 +33,6 @@
     "file": "2026-11-09-content-creator.md",
     "agent": "content-creator",
     "name": "Content Creator",
-    "date": "2026-11-09"
-  },
-  {
-    "file": "2026-11-09-credit-scout.md",
-    "agent": "credit-scout",
-    "name": "Credit Scout",
     "date": "2026-11-09"
   },
   {
