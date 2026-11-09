@@ -44,7 +44,7 @@ export async function seoResearch(cfg = {}) {
       const used = Number(lim.data?.current?.monthlyUsageUsd || 0), cap = Number(cfg.maxCreditUsd ?? 3);
       if (used >= cap) notes.push(`Skipped Google results check: $${used.toFixed(2)} of Apify's free $5 already used this month (safety cap $${cap}).`);
       else {
-        const items = await apify(`/acts/apify~google-search-scraper/run-sync-get-dataset-items?timeout=200&memory=1024&maxTotalChargeUsd=0.25`, { method: "POST", body: JSON.stringify({
+        const items = await apify(`/acts/apify~google-search-scraper/run-sync-get-dataset-items?timeout=200&memory=1024&maxTotalChargeUsd=0.5`, { method: "POST", body: JSON.stringify({
           queries: cfg.serp.slice(0, 5).join("\n"), resultsPerPage: 10, maxPagesPerQuery: 1, countryCode: "us", languageCode: "en", mobileResults: true, saveHtml: false, saveHtmlToKeyValueStore: false, includeUnfilteredResults: false
         }) });
         for (const it of Array.isArray(items) ? items : []) {
