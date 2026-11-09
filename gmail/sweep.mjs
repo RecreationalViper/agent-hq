@@ -84,7 +84,16 @@ export function classify(t, R) {
 async function accessToken(refresh) {
   const res = await fetch(TOKEN_URL, { method: "POST", signal: AbortSignal.timeout(20000), body: new URLSearchParams({ client_id: process.env.GMAIL_CLIENT_ID.trim(), client_secret: process.env.GMAIL_CLIENT_SECRET.trim(), refresh_token: refresh.trim(), grant_type: "refresh_token" }) });
   const d = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(`Google sign-in failed (${d.error || res.status}${d.error === "invalid_grant" ? ": the refresh token expired or was revoked — make a new one" : ""})`);
+  if (!res.ok) {
+    // Plain-English fixes. Only Google's error code is shown, never a key.
+    const fix = {
+      invalid_client: "GMAIL_CLIENT_ID and GMAIL_CLIENT_SECRET don't match. Both must come from the SAME Google client (the one used in the OAuth Playground)",
+      unauthorized_client: "the refresh token was made with a different client than GMAIL_CLIENT_ID. Use the Client ID + secret you pasted into the Playground",
+      invalid_grant: "the refresh token is wrong, expired or revoked (testing-mode tokens last 7 days). Make a new one in the OAuth Playground",
+      invalid_request: "a secret is empty or has extra characters. Re-paste all three"
+    }[d.error];
+    throw new Error(`Google sign-in failed: ${d.error || res.status}${fix ? ` — ${fix}` : d.error_description ? ` — ${d.error_description}` : ""}`);
+  }
   return d.access_token;
 }
 
@@ -94,7 +103,7 @@ function client(token) {
       const res = await fetch(GMAIL + path, { ...init, signal: AbortSignal.timeout(30000), headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" } });
       if (res.status === 429 || res.status >= 500) { await new Promise((r) => setTimeout(r, 1500 * (attempt + 1))); continue; }
       const d = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(`Gmail ${res.status}: ${d.error?.message || ""}`);
+      if (!res.ok) throw new Error(`Gmail ${res.status}: ${/has not been used|is disabled/i.test(d.error?.message || "") ? "the Gmail API isn't turned on for this Google project — enable it in Google Cloud" : res.status === 403 ? "permission denied — when making the refresh token, use the gmail.modify scope and tick Allow" : (d.error?.message || "").slice(0, 200)}`);
       return d;
     }
     throw new Error("Gmail kept rate-limiting");
@@ -196,13 +205,16 @@ async function main() {
   const results = [], failures = [];
   for (const [i, tok] of tokens.entries()) {
     try { results.push(await sweep(tok, i + 1, R)); }
-    catch (e) { failures.push(`account ${i + 1}: ${e.message}`); console.log(`Account ${i + 1} failed: ${e.message}`); }
+    catch (e) {
+      failures.push(`account ${i + 1}: ${e.message}`);
+      console.log(CI ? `::error title=Gmail Junk Sweeper::Account ${i + 1}: ${e.message}` : `Account ${i + 1} failed: ${e.message}`); // shows on the run page
+    }
   }
 
   const sum = (k) => results.reduce((a, r) => a + (Array.isArray(r[k]) ? r[k].length : r[k]), 0);
   const counts = `${DRY ? "[dry run] " : ""}${sum("scanned")} scanned · ${sum("junk")} trashed · ${sum("phish")} phishing → spam · ${sum("kept")} kept · ${sum("aiAsked")} asked AI`;
   console.log(counts); // counts only: this log is public
-  if (process.env.GITHUB_STEP_SUMMARY) await fs.appendFile(process.env.GITHUB_STEP_SUMMARY, `### Gmail Junk Sweeper\n${counts}\n${failures.length ? `\n${failures.length} account(s) failed — check secrets.\n` : ""}`);
+  if (process.env.GITHUB_STEP_SUMMARY) await fs.appendFile(process.env.GITHUB_STEP_SUMMARY, `### Gmail Junk Sweeper\n${counts}\n${failures.length ? `\n**Problem:**\n${failures.map((f) => `- ${f}`).join("\n")}\n` : ""}`);
 
   const detail = results.map((r) => [
     tokens.length > 1 ? `**Account ${r.n}**` : "",
