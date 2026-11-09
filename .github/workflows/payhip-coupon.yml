@@ -1,0 +1,23 @@
+name: Payhip Coupon
+on:
+  workflow_dispatch:
+    inputs:
+      code: { description: "Coupon code", required: true }
+      percent: { description: "Percent off", default: "25" }
+      product_key: { description: "Product key (blank = all products)", default: "" }
+      usage_limit: { description: "Max uses (blank = unlimited)", default: "" }
+jobs:
+  coupon:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+      - run: node tools/payhip-coupon.mjs
+        env:
+          PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
+          CODE: ${{ github.event.inputs.code }}
+          PERCENT: ${{ github.event.inputs.percent }}
+          PRODUCT_KEY: ${{ github.event.inputs.product_key }}
+          USAGE_LIMIT: ${{ github.event.inputs.usage_limit }}
+          NOTES: Launch coupon (Agent HQ)
