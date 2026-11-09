@@ -1,0 +1,10 @@
+{
+  "_readme": "Steers gmail/sweep.mjs. This repo is public: keep personal details (your bank, people's addresses) in the GMAIL_KEEP_DOMAINS / GMAIL_JUNK_DOMAINS secrets instead of here. Patterns are case-insensitive regular expressions.",
+  "query": "in:inbox newer_than:2d -is:starred",
+  "maxThreads": 200,
+  "keepDomains": ["etsy.com", "canva.com", "google.com", "github.com", "anthropic.com", "claude.com", "payhip.com", "alpaca.markets", "discord.com", "irs.gov", "ssa.gov", "usps.com", "ups.com", "fedex.com", "gov", "edu"],
+  "keepSubject": "verification code|security (alert|code|notice)|sign[- ]?in|log ?in attempt|password|2-step|one[- ]time|passcode|receipt|order (confirmed|confirmation|#|number|received)|your order|has shipped|shipped|out for delivery|delivered|delivery|tracking|invoice|statement (is )?(ready|available)|payment (due|received|status|posted|scheduled|failed|declined)|autopay|bill is|tax|1099|w-2|appointment|refund|payout|deposit (posted|received|available)|direct deposit|fraud|suspicious|credit report|account (alert|update|activity)|trade confirm|shareholder|investors|prospectus|dividend|policy (change|update)|terms of (service|use)",
+  "junkDomains": ["glassdoor.com", "robly.com", "swagbucks.com", "lendingtree.com", "famousfootwear.com", "gabesstores.com", "vidiq.com", "cncf.io"],
+  "junkSubject": "\\d+% off|\\bsale\\b|deals?\\b|coupon|promo|bogo|free shipping|last chance|limited time|cash ?back|\\boffers?\\b|refinanc|personal loan|consolidate|pre-?approved|your new card|apply now|is hiring|jobs? (for you|in)|webinar|register (now|by|today)|save (\\$|€|up to)|new arrivals|don't miss|ends (soon|tonight|today)|exclusive|newsletter|product updates|daily joke",
+  "phishingSubject": "e-?deposit|verify your (account|identity|payment|details|e-)|confirm your (account|details|deposit|status|identity|e-)|account (suspended|locked|on hold|disabled)|unusual (sign|log)-?in|claim your (prize|reward|funds)|you('ve| have)? won|wallet|seed phrase|gift card|crypto (refund|recovery)|pending (transfer|wire)|release (the|your) funds"
+}
