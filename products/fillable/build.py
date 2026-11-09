@@ -197,7 +197,7 @@ def build(out_dir):
                         continue
                     rect = px_rect(bh, f["left"], f["top"], f["width"], f["height"], scale=s, ox=x, oy=y)
                     b.text_field(sp, f, rect, scale=s)
-        out = out_dir / prod["file"]
+        out = out_dir / prod["file"]; out.parent.mkdir(parents=True, exist_ok=True)
         b.save(out, prod["title"])
         made.append(str(out))
     return made

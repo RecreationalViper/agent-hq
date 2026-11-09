@@ -667,6 +667,676 @@
      "page": 1
     }
    ]
+  },
+  {
+   "file": "Classic Elegance/01 Program - Classic Elegance (fill-in).pdf",
+   "title": "Memorial Program - Classic Elegance",
+   "bg": "classic-program.pdf",
+   "fields": [
+    {
+     "name": "Thank you note",
+     "page": 1,
+     "left": 90,
+     "top": 188,
+     "width": 348,
+     "height": 140,
+     "size": 15,
+     "font": "I",
+     "color": "#4a4a52",
+     "multiline": true,
+     "lead": 1.65,
+     "value": "Our family is deeply grateful for your kindness, your prayers and your presence today. Thank you for honoring Robert’s life with us."
+    },
+    {
+     "name": "Reception details",
+     "page": 1,
+     "left": 110,
+     "top": 408,
+     "width": 308,
+     "height": 84,
+     "size": 14,
+     "font": "R",
+     "color": "#4a4a52",
+     "multiline": true,
+     "lead": 1.6,
+     "value": "Immediately following the service\nFellowship Hall, Grace Community Church\n410 Oak Street, Fairview"
+    },
+    {
+     "name": "Closing verse",
+     "page": 1,
+     "left": 110,
+     "top": 556,
+     "width": 308,
+     "height": 118,
+     "size": 15,
+     "font": "I",
+     "color": "#1f2d44",
+     "multiline": true,
+     "lead": 1.65,
+     "value": "“Well done, good and faithful servant.” — Matthew 25:23"
+    },
+    {
+     "name": "In lieu of flowers",
+     "page": 1,
+     "left": 70,
+     "top": 700,
+     "width": 388,
+     "height": 34,
+     "size": 9,
+     "font": "R",
+     "color": "#9c7a45",
+     "multiline": true,
+     "lead": 1.6,
+     "value": "IN LIEU OF FLOWERS, DONATIONS MAY BE MADE TO THE FAIRVIEW VETERANS FUND"
+    },
+    {
+     "name": "Photo",
+     "type": "photo",
+     "page": 1,
+     "left": 724,
+     "top": 170,
+     "width": 136,
+     "height": 170
+    },
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 586,
+     "top": 408,
+     "width": 412,
+     "height": 122,
+     "size": 44,
+     "font": "R",
+     "color": "#1f2d44",
+     "multiline": true,
+     "lead": 1.15,
+     "value": "Robert James Whitmore"
+    },
+    {
+     "name": "Years",
+     "page": 1,
+     "left": 640,
+     "top": 538,
+     "width": 304,
+     "height": 22,
+     "size": 13,
+     "font": "I",
+     "color": "#9c7a45",
+     "value": "1938  —  2026"
+    },
+    {
+     "name": "Service item 1",
+     "page": 2,
+     "left": 105,
+     "top": 158.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#1f2d44",
+     "value": "Prelude"
+    },
+    {
+     "name": "Service item 1 detail",
+     "page": 2,
+     "left": 105,
+     "top": 181.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4a4a52",
+     "value": "“Morning Has Broken” · Piano"
+    },
+    {
+     "name": "Service item 2",
+     "page": 2,
+     "left": 105,
+     "top": 211.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#1f2d44",
+     "value": "Welcome"
+    },
+    {
+     "name": "Service item 2 detail",
+     "page": 2,
+     "left": 105,
+     "top": 235.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4a4a52",
+     "value": "Daniel Brooks, officiant"
+    },
+    {
+     "name": "Service item 3",
+     "page": 2,
+     "left": 105,
+     "top": 265.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#1f2d44",
+     "value": "Opening Prayer"
+    },
+    {
+     "name": "Service item 3 detail",
+     "page": 2,
+     "left": 105,
+     "top": 288.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4a4a52",
+     "value": "Pastor Ruth Allen"
+    },
+    {
+     "name": "Service item 4",
+     "page": 2,
+     "left": 105,
+     "top": 318.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#1f2d44",
+     "value": "Scripture Reading"
+    },
+    {
+     "name": "Service item 4 detail",
+     "page": 2,
+     "left": 105,
+     "top": 342.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4a4a52",
+     "value": "Psalm 23, read by Thomas Whitmore"
+    },
+    {
+     "name": "Service item 5",
+     "page": 2,
+     "left": 105,
+     "top": 372.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#1f2d44",
+     "value": "Hymn"
+    },
+    {
+     "name": "Service item 5 detail",
+     "page": 2,
+     "left": 105,
+     "top": 395.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4a4a52",
+     "value": "“Amazing Grace”"
+    },
+    {
+     "name": "Service item 6",
+     "page": 2,
+     "left": 105,
+     "top": 425.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#1f2d44",
+     "value": "Eulogy"
+    },
+    {
+     "name": "Service item 6 detail",
+     "page": 2,
+     "left": 105,
+     "top": 449.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4a4a52",
+     "value": "James Whitmore, son"
+    },
+    {
+     "name": "Service item 7",
+     "page": 2,
+     "left": 105,
+     "top": 479.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#1f2d44",
+     "value": "Sharing of Memories"
+    },
+    {
+     "name": "Service item 7 detail",
+     "page": 2,
+     "left": 105,
+     "top": 502.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4a4a52",
+     "value": "All are welcome to speak"
+    },
+    {
+     "name": "Service item 8",
+     "page": 2,
+     "left": 105,
+     "top": 532.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#1f2d44",
+     "value": "Moment of Silence"
+    },
+    {
+     "name": "Service item 8 detail",
+     "page": 2,
+     "left": 105,
+     "top": 556.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4a4a52",
+     "value": ""
+    },
+    {
+     "name": "Service item 9",
+     "page": 2,
+     "left": 105,
+     "top": 586.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#1f2d44",
+     "value": "Benediction"
+    },
+    {
+     "name": "Service item 9 detail",
+     "page": 2,
+     "left": 105,
+     "top": 609.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4a4a52",
+     "value": "Pastor Ruth Allen"
+    },
+    {
+     "name": "Service item 10",
+     "page": 2,
+     "left": 105,
+     "top": 639.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#1f2d44",
+     "value": "Recessional"
+    },
+    {
+     "name": "Service item 10 detail",
+     "page": 2,
+     "left": 105,
+     "top": 663.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4a4a52",
+     "value": "“It Is Well with My Soul”"
+    },
+    {
+     "name": "Service date and place",
+     "page": 2,
+     "left": 95,
+     "top": 712,
+     "width": 340,
+     "height": 40,
+     "size": 9.5,
+     "font": "R",
+     "color": "#9c7a45",
+     "multiline": true,
+     "lead": 1.7,
+     "value": "SATURDAY, OCTOBER 11, 2026 · 11:00 AM\nGRACE COMMUNITY CHURCH · FAIRVIEW"
+    },
+    {
+     "name": "Name",
+     "page": 2,
+     "left": 586,
+     "top": 108,
+     "width": 412,
+     "height": 40,
+     "size": 30,
+     "font": "I",
+     "color": "#1f2d44",
+     "value": "Robert James Whitmore"
+    },
+    {
+     "name": "Full dates",
+     "page": 2,
+     "left": 645,
+     "top": 156,
+     "width": 300,
+     "height": 20,
+     "size": 13,
+     "font": "I",
+     "color": "#9c7a45",
+     "value": "May 2, 1938  ·  October 2, 2026"
+    },
+    {
+     "name": "Life story",
+     "page": 2,
+     "left": 606,
+     "top": 216,
+     "width": 380,
+     "height": 430,
+     "size": 13.5,
+     "font": "R",
+     "color": "#4a4a52",
+     "multiline": true,
+     "lead": 1.65,
+     "align": 0,
+     "value": "Robert was born in the spring of 1938 in Fairview, the youngest of four. After serving in the U.S. Navy, he came home to marry his high-school sweetheart, Margaret, and spent thirty-eight years as a machinist at Fairview Tool & Die.\n\nHe coached Little League for two decades, never missed a Sunday service, and could fix nearly anything with a screwdriver and some patience.\n\nHe is survived by Margaret, his children Anna, James and Thomas, seven grandchildren and two great-grandchildren."
+    }
+   ]
+  },
+  {
+   "file": "Classic Elegance/02 Welcome Sign - Classic Elegance (fill-in).pdf",
+   "title": "Welcome Sign - Classic Elegance",
+   "bg": "classic-sign.pdf",
+   "fields": [
+    {
+     "name": "Subtitle",
+     "page": 1,
+     "left": 202,
+     "top": 1200,
+     "width": 1900,
+     "height": 70,
+     "size": 48,
+     "font": "R",
+     "color": "#1f2d44",
+     "value": "TO THE CELEBRATION OF LIFE FOR"
+    },
+    {
+     "name": "Photo",
+     "type": "photo",
+     "page": 1,
+     "left": 992,
+     "top": 1440,
+     "width": 320,
+     "height": 400
+    },
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 330,
+     "top": 2000,
+     "width": 1644,
+     "height": 520,
+     "size": 190,
+     "font": "R",
+     "color": "#1f2d44",
+     "multiline": true,
+     "lead": 1.12,
+     "value": "Robert James Whitmore"
+    },
+    {
+     "name": "Years",
+     "page": 1,
+     "left": 700,
+     "top": 2560,
+     "width": 904,
+     "height": 90,
+     "size": 64,
+     "font": "I",
+     "color": "#9c7a45",
+     "value": "1938  —  2026"
+    }
+   ]
+  },
+  {
+   "file": "Classic Elegance/03 Memory Card - Classic Elegance (fill-in).pdf",
+   "title": "Share a Memory Card - Classic Elegance",
+   "bg": "classic-card.pdf",
+   "fields": [
+    {
+     "name": "Name line",
+     "page": 1,
+     "left": 34,
+     "top": 150,
+     "width": 340,
+     "height": 18,
+     "size": 9,
+     "font": "R",
+     "color": "#9c7a45",
+     "value": "IN MEMORY OF ROBERT JAMES WHITMORE"
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 0.94
+   }
+  },
+  {
+   "file": "Classic Elegance/04 Bookmark - Classic Elegance (fill-in).pdf",
+   "title": "Memorial Bookmark - Classic Elegance",
+   "bg": "classic-bookmark.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "left": 16,
+     "top": 122,
+     "width": 160,
+     "height": 58,
+     "size": 19,
+     "font": "R",
+     "color": "#1f2d44",
+     "multiline": true,
+     "lead": 1.15,
+     "value": "Robert James Whitmore",
+     "page": 1
+    },
+    {
+     "name": "Years",
+     "left": 16,
+     "top": 196,
+     "width": 160,
+     "height": 18,
+     "size": 11,
+     "font": "I",
+     "color": "#9c7a45",
+     "value": "1938  —  2026",
+     "page": 1
+    },
+    {
+     "name": "Verse",
+     "left": 18,
+     "top": 256,
+     "width": 156,
+     "height": 256,
+     "size": 11.5,
+     "font": "I",
+     "color": "#4a4a52",
+     "multiline": true,
+     "lead": 1.7,
+     "value": "The Lord is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul. — Psalm 23",
+     "page": 1
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 1,
+    "cols": 4,
+    "rows": 1
+   }
+  },
+  {
+   "file": "Classic Elegance/05 Thank-You Card - Classic Elegance (fill-in).pdf",
+   "title": "Thank-You Card - Classic Elegance",
+   "bg": "classic-thankyou.pdf",
+   "fields": [
+    {
+     "name": "Thank you message",
+     "left": 44,
+     "top": 214,
+     "width": 320,
+     "height": 150,
+     "size": 13,
+     "font": "I",
+     "color": "#4a4a52",
+     "multiline": true,
+     "lead": 1.7,
+     "value": "Your kindness, prayers and presence meant more to us than words can say. Thank you for honoring Robert’s life and for standing beside our family.",
+     "page": 1
+    },
+    {
+     "name": "Signed",
+     "left": 44,
+     "top": 386,
+     "width": 320,
+     "height": 48,
+     "size": 13,
+     "font": "R",
+     "color": "#1f2d44",
+     "multiline": true,
+     "lead": 1.4,
+     "value": "With heartfelt thanks,\nthe Whitmore family",
+     "page": 1
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 0.94
+   }
+  },
+  {
+   "file": "Classic Elegance/06 Phone Announcement - Classic Elegance (fill-in).pdf",
+   "title": "Memorial Announcement for Phones - Classic Elegance",
+   "bg": "classic-announcement.pdf",
+   "fields": [
+    {
+     "name": "Photo",
+     "type": "photo",
+     "left": 214,
+     "top": 258,
+     "width": 112,
+     "height": 144,
+     "page": 1
+    },
+    {
+     "name": "Name",
+     "left": 40,
+     "top": 452,
+     "width": 460,
+     "height": 84,
+     "size": 36,
+     "font": "R",
+     "color": "#f3ede0",
+     "multiline": true,
+     "lead": 1.1,
+     "value": "Robert James Whitmore",
+     "page": 1
+    },
+    {
+     "name": "Years",
+     "left": 120,
+     "top": 566,
+     "width": 300,
+     "height": 22,
+     "size": 14,
+     "font": "I",
+     "color": "#cdb88e",
+     "value": "1938  —  2026",
+     "page": 1
+    },
+    {
+     "name": "Gathering",
+     "left": 60,
+     "top": 620,
+     "width": 420,
+     "height": 30,
+     "size": 20,
+     "font": "I",
+     "color": "#cdb88e",
+     "value": "Celebration of Life",
+     "page": 1
+    },
+    {
+     "name": "Service details",
+     "left": 60,
+     "top": 656,
+     "width": 420,
+     "height": 100,
+     "size": 14,
+     "font": "R",
+     "color": "#f3ede0",
+     "multiline": true,
+     "lead": 1.6,
+     "value": "Saturday, October 11, 2026 · 11:00 AM\nGrace Community Church\n410 Oak Street, Fairview",
+     "page": 1
+    },
+    {
+     "name": "Note",
+     "left": 60,
+     "top": 774,
+     "width": 420,
+     "height": 60,
+     "size": 12.5,
+     "font": "I",
+     "color": "#cdb88e",
+     "multiline": true,
+     "lead": 1.5,
+     "value": "All are welcome to join us as we remember him. A reception will follow.",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "file": "Classic Elegance/07 Guest Book Page - Classic Elegance (fill-in).pdf",
+   "title": "Guest Book Page - Classic Elegance",
+   "bg": "classic-guestbook.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "left": 108,
+     "top": 222,
+     "width": 600,
+     "height": 46,
+     "size": 32,
+     "font": "I",
+     "color": "#1f2d44",
+     "value": "Robert James Whitmore",
+     "page": 1
+    }
+   ]
   }
  ]
 }

@@ -28,7 +28,7 @@ SECTIONS = [
     ("Type your words", [
         "Tap any wording on the design and type over it: the name, dates, order of service, life story and thank-you note are all editable. The sample text is there to show you what goes where.",
         "Leave a line empty if you don't need it, for example an order-of-service item.",
-        "Adding a photo: on a computer, open the program or sign in Adobe Acrobat Reader and click the circle inside the tree to choose a photo. If you'd rather not add one, the circle prints as a soft sage frame.",
+        "Adding a photo: on a computer, open the program or sign in Adobe Acrobat Reader and click the photo frame to choose a photo. If you'd rather not add one, the frame prints empty as a soft decorative shape.",
         "Save when you're done, then print the saved copy or send it to a print shop.",
     ]),
     ("Print the program", [
@@ -72,7 +72,7 @@ ADDON_SECTIONS = [
 ]
 
 
-def build(out, complete=False):
+def build(out, complete=False, style="Soft Botanical"):
     sections = list(SECTIONS)
     if complete:
         sections[0] = ("Before you start", [
@@ -81,7 +81,7 @@ def build(out, complete=False):
         ])
         sections = sections[:-1] + ADDON_SECTIONS + sections[-1:]
     c = canvas.Canvas(out, pagesize=letter)
-    c.setTitle("Start Here - Soft Botanical Memorial Kit"); c.setAuthor("Forever Held")
+    c.setTitle(f"Start Here - {style} Memorial Kit"); c.setAuthor("Forever Held")
 
     def new_page():
         c.setFillColor(PAPER); c.rect(0, 0, W, H, fill=1, stroke=0)
@@ -94,7 +94,7 @@ def build(out, complete=False):
     c.setFillColor(MOSS); c.setFont(SERIF_I, 30); c.drawCentredString(W / 2, y, "Thank you, and start here")
     y -= 24
     c.setFillColor(SOFT); c.setFont(SERIF_I, 12)
-    c.drawCentredString(W / 2, y, "Soft Botanical Complete Suite: seven matching memorial pieces" if complete else "Soft Botanical memorial kit: program, welcome sign and share-a-memory card")
+    c.drawCentredString(W / 2, y, f"{style} Complete Suite: seven matching memorial pieces" if complete else f"{style} memorial kit: program, welcome sign and share-a-memory card")
     y -= 22
     c.setStrokeColor(SAGE); c.setLineWidth(0.7); c.line(W / 2 - 30, y, W / 2 + 30, y)
     y -= 30
@@ -115,4 +115,5 @@ def build(out, complete=False):
 
 
 if __name__ == "__main__":
-    build(sys.argv[1], complete="--complete" in sys.argv)
+    style = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--style=")), "Soft Botanical")
+    build(sys.argv[1], complete="--complete" in sys.argv, style=style)
