@@ -18,6 +18,7 @@ export const CHANNELS = {
   "weekly-review": ["weekly-review", "Weekly Review: how the shop did and what to decide"],
   "trading-desk": ["trading-desk", "Trading Desk (paper money): daily trades, Head Trader reviews, backtests"],
   research: ["research", "Deep Researcher, Credit Scout and GitHub Radar"],
+  inbox: ["inbox", "Email team: what the Junk Sweeper removed, and later customer inquiries"],
   alerts: ["alerts", "Anything that failed or needs your attention"]
 };
 // Which channel each agent reports to
