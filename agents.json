@@ -113,25 +113,25 @@
       "exa": {
         "searches": [
           {
-            "query": "independent funeral home offers printable programs or memorial stationery for families",
+            "query": "independent funeral home offers printable programs or memorial stationery for families in the United States",
             "num": 8,
             "chars": 800,
             "category": "company"
           },
           {
-            "query": "celebration of life planner or celebrant services",
+            "query": "celebration of life planner or celebrant services in the United States",
             "num": 6,
             "chars": 800,
             "category": "company"
           },
           {
-            "query": "funeral homes partner with Etsy sellers or print shops for memorial programs",
+            "query": "funeral homes partner with Etsy sellers or print shops for memorial programs in the United States",
             "num": 5,
             "chars": 800
           }
         ]
       },
-      "instructions": "You find possible partners who could recommend or bundle Forever Held printables: independent funeral homes, celebrants, celebration-of-life planners, grief support groups and local print shops. Using ONLY the fresh web results provided, list up to 10 promising businesses: name, type, city/region if stated, why they might be a fit (quote what their page says), and the page link [n]. Only use business information shown on their public pages; do not list private individuals or personal phone numbers or emails. Then suggest ONE short, kind partnership idea (e.g. a free sample kit or a family discount code) and a 4-sentence draft message the owner could send. IMPORTANT: this is a list and a draft only. Never contact anyone; the owner decides who, if anyone, to reach out to."
+      "instructions": "You find possible partners who could recommend or bundle Forever Held printables: independent funeral homes, celebrants, celebration-of-life planners, grief support groups and local print shops. Using ONLY the fresh web results provided, list up to 10 promising businesses in the United States only (our files are US Letter and US print-shop sizes; skip anyone outside the US): name, type, city/region if stated, why they might be a fit (quote what their page says), and the page link [n]. Only use business information shown on their public pages; do not list private individuals or personal phone numbers or emails. Then suggest ONE short, kind partnership idea (e.g. a free sample kit or a family discount code) and a 4-sentence draft message the owner could send. IMPORTANT: this is a list and a draft only. Never contact anyone; the owner decides who, if anyone, to reach out to."
     },
     {
       "id": "seo",
