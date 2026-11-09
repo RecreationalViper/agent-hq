@@ -92,16 +92,6 @@ if (process.env.PAYHIP_API_KEY) {
   } catch (e) { console.log(`RESULT payhip: FAILED: ${e.message}`); process.exitCode = 1; }
 } else console.log("RESULT payhip: no key found (secret PAYHIP_API_KEY missing or empty)");
 
-// Exa (AI web search): one tiny "lite" search per key (~$0.004 of the free $10/month)
-for (const [name, k] of [["exa", process.env.EXA_API_KEY], ["exa (key 2)", process.env.EXA_API_KEY_2]]) {
-  if (!k) { console.log(`RESULT ${name}: no key found`); continue; }
-  try {
-    const r = await fetch("https://api.exa.ai/search", { method: "POST", headers: { "x-api-key": k.trim(), "content-type": "application/json" }, body: JSON.stringify({ query: "funeral program template printable", type: "lite", numResults: 3 }) });
-    const j = await r.json().catch(() => ({}));
-    console.log(r.ok ? `RESULT ${name}: WORKS. ${j.results?.length || 0} results, e.g. ${j.results?.[0]?.url || "-"}${j.costDollars ? ` (cost $${j.costDollars.total})` : ""}` : `RESULT ${name}: FAILED (HTTP ${r.status}): ${j.error || j.message || "rejected"}`);
-  } catch (e) { console.log(`RESULT ${name}: FAILED: ${e.message}`); }
-}
-
 // Sales feed check (Cloudflare Worker): is it up, does it reject fakes, can agents read it?
 try {
   const feed = JSON.parse(await (await import("node:fs/promises")).readFile("sales-feed.json", "utf8"));
