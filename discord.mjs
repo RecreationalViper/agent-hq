@@ -13,6 +13,7 @@ export const CHANNELS = {
   listings: ["listings", "Listing Writer: titles, tags and descriptions ready to paste"],
   content: ["content", "Content Planner: posts and videos to share"],
   "product-ideas": ["product-ideas", "Product Ideas: new products to build"],
+  competitors: ["competitors", "Competitor Scout and Partner Finder: who else sells memorial printables, and who could recommend us"],
   seo: ["seo", "SEO Scout: keywords, titles, tags and pins from real Google data"],
   "weekly-review": ["weekly-review", "Weekly Review: how the shop did and what to decide"],
   "trading-desk": ["trading-desk", "Trading Desk (paper money): daily trades, Head Trader reviews, backtests"],
@@ -20,7 +21,7 @@ export const CHANNELS = {
   alerts: ["alerts", "Anything that failed or needs your attention"]
 };
 // Which channel each agent reports to
-export const AGENT_CHANNEL = { "daily-task": "daily-focus", content: "content", ideas: "product-ideas", listing: "listings", review: "weekly-review", "credit-scout": "research", "github-radar": "research", researcher: "research", "trading-desk": "trading-desk", "head-trader": "trading-desk", backtest: "trading-desk", launch: "listings", seo: "seo" };
+export const AGENT_CHANNEL = { "daily-task": "daily-focus", content: "content", ideas: "product-ideas", listing: "listings", review: "weekly-review", "credit-scout": "research", "github-radar": "research", researcher: "research", "trading-desk": "trading-desk", "head-trader": "trading-desk", backtest: "trading-desk", launch: "listings", seo: "seo", "competitor-scout": "competitors", "partner-finder": "competitors" };
 
 export const hasDiscord = () => Boolean(process.env.DISCORD_BOT_TOKEN);
 

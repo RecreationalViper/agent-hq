@@ -8,6 +8,7 @@
 import fs from "node:fs/promises";
 import { ask } from "./ai-ask.mjs";
 import { report as discordReport } from "./discord.mjs";
+import { hasExa, search as exaSearch } from "./exa.mjs";
 
 const TZ = "America/New_York";
 const date = new Intl.DateTimeFormat("en-CA", { timeZone: TZ }).format(new Date());
@@ -87,6 +88,13 @@ async function collect(since) {
     const r = await get(`${GH}/search/repositories?q=${encodeURIComponent(`created:>${d} stars:>100`)}&sort=stars&order=desc&per_page=15`, { json: true, headers: process.env.GITHUB_TOKEN ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {} });
     for (const x of r.items || []) all.push({ source: "GitHub (new & rising repos)", title: `${x.full_name}: ${x.description || ""}`.slice(0, 200), url: x.html_url, time: Date.parse(x.created_at), snippet: `${x.stargazers_count} stars, ${x.language || "n/a"}`, kind: "primary" });
   } catch (e) { notes.push({ name: "GitHub search", why: e.message }); }
+  if (hasExa()) {
+    const day = new Date(since).toISOString().slice(0, 10);
+    for (const q of ["new AI model or AI product release announced", "software development tools and frameworks: major release or change for developers", "free tier, open-source model or pricing change for AI APIs"]) {
+      const rows = await exaSearch(q, { category: "news", since: day, num: 8, chars: 0, type: "fast", who: "researcher" });
+      for (const r of rows) all.push({ source: "Exa web search", title: r.title, url: r.url, time: r.date ? Date.parse(r.date) : 0, snippet: r.text.slice(0, 300), kind: AGGREGATORS.test(r.url) ? "linked" : "primary" });
+    }
+  } else notes.push({ name: "Exa", why: "no key" });
   return { all, notes };
 }
 

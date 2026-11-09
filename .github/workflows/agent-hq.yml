@@ -786,6 +786,8 @@ jobs:
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
+          EXA_API_KEY_2: ${{ secrets.EXA_API_KEY_2 || secrets.EXA_KEY_2 || secrets.EXA_API_KEY2 }}
           RUN_MODE: ${{ github.event.inputs.agent || 'due' }}
       - name: Save reports
         if: always()

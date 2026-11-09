@@ -35,14 +35,34 @@
       "name": "Credit Scout",
       "schedule": "weekly:mon",
       "context": "The owner uses Emergent (emergent.sh), an AI app builder that runs on credits, and wants as many free credits as possible without paying. Owner works only from an iPhone and has a $0 budget.",
-      "instructions": "Using the web pages provided below, list every current, legitimate way to get free or bonus Emergent credits: the free plan's daily credits, the official referral program, official promotions or events, hackathons, contests, startup/perk programs, and student or creator offers. For each one: what you get, who qualifies, the exact steps to claim it on an iPhone, any deadline, and the official link. Put the easiest and most valuable ones first. Treat getaiperks.com and any non-emergent.sh page as third-party and mark its offers 'unverified'. Do not invent offers that the pages do not mention; if you suspect one exists, list it under 'Worth checking' with no promises. Never suggest extra or fake accounts, fake referrals, or anything against Emergent's terms. End with 'What changed since last week' if you can tell, and one action to take today.",
+      "instructions": "Using the official web pages provided below and the fresh Exa web results, list every current, legitimate way to get free or bonus Emergent credits: the free plan's daily credits, the official referral program, official promotions or events, hackathons, contests, startup/perk programs, and student or creator offers. For each one: what you get, who qualifies, the exact steps to claim it on an iPhone, any deadline, and the official link. Put the easiest and most valuable ones first. Treat getaiperks.com and any non-emergent.sh page as third-party and mark its offers 'unverified'. Do not invent offers that the pages do not mention; if you suspect one exists, list it under 'Worth checking' with no promises. Never suggest extra or fake accounts, fake referrals, or anything against Emergent's terms. End with 'What changed since last week' if you can tell, and one action to take today. Add a short second section 'Other free AI credits worth grabbing' from the Exa results (other AI builders or coding tools with free or bonus credits right now), each with the link, marked unverified unless it comes from the tool's own site.",
       "pages": [
         "https://help.emergent.sh/faqs",
         "https://emergent.sh/docs/how-credits-work-basics",
         "https://emergent.sh/affiliates",
         "https://emergent.sh/pricing",
         "https://www.getaiperks.com/en/perks/emergent"
-      ]
+      ],
+      "exa": {
+        "days": 30,
+        "searches": [
+          {
+            "query": "Emergent emergent.sh free credits promo code or referral bonus",
+            "num": 6,
+            "chars": 900
+          },
+          {
+            "query": "Emergent AI app builder hackathon or contest with credits",
+            "num": 5,
+            "chars": 900
+          },
+          {
+            "query": "free credits for AI coding and app builder tools this month (startup perks, student offers)",
+            "num": 6,
+            "chars": 700
+          }
+        ]
+      }
     },
     {
       "id": "github-radar",
@@ -53,6 +73,65 @@
       ],
       "context": "The owner runs this repo as a free, phone-first AI workspace: GitHub Actions does the work, reports are committed to the repo, and the owner reads them in a browser on an iPhone. The owner pays $0, uses free tiers (Google Gemini API in this repo) and whatever free tokens/credits they can legitimately get. The owner also runs other teams of agents and does not want to spend time browsing GitHub for the next best thing. A separate zero-token scanner (scout/scan.mjs) runs every few hours, searches GitHub, filters out scams, and writes scout/latest.md — that file, dated today, is the input for this report.",
       "instructions": "You are the analyst for the GitHub Radar. scout/latest.md below is real, freshly scanned GitHub data: new agent skills, AI enhancements that work with any model, legitimate free tokens/credits, and tools that cut AI usage. Work only from that file; you have no other findings. Write a short, phone-friendly report:\n\n1. 'Adopt today' — at most 3 items, best first. For each: one line on what it is, why it fits this owner's $0 / iPhone-only setup, and the exact 5-minute first step (what to open, what to tap, what to check). Skip anything that needs a server or a paid plan unless you explain the catch in the same line.\n2. 'Free tokens worth checking' — only items the radar scored as licensed and active. For each: what the offer claims, the one thing to verify on the provider's own site, and the risk. Say plainly when an offer is third-party and unverified.\n3. 'Spend less with what you already have' — up to 3 concrete changes to this repo's own setup (model choice, prompt size, caching, batching, reusing reports instead of re-asking). Each with the exact edit or file to change. This is the part that lowers the owner's daily AI usage, so make it specific to this repo.\n4. 'Ignore for now' — anything that looked shiny but does not fit, with a 5-word reason.\n5. End with 'Do this now:' and exactly one action, 30 minutes or less, on a phone.\n\nRules: you cannot install, run, star, or pay for anything — never imply you did. Never recommend sharing an API key with a third-party proxy, using cracked or generated keys, multi-accounting for free credits, or anything against a provider's terms; if a radar item looks like that, tell the owner to skip it. If scout/latest.md shows nothing new, keep the whole report under 10 lines, say the radar is quiet, and give the standing playbook instead."
+    },
+    {
+      "id": "competitor-scout",
+      "name": "Competitor Scout",
+      "schedule": "weekly:tue",
+      "doc": "etsy",
+      "exa": {
+        "searches": [
+          {
+            "query": "editable funeral program template printable instant download",
+            "num": 8,
+            "chars": 1500
+          },
+          {
+            "query": "celebration of life welcome sign template printable",
+            "num": 6,
+            "chars": 1200
+          },
+          {
+            "query": "share a memory cards printable funeral",
+            "num": 6,
+            "chars": 1200
+          },
+          {
+            "query": "funeral program template bundle botanical",
+            "num": 6,
+            "chars": 1200
+          }
+        ]
+      },
+      "instructions": "You are our competitor analyst. Using ONLY the fresh web results provided (real pages), study the shops and sites selling printable funeral programs, welcome signs and memory cards. Report: (1) a table of 8-12 competitors: name/site, what's included, price (only if the page states it, else 'not shown'), format (Canva, editable PDF, Word, Corjl, etc.), and one standout feature, each with its [n] link; (2) the usual price range and where our Soft Botanical bundle ($12.99, fill-in PDF, no Canva needed) sits; (3) 5 things competitors do that we should copy or beat (bundles, sizes, wording help, photo options, free samples, extra pieces like bookmarks or thank-you cards); (4) 3 ideas for our NEXT product based on gaps you see; (5) wording buyers seem to respond to (phrases repeated across listings). Never invent prices, reviews or sales numbers. Mark everything as research for the owner; nothing gets changed or published without approval."
+    },
+    {
+      "id": "partner-finder",
+      "name": "Partner Finder",
+      "schedule": "weekly:wed",
+      "doc": "etsy",
+      "exa": {
+        "searches": [
+          {
+            "query": "independent funeral home offers printable programs or memorial stationery for families",
+            "num": 8,
+            "chars": 800,
+            "category": "company"
+          },
+          {
+            "query": "celebration of life planner or celebrant services",
+            "num": 6,
+            "chars": 800,
+            "category": "company"
+          },
+          {
+            "query": "funeral homes partner with Etsy sellers or print shops for memorial programs",
+            "num": 5,
+            "chars": 800
+          }
+        ]
+      },
+      "instructions": "You find possible partners who could recommend or bundle Forever Held printables: independent funeral homes, celebrants, celebration-of-life planners, grief support groups and local print shops. Using ONLY the fresh web results provided, list up to 10 promising businesses: name, type, city/region if stated, why they might be a fit (quote what their page says), and the page link [n]. Only use business information shown on their public pages; do not list private individuals or personal phone numbers or emails. Then suggest ONE short, kind partnership idea (e.g. a free sample kit or a family discount code) and a 4-sentence draft message the owner could send. IMPORTANT: this is a list and a draft only. Never contact anyone; the owner decides who, if anyone, to reach out to."
     },
     {
       "id": "seo",

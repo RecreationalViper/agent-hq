@@ -1,6 +1,7 @@
 // Agent HQ Trading Desk - runs on GitHub Actions, practice (paper) money on Alpaca.
 // AI agents research and propose; plain code enforces every safety limit and places orders.
 import fs from "node:fs/promises";
+import { hasExa, search as exaSearch } from "./exa.mjs";
 import { hasGroq, groqChat } from "./ai-fallback.mjs";
 import { macroSnapshot } from "./fred.mjs";
 import { report as discordReport } from "./discord.mjs";
@@ -222,6 +223,16 @@ async function main() {
     const n = await alpaca(ALPACA_DATA, `/v1beta1/news?symbols=${encodeURIComponent(all.join(","))}&limit=40&sort=desc`);
     news = (n.news || []).map((x) => `- ${x.created_at.slice(0, 10)} [${(x.symbols || []).filter((s) => uni.has(s)).join(",")}] ${x.headline}`);
   } catch (e) { console.log("News unavailable:", e.message); }
+
+  // Wider market news from the open web (Exa), to complement Alpaca's headlines
+  if (hasExa()) {
+    const since = new Date(Date.now() - 2 * 864e5).toISOString().slice(0, 10);
+    for (const q of ["stock market today: what moved stocks, bonds, gold and oil and why", "Federal Reserve, inflation or jobs data news affecting markets this week"]) {
+      const rows = await exaSearch(q, { category: "news", since, num: 6, chars: 0, type: "fast", who: "trading-desk" });
+      news.push(...rows.map((r) => `- ${r.date} [web] ${r.title}: ${r.text.slice(0, 220)}`));
+    }
+    console.log(`News: ${news.length} headlines (Alpaca + Exa)`);
+  }
 
   // Official macro data (FRED): rates, inflation, jobs, credit stress, volatility + release calendar
   let fred = null;

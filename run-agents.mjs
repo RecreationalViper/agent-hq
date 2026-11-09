@@ -5,6 +5,7 @@ import { hasGroq, groqChat } from "./ai-fallback.mjs";
 import { hasGoogle, addUpdate, mdToLines } from "./gdocs.mjs";
 import { salesSummary } from "./sales.mjs";
 import { seoResearch } from "./seo.mjs";
+import { hasExa, researchBlock } from "./exa.mjs";
 import { report as discordReport, alert as discordAlert } from "./discord.mjs";
 
 const API = process.env.API_BASE || "https://generativelanguage.googleapis.com/v1beta";
@@ -152,6 +153,12 @@ async function main() {
       const r = await seoResearch(agent.seo).catch((e) => ({ text: "", notes: [`SEO data unavailable (${e.message})`] }));
       task += `\n\nFresh SEO data collected minutes ago (real; base every keyword on it and do not invent search volumes):\n${r.text || "(none)"}${r.notes.length ? `\n\nNotes: ${r.notes.join(" ")}` : ""}`;
       for (const n of r.notes) console.log(`  ${n}`);
+    }
+    if (agent.exa && hasExa()) {
+      const since = agent.exa.days ? new Date(Date.now() - agent.exa.days * 864e5).toISOString().slice(0, 10) : undefined;
+      const r = await researchBlock(agent.exa.searches.map((q) => (typeof q === "string" ? { query: q, since } : { since, ...q })), agent.id).catch(() => ({ results: [] }));
+      console.log(`  Exa: ${r.results.length} web results`);
+      if (r.results.length) task += `\n\nFresh web results found minutes ago with Exa search (real pages; cite them as [n] with their links, and never invent anything they don't say):\n${r.text}`;
     }
     if (agent.doc === "etsy") {
       salesText ??= await salesSummary().then((r) => r?.text || "").catch((e) => { console.log(`  sales feed unavailable: ${e.message}`); return ""; });
