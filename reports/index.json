@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-09-backtest.md",
+    "agent": "backtest",
+    "name": "Backtest Analyst",
+    "date": "2026-11-09"
+  },
+  {
     "file": "2026-11-09-github-radar.md",
     "agent": "github-radar",
     "name": "GitHub Radar",
