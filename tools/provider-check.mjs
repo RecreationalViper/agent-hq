@@ -141,7 +141,7 @@ for (const u of ["https://recreationalviper.github.io/agent-hq/", "https://recre
   else {
     try {
       const ms = await nvidiaModels();
-      console.log(`RESULT nvidia models (first 6): ${ms.slice(0, 6).join(", ")}`);
+      console.log(`RESULT nvidia models (${ms.length}, first 10): ${ms.slice(0, 10).join(", ")}`);
       const t = await nvidiaChat("You are a test.", "Reply with exactly: OK");
       console.log(`RESULT nvidia: WORKS (reply "${t.slice(0, 20)}")`);
     } catch (e) { console.log(`RESULT nvidia: FAILED: ${e.message.slice(0, 200)}`); }

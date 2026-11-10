@@ -158,14 +158,16 @@ export async function nvidiaModels() {
   if (nvModels) return nvModels;
   const ids = ((await nvCall("/models")).data || []).map((m) => m.id).filter((i) => !/embed|rerank|guard|vision|vl-|-vl|parse|clip|safety|reward|retriev|ocr|asr|tts|pii/i.test(i));
   const rank = (i) => { const k = NV_PREFER.findIndex((r) => r.test(i)); return k < 0 ? 99 : k; };
-  nvModels = ids.filter((i) => rank(i) < 99).sort((a, b) => rank(a) - rank(b));
+  const size = (i) => { const n = [...i.matchAll(/(\d+(?:\.\d+)?)b(?![a-z])/gi)].map((m) => Number(m[1])); return n.length ? Math.max(...n) : /ultra|super|large/i.test(i) ? 60 : 10; };
+  // preferred models first, then everything else by size (some listed models aren't enabled for every account)
+  nvModels = ids.filter((i) => size(i) >= 20 || rank(i) < 99).sort((a, b) => rank(a) - rank(b) || size(b) - size(a));
   if (!nvModels.length) throw new Error("NVIDIA lists no suitable chat models for this key");
   return nvModels;
 }
 export async function nvidiaChat(system, user, { json = false, temperature = 0.7, maxChars = 40000 } = {}) {
   const input = user.length > maxChars ? user.slice(0, maxChars) + "\n\n[Some input was trimmed to fit the backup AI's limits.]" : user;
   let lastErr;
-  for (const model of (await nvidiaModels()).slice(0, 4)) {
+  for (const model of [...(await nvidiaModels())].slice(0, 8)) {
     try {
       const data = await nvCall("/chat/completions", { method: "POST", body: JSON.stringify({
         model, temperature, max_tokens: 4096,
@@ -174,8 +176,9 @@ export async function nvidiaChat(system, user, { json = false, temperature = 0.7
       const text = (data.choices?.[0]?.message?.content || "").replace(/<think>[\s\S]*?<\/think>/g, "").replace(/^```(?:json)?\s*|\s*```$/g, "").trim();
       if (!text) throw new Error("NVIDIA returned an empty reply");
       console.log(`  answered by backup AI: NVIDIA ${model}`);
+      nvModels = [model, ...nvModels.filter((m) => m !== model)]; // stick with the one that works
       return text;
-    } catch (e) { lastErr = e; if (e.status === 401 || e.status === 403) break; }
+    } catch (e) { lastErr = e; if (e.status === 401 || e.status === 403) break; if (e.status === 404) nvModels = nvModels.filter((m) => m !== model); }
   }
   throw lastErr || new Error("NVIDIA could not answer");
 }
