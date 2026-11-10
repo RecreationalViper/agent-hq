@@ -22,6 +22,29 @@ for (const [name, p] of Object.entries(providers)) {
 }
 if (!ok) process.exitCode = 1;
 
+// Cloudflare AI Gateway: create it if missing, then send one real call through it (Groq, then Gemini, then Workers AI)
+{
+  const gw = await import("../ai-gateway.mjs");
+  if (!process.env.CLOUDFLARE_ACCOUNT_ID) console.log("RESULT ai-gateway: no CLOUDFLARE_ACCOUNT_ID");
+  else {
+    try {
+      const { created, gateway } = await gw.ensureGateway();
+      console.log(`RESULT ai-gateway: ${created ? "CREATED" : "exists"} "${gw.GATEWAY_ID}" (cache ${gateway?.cache_ttl}s, logs ${gateway?.collect_logs}, limit ${gateway?.rate_limiting_limit}/${gateway?.rate_limiting_interval}s)`);
+      const tests = [
+        ["groq", "https://api.groq.com/openai/v1/chat/completions", { Authorization: `Bearer ${process.env.GROQ_API_KEY}` }, { model: "openai/gpt-oss-120b", messages: [{ role: "user", content: "Reply: ok" }], max_tokens: 20 }],
+        ["gemini", "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent", { "x-goog-api-key": process.env.GEMINI_API_KEY }, { contents: [{ role: "user", parts: [{ text: "Reply: ok" }] }] }],
+        ["workers-ai", `https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/ai/run/@cf/meta/llama-3.1-8b-instruct`, { Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}` }, { messages: [{ role: "user", content: "Reply: ok" }], max_tokens: 10 }]
+      ];
+      for (const [name, url, h, body] of tests) {
+        const via = gw.gatewayUrl(url);
+        const r = await fetch(via, { method: "POST", headers: { ...h, "Content-Type": "application/json" }, body: JSON.stringify(body) });
+        const t = await r.text();
+        console.log(`RESULT ai-gateway ${name}: HTTP ${r.status}${r.ok ? " WORKS via gateway" : ": " + t.slice(0, 160)}`);
+      }
+    } catch (e) { console.log(`RESULT ai-gateway: FAILED: ${e.message}`); }
+  }
+}
+
 // Real end-to-end test of the backup path the agents use
 if (process.env.GROQ_API_KEY) {
   const { groqChat } = await import("../ai-fallback.mjs");

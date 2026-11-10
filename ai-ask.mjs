@@ -1,5 +1,6 @@
 // Shared AI helper: free Gemini first, Groq as automatic backup.
 // ask(system, prompt, { json }) -> text (or parsed JSON when json: true)
+import { gwFetch } from "./ai-gateway.mjs";
 import { hasGroq, groqChat } from "./ai-fallback.mjs";
 
 const BASE = process.env.API_BASE || "https://generativelanguage.googleapis.com/v1beta";
@@ -9,7 +10,7 @@ let models = null, strongModels = null, geminiOut = false;
 async function gemini(path, init = {}) {
   for (let attempt = 1; attempt <= 2; attempt++) {
     let res;
-    try { res = await fetch(BASE + path, { ...init, signal: AbortSignal.timeout(120000), headers: { "Content-Type": "application/json", "x-goog-api-key": process.env.GEMINI_API_KEY } }); }
+    try { res = await gwFetch(BASE + path, { ...init, signal: AbortSignal.timeout(120000), headers: { "Content-Type": "application/json", "x-goog-api-key": process.env.GEMINI_API_KEY } }); }
     catch { if (attempt < 2) continue; throw new Error("BUSY: no answer"); }
     const data = await res.json().catch(() => ({}));
     if (res.status === 429 || res.status === 503) {

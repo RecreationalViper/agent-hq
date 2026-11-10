@@ -1,5 +1,6 @@
 // Agent HQ Trading Desk - runs on GitHub Actions, practice (paper) money on Alpaca.
 // AI agents research and propose; plain code enforces every safety limit and places orders.
+import { gwFetch } from "./ai-gateway.mjs";
 import fs from "node:fs/promises";
 import { hasExa, search as exaSearch } from "./exa.mjs";
 import { hasGroq, groqChat } from "./ai-fallback.mjs";
@@ -36,7 +37,7 @@ async function alpaca(base, path, init = {}) {
 async function gemini(path, init = {}) {
   for (let attempt = 1; attempt <= 2; attempt++) {
     let res;
-    try { res = await fetch(GEMINI + path, { ...init, signal: AbortSignal.timeout(120000), headers: { "Content-Type": "application/json", "x-goog-api-key": KEY } }); }
+    try { res = await gwFetch(GEMINI + path, { ...init, signal: AbortSignal.timeout(120000), headers: { "Content-Type": "application/json", "x-goog-api-key": KEY } }); }
     catch { if (attempt < 2) continue; throw new Error("BUSY: no answer"); }
     if ((res.status === 429 || res.status === 503) && attempt < 2) { await sleep(20000); continue; }
     const data = await res.json().catch(() => ({}));

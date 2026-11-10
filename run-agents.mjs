@@ -1,5 +1,6 @@
 // Agent HQ routine runner — runs on GitHub Actions (free), calls Google Gemini (free tier),
 // and saves each agent's report into reports/ so the website can show it.
+import { gwFetch } from "./ai-gateway.mjs";
 import fs from "node:fs/promises";
 import { hasGroq, groqChat } from "./ai-fallback.mjs";
 import { hasGoogle, addUpdate, mdToLines } from "./gdocs.mjs";
@@ -39,7 +40,7 @@ async function api(path, init = {}) {
   for (let attempt = 1; attempt <= 2; attempt++) {
     let res;
     try {
-      res = await fetch(API + path, { ...init, signal: AbortSignal.timeout(120000), headers: { "Content-Type": "application/json", "x-goog-api-key": KEY, ...(init.headers || {}) } });
+      res = await gwFetch(API + path, { ...init, signal: AbortSignal.timeout(120000), headers: { "Content-Type": "application/json", "x-goog-api-key": KEY, ...(init.headers || {}) } });
     } catch (e) {
       if (attempt < 2) { console.log("  no answer, retrying..."); continue; }
       throw new Error("BUSY: Google didn't answer in time.");

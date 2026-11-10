@@ -1,3 +1,4 @@
+import { gwFetch } from "./ai-gateway.mjs";
 // Backup AI provider: Groq (free tier, OpenAI-compatible). Used only when Gemini is
 // busy or out of its free daily quota. Needs the GROQ_API_KEY secret.
 // Free-tier limits seen on this key: 1,000 requests/day and 8,000 tokens/minute,
@@ -15,7 +16,7 @@ export const hasOpenRouter = () => Boolean(process.env.OPENROUTER_API_KEY);
 export const hasGroq = () => hasGroqKey() || hasCloudflare() || hasOpenRouter() || Boolean(process.env.NVIDIA_API_KEY?.trim());
 
 async function call(path, init = {}) {
-  const res = await fetch(BASE + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${process.env.GROQ_API_KEY}`, "Content-Type": "application/json" } });
+  const res = await gwFetch(BASE + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${process.env.GROQ_API_KEY}`, "Content-Type": "application/json" } });
   const text = await res.text();
   let data; try { data = JSON.parse(text); } catch { data = {}; }
   if (!res.ok) { const e = new Error(`Groq ${res.status}: ${data.error?.message || text.slice(0, 200)}`); e.status = res.status; e.retryAfter = Number(res.headers.get("retry-after")) || 0; throw e; }
@@ -65,7 +66,7 @@ const CF = () => `${process.env.CLOUDFLARE_API_BASE || "https://api.cloudflare.c
 const CF_PREFER = [/gpt-oss-120b/i, /llama-3\.3-70b-instruct-fp8-fast/i, /llama-4-scout/i, /qwen.*(3|2\.5)/i, /mistral-small/i, /llama-3\.1-8b/i];
 let cfModels;
 async function cfCall(url, init = {}) {
-  const res = await fetch(url, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}`, "Content-Type": "application/json" } });
+  const res = await gwFetch(url, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}`, "Content-Type": "application/json" } });
   const text = await res.text();
   let data; try { data = JSON.parse(text); } catch { data = {}; }
   if (!res.ok) { const e = new Error(`Cloudflare ${res.status}: ${data.errors?.[0]?.message || data.error?.message || text.slice(0, 200)}`); e.status = res.status; throw e; }
@@ -104,7 +105,7 @@ const OR = process.env.OPENROUTER_API_BASE || "https://openrouter.ai/api/v1";
 const OR_PREFER = [/gpt-oss-120b/i, /llama-3\.3-70b/i, /deepseek.*(v3|chat)/i, /qwen3/i, /llama-4/i, /mistral-small/i, /gemma-3-27b/i];
 let orModels;
 async function orCall(path, init = {}) {
-  const res = await fetch(OR + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`, "Content-Type": "application/json", "X-Title": "Agent HQ" } });
+  const res = await gwFetch(OR + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`, "Content-Type": "application/json", "X-Title": "Agent HQ" } });
   const text = await res.text();
   let data; try { data = JSON.parse(text); } catch { data = {}; }
   if (!res.ok || data.error) { const e = new Error(`OpenRouter ${res.status}: ${data.error?.message || text.slice(0, 200)}`); e.status = data.error?.code || res.status; throw e; }

@@ -18,6 +18,7 @@
 //   node gmail/sweep.mjs             sweep for real
 //   node gmail/sweep.mjs --dry-run   show what it would do, change nothing
 //   node gmail/sweep.mjs --selftest  check the rules against sample emails (no network)
+import { gwFetch } from "../ai-gateway.mjs";
 import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 
@@ -152,7 +153,7 @@ async function askAI(items) {
   if (process.env.GEMINI_API_KEY) {
     try {
       const model = process.env.GEMINI_MODEL || "gemini-flash-latest";
-      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${process.env.GEMINI_API_KEY.trim()}`, { method: "POST", signal: AbortSignal.timeout(60000), headers: { "Content-Type": "application/json" }, body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents: [{ role: "user", parts: [{ text: user }] }], generationConfig: { temperature: 0, responseMimeType: "application/json" } }) });
+      const res = await gwFetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${process.env.GEMINI_API_KEY.trim()}`, { method: "POST", signal: AbortSignal.timeout(60000), headers: { "Content-Type": "application/json" }, body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents: [{ role: "user", parts: [{ text: user }] }], generationConfig: { temperature: 0, responseMimeType: "application/json" } }) });
       const d = await res.json();
       if (res.ok) return parse(d.candidates?.[0]?.content?.parts?.map((p) => p.text).join(""));
       console.log(`  Gemini unavailable (${res.status}); trying the backup AI`);
