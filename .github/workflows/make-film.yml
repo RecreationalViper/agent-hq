@@ -2,6 +2,9 @@ name: Make Product Film
 on:
   workflow_dispatch:
     inputs:
+      format:
+        description: "film (16:9 website) or pin (2:3 Pinterest)"
+        default: "film"
       opening:
         description: "Opening shot: painted (free, no logo), magichour (free tier shows its logo), or none"
         default: "painted"
@@ -26,6 +29,7 @@ jobs:
         env:
           MAGICHOUR_API_KEY: ${{ secrets.MAGICHOUR_API_KEY }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          FILM_FORMAT: ${{ github.event.inputs.format || 'film' }}
           FILM_OPENING: ${{ github.event.inputs.opening || 'painted' }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

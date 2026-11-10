@@ -15,7 +15,21 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = path.join(ROOT, "store/video");
 const WORK = path.join(ROOT, ".film");
 const require = createRequire(import.meta.url);
-const W = 1920, H = 1080, FPS = 30, DESIGN_SECONDS = 15;
+// FILM_FORMAT=pin makes the 2:3 Pinterest video pin (1000x1500); default is the 16:9 website film.
+const PIN = process.env.FILM_FORMAT === "pin";
+const W = PIN ? 1000 : 1920, H = PIN ? 1500 : 1080, FPS = 30, DESIGN_SECONDS = 15;
+const NAME = PIN ? "forever-held-pin" : "forever-held-film";
+const L = PIN ? {
+  art: "left:290px;bottom:40px;width:420px", c1: "left:70px;top:540px;width:860px", t1: "left:60px;right:60px;top:150px;text-align:center;text-wrap:balance",
+  c2: "left:50px;top:240px;width:900px", t2: "left:70px;right:70px;top:1050px;text-align:center;font-size:46px;font-style:italic;color:#4a5842",
+  c3a: "left:70px;top:330px;width:470px", c3b: "left:480px;top:600px;width:440px", t3: "left:60px;right:60px;top:110px;text-align:center;font-size:56px",
+  a4: "width:760px;margin-bottom:6px", t4: "font-size:76px;font-weight:500;line-height:1.05;max-width:820px;text-wrap:balance"
+} : {
+  art: "right:70px;bottom:40px;width:420px", c1: "left:110px;top:150px;width:1000px", t1: "left:1220px;top:360px;width:600px",
+  c2: "left:420px;top:52px;width:1080px", t2: "left:0;right:0;bottom:34px;text-align:center;font-size:40px;font-style:italic;color:#4a5842;text-shadow:0 1px 0 rgba(255,255,255,.6)",
+  c3a: "left:330px;top:70px;width:560px", c3b: "left:960px;top:250px;width:520px", t3: "left:1530px;top:300px;width:330px;font-size:50px",
+  a4: "width:820px;margin-bottom:6px", t4: "font-size:88px;font-weight:500;line-height:1"
+};
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const url = (p) => pathToFileURL(path.join(ROOT, p)).href;
 const MH_KEY = ["MAGICHOUR_API_KEY", "MAGIC_HOUR_API_KEY", "ART_API_KEY"].map((k) => process.env[k]?.trim()).find(Boolean);
@@ -70,6 +84,8 @@ const STILL_PROMPT = "Cinematic 35mm photograph of a quiet memorial table beside
 
 async function paintStill() {
   if (process.env.FILM_STILL) return process.env.FILM_STILL; // reuse a still (testing)
+  const saved = path.join(OUT, "opening-still.jpg");
+  if (PIN && await fs.stat(saved).then(() => true, () => false)) { const f = path.join(WORK, "saved-still.jpg"); await fs.copyFile(saved, f); console.log("  reusing the website film's painted still"); return f; }
   const id = process.env.CLOUDFLARE_ACCOUNT_ID, tok = process.env.CLOUDFLARE_API_TOKEN;
   if (!id || !tok) { console.log("  no Cloudflare key, so no painted opening"); return null; }
   const tries = [
@@ -87,7 +103,7 @@ async function paintStill() {
       if (!r.ok || buf.length < 5000) { console.log(`  ${model}: HTTP ${r.status}`); continue; }
       const file = path.join(WORK, "still.jpg");
       await fs.writeFile(file, buf);
-      await fs.copyFile(file, path.join(OUT, "opening-still.jpg"));
+      if (!PIN) await fs.copyFile(file, path.join(OUT, "opening-still.jpg"));
       console.log(`  painted the opening still with ${model}`);
       return file;
     } catch (e) { console.log(`  ${model} failed: ${e.message}`); }
@@ -104,16 +120,16 @@ async function renderOpening(still, browser) {
   const html = `<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{font-family:Cormorant;font-style:italic;src:url(${url("products/fillable/fonts/CormorantGaramond-Italic.ttf")})}
 *{margin:0;padding:0}body{width:${W}px;height:${H}px;overflow:hidden;background:#000}
-#bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform-origin:58% 52%}
+#bg{position:absolute;${PIN ? "left:0;top:0;height:100%;width:auto;max-width:none" : "inset:0;width:100%;height:100%;object-fit:cover"};transform-origin:58% 52%}
 #glow{position:absolute;inset:0;background:radial-gradient(ellipse 55% 60% at 30% 25%,rgba(255,214,150,.38),rgba(255,214,150,0) 70%);mix-blend-mode:screen}
 .d{position:absolute;border-radius:50%;background:rgba(255,236,200,.95);filter:blur(1.2px)}
 #shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(20,16,10,.55))}
-#title{position:absolute;left:0;right:0;bottom:120px;text-align:center;font:italic 64px Cormorant;color:#fbf5ea;text-shadow:0 2px 24px rgba(0,0,0,.45)}
+#title{position:absolute;left:0;right:0;bottom:${PIN ? 230 : 120}px;text-align:center;font:italic ${PIN ? 60 : 64}px Cormorant;color:#fbf5ea;text-shadow:0 2px 24px rgba(0,0,0,.45)}
 </style></head><body><img id="bg" src="${pathToFileURL(still).href}"><div id="glow"></div>
 ${dust.map((p, i) => `<div class="d" id="d${i}" style="width:${p.s}px;height:${p.s}px"></div>`).join("")}
 <div id="shade"></div><div id="title">For the day you say goodbye</div>
 <script>const D=${JSON.stringify(dust)};const e=(x)=>x<0?0:x>1?1:x*x*(3-2*x);
-window.setT=(t)=>{const p=t/5;document.getElementById("bg").style.transform=\`scale(\${1.04+.10*p}) translate(\${-12*p}px,\${6*p}px)\`;
+window.setT=(t)=>{const p=t/5;document.getElementById("bg").style.transform=${PIN ? "`translateX(${-0.07*1500*1920/1088 - 0.5*1500*1920/1088*e(p)}px) scale(${1.03+.04*p})`" : "`scale(${1.04+.10*p}) translate(${-12*p}px,${6*p}px)`"};
 document.getElementById("glow").style.opacity=.75+.25*Math.sin(t*1.3);
 D.forEach((d,i)=>{const s=document.getElementById("d"+i).style;s.transform=\`translate(\${d.x+d.d*Math.sin(t*.6+d.ph)}px,\${((d.y-d.v*t)%${H}+${H})%${H}}px)\`;s.opacity=d.o*(.6+.4*Math.sin(t*1.7+d.ph));});
 const ti=document.getElementById("title").style;ti.opacity=Math.min(e((t-1.2)/1),1-e((t-3.2)/.7));ti.transform=\`translateY(\${14*(1-e((t-1.2)/1.4))}px)\`;};</script></body></html>`;
@@ -151,23 +167,23 @@ body{width:${W}px;height:${H}px;overflow:hidden;background:#efe8dc;font-family:C
 .art{position:absolute;opacity:.9}
 </style></head><body><div class="light"></div>
 <div class="scene" id="s1">
-  <img class="art" src="${url("products/fillable/art/spray.png")}" style="right:70px;bottom:40px;width:420px">
-  <div class="card" id="c1" style="left:110px;top:150px;width:1000px"><img src="${url("store/img/program-cover.png")}"></div>
-  <div class="cap" id="t1" style="left:1220px;top:360px;width:600px"><span class="brand" style="font-size:20px;display:block;margin-bottom:26px">FOREVER HELD</span>A memorial program you can finish tonight<i>Soft Botanical memorial kit</i></div>
+  <img class="art" src="${url("products/fillable/art/spray.png")}" style="${L.art}">
+  <div class="card" id="c1" style="${L.c1}"><img src="${url("store/img/program-cover.png")}"></div>
+  <div class="cap" id="t1" style="${L.t1}"><span class="brand" style="font-size:20px;display:block;margin-bottom:26px">FOREVER HELD</span>A memorial program you can finish tonight<i>Soft Botanical memorial kit</i></div>
 </div>
 <div class="scene" id="s2">
-  <div class="card" id="c2" style="left:420px;top:52px;width:1080px"><img src="${url("store/img/program-inside.png")}"></div>
-  <div class="cap" id="t2" style="left:0;right:0;bottom:34px;text-align:center;font-size:40px;font-style:italic;color:#4a5842;text-shadow:0 1px 0 rgba(255,255,255,.6)">Tap any line and type your own words in the free Adobe Acrobat Reader app</div>
+  <div class="card" id="c2" style="${L.c2}"><img src="${url("store/img/program-inside.png")}"></div>
+  <div class="cap" id="t2" style="${L.t2}">Tap any line and type your own words in the free Adobe Acrobat Reader app</div>
 </div>
 <div class="scene" id="s3">
-  <div class="card" id="c3a" style="left:330px;top:70px;width:560px"><img src="${url("store/img/welcome-sign.png")}"></div>
-  <div class="card" id="c3b" style="left:960px;top:250px;width:520px"><img src="${url("store/img/memory-card.png")}"></div>
-  <div class="cap" id="t3" style="left:1530px;top:300px;width:330px;font-size:50px">Welcome sign<i>and share-a-memory cards, all matching</i></div>
+  <div class="card" id="c3a" style="${L.c3a}"><img src="${url("store/img/welcome-sign.png")}"></div>
+  <div class="card" id="c3b" style="${L.c3b}"><img src="${url("store/img/memory-card.png")}"></div>
+  <div class="cap" id="t3" style="${L.t3}">Welcome sign<i>and share-a-memory cards, all matching</i></div>
 </div>
 <div class="scene" id="s4" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
-  <img src="${url("products/fillable/art/sign-top.png")}" id="a4" style="width:820px;margin-bottom:6px">
+  <img src="${url("products/fillable/art/sign-top.png")}" id="a4" style="${L.a4}">
   <div class="brand" style="font-size:30px;margin-bottom:30px">FOREVER HELD</div>
-  <div id="t4" style="font-size:88px;font-weight:500;line-height:1">Soft Botanical Memorial Kit</div>
+  <div id="t4" style="${L.t4}">Soft Botanical Memorial Kit</div>
   <div style="font-size:40px;font-style:italic;color:#5f6e56;margin-top:26px">Editable printable · instant download · $12.99</div>
   <div class="brand" style="font-size:18px;margin-top:44px;letter-spacing:.3em">PAYHIP.COM/B/VQNSA</div>
 </div>
@@ -235,7 +251,7 @@ async function main() {
   if (process.env.FILM_FRAMES) return console.log(`preview frames in ${frames}`);
   const design = path.join(WORK, "design.mp4");
   ff(["-framerate", String(FPS), "-i", path.join(frames, "f%04d.jpg"), "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", "-pix_fmt", "yuv420p", design]);
-  const film = path.join(OUT, "forever-held-film.mp4");
+  const film = path.join(OUT, `${NAME}.mp4`);
   const grade = "eq=saturation=0.92:gamma=1.02,noise=alls=5:allf=t,vignette=PI/5";
   if (broll) {
     // Opening shot: upscaled, warm soft grade, slow ease, title over it; crossfade into the product scenes.
@@ -245,12 +261,15 @@ async function main() {
   } else {
     ff(["-i", design, "-vf", `${grade},format=yuv420p`, "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-movflags", "+faststart", "-an", film]);
   }
-  ff(["-sseof", "-2", "-i", film, "-frames:v", "1", "-q:v", "3", path.join(OUT, "forever-held-poster.jpg")]);
+  ff(["-sseof", "-2", "-i", film, "-frames:v", "1", "-q:v", "3", path.join(OUT, `${NAME}-poster.jpg`)]);
   const mb = ((await fs.stat(film)).size / 1e6).toFixed(1);
-  console.log(`Film ready: store/video/forever-held-film.mp4 (${mb} MB)${broll ? ` with the ${mode} opening` : ""}`);
+  console.log(`Film ready: store/video/${NAME}.mp4 (${mb} MB)${broll ? ` with the ${mode} opening` : ""}`);
   if (process.env.DISCORD_BOT_TOKEN && !process.env.FILM_NO_POST) {
     const { postFiles } = await import(path.join(ROOT, "discord.mjs"));
-    await postFiles("content", `🎬 **Forever Held product film** (${mb} MB, 1080p). Tap to play, then download. It's also on the website.`, [{ name: "forever-held-film.mp4", data: await fs.readFile(film), type: "video/mp4" }]);
+    const msg = PIN
+      ? `📌 **Pinterest video pin** (2:3, ${mb} MB). Tap it, then download, then upload it in the Pinterest app as a new Pin.\n**Title:** Editable Funeral Program, Welcome Sign & Memory Cards | Soft Botanical\n**Description:** A gentle, matching memorial kit you can finish tonight. Type your own words in the free Adobe Acrobat Reader app on your phone, then print at home or at a print shop. Instant download.\n**Link:** https://payhip.com/b/vqNSA`
+      : `🎬 **Forever Held product film** (${mb} MB, 1080p). Tap to play, then download. It's also on the website.`;
+    await postFiles("content", msg, [{ name: `${NAME}.mp4`, data: await fs.readFile(film), type: "video/mp4" }]);
   }
   if (MH_KEY && USE_MH) { const a = await mh("/account").catch(() => ({})); console.log(`  Magic Hour credits left: ${a.credits ?? "?"}`); }
 }
