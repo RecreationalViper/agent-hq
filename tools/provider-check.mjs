@@ -120,6 +120,20 @@ for (const u of ["https://recreationalviper.github.io/agent-hq/", "https://recre
   }
 }
 
+// Magic Hour (AI images/video) check: which secret name holds the key, and the credit balance (free call, no generation)
+{
+  const found = Object.keys(process.env).filter((k) => /^(MAGIC|MH_|ART_API)/.test(k) && process.env[k]?.trim());
+  if (!found.length) console.log("RESULT magichour: no key found");
+  for (const k of found) {
+    try {
+      const r = await fetch("https://api.magichour.ai/v1/account", { headers: { Authorization: `Bearer ${process.env[k].trim()}` } });
+      const j = await r.json().catch(() => ({}));
+      const safe = Object.fromEntries(Object.entries(j).filter(([key]) => !/email|name|id$/i.test(key)));
+      console.log(r.ok ? `RESULT magichour (${k}): WORKS. ${JSON.stringify(safe).slice(0, 300)}` : `RESULT magichour (${k}): FAILED (HTTP ${r.status}): ${j.message || "rejected"}`);
+    } catch (e) { console.log(`RESULT magichour (${k}): FAILED: ${e.message}`); }
+  }
+}
+
 // Apify (SEO research) check: account + free credit left
 if (process.env.APIFY_TOKEN) {
   try {

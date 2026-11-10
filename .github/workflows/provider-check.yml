@@ -35,5 +35,15 @@ jobs:
           EXA_KEY_1: ${{ secrets.EXA_KEY_1 }}
           EXA_AI: ${{ secrets.EXA_AI }}
           EXAAI_API_KEY: ${{ secrets.EXAAI_API_KEY }}
+          MAGIC_HOUR_API_KEY: ${{ secrets.MAGIC_HOUR_API_KEY }}
+          MAGICHOUR_API_KEY: ${{ secrets.MAGICHOUR_API_KEY }}
+          MAGIC_HOUR_KEY: ${{ secrets.MAGIC_HOUR_KEY }}
+          MAGICHOUR_KEY: ${{ secrets.MAGICHOUR_KEY }}
+          MAGIC_HOUR: ${{ secrets.MAGIC_HOUR }}
+          MAGICHOUR: ${{ secrets.MAGICHOUR }}
+          MAGIC_HOUR_AI_KEY: ${{ secrets.MAGIC_HOUR_AI_KEY }}
+          MAGIC_API_KEY: ${{ secrets.MAGIC_API_KEY }}
+          MH_API_KEY: ${{ secrets.MH_API_KEY }}
+          ART_API_KEY: ${{ secrets.ART_API_KEY }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY || secrets.FRED_KEY || secrets.FRED }}
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
