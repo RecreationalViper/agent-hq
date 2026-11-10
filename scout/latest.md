@@ -1,10 +1,12 @@
-# GitHub Radar — 2026-11-09
+# GitHub Radar — 2026-11-10
 
 > Scanned 12 of 29 saved searches (12 returned data, 0 unchanged, 0 failed). 12 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (0)
+## Start here (1)
 
-_Nothing new cleared the quality bar this scan. That is a normal, healthy result — the radar is rotating through its searches and will cover the rest next time._
+- **[openBitFun/OpenBitFun](https://github.com/openBitFun/OpenBitFun)** 🟡 WATCH · score 60/100 · ⭐ 3,999 · MIT · updated 0d ago
+  - OpenBitFun combines a high-performance agent runtime written in Rust with a polished desktop application. It pairs the depth of a Code Agent with o…
+  - Why: filed under skills; 3,999 stars; updated this week; MIT license
 
 ## Agent skills you could install (0)
 

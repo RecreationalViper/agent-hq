@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-09T01:02:04.124Z",
-  "date": "2026-11-09",
+  "generatedAt": "2026-11-10T07:31:02.302Z",
+  "date": "2026-11-10",
   "token": true,
   "searches": {
     "ran": 12,
@@ -11,11 +11,55 @@
   },
   "apiCalls": 12,
   "rateRemaining": 18,
-  "newItems": 0,
+  "newItems": 1,
   "blockedToday": 0,
-  "shortlist": [],
+  "shortlist": [
+    {
+      "name": "openBitFun/OpenBitFun",
+      "url": "https://github.com/openBitFun/OpenBitFun",
+      "description": "OpenBitFun combines a high-performance agent runtime written in Rust with a polished desktop application. It pairs the depth of a Code Agent with open, general-purpose capabilities for work beyond software development.",
+      "stars": 3999,
+      "forks": 303,
+      "language": "Rust",
+      "license": "MIT",
+      "pushedAt": "2026-11-10T04:44:08Z",
+      "category": "skills",
+      "score": 60,
+      "tier": "watch",
+      "reasons": [
+        "filed under skills",
+        "3,999 stars",
+        "updated this week",
+        "MIT license"
+      ],
+      "flags": [],
+      "skillFiles": null
+    }
+  ],
   "byCategory": {
-    "skills": [],
+    "skills": [
+      {
+        "name": "openBitFun/OpenBitFun",
+        "url": "https://github.com/openBitFun/OpenBitFun",
+        "description": "OpenBitFun combines a high-performance agent runtime written in Rust with a polished desktop application. It pairs the depth of a Code Agent with open, general-purpose capabilities for work beyond software development.",
+        "stars": 3999,
+        "forks": 303,
+        "language": "Rust",
+        "license": "MIT",
+        "pushedAt": "2026-11-10T04:44:08Z",
+        "category": "skills",
+        "score": 60,
+        "tier": "watch",
+        "reasons": [
+          "filed under skills",
+          "3,999 stars",
+          "updated this week",
+          "MIT license"
+        ],
+        "flags": [],
+        "skillFiles": null
+      }
+    ],
     "enhancement": [],
     "free-tokens": [],
     "efficiency": []
