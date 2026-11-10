@@ -65,6 +65,6 @@ export async function ask(system, prompt, { json = false, temperature = 0.4, str
       }
     }
   }
-  if (hasGroq()) return parse(await groqChat(system, prompt, { json, temperature }), json);
+  if (hasGroq()) return parse(await groqChat(system, prompt, { json, temperature, strong }), json);
   throw lastErr || new Error("No AI available");
 }

@@ -185,7 +185,9 @@ export async function nvidiaChat(system, user, { json = false, temperature = 0.7
 
 // Backup chain used by every agent: Groq, then NVIDIA, then Cloudflare, then OpenRouter (free models only).
 export async function groqChat(system, user, opts = {}) {
-  const chain = [["Groq", hasGroqKey, groqOnly], ["NVIDIA", hasNvidia, nvidiaChat], ["Cloudflare", hasCloudflare, cloudflareChat], ["OpenRouter", hasOpenRouter, openRouterChat]].filter(([, has]) => has());
+  let chain = [["Groq", hasGroqKey, groqOnly], ["NVIDIA", hasNvidia, nvidiaChat], ["Cloudflare", hasCloudflare, cloudflareChat], ["OpenRouter", hasOpenRouter, openRouterChat]].filter(([, has]) => has());
+  // strong mode (Content Creator): NVIDIA's largest models before Groq's faster, smaller one
+  if (opts.strong) chain = [...chain.filter(([n]) => n === "NVIDIA"), ...chain.filter(([n]) => n !== "NVIDIA")];
   let lastErr;
   for (const [name, , fn] of chain) {
     try { return await fn(system, user, opts); }
