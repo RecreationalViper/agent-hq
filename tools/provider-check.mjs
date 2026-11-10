@@ -33,9 +33,9 @@ if (!ok) process.exitCode = 1;
       const tests = [
         ["groq", "https://api.groq.com/openai/v1/chat/completions", { Authorization: `Bearer ${process.env.GROQ_API_KEY}` }, { model: "openai/gpt-oss-120b", messages: [{ role: "user", content: "Reply: ok" }], max_tokens: 20 }],
         ["gemini", "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent", { "x-goog-api-key": process.env.GEMINI_API_KEY }, { contents: [{ role: "user", parts: [{ text: "Reply: ok" }] }] }],
-        ["workers-ai", `https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/ai/run/@cf/meta/llama-3.1-8b-instruct`, { Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}` }, { messages: [{ role: "user", content: "Reply: ok" }], max_tokens: 10 }]
       ];
       for (const [name, url, h, body] of tests) {
+        if (!Object.values(h)[0]) { console.log(`RESULT ai-gateway ${name}: skipped (no key in this workflow)`); continue; }
         const via = gw.gatewayUrl(url);
         const r = await fetch(via, { method: "POST", headers: gw.withGatewayAuth({ ...h, "Content-Type": "application/json" }), body: JSON.stringify(body) });
         const t = await r.text();

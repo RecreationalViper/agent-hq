@@ -1,6 +1,6 @@
 // Cloudflare AI Gateway: every agent AI call goes through one free, always-on gateway in our Cloudflare
 // account (dashboard: Cloudflare > AI > AI Gateway > "agent-hq"): one place for usage, errors, caching and
-// rate limits across Gemini, Groq, Workers AI and OpenRouter. NVIDIA isn't a gateway provider, so it stays direct.
+// rate limits across Gemini, Groq and OpenRouter. NVIDIA isn't a gateway provider, so it stays direct.
 // Safe by design: if the gateway itself fails (not the AI provider), the call goes straight to the provider,
 // and the gateway is skipped for the rest of that run. Turn off with AI_GATEWAY=off.
 const ACCOUNT = () => process.env.CLOUDFLARE_ACCOUNT_ID?.trim();
@@ -13,8 +13,8 @@ const GW = () => `https://gateway.ai.cloudflare.com/v1/${ACCOUNT()}/${GATEWAY_ID
 const ROUTES = [
   [/^https:\/\/generativelanguage\.googleapis\.com\/v1beta/, () => `${GW()}/google-ai-studio/v1beta`],
   [/^https:\/\/api\.groq\.com\/openai\/v1/, () => `${GW()}/groq`],
-  [/^https:\/\/openrouter\.ai\/api\/v1/, () => `${GW()}/openrouter`],
-  [/^https:\/\/api\.cloudflare\.com\/client\/v4\/accounts\/[^/]+\/ai\/run\//, () => `${GW()}/workers-ai/`]
+  [/^https:\/\/openrouter\.ai\/api\/v1/, () => `${GW()}/openrouter`]
+  // Workers AI stays direct: it's Cloudflare's own (already in the Cloudflare dashboard) and refused gateway auth.
 ];
 export function gatewayUrl(url) {
   if (!gatewayOn()) return null;
@@ -41,8 +41,7 @@ export async function gwFetch(url, init = {}) {
     // Cloudflare's own error envelope = a gateway problem (missing gateway, bad route...). Provider errors pass through.
     // (AiGatewayError, or the {success:false, errors|error:[...]} envelope)
     const gatewayError = data && (data.name === "AiGatewayError" || data.success === false && (Array.isArray(data.errors) || Array.isArray(data.error))) || [502, 504].includes(res.status) && !data;
-    const workersAiError = /workers-ai/.test(via) && res.status !== 429;
-    if (gatewayError || workersAiError) throw new Error(`gateway HTTP ${res.status}: ${(data?.errors?.[0]?.message || text).slice(0, 120)}`);
+    if (gatewayError) throw new Error(`gateway HTTP ${res.status}: ${(data?.errors?.[0]?.message || text).slice(0, 120)}`);
     return new Response(text, { status: res.status, statusText: res.statusText, headers: res.headers });
   } catch (e) {
     if (!disabled) console.log(`  AI Gateway skipped this run (${e.message}); calling providers directly`);
