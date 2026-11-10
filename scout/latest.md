@@ -4,9 +4,9 @@
 
 ## Start here (1)
 
-- **[openBitFun/OpenBitFun](https://github.com/openBitFun/OpenBitFun)** 🟡 WATCH · score 60/100 · ⭐ 3,999 · MIT · updated 0d ago
-  - OpenBitFun combines a high-performance agent runtime written in Rust with a polished desktop application. It pairs the depth of a Code Agent with o…
-  - Why: filed under skills; 3,999 stars; updated this week; MIT license
+- **[Ebony-Vinyl/dsh-our-free-model](https://github.com/Ebony-Vinyl/dsh-our-free-model)** 🟢 ADOPT · score 72/100 · ⭐ 68,682 · MIT · updated 0d ago
+  - 在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign…
+  - Why: 68,682 stars; updated this week; MIT license; well established
 
 ## Agent skills you could install (0)
 

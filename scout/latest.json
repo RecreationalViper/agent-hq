@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T07:31:02.302Z",
+  "generatedAt": "2026-11-10T23:34:04.592Z",
   "date": "2026-11-10",
   "token": true,
   "searches": {
@@ -15,52 +15,52 @@
   "blockedToday": 0,
   "shortlist": [
     {
-      "name": "openBitFun/OpenBitFun",
-      "url": "https://github.com/openBitFun/OpenBitFun",
-      "description": "OpenBitFun combines a high-performance agent runtime written in Rust with a polished desktop application. It pairs the depth of a Code Agent with open, general-purpose capabilities for work beyond software development.",
-      "stars": 3999,
-      "forks": 303,
-      "language": "Rust",
+      "name": "Ebony-Vinyl/dsh-our-free-model",
+      "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+      "description": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there, DeepSeek V4.1 Flash and Kimi K3 among them. Completely free, with no usage cap.",
+      "stars": 68682,
+      "forks": 1848,
+      "language": "JavaScript",
       "license": "MIT",
-      "pushedAt": "2026-11-10T04:44:08Z",
-      "category": "skills",
-      "score": 60,
-      "tier": "watch",
+      "pushedAt": "2026-11-10T12:45:26Z",
+      "category": "enhancement",
+      "score": 72,
+      "tier": "adopt",
       "reasons": [
-        "filed under skills",
-        "3,999 stars",
+        "68,682 stars",
         "updated this week",
-        "MIT license"
+        "MIT license",
+        "well established"
       ],
       "flags": [],
       "skillFiles": null
     }
   ],
   "byCategory": {
-    "skills": [
+    "skills": [],
+    "enhancement": [
       {
-        "name": "openBitFun/OpenBitFun",
-        "url": "https://github.com/openBitFun/OpenBitFun",
-        "description": "OpenBitFun combines a high-performance agent runtime written in Rust with a polished desktop application. It pairs the depth of a Code Agent with open, general-purpose capabilities for work beyond software development.",
-        "stars": 3999,
-        "forks": 303,
-        "language": "Rust",
+        "name": "Ebony-Vinyl/dsh-our-free-model",
+        "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+        "description": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there, DeepSeek V4.1 Flash and Kimi K3 among them. Completely free, with no usage cap.",
+        "stars": 68682,
+        "forks": 1848,
+        "language": "JavaScript",
         "license": "MIT",
-        "pushedAt": "2026-11-10T04:44:08Z",
-        "category": "skills",
-        "score": 60,
-        "tier": "watch",
+        "pushedAt": "2026-11-10T12:45:26Z",
+        "category": "enhancement",
+        "score": 72,
+        "tier": "adopt",
         "reasons": [
-          "filed under skills",
-          "3,999 stars",
+          "68,682 stars",
           "updated this week",
-          "MIT license"
+          "MIT license",
+          "well established"
         ],
         "flags": [],
         "skillFiles": null
       }
     ],
-    "enhancement": [],
     "free-tokens": [],
     "efficiency": []
   },
