@@ -52,7 +52,10 @@ form.append("worker.js", new Blob([await fs.readFile("workers/sales/worker.js", 
 await cf(`/workers/scripts/${NAME}`, { method: "PUT", body: form });
 await cf(`/workers/scripts/${NAME}/subdomain`, { method: "POST", body: JSON.stringify({ enabled: true, previews_enabled: false }) });
 const base = `https://${NAME}.${sub}.workers.dev`;
-await fs.writeFile("sales-feed.json", JSON.stringify({ url: base, webhook: `${base}/payhip`, updated: new Date().toISOString() }, null, 2) + "\n");
+// Only rewrite the file when the address changes (a new timestamp every run caused save conflicts).
+const prev = await fs.readFile("sales-feed.json", "utf8").then(JSON.parse).catch(() => ({}));
+if (prev.url !== base || prev.webhook !== `${base}/payhip`)
+  await fs.writeFile("sales-feed.json", JSON.stringify({ url: base, webhook: `${base}/payhip`, updated: new Date().toISOString() }, null, 2) + "\n");
 // 4. check it's live (new addresses can take a minute)
 for (let i = 0; i < 12; i++) {
   try { const r = await fetch(base + "/"); if (r.ok) { console.log(`Live: ${await r.text()}`); break; } } catch {}
