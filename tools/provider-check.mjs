@@ -37,7 +37,7 @@ if (!ok) process.exitCode = 1;
       ];
       for (const [name, url, h, body] of tests) {
         const via = gw.gatewayUrl(url);
-        const r = await fetch(via, { method: "POST", headers: { ...h, "Content-Type": "application/json" }, body: JSON.stringify(body) });
+        const r = await fetch(via, { method: "POST", headers: gw.withGatewayAuth({ ...h, "Content-Type": "application/json" }), body: JSON.stringify(body) });
         const t = await r.text();
         console.log(`RESULT ai-gateway ${name}: HTTP ${r.status}${r.ok ? " WORKS via gateway" : ": " + t.slice(0, 160)}`);
       }

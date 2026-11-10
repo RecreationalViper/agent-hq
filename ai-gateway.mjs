@@ -22,17 +22,25 @@ export function gatewayUrl(url) {
   return null;
 }
 
+// The gateway is authenticated (Cloudflare's default): our Cloudflare token goes in cf-aig-authorization.
+function withGatewayAuth(headers = {}) {
+  const tok = process.env.CF_AIG_TOKEN?.trim() || process.env.CLOUDFLARE_API_TOKEN?.trim();
+  return tok ? { ...headers, "cf-aig-authorization": `Bearer ${tok}` } : headers;
+}
+export { withGatewayAuth };
+
 // Drop-in for fetch(): tries the gateway, falls back to the direct address on gateway problems.
 export async function gwFetch(url, init = {}) {
   const via = gatewayUrl(url);
   if (!via) return fetch(url, init);
   try {
-    const res = await fetch(via, { ...init, signal: AbortSignal.timeout(150000) });
+    const res = await fetch(via, { ...init, headers: withGatewayAuth(init.headers), signal: AbortSignal.timeout(150000) });
     if (res.ok) return res;
     const text = await res.text();
     let data; try { data = JSON.parse(text); } catch { data = null; }
     // Cloudflare's own error envelope = a gateway problem (missing gateway, bad route...). Provider errors pass through.
-    const gatewayError = data && data.success === false && Array.isArray(data.errors) && !/workers-ai/.test(via) || [502, 504].includes(res.status) && !data;
+    // (AiGatewayError, or the {success:false, errors|error:[...]} envelope)
+    const gatewayError = data && (data.name === "AiGatewayError" || data.success === false && (Array.isArray(data.errors) || Array.isArray(data.error))) || [502, 504].includes(res.status) && !data;
     const workersAiError = /workers-ai/.test(via) && res.status !== 429;
     if (gatewayError || workersAiError) throw new Error(`gateway HTTP ${res.status}: ${(data?.errors?.[0]?.message || text).slice(0, 120)}`);
     return new Response(text, { status: res.status, statusText: res.statusText, headers: res.headers });
