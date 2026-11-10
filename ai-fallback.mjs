@@ -12,7 +12,7 @@ export const hasGroqKey = () => Boolean(process.env.GROQ_API_KEY);
 export const hasCloudflare = () => Boolean(process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID);
 // Any backup available? (Groq first, then Cloudflare Workers AI)
 export const hasOpenRouter = () => Boolean(process.env.OPENROUTER_API_KEY);
-export const hasGroq = () => hasGroqKey() || hasCloudflare() || hasOpenRouter();
+export const hasGroq = () => hasGroqKey() || hasCloudflare() || hasOpenRouter() || Boolean(process.env.NVIDIA_API_KEY?.trim());
 
 async function call(path, init = {}) {
   const res = await fetch(BASE + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${process.env.GROQ_API_KEY}`, "Content-Type": "application/json" } });
@@ -140,9 +140,49 @@ export async function openRouterChat(system, user, { json = false, temperature =
   throw lastErr || new Error("OpenRouter could not answer");
 }
 
-// Backup chain used by every agent: Groq, then Cloudflare, then OpenRouter (free models only).
+// ---------- NVIDIA (build.nvidia.com hosted models, free developer access; OpenAI-compatible) ----------
+const NV = "https://integrate.api.nvidia.com/v1";
+const nvKey = () => process.env.NVIDIA_API_KEY?.trim();
+export const hasNvidia = () => Boolean(nvKey());
+// Strongest general models first; whichever the key can use is tried in order.
+const NV_PREFER = [/deepseek-v3\.\d|deepseek-v3/i, /kimi-k2/i, /qwen3-235b|qwen3-coder-480b/i, /nemotron-ultra|nemotron.*253b/i, /gpt-oss-120b/i, /llama-4-maverick/i, /llama-3\.3-70b/i, /nemotron-super/i];
+let nvModels;
+async function nvCall(path, init = {}) {
+  const res = await fetch(NV + path, { ...init, signal: AbortSignal.timeout(150000), headers: { Authorization: `Bearer ${nvKey()}`, "Content-Type": "application/json", Accept: "application/json" } });
+  const text = await res.text();
+  let data; try { data = JSON.parse(text); } catch { data = {}; }
+  if (!res.ok) { const e = new Error(`NVIDIA ${res.status}: ${data.detail || data.error?.message || data.title || text.slice(0, 200)}`); e.status = res.status; throw e; }
+  return data;
+}
+export async function nvidiaModels() {
+  if (nvModels) return nvModels;
+  const ids = ((await nvCall("/models")).data || []).map((m) => m.id).filter((i) => !/embed|rerank|guard|vision|vl-|-vl|parse|clip|safety|reward|retriev|ocr|asr|tts|pii/i.test(i));
+  const rank = (i) => { const k = NV_PREFER.findIndex((r) => r.test(i)); return k < 0 ? 99 : k; };
+  nvModels = ids.filter((i) => rank(i) < 99).sort((a, b) => rank(a) - rank(b));
+  if (!nvModels.length) throw new Error("NVIDIA lists no suitable chat models for this key");
+  return nvModels;
+}
+export async function nvidiaChat(system, user, { json = false, temperature = 0.7, maxChars = 40000 } = {}) {
+  const input = user.length > maxChars ? user.slice(0, maxChars) + "\n\n[Some input was trimmed to fit the backup AI's limits.]" : user;
+  let lastErr;
+  for (const model of (await nvidiaModels()).slice(0, 4)) {
+    try {
+      const data = await nvCall("/chat/completions", { method: "POST", body: JSON.stringify({
+        model, temperature, max_tokens: 4096,
+        messages: [{ role: "system", content: system + (json ? "\nReply with valid JSON only." : "") }, { role: "user", content: input }]
+      }) });
+      const text = (data.choices?.[0]?.message?.content || "").replace(/<think>[\s\S]*?<\/think>/g, "").replace(/^```(?:json)?\s*|\s*```$/g, "").trim();
+      if (!text) throw new Error("NVIDIA returned an empty reply");
+      console.log(`  answered by backup AI: NVIDIA ${model}`);
+      return text;
+    } catch (e) { lastErr = e; if (e.status === 401 || e.status === 403) break; }
+  }
+  throw lastErr || new Error("NVIDIA could not answer");
+}
+
+// Backup chain used by every agent: Groq, then NVIDIA, then Cloudflare, then OpenRouter (free models only).
 export async function groqChat(system, user, opts = {}) {
-  const chain = [["Groq", hasGroqKey, groqOnly], ["Cloudflare", hasCloudflare, cloudflareChat], ["OpenRouter", hasOpenRouter, openRouterChat]].filter(([, has]) => has());
+  const chain = [["Groq", hasGroqKey, groqOnly], ["NVIDIA", hasNvidia, nvidiaChat], ["Cloudflare", hasCloudflare, cloudflareChat], ["OpenRouter", hasOpenRouter, openRouterChat]].filter(([, has]) => has());
   let lastErr;
   for (const [name, , fn] of chain) {
     try { return await fn(system, user, opts); }
