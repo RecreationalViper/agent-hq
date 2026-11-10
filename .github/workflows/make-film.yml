@@ -2,9 +2,9 @@ name: Make Product Film
 on:
   workflow_dispatch:
     inputs:
-      ai:
-        description: "Use Magic Hour for the opening shot (yes/no)"
-        default: "yes"
+      opening:
+        description: "Opening shot: painted (free, no logo), magichour (free tier shows its logo), or none"
+        default: "painted"
 permissions:
   contents: write
 concurrency: agent-hq
@@ -26,7 +26,9 @@ jobs:
         env:
           MAGICHOUR_API_KEY: ${{ secrets.MAGICHOUR_API_KEY }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
-          FILM_NO_AI: ${{ github.event.inputs.ai == 'no' && '1' || '' }}
+          FILM_OPENING: ${{ github.event.inputs.opening || 'painted' }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       - name: Save the film to the website
         run: |
           git config user.name "agent-hq-bot"

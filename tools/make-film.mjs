@@ -19,6 +19,7 @@ const W = 1920, H = 1080, FPS = 30, DESIGN_SECONDS = 15;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const url = (p) => pathToFileURL(path.join(ROOT, p)).href;
 const MH_KEY = ["MAGICHOUR_API_KEY", "MAGIC_HOUR_API_KEY", "ART_API_KEY"].map((k) => process.env[k]?.trim()).find(Boolean);
+const USE_MH = (process.env.FILM_OPENING || "painted") === "magichour";
 const ff = (args) => execFileSync("ffmpeg", ["-y", "-loglevel", "error", ...args], { stdio: "inherit" });
 
 // ---------- 1. Magic Hour opening shot ----------
@@ -62,6 +63,74 @@ async function brollFromMagicHour() {
   }
   console.log("  Magic Hour clip took too long; continuing without it");
   return null;
+}
+
+// ---------- 1b. Free opening: a painted still (Cloudflare, free) brought to life in code ----------
+const STILL_PROMPT = "Cinematic 35mm photograph of a quiet memorial table beside a window at golden hour: a single lit white pillar candle, a small glass vase of white ranunculus and soft eucalyptus, folded cream linen, a closed hardcover book. Warm low sunlight streaming in, floating dust in the light, shallow depth of field, soft bokeh, muted sage green and warm cream palette, calm and reverent, subtle film grain. No people, no hands, no text, no letters, no watermark.";
+
+async function paintStill() {
+  if (process.env.FILM_STILL) return process.env.FILM_STILL; // reuse a still (testing)
+  const id = process.env.CLOUDFLARE_ACCOUNT_ID, tok = process.env.CLOUDFLARE_API_TOKEN;
+  if (!id || !tok) { console.log("  no Cloudflare key, so no painted opening"); return null; }
+  const tries = [
+    ["@cf/leonardo/lucid-origin", { prompt: STILL_PROMPT, width: 1920, height: 1088, guidance: 4.5, num_steps: 30 }],
+    ["@cf/leonardo/phoenix-1.0", { prompt: STILL_PROMPT, width: 1920, height: 1088, guidance: 3, num_steps: 30 }],
+    ["@cf/black-forest-labs/flux-1-schnell", { prompt: STILL_PROMPT, steps: 8 }]
+  ];
+  for (const [model, body] of tries) {
+    try {
+      const r = await fetch(`https://api.cloudflare.com/client/v4/accounts/${id}/ai/run/${model}`, { method: "POST", signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${tok}`, "Content-Type": "application/json" }, body: JSON.stringify(body) });
+      const type = r.headers.get("content-type") || "";
+      let buf;
+      if (type.startsWith("image/")) buf = Buffer.from(await r.arrayBuffer());
+      else { const j = await r.json().catch(() => ({})); const b64 = j.result?.image || j.image; if (b64) buf = Buffer.from(b64, "base64"); else { console.log(`  ${model}: ${j.errors?.[0]?.message || `HTTP ${r.status}`}`); continue; } }
+      if (!r.ok || buf.length < 5000) { console.log(`  ${model}: HTTP ${r.status}`); continue; }
+      const file = path.join(WORK, "still.jpg");
+      await fs.writeFile(file, buf);
+      await fs.copyFile(file, path.join(OUT, "opening-still.jpg"));
+      console.log(`  painted the opening still with ${model}`);
+      return file;
+    } catch (e) { console.log(`  ${model} failed: ${e.message}`); }
+  }
+  return null;
+}
+
+// Slow push-in with drift, breathing window light, floating dust and a title, rendered frame by frame.
+async function renderOpening(still, browser) {
+  const frames = path.join(WORK, "oframes");
+  await fs.rm(frames, { recursive: true, force: true });
+  await fs.mkdir(frames, { recursive: true });
+  const dust = Array.from({ length: 70 }, (_, i) => { const r = (n) => ((Math.sin(i * 127.1 + n * 311.7) * 43758.5453) % 1 + 1) % 1; return { x: r(1) * W * 0.9, y: r(2) * H, s: 1.5 + r(3) * 4, v: 8 + r(4) * 26, d: (r(5) - .5) * 30, o: .25 + r(6) * .5, ph: r(7) * 6 }; });
+  const html = `<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Cormorant;font-style:italic;src:url(${url("products/fillable/fonts/CormorantGaramond-Italic.ttf")})}
+*{margin:0;padding:0}body{width:${W}px;height:${H}px;overflow:hidden;background:#000}
+#bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform-origin:58% 52%}
+#glow{position:absolute;inset:0;background:radial-gradient(ellipse 55% 60% at 30% 25%,rgba(255,214,150,.38),rgba(255,214,150,0) 70%);mix-blend-mode:screen}
+.d{position:absolute;border-radius:50%;background:rgba(255,236,200,.95);filter:blur(1.2px)}
+#shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(20,16,10,.55))}
+#title{position:absolute;left:0;right:0;bottom:120px;text-align:center;font:italic 64px Cormorant;color:#fbf5ea;text-shadow:0 2px 24px rgba(0,0,0,.45)}
+</style></head><body><img id="bg" src="${pathToFileURL(still).href}"><div id="glow"></div>
+${dust.map((p, i) => `<div class="d" id="d${i}" style="width:${p.s}px;height:${p.s}px"></div>`).join("")}
+<div id="shade"></div><div id="title">For the day you say goodbye</div>
+<script>const D=${JSON.stringify(dust)};const e=(x)=>x<0?0:x>1?1:x*x*(3-2*x);
+window.setT=(t)=>{const p=t/5;document.getElementById("bg").style.transform=\`scale(\${1.04+.10*p}) translate(\${-12*p}px,\${6*p}px)\`;
+document.getElementById("glow").style.opacity=.75+.25*Math.sin(t*1.3);
+D.forEach((d,i)=>{const s=document.getElementById("d"+i).style;s.transform=\`translate(\${d.x+d.d*Math.sin(t*.6+d.ph)}px,\${((d.y-d.v*t)%${H}+${H})%${H}}px)\`;s.opacity=d.o*(.6+.4*Math.sin(t*1.7+d.ph));});
+const ti=document.getElementById("title").style;ti.opacity=Math.min(e((t-1.2)/1),1-e((t-3.2)/.7));ti.transform=\`translateY(\${14*(1-e((t-1.2)/1.4))}px)\`;};</script></body></html>`;
+  const f = path.join(WORK, "opening.html");
+  await fs.writeFile(f, html);
+  const page = await browser.newPage({ viewport: { width: W, height: H } });
+  await page.goto(pathToFileURL(f).href, { waitUntil: "load" });
+  await page.evaluate(() => document.fonts.ready);
+  for (let i = 0; i < 5 * FPS; i++) {
+    await page.evaluate((t) => window.setT(t), i / FPS);
+    await page.screenshot({ path: path.join(frames, `f${String(i).padStart(4, "0")}.jpg`), type: "jpeg", quality: 92 });
+  }
+  await page.close();
+  const out = path.join(WORK, "painted-open.mp4");
+  ff(["-framerate", String(FPS), "-i", path.join(frames, "f%04d.jpg"), "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", "-pix_fmt", "yuv420p", out]);
+  console.log("  rendered the painted opening");
+  return out;
 }
 
 // ---------- 2. Product scenes (real previews, animated in code) ----------
@@ -155,7 +224,14 @@ async function renderDesign() {
 async function main() {
   await fs.mkdir(WORK, { recursive: true });
   await fs.mkdir(OUT, { recursive: true });
-  const [broll, frames] = await Promise.all([brollFromMagicHour(), renderDesign()]);
+  const mode = process.env.FILM_OPENING || "painted"; // painted (free, no logo) | magichour (free tier adds its logo) | none
+  let broll = null;
+  if (mode === "magichour") broll = await brollFromMagicHour();
+  else if (mode === "painted") {
+    const still = await paintStill();
+    if (still) { const { chromium } = loadPlaywright(); const b = await chromium.launch(); try { broll = await renderOpening(still, b); } finally { await b.close(); } }
+  }
+  const frames = await renderDesign();
   if (process.env.FILM_FRAMES) return console.log(`preview frames in ${frames}`);
   const design = path.join(WORK, "design.mp4");
   ff(["-framerate", String(FPS), "-i", path.join(frames, "f%04d.jpg"), "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", "-pix_fmt", "yuv420p", design]);
@@ -171,12 +247,12 @@ async function main() {
   }
   ff(["-sseof", "-2", "-i", film, "-frames:v", "1", "-q:v", "3", path.join(OUT, "forever-held-poster.jpg")]);
   const mb = ((await fs.stat(film)).size / 1e6).toFixed(1);
-  console.log(`Film ready: store/video/forever-held-film.mp4 (${mb} MB)${broll ? " with the Magic Hour opening" : ""}`);
+  console.log(`Film ready: store/video/forever-held-film.mp4 (${mb} MB)${broll ? ` with the ${mode} opening` : ""}`);
   if (process.env.DISCORD_BOT_TOKEN && !process.env.FILM_NO_POST) {
     const { postFiles } = await import(path.join(ROOT, "discord.mjs"));
     await postFiles("content", `🎬 **Forever Held product film** (${mb} MB, 1080p). Tap to play, then download. It's also on the website.`, [{ name: "forever-held-film.mp4", data: await fs.readFile(film), type: "video/mp4" }]);
   }
-  if (MH_KEY) { const a = await mh("/account").catch(() => ({})); console.log(`  Magic Hour credits left: ${a.credits ?? "?"}`); }
+  if (MH_KEY && USE_MH) { const a = await mh("/account").catch(() => ({})); console.log(`  Magic Hour credits left: ${a.credits ?? "?"}`); }
 }
 
 main().catch((e) => { console.error("ERROR:", e.message); process.exit(1); });

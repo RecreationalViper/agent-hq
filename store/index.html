@@ -76,6 +76,8 @@ main { width: min(1080px, calc(100% - 32px)); margin: 0 auto }
 .hero { display: grid; gap: 34px; align-items: center; padding: 56px 0 30px; grid-template-columns: 1fr }
 .hero h1 { font: 400 clamp(36px, 8.4vw, 64px)/1.06 var(--serif); letter-spacing: -.015em; margin: 0 0 18px; color: var(--moss); text-wrap: balance }
 .hero p { margin: 0 0 26px; max-width: 34em; color: var(--ink-soft); font-size: 18px }
+.film { margin: 10px 0 40px; padding: 10px; border-radius: 26px }
+.film video { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 17px; background: #efe8dc; object-fit: cover }
 .hero .actions { display: flex; flex-wrap: wrap; gap: 12px }
 .stack { position: relative; height: clamp(330px, 92vw, 470px) }
 .stack figure { position: absolute; margin: 0; padding: 10px; border-radius: 26px }
@@ -166,6 +168,10 @@ footer .brand { justify-content: center; margin-bottom: 10px; color: var(--moss)
       <figure class="glass prog"><img src="img/program-cover.png" alt="" loading="eager"></figure>
       <figure class="glass card"><img src="img/memory-card.png" alt="" loading="eager"></figure>
     </div>
+  </section>
+
+  <section class="film glass" aria-label="Product film">
+    <video src="video/forever-held-film.mp4" poster="video/forever-held-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="A 20-second film showing the Soft Botanical program, welcome sign and memory cards"></video>
   </section>
 
   <section class="suite glass" id="suite" aria-labelledby="suite-title">
