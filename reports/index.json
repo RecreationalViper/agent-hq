@@ -1,5 +1,23 @@
 [
   {
+    "file": "2026-11-10-competitor-scout.md",
+    "agent": "competitor-scout",
+    "name": "Competitor Scout",
+    "date": "2026-11-10"
+  },
+  {
+    "file": "2026-11-10-github-radar.md",
+    "agent": "github-radar",
+    "name": "GitHub Radar",
+    "date": "2026-11-10"
+  },
+  {
+    "file": "2026-11-10-daily-task.md",
+    "agent": "daily-task",
+    "name": "Daily Focus",
+    "date": "2026-11-10"
+  },
+  {
     "file": "2026-11-10-researcher.md",
     "agent": "researcher",
     "name": "Deep Researcher",
