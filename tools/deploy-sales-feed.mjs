@@ -46,6 +46,17 @@ if (process.env.DISCORD_BOT_TOKEN && salesChannel) {
   bindings.push({ type: "secret_text", name: "DISCORD_BOT_TOKEN", text: process.env.DISCORD_BOT_TOKEN.trim() }, { type: "plain_text", name: "DISCORD_SALES_CHANNEL", text: salesChannel });
   console.log("Sales will also post to Discord #sales");
 }
+// Discord slash commands: the app's public key (to verify requests), Workers AI for /ask, optional GitHub key for /run
+let app = null;
+if (process.env.DISCORD_BOT_TOKEN) {
+  const r = await fetch("https://discord.com/api/v10/applications/@me", { headers: { Authorization: `Bot ${process.env.DISCORD_BOT_TOKEN.trim()}` } });
+  if (r.ok) app = await r.json(); else console.log(`Discord app lookup failed: HTTP ${r.status}`);
+}
+if (app?.verify_key) {
+  bindings.push({ type: "plain_text", name: "DISCORD_PUBLIC_KEY", text: app.verify_key }, { type: "plain_text", name: "DISCORD_APP_ID", text: app.id }, { type: "ai", name: "AI" });
+  if (process.env.GH_DISPATCH_TOKEN?.trim()) bindings.push({ type: "secret_text", name: "GH_TOKEN", text: process.env.GH_DISPATCH_TOKEN.trim() });
+  console.log(`Discord commands: on${process.env.GH_DISPATCH_TOKEN?.trim() ? " (with /run)" : " (/run waits for GH_DISPATCH_TOKEN)"}`);
+}
 const form = new FormData();
 form.append("metadata", new Blob([JSON.stringify({ main_module: "worker.js", compatibility_date: "2026-01-01", bindings })], { type: "application/json" }));
 form.append("worker.js", new Blob([await fs.readFile("workers/sales/worker.js", "utf8")], { type: "application/javascript+module" }), "worker.js");
@@ -62,3 +73,21 @@ for (let i = 0; i < 12; i++) {
   await new Promise((r) => setTimeout(r, 10000));
 }
 console.log(`RESULT: Payhip webhook address: ${base}/payhip`);
+
+// 5. register the slash commands in the Agent HQ server and point Discord at the Worker
+if (app?.verify_key) {
+  const D = { Authorization: `Bot ${process.env.DISCORD_BOT_TOKEN.trim()}`, "Content-Type": "application/json" };
+  const guild = JSON.parse(await fs.readFile("discord.json", "utf8")).serverId;
+  const agents = JSON.parse(await fs.readFile("agents.json", "utf8")).agents.map((a) => ({ name: a.name.slice(0, 100), value: a.id }));
+  const extra = [["Content Creator", "content-creator"], ["Product film (website)", "film"], ["Pinterest video pin", "pin-video"], ["Deep Researcher", "research"], ["Trading Desk", "trading-desk"], ["Head Trader review", "head-trader-review"], ["Provider Check", "provider-check"], ["All agents due today", "all-due"]].map(([name, value]) => ({ name, value }));
+  const commands = [
+    { name: "status", description: "When each agent last reported" },
+    { name: "sales", description: "Sales today, this week and this month" },
+    { name: "ask", description: "Ask the team a question (answers from their latest reports)", options: [{ type: 3, name: "question", description: "Your question", required: true, max_length: 300 }] },
+    { name: "run", description: "Start an agent now", options: [{ type: 3, name: "agent", description: "Which agent", required: true, choices: [...extra, ...agents].slice(0, 25) }] }
+  ];
+  const put = await fetch(`https://discord.com/api/v10/applications/${app.id}/guilds/${guild}/commands`, { method: "PUT", headers: D, body: JSON.stringify(commands) });
+  console.log(`RESULT: Discord commands ${put.ok ? "registered (/status /sales /ask /run)" : `failed HTTP ${put.status}: ${(await put.text()).slice(0, 200)}`}`);
+  const patch = await fetch("https://discord.com/api/v10/applications/@me", { method: "PATCH", headers: D, body: JSON.stringify({ interactions_endpoint_url: `${base}/discord` }) });
+  console.log(`RESULT: Discord endpoint ${patch.ok ? "set to " + base + "/discord" : `failed HTTP ${patch.status}: ${(await patch.text()).slice(0, 200)}`}`);
+}
