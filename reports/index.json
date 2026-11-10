@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-10-content-creator.md",
+    "agent": "content-creator",
+    "name": "Content Creator",
+    "date": "2026-11-10"
+  },
+  {
     "file": "2026-11-10-competitor-scout.md",
     "agent": "competitor-scout",
     "name": "Competitor Scout",
