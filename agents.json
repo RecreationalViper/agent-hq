@@ -153,22 +153,22 @@
           "memorial service template"
         ],
         "modifiers": [
-          "canva",
           "printable",
           "editable",
           "botanical",
           "for mom",
           "for dad",
-          "diy"
+          "diy",
+          "template"
         ],
         "serp": [
-          "funeral program template canva",
+          "funeral program template",
           "celebration of life welcome sign template",
           "share a memory cards printable"
         ],
         "maxCreditUsd": 3
       },
-      "instructions": "You are our SEO specialist. Using ONLY the real Google data provided (autocomplete suggestions and current Google results), write this week's search plan for the Soft Botanical bundle on Payhip and our storefront, also usable on Etsy and Pinterest later. Include: (1) the 10 best keyword phrases buyers actually type, grouped by intent, and why; (2) an improved product title (under 140 characters) and a 160-character meta description; (3) 13 tags of 20 characters or fewer; (4) 3 Pinterest pin titles with descriptions; (5) the questions from 'People also ask' we should answer in the product description or FAQ, with a one-line answer each; (6) what the top-ranking pages do that we should copy or beat. Mark it DRAFT: the owner approves before anything is changed or published. Also answer the Content Creator's keyword requests in the notes file, in a short final section 'For the Content Creator'.",
+      "instructions": "You are our SEO specialist. Using ONLY the real Google data provided (autocomplete suggestions and current Google results), write this week's search plan for the Soft Botanical bundle on Payhip and our storefront, also usable on Etsy and Pinterest later. Include: (1) the 10 best keyword phrases buyers actually type, grouped by intent, and why; (2) an improved product title (under 140 characters) and a 160-character meta description; (3) 13 tags of 20 characters or fewer; (4) 3 Pinterest pin titles with descriptions; (5) the questions from 'People also ask' we should answer in the product description or FAQ, with a one-line answer each; (6) what the top-ranking pages do that we should copy or beat. Mark it DRAFT: the owner approves before anything is changed or published. Also answer the Content Creator's keyword requests in the notes file, in a short final section 'For the Content Creator'. Product facts: the kit is fill-in PDFs typed in the free Adobe Acrobat Reader app (phone or computer) - NEVER mention Canva or Canva keywords, even if they rank.",
       "readsFiles": [
         "content/notes.md"
       ]
