@@ -1,0 +1,35 @@
+name: Make Product Film
+on:
+  workflow_dispatch:
+    inputs:
+      ai:
+        description: "Use Magic Hour for the opening shot (yes/no)"
+        default: "yes"
+permissions:
+  contents: write
+concurrency: agent-hq
+jobs:
+  film:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Install the design browser and ffmpeg
+        run: |
+          npm i --no-save --no-package-lock playwright@1.49.1 && npx playwright install --with-deps chromium
+          sudo apt-get install -y ffmpeg >/dev/null
+      - name: Make the film
+        run: node tools/make-film.mjs
+        env:
+          MAGICHOUR_API_KEY: ${{ secrets.MAGICHOUR_API_KEY }}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          FILM_NO_AI: ${{ github.event.inputs.ai == 'no' && '1' || '' }}
+      - name: Save the film to the website
+        run: |
+          git config user.name "agent-hq-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add store/video
+          git diff --cached --quiet || (git commit -m "Product film update" && git pull --rebase && git push)
