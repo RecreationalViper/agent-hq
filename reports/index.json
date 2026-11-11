@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-10-seasonal.md",
+    "agent": "seasonal",
+    "name": "Seasonal Planner",
+    "date": "2026-11-10"
+  },
+  {
     "file": "2026-11-10-trading-desk.md",
     "agent": "trading-desk",
     "name": "Trading Desk",

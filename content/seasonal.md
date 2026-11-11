@@ -1,0 +1,95 @@
+# Seasonal Planner (updated 2026-11-10)
+
+# Forever Held: 90-Day Holiday & Seasonal Plan
+*Current Date: November 10, 2026*
+
+---
+
+### (1) THIS WEEK: Immediate Team Priorities
+*Since Pinterest users save holiday ideas 30–60 days ahead, our primary design and scheduling focus this week is Thanksgiving coping and Christmas/Blue Christmas planning.*
+
+#### Content Creator (Pinterest & Visual Assets)
+* **Holiday Focus:** Thanksgiving (Nov 26) & Christmas/Blue Christmas (Dec 21–25).
+* **Pin Headlines:**
+  1. *"Honoring a Loved One at the Thanksgiving Table"*
+  2. *"Coping with Grief During the Christmas Holidays"*
+  3. *"Simple Ways to Light a Candle in Memory This Christmas"*
+* **Keywords:** holiday grief support, memorial table sign, grief at thanksgiving, christmas remembrance ideas, printable memorial cards.
+
+#### Content Planner (Social Posts)
+* **Holiday Focus:** Veterans Day (Nov 11) & Thanksgiving Prep (Nov 26).
+* **Pin/Post Headlines:**
+  1. *"Honoring Fallen Heroes with Dignity this Veterans Day"*
+  2. *"Setting a Place for Memory: Coping with Loss at Thanksgiving"*
+* **Keywords:** veterans day memorial, military tribute, honoring lost loved ones, empty chair thanksgiving.
+
+#### Email Marketer (Subscriber Outreach)
+* **Holiday Focus:** Gentle Holiday Coping Guide & Intro to Forever Held.
+* **Email Subject Lines:**
+  1. *"Navigating your first holiday season after a loss"*
+  2. *"A quiet way to honor their memory this Thanksgiving"*
+* **Keywords:** holiday loss support, printable memory cards, celebration of life planning.
+* *Note:* Uses launch discount code `PEACE25` (25% off) for the live [Soft Botanical Bundle](https://payhip.com/b/vqNSA). *(Requires Owner Approval before sending)*.
+
+---
+
+### (2) COMING UP: 90-Day Seasonal Calendar
+
+> **Owner Approval Required:** All coupon activations, scheduled posts, and marketing emails must be explicitly approved by the owner before publishing or distribution.
+
+1. **Veterans Day — Nov 11, 2026** *(1 day away)*
+   * **Remembrance Angle:** Honoring military members and veterans who have passed. Strictly non-commercial and respectful.
+   * **Product Fit:** [Soft Botanical Share-a-Memory Cards](https://payhip.com/b/vqNSA) for military memorial services.
+   * **Start Posting:** Immediately.
+   * **Coupon:** **None.** *(Sensitive day: purely respectful remembrance, no promotion).*
+
+2. **Thanksgiving — Nov 26, 2026** *(16 days away)*
+   * **Remembrance Angle:** The "first empty chair" at the dinner table; gratitude for shared memories.
+   * **Product Fit:** Soft Botanical Share-a-Memory cards placed at dinner place settings.
+   * **Start Posting:** Now (Nov 10).
+   * **Coupon Suggestion:** `PEACE25` (25% off) for the Soft Botanical bundle. *(Requires Owner Approval)*.
+
+3. **Black Friday / Cyber Monday — Nov 27–30, 2026** *(17 days away)*
+   * **Remembrance Angle:** Low-stress, gentle opportunity for families planning winter services to secure memorial stationery at a discount.
+   * **Product Fit:** Soft Botanical Bundle ($12.99).
+   * **Start Posting:** Nov 20.
+   * **Coupon Suggestion:** Maintain or feature `PEACE25`. *(Requires Owner Approval)*.
+
+4. **Hanukkah Begins — Dec 04, 2026** *(24 days away)*
+   * **Remembrance Angle:** Lighting a dedicated memory candle during the 8 nights of light.
+   * **Product Fit:** Share-a-Memory cards for family candle-lighting gatherings.
+   * **Start Posting:** Nov 20.
+   * **Coupon Suggestion:** `PEACE25`. *(Requires Owner Approval)*.
+
+5. **Longest Night / Blue Christmas — Dec 21, 2026** *(41 days away)*
+   * **Remembrance Angle:** Acknowledging grief, quiet reflection, and community church remembrance services on the longest night of the year.
+   * **Product Fit:** Soft Botanical 4-panel folded program (11x8.5 folding to 5.5x8.5) and Welcome Sign (24x36) for quiet church services.
+   * **Start Posting:** Nov 21 (30 days prior for church service planners).
+   * **Coupon Suggestion:** **None / Gentle promotion only.** Keep tone deeply supportive and simple.
+
+6. **Christmas — Dec 25, 2026** *(45 days away)*
+   * **Remembrance Angle:** "A light for you" — honoring loved ones missing from holiday celebrations.
+   * **Product Fit:** Soft Botanical Welcome Sign (24x36) for memorial display tables; Share-a-Memory cards.
+   * **Start Posting:** Now (Nov 10 for Pinterest lead time).
+   * **Coupon Suggestion:** `PEACE25`. *(Requires Owner Approval)*.
+
+7. **New Year’s Eve & Day — Dec 31, 2026 / Jan 01, 2027** *(51–52 days away)*
+   * **Remembrance Angle:** Entering a new year carrying their memory forward; reflecting on the past year of loss.
+   * **Product Fit:** Share-a-Memory cards for end-of-year family gatherings.
+   * **Start Posting:** Dec 15.
+   * **Coupon Suggestion:** Standard launch discount `PEACE25`. *(Requires Owner Approval)*.
+
+8. **Martin Luther King Jr. Day — Jan 18, 2027** *(69 days away)*
+   * **Remembrance Angle:** Federal holiday; low direct relevance to store core focus.
+   * **Action:** No specific promotion or campaign.
+
+---
+
+### (3) PRODUCT IDEAS: For Product Builder
+
+*   **Thanksgiving Empty-Chair Memory Card (4.25x5.5 in):**
+    *   Single card fill-in PDF formatted for place settings: *"A favorite memory of [Name] at our Thanksgiving table."*
+*   **Christmas / Holiday Table Memorial Sign (8x10 in / 24x36 in):**
+    *   Fill-in PDF welcome/table sign reading: *"This candle burns in loving memory of those who are spending Christmas in heaven."*
+*   **Blue Christmas Service Program Template (US Letter Landscape 11x8.5 in, folds to 5.5x8.5 in):**
+    *   4-panel fill-in PDF specifically designed for church "Longest Night" grief services.
