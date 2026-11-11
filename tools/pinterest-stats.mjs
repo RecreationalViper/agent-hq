@@ -67,5 +67,5 @@ async function write(md, data) {
 
 main().catch(async (e) => {
   console.log(`RESULT pinterest: FAILED ${e.message}`);
-  await write(`Pinterest stats unavailable today: ${e.message}${e.status === 401 ? " (the token expired; the owner needs to generate a new one and save it as PINTEREST_TOKEN)" : ""}`, { error: e.message });
+  await write(`Pinterest stats unavailable today: ${e.message}${/consumer type/i.test(e.message) ? " (the Pinterest app is still waiting for approval; stats start once it's approved)" : e.status === 401 ? " (the token expired or was revoked; the owner needs to generate a new one and save it as PINTEREST_TOKEN)" : ""}`, { error: e.message });
 });
