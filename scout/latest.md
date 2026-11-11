@@ -1,12 +1,10 @@
-# GitHub Radar — 2026-11-10
+# GitHub Radar — 2026-11-11
 
 > Scanned 12 of 29 saved searches (12 returned data, 0 unchanged, 0 failed). 12 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (1)
+## Start here (0)
 
-- **[Ebony-Vinyl/dsh-our-free-model](https://github.com/Ebony-Vinyl/dsh-our-free-model)** 🟢 ADOPT · score 72/100 · ⭐ 68,682 · MIT · updated 0d ago
-  - 在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign…
-  - Why: 68,682 stars; updated this week; MIT license; well established
+_Nothing new cleared the quality bar this scan. That is a normal, healthy result — the radar is rotating through its searches and will cover the rest next time._
 
 ## Agent skills you could install (0)
 
