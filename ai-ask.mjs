@@ -1,7 +1,9 @@
 // Shared AI helper: free Gemini first, Groq as automatic backup.
+// strong: true -> Claude first (capped monthly budget, see claude-ai.mjs), then Gemini Pro and the rest.
 // ask(system, prompt, { json }) -> text (or parsed JSON when json: true)
 import { gwFetch } from "./ai-gateway.mjs";
 import { hasGroq, groqChat } from "./ai-fallback.mjs";
+import { hasClaude, claudeChat } from "./claude-ai.mjs";
 
 const BASE = process.env.API_BASE || "https://generativelanguage.googleapis.com/v1beta";
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -34,8 +36,12 @@ async function pickModels(strong = false) {
 
 const parse = (text, json) => json ? JSON.parse(text.replace(/^```(?:json)?\s*|\s*```$/g, "").trim()) : text;
 
-export async function ask(system, prompt, { json = false, temperature = 0.4, strong = false } = {}) {
+export async function ask(system, prompt, { json = false, temperature = 0.4, strong = false, who = "agent" } = {}) {
   let lastErr;
+  if (strong && hasClaude()) {
+    try { return parse(await claudeChat(system, prompt, { json, temperature, who }), json); }
+    catch (e) { lastErr = e; }
+  }
   if (!geminiOut && process.env.GEMINI_API_KEY) {
     let list;
     try { list = strong ? (strongModels ||= await pickModels(true)) : (models ||= await pickModels()); } catch (e) { lastErr = e; geminiOut = true; list = []; }

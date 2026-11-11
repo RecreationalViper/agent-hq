@@ -3,7 +3,7 @@
 //   1. reads the team's latest reports (Content Planner, SEO Scout, Competitor Scout, Listing Writer, Weekly Review)
 //      and its own notes, so it builds on their work and never repeats itself;
 //   2. gathers fresh data: Google autocomplete (free) and Exa trend searches (within the free budget);
-//   3. writes 5 posts with the strongest available model (Gemini Pro first, then the backups);
+//   3. writes 5 posts with the strongest available model (Claude first within its monthly cap, then Gemini Pro, then the backups);
 //   4. designs the images itself: Pinterest pins (1000x1500) and story/TikTok covers (1080x1920), using the
 //      real product previews, the brand art, and AI-painted backgrounds (Cloudflare FLUX, free; or ART_API_KEY);
 //   5. posts every image with its caption to Discord #content, ready to save from the phone;
@@ -194,10 +194,10 @@ async function main() {
   else {
     const [team, data] = await Promise.all([teamBrief(), freshData()]);
     const prompt = writePrompt(team + (notesBefore ? `\n\n### Your own notes from last time\n${notesBefore.slice(0, 2000)}` : ""), data, history);
-    plan = await ask(SYSTEM, prompt, { json: true, strong: true, temperature: 0.75 });
+    plan = await ask(SYSTEM, prompt, { json: true, strong: true, temperature: 0.75, who: "content-creator" });
     // Self-check: one rewrite if it broke a product fact.
     const bad = /canva/i.test(JSON.stringify(plan.posts || [])) ? "It mentions Canva, but our kit is fill-in PDFs typed in the free Adobe Acrobat Reader app." : "";
-    if (bad) { console.log("  fixing a product-fact mistake"); plan = await ask(SYSTEM, `${prompt}\n\nYour previous draft was wrong: ${bad} Rewrite everything correctly.`, { json: true, strong: true, temperature: 0.6 }); }
+    if (bad) { console.log("  fixing a product-fact mistake"); plan = await ask(SYSTEM, `${prompt}\n\nYour previous draft was wrong: ${bad} Rewrite everything correctly.`, { json: true, strong: true, temperature: 0.6, who: "content-creator" }); }
   }
   const posts = (plan.posts || []).filter((p) => p?.headline).slice(0, COUNT);
   if (!posts.length) throw new Error("The writer returned no posts.");

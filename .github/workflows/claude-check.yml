@@ -1,0 +1,28 @@
+name: Claude Check
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [tools/claude-check.mjs, claude-ai.mjs]
+permissions:
+  contents: write
+concurrency: agent-hq
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Check the Claude key
+        run: node tools/claude-check.mjs
+        env:
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+      - name: Save the result
+        if: always()
+        run: |
+          git config user.name "agent-hq-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/claude-check.md claude-usage.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "Claude Check result" && git pull --rebase && git push)

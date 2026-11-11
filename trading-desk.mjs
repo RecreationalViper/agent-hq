@@ -4,6 +4,8 @@ import { gwFetch } from "./ai-gateway.mjs";
 import fs from "node:fs/promises";
 import { hasExa, search as exaSearch } from "./exa.mjs";
 import { hasGroq, groqChat } from "./ai-fallback.mjs";
+import { hasClaude, claudeChat } from "./claude-ai.mjs";
+const CLAUDE_ROLES = new Set(["Chief Investment Officer", "Head Trader"]);
 import { macroSnapshot } from "./fred.mjs";
 import { report as discordReport } from "./discord.mjs";
 
@@ -65,6 +67,11 @@ async function ask(role, prompt, json = false, systemOverride = null) {
     generationConfig: { temperature: 0.3, ...(json ? { responseMimeType: "application/json" } : {}) }
   });
   let lastErr;
+  // The two decisions that matter most go to Claude first (capped monthly budget); everything else stays free.
+  if (CLAUDE_ROLES.has(role) && hasClaude()) {
+    try { return parse(await claudeChat(system, prompt, { json, temperature: 0.3, who: role }), json); }
+    catch (e) { lastErr = e; }
+  }
   for (let round = 0; round < 3 && !geminiOut; round++) {
     if (round) {
       if (hasGroq()) break; // don't wait around: the backup AI takes over
