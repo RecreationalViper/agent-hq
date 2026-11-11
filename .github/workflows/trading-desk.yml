@@ -32,7 +32,6 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY || secrets.NVIDIA_KEY || secrets.NVIDIA_NIM_API_KEY || secrets.NIM_API_KEY || secrets.NGC_API_KEY || secrets.NVIDIA }}
-          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
           ALPACA_KEY: ${{ secrets.ALPACA_KEY }}
           ALPACA_SECRET: ${{ secrets.ALPACA_SECRET }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY || secrets.FRED_KEY || secrets.FRED }}

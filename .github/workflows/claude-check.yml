@@ -1,9 +1,6 @@
 name: Claude Check
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: [tools/claude-check.mjs, claude-ai.mjs]
 permissions:
   contents: write
 concurrency: agent-hq

@@ -1,5 +1,7 @@
 // Claude (Anthropic API) for Agent HQ: the "strong" writer for the few jobs where quality matters most
 // (Content Creator posts, the trading desk's CIO and Head Trader). Needs the CLAUDE_API_KEY secret.
+// PARKED (owner, Nov 11 2026): no workflow passes CLAUDE_API_KEY, so this stays off until billing is set up.
+// To turn it on: add `CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}` to the content-creator, trading-desk workflows.
 // The key has limited credit, so every call is checked against a monthly budget kept in
 // claude-usage.json (committed by the workflows). Over budget, out of credit or failing -> it throws
 // and the caller falls back to Gemini and the free backups, so nothing stops working.
