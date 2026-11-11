@@ -40,10 +40,14 @@ function bodyText(part) {
 }
 
 const ACCOUNTS = () => [["SHOP", "GMAIL_SHOP_REFRESH_TOKEN"], ["1", "GMAIL_REFRESH_TOKEN"], ["2", "GMAIL_REFRESH_TOKEN_2"], ["3", "GMAIL_REFRESH_TOKEN_3"], ["4", "GMAIL_REFRESH_TOKEN_4"], ["5", "GMAIL_REFRESH_TOKEN_5"]]
-  .map(([key, env]) => ({ key, token: process.env[env]?.trim() })).filter((a) => a.token);
+  .map(([key, env]) => ({ key, token: process.env[env]?.trim(),
+    // The shop Gmail may use its own Google project (GMAIL_SHOP_CLIENT_ID/SECRET); others share GMAIL_CLIENT_ID/SECRET.
+    id: key === "SHOP" && process.env.GMAIL_SHOP_CLIENT_ID ? process.env.GMAIL_SHOP_CLIENT_ID : process.env.GMAIL_CLIENT_ID,
+    secret: key === "SHOP" && process.env.GMAIL_SHOP_CLIENT_SECRET ? process.env.GMAIL_SHOP_CLIENT_SECRET : process.env.GMAIL_CLIENT_SECRET }))
+  .filter((a) => a.token);
 
-async function care(refresh, n) {
-  const api = client(await accessToken(refresh));
+async function care(acct, n) {
+  const api = client(await accessToken(acct.token, acct.id, acct.secret));
   const { threads = [] } = await api(`/threads?${new URLSearchParams({ q: QUERY, maxResults: "25" })}`);
   const out = [];
   for (const { id } of threads) {
@@ -82,7 +86,7 @@ async function care(refresh, n) {
 async function act(action, key, draftId) {
   const acct = ACCOUNTS().find((a) => a.key === key);
   if (!acct || !/^[\w-]+$/.test(draftId || "")) throw new Error("unknown account or draft");
-  const api = client(await accessToken(acct.token));
+  const api = client(await accessToken(acct.token, acct.id, acct.secret));
   if (action === "send") {
     const d = await api(`/drafts/${draftId}?format=metadata`);
     const subj = (d.message?.payload?.headers || []).find((x) => x.name === "Subject")?.value || "";
@@ -102,7 +106,7 @@ async function main() {
   if (!accounts.length) return console.log("RESULT care: no Gmail token saved; skipped");
   const lines = [];
   for (const a of accounts) {
-    try { lines.push(...await care(a.token, a.key)); }
+    try { lines.push(...await care(a, a.key)); }
     catch (e) { console.log(`  account ${a.key}: ${e.message.slice(0, 160)}`); }
   }
   console.log(`RESULT care: ${lines.length} buyer email(s) ${DRY ? "found (dry run)" : "drafted and posted for approval"}`);

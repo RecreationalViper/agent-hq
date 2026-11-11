@@ -82,8 +82,8 @@ export function classify(t, R) {
 }
 
 // ---------- Gmail API ----------
-export async function accessToken(refresh) {
-  const res = await fetch(TOKEN_URL, { method: "POST", signal: AbortSignal.timeout(20000), body: new URLSearchParams({ client_id: process.env.GMAIL_CLIENT_ID.trim(), client_secret: process.env.GMAIL_CLIENT_SECRET.trim(), refresh_token: refresh.trim(), grant_type: "refresh_token" }) });
+export async function accessToken(refresh, clientId = process.env.GMAIL_CLIENT_ID, clientSecret = process.env.GMAIL_CLIENT_SECRET) {
+  const res = await fetch(TOKEN_URL, { method: "POST", signal: AbortSignal.timeout(20000), body: new URLSearchParams({ client_id: (clientId || "").trim(), client_secret: (clientSecret || "").trim(), refresh_token: refresh.trim(), grant_type: "refresh_token" }) });
   const d = await res.json().catch(() => ({}));
   if (!res.ok) {
     // Plain-English fixes. Only Google's error code is shown, never a key.
