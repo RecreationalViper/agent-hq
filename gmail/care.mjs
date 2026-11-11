@@ -106,9 +106,10 @@ async function main() {
   if (!accounts.length) return console.log("RESULT care: no Gmail token saved; skipped");
   const lines = [];
   for (const a of accounts) {
-    try { lines.push(...await care(a, a.key)); }
+    try { lines.push(...await care(a, a.key)); console.log(`  ${a.key === "SHOP" ? "shop" : "personal " + a.key} inbox: signed in ok`); }
     catch (e) { console.log(`  account ${a.key}: ${e.message.slice(0, 160)}`); }
   }
+  console.log(`  inboxes checked: ${accounts.map((a) => a.key === "SHOP" ? "shop" : "personal " + a.key).join(", ")}`);
   console.log(`RESULT care: ${lines.length} buyer email(s) ${DRY ? "found (dry run)" : "drafted and posted for approval"}`);
 }
 main().catch(async (e) => {
