@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-11-researcher.md",
+    "agent": "researcher",
+    "name": "Deep Researcher",
+    "date": "2026-11-11"
+  },
+  {
     "file": "2026-11-10-seasonal.md",
     "agent": "seasonal",
     "name": "Seasonal Planner",

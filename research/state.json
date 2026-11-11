@@ -1,5 +1,18 @@
 {
   "covered": [
+    "https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot",
+    "https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-1-pro-on-amazon-bedrock/",
+    "https://ernie.baidu.com/release/ernie-5-5-flash-preview/",
+    "https://developers.googleblog.com/en/a2ui-10-build-delightful-fast-reliable-agentic-experiences/",
+    "https://blog.atuin.sh/threads-agent-sessions/",
+    "https://github.blog/changelog/2026-11-11-issue-types-and-fields-are-available-for-personal-accounts",
+    "https://github.blog/changelog/2026-11-10-dependabot-alerts-will-pause-on-inactive-repositories",
+    "https://maccus.fr/en/ollama-cloud-free-plan-ends/",
+    "https://dev.to/synap402/what-an-llm-call-actually-costs-in-november-2026-open-models-per-1m-tokens-3poc",
+    "https://arxiv.org/abs/2611.14418v1",
+    "https://arxiv.org/abs/2611.14492v1",
+    "https://arxiv.org/abs/2611.14515v1",
+    "https://aws.amazon.com/blogs/machine-learning/the-agent-evaluation-playbook-built-in-deepeval-and-autoeval-on-agentcore/",
     "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
     "https://www.anthropic.com/claude-fable-and-mythos-5-2",
     "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot",
@@ -36,6 +49,6 @@
     "https://hunch.net/?p=13764006",
     "https://www.kadoa.com/companies/insights/ai-selloff-perspective"
   ],
-  "lastRun": "2026-11-10",
-  "lastNotion": "2026-11-10"
+  "lastRun": "2026-11-11",
+  "lastNotion": "2026-11-11"
 }
