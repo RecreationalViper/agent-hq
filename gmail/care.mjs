@@ -27,7 +27,12 @@ const SYSTEM = `You are Customer Care for Forever Held, a small memorial printab
 ${FACTS}
 Decide if an email is from a buyer or would-be buyer of Forever Held (questions about files, downloading, filling in, printing, sizes, custom requests, refunds, or a Payhip "message from a customer"). Ignore newsletters, receipts the shop received from services, spam and personal mail.
 If it is, write a reply: warm, calm, short (60-140 words), answer the actual question with clear steps, offer condolences only if they mention a loss (once, simply), sign as "Josiah, Forever Held". Never promise refunds or discounts; never invent facts not listed above.
-Answer as JSON: {"customer": true|false, "reason": "...", "reply": "..."}`;
+Also set "routine": true ONLY for simple how-to questions fully answered by the facts above (downloading, opening, filling in, saving, printing, sizes) where the buyer is calm. Set "routine": false for refunds, complaints, custom requests, anything angry, confused about payment, or not covered by the facts.
+Answer as JSON: {"customer": true|false, "routine": true|false, "reason": "...", "reply": "..."}`;
+// Routine replies send on their own (owner's choice, Nov 11 2026); everything else waits for the Send button.
+const AUTO_SEND = process.env.CARE_AUTO_SEND !== "off";
+const AUTO_CAP = 10; // max automatic replies per run
+let autoSent = 0;
 
 const b64url = (s) => Buffer.from(s, "utf8").toString("base64").replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 const decode = (d) => Buffer.from((d || "").replace(/-/g, "+").replace(/_/g, "/"), "base64").toString("utf8");
@@ -70,6 +75,14 @@ async function care(acct, n) {
     out.push(`• ${who} — ${h.subject || "(no subject)"}`);
     if (DRY) continue;
     const draft = await api("/drafts", { method: "POST", body: JSON.stringify({ message: { threadId: id, raw: b64url(raw) } }) });
+    if (AUTO_SEND && r.routine === true && autoSent < AUTO_CAP) {
+      await api("/drafts/send", { method: "POST", body: JSON.stringify({ id: draft.id }) });
+      autoSent++;
+      await postMessage("customer-care", { embeds: [{ title: `✅ Answered automatically: ${subject}`.slice(0, 250), color: 0x3d6b55,
+        description: `**From:** ${who}\n**They asked:** ${text.replace(/\s+/g, " ").slice(0, 500)}\n\n**We replied:**\n${r.reply.slice(0, 2800)}`,
+        footer: { text: "Routine question, so it was sent on its own. Anything unusual waits for your Send button." } }] });
+      continue;
+    }
     await postMessage("customer-care", {
       embeds: [{ title: `✉️ Reply ready: ${subject}`.slice(0, 250), color: 0x3d6b55,
         description: `**From:** ${who}\n**They wrote:** ${text.replace(/\s+/g, " ").slice(0, 600)}\n\n**Our reply:**\n${r.reply.slice(0, 2800)}`,
