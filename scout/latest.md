@@ -1,10 +1,13 @@
 # GitHub Radar — 2026-11-11
 
-> Scanned 12 of 29 saved searches (12 returned data, 0 unchanged, 0 failed). 12 GitHub API calls, authenticated. Zero AI tokens used.
+> Scanned 12 of 29 saved searches (12 returned data, 0 unchanged, 0 failed). 15 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (0)
+## Start here (1)
 
-_Nothing new cleared the quality bar this scan. That is a normal, healthy result — the radar is rotating through its searches and will cover the rest next time._
+- **[obsidianmd/obsidian-skills](https://github.com/obsidianmd/obsidian-skills)** 🟢 ADOPT · score 84/100 · ⭐ 51,665 · MIT · updated 0d ago
+  - Agent skills for Obsidian. Teach your agent to use Obsidian CLI and open formats including Markdown, Bases, JSON Canvas.
+  - Why: 51,665 stars; updated this week; MIT license; well established; contains SKILL.md skill files
+  - Confirmed: contains `SKILL.md` skill files
 
 ## Agent skills you could install (0)
 

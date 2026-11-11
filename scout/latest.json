@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T06:48:31.975Z",
+  "generatedAt": "2026-11-11T17:19:24.473Z",
   "date": "2026-11-11",
   "token": true,
   "searches": {
@@ -9,13 +9,59 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 12,
-  "rateRemaining": 18,
-  "newItems": 0,
+  "apiCalls": 15,
+  "rateRemaining": 9,
+  "newItems": 1,
   "blockedToday": 0,
-  "shortlist": [],
+  "shortlist": [
+    {
+      "name": "obsidianmd/obsidian-skills",
+      "url": "https://github.com/obsidianmd/obsidian-skills",
+      "description": "Agent skills for Obsidian. Teach your agent to use Obsidian CLI and open formats including Markdown, Bases, JSON Canvas.",
+      "stars": 51665,
+      "forks": 3660,
+      "language": "Shell",
+      "license": "MIT",
+      "pushedAt": "2026-11-11T16:12:33Z",
+      "category": "skills",
+      "score": 84,
+      "tier": "adopt",
+      "reasons": [
+        "51,665 stars",
+        "updated this week",
+        "MIT license",
+        "well established",
+        "contains SKILL.md skill files"
+      ],
+      "flags": [],
+      "skillFiles": true
+    }
+  ],
   "byCategory": {
-    "skills": [],
+    "skills": [
+      {
+        "name": "obsidianmd/obsidian-skills",
+        "url": "https://github.com/obsidianmd/obsidian-skills",
+        "description": "Agent skills for Obsidian. Teach your agent to use Obsidian CLI and open formats including Markdown, Bases, JSON Canvas.",
+        "stars": 51665,
+        "forks": 3660,
+        "language": "Shell",
+        "license": "MIT",
+        "pushedAt": "2026-11-11T16:12:33Z",
+        "category": "skills",
+        "score": 84,
+        "tier": "adopt",
+        "reasons": [
+          "51,665 stars",
+          "updated this week",
+          "MIT license",
+          "well established",
+          "contains SKILL.md skill files"
+        ],
+        "flags": [],
+        "skillFiles": true
+      }
+    ],
     "enhancement": [],
     "free-tokens": [],
     "efficiency": []
