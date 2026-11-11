@@ -29,6 +29,6 @@ async function main() {
   md += "\nThe list grows from the free Planning Checklist (https://payhip.com/b/eYJqS): every download with consent is added.\n";
   await fs.writeFile("email/stats.md", md);
   console.log(`RESULT email: base ${BASE}; ${lists.length} list(s): ${lists.map((l) => `${l.name}=${l.counts?.subscribed ?? "?"}`).join(", ")}`);
-  if (process.argv.includes("--probe")) console.log("first list keys:", Object.keys(lists[0] || {}).join(","));
+  if (process.argv.includes("--probe")) console.log("counts:", JSON.stringify(lists.map((l) => l.counts)));
 }
 main().catch(async (e) => { console.log(`RESULT email: FAILED ${e.message}`); await fs.writeFile("email/stats.md", `# Email list\n\nUnavailable today: ${e.message}\n`); });
