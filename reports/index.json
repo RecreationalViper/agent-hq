@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-11-trading-desk.md",
+    "agent": "trading-desk",
+    "name": "Trading Desk",
+    "date": "2026-11-11"
+  },
+  {
     "file": "2026-11-11-github-radar.md",
     "agent": "github-radar",
     "name": "GitHub Radar",
