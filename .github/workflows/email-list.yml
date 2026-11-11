@@ -11,6 +11,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - run: node tools/email-list.mjs --probe && cat email/stats.md
+      - run: node tools/email-list.mjs && cat email/stats.md
         env:
           EMAILOCTOPUS_API_KEY: ${{ secrets.EMAILOCTOPUS_API_KEY }}

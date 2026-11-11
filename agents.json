@@ -1,6 +1,6 @@
 {
   "model": "auto",
-  "context": "Printable memorial kit business (funeral/celebration-of-life programs, welcome signs, share-a-memory cards) sold as fill-in PDFs (buyers type into them in the free Adobe Acrobat Reader app; Canva template links need a paid Canva plan, so we do not use them). Styles: Classic Elegance, Modern Minimal, Soft Watercolor Sky, Soft Botanical. STATUS: no shop is open yet. Brand: Forever Held (store at payhip.com/ForeverHeld, being set up now). Plan: sell first on Payhip (free to open, about 5% per sale), then open the Etsy shop ($15 fee) once sales cover it. Write listings so they work on both Payhip and Etsy, and never tell the owner to publish in an Etsy shop that doesn't exist yet. Owner works only from an iPhone, budget $0, goal is sustainable side income. The owner must approve before spending money, publishing listings or contacting customers. Buyers are grieving families: tone must be calm, respectful and simple. REAL PRODUCT SPECS (use these exactly, never guess sizes): Soft Botanical bundle = folded program printed on US Letter landscape (11x8.5 in) folding to 5.5x8.5 in, 4 panels, US Letter only (no A4); welcome sign 24x36 in (2:3, also prints 16x24 or 12x18); share-a-memory card 4.25x5.5 in, single card. Launch price $12.99. LINKS: product checkout https://payhip.com/b/vqNSA ; storefront https://recreationalviper.github.io/agent-hq/store/ (use these in posts and pins). LIVE since Nov 9, 2026: Soft Botanical bundle at https://payhip.com/b/vqNSA ($12.99, 4 fill-in PDFs). Launch coupon PEACE25 = 25% off this product (use it in posts/pins). FREE LEAD MAGNET (live Nov 10, 2026): Free Funeral & Celebration of Life Planning Checklist, $0, https://payhip.com/b/eYJqS (3-page fill-in PDF). Its job is to grow the email list: point helpful, non-salesy pins and posts to it, especially for people just starting to plan. Mailing list connection (EmailOctopus) is being set up.",
+  "context": "Printable memorial kit business (funeral/celebration-of-life programs, welcome signs, share-a-memory cards) sold as fill-in PDFs (buyers type into them in the free Adobe Acrobat Reader app; Canva template links need a paid Canva plan, so we do not use them). Styles: Classic Elegance, Modern Minimal, Soft Watercolor Sky, Soft Botanical. STATUS: no shop is open yet. Brand: Forever Held (store at payhip.com/ForeverHeld, being set up now). Plan: sell first on Payhip (free to open, about 5% per sale), then open the Etsy shop ($15 fee) once sales cover it. Write listings so they work on both Payhip and Etsy, and never tell the owner to publish in an Etsy shop that doesn't exist yet. Owner works only from an iPhone, budget $0, goal is sustainable side income. The owner must approve before spending money, publishing listings or contacting customers. Buyers are grieving families: tone must be calm, respectful and simple. REAL PRODUCT SPECS (use these exactly, never guess sizes): Soft Botanical bundle = folded program printed on US Letter landscape (11x8.5 in) folding to 5.5x8.5 in, 4 panels, US Letter only (no A4); welcome sign 24x36 in (2:3, also prints 16x24 or 12x18); share-a-memory card 4.25x5.5 in, single card. Launch price $12.99. LINKS: product checkout https://payhip.com/b/vqNSA ; storefront https://recreationalviper.github.io/agent-hq/store/ (use these in posts and pins). LIVE since Nov 9, 2026: Soft Botanical bundle at https://payhip.com/b/vqNSA ($12.99, 4 fill-in PDFs). Launch coupon PEACE25 = 25% off this product (use it in posts/pins). FREE LEAD MAGNET (live Nov 10, 2026): Free Funeral & Celebration of Life Planning Checklist, $0, https://payhip.com/b/eYJqS (3-page fill-in PDF). Its job is to grow the email list: point helpful, non-salesy pins and posts to it, especially for people just starting to plan. Downloads join the EmailOctopus list automatically (subscriber count in email/stats.md).",
   "agents": [
     {
       "id": "daily-task",
@@ -10,7 +10,8 @@
       "doc": "etsy",
       "readsFiles": [
         "pinterest/stats.md",
-        "content/seasonal.md"
+        "content/seasonal.md",
+        "email/stats.md"
       ]
     },
     {
@@ -34,7 +35,8 @@
       "readsFiles": [
         "content/notes.md",
         "pinterest/stats.md",
-        "content/seasonal.md"
+        "content/seasonal.md",
+        "email/stats.md"
       ]
     },
     {
@@ -206,7 +208,8 @@
       "instructions": "You are the manager. Read this week's reports from the team. Summarize: what was produced, the 3 best ideas, decisions the owner must make, anything needing approval (spending, publishing, contacting customers), and the top 3 priorities for next week.",
       "doc": "etsy",
       "readsFiles": [
-        "pinterest/stats.md"
+        "pinterest/stats.md",
+        "email/stats.md"
       ]
     },
     {
@@ -236,7 +239,8 @@
       "doc": "etsy",
       "readsFiles": [
         "content/seasonal.md",
-        "pinterest/stats.md"
+        "pinterest/stats.md",
+        "email/stats.md"
       ],
       "instructions": "Write this month's email to Forever Held buyers and subscribers, to send from Payhip's email tool. Read the Seasonal Planner's calendar and pick the most fitting moment this month (a holiday, a new product, or simply a gentle check-in). Write: a subject line (plus one alternative), a preview line, and a short email (120-180 words): warm, calm, useful first (a remembrance idea, a tip for planning a service, or a way to honor someone on the holiday), then one gentle link to the shop (https://payhip.com/ForeverHeld) and a coupon only if one is active. Never pressure grieving people, never use countdown urgency. Also give the best send date this month. Draft only; the owner sends it."
     },
@@ -246,7 +250,8 @@
       "schedule": "monthly:1",
       "doc": "etsy",
       "readsFiles": [
-        "exa-usage.json"
+        "exa-usage.json",
+        "email/stats.md"
       ],
       "instructions": "You keep the books for Forever Held. Using ONLY the real sales data provided (Payhip sales feed) and the known costs, write last month's simple statement: sales count, gross revenue, Payhip's fee (about 5% per sale) and payment processor fees (estimate PayPal/Stripe at about 2.9% + $0.30 per sale and say it is an estimate), refunds, and net profit. Known costs: $0 tools (all free tiers); list exa-usage.json spend if it shows any paid usage. Then: a running total since launch (Nov 9, 2026), best-selling product, and one money tip (e.g. when the Etsy shop's $15 opening fee is covered). If there were no sales, say so plainly and kindly. Never invent numbers. Note: this is bookkeeping help, not tax advice."
     }

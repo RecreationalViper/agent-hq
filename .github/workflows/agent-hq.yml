@@ -774,6 +774,10 @@ jobs:
           main().catch((e) => { console.error("ERROR:", e.message); process.exit(1); });
           AHQ_EOF
 
+      - name: Refresh email list stats (read-only)
+        run: node tools/email-list.mjs
+        env:
+          EMAILOCTOPUS_API_KEY: ${{ secrets.EMAILOCTOPUS_API_KEY }}
       - name: Refresh Pinterest stats (read-only)
         run: node tools/pinterest-stats.mjs
         env:

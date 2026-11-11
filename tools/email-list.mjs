@@ -18,7 +18,7 @@ async function main() {
   const lists = (await eo("/lists")).data || [];
   let md = `# Email list (EmailOctopus, ${new Date().toISOString().slice(0, 10)})\n\n`;
   for (const l of lists) {
-    const c = l.counts || {};
+    const c = (Array.isArray(l.counts) ? l.counts[0] : l.counts) || {};
     md += `- **${l.name}**: ${c.subscribed ?? "?"} subscribed, ${c.pending ?? 0} pending, ${c.unsubscribed ?? 0} unsubscribed\n`;
   }
   if (!lists.length) md += "- No lists yet.\n";
@@ -28,7 +28,6 @@ async function main() {
   } catch (e) { md += `\n(campaigns: ${e.message})\n`; }
   md += "\nThe list grows from the free Planning Checklist (https://payhip.com/b/eYJqS): every download with consent is added.\n";
   await fs.writeFile("email/stats.md", md);
-  console.log(`RESULT email: base ${BASE}; ${lists.length} list(s): ${lists.map((l) => `${l.name}=${l.counts?.subscribed ?? "?"}`).join(", ")}`);
-  if (process.argv.includes("--probe")) console.log("counts:", JSON.stringify(lists.map((l) => l.counts)));
+  console.log(`RESULT email: base ${BASE}; ${lists.length} list(s): ${lists.map((l) => `${l.name}=${(Array.isArray(l.counts) ? l.counts[0] : l.counts)?.subscribed ?? "?"}`).join(", ")}`);
 }
 main().catch(async (e) => { console.log(`RESULT email: FAILED ${e.message}`); await fs.writeFile("email/stats.md", `# Email list\n\nUnavailable today: ${e.message}\n`); });
