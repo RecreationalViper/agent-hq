@@ -1,22 +1,48 @@
 # GitHub Radar - 2026-11-11
 
-# GitHub Radar Report — 2026-11-11
+# GitHub Radar — 2026-11-11
 
-### 1. Adopt today
-- **obsidianmd/obsidian-skills** — Standardized agent skill definitions (`SKILL.md`) for Markdown, JSON Canvas, and file workflows. Fits your $0 setup because it provides clean prompt structures for reading/writing markdown without needing hosted servers or extra software.
-  - **First step:** Open Safari on your iPhone -> navigate to `github.com/obsidianmd/obsidian-skills` -> tap into any `SKILL.md` file -> check if the prompt structure can be adapted for your repo's markdown agents.
+## 1. Adopt today
+Nothing to adopt today.
 
-### 2. Free tokens worth checking
-- No new verified free token, credit, or tier offers detected in today's scan.
+*(Note: `obsidianmd/obsidian-skills` appeared in the radar scan, but Obsidian is on our "do not use" list).*
 
-### 3. Spend less with what you already have
-- **Filter unchanged watchlist items before calling AI**: Edit `scout/scan.mjs` (or your workflow script) to strip static watchlist items out of the prompt context before calling the Gemini API to cut down daily input token size.
-- **Trim system prompts in workflows**: In `.github/workflows/`, shorten repetitive instructions in the prompt step by referencing key rules directly, reducing token costs on every automated run.
-- **Cache historical reports**: Rely on committed markdown reports in the repo for past context instead of passing historical radar outputs back into fresh daily API runs.
+---
 
-### 4. Ignore for now
-- **modelcontextprotocol/python-sdk** — Requires server runtime on iPhone.
-- **google/adk-recipes** — Too generic for simple setup.
+## 2. Free tokens worth checking
 
-### Do this now:
-Open GitHub in your iPhone browser, view `obsidianmd/obsidian-skills`, and check `SKILL.md` to see if any prompt templates can be copied directly into your repo's agent prompts.
+- **Cloudflare Workers AI (10,000 free daily neurons)**
+  - **Official URL:** https://dash.cloudflare.com/
+  - **What it claims:** 10,000 free neurons per day across 39 models, including `@cf/qwen/qwen3.8-27b` and `@cf/zai-org/glm-4.7-flash` [5].
+  - **Verify on site:** Check your daily neuron meter under Workers & Pages > Workers AI in Cloudflare Dashboard.
+  - **Risk:** Daily neuron exhaustion will drop API calls to backup providers if failover isn't configured in AI Gateway.
+
+- **Groq Free Developer Tier**
+  - **Official URL:** https://console.groq.com/
+  - **What it claims:** Free rate-limited API access (30 RPM, 200K tokens/day on models like `gpt-oss-120b`) without a credit card [3, 4].
+  - **Verify on site:** Check the limits tab in Groq Console for `gpt-oss-120b` and Qwen models [3].
+  - **Risk:** Strict daily token caps (200K TPD) can freeze cron workflows if a script loops unexpectedly.
+
+---
+
+## 3. Spend less with what you already have
+
+- **Cut Claude Code token usage (Save Owner's Limit):**
+  - Use `/clear` to reset the session before starting a new build task. Claude Code resends full conversation history on every turn, causing context bloat where 98%+ of usage goes to re-reading history [12, 14, 16].
+- **Repo Change 1 (`CLAUDE.md`):**
+  - **Edit:** Trim `CLAUDE.md` to under 80 lines, removing long boilerplate or prompt history. Claude Code injects `CLAUDE.md` into every single request, inflating context tokens automatically [12, 16].
+- **Repo Change 2 (`scout/scan.mjs` or script prompts):**
+  - **Edit:** Ensure Gemini API calls set explicit system instructions once and reuse cached context rather than embedding full repository text into prompt body calls [3, 14].
+
+---
+
+## 4. Ignore for now
+
+- **obsidianmd/obsidian-skills:** We do not use Obsidian.
+- **Zoom AI Launchpad ($150K):** Requires formal startup program application [7].
+- **AMD & GMI Cloud Credits:** Requires dedicated GPU cloud setup [9, 10].
+
+---
+
+**Do this now:**
+Open GitHub on your phone, edit `CLAUDE.md` to trim redundant instructions down to essential build rules, and run `/clear` in your next Claude Code session.
