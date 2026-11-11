@@ -1,5 +1,29 @@
 [
   {
+    "file": "2026-11-11-partner-finder.md",
+    "agent": "partner-finder",
+    "name": "Partner Finder",
+    "date": "2026-11-11"
+  },
+  {
+    "file": "2026-11-11-github-radar.md",
+    "agent": "github-radar",
+    "name": "GitHub Radar",
+    "date": "2026-11-11"
+  },
+  {
+    "file": "2026-11-11-ideas.md",
+    "agent": "ideas",
+    "name": "Product Ideas",
+    "date": "2026-11-11"
+  },
+  {
+    "file": "2026-11-11-daily-task.md",
+    "agent": "daily-task",
+    "name": "Daily Focus",
+    "date": "2026-11-11"
+  },
+  {
     "file": "2026-11-11-researcher.md",
     "agent": "researcher",
     "name": "Deep Researcher",
