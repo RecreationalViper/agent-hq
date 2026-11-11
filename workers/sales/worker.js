@@ -165,13 +165,29 @@ async function run(env, choice) {
   return r.status === 204 ? `🚀 Started **${choice}**. Its report will post in its channel when done (usually 2-10 minutes).` : `❌ Couldn't start ${choice} (GitHub ${r.status}: ${(await r.text()).slice(0, 150)})`;
 }
 
+// Customer Care buttons: custom_id "care:send|discard:<account>:<draftId>" -> Customer Care Send workflow.
+async function button(env, i, admin) {
+  if (!admin) return reply("Only the owner can approve replies.", 64);
+  const m = String(i.data?.custom_id || "").match(/^care:(send|discard):(SHOP|[1-5]):([\w-]+)$/);
+  if (!m) return reply("Unknown button.", 64);
+  if (!env.GH_TOKEN) return reply("⚙️ Buttons need GH_DISPATCH_TOKEN first.", 64);
+  const r = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/care-send.yml/dispatches`, {
+    method: "POST", headers: { Authorization: `Bearer ${env.GH_TOKEN}`, Accept: "application/vnd.github+json", "User-Agent": "AgentHQ-Discord", "content-type": "application/json" },
+    body: JSON.stringify({ ref: "main", inputs: { action: m[1], account: m[2], draft: m[3] } })
+  });
+  if (r.status !== 204) return reply(`❌ Couldn't start that (GitHub ${r.status}). The draft is still in Gmail.`, 64);
+  const embed = { ...(i.message?.embeds?.[0] || {}), footer: { text: m[1] === "send" ? "📤 Sending… a ✅ confirmation follows in about a minute." : "🗑️ Discarding the draft…" } };
+  return json({ type: 7, data: { embeds: [embed], components: [] } }); // update the message: buttons removed
+}
+
 async function discord(req, env, ctx) {
   const body = await req.text();
   if (!(await verified(req, env, body))) return new Response("bad signature", { status: 401 });
   const i = JSON.parse(body);
   if (i.type === 1) return json({ type: 1 }); // PING
-  if (i.type !== 2) return json({ type: 4, data: { content: "Unsupported." } });
   const admin = (BigInt(i.member?.permissions || "0") & 8n) === 8n;
+  if (i.type === 3) return button(env, i, admin); // Send / Discard buttons
+  if (i.type !== 2) return json({ type: 4, data: { content: "Unsupported." } });
   if (!admin) return reply("Only the owner can use Agent HQ commands.", 64);
   const name = i.data.name, opt = Object.fromEntries((i.data.options || []).map((o) => [o.name, o.value]));
   try {

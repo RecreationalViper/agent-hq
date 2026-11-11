@@ -66,3 +66,4 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY || secrets.NVIDIA_KEY || secrets.NVIDIA_NIM_API_KEY || secrets.NIM_API_KEY || secrets.NGC_API_KEY || secrets.NVIDIA }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          GMAIL_SHOP_REFRESH_TOKEN: ${{ secrets.GMAIL_SHOP_REFRESH_TOKEN }}

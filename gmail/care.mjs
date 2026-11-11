@@ -1,5 +1,7 @@
-// Customer Care: finds buyer emails about Forever Held and writes a kind reply as a Gmail DRAFT.
-// It never sends anything: the owner reads the draft in Gmail and taps Send (or deletes it).
+// Customer Care: finds buyer emails about Forever Held and writes a kind reply as a Gmail DRAFT,
+// then posts it to Discord #sales with Send / Discard buttons. Nothing is sent until the owner taps Send
+// (the button starts the "Customer Care Send" workflow, which runs: node gmail/care.mjs --send|--discard <account> <draftId>).
+// Accounts: GMAIL_SHOP_REFRESH_TOKEN (the Forever Held Gmail) plus GMAIL_REFRESH_TOKEN, _2 … _5.
 // Runs daily after the Junk Sweeper (.github/workflows/gmail-sweeper.yml).
 // This repo is PUBLIC: the Actions log shows counts only; subjects go to the private Discord #inbox.
 //
@@ -7,7 +9,7 @@
 //   node gmail/care.mjs --dry-run  show counts, write nothing
 import { accessToken, client } from "./sweep.mjs";
 import { ask } from "../ai-ask.mjs";
-import { report } from "../discord.mjs";
+import { report, postMessage } from "../discord.mjs";
 
 const DRY = process.argv.includes("--dry-run");
 // Recent inbox mail from people, that mentions the shop or an order. Skips promotions/social and our own mail.
@@ -37,6 +39,9 @@ function bodyText(part) {
   return "";
 }
 
+const ACCOUNTS = () => [["SHOP", "GMAIL_SHOP_REFRESH_TOKEN"], ["1", "GMAIL_REFRESH_TOKEN"], ["2", "GMAIL_REFRESH_TOKEN_2"], ["3", "GMAIL_REFRESH_TOKEN_3"], ["4", "GMAIL_REFRESH_TOKEN_4"], ["5", "GMAIL_REFRESH_TOKEN_5"]]
+  .map(([key, env]) => ({ key, token: process.env[env]?.trim() })).filter((a) => a.token);
+
 async function care(refresh, n) {
   const api = client(await accessToken(refresh));
   const { threads = [] } = await api(`/threads?${new URLSearchParams({ q: QUERY, maxResults: "25" })}`);
@@ -57,22 +62,52 @@ async function care(refresh, n) {
     const to = h["reply-to"] || h.from;
     const subject = /^re:/i.test(h.subject || "") ? h.subject : `Re: ${h.subject || "your message"}`;
     const raw = [`To: ${to}`, `Subject: ${subject}`, `In-Reply-To: ${h["message-id"] || ""}`, `References: ${[h.references, h["message-id"]].filter(Boolean).join(" ")}`, "Content-Type: text/plain; charset=UTF-8", "", r.reply].join("\r\n");
-    if (!DRY) await api("/drafts", { method: "POST", body: JSON.stringify({ message: { threadId: id, raw: b64url(raw) } }) });
-    out.push(`• ${(h.from || "").replace(/<.*>/, "").trim()} — ${h.subject || "(no subject)"}`);
+    const who = (h.from || "").replace(/<.*>/, "").trim() || "a buyer";
+    out.push(`• ${who} — ${h.subject || "(no subject)"}`);
+    if (DRY) continue;
+    const draft = await api("/drafts", { method: "POST", body: JSON.stringify({ message: { threadId: id, raw: b64url(raw) } }) });
+    await postMessage("customer-care", {
+      embeds: [{ title: `✉️ Reply ready: ${subject}`.slice(0, 250), color: 0x3d6b55,
+        description: `**From:** ${who}\n**They wrote:** ${text.replace(/\s+/g, " ").slice(0, 600)}\n\n**Our reply:**\n${r.reply.slice(0, 2800)}`,
+        footer: { text: "Nothing is sent until you tap Send. To change the wording, edit the draft in Gmail first." } }],
+      components: [{ type: 1, components: [
+        { type: 2, style: 3, label: "Send", custom_id: `care:send:${n}:${draft.id}` },
+        { type: 2, style: 4, label: "Discard", custom_id: `care:discard:${n}:${draft.id}` }] }]
+    });
   }
   return out;
 }
 
-async function main() {
-  const tokens = ["", "_2", "_3", "_4", "_5"].map((s) => process.env[`GMAIL_REFRESH_TOKEN${s}`]).filter(Boolean);
-  if (!tokens.length) return console.log("RESULT care: no Gmail token saved; skipped");
-  const lines = [];
-  for (const [i, tok] of tokens.entries()) {
-    try { lines.push(...await care(tok, i + 1)); }
-    catch (e) { console.log(`  account ${i + 1}: ${e.message.slice(0, 160)}`); }
+// Owner tapped a button in Discord: send or discard one draft.
+async function act(action, key, draftId) {
+  const acct = ACCOUNTS().find((a) => a.key === key);
+  if (!acct || !/^[\w-]+$/.test(draftId || "")) throw new Error("unknown account or draft");
+  const api = client(await accessToken(acct.token));
+  if (action === "send") {
+    const d = await api(`/drafts/${draftId}?format=metadata`);
+    const subj = (d.message?.payload?.headers || []).find((x) => x.name === "Subject")?.value || "";
+    await api("/drafts/send", { method: "POST", body: JSON.stringify({ id: draftId }) });
+    await report("customer-care", "✅ Reply sent", `Sent: ${subj}`, { color: 0x3d6b55 });
+  } else {
+    await api(`/drafts/${draftId}`, { method: "DELETE" });
+    await report("customer-care", "🗑️ Draft discarded", "The reply draft was deleted from Gmail. The buyer's email is still in your inbox.", { color: 0x8a8a8a });
   }
-  console.log(`RESULT care: ${lines.length} buyer email(s) ${DRY ? "found (dry run)" : "answered as drafts"}`);
-  if (lines.length && !DRY) await report("customer-care", `Customer Care: ${lines.length} reply draft(s) waiting in Gmail`,
-    `${lines.join("\n")}\n\nOpen Gmail → Drafts, read each reply, edit if needed, then tap Send. Nothing was sent.`, { color: 0x3d6b55 });
+  console.log(`RESULT care: ${action} done`);
 }
-main().catch((e) => { console.log(`RESULT care: FAILED ${e.message}`); });
+
+async function main() {
+  const i = process.argv.findIndex((a) => a === "--send" || a === "--discard");
+  if (i > -1) return act(process.argv[i].slice(2), process.argv[i + 1], process.argv[i + 2]);
+  const accounts = ACCOUNTS();
+  if (!accounts.length) return console.log("RESULT care: no Gmail token saved; skipped");
+  const lines = [];
+  for (const a of accounts) {
+    try { lines.push(...await care(a.token, a.key)); }
+    catch (e) { console.log(`  account ${a.key}: ${e.message.slice(0, 160)}`); }
+  }
+  console.log(`RESULT care: ${lines.length} buyer email(s) ${DRY ? "found (dry run)" : "drafted and posted for approval"}`);
+}
+main().catch(async (e) => {
+  console.log(`RESULT care: FAILED ${e.message}`);
+  if (process.argv.some((a) => a === "--send" || a === "--discard")) { await report("customer-care", "❌ Couldn't finish that", `${e.message.slice(0, 300)}\n\nThe draft is still in Gmail → Drafts if you want to send it by hand.`, { color: 0xa8432f }); process.exitCode = 1; }
+});

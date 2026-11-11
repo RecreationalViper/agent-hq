@@ -1,0 +1,41 @@
+# Customer Care Send: started by the Send / Discard buttons in Discord #sales (via the Cloudflare worker).
+# Sends or discards ONE Gmail draft that Customer Care wrote. Log shows no email content (public repo).
+name: Customer Care Send
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "send or discard"
+        required: true
+      account:
+        description: "SHOP or 1-5"
+        required: true
+      draft:
+        description: "Gmail draft id"
+        required: true
+permissions:
+  contents: read
+jobs:
+  act:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Send or discard the draft
+        run: node gmail/care.mjs "--$ACTION" "$ACCOUNT" "$DRAFT"
+        env:
+          ACTION: ${{ github.event.inputs.action == 'send' && 'send' || 'discard' }}
+          ACCOUNT: ${{ github.event.inputs.account }}
+          DRAFT: ${{ github.event.inputs.draft }}
+          GMAIL_CLIENT_ID: ${{ secrets.GMAIL_CLIENT_ID }}
+          GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
+          GMAIL_SHOP_REFRESH_TOKEN: ${{ secrets.GMAIL_SHOP_REFRESH_TOKEN }}
+          GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
+          GMAIL_REFRESH_TOKEN_2: ${{ secrets.GMAIL_REFRESH_TOKEN_2 }}
+          GMAIL_REFRESH_TOKEN_3: ${{ secrets.GMAIL_REFRESH_TOKEN_3 }}
+          GMAIL_REFRESH_TOKEN_4: ${{ secrets.GMAIL_REFRESH_TOKEN_4 }}
+          GMAIL_REFRESH_TOKEN_5: ${{ secrets.GMAIL_REFRESH_TOKEN_5 }}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}

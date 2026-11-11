@@ -80,6 +80,18 @@ export async function report(agentKey, title, markdown, { color = 0x6d7f5f, file
   } catch (e) { console.log(`  couldn't post to Discord: ${e.message}`); return false; }
 }
 
+// Posts any message (embeds + buttons) to an agent's channel. Never throws.
+export async function postMessage(agentKey, payload) {
+  if (!hasDiscord()) return false;
+  try {
+    const key = CHANNELS[agentKey] ? agentKey : AGENT_CHANNEL[agentKey] || "alerts";
+    const id = await channelId(key);
+    if (!id) return false;
+    await api(`/channels/${id}/messages`, { method: "POST", body: JSON.stringify(payload) });
+    return true;
+  } catch (e) { console.log(`  couldn't post to Discord: ${e.message}`); return false; }
+}
+
 export async function alert(text) {
   if (!hasDiscord()) return false;
   try {
