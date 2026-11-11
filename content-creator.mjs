@@ -51,6 +51,8 @@ async function teamBrief() {
     const body = (await read(`reports/${r.file}`)).replace(/^# .*\n+/, "");
     out += `\n\n### ${r.name} (${r.date})\n${body.slice(0, max)}`;
   }
+  const season = await read("content/seasonal.md");
+  if (season) out += `\n\n### Seasonal Planner's holiday calendar (plan pins 30-60 days ahead of each holiday)\n${season.slice(0, 4000)}`;
   const pins = await read("pinterest/stats.md");
   if (pins) out += `\n\n### Pinterest results (real numbers: make more of what gets saves and clicks)\n${pins.slice(0, 4000)}`;
   return out || "\n\n(No team reports yet.)";

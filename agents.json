@@ -9,8 +9,21 @@
       "instructions": "Give the owner ONE task for today that moves the shop forward and takes 30 minutes or less on an iPhone. Say exactly what to do, why it matters, and how to know it's done. Vary the task day to day across products, listings, marketing and records.",
       "doc": "etsy",
       "readsFiles": [
-        "pinterest/stats.md"
+        "pinterest/stats.md",
+        "content/seasonal.md"
       ]
+    },
+    {
+      "id": "seasonal",
+      "name": "Seasonal Planner",
+      "schedule": "weekly:mon",
+      "holidays": 90,
+      "saveAs": "content/seasonal.md",
+      "doc": "etsy",
+      "readsFiles": [
+        "pinterest/stats.md"
+      ],
+      "instructions": "You keep the team's holiday calendar. Using ONLY the computed holiday list provided (never invent dates), plan the next 90 days for Forever Held. Pinterest users save holiday ideas 30-60 days early, so plan ahead. Write: (1) THIS WEEK: what the Content Creator, Content Planner and Email Marketer should make now and for which holiday, with 2-3 pin headline ideas and keywords each; (2) COMING UP: each holiday in the list with its date, how to honor it (remembrance angle, which of our products fit, what new product could fit), when to start posting, and whether a coupon makes sense (suggest only; the owner approves coupons); (3) PRODUCT IDEAS for the Product Builder tied to upcoming holidays (e.g. a remembrance ornament card for Christmas, an empty-chair place card for Thanksgiving). Mark very sensitive days (pregnancy and infant loss, 9/11) as remembrance-only: no sales, no coupons. Tone: gentle, never salesy about grief."
     },
     {
       "id": "content",
@@ -20,7 +33,8 @@
       "doc": "etsy",
       "readsFiles": [
         "content/notes.md",
-        "pinterest/stats.md"
+        "pinterest/stats.md",
+        "content/seasonal.md"
       ]
     },
     {
@@ -28,14 +42,20 @@
       "name": "Product Ideas",
       "schedule": "weekly:wed",
       "instructions": "Suggest 3 new original memorial printable products that fit our existing styles. For each: what it is, who buys it and when, the pages/sizes included, and a suggested price. No recipes, patterns or how-to instruction products.",
-      "doc": "etsy"
+      "doc": "etsy",
+      "readsFiles": [
+        "content/seasonal.md"
+      ]
     },
     {
       "id": "listing",
       "name": "Listing Writer",
       "schedule": "weekly:fri",
       "instructions": "Pick one product from our kits or this week's product ideas and draft a complete Etsy listing: a title under 140 characters, exactly 13 tags of 20 characters or fewer, a description with a clear 'What you get' list and this AI disclosure line: 'Designed by me with the help of AI tools; previews show the real files you receive.' Mark it DRAFT - owner must review and publish.",
-      "doc": "etsy"
+      "doc": "etsy",
+      "readsFiles": [
+        "content/seasonal.md"
+      ]
     },
     {
       "id": "credit-scout",
@@ -78,8 +98,8 @@
       "readsFiles": [
         "scout/latest.md"
       ],
-      "context": "The owner runs this repo as a free, phone-first AI workspace: GitHub Actions does the work, reports are committed to the repo, and the owner reads them in a browser on an iPhone. The owner pays $0, uses free tiers (Google Gemini API in this repo) and whatever free tokens/credits they can legitimately get. The owner also runs other teams of agents and does not want to spend time browsing GitHub for the next best thing. A separate zero-token scanner (scout/scan.mjs) runs every few hours, searches GitHub, filters out scams, and writes scout/latest.md \u2014 that file, dated today, is the input for this report.",
-      "instructions": "You are the analyst for the GitHub Radar. scout/latest.md below is real, freshly scanned GitHub data: new agent skills, AI enhancements that work with any model, legitimate free tokens/credits, and tools that cut AI usage. Work only from that file; you have no other findings. Write a short, phone-friendly report:\n\n1. 'Adopt today' \u2014 at most 3 items, best first. For each: one line on what it is, why it fits this owner's $0 / iPhone-only setup, and the exact 5-minute first step (what to open, what to tap, what to check). Skip anything that needs a server or a paid plan unless you explain the catch in the same line.\n2. 'Free tokens worth checking' \u2014 only items the radar scored as licensed and active. For each: what the offer claims, the one thing to verify on the provider's own site, and the risk. Say plainly when an offer is third-party and unverified.\n3. 'Spend less with what you already have' \u2014 up to 3 concrete changes to this repo's own setup (model choice, prompt size, caching, batching, reusing reports instead of re-asking). Each with the exact edit or file to change. This is the part that lowers the owner's daily AI usage, so make it specific to this repo.\n4. 'Ignore for now' \u2014 anything that looked shiny but does not fit, with a 5-word reason.\n5. End with 'Do this now:' and exactly one action, 30 minutes or less, on a phone.\n\nRules: you cannot install, run, star, or pay for anything \u2014 never imply you did. Never recommend sharing an API key with a third-party proxy, using cracked or generated keys, multi-accounting for free credits, or anything against a provider's terms; if a radar item looks like that, tell the owner to skip it. If scout/latest.md shows nothing new, keep the whole report under 10 lines, say the radar is quiet, and give the standing playbook instead."
+      "context": "The owner runs this repo as a free, phone-first AI workspace: GitHub Actions does the work, reports are committed to the repo, and the owner reads them in a browser on an iPhone. The owner pays $0, uses free tiers (Google Gemini API in this repo) and whatever free tokens/credits they can legitimately get. The owner also runs other teams of agents and does not want to spend time browsing GitHub for the next best thing. A separate zero-token scanner (scout/scan.mjs) runs every few hours, searches GitHub, filters out scams, and writes scout/latest.md — that file, dated today, is the input for this report.",
+      "instructions": "You are the analyst for the GitHub Radar. scout/latest.md below is real, freshly scanned GitHub data: new agent skills, AI enhancements that work with any model, legitimate free tokens/credits, and tools that cut AI usage. Work only from that file; you have no other findings. Write a short, phone-friendly report:\n\n1. 'Adopt today' — at most 3 items, best first. For each: one line on what it is, why it fits this owner's $0 / iPhone-only setup, and the exact 5-minute first step (what to open, what to tap, what to check). Skip anything that needs a server or a paid plan unless you explain the catch in the same line.\n2. 'Free tokens worth checking' — only items the radar scored as licensed and active. For each: what the offer claims, the one thing to verify on the provider's own site, and the risk. Say plainly when an offer is third-party and unverified.\n3. 'Spend less with what you already have' — up to 3 concrete changes to this repo's own setup (model choice, prompt size, caching, batching, reusing reports instead of re-asking). Each with the exact edit or file to change. This is the part that lowers the owner's daily AI usage, so make it specific to this repo.\n4. 'Ignore for now' — anything that looked shiny but does not fit, with a 5-word reason.\n5. End with 'Do this now:' and exactly one action, 30 minutes or less, on a phone.\n\nRules: you cannot install, run, star, or pay for anything — never imply you did. Never recommend sharing an API key with a third-party proxy, using cracked or generated keys, multi-accounting for free credits, or anything against a provider's terms; if a radar item looks like that, tell the owner to skip it. If scout/latest.md shows nothing new, keep the whole report under 10 lines, say the radar is quiet, and give the standing playbook instead."
     },
     {
       "id": "competitor-scout",
@@ -195,6 +215,40 @@
       "schedule": "manual",
       "doc": "etsy",
       "instructions": "Prepare everything the owner needs to launch the FIRST Forever Held product on Payhip today. Product: the Soft Botanical Celebration of Life bundle: an editable funeral program (4-page folded, US Letter and A4), a welcome sign, and share-a-memory cards, all as Canva templates the buyer edits for free. Deliver these sections with clear headings:\n1. Price: one recommended price and a 2-line reason (buyers are grieving families comparing Etsy-style printables). Also one launch-week discount idea.\n2. Payhip product title (under 80 characters).\n3. Product description ready to paste: what's included, sizes, how it works (buy, download the PDF, tap the Canva link, edit free on phone or computer, print at home or at a local print shop), a gentle note that it's a digital download (nothing is shipped), and this disclosure: 'Designed by me with the help of AI tools; previews show the real files you receive.'\n4. 'What you get' bullets.\n5. The full text for the 1-page delivery PDF: warm thank-you, a [CANVA LINK] placeholder button, printing tips (paper, sizes, where to print), and a [SUPPORT EMAIL] placeholder.\n6. Four preview images to make in Canva: what each shows and its short text overlay.\n7. Five Pinterest pin ideas (title + keyword-rich description) and two short video ideas.\n8. The owner's exact iPhone upload checklist: in Canva, share each design as a template link; make the delivery PDF; in Payhip, Add Product > Digital Download, upload the PDF, paste title/description, set price, add the 4 images, publish.\nDon't invent features that aren't listed; mark anything you're assuming."
+    },
+    {
+      "id": "product-builder",
+      "name": "Product Builder",
+      "schedule": "weekly:thu",
+      "doc": "etsy",
+      "saveAs": "products/next-product.md",
+      "readsFiles": [
+        "content/seasonal.md",
+        "pinterest/stats.md"
+      ],
+      "instructions": "You turn the team's ideas into ONE ready-to-build product each week. Read this week's Product Ideas, Competitor Scout and Seasonal Planner work (in the team reports and files provided) plus real sales, and choose the single best next product: one that fits an upcoming holiday or a gap competitors leave, and pairs with our Soft Botanical or Classic Elegance styles. Write a complete build spec: product name; why now (cite the teammate who suggested it); every page with exact size (US Letter or standard US print sizes only); every fill-in field (field name, sample text in the same gentle voice as our kit, about how many lines); the artwork needed per page; a suggested price and whether it belongs in a bundle; and a Payhip title plus 3 preview image ideas. Our files are fill-in PDFs that buyers type into with the free Adobe Acrobat Reader: never mention Canva editing. End with 'Owner: reply BUILD in Discord to have it made.' This is a spec only; nothing is published without the owner's approval.",
+      "reads": "all"
+    },
+    {
+      "id": "email-marketer",
+      "name": "Email Marketer",
+      "schedule": "monthly:1",
+      "doc": "etsy",
+      "readsFiles": [
+        "content/seasonal.md",
+        "pinterest/stats.md"
+      ],
+      "instructions": "Write this month's email to Forever Held buyers and subscribers, to send from Payhip's email tool. Read the Seasonal Planner's calendar and pick the most fitting moment this month (a holiday, a new product, or simply a gentle check-in). Write: a subject line (plus one alternative), a preview line, and a short email (120-180 words): warm, calm, useful first (a remembrance idea, a tip for planning a service, or a way to honor someone on the holiday), then one gentle link to the shop (https://payhip.com/ForeverHeld) and a coupon only if one is active. Never pressure grieving people, never use countdown urgency. Also give the best send date this month. Draft only; the owner sends it."
+    },
+    {
+      "id": "bookkeeper",
+      "name": "Bookkeeper",
+      "schedule": "monthly:1",
+      "doc": "etsy",
+      "readsFiles": [
+        "exa-usage.json"
+      ],
+      "instructions": "You keep the books for Forever Held. Using ONLY the real sales data provided (Payhip sales feed) and the known costs, write last month's simple statement: sales count, gross revenue, Payhip's fee (about 5% per sale) and payment processor fees (estimate PayPal/Stripe at about 2.9% + $0.30 per sale and say it is an estimate), refunds, and net profit. Known costs: $0 tools (all free tiers); list exa-usage.json spend if it shows any paid usage. Then: a running total since launch (Nov 9, 2026), best-selling product, and one money tip (e.g. when the Etsy shop's $15 opening fee is covered). If there were no sales, say so plainly and kindly. Never invent numbers. Note: this is bookkeeping help, not tax advice."
     }
   ],
   "docs": {

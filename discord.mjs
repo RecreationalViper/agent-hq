@@ -8,21 +8,21 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 // Channel key -> name and topic. Add a role here and run "Discord Setup" to create its channel.
 export const CHANNELS = {
-  sales: ["sales", "Every Forever Held sale and refund, the moment it happens"],
+  sales: ["sales", "Sales, refunds, Customer Care reply drafts and the Bookkeeper's monthly statement"],
   "daily-focus": ["daily-focus", "Daily Focus: one shop task a day"],
   listings: ["listings", "Listing Writer: titles, tags and descriptions ready to paste"],
-  content: ["content", "Content Planner and Content Creator: ready-to-post pins, stories and captions to download"],
-  "product-ideas": ["product-ideas", "Product Ideas: new products to build"],
+  content: ["content", "Content Planner, Content Creator, Seasonal Planner and Email Marketer: pins, stories, captions, holiday plans and emails"],
+  "product-ideas": ["product-ideas", "Product Ideas and Product Builder: new products and ready-to-build specs"],
   competitors: ["competitors", "Competitor Scout and Partner Finder: who else sells memorial printables, and who could recommend us"],
   seo: ["seo", "SEO Scout: keywords, titles, tags and pins from real Google data"],
   "weekly-review": ["weekly-review", "Weekly Review: how the shop did and what to decide"],
   "trading-desk": ["trading-desk", "Trading Desk (paper money): daily trades, Head Trader reviews, backtests"],
   research: ["research", "Deep Researcher, Credit Scout and GitHub Radar"],
-  inbox: ["inbox", "Email team: what the Junk Sweeper removed, and later customer inquiries"],
+  inbox: ["inbox", "Email team: Junk Sweeper results and Customer Care reply drafts"],
   alerts: ["alerts", "Anything that failed or needs your attention"]
 };
 // Which channel each agent reports to
-export const AGENT_CHANNEL = { "daily-task": "daily-focus", content: "content", ideas: "product-ideas", listing: "listings", review: "weekly-review", "credit-scout": "research", "github-radar": "research", researcher: "research", "trading-desk": "trading-desk", "head-trader": "trading-desk", backtest: "trading-desk", launch: "listings", seo: "seo", "competitor-scout": "competitors", "partner-finder": "competitors", "content-creator": "content" };
+export const AGENT_CHANNEL = { "daily-task": "daily-focus", content: "content", ideas: "product-ideas", listing: "listings", review: "weekly-review", "credit-scout": "research", "github-radar": "research", researcher: "research", "trading-desk": "trading-desk", "head-trader": "trading-desk", backtest: "trading-desk", launch: "listings", seo: "seo", "competitor-scout": "competitors", "partner-finder": "competitors", "content-creator": "content", seasonal: "content", "email-marketer": "content", "product-builder": "product-ideas", bookkeeper: "sales", "customer-care": "sales" };
 
 export const hasDiscord = () => Boolean(process.env.DISCORD_BOT_TOKEN);
 

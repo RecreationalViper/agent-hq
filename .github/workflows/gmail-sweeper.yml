@@ -1,7 +1,7 @@
 # Gmail Junk Sweeper — once a day, in bulk, on GitHub's free servers.
 # Trashes junk, sends phishing to Spam, never touches mail from people. Setup: gmail/README.md
 # This repo is public, so this log shows counts only; details go to Discord #inbox.
-name: Gmail Junk Sweeper
+name: Gmail Junk Sweeper + Customer Care
 on:
   schedule:
     - cron: "41 10 * * *" # daily, 5:41 AM Eastern
@@ -27,6 +27,27 @@ jobs:
         run: node gmail/sweep.mjs --selftest
       - name: Sweep inbox
         run: node gmail/sweep.mjs ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
+        env:
+          GMAIL_CLIENT_ID: ${{ secrets.GMAIL_CLIENT_ID }}
+          GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
+          GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
+          GMAIL_REFRESH_TOKEN_2: ${{ secrets.GMAIL_REFRESH_TOKEN_2 }}
+          GMAIL_REFRESH_TOKEN_3: ${{ secrets.GMAIL_REFRESH_TOKEN_3 }}
+          GMAIL_REFRESH_TOKEN_4: ${{ secrets.GMAIL_REFRESH_TOKEN_4 }}
+          GMAIL_REFRESH_TOKEN_5: ${{ secrets.GMAIL_REFRESH_TOKEN_5 }}
+          GMAIL_OWNER_NAMES: ${{ secrets.GMAIL_OWNER_NAMES }}
+          GMAIL_KEEP_DOMAINS: ${{ secrets.GMAIL_KEEP_DOMAINS }}
+          GMAIL_JUNK_DOMAINS: ${{ secrets.GMAIL_JUNK_DOMAINS }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY || secrets.NVIDIA_KEY || secrets.NVIDIA_NIM_API_KEY || secrets.NIM_API_KEY || secrets.NGC_API_KEY || secrets.NVIDIA }}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+      - name: Customer Care (writes reply drafts, never sends)
+        if: always()
+        run: node gmail/care.mjs ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
         env:
           GMAIL_CLIENT_ID: ${{ secrets.GMAIL_CLIENT_ID }}
           GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}

@@ -8,6 +8,7 @@ import { salesSummary } from "./sales.mjs";
 import { seoResearch } from "./seo.mjs";
 import { hasExa, researchBlock } from "./exa.mjs";
 import { report as discordReport, alert as discordAlert } from "./discord.mjs";
+import { upcoming } from "./holidays.mjs";
 
 const API = process.env.API_BASE || "https://generativelanguage.googleapis.com/v1beta";
 const KEY = process.env.GEMINI_API_KEY;
@@ -24,7 +25,7 @@ function today() {
   return { date: `${get("year")}-${get("month")}-${get("day")}`, dow: get("weekday").toLowerCase().slice(0, 3) };
 }
 
-function isDue(agent, dow) {
+function isDue(agent, dow, date = "") {
   if (agent.enabled === false) return false;
   if (MODE !== "due" && MODE !== "all") return agent.id === MODE;
   const s = String(agent.schedule || "manual").toLowerCase();
@@ -33,7 +34,9 @@ function isDue(agent, dow) {
   if (s === "daily") return true;
   if (s === "weekdays") return !["sat", "sun"].includes(dow);
   const m = s.match(/^weekly:([a-z]{3})$/);
-  return Boolean(m && m[1] === dow);
+  if (m) return m[1] === dow;
+  const mo = s.match(/^monthly:(\d{1,2})$/); // e.g. monthly:1 = the 1st of each month
+  return Boolean(mo && Number(date.slice(8, 10)) === Number(mo[1]));
 }
 
 async function api(path, init = {}) {
@@ -112,7 +115,7 @@ async function main() {
   const cfg = await readJson("agents.json", null);
   if (!cfg || !Array.isArray(cfg.agents)) throw new Error("agents.json is missing or broken.");
   const { date, dow } = today();
-  const due = cfg.agents.filter((a) => isDue(a, dow));
+  const due = cfg.agents.filter((a) => isDue(a, dow, date));
   console.log(`Date ${date} (${dow}), mode "${MODE}": ${due.length} agent(s) due -> ${due.map((a) => a.id).join(", ") || "none"}`);
   if (!due.length) return;
 
@@ -150,6 +153,7 @@ async function main() {
         task += `\n\n### ${path}\n${body ? body.slice(0, 24000) : `(the file ${path} is missing - say so and do not invent findings)`}`;
       }
     }
+    if (agent.holidays) task += `\n\nUpcoming holidays and remembrance days (computed from the calendar, so the dates are real):\n${upcoming(date, agent.holidays)}`;
     if (agent.seo) {
       const r = await seoResearch(agent.seo).catch((e) => ({ text: "", notes: [`SEO data unavailable (${e.message})`] }));
       task += `\n\nFresh SEO data collected minutes ago (real; base every keyword on it and do not invent search volumes):\n${r.text || "(none)"}${r.notes.length ? `\n\nNotes: ${r.notes.join(" ")}` : ""}`;
@@ -215,6 +219,8 @@ async function main() {
     index = [{ file, agent: agent.id, name: agent.name, date }, ...index.filter((r) => r.file !== file)].slice(0, 300);
     await fs.writeFile("reports/index.json", JSON.stringify(index, null, 2));
     console.log(`  saved reports/${file}`);
+    // Some agents also keep a standing file other agents read (e.g. content/seasonal.md).
+    if (agent.saveAs) { await fs.mkdir(agent.saveAs.replace(/\/[^/]+$/, ""), { recursive: true }); await fs.writeFile(agent.saveAs, `# ${agent.name} (updated ${date})\n\n${text}\n`); console.log(`  saved ${agent.saveAs}`); }
     await discordReport(agent.id, `${agent.name} · ${date}`, text, { file });
     // Agents tied to a Google Doc (e.g. the Etsy team -> "Etsy Planning") add their update there too.
     const doc = agent.doc && cfg.docs?.[agent.doc];

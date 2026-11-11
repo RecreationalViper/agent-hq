@@ -82,7 +82,7 @@ export function classify(t, R) {
 }
 
 // ---------- Gmail API ----------
-async function accessToken(refresh) {
+export async function accessToken(refresh) {
   const res = await fetch(TOKEN_URL, { method: "POST", signal: AbortSignal.timeout(20000), body: new URLSearchParams({ client_id: process.env.GMAIL_CLIENT_ID.trim(), client_secret: process.env.GMAIL_CLIENT_SECRET.trim(), refresh_token: refresh.trim(), grant_type: "refresh_token" }) });
   const d = await res.json().catch(() => ({}));
   if (!res.ok) {
@@ -98,7 +98,7 @@ async function accessToken(refresh) {
   return d.access_token;
 }
 
-function client(token) {
+export function client(token) {
   return async function api(path, init = {}) {
     for (let attempt = 0; attempt < 4; attempt++) {
       const res = await fetch(GMAIL + path, { ...init, signal: AbortSignal.timeout(30000), headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" } });
