@@ -1,6 +1,7 @@
 // Agent HQ Trading Desk - runs on GitHub Actions, practice (paper) money on Alpaca.
 // AI agents research and propose; plain code enforces every safety limit and places orders.
 import { gwFetch } from "./ai-gateway.mjs";
+import { flushUsage } from "./usage-log.mjs";
 import fs from "node:fs/promises";
 import { hasExa, search as exaSearch } from "./exa.mjs";
 import { hasGroq, groqChat } from "./ai-fallback.mjs";
@@ -438,4 +439,4 @@ async function save(date, report, state) {
   await discordReport("trading-desk", `Trading Desk · ${date}`, report.join("\n"), { file, color: 0x2f6f8f });
 }
 
-main().catch((e) => { console.error("ERROR:", e.message); process.exit(1); });
+main().catch(async (e) => { console.error("ERROR:", e.message); await flushUsage(); process.exit(1); });

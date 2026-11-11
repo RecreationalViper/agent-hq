@@ -1,6 +1,7 @@
 // Agent HQ routine runner — runs on GitHub Actions (free), calls Google Gemini (free tier),
 // and saves each agent's report into reports/ so the website can show it.
 import { gwFetch } from "./ai-gateway.mjs";
+import { flushUsage } from "./usage-log.mjs";
 import fs from "node:fs/promises";
 import { hasGroq, groqChat } from "./ai-fallback.mjs";
 import { hasGoogle, addUpdate, mdToLines } from "./gdocs.mjs";
@@ -253,4 +254,4 @@ async function main() {
   if (failures === due.length) throw new Error("Every agent failed this run.");
 }
 
-main().catch((e) => { console.error("ERROR:", e.message); process.exit(1); });
+main().catch(async (e) => { console.error("ERROR:", e.message); await flushUsage(); process.exit(1); });

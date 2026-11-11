@@ -1,4 +1,5 @@
 import { gwFetch } from "./ai-gateway.mjs";
+import { trackResponse } from "./usage-log.mjs";
 // Backup AI provider: Groq (free tier, OpenAI-compatible). Used only when Gemini is
 // busy or out of its free daily quota. Needs the GROQ_API_KEY secret.
 // Free-tier limits seen on this key: 1,000 requests/day and 8,000 tokens/minute,
@@ -150,6 +151,7 @@ const NV_PREFER = [/deepseek-v3\.\d|deepseek-v3/i, /kimi-k2/i, /qwen3-235b|qwen3
 let nvModels;
 async function nvCall(path, init = {}) {
   const res = await fetch(NV + path, { ...init, signal: AbortSignal.timeout(150000), headers: { Authorization: `Bearer ${nvKey()}`, "Content-Type": "application/json", Accept: "application/json" } });
+  await trackResponse(NV + path, init, res);
   const text = await res.text();
   let data; try { data = JSON.parse(text); } catch { data = {}; }
   if (!res.ok) { const e = new Error(`NVIDIA ${res.status}: ${data.detail || data.error?.message || data.title || text.slice(0, 200)}`); e.status = res.status; throw e; }

@@ -39,6 +39,7 @@ async function token() {
   return cached.token;
 }
 
+export { docs as docsApi };
 async function docs(path, init = {}) {
   const res = await fetch(DOCS + path, { ...init, signal: AbortSignal.timeout(30000), headers: { Authorization: `Bearer ${await token()}`, "Content-Type": "application/json" } });
   const data = await res.json().catch(() => ({}));

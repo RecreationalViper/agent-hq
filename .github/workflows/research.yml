@@ -21,6 +21,7 @@ jobs:
       - name: Research and write the brief
         run: node researcher.mjs
         env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}

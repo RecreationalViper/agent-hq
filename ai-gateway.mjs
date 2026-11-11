@@ -3,6 +3,7 @@
 // rate limits across Gemini, Groq and OpenRouter. NVIDIA isn't a gateway provider, so it stays direct.
 // Safe by design: if the gateway itself fails (not the AI provider), the call goes straight to the provider,
 // and the gateway is skipped for the rest of that run. Turn off with AI_GATEWAY=off.
+import { trackResponse } from "./usage-log.mjs";
 const ACCOUNT = () => process.env.CLOUDFLARE_ACCOUNT_ID?.trim();
 export const GATEWAY_ID = process.env.AI_GATEWAY && process.env.AI_GATEWAY !== "off" ? process.env.AI_GATEWAY : "agent-hq";
 let disabled = process.env.AI_GATEWAY === "off";
@@ -30,7 +31,13 @@ function withGatewayAuth(headers = {}) {
 export { withGatewayAuth };
 
 // Drop-in for fetch(): tries the gateway, falls back to the direct address on gateway problems.
+// Every AI response is also counted for the AI usage log (usage-log.mjs).
 export async function gwFetch(url, init = {}) {
+  const res = await rawGwFetch(url, init);
+  await trackResponse(url, init, res);
+  return res;
+}
+async function rawGwFetch(url, init = {}) {
   const via = gatewayUrl(url);
   if (!via) return fetch(url, init);
   try {

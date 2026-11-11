@@ -6,6 +6,7 @@
 // 2) code reads those sources in full, 3) the AI writes a cited report with a
 // "Confidence & gaps" section, 4) code checks every citation. Then it posts to Notion.
 import fs from "node:fs/promises";
+import { flushUsage } from "./usage-log.mjs";
 import { ask } from "./ai-ask.mjs";
 import { report as discordReport } from "./discord.mjs";
 import { hasExa, search as exaSearch } from "./exa.mjs";
@@ -224,4 +225,4 @@ async function main() {
   await discordReport("researcher", `AI & Dev Brief · ${date}`, full, { file, color: 0x5865f2 });
 }
 
-main().catch((e) => { console.error("ERROR:", e.message); process.exit(1); });
+main().catch(async (e) => { console.error("ERROR:", e.message); await flushUsage(); process.exit(1); });

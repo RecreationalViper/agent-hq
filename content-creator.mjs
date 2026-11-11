@@ -12,6 +12,7 @@
 //
 // Usage: node content-creator.mjs            (CREATOR_POSTS=5, CREATOR_DRY=1 skips Discord)
 import fs from "node:fs/promises";
+import { trackResponse, flushUsage } from "./usage-log.mjs";
 import path from "node:path";
 import { createRequire } from "node:module";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -132,6 +133,7 @@ async function paint(prompt) {
         headers: { Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}`, "Content-Type": "application/json" },
         body: JSON.stringify({ prompt: full.slice(0, 2000), steps: 8 })
       });
+      await trackResponse(res.url || `https://api.cloudflare.com/client/v4/accounts/x/ai/run/@cf/black-forest-labs/flux-1-schnell`, { method: "POST" }, res);
       const j = await res.json().catch(() => ({}));
       const b64 = j.result?.image;
       if (res.ok && b64) { console.log("  painted a background (Cloudflare FLUX)"); return `data:image/jpeg;base64,${b64}`; }
@@ -268,5 +270,6 @@ async function main() {
 main().catch(async (e) => {
   console.error("ERROR:", e.message);
   if (!DRY) await alert(`⚠️ Content Creator failed: ${e.message.slice(0, 300)}`);
+  await flushUsage();
   process.exit(1);
 });

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent HQ – AI Usage</title>
+<style>
+:root{--bg:#faf9f6;--card:#fff;--ink:#141413;--sub:#5e5d59;--muted:#8a8984;--line:rgba(20,20,19,.1);--track:#eeede8;--blue:#2a78d6;--warn:#c27c0e;--warnbg:#fbf1dd;--bad:#c23b3b;--badbg:#fbe9e9;--ok:#1a8a5a}
+@media (prefers-color-scheme:dark){:root{--bg:#1a1a19;--card:#232321;--ink:#f0efea;--sub:#c3c2b7;--muted:#8a8984;--line:rgba(255,255,255,.1);--track:#33332f;--blue:#3987e5;--warn:#e0a640;--warnbg:#3a2f1a;--bad:#e66767;--badbg:#3a1f1f;--ok:#3cb37d}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:20px 16px 40px;max-width:640px;margin:0 auto}
+h1{font-size:22px;font-weight:500;margin:0}.sub{color:var(--sub);font-size:13px;margin:2px 0 16px}
+.card{background:var(--card);border:.5px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}.name{font-weight:500}.num{font-weight:500;font-variant-numeric:tabular-nums}
+.bar{height:8px;border-radius:4px;background:var(--track);margin:8px 0 6px;overflow:hidden}.bar>i{display:block;height:100%;border-radius:4px;background:var(--blue)}
+.small{font-size:12px;color:var(--sub)}.muted{color:var(--muted)}
+.pill{font-size:11px;padding:2px 8px;border-radius:8px;margin-left:6px}.pill.warn{background:var(--warnbg);color:var(--warn)}.pill.bad{background:var(--badbg);color:var(--bad)}
+.chartwrap{position:relative;height:240px;margin:6px 0 4px}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--sub);margin-top:4px}.legend span{display:flex;align-items:center;gap:5px}.legend b{width:10px;height:10px;border-radius:2px;display:inline-block}
+.note{background:var(--warnbg);color:var(--warn);border-radius:10px;padding:10px 12px;font-size:13px;margin-bottom:12px;display:none}
+button{font:inherit;font-size:13px;background:transparent;color:var(--ink);border:.5px solid var(--line);border-radius:8px;padding:6px 12px}
+h2{font-size:16px;font-weight:500;margin:20px 0 8px}
+table{width:100%;border-collapse:collapse;font-size:13px}td{padding:5px 0;border-bottom:.5px solid var(--line)}td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<h1>AI usage today</h1>
+<div class="sub" id="fresh">Loading the usage log…</div>
+<div class="note" id="note"></div>
+<div id="cards"></div>
+<h2>Calls through the day</h2>
+<div class="card"><div class="chartwrap"><canvas id="chart" role="img" aria-label="Cumulative AI calls per provider by hour today">Cumulative AI calls per provider by hour today.</canvas></div><div class="legend" id="legend"></div></div>
+<h2>Who used them today</h2>
+<div class="card"><table id="who"><tr><td class="muted">No runs logged yet today</td><td></td></tr></table></div>
+<p class="small muted">Day = New York time. Limits are estimates: Gemini resets at midnight Pacific, Cloudflare at 8pm New York (00:00 UTC). Data: Google Doc "Agent HQ – AI Usage Log", written by the agents after each run. Refreshes every 5 minutes while open.</p>
+<button id="refresh">Refresh now</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const DOC = "1ByEBi-278BFpkKwugbEoRg_4yOwuYlQagMezN6N5e4k";
+const TZ = "America/New_York";
+const P = [
+  { name: "NVIDIA", color: "#2a78d6", unit: "calls", limit: null, note: "No daily cap · ~40/min" },
+  { name: "Gemini", color: "#1baf7a", unit: "calls", limit: 250, note: "Daily limit unpublished (~250 est.)" },
+  { name: "Groq", color: "#eb6834", unit: "tokens", limit: 200000, note: "200K tokens/day" },
+  { name: "Cloudflare", color: "#eda100", unit: "tokens", limit: 250000, note: "10,000 neurons/day ≈ 250K tokens" },
+  { name: "Cloudflare images", color: "#e87ba4", unit: "calls", limit: null, note: "Shares Cloudflare's neurons" },
+  { name: "OpenRouter", color: "#6250d6", unit: "calls", limit: 50, note: "50 calls/day" },
+  { name: "Claude", color: "#e34948", unit: "calls", limit: null, note: "Parked" },
+];
+const dayET = (d) => new Date(d).toLocaleDateString("en-CA", { timeZone: TZ });
+const hourET = (d) => Number(new Date(d).toLocaleString("en-US", { timeZone: TZ, hour: "numeric", hour12: false })) % 24;
+const fmt = (n) => n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1) + "K" : String(Math.round(n));
+let chart, rows = [];
+
+function parse(result) {
+  const s = JSON.stringify(result?.payload ?? result?.structuredContent ?? result?.content ?? result ?? "");
+  const out = [];
+  for (const m of s.matchAll(/U\|(\d{4}-\d\d-\d\dT\d\d:\d\dZ)\|([^|"\\]+)\|([^|"\\]+)\|(\d+)\|(\d+)\|(\d+)/g))
+    out.push({ t: m[1].replace("Z", ":00Z"), who: m[2], p: m[3], calls: +m[4], tokens: +m[5], limited: +m[6] });
+  return out;
+}
+
+function render(storedAt) {
+  const today = dayET(Date.now());
+  const tday = rows.filter((r) => dayET(r.t) === today);
+  const by = {};
+  for (const r of tday) { const b = (by[r.p] ||= { calls: 0, tokens: 0, limited: 0 }); b.calls += r.calls; b.tokens += r.tokens; b.limited += r.limited; }
+  const list = P.filter((p) => by[p.name] || !["Claude", "Cloudflare images"].includes(p.name));
+  document.getElementById("cards").innerHTML = list.map((p) => {
+    const b = by[p.name] || { calls: 0, tokens: 0, limited: 0 };
+    const used = p.unit === "tokens" ? b.tokens : b.calls;
+    const pct = p.limit ? Math.min(100, Math.round(used / p.limit * 100)) : null;
+    const pill = b.limited ? `<span class="pill bad">hit limit ${b.limited}×</span>` : pct >= 80 ? `<span class="pill warn">${pct}% used</span>` : "";
+    const right = p.limit ? `${fmt(used)} / ${fmt(p.limit)} ${p.unit}` : `${fmt(b.calls)} calls`;
+    return `<div class="card"><div class="row"><span class="name">${p.name}${pill}</span><span class="num">${right}</span></div>
+      <div class="bar"><i style="width:${pct ?? (b.calls ? 100 : 0)}%;background:${p.limit ? (pct >= 80 ? "var(--warn)" : p.color) : p.color};opacity:${p.limit ? 1 : .35}"></i></div>
+      <div class="row small"><span>${p.note}</span><span>${fmt(b.calls)} calls · ${fmt(b.tokens)} tokens</span></div></div>`;
+  }).join("");
+
+  const nowH = hourET(Date.now());
+  const labels = Array.from({ length: nowH + 1 }, (_, h) => (h % 12 || 12) + (h < 12 ? "a" : "p"));
+  const used = P.filter((p) => by[p.name]);
+  const datasets = used.map((p) => {
+    const per = Array(nowH + 1).fill(0);
+    for (const r of tday) if (r.p === p.name) per[Math.min(nowH, hourET(r.t))] += r.calls;
+    let c = 0;
+    return { label: p.name, data: per.map((v) => (c += v)), borderColor: p.color, backgroundColor: p.color, borderWidth: 2, pointRadius: 0, tension: .25, stepped: false };
+  });
+  document.getElementById("legend").innerHTML = used.map((p) => `<span><b style="background:${p.color}"></b>${p.name} ${by[p.name].calls}</span>`).join("") || '<span class="muted">No AI calls logged yet today</span>';
+  const dark = matchMedia("(prefers-color-scheme: dark)").matches;
+  const grid = dark ? "#2c2c2a" : "#e1e0d9", tick = "#898781";
+  if (window.Chart) {
+    if (chart) { chart.data.labels = labels; chart.data.datasets = datasets; chart.update(); }
+    else chart = new Chart(document.getElementById("chart"), { type: "line", data: { labels, datasets },
+      options: { responsive: true, maintainAspectRatio: false, animation: false, interaction: { mode: "index", intersect: false },
+        plugins: { legend: { display: false } },
+        scales: { x: { grid: { display: false }, ticks: { color: tick, maxTicksLimit: 8 } }, y: { beginAtZero: true, grid: { color: grid }, ticks: { color: tick, precision: 0 } } } } });
+  }
+
+  const who = {};
+  for (const r of tday) { const w = (who[r.who] ||= { calls: 0, ps: new Set() }); w.calls += r.calls; w.ps.add(r.p); }
+  const wl = Object.entries(who).sort((a, b) => b[1].calls - a[1].calls);
+  document.getElementById("who").innerHTML = wl.length ? wl.map(([w, v]) => `<tr><td>${w}<div class="small">${[...v.ps].join(", ")}</div></td><td>${v.calls} calls</td></tr>`).join("") : '<tr><td class="muted">No runs logged yet today</td><td></td></tr>';
+  const when = storedAt ? new Date(storedAt) : new Date();
+  document.getElementById("fresh").textContent = `${tday.length ? "" : "Nothing logged yet today · "}Updated ${when.toLocaleTimeString("en-US", { timeZone: TZ, hour: "numeric", minute: "2-digit" })}`;
+}
+
+function note(msg) { const n = document.getElementById("note"); n.textContent = msg; n.style.display = msg ? "block" : "none"; }
+const ERR = {
+  needs_reauth: "Google Docs needs reconnecting: claude.ai Settings → Connectors.",
+  server_not_connected: "Add the Google Docs connector in claude.ai Settings → Connectors to see live usage.",
+  selection_required: "Choose which Google Docs connector to use when claude.ai asks.",
+  not_in_manifest: "Google Docs access is off for this page. Turn it on to see live usage.",
+  approval_required: "This page needs your OK to read the usage log. Tap Refresh now.",
+  blocked_by_policy: "Your organization blocks this connector here.",
+};
+
+render();
+(async () => {
+  const mcp = await window.claude?.use?.("mcp");
+  if (!mcp) { note("Open this page in Claude (with Google Docs connected) to see live usage."); return; }
+  const input = { documentId: DOC };
+  mcp.watchTool("Google Docs", "read_doc", input, (ev) => {
+    if (ev.type === "data") { note(""); rows = parse(ev.result); render(ev.result.cache?.storedAt); }
+    else {
+      const c = ev.error?.code;
+      if (["needs_reauth", "server_not_connected", "not_in_manifest", "blocked_by_policy", "selection_required"].includes(c)) { rows = []; render(); }
+      note(ERR[c] || `Couldn't read the usage log just now (${c || "error"}). Showing the last data.`);
+    }
+  }, { refetchInterval: 300000, cache: { staleTime: 240000, gcTime: 86400000 } });
+  document.getElementById("refresh").onclick = async () => {
+    try { const r = await mcp.callTool("Google Docs", "read_doc", input, { cache: { refresh: true, gcTime: 86400000 } }); note(""); rows = parse(r); render(); }
+    catch (e) { note(ERR[e?.code] || `Couldn't refresh (${e?.code || "error"}).`); }
+  };
+})();
+</script>
+</body>
+</html>
