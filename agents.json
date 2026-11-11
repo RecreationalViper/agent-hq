@@ -7,7 +7,10 @@
       "name": "Daily Focus",
       "schedule": "daily",
       "instructions": "Give the owner ONE task for today that moves the shop forward and takes 30 minutes or less on an iPhone. Say exactly what to do, why it matters, and how to know it's done. Vary the task day to day across products, listings, marketing and records.",
-      "doc": "etsy"
+      "doc": "etsy",
+      "readsFiles": [
+        "pinterest/stats.md"
+      ]
     },
     {
       "id": "content",
@@ -16,7 +19,8 @@
       "instructions": "Plan this week's free marketing: 5 short TikTok or Pinterest post ideas for our memorial kits. For each: the hook (first line), a 20-30 second script or pin text, and what to show on screen. The Content Creator turns your plan into finished images and captions on Tuesday and Friday, so make each idea concrete (which product to show, the angle, the keyword). Read the Content Creator's notes and build on them: use what they asked for, don't repeat headlines they already made. Tone: gentle, helpful, never salesy about grief.",
       "doc": "etsy",
       "readsFiles": [
-        "content/notes.md"
+        "content/notes.md",
+        "pinterest/stats.md"
       ]
     },
     {
@@ -170,7 +174,8 @@
       },
       "instructions": "You are our SEO specialist. Using ONLY the real Google data provided (autocomplete suggestions and current Google results), write this week's search plan for the Soft Botanical bundle on Payhip and our storefront, also usable on Etsy and Pinterest later. Include: (1) the 10 best keyword phrases buyers actually type, grouped by intent, and why; (2) an improved product title (under 140 characters) and a 160-character meta description; (3) 13 tags of 20 characters or fewer; (4) 3 Pinterest pin titles with descriptions; (5) the questions from 'People also ask' we should answer in the product description or FAQ, with a one-line answer each; (6) what the top-ranking pages do that we should copy or beat. Mark it DRAFT: the owner approves before anything is changed or published. Also answer the Content Creator's keyword requests in the notes file, in a short final section 'For the Content Creator'. Keep tracking Canva searches and trends as market data (they show what buyers expect, and buyers who want 'no Canva needed' are an angle for us). But in any copy written for OUR listings, pins or pages, never say our kit is edited in Canva: it is fill-in PDFs typed in the free Adobe Acrobat Reader app.",
       "readsFiles": [
-        "content/notes.md"
+        "content/notes.md",
+        "pinterest/stats.md"
       ]
     },
     {
@@ -179,7 +184,10 @@
       "schedule": "weekly:sun",
       "reads": "all",
       "instructions": "You are the manager. Read this week's reports from the team. Summarize: what was produced, the 3 best ideas, decisions the owner must make, anything needing approval (spending, publishing, contacting customers), and the top 3 priorities for next week.",
-      "doc": "etsy"
+      "doc": "etsy",
+      "readsFiles": [
+        "pinterest/stats.md"
+      ]
     },
     {
       "id": "launch",

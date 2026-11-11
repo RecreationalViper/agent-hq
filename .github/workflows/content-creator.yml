@@ -21,6 +21,10 @@ jobs:
           node-version: 24
       - name: Install the design browser
         run: npm i --no-save --no-package-lock playwright@1.49.1 && npx playwright install --with-deps chromium
+      - name: Refresh Pinterest stats (read-only)
+        run: node tools/pinterest-stats.mjs
+        env:
+          PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN }}
       - name: Write, design and post this week's content
         run: node content-creator.mjs
         env:
@@ -49,5 +53,5 @@ jobs:
         run: |
           git config user.name "agent-hq-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A reports content exa-usage.json
+          git add -A reports content pinterest exa-usage.json
           git diff --cached --quiet || (git commit -m "Content Creator update" && git pull --rebase && git push)

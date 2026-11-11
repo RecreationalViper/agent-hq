@@ -774,6 +774,10 @@ jobs:
           main().catch((e) => { console.error("ERROR:", e.message); process.exit(1); });
           AHQ_EOF
 
+      - name: Refresh Pinterest stats (read-only)
+        run: node tools/pinterest-stats.mjs
+        env:
+          PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN }}
       - name: Run agents
         run: node run-agents.mjs
         env:
