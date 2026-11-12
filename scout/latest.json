@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-11T17:19:24.473Z",
-  "date": "2026-11-11",
+  "generatedAt": "2026-11-12T00:52:21.900Z",
+  "date": "2026-11-12",
   "token": true,
   "searches": {
     "ran": 12,
@@ -9,59 +9,13 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 15,
-  "rateRemaining": 9,
-  "newItems": 1,
+  "apiCalls": 12,
+  "rateRemaining": 18,
+  "newItems": 0,
   "blockedToday": 0,
-  "shortlist": [
-    {
-      "name": "obsidianmd/obsidian-skills",
-      "url": "https://github.com/obsidianmd/obsidian-skills",
-      "description": "Agent skills for Obsidian. Teach your agent to use Obsidian CLI and open formats including Markdown, Bases, JSON Canvas.",
-      "stars": 51665,
-      "forks": 3660,
-      "language": "Shell",
-      "license": "MIT",
-      "pushedAt": "2026-11-11T16:12:33Z",
-      "category": "skills",
-      "score": 84,
-      "tier": "adopt",
-      "reasons": [
-        "51,665 stars",
-        "updated this week",
-        "MIT license",
-        "well established",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [],
-      "skillFiles": true
-    }
-  ],
+  "shortlist": [],
   "byCategory": {
-    "skills": [
-      {
-        "name": "obsidianmd/obsidian-skills",
-        "url": "https://github.com/obsidianmd/obsidian-skills",
-        "description": "Agent skills for Obsidian. Teach your agent to use Obsidian CLI and open formats including Markdown, Bases, JSON Canvas.",
-        "stars": 51665,
-        "forks": 3660,
-        "language": "Shell",
-        "license": "MIT",
-        "pushedAt": "2026-11-11T16:12:33Z",
-        "category": "skills",
-        "score": 84,
-        "tier": "adopt",
-        "reasons": [
-          "51,665 stars",
-          "updated this week",
-          "MIT license",
-          "well established",
-          "contains SKILL.md skill files"
-        ],
-        "flags": [],
-        "skillFiles": true
-      }
-    ],
+    "skills": [],
     "enhancement": [],
     "free-tokens": [],
     "efficiency": []
