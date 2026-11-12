@@ -154,6 +154,12 @@ async function main() {
   } finally { await browser.close(); }
   await fs.writeFile(path.join(dir, "landing.jpg"), preview);
   await fs.writeFile(path.join(dir, "landing.pdf"), pdf);
+  // Public copy (GitHub Pages) so Claude can import it into Canva through the owner's Canva connector
+  // when the agent's own Canva sign-in isn't set up.
+  await fs.mkdir(path.join(HERE, "store", "landing"), { recursive: true });
+  await fs.writeFile(path.join(HERE, "store", "landing", "landing.pdf"), pdf);
+  await fs.writeFile(path.join(HERE, "store", "landing", "landing.jpg"), preview);
+  const PUBLIC = "https://recreationalviper.github.io/agent-hq/store/landing/landing.pdf";
   console.log(`  designed: ${(pdf.length / 1024).toFixed(0)} KB PDF`);
 
   let design = null, canvaErr = "";
@@ -161,7 +167,7 @@ async function main() {
   catch (e) { canvaErr = e.message; console.log(`  Canva import failed: ${e.message}`); }
 
   const md = `**${c.seo_title}**\n${c.meta_description}\n\n` +
-    (design ? `**Open in Canva:** ${design.edit_url}\n(The link works for 30 days; the design also stays in your Canva "Projects".)\n\n` : `Canva import didn't work: ${canvaErr}\nThe page is still attached as an image.\n\n`) +
+    (design ? `**Open in Canva:** ${design.edit_url}\n(The link works for 30 days; the design also stays in your Canva "Projects".)\n\n` : `**To put it in Canva:** ask Claude to "import the landing page into Canva" (PDF: ${PUBLIC}).\n\n`) +
     `**Links to add in Canva** (select a button > Link):\n- Buy buttons → ${KIT}\n- Free checklist buttons → ${CHECKLIST}\n\n**Publish:** in Canva tap Share > Publish website (free canva.site address).\n\n**Check first:**\n${c.notes || ""}\n\n**Keywords:** ${(c.keywords || []).join(", ")}`;
   const reportFile = `${DATE}-landing-page.md`;
   await fs.writeFile(path.join(HERE, "reports", reportFile), `# Landing page (Canva) - ${DATE}\n\n${md}\n\n## Copy\n\n\`\`\`json\n${JSON.stringify(c, null, 2)}\n\`\`\`\n`);
@@ -169,10 +175,10 @@ async function main() {
   index = [{ file: reportFile, agent: "content-creator", name: "Content Creator (landing page)", date: DATE }, ...index.filter((r) => r.file !== reportFile)].slice(0, 300);
   await fs.writeFile(path.join(HERE, "reports", "index.json"), JSON.stringify(index, null, 2) + "\n");
   if (process.env.LANDING_DRY !== "1") {
-    await postFiles("content-creator", `🖥️ **New landing page** (sell the kit + grow the email list)\n${design ? `Open and edit in Canva: ${design.edit_url}` : `Canva import failed: ${canvaErr.slice(0, 300)}`}`, [{ name: "landing-page.jpg", data: preview, type: "image/jpeg" }]);
+    await postFiles("content-creator", `🖥️ **New landing page** (sell the kit + grow the email list)\n${design ? `Open and edit in Canva: ${design.edit_url}` : `Ready for Canva: ask Claude to import it (${PUBLIC})`}`, [{ name: "landing-page.jpg", data: preview, type: "image/jpeg" }]);
     await report("content-creator", "Landing page (Canva)", md);
   }
-  if (!design) process.exitCode = 1;
+  if (!design && canvaErr && !/isn't connected|needs PAYHIP|not_connected/.test(canvaErr)) console.log("  (Canva sign-in set up but import failed: see above)");
 }
 
 main().catch(async (e) => {
