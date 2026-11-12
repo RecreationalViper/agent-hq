@@ -13,7 +13,7 @@
 // to your private Discord #inbox channel (or your terminal when run locally).
 //
 // Secrets: GMAIL_CLIENT_ID, GMAIL_CLIENT_SECRET, GMAIL_REFRESH_TOKEN (+ _2 … _5 for more
-// accounts). Optional: GMAIL_OWNER_NAMES ("josiah,joe"), GMAIL_KEEP_DOMAINS, GMAIL_JUNK_DOMAINS.
+// accounts). Optional: GMAIL_OWNER_NAMES (your names, comma separated; kept out of this public code), GMAIL_KEEP_DOMAINS, GMAIL_JUNK_DOMAINS.
 //
 //   node gmail/sweep.mjs             sweep for real
 //   node gmail/sweep.mjs --dry-run   show what it would do, change nothing
@@ -36,7 +36,7 @@ export async function loadRules() {
     ...r,
     keepDomains: [...r.keepDomains, ...list(process.env.GMAIL_KEEP_DOMAINS)],
     junkDomains: [...r.junkDomains, ...list(process.env.GMAIL_JUNK_DOMAINS)],
-    owners: list(process.env.GMAIL_OWNER_NAMES || "josiah,joe"),
+    owners: (process.env.GMAIL_OWNER_NAMES || "").split(/[,\s]+/).map((x) => x.trim().toLowerCase()).filter(Boolean),
     keepRe: new RegExp(r.keepSubject, "i"),
     junkRe: new RegExp(r.junkSubject, "i"),
     phishRe: new RegExp(r.phishingSubject, "i")
@@ -232,14 +232,15 @@ async function main() {
 
 // ---------- selftest ----------
 function selftest(R) {
+  R = { ...R, owners: ["alex", "sample"] }; // sample names, never the real owner's
   const mk = (from, subject, { to = "Alex Sample <me@gmail.com>", labels = ["CATEGORY_UPDATES"], bulk = true, auth = "dmarc=pass", replyTo, youReplied = false } = {}) =>
     ({ id: subject, labels, youReplied, headers: { from, to, subject, "authentication-results": auth, ...(bulk ? { "list-unsubscribe": "<mailto:x@y>" } : {}), ...(replyTo ? { "reply-to": replyTo } : {}) } });
   const cases = [
-    ["phishing", mk("Improve Trust <caleb@improvetrust.com>", "Verify your e-deposit update, tyler", { to: "tyler sample <me@gmail.com>", bulk: false })],
+    ["phishing", mk("Improve Trust <caleb@improvetrust.com>", "Verify your e-deposit update, tyler", { to: "tyler morgan <me@gmail.com>", bulk: false })],
     ["phishing", mk("Support <help@paypa1-secure.com>", "Your account suspended", { auth: "dmarc=fail", bulk: false })],
     ["keep", mk("Etsy <transaction@etsy.com>", "You made a sale on Etsy!")],
-    ["keep", mk("Capital One <capitalone@notification.capitalone.com>", "Josiah, the payment status of one of your accounts changed")],
-    ["keep", mk("MoneyLion <hello@iemail.moneylion.com>", "Hey Josiah, check this update on your credit report.")],
+    ["keep", mk("Capital One <capitalone@notification.capitalone.com>", "Alex, the payment status of one of your accounts changed")],
+    ["keep", mk("MoneyLion <hello@iemail.moneylion.com>", "Hey Alex, check this update on your credit report.")],
     ["keep", mk("Robinhood <noreply@robinhood.com>", "SPYG has published information for its investors")],
     ["keep", mk("Mom <mom@gmail.com>", "dinner sunday?", { bulk: false })],
     ["keep", mk("Shop <deals@store.com>", "50% off everything", { youReplied: true })],
@@ -247,7 +248,7 @@ function selftest(R) {
     ["junk", mk("Famous Footwear <x@email.famousfootwear.com>", "Joe, BOGO 1/2 off is BACK", { labels: ["CATEGORY_PROMOTIONS"] })],
     ["junk", mk("MoneyLion <hello@iemail.moneylion.com>", "Ready to consolidate your debt?", { labels: ["CATEGORY_PROMOTIONS"] })],
     ["junk", mk("Daily Joke Drop <d@mx.robly.com>", "Why Did the Sloth Get Fired?")],
-    ["junk", mk("LendingTree <email@savings.lendingtree.com>", "Josiah, your new card is waiting")],
+    ["junk", mk("LendingTree <email@savings.lendingtree.com>", "Alex, your new card is waiting")],
     ["unsure", mk("Some Brand <news@brand.com>", "A note from our founder")]
   ];
   let bad = 0;
