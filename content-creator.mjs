@@ -13,6 +13,7 @@
 // Usage: node content-creator.mjs            (CREATOR_POSTS=5, CREATOR_DRY=1 skips Discord)
 import fs from "node:fs/promises";
 import { trackResponse, flushUsage } from "./usage-log.mjs";
+import { addPins } from "./pins.mjs";
 import path from "node:path";
 import { createRequire } from "node:module";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -231,6 +232,14 @@ async function main() {
       console.log(`  designed ${name}`);
     }
   } finally { await browser.close(); }
+
+  // Pinterest without the API: public images + RSS feed (auto-publish) + bulk-upload CSV
+  if (!DRY) {
+    const pinItems = made.filter((m) => m.post.format !== "story").map((m) => ({ id: m.name.replace(/\.jpg$/, ""), data: m.data,
+      title: m.post.pin_title || m.post.headline, description: `${m.post.caption}`.replace(/\s+/g, " ").trim(), keywords: m.post.keywords || [] }));
+    const total = await addPins(pinItems);
+    console.log(`  Pinterest: ${pinItems.length} pins added to the feed and upload file (${total} total)`);
+  }
 
   // Report (the Weekly Review and the site read this)
   const tags = (p) => (p.hashtags || []).map((t) => "#" + String(t).replace(/^#/, "").replace(/\s+/g, "")).join(" ");

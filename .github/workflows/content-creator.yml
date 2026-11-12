@@ -62,5 +62,10 @@ jobs:
         run: |
           git config user.name "agent-hq-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A reports content pinterest exa-usage.json claude-usage.json store/landing
+          git add -A reports content pinterest exa-usage.json claude-usage.json store/landing store/pins ploy/shift
           git diff --cached --quiet || (git commit -m "Content Creator update" && git pull --rebase && git push)
+  publish:
+    needs: create
+    if: always()
+    uses: ./.github/workflows/deploy-store.yml
+    secrets: inherit
