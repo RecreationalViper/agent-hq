@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /landing/
+Sitemap: https://foreverheld.pages.dev/sitemap.xml

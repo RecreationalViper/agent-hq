@@ -2,6 +2,7 @@ name: Deploy Store (Cloudflare Pages)
 # Publishes store/ to Cloudflare Pages (free) at https://foreverheld.pages.dev
 on:
   workflow_dispatch:
+  workflow_call:
   push:
     branches: [main]
     paths: ["store/**"]
@@ -13,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: 22

@@ -1,7 +1,7 @@
 """Builds the Forever Held storefront's inner pages (contact, terms, refunds, privacy, about, accessibility)
 and refreshes the shared nav + footer on store/index.html. Run: python3 tools/store-pages.py
 Edit the CONTENT below, then re-run. Styles live in store/site.css. Rules: skills/web/SKILL.md."""
-import re, pathlib
+import re, pathlib, json, html as H
 
 STORE = pathlib.Path(__file__).resolve().parent.parent / "store"
 UPDATED = "November 12, 2026"
@@ -27,7 +27,7 @@ def footer(home=False):
   <p>Printable keepsakes for families saying goodbye.</p>
   <div class="foot-grid">
     <div><h3>Shop</h3><ul><li><a href="{h}#suite">Soft Botanical suite</a></li><li><a href="{CHECKLIST}">Free planning checklist</a></li><li><a href="{h}#watch-title">Watch the video</a></li></ul></div>
-    <div><h3>Help</h3><ul><li><a href="{h}#how">How it works</a></li><li><a href="{h}#faq-title">Questions</a></li><li><a href="contact.html">Contact us</a></li></ul></div>
+    <div><h3>Help</h3><ul><li><a href="{h}#how">How it works</a></li><li><a href="guides.html">Planning guides</a></li><li><a href="{h}#faq-title">Questions</a></li><li><a href="contact.html">Contact us</a></li></ul></div>
     <div><h3>Policies</h3><ul><li><a href="terms.html">Terms of sale</a></li><li><a href="refunds.html">Refund policy</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="accessibility.html">Accessibility</a></li></ul></div>
     <div><h3>Forever Held</h3><ul><li><a href="about.html">About us</a></li><li><a href="mailto:{EMAIL}">Email us</a></li></ul></div>
   </div>
@@ -35,7 +35,7 @@ def footer(home=False):
 </footer>
 '''
 
-def page(slug, title, desc, body, script=""):
+def page(slug, title, desc, body, script="", head_extra=""):
     html = f'''<!doctype html>
 <html lang="en">
 <head>
@@ -49,7 +49,8 @@ def page(slug, title, desc, body, script=""):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
-</head>
+<link rel="canonical" href="https://foreverheld.pages.dev/{slug}.html">
+{head_extra}</head>
 <body>
 {GARDEN}{nav()}<main class="page" id="top">
 {body}
@@ -190,6 +191,49 @@ legal("accessibility", "Accessibility", "Forever Held's commitment to an accessi
  ("Our files", "<p>Our printables are fill-in PDFs that work in the free Adobe Acrobat Reader app, which supports screen readers and zoom.</p>"),
  ("Need help?", f"<p>If anything on this site or in our files is hard to use, please <a href=\"contact.html\">tell us</a> or email <a href=\"mailto:{EMAIL}\">{EMAIL}</a>. We'll help you get what you need and fix the problem.</p>"),
 ])
+
+# ---------------- Guides (SEO pages written by the Web Developer agent) ----------------
+# Each guide is store/content/pages/<slug>.json. Edit the JSON, never the generated HTML.
+SITE = "https://foreverheld.pages.dev"
+guides = []
+for f in sorted((STORE / "content" / "pages").glob("*.json")):
+    g = json.loads(f.read_text())
+    if g.get("draft"): continue
+    guides.append(g)
+e = H.escape
+for g in guides:
+    secs = ""
+    for sct in g.get("sections", []):
+        secs += f"<h2>{e(sct['h2'])}</h2>\n" + "".join(f"<p>{e(x)}</p>\n" for x in sct.get("paragraphs", []))
+        if sct.get("bullets"): secs += "<ul>" + "".join(f"<li>{e(b)}</li>" for b in sct["bullets"]) + "</ul>\n"
+    faq = g.get("faq", [])
+    faq_html = ("<h2>Questions</h2>\n" + "".join(f"<h3 style=\"font:500 18px/1.3 var(--serif);margin:16px 0 4px\">{e(q['q'])}</h3><p>{e(q['a'])}</p>" for q in faq)) if faq else ""
+    related = [x for x in guides if x["slug"] != g["slug"]][:3]
+    rel = ("<h2>More planning guides</h2><ul>" + "".join(f'<li><a href="{x["slug"]}.html">{e(x["h1"])}</a></li>' for x in related) + "</ul>") if related else ""
+    cta = f'''<section class="panel glass" style="text-align:center"><h2 class="section-title" style="font-size:28px">{e(g.get("cta_title") or "Everything for the service, in one gentle suite")}</h2>
+<p style="color:var(--ink-soft);margin:0 0 18px">Funeral program, welcome sign and memory cards you fill in on your phone and print today.</p>
+<div class="hero-cta"><a class="btn btn-sage" href="{KIT}">Get the suite · $12.99</a><a class="btn glass" href="{CHECKLIST}">Free planning checklist</a></div></section>'''
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "Article", "headline": g["h1"], "description": g["description"], "dateModified": g.get("updated", UPDATED),
+         "author": {"@type": "Organization", "name": "Forever Held"}, "publisher": {"@type": "Organization", "name": "Forever Held", "logo": f"{SITE}/brand/logo-square.png"},
+         "mainEntityOfPage": f"{SITE}/{g['slug']}.html"}]}
+    if faq: ld["@graph"].append({"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q["q"], "acceptedAnswer": {"@type": "Answer", "text": q["a"]}} for q in faq]})
+    body = f'''<header class="page-head"><p class="updated"><a href="guides.html">Planning guides</a></p><h1>{e(g["h1"])}</h1><p>{e(g["intro"])}</p></header>
+<article class="panel glass legal">
+{secs}{faq_html}
+</article>
+{cta}
+<article class="panel glass legal">{rel}</article>'''
+    page(g["slug"], g["title"].replace(" · Forever Held", ""), g["description"], body, head_extra=f'<script type="application/ld+json">{json.dumps(ld)}</script>\n')
+cards = "".join(f'<a class="glass" href="{g["slug"]}.html"><b>{e(g["h1"])}</b><span>{e(g["description"])}</span></a>' for g in guides)
+page("guides", "Planning guides", "Gentle, practical guides for planning a funeral or celebration of life: programs, welcome signs, memory cards and more.",
+     f'''<header class="page-head"><h1>Planning guides</h1><p>Gentle, practical help for planning a funeral or celebration of life.</p></header>
+<div class="cards">{cards or '<div class="glass"><b>Coming soon</b><span>Our first guides are on the way.</span></div>'}</div>''')
+
+# ---------------- sitemap + robots ----------------
+urls = ["", "guides.html", "contact.html", "about.html", "terms.html", "refunds.html", "privacy.html", "accessibility.html"] + [f'{g["slug"]}.html' for g in guides]
+(STORE / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"  <url><loc>{SITE}/{u}</loc></url>\n" for u in urls) + "</urlset>\n")
+(STORE / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /landing/\nSitemap: {SITE}/sitemap.xml\n")
 
 # ---------------- Home page: shared nav + footer + trust line ----------------
 p = STORE / "index.html"
