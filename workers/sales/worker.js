@@ -4,6 +4,7 @@
 //   POST /payhip         Payhip webhook (paid, refunded)
 //   GET  /sales?days=30  recent sales for the agents (needs header x-read-token)
 //   POST /discord        Discord slash commands (/status, /sales, /ask, /run), owner/admins only
+//   POST /contact        storefront contact form -> KV (12 months) + Discord #sales (customer care)
 //   GET  /canva/connect?key=...   owner-only: one-time "Connect Canva" sign-in (OAuth with PKCE)
 //   GET  /canva/callback          Canva sends the owner back here; tokens are kept in KV, never shown
 //   POST /canva/token             agents get a fresh Canva access token (needs header x-read-token)
@@ -57,6 +58,7 @@ export default {
     }
     if (req.method === "POST" && url.pathname === "/discord") return discord(req, env, ctx);
     if (url.pathname.startsWith("/canva/")) return canva(req, url, env);
+    if (url.pathname === "/contact") return contact(req, env);
     if (url.pathname === "/privacy") return new Response(PRIVACY, { headers: { "content-type": "text/html; charset=utf-8" } });
     if (url.pathname === "/") return new Response("Forever Held sales feed is running.");
     return json({ ok: false, error: "not found" }, 404);
@@ -258,4 +260,34 @@ async function canva(req, url, env) {
     return json({ ok: true, access_token: t.access, expires: t.expires });
   }
   return json({ ok: false, error: "not found" }, 404);
+}
+
+
+// ---------- Storefront contact form ----------
+const CONTACT_ORIGINS = ["https://recreationalviper.github.io"];
+async function contact(req, env) {
+  const origin = req.headers.get("origin") || "";
+  const cors = { "access-control-allow-origin": CONTACT_ORIGINS.includes(origin) ? origin : CONTACT_ORIGINS[0], "access-control-allow-methods": "POST, OPTIONS", "access-control-allow-headers": "content-type", vary: "origin" };
+  const reply = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", ...cors } });
+  if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
+  if (req.method !== "POST") return reply({ ok: false, error: "method" }, 405);
+  let d; try { d = await req.json(); } catch { return reply({ ok: false, error: "bad request" }, 400); }
+  const clean = (v, n) => String(v ?? "").replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, "").trim().slice(0, n);
+  const m = { name: clean(d.name, 100), email: clean(d.email, 200), topic: clean(d.topic, 60) || "Something else", order: clean(d.order, 60), message: clean(d.message, 3000) };
+  if (clean(d.website, 50)) return reply({ ok: true }); // honeypot: bots fill it, pretend success
+  if (!m.name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m.email) || m.message.length < 5) return reply({ ok: false, error: "missing fields" }, 400);
+  // gentle rate limit: 5 messages per hour per address
+  const ip = req.headers.get("cf-connecting-ip") || "unknown";
+  const rlKey = `contact-rl:${ip}`;
+  const n = Number(await env.SALES.get(rlKey)) || 0;
+  if (n >= 5) return reply({ ok: false, error: "too many messages, please email us" }, 429);
+  await env.SALES.put(rlKey, String(n + 1), { expirationTtl: 3600 });
+  const at = new Date().toISOString();
+  await env.SALES.put(`contact:${at}:${crypto.randomUUID().slice(0, 8)}`, JSON.stringify({ ...m, at }), { expirationTtl: 365 * 86400 });
+  if (env.DISCORD_BOT_TOKEN && env.DISCORD_SALES_CHANNEL) {
+    const esc = (t) => t.replace(/@/g, "@\u200b").replace(/([*_~`|>])/g, "\\$1");
+    const content = `📬 **New message from the website** (${esc(m.topic)})\n**From:** ${esc(m.name)} <${m.email.replace(/@/g, "@\u200b")}>${m.order ? `\n**Order:** ${esc(m.order)}` : ""}\n>>> ${esc(m.message).slice(0, 1500)}`;
+    await fetch(`https://discord.com/api/v10/channels/${env.DISCORD_SALES_CHANNEL}/messages`, { method: "POST", headers: { Authorization: `Bot ${env.DISCORD_BOT_TOKEN}`, "content-type": "application/json" }, body: JSON.stringify({ content, allowed_mentions: { parse: [] } }) }).catch(() => {});
+  }
+  return reply({ ok: true });
 }
