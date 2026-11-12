@@ -18,6 +18,7 @@ description: How to change the Forever Held website (storefront) and its media. 
 - "Liquid Glass" style: frosted `.glass` panels on a cream background, sage buttons (`.btn-sage`, #6D7F5F), serif headings (Lora/Cormorant), Cinzel only for small caps labels.
 - Mobile first: the owner and most buyers are on iPhones. Check 390px width. Tap targets at least 40px.
 - Calm, practical, reassuring copy. No urgency tricks, no invented reviews or numbers.
+- Never mention AI, AI tools, agents or automation anywhere on the public site (owner's rule).
 - Product facts: fill-in PDFs opened in the free Adobe Acrobat Reader app; print at home or Staples / Office Depot / FedEx Office. **Never say buyers need Canva.**
 
 ## Buttons and links
