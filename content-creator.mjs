@@ -94,6 +94,7 @@ Rules: drafts only - the owner decides what to post. Never invent reviews, testi
 function writePrompt(team, data, history) {
   return `Today is ${DATE}. Create ${COUNT} finished social posts for this week, built on the team's work below (start from the Content Planner's ideas; use the SEO Scout's keywords and pin titles; avoid what competitors overdo).
 
+Backgrounds: most pins should be photo scenes, which do best on Pinterest: "scene-table" (the printable lying on a linen table, seen from above; use with program-cover or memory-card) or "scene-venue" (the welcome sign standing on a wooden easel in a softly lit room; use with welcome-sign). Use "botanical" or "painted" for at most one pin and for stories.
 Mix: ${Math.max(COUNT - 2, 1)} Pinterest pins (format "pin") and 2 vertical TikTok/Reels/Instagram story posts (format "story"). Every post must be different in angle (tip, checklist, comfort, how-it-works, keepsake idea...).
 Do NOT repeat these recent headlines: ${history.slice(0, 30).join(" | ") || "(none yet)"}
 
@@ -106,7 +107,8 @@ Return JSON:
    "headline": "text ON the image, max 7 words, sentence case",
    "subline": "text ON the image under the headline, max 14 words",
    "product_image": "program-cover" | "program-inside" | "welcome-sign" | "memory-card",
-   "background": "botanical" | "painted",
+   "background": "scene-table" | "scene-venue" | "botanical" | "painted",
+   "scene_prompt": "for scene backgrounds: a few words of props and light to vary the photo (e.g. 'eucalyptus sprigs, a cup of tea, morning window light' or 'white roses, pillar candles, warm evening glow'). No people, no text.",
    "art_prompt": "for painted backgrounds: a soft watercolor scene (flowers, leaves, light, candles, paper) with NO text, NO people, calm cream/sage palette, empty space in the center",
    "pin_title": "Pinterest title, max 100 chars, keyword first (pins only, else empty)",
    "caption": "the post text / pin description, 2-4 short lines, ends with a gentle pointer to the shop",
@@ -128,30 +130,85 @@ Return JSON:
 // ---------- 4. Art ----------
 const ART_STYLE = "soft watercolor illustration on warm cream paper, muted sage green and dusty blush, delicate botanical leaves and small white flowers, gentle natural light, calm and peaceful, large empty cream space in the center for text, no text, no letters, no words, no people, no faces";
 
-async function paint(prompt) {
-  const full = `${prompt}. ${ART_STYLE}`;
-  // Owner's dedicated art AI goes here first once its key is added (ART_API_KEY); see README.
-  if (process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID) {
+// Photo scenes the real product preview is placed into. The AI never draws the product or any text.
+const SCENES = {
+  "scene-table": "Top-down flat lay photograph of a table covered in natural oatmeal linen, soft morning window light with gentle leaf shadows, props only near the edges and corners, the whole center of the table empty and clear",
+  "scene-venue": "Photograph of an elegant softly lit reception room, heavily blurred background with warm bokeh lights and white flowers, cream and ivory tones, props only at the far left and right edges, the center of the frame empty, eye level"
+};
+const PHOTO_STYLE = "professional lifestyle product photography, warm diffused light, cream, ivory and sage green palette, shallow depth of field, photorealistic, no text, no letters, no words, no paper, no cards, no signs, no people, no faces, no hands";
+
+// Best image model first; each falls back to the next (all on Cloudflare's free daily allowance).
+async function cfImage(prompt, { width = 1024, height = 1536 } = {}) {
+  if (!process.env.CLOUDFLARE_API_TOKEN || !process.env.CLOUDFLARE_ACCOUNT_ID) return null;
+  const base = `https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/ai/run/`;
+  const auth = { Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}` };
+  const form = () => { const f = new FormData(); f.append("prompt", prompt.slice(0, 2000)); f.append("width", String(width)); f.append("height", String(height)); return f; };
+  const tries = [
+    ["@cf/black-forest-labs/flux-2-dev", () => ({ body: form() })],
+    ["@cf/black-forest-labs/flux-2-klein-9b", () => ({ body: form() })],
+    ["@cf/leonardo/lucid-origin", () => ({ headers: { "Content-Type": "application/json" }, body: JSON.stringify({ prompt: prompt.slice(0, 2000), width, height }) })],
+    ["@cf/black-forest-labs/flux-1-schnell", () => ({ headers: { "Content-Type": "application/json" }, body: JSON.stringify({ prompt: prompt.slice(0, 2000), steps: 8 }) })]
+  ];
+  for (const [model, make] of tries) {
     try {
-      const res = await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/ai/run/@cf/black-forest-labs/flux-1-schnell`, {
-        method: "POST", signal: AbortSignal.timeout(90000),
-        headers: { Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt: full.slice(0, 2000), steps: 8 })
-      });
-      await trackResponse(res.url || `https://api.cloudflare.com/client/v4/accounts/x/ai/run/@cf/black-forest-labs/flux-1-schnell`, { method: "POST" }, res);
+      const init = make();
+      const res = await fetch(base + model, { method: "POST", signal: AbortSignal.timeout(150000), ...init, headers: { ...auth, ...(init.headers || {}) } });
+      await trackResponse(`https://api.cloudflare.com/client/v4/accounts/x/ai/run/${model}`, { method: "POST" }, res);
       const j = await res.json().catch(() => ({}));
-      const b64 = j.result?.image;
-      if (res.ok && b64) { console.log("  painted a background (Cloudflare FLUX)"); return `data:image/jpeg;base64,${b64}`; }
-      console.log(`  painting skipped: ${j.errors?.[0]?.message || `HTTP ${res.status}`}`);
-    } catch (e) { console.log(`  painting skipped: ${e.message}`); }
+      const b64 = j.result?.image || j.image;
+      if (res.ok && b64) { console.log(`  image by ${model.split("/").pop()}`); return `data:image/jpeg;base64,${b64}`; }
+      console.log(`  ${model.split("/").pop()} skipped: ${j.errors?.[0]?.message || `HTTP ${res.status}`}`);
+    } catch (e) { console.log(`  ${model.split("/").pop()} skipped: ${e.message}`); }
   }
   return null;
+}
+
+async function paint(prompt, scene) {
+  // Owner's dedicated art AI goes here first once its key is added (ART_API_KEY); see README.
+  if (scene) return cfImage(`${SCENES[scene]}. Props: ${prompt}. ${PHOTO_STYLE}`);
+  return cfImage(`${prompt}. ${ART_STYLE}`);
 }
 
 // ---------- 5. Design ----------
 const esc = (s = "") => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
+function sceneHtml(post, photo) {
+  const venue = post.background === "scene-venue";
+  const img = url(PRODUCT_IMAGES[venue ? "welcome-sign" : (post.product_image || "program-cover")] || PRODUCT_IMAGES["program-cover"]);
+  const second = !venue && post.product_image !== "memory-card" ? url(PRODUCT_IMAGES["memory-card"]) : null;
+  const bg = photo ? `<img class="photo" src="${photo}">` : "";
+  return `<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Cormorant;src:url(${url("products/fillable/fonts/CormorantGaramond.ttf")})}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1000px;height:1500px;overflow:hidden;position:relative;font-family:Cormorant;color:#2f3a2a;
+ background:${venue ? "radial-gradient(ellipse at 50% 55%,#f6efe2 0%,#eadfcb 70%,#dccdb2 100%)" : "linear-gradient(160deg,#efe6d6,#e4d8c3)"}}
+.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.top{position:absolute;left:0;right:0;top:0;height:520px;background:linear-gradient(#f7f1e6 0%,rgba(247,241,230,.9) 55%,rgba(247,241,230,0) 100%)}
+.bottom{position:absolute;left:0;right:0;bottom:0;height:230px;background:linear-gradient(rgba(247,241,230,0),rgba(247,241,230,.92) 70%)}
+.head{position:absolute;left:60px;right:60px;top:64px;text-align:center}
+h1{font-weight:500;font-size:96px;line-height:1.02;letter-spacing:-.01em;text-wrap:balance}
+.sub{font-family:-apple-system,"Helvetica Neue",Arial,sans-serif;font-size:29px;line-height:1.35;color:#3d4a36;margin-top:18px;text-wrap:balance}
+.paper{position:absolute;background:#fbf8f1;box-shadow:0 2px 3px rgba(60,45,25,.18),0 14px 22px -6px rgba(60,45,25,.28),0 40px 60px -20px rgba(60,45,25,.35)}
+.paper img{display:block;width:100%}
+.main{width:${second ? 640 : 700}px;left:${second ? 70 : 150}px;top:470px;transform:rotate(-4deg)}
+.cards{width:290px;left:620px;top:900px;transform:rotate(5deg)}
+.cards:before,.cards:after{content:"";position:absolute;inset:0;background:#f6f1e6;box-shadow:0 2px 4px rgba(60,45,25,.25);z-index:-1;transform:translate(7px,7px) rotate(1.5deg)}
+.cards:after{transform:translate(13px,14px) rotate(-1deg)}
+.sign{width:470px;left:265px;top:400px;padding:0;box-shadow:0 18px 40px -10px rgba(60,45,25,.4),0 2px 4px rgba(60,45,25,.2)}
+.ledge{position:absolute;left:225px;width:550px;top:${400 + 705}px;height:26px;border-radius:3px;background:linear-gradient(#b98b5a,#946a3f);box-shadow:0 10px 18px -6px rgba(60,40,20,.5)}
+.leg{position:absolute;top:${400 + 725}px;width:26px;height:420px;background:linear-gradient(90deg,#a87a4b,#8a6238);border-radius:3px}
+.leg.l{left:300px;transform:rotate(7deg);transform-origin:top}.leg.r{left:674px;transform:rotate(-7deg);transform-origin:top}.leg.m{left:487px;height:300px;opacity:.75}
+.brand{position:absolute;left:0;right:0;bottom:54px;text-align:center;font-size:50px;font-weight:500}
+.brand:before,.brand:after{content:"";display:inline-block;width:130px;height:1px;background:#8a927f;vertical-align:middle;margin:0 26px}
+</style></head><body>${bg}<div class="top"></div><div class="bottom"></div>
+${venue ? `<div class="leg l"></div><div class="leg r"></div><div class="paper sign"><img src="${img}"></div><div class="ledge"></div>`
+  : `<div class="paper main"><img src="${img}"></div>${second ? `<div class="paper cards"><img src="${second}"></div>` : ""}`}
+<div class="head"><h1>${esc(post.headline)}</h1>${post.subline ? `<p class="sub">${esc(post.subline)}</p>` : ""}</div>
+<div class="brand">Forever Held</div></body></html>`;
+}
+
 function pageHtml(post, painted) {
+  if (/^scene-/.test(post.background || "") && post.format !== "story") return sceneHtml(post, painted);
   const story = post.format === "story";
   const W = story ? 1080 : 1000, H = story ? 1920 : 1500;
   const img = url(PRODUCT_IMAGES[post.product_image] || PRODUCT_IMAGES["program-cover"]);
@@ -217,7 +274,8 @@ async function main() {
   try {
     for (const [i, post] of posts.entries()) {
       const story = post.format === "story";
-      const painted = post.background === "painted" ? await paint(post.art_prompt || post.headline) : null;
+      const scene = /^scene-/.test(post.background || "") && !story ? post.background : null;
+      const painted = scene ? await paint(post.scene_prompt || "eucalyptus sprigs, a small candle", scene) : post.background === "painted" ? await paint(post.art_prompt || post.headline) : null;
       const page = await browser.newPage({ viewport: { width: story ? 1080 : 1000, height: story ? 1920 : 1500 } });
       const html = path.join(dir, `_${i}.html`);
       await fs.writeFile(html, pageHtml(post, painted));
