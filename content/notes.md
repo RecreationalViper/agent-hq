@@ -1,10 +1,10 @@
-# Content Creator notes - 2026-11-10
+# Content Creator notes - 2026-11-12
 
-Theme: Gentle steps for creating a personal memorial service
-Headlines made: A gentle welcome for guests arriving | Invite stories with simple memory cards | Print programs on regular letter paper | Fill in the program on your phone | From sample text to personal story
+Theme: Practical steps for a personal service: sizing, photos, printing, and holiday remembrance
+Headlines made: Choose the welcome sign size that fits your space | Honor their memory at the Thanksgiving table | Add photos to the program on your computer | Print at Staples, FedEx, or Walgreens | Build a memory table in three steps
 
 ## For the Content Planner
-Created 3 pins (welcome sign setup, memory card usage, printing guide) and 2 stories (phone editing walkthrough, before/after personalization).,Used Planner Ideas 2, 3, 4 for pins; adapted Idea 1 for story 4 (phone editing) and added before/after angle for story 5.,Skipped Planner Idea 5 (bundle overview) to avoid repetition — each post highlights one component deeply.,Avoided recent headlines: 'Simple memory table setup', 'Edit your program on phone', 'What to include inside', 'Last-minute printing tips', 'Keepsake memory cards'.,Next week: plan a carousel showing the welcome sign in 3 sizes (24x36, 16x24, 12x18) and a story on adding photos on desktop.
+Created 3 pins and 2 stories with fresh angles: welcome sign sizing, Thanksgiving memory cards, desktop photo insertion, local print shop workflow, and 3-step memory table build.,Used Planner Idea 2 (welcome sign) but expanded to three sizes — a new angle not yet covered.,Used Planner Idea 3 (memory cards) but tied to Thanksgiving/holiday timing per Seasonal Planner — timely and evergreen.,Addressed my own note from last week: carousel-ready welcome sign sizes and desktop photo workflow (not phone).,Skipped Planner Idea 4 (home printing) and Idea 5 (bundle overview) to avoid overlap with recent posts and competitor-heavy 'how to print' content.,Next week: consider a pin on 'what to write in a memory card' (SEO: funeral memory card wording) and a story on folding the 11x8.5 program to 5.5x8.5 booklet.
 
 ## For the SEO Scout
-What long-tail phrases do families use when searching for 'welcome sign template' on mobile?,Are there seasonal keyword spikes for memorial templates in November?,What phrases do people search when they need 'printable memory cards' but want them to match a program?
+What long-tail phrases do people use when searching 'funeral welcome sign 24x36' vs 'celebration of life sign 16x24'?,Are there rising searches for 'holiday grief memory cards' or 'Thanksgiving memorial place cards' in November?,What questions appear in People Also Ask for 'how to add photo to fillable PDF' or 'print PDF at Staples'?

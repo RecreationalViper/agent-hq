@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-12-content-creator.md",
+    "agent": "content-creator",
+    "name": "Content Creator",
+    "date": "2026-11-12"
+  },
+  {
     "file": "2026-11-12-trading-desk.md",
     "agent": "trading-desk",
     "name": "Trading Desk",
