@@ -138,8 +138,9 @@ const SCENES = {
 const PHOTO_STYLE = "professional lifestyle product photography, warm diffused light, cream, ivory and sage green palette, shallow depth of field, photorealistic, no text, no letters, no words, no paper, no cards, no signs, no people, no faces, no hands";
 
 // Best image model first; each falls back to the next (all on Cloudflare's free daily allowance).
-async function cfImage(prompt, { width = 1024, height = 1536 } = {}) {
-  if (!process.env.CLOUDFLARE_API_TOKEN || !process.env.CLOUDFLARE_ACCOUNT_ID) return null;
+let bestLeft = 2, cfSpent = false; // FLUX.2 dev is costly on the free allowance (4 large images used a whole day's), so 2 per run
+async function cfImage(prompt, { width = 832, height = 1248 } = {}) {
+  if (!process.env.CLOUDFLARE_API_TOKEN || !process.env.CLOUDFLARE_ACCOUNT_ID || cfSpent) return null;
   const base = `https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/ai/run/`;
   const auth = { Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}` };
   const form = () => { const f = new FormData(); f.append("prompt", prompt.slice(0, 2000)); f.append("width", String(width)); f.append("height", String(height)); return f; };
@@ -149,15 +150,16 @@ async function cfImage(prompt, { width = 1024, height = 1536 } = {}) {
     ["@cf/leonardo/lucid-origin", () => ({ headers: { "Content-Type": "application/json" }, body: JSON.stringify({ prompt: prompt.slice(0, 2000), width, height }) })],
     ["@cf/black-forest-labs/flux-1-schnell", () => ({ headers: { "Content-Type": "application/json" }, body: JSON.stringify({ prompt: prompt.slice(0, 2000), steps: 8 }) })]
   ];
-  for (const [model, make] of tries) {
+  for (const [model, make] of bestLeft > 0 ? tries : tries.slice(-1)) {
     try {
       const init = make();
       const res = await fetch(base + model, { method: "POST", signal: AbortSignal.timeout(150000), ...init, headers: { ...auth, ...(init.headers || {}) } });
       await trackResponse(`https://api.cloudflare.com/client/v4/accounts/x/ai/run/${model}`, { method: "POST" }, res);
       const j = await res.json().catch(() => ({}));
       const b64 = j.result?.image || j.image;
-      if (res.ok && b64) { console.log(`  image by ${model.split("/").pop()}`); return `data:image/jpeg;base64,${b64}`; }
-      console.log(`  ${model.split("/").pop()} skipped: ${j.errors?.[0]?.message || `HTTP ${res.status}`}`);
+      if (res.ok && b64) { if (model !== tries.at(-1)[0]) bestLeft--; console.log(`  image by ${model.split("/").pop()}`); return `data:image/jpeg;base64,${b64}`; }
+      console.log(`  ${model.split("/").pop()} skipped: ${(j.errors?.[0]?.message || `HTTP ${res.status}`).slice(0, 120)}`);
+      if (/daily free allocation/i.test(j.errors?.[0]?.message || "")) { cfSpent = true; return null; } // out for today (resets 7pm Eastern)
     } catch (e) { console.log(`  ${model.split("/").pop()} skipped: ${e.message}`); }
   }
   return null;
@@ -176,35 +178,38 @@ function sceneHtml(post, photo) {
   const venue = post.background === "scene-venue";
   const img = url(PRODUCT_IMAGES[venue ? "welcome-sign" : (post.product_image || "program-cover")] || PRODUCT_IMAGES["program-cover"]);
   const second = !venue && post.product_image !== "memory-card" ? url(PRODUCT_IMAGES["memory-card"]) : null;
+  const wide = !venue && /program/.test(post.product_image || "program-cover");
   const bg = photo ? `<img class="photo" src="${photo}">` : "";
   return `<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{font-family:Cormorant;src:url(${url("products/fillable/fonts/CormorantGaramond.ttf")})}
 *{margin:0;padding:0;box-sizing:border-box}
-body{width:1000px;height:1500px;overflow:hidden;position:relative;font-family:Cormorant;color:#2f3a2a;
+body{width:1000px;height:1500px;overflow:hidden;position:relative;font-family:Cormorant;color:#2f3a2a;display:flex;flex-direction:column;
  background:${venue ? "radial-gradient(ellipse at 50% 55%,#f6efe2 0%,#eadfcb 70%,#dccdb2 100%)" : "linear-gradient(160deg,#efe6d6,#e4d8c3)"}}
 .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.top{position:absolute;left:0;right:0;top:0;height:520px;background:linear-gradient(#f7f1e6 0%,rgba(247,241,230,.9) 55%,rgba(247,241,230,0) 100%)}
-.bottom{position:absolute;left:0;right:0;bottom:0;height:230px;background:linear-gradient(rgba(247,241,230,0),rgba(247,241,230,.92) 70%)}
-.head{position:absolute;left:60px;right:60px;top:64px;text-align:center}
-h1{font-weight:500;font-size:96px;line-height:1.02;letter-spacing:-.01em;text-wrap:balance}
+.head{position:relative;z-index:2;text-align:center;padding:60px 60px 70px;background:linear-gradient(#f7f1e6 0%,rgba(247,241,230,.93) 62%,rgba(247,241,230,0) 100%)}
+h1{font-weight:500;font-size:92px;line-height:1.02;letter-spacing:-.01em;text-wrap:balance}
 .sub{font-family:-apple-system,"Helvetica Neue",Arial,sans-serif;font-size:29px;line-height:1.35;color:#3d4a36;margin-top:18px;text-wrap:balance}
+.stage{position:relative;flex:1;min-height:0;z-index:1}
+.bottom{position:absolute;left:0;right:0;bottom:0;height:230px;z-index:3;background:linear-gradient(rgba(247,241,230,0),rgba(247,241,230,.94) 70%)}
 .paper{position:absolute;background:#fbf8f1;box-shadow:0 2px 3px rgba(60,45,25,.18),0 14px 22px -6px rgba(60,45,25,.28),0 40px 60px -20px rgba(60,45,25,.35)}
-.paper img{display:block;width:100%}
-.main{width:${second ? 640 : 700}px;left:${second ? 70 : 150}px;top:470px;transform:rotate(-4deg)}
-.cards{width:290px;left:620px;top:900px;transform:rotate(5deg)}
+.paper img{display:block;width:100%;height:100%}
+.main{${wide ? `width:${second ? 660 : 760}px;left:${second ? 60 : 120}px;top:6%` : "height:74%;aspect-ratio:800/1035;left:50%;margin-left:-29%;top:2%"};transform:rotate(-4deg)}
+.cards{width:290px;right:60px;top:${wide ? "44%" : "50%"};transform:rotate(5deg)}
 .cards:before,.cards:after{content:"";position:absolute;inset:0;background:#f6f1e6;box-shadow:0 2px 4px rgba(60,45,25,.25);z-index:-1;transform:translate(7px,7px) rotate(1.5deg)}
 .cards:after{transform:translate(13px,14px) rotate(-1deg)}
-.sign{width:470px;left:265px;top:400px;padding:0;box-shadow:0 18px 40px -10px rgba(60,45,25,.4),0 2px 4px rgba(60,45,25,.2)}
-.ledge{position:absolute;left:225px;width:550px;top:${400 + 705}px;height:26px;border-radius:3px;background:linear-gradient(#b98b5a,#946a3f);box-shadow:0 10px 18px -6px rgba(60,40,20,.5)}
-.leg{position:absolute;top:${400 + 725}px;width:26px;height:420px;background:linear-gradient(90deg,#a87a4b,#8a6238);border-radius:3px}
-.leg.l{left:300px;transform:rotate(7deg);transform-origin:top}.leg.r{left:674px;transform:rotate(-7deg);transform-origin:top}.leg.m{left:487px;height:300px;opacity:.75}
-.brand{position:absolute;left:0;right:0;bottom:54px;text-align:center;font-size:50px;font-weight:500}
+.easel{position:absolute;left:0;right:0;top:0;bottom:0;display:flex;flex-direction:column;align-items:center}
+.sign{position:relative;height:66%;aspect-ratio:2/3;box-shadow:0 18px 40px -10px rgba(60,45,25,.4),0 2px 4px rgba(60,45,25,.2)}
+.ledge{position:relative;width:560px;height:26px;flex:none;border-radius:3px;background:linear-gradient(#b98b5a,#946a3f);box-shadow:0 10px 18px -6px rgba(60,40,20,.5)}
+.legs{position:relative;flex:1;width:420px}
+.leg{position:absolute;top:-4px;bottom:-40px;width:26px;background:linear-gradient(90deg,#a87a4b,#8a6238);border-radius:3px;transform-origin:top}
+.leg.l{left:0;transform:rotate(7deg)}.leg.r{right:0;transform:rotate(-7deg)}
+.brand{position:absolute;left:0;right:0;bottom:54px;z-index:4;text-align:center;font-size:50px;font-weight:500}
 .brand:before,.brand:after{content:"";display:inline-block;width:130px;height:1px;background:#8a927f;vertical-align:middle;margin:0 26px}
-</style></head><body>${bg}<div class="top"></div><div class="bottom"></div>
-${venue ? `<div class="leg l"></div><div class="leg r"></div><div class="paper sign"><img src="${img}"></div><div class="ledge"></div>`
-  : `<div class="paper main"><img src="${img}"></div>${second ? `<div class="paper cards"><img src="${second}"></div>` : ""}`}
+</style></head><body>${bg}
 <div class="head"><h1>${esc(post.headline)}</h1>${post.subline ? `<p class="sub">${esc(post.subline)}</p>` : ""}</div>
-<div class="brand">Forever Held</div></body></html>`;
+<div class="stage">${venue ? `<div class="easel"><div class="paper sign" style="position:relative"><img src="${img}"></div><div class="ledge"></div><div class="legs"><div class="leg l"></div><div class="leg r"></div></div></div>`
+  : `<div class="paper main"><img src="${img}"></div>${second ? `<div class="paper cards"><img src="${second}"></div>` : ""}`}</div>
+<div class="bottom"></div><div class="brand">Forever Held</div></body></html>`;
 }
 
 function pageHtml(post, painted) {
