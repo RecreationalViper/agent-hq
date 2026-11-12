@@ -60,6 +60,7 @@ export default {
     if (url.pathname.startsWith("/canva/")) return canva(req, url, env);
     if (url.pathname === "/contact") return contact(req, env);
     if (url.pathname === "/contacts") return contactsInbox(req, url, env);
+    if (url.pathname === "/unsubscribe") return unsubscribe(req, url, env);
     if (url.pathname === "/privacy") return new Response(PRIVACY, { headers: { "content-type": "text/html; charset=utf-8" } });
     if (url.pathname === "/") return new Response("Forever Held sales feed is running.");
     return json({ ok: false, error: "not found" }, 404);
@@ -321,4 +322,29 @@ async function contactsInbox(req, url, env) {
     cursor = page.list_complete ? null : page.cursor;
   } while (cursor && out.length < 25);
   return json({ ok: true, messages: out });
+}
+
+
+// ---------- Unsubscribe link in welcome emails (tools/funnel.mjs) ----------
+const digestHex = async (algo, text) => [...new Uint8Array(await crypto.subtle.digest(algo, new TextEncoder().encode(text)))].map((b) => b.toString(16).padStart(2, "0")).join("");
+async function unsubscribe(req, url, env) {
+  const email = (url.searchParams.get("e") || "").toLowerCase().trim();
+  const t = url.searchParams.get("t") || "";
+  const ok = email && env.PAYHIP_API_KEY && t === (await digestHex("SHA-256", `unsub:${env.PAYHIP_API_KEY}:${email}`)).slice(0, 24);
+  const html = (title, msg) => new Response(`<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title}</title><body style="font-family:-apple-system,sans-serif;background:#f3efe7;color:#3d4a36;padding:48px 24px;text-align:center"><h2 style="font-weight:500">${title}</h2><p>${msg}</p><p><a style="color:#3d4a36" href="https://foreverheld.pages.dev/">Forever Held</a></p></body>`, { headers: { "content-type": "text/html; charset=utf-8" } });
+  if (!ok) return html("Link not recognized", "Please use the unsubscribe link from your email, or reply to the email and we'll remove you.");
+  await env.SALES.put(`unsub:${await digestHex("SHA-256", "fh:" + email)}`, new Date().toISOString());
+  if (env.EMAILOCTOPUS_API_KEY) {
+    try {
+      const H = { Authorization: `Bearer ${env.EMAILOCTOPUS_API_KEY}`, "content-type": "application/json" };
+      const lists = (await (await fetch("https://api.emailoctopus.com/lists", { headers: H })).json()).data || [];
+      const id = await digestHex("MD5", email).catch(() => null);
+      for (const l of lists) {
+        if (!id) break;
+        await fetch(`https://api.emailoctopus.com/lists/${l.id}/contacts/${id}`, { method: "PUT", headers: H, body: JSON.stringify({ status: "unsubscribed" }) });
+      }
+    } catch {}
+  }
+  if (req.method === "POST") return new Response(null, { status: 204 });
+  return html("You're unsubscribed", "You won't get any more emails from Forever Held. We're sorry for your loss, and we wish you peace.");
 }

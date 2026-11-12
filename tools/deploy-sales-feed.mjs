@@ -57,6 +57,8 @@ if (app?.verify_key) {
   if (process.env.GH_DISPATCH_TOKEN?.trim()) bindings.push({ type: "secret_text", name: "GH_TOKEN", text: process.env.GH_DISPATCH_TOKEN.trim() });
   console.log(`Discord commands: on${process.env.GH_DISPATCH_TOKEN?.trim() ? " (with /run)" : " (/run waits for GH_DISPATCH_TOKEN)"}`);
 }
+// Email list: lets the unsubscribe link in welcome emails remove people from EmailOctopus
+if (process.env.EMAILOCTOPUS_API_KEY?.trim()) bindings.push({ type: "secret_text", name: "EMAILOCTOPUS_API_KEY", text: process.env.EMAILOCTOPUS_API_KEY.trim() });
 // Canva (Connect API): client id/secret from GitHub secrets; the owner connects once with a private link
 const CANVA_ID = (process.env.CANVA_CLIENT_ID || "").trim(), CANVA_SECRET = (process.env.CANVA_CLIENT_SECRET || "").trim();
 const canvaKey = CANVA_ID ? crypto.createHash("sha256").update("canva:" + PAYHIP + CANVA_ID).digest("hex").slice(0, 32) : "";
