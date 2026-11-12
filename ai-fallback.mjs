@@ -53,6 +53,7 @@ async function groqOnly(system, user, { json = false, temperature = 0.7, maxChar
       } catch (e) {
         lastErr = e;
         if (e.status === 413 || /too large|reduce your message/i.test(e.message)) { input = input.slice(0, Math.floor(input.length / 2)) + "\n\n[Trimmed further to fit.]"; continue; }
+        if (e.status === 429 && (DAILY.test(e.message) || e.retryAfter > 120)) throw e; // daily limit hit: move to the next provider now
         if (e.status === 429 && attempt < 2) { const wait = Math.min(65, e.retryAfter || 30); console.log(`  Groq busy, waiting ${wait}s`); await sleep(wait * 1000); continue; }
         if (json && e.status === 400 && /json/i.test(e.message)) { json = false; continue; }
         break; // try the next model
@@ -187,14 +188,22 @@ export async function nvidiaChat(system, user, { json = false, temperature = 0.7
 }
 
 // Backup chain used by every agent: Groq, then NVIDIA, then Cloudflare, then OpenRouter (free models only).
+// A provider whose daily free allowance is used up is skipped for the rest of the run (allowances reset daily).
+const usedUp = new Set();
+const DAILY = /per day|daily|RPD|TPD|requests per day|tokens per day|quota|neurons|credits|insufficient/i;
 export async function groqChat(system, user, opts = {}) {
   let chain = [["Groq", hasGroqKey, groqOnly], ["NVIDIA", hasNvidia, nvidiaChat], ["Cloudflare", hasCloudflare, cloudflareChat], ["OpenRouter", hasOpenRouter, openRouterChat]].filter(([, has]) => has());
   // strong mode (Content Creator): NVIDIA's largest models before Groq's faster, smaller one
   if (opts.strong) chain = [...chain.filter(([n]) => n === "NVIDIA"), ...chain.filter(([n]) => n !== "NVIDIA")];
+  chain = chain.filter(([n]) => !usedUp.has(n)).concat(chain.filter(([n]) => usedUp.has(n))); // used-up providers go last
   let lastErr;
   for (const [name, , fn] of chain) {
     try { return await fn(system, user, opts); }
-    catch (e) { lastErr = e; console.log(`  ${name} failed (${e.message})${chain.at(-1)[0] === name ? "" : "; trying the next backup"}`); }
+    catch (e) {
+      lastErr = e;
+      if (DAILY.test(e.message) || e.status === 402) usedUp.add(name); // out for today: skip it for the rest of this run
+      console.log(`  ${name} failed (${e.message})${chain.at(-1)[0] === name ? "" : "; trying the next backup"}`);
+    }
   }
   throw lastErr || new Error("No backup AI key is set");
 }

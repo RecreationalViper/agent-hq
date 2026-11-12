@@ -3,6 +3,9 @@ name: Email Funnel
 on:
   schedule:
     - cron: "23 */3 * * *" # every 3 hours
+  push:
+    branches: [main]
+    paths: [email/test-request.txt] # change this file to send a [Test] copy of every step to the list (3 people max)
   workflow_dispatch:
     inputs:
       dry_run:
@@ -22,7 +25,7 @@ jobs:
         with:
           node-version: 24
       - name: Send due welcome emails
-        run: node tools/funnel.mjs ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
+        run: node tools/funnel.mjs ${{ github.event_name == 'push' && '--test' || (github.event.inputs.dry_run == 'true' && '--dry-run' || '') }}
         env:
           EMAILOCTOPUS_API_KEY: ${{ secrets.EMAILOCTOPUS_API_KEY }}
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
@@ -32,7 +35,7 @@ jobs:
           GMAIL_SHOP_CLIENT_SECRET: ${{ secrets.GMAIL_SHOP_CLIENT_SECRET }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
       - name: Save progress (hashed emails only)
-        if: github.event.inputs.dry_run != 'true'
+        if: github.event.inputs.dry_run != 'true' && github.event_name != 'push'
         run: |
           git config user.name "agent-hq-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

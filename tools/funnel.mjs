@@ -12,6 +12,9 @@ import { accessToken, client } from "../gmail/sweep.mjs";
 import { report } from "../discord.mjs";
 
 const DRY = process.argv.includes("--dry-run");
+// --test: send every step now, marked [Test], to the list's subscribers. Only allowed while the list has 3 or fewer
+// people (the owner testing on themself). Progress is not changed.
+const TEST = process.argv.includes("--test");
 const EO = "https://api.emailoctopus.com";
 const KEY = process.env.EMAILOCTOPUS_API_KEY?.trim();
 const PAYHIP = process.env.PAYHIP_API_KEY?.trim();
@@ -44,6 +47,16 @@ async function subscribers() {
   return { list, people };
 }
 
+async function send(api, p, step, feed) {
+  const email = p.email_address;
+  const first = (p.fields?.FirstName || p.fields?.first_name || "").trim().split(/\s+/)[0] || "there";
+  const unsub = `${feed.url}/unsubscribe?e=${encodeURIComponent(email)}&t=${unsubToken(email)}`;
+  const body = `${step.body.replaceAll("{first}", first)}\n\n--\nForever Held · ${ADDRESS}\nYou're getting this because you downloaded our free planning checklist.\nUnsubscribe: ${unsub}`;
+  const raw = [`To: ${email}`, `Subject: ${encSubj(step.subject)}`, `List-Unsubscribe: <${unsub}>`, "List-Unsubscribe-Post: List-Unsubscribe=One-Click",
+    "Content-Type: text/plain; charset=UTF-8", "Content-Transfer-Encoding: 8bit", "", body].join("\r\n");
+  await api("/messages/send", { method: "POST", body: JSON.stringify({ raw: b64url(raw) }) });
+}
+
 async function main() {
   if (!KEY) return console.log("RESULT funnel: no EMAILOCTOPUS_API_KEY; skipped");
   const funnel = JSON.parse(await fs.readFile("email/funnel.json", "utf8"));
@@ -55,9 +68,17 @@ async function main() {
   if (!sendOn) console.log("  sending is OFF (save FUNNEL_MAILING_ADDRESS to turn it on); planning only");
 
   let api = null;
-  if (sendOn && !DRY) {
+  if (sendOn && (!DRY || TEST)) {
     const id = process.env.GMAIL_SHOP_CLIENT_ID || process.env.GMAIL_CLIENT_ID, secret = process.env.GMAIL_SHOP_CLIENT_SECRET || process.env.GMAIL_CLIENT_SECRET;
     api = client(await accessToken(process.env.GMAIL_SHOP_REFRESH_TOKEN?.trim(), id, secret));
+  }
+  if (TEST) {
+    if (!sendOn) return console.log("RESULT funnel test: sending is off (no mailing address)");
+    if (people.length > 3) return console.log(`RESULT funnel test: refused, list has ${people.length} people (test only runs with 3 or fewer)`);
+    let n = 0;
+    for (const p of people) for (const step of funnel.steps) { await send(api, p, { ...step, subject: "[Test] " + step.subject }, feed); n++; }
+    console.log(`RESULT funnel test: ${n} test email(s) sent to ${people.length} person(s)`);
+    return report("email-marketer", "📧 Funnel test sent", `${n} test welcome email(s) sent. Check the inbox (and spam).`).catch(() => {});
   }
   const now = Date.now();
   let sent = 0, due = 0;
@@ -73,13 +94,8 @@ async function main() {
     if (now - dueAt > 21 * 86400e3) { s.step = funnel.steps.length; continue; } // joined long before the funnel existed
     due++;
     if (!sendOn || DRY || sent >= DAILY_CAP) continue;
-    const first = (p.fields?.FirstName || p.fields?.first_name || "").trim().split(/\s+/)[0] || "there";
-    const unsub = `${feed.url}/unsubscribe?e=${encodeURIComponent(email)}&t=${unsubToken(email)}`;
-    const body = `${step.body.replaceAll("{first}", first)}\n\n--\nForever Held · ${ADDRESS}\nYou're getting this because you downloaded our free planning checklist.\nUnsubscribe: ${unsub}`;
-    const raw = [`To: ${email}`, `Subject: ${encSubj(step.subject)}`, `List-Unsubscribe: <${unsub}>`, "List-Unsubscribe-Post: List-Unsubscribe=One-Click",
-      "Content-Type: text/plain; charset=UTF-8", "Content-Transfer-Encoding: 8bit", "", body].join("\r\n");
     try {
-      await api("/messages/send", { method: "POST", body: JSON.stringify({ raw: b64url(raw) }) });
+      await send(api, p, step, feed);
       s.step++; s.last = new Date().toISOString(); sent++;
     } catch (e) { console.log(`  send failed: ${e.message.slice(0, 120)}`); break; }
   }
