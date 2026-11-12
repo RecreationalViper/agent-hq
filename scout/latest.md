@@ -1,10 +1,19 @@
 # GitHub Radar — 2026-11-12
 
-> Scanned 12 of 29 saved searches (12 returned data, 0 unchanged, 0 failed). 12 GitHub API calls, authenticated. Zero AI tokens used.
+> Scanned 12 of 29 saved searches (12 returned data, 0 unchanged, 0 failed). 15 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (0)
+## Start here (3)
 
-_Nothing new cleared the quality bar this scan. That is a normal, healthy result — the radar is rotating through its searches and will cover the rest next time._
+- **[emilkowalski/skills](https://github.com/emilkowalski/skills)** 🟢 ADOPT · score 83/100 · ⭐ 56,262 · MIT · updated 1d ago
+  - Skills for Designers and Engineers.
+  - Why: 56,262 stars; updated this week; MIT license; well established; contains SKILL.md skill files
+  - Confirmed: contains `SKILL.md` skill files
+- **[codewhale-hq/Codewhale](https://github.com/codewhale-hq/Codewhale)** 🟢 ADOPT · score 74/100 · ⭐ 41,175 · MIT · updated 0d ago
+  - An open-source coding agent for your terminal, written in Rust. It works with any model, can split one task across several agents, and every line o…
+  - Why: 41,175 stars; updated this week; MIT license; well established
+- **[Pinvou/pinvou-agent](https://github.com/Pinvou/pinvou-agent)** 🟡 WATCH · score 60/100 · ⭐ 2,985 · MIT · updated 0d ago
+  - Open-source desktop AI agent for tools, files, knowledge, workflows, and real deliverables.
+  - Why: 2,985 stars; updated this week; MIT license
 
 ## Agent skills you could install (0)
 
