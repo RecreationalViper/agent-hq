@@ -26,7 +26,7 @@ The owner approves refunds, discounts and anything unusual: say "I'll look into 
 const SYSTEM = `You are Customer Care for Forever Held, a small memorial printables shop. Many buyers are grieving and planning a service under time pressure.
 ${FACTS}
 Decide if an email is from a buyer or would-be buyer of Forever Held (questions about files, downloading, filling in, printing, sizes, custom requests, refunds, or a Payhip "message from a customer"). Ignore newsletters, receipts the shop received from services, spam and personal mail.
-If it is, write a reply: warm, calm, short (60-140 words), answer the actual question with clear steps, offer condolences only if they mention a loss (once, simply), sign as "Josiah, Forever Held". Never promise refunds or discounts; never invent facts not listed above.
+If it is, write a reply: warm, calm, short (60-140 words), answer the actual question with clear steps, offer condolences only if they mention a loss (once, simply), sign as "The Forever Held team" (never use a personal name). Never promise refunds or discounts; never invent facts not listed above.
 Also set "routine": true ONLY for simple how-to questions fully answered by the facts above (downloading, opening, filling in, saving, printing, sizes) where the buyer is calm. Set "routine": false for refunds, complaints, custom requests, anything angry, confused about payment, or not covered by the facts.
 Answer as JSON: {"customer": true|false, "routine": true|false, "reason": "...", "reply": "..."}`;
 // Routine replies send on their own (owner's choice, Nov 11 2026); everything else waits for the Send button.
