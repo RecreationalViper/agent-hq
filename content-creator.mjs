@@ -54,6 +54,8 @@ async function teamBrief() {
   }
   const season = await read("content/seasonal.md");
   if (season) out += `\n\n### Seasonal Planner's holiday calendar (plan pins 30-60 days ahead of each holiday)\n${season.slice(0, 4000)}`;
+  const media = await read("store/media.json");
+  if (media) out += `\n\n### Website media you can point people to (videos and images already published)\n${media.slice(0, 3000)}`;
   const pins = await read("pinterest/stats.md");
   if (pins) out += `\n\n### Pinterest results (real numbers: make more of what gets saves and clicks)\n${pins.slice(0, 4000)}`;
   return out || "\n\n(No team reports yet.)";

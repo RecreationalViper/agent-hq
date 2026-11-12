@@ -19,6 +19,7 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 const require = createRequire(import.meta.url);
 const DATE = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date());
 const KIT = "https://payhip.com/b/vqNSA", CHECKLIST = "https://payhip.com/b/eYJqS";
+const VIDEO = "https://recreationalviper.github.io/agent-hq/store/video/forever-held-pin.mp4";
 const read = (p, f = "") => fs.readFile(path.resolve(HERE, p), "utf8").catch(() => f);
 const url = (p) => pathToFileURL(path.join(HERE, p)).href;
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -94,6 +95,8 @@ h2{font-weight:500;font-size:52px;line-height:1.1;text-align:center;margin-botto
 .card p,.step p{font-size:22px;line-height:1.4}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;text-align:center}
 .num{font-family:Cinzel;font-size:46px;color:#a9b59c;margin-bottom:6px}
+.watch{display:flex;gap:64px;align-items:center;justify-content:center}.vid{position:relative;flex:0 0 330px}.vid img{width:330px;border-radius:14px;box-shadow:0 22px 50px -22px rgba(61,74,54,.5)}
+.play{position:absolute;left:50%;top:80%;transform:translate(-50%,-50%);width:86px;height:86px;border-radius:50%;background:rgba(255,255,255,.88);color:#6d7f5f;font-size:34px;display:grid;place-items:center;padding-left:6px}
 .signup{background:#6d7f5f;color:#fff;text-align:center;border-radius:10px;margin:0 120px;padding:72px 120px}
 .signup h2{color:#fff;margin-bottom:18px}.signup p{font-size:26px;max-width:820px;margin:0 auto}
 .signup .btn{background:#fff;color:#6d7f5f;border-color:#fff;margin-right:0}
@@ -114,6 +117,7 @@ footer{text-align:center;padding:36px;font-size:19px;color:#7a866f;border-top:1p
 <section><h2>${esc(c.inside_title)}</h2><div class="grid">${(c.inside || []).slice(0, 4).map((i) => `<div class="card"><img src="${url(IMG[i.item] || IMG["Program"])}"><h3>${esc(i.title)}</h3><p>${esc(i.text)}</p></div>`).join("")}</div>
  <div style="text-align:center">${btn(c.hero.buy_label + " · $12.99", KIT, true)}</div></section>
 <section style="padding-top:20px"><h2>${esc(c.steps_title)}</h2><div class="steps">${(c.steps || []).slice(0, 3).map((s, i) => `<div class="step"><div class="num">${i + 1}</div><h3>${esc(s.title)}</h3><p>${esc(s.text)}</p></div>`).join("")}</div></section>
+<section style="padding-top:10px"><div class="watch"><div class="vid"><img src="${url("store/video/forever-held-pin-poster.jpg")}"><span class="play">▶</span></div><div><h2 style="text-align:left;margin-bottom:16px">See the whole suite in 19 seconds</h2><p class="sub" style="max-width:520px">The program, welcome sign and memory cards, filled in and ready to print.</p>${btn("Watch the video", VIDEO)}</div></div></section>
 <div class="signup"><h2>${esc(c.signup.title)}</h2><p>${esc(c.signup.text)}</p>${btn(c.signup.button, CHECKLIST)}<p class="fine">${esc(c.signup.fine)}</p></div>
 <section><h2>Questions families ask</h2><div class="faq">${(c.faq || []).slice(0, 4).map((f) => `<div><b>${esc(f.q)}</b>${esc(f.a)}</div>`).join("")}</div></section>
 <section class="closing"><img class="spray" src="${url("products/fillable/art/spray.png")}"><h2 style="margin-bottom:16px">${esc(c.closing.title)}</h2><p>${esc(c.closing.text)}</p>${btn(c.closing.button, KIT, true)}</section>
@@ -168,7 +172,7 @@ async function main() {
 
   const md = `**${c.seo_title}**\n${c.meta_description}\n\n` +
     (design ? `**Open in Canva:** ${design.edit_url}\n(The link works for 30 days; the design also stays in your Canva "Projects".)\n\n` : `**To put it in Canva:** ask Claude to "import the landing page into Canva" (PDF: ${PUBLIC}).\n\n`) +
-    `**Links to add in Canva** (select a button > Link):\n- Buy buttons → ${KIT}\n- Free checklist buttons → ${CHECKLIST}\n\n**Publish:** in Canva tap Share > Publish website (free canva.site address).\n\n**Check first:**\n${c.notes || ""}\n\n**Keywords:** ${(c.keywords || []).join(", ")}`;
+    `**Links to add in Canva** (select a button > Link):\n- Buy buttons → ${KIT}\n- Free checklist buttons → ${CHECKLIST}\n- Watch the video → ${VIDEO} (or in Canva replace the poster with the video: Uploads > the .mp4)\n\n**Publish:** in Canva tap Share > Publish website (free canva.site address).\n\n**Check first:**\n${c.notes || ""}\n\n**Keywords:** ${(c.keywords || []).join(", ")}`;
   const reportFile = `${DATE}-landing-page.md`;
   await fs.writeFile(path.join(HERE, "reports", reportFile), `# Landing page (Canva) - ${DATE}\n\n${md}\n\n## Copy\n\n\`\`\`json\n${JSON.stringify(c, null, 2)}\n\`\`\`\n`);
   let index = []; try { index = JSON.parse(await read("reports/index.json", "[]")); } catch {}

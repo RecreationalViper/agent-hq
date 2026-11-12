@@ -120,6 +120,13 @@ main { width: min(1080px, calc(100% - 32px)); margin: 0 auto }
 .steps span { color: var(--ink-soft); font-size: 15.5px }
 
 /* Questions */
+/* Vertical video (Pinterest pin) beside the steps */
+.watch { display: grid; gap: 22px; align-items: center; padding: 14px; border-radius: var(--r-panel); margin: 0 0 64px; grid-template-columns: 1fr }
+.watch video { display: block; width: min(100%, 360px); margin: 0 auto; aspect-ratio: 2 / 3; border-radius: 20px; background: #efe8dc; object-fit: cover }
+.watch .copy { padding: 4px 8px 10px; text-align: center }
+.watch .copy p { color: var(--ink-soft); margin: 0 0 18px }
+.watch .actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center }
+@media (min-width: 760px) { .watch { grid-template-columns: 360px 1fr; padding: 18px 34px 18px 18px } .watch .copy { text-align: left } .watch .actions { justify-content: flex-start } }
 .faq { display: grid; gap: 10px; margin-bottom: 56px }
 .faq details { border-radius: 22px; padding: 0 18px }
 .faq summary { list-style: none; cursor: pointer; padding: 17px 30px 17px 0; font-weight: 600; position: relative }
@@ -205,6 +212,18 @@ footer .brand { justify-content: center; margin-bottom: 10px; color: var(--moss)
       <li class="glass"><b>Make it theirs</b><span>Tap the wording and type the name, dates, order of service and their story.</span></li>
       <li class="glass"><b>Print</b><span>At home on cardstock, or same day at Staples, Office Depot or FedEx Office.</span></li>
     </ol>
+  </section>
+
+  <section class="watch glass" aria-labelledby="watch-title">
+    <video src="video/forever-held-pin.mp4" poster="video/forever-held-pin-poster.jpg" muted loop playsinline controls preload="none" aria-label="A 19-second video of the Soft Botanical program, welcome sign and memory cards"></video>
+    <div class="copy">
+      <h2 class="section-title" id="watch-title">See the whole suite in 19 seconds</h2>
+      <p>The program, welcome sign and share-a-memory cards, filled in and ready to print. Planning ahead or helping a friend? Get our free planning checklist, with gentle seasonal ideas by email.</p>
+      <div class="actions">
+        <a class="btn btn-sage" href="https://payhip.com/b/vqNSA">Get the suite · $12.99</a>
+        <a class="btn glass" href="https://payhip.com/b/eYJqS">Free planning checklist</a>
+      </div>
+    </div>
   </section>
 
   <section aria-labelledby="faq-title">

@@ -1,0 +1,17 @@
+{
+  "about": "Forever Held website media. Agents: use these exact public URLs when you reference or reuse brand media. Add new files here when you publish them on the site.",
+  "base": "https://recreationalviper.github.io/agent-hq/store/",
+  "videos": [
+    { "id": "product-film", "file": "video/forever-held-film.mp4", "poster": "video/forever-held-poster.jpg", "shape": "16:9, 1920x1080, 20s, muted", "shows": "Opening painted scene, then the Soft Botanical program, welcome sign and memory cards", "used_on": ["storefront: under the hero"], "good_for": ["website", "YouTube later", "email (link to it with the poster)"] },
+    { "id": "pinterest-video-pin", "file": "video/forever-held-pin.mp4", "poster": "video/forever-held-pin-poster.jpg", "shape": "2:3, 1000x1500, 19s, muted", "shows": "Pan across the painted still with the suite: program, welcome sign, memory cards", "used_on": ["Pinterest (posted by the owner, board Celebration of Life Ideas)", "storefront: 'See the whole suite in 19 seconds' section with buy + free checklist buttons"], "good_for": ["Pinterest video pins", "Instagram/TikTok vertical (crop to 9:16)", "landing page"] }
+  ],
+  "images": [
+    { "id": "program-cover", "file": "img/program-cover.png" },
+    { "id": "program-inside", "file": "img/program-inside.png" },
+    { "id": "welcome-sign", "file": "img/welcome-sign.png" },
+    { "id": "memory-card", "file": "img/memory-card.png" },
+    { "id": "logo-wide", "file": "brand/logo-wide-tight.png" },
+    { "id": "logo-square", "file": "brand/logo-square.png" }
+  ],
+  "links": { "kit": "https://payhip.com/b/vqNSA", "free_checklist_signup": "https://payhip.com/b/eYJqS", "storefront": "https://recreationalviper.github.io/agent-hq/store/", "payhip_store": "https://payhip.com/ForeverHeld" }
+}
