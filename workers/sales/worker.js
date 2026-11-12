@@ -59,6 +59,7 @@ export default {
     if (req.method === "POST" && url.pathname === "/discord") return discord(req, env, ctx);
     if (url.pathname.startsWith("/canva/")) return canva(req, url, env);
     if (url.pathname === "/contact") return contact(req, env);
+    if (url.pathname === "/contacts") return contactsInbox(req, url, env);
     if (url.pathname === "/privacy") return new Response(PRIVACY, { headers: { "content-type": "text/html; charset=utf-8" } });
     if (url.pathname === "/") return new Response("Forever Held sales feed is running.");
     return json({ ok: false, error: "not found" }, 404);
@@ -291,4 +292,33 @@ async function contact(req, env) {
     await fetch(`https://discord.com/api/v10/channels/${env.DISCORD_SALES_CHANNEL}/messages`, { method: "POST", headers: { Authorization: `Bot ${env.DISCORD_BOT_TOKEN}`, "content-type": "application/json" }, body: JSON.stringify({ content, allowed_mentions: { parse: [] } }) }).catch(() => {});
   }
   return reply({ ok: true });
+}
+
+
+// ---------- Contact messages for Customer Care (agents only) ----------
+// GET  /contacts            -> unanswered website messages (header x-read-token)
+// POST /contacts {done:[keys]} -> mark them answered
+async function contactsInbox(req, url, env) {
+  if (!env.READ_TOKEN || req.headers.get("x-read-token") !== env.READ_TOKEN) return json({ ok: false, error: "unauthorized" }, 401);
+  if (req.method === "POST") {
+    const { done = [] } = await req.json().catch(() => ({}));
+    for (const key of done.slice(0, 50)) {
+      if (!/^contact:/.test(key)) continue;
+      const v = await env.SALES.get(key); if (!v) continue;
+      await env.SALES.put(key, JSON.stringify({ ...JSON.parse(v), handled: new Date().toISOString() }), { expirationTtl: 365 * 86400 });
+    }
+    return json({ ok: true });
+  }
+  const out = [];
+  let cursor;
+  do {
+    const page = await env.SALES.list({ prefix: "contact:", cursor, limit: 1000 });
+    for (const k of page.keys) {
+      if (out.length >= 25) break;
+      const v = JSON.parse((await env.SALES.get(k.name)) || "{}");
+      if (!v.handled && Date.now() - Date.parse(v.at || 0) < 14 * 86400e3) out.push({ key: k.name, ...v });
+    }
+    cursor = page.list_complete ? null : page.cursor;
+  } while (cursor && out.length < 25);
+  return json({ ok: true, messages: out });
 }

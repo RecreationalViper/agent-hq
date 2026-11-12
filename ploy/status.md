@@ -7,9 +7,10 @@ shift while Ploy is on break (out of daily credits). Claude syncs this file from
 - Last sync: 2026-11-12 ~2:20 pm ET. **Ploy status: ON BREAK** (used 751 of 700 credits today). Live switch: `ploy/state.json` (see AGENTS.md "Shift lock").
 
 ## Shift rules (every agent, every AI team)
-1. **Never change, overwrite, publish or "fix" Ploy's work** (its pages, drafts, ad drafts, database rows). Ploy owns it.
-2. **On Ploy's break, do prep work Ploy can use**: research, keyword lists, copy drafts, account research, QA notes.
-   Write it in your report under a heading `## For Ploy` (Claude copies it to `ploy/shift/` and hands it to Ploy).
+1. **While Ploy is running, hands off its jobs.** Research and notes only, under `## For Ploy`.
+2. **While Ploy is on break, it's our shift: be hands-on.** Build, edit and publish on our live store (foreverheld.pages.dev),
+   work leads, email capture, funnels, sales, SEO and customer care, using Ploy's methods as the frame of reference.
+   Don't undo Ploy's finished work in Ploy; tell Ploy what we changed (Claude hands it over via `ploy/shift/`).
 3. Match Ploy's brand guidelines (`ploy/brand.md`) and our rules (AGENTS.md): no invented reviews, stats or customer
    stories; never mention AI on public pages; buyers need no Canva.
 4. **Owner decisions stay with the owner.** If a job is "waiting on owner", don't pick for him; you may add notes that help him decide.

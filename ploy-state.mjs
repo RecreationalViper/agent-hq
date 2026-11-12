@@ -15,19 +15,21 @@ export function ployState() {
   return { onShift, source, jobs: s.jobs || {}, raw: s };
 }
 
-// May our side CHANGE something in this job area right now? Prep work (research, drafts "For Ploy") is always fine.
+// May our side CHANGE something in this job area right now?
+// Owner's rule (Nov 12): while Ploy is running, don't touch its jobs. While Ploy is on break, our agents are fully
+// hands-on: they build, edit and publish, using Ploy's methods and brand guide as the frame of reference.
 export function mayChange(area) {
   const { onShift, jobs } = ployState();
   const j = jobs[area];
   if (!j || j.lead !== "ploy") return { ok: true, why: "not a Ploy job" };
-  if (j.together) return { ok: true, why: "owner said work together on this; still never overwrite Ploy's pages" };
-  if (onShift) return { ok: false, why: "Ploy is on shift and leads this job; prepare notes for Ploy instead" };
-  return { ok: false, why: "Ploy leads this job; on its break we only prepare work for Ploy, we don't change its work" };
+  if (j.together) return { ok: true, why: "owner said work together on this" };
+  if (onShift) return { ok: false, why: "Ploy is running right now; hands off until its break" };
+  return { ok: true, why: "Ploy is on break: our shift, hands-on" };
 }
 
 // Text block for agent prompts.
 export async function shiftBlock() {
   const { onShift, source } = ployState();
   const board = fs.existsSync("ploy/status.md") ? fs.readFileSync("ploy/status.md", "utf8").slice(0, 9000) : "";
-  return `\n\n## Ploy shift (Ploy AI leads the website, SEO, ads, leads and positioning jobs)\nRight now Ploy is ${onShift ? "ON SHIFT (working): do not duplicate or compete with its jobs; only add short notes under '## For Ploy' if truly useful" : "ON BREAK: do the shift work assigned to you on the board and write it under a heading '## For Ploy'"} (from ${source}).\nNever change, redo or contradict Ploy's work; follow ploy/brand.md; no ad spend, no outreach.\n\n${board}`;
+  return `\n\n## Ploy shift (Ploy AI leads the website, SEO, ads, leads and positioning jobs)\nRight now Ploy is ${onShift ? "RUNNING: hands off its jobs (website, SEO pages, ads, leads, positioning). Do research and plans only; put anything for Ploy under '## For Ploy'" : "ON BREAK: it's our shift. Work hands-on on everything (leads, email capture and funnels, sales, SEO, website improvements, customer care), using Ploy's methods and brand guide as the frame of reference. Give concrete, ready-to-use output, not just ideas"} (from ${source}).\nDon't undo Ploy's finished work; follow ploy/brand.md; never spend money; first contact with any business or person needs the owner's Discord approval.\n\n${board}`;
 }

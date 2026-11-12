@@ -4,7 +4,8 @@
 name: Gmail Junk Sweeper + Customer Care
 on:
   schedule:
-    - cron: "41 10 * * *" # daily, 5:41 AM Eastern
+    - cron: "41 10 * * *" # daily, 5:41 AM Eastern: junk sweep + care
+    - cron: "11 */2 * * *" # every 2 hours: customer care only
   workflow_dispatch:
     inputs:
       dry_run:
@@ -26,6 +27,7 @@ jobs:
       - name: Check the rules still work
         run: node gmail/sweep.mjs --selftest
       - name: Sweep inbox
+        if: github.event_name != 'schedule' || github.event.schedule == '41 10 * * *'
         run: node gmail/sweep.mjs ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
@@ -46,7 +48,7 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY || secrets.NVIDIA_KEY || secrets.NVIDIA_NIM_API_KEY || secrets.NIM_API_KEY || secrets.NGC_API_KEY || secrets.NVIDIA }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
-      - name: Customer Care (writes reply drafts, never sends)
+      - name: Customer Care (email + website messages; routine replies send, others wait for Send)
         if: always()
         run: node gmail/care.mjs ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
         env:
@@ -68,6 +70,7 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY || secrets.NVIDIA_KEY || secrets.NVIDIA_NIM_API_KEY || secrets.NIM_API_KEY || secrets.NGC_API_KEY || secrets.NVIDIA }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
           GMAIL_SHOP_REFRESH_TOKEN: ${{ secrets.GMAIL_SHOP_REFRESH_TOKEN }}
           GMAIL_SHOP_CLIENT_ID: ${{ secrets.GMAIL_SHOP_CLIENT_ID }}
           GMAIL_SHOP_CLIENT_SECRET: ${{ secrets.GMAIL_SHOP_CLIENT_SECRET }}

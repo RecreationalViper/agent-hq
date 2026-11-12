@@ -95,6 +95,54 @@ async function care(acct, n) {
   return out;
 }
 
+// Website contact form messages (kept by the sales Worker). Routine how-to questions get an email reply on
+// their own from the shop Gmail; everything else becomes a shop-Gmail draft with Send / Discard in Discord.
+async function websiteMessages() {
+  const key = (process.env.PAYHIP_API_KEY || "").trim();
+  const feed = JSON.parse(await import("node:fs/promises").then((f) => f.readFile("sales-feed.json", "utf8")).catch(() => "{}"));
+  const shop = ACCOUNTS().find((a) => a.key === "SHOP");
+  if (!key || !feed.url || !shop) return [];
+  const token = (await import("node:crypto")).createHash("sha256").update("read:" + key).digest("hex");
+  const r = await fetch(`${feed.url}/contacts`, { headers: { "x-read-token": token }, signal: AbortSignal.timeout(20000) });
+  if (!r.ok) { console.log(`  website messages: HTTP ${r.status}`); return []; }
+  const { messages = [] } = await r.json();
+  if (!messages.length) return [];
+  const api = client(await accessToken(shop.token, shop.id, shop.secret));
+  const done = [], out = [];
+  for (const m of messages) {
+    const text = `${m.message}${m.order ? `\n(Order number: ${m.order})` : ""}`;
+    let res;
+    try { res = await ask(SYSTEM, `From: ${m.name} <${m.email}>\nSubject: Website message: ${m.topic}\n\n${text}`, { json: true, temperature: 0.3 }); }
+    catch (e) { console.log(`  website messages: AI unavailable (${e.message.slice(0, 80)})`); break; }
+    if (!res?.reply) { done.push(m.key); continue; }
+    const routine = res.routine === true && !/refund|license/i.test(m.topic);
+    const subject = `Re: your message to Forever Held`;
+    const raw = [`To: ${m.name.replace(/[\r\n<>"]/g, "")} <${m.email.replace(/[\r\n<>]/g, "")}>`, `Subject: ${subject}`, "Content-Type: text/plain; charset=UTF-8", "", res.reply,
+      "", "---", `You wrote (${m.topic}):`, ...m.message.split("\n").map((l) => `> ${l}`)].join("\r\n");
+    out.push(`• website: ${m.name} — ${m.topic}`);
+    if (DRY) continue;
+    const draft = await api("/drafts", { method: "POST", body: JSON.stringify({ message: { raw: b64url(raw) } }) });
+    done.push(m.key);
+    if (AUTO_SEND && routine && autoSent < AUTO_CAP) {
+      await api("/drafts/send", { method: "POST", body: JSON.stringify({ id: draft.id }) });
+      autoSent++;
+      await postMessage("customer-care", { embeds: [{ title: `✅ Website message answered: ${m.topic}`.slice(0, 250), color: 0x3d6b55,
+        description: `**From:** ${m.name}\n**They asked:** ${m.message.replace(/\s+/g, " ").slice(0, 500)}\n\n**We replied (by email):**\n${res.reply.slice(0, 2800)}`,
+        footer: { text: "Routine question, so it was sent on its own." } }] });
+    } else {
+      await postMessage("customer-care", {
+        embeds: [{ title: `✉️ Website message, reply ready: ${m.topic}`.slice(0, 250), color: 0x3d6b55,
+          description: `**From:** ${m.name}${m.order ? ` (order ${m.order})` : ""}\n**They wrote:** ${m.message.replace(/\s+/g, " ").slice(0, 600)}\n\n**Our reply:**\n${res.reply.slice(0, 2800)}`,
+          footer: { text: "Not routine (refund, license, complaint or unusual), so it waits for you. Edit the draft in the shop Gmail to change it." } }],
+        components: [{ type: 1, components: [
+          { type: 2, style: 3, label: "Send", custom_id: `care:send:SHOP:${draft.id}` },
+          { type: 2, style: 4, label: "Discard", custom_id: `care:discard:SHOP:${draft.id}` }] }] });
+    }
+  }
+  if (done.length && !DRY) await fetch(`${feed.url}/contacts`, { method: "POST", headers: { "x-read-token": token, "content-type": "application/json" }, body: JSON.stringify({ done }) });
+  return out;
+}
+
 // Owner tapped a button in Discord: send or discard one draft.
 async function act(action, key, draftId) {
   const acct = ACCOUNTS().find((a) => a.key === key);
@@ -122,6 +170,8 @@ async function main() {
     try { lines.push(...await care(a, a.key)); console.log(`  ${a.key === "SHOP" ? "shop" : "personal " + a.key} inbox: signed in ok`); }
     catch (e) { console.log(`  account ${a.key}: ${e.message.slice(0, 160)}`); }
   }
+  try { const w = await websiteMessages(); lines.push(...w); console.log(`  website contact messages: ${w.length}`); }
+  catch (e) { console.log(`  website messages: ${e.message.slice(0, 160)}`); }
   console.log(`  inboxes checked: ${accounts.map((a) => a.key === "SHOP" ? "shop" : "personal " + a.key).join(", ")}`);
   console.log(`RESULT care: ${lines.length} buyer email(s) ${DRY ? "found (dry run)" : "drafted and posted for approval"}`);
 }

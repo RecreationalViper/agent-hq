@@ -159,8 +159,7 @@ async function main() {
   } finally { await browser.close(); }
   await fs.writeFile(path.join(dir, "landing.jpg"), preview);
   await fs.writeFile(path.join(dir, "landing.pdf"), pdf);
-  // The website is Ploy's job: unless the owner set it to "together", this stays a draft for Ploy
-  // (saved under ploy/shift) and is not published to the store or Canva.
+  // The website is Ploy's job: while Ploy is running, this stays a draft for Ploy (saved under ploy/shift).
   const gate = mayChange("website");
   if (!gate.ok) {
     await fs.mkdir(path.join(HERE, "ploy", "shift"), { recursive: true });

@@ -33,8 +33,10 @@ collaborate without stepping on each other. Read it before your first change.
 - **The owner works from an iPhone:** anything he must do, write as short tap-by-tap steps.
 
 ## Ploy leads, our agents follow (shift handoff)
-- Ploy AI leads the jobs listed in `ploy/status.md` (website, SEO/AEO, ads, leads, positioning). **Nobody changes, overwrites, publishes or redoes Ploy's work.**
-- While Ploy is on break (out of daily credits), our agents do the shift work assigned there and write it in their reports under `## For Ploy`.
+- Ploy AI leads the jobs listed in `ploy/status.md` (website, SEO/AEO, ads, leads, positioning).
+- **While Ploy is running: hands off its jobs.** Research and notes only (`## For Ploy`).
+- **While Ploy is on break: our shift, fully hands-on.** Our agents build, edit and publish (website, SEO pages, email capture,
+  funnels, sales, customer care), using Ploy's methods and `ploy/brand.md` as the frame of reference. Don't undo Ploy's finished work.
 - Claude syncs Ploy → `ploy/` (free reads) and hands shift work back to Ploy (`ploy/shift/`) after its credits reset.
 - **Shift lock: `ploy/state.json` + `ploy-state.mjs`.** Before any code changes something in a Ploy job area, call
   `mayChange(area)` (areas: website, seo, hero-cro, ads, positioning, leads). If it says no, save the work to `ploy/shift/` instead.
