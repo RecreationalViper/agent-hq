@@ -1,7 +1,7 @@
 {
   "month": "2026-11",
-  "spent": 0.28,
-  "calls": 40,
+  "spent": 0.301,
+  "calls": 43,
   "byAgent": {
     "provider-check": 0.007,
     "competitor-scout": 0.056,
@@ -9,6 +9,6 @@
     "credit-scout": 0.042,
     "content-creator": 0.028,
     "researcher": 0.084,
-    "github-radar": 0.021
+    "github-radar": 0.042
   }
 }

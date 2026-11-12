@@ -1,5 +1,29 @@
 [
   {
+    "file": "2026-11-12-product-builder.md",
+    "agent": "product-builder",
+    "name": "Product Builder",
+    "date": "2026-11-12"
+  },
+  {
+    "file": "2026-11-12-seo.md",
+    "agent": "seo",
+    "name": "SEO Scout",
+    "date": "2026-11-12"
+  },
+  {
+    "file": "2026-11-12-github-radar.md",
+    "agent": "github-radar",
+    "name": "GitHub Radar",
+    "date": "2026-11-12"
+  },
+  {
+    "file": "2026-11-12-daily-task.md",
+    "agent": "daily-task",
+    "name": "Daily Focus",
+    "date": "2026-11-12"
+  },
+  {
     "file": "2026-11-12-researcher.md",
     "agent": "researcher",
     "name": "Deep Researcher",
