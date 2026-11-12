@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-12-trading-desk.md",
+    "agent": "trading-desk",
+    "name": "Trading Desk",
+    "date": "2026-11-12"
+  },
+  {
     "file": "2026-11-12-product-builder.md",
     "agent": "product-builder",
     "name": "Product Builder",
