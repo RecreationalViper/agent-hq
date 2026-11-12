@@ -137,7 +137,7 @@ legal("terms", "Terms of sale", "Terms of sale and personal-use license for Fore
  ("Limits of our responsibility", "<p>We work hard to make our files reliable, but they're provided as they are. To the extent the law allows, our total responsibility for any claim related to a purchase is limited to the amount you paid for it, and we aren't responsible for indirect losses. Nothing in these terms limits rights you have under consumer law that can't be waived.</p>"),
  ("Using this website", "<p>Please don't misuse the site, try to break it, or copy its content for commercial use. Links to other sites (like Payhip or Adobe) are provided for convenience; their own terms apply there.</p>"),
  ("Changes", "<p>We may update these terms. The version on this page when you buy is the one that applies to your order.</p>"),
- ("Governing law", "<p>These terms are governed by the laws of the United States and the state where Forever Held is based. If there's ever a problem, please contact us first; most things can be fixed with a quick email.</p>"),
+ ("Governing law", "<p>These terms are governed by the laws of the State of Ohio and applicable United States law, and any dispute will be handled in the courts of Ohio, unless the consumer law where you live gives you the right to bring it elsewhere. If there's ever a problem, please contact us first; most things can be fixed with a quick email.</p>"),
 ])
 
 # ---------------- Refund policy ----------------
