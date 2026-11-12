@@ -32,6 +32,10 @@ jobs:
         run: |
           npx --yes wrangler@4 pages deploy store --project-name foreverheld --branch main --commit-dirty=true | tee deploy.log
           echo "RESULT: store live at https://foreverheld.pages.dev" | tee -a $GITHUB_STEP_SUMMARY
+      - name: Tell search engines (IndexNow)
+        if: steps.deploy.outcome == 'success'
+        continue-on-error: true
+        run: sleep 20 && node tools/indexnow.mjs
       - name: Tell Discord
         if: always()
         env:
