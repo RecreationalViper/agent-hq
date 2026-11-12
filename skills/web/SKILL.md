@@ -5,7 +5,7 @@ description: How to change the Forever Held website (storefront) and its media. 
 
 # Forever Held website: how we build it
 
-**Live site:** https://recreationalviper.github.io/agent-hq/store/ (GitHub Pages, branch main, folder `store/`). Every push to main publishes within a minute or two.
+**Live site:** https://foreverheld.pages.dev (Cloudflare Pages, free; the Deploy Store workflow publishes `store/` on every push that changes it). Backup copy: https://recreationalviper.github.io/agent-hq/store/ (GitHub Pages).
 
 ## Files
 - `store/index.html`: the whole storefront, one file (inline CSS, tiny inline JS for the gallery). No build step, no frameworks.

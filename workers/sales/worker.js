@@ -264,10 +264,11 @@ async function canva(req, url, env) {
 
 
 // ---------- Storefront contact form ----------
-const CONTACT_ORIGINS = ["https://recreationalviper.github.io"];
+const CONTACT_ORIGINS = ["https://foreverheld.pages.dev", "https://recreationalviper.github.io"];
 async function contact(req, env) {
   const origin = req.headers.get("origin") || "";
-  const cors = { "access-control-allow-origin": CONTACT_ORIGINS.includes(origin) ? origin : CONTACT_ORIGINS[0], "access-control-allow-methods": "POST, OPTIONS", "access-control-allow-headers": "content-type", vary: "origin" };
+  const okOrigin = CONTACT_ORIGINS.includes(origin) || /^https:\/\/[a-z0-9-]+\.foreverheld\.pages\.dev$/.test(origin);
+  const cors = { "access-control-allow-origin": okOrigin ? origin : CONTACT_ORIGINS[0], "access-control-allow-methods": "POST, OPTIONS", "access-control-allow-headers": "content-type", vary: "origin" };
   const reply = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", ...cors } });
   if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
   if (req.method !== "POST") return reply({ ok: false, error: "method" }, 405);

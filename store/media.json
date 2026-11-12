@@ -13,5 +13,5 @@
     { "id": "logo-wide", "file": "brand/logo-wide-tight.png" },
     { "id": "logo-square", "file": "brand/logo-square.png" }
   ],
-  "links": { "kit": "https://payhip.com/b/vqNSA", "free_checklist_signup": "https://payhip.com/b/eYJqS", "storefront": "https://recreationalviper.github.io/agent-hq/store/", "payhip_store": "https://payhip.com/ForeverHeld" }
+  "links": { "kit": "https://payhip.com/b/vqNSA", "free_checklist_signup": "https://payhip.com/b/eYJqS", "storefront": "https://foreverheld.pages.dev/", "storefront_backup": "https://recreationalviper.github.io/agent-hq/store/", "payhip_store": "https://payhip.com/ForeverHeld" }
 }
