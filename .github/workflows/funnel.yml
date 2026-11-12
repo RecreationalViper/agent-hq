@@ -34,6 +34,12 @@ jobs:
           GMAIL_SHOP_CLIENT_ID: ${{ secrets.GMAIL_SHOP_CLIENT_ID }}
           GMAIL_SHOP_CLIENT_SECRET: ${{ secrets.GMAIL_SHOP_CLIENT_SECRET }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          MAILJET_API_KEY: ${{ secrets.MAILJET_API_KEY }}
+          MAILJET_SECRET_KEY: ${{ secrets.MAILJET_SECRET_KEY }}
+          MAILJET_API_SECRET: ${{ secrets.MAILJET_API_SECRET }}
+          MAILJET_SECRET: ${{ secrets.MAILJET_SECRET }}
+          MJ_APIKEY_PUBLIC: ${{ secrets.MJ_APIKEY_PUBLIC }}
+          MJ_APIKEY_PRIVATE: ${{ secrets.MJ_APIKEY_PRIVATE }}
       - name: Save progress (hashed emails only)
         if: github.event.inputs.dry_run != 'true' && github.event_name != 'push'
         run: |

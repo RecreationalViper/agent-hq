@@ -1,20 +1,26 @@
 {
-  "about": "Welcome series for people who get the free Planning Checklist. Sent from the shop Gmail by tools/funnel.mjs. Edit wording here. {first} = first name or 'there'. Every email gets the unsubscribe link and mailing address added automatically.",
+  "about": "Welcome series for people who get the free Planning Checklist. Sent from the shop Gmail by tools/funnel.mjs. Edit wording here. {first} = first name or 'there'. Every email gets the unsubscribe link and mailing address added automatically. A line that is only a link becomes a button; its label is 'cta' (one per step). Design: email/template.html (or the Mailjet template 'Forever Held – Welcome email' if it exists and keeps the {{var:...}} tags).",
   "steps": [
     {
       "day": 1,
       "subject": "One gentle step at a time",
-      "body": "Hi {first},\n\nThank you for downloading the planning checklist. If you're planning a service right now, I'm so sorry. You don't have to do everything today.\n\nA few things families tell us help most in the first days:\n\n- Pick one person to keep the list and share it, so nothing is asked twice.\n- Choose the date and place first; most other decisions follow from them.\n- Gather two or three favorite photos early. You'll want them for the program, a slideshow or a welcome sign.\n\nIf it helps, our planning guides walk through the details, like what goes in a funeral program:\nhttps://foreverheld.pages.dev/guides.html\n\nWith care,\nJosiah, Forever Held"
+      "body": "Hi {first},\n\nThank you for downloading the planning checklist. If you're planning a service right now, I'm so sorry. You don't have to do everything today.\n\nA few things families tell us help most in the first days:\n\n- Pick one person to keep the list and share it, so nothing is asked twice.\n- Choose the date and place first; most other decisions follow from them.\n- Gather two or three favorite photos early. You'll want them for the program, a slideshow or a welcome sign.\n\nIf it helps, our planning guides walk through the details, like what goes in a funeral program:\nhttps://foreverheld.pages.dev/guides.html\n\nWith care,\nJosiah, Forever Held",
+      "preheader": "A few small things that help most in the first days.",
+      "cta": "Read the planning guides"
     },
     {
       "day": 3,
       "subject": "The program, the sign and the memory cards, done tonight",
-      "body": "Hi {first},\n\nWhen it comes to the printed pieces for the service, most families need three things: a program for guests to follow, a welcome sign at the entrance, and cards where people can share a favorite memory.\n\nOur Soft Botanical suite has all three, matching, in gentle sage and cream:\n\n- Funeral program (folds to 5.5 x 8.5 in)\n- Welcome sign (24 x 36 in, also prints at 16 x 24 or 12 x 18)\n- Share-a-memory cards (four per sheet)\n\nYou fill them in on your phone with the free Adobe Acrobat Reader app and print the same day, at home or at a print shop. Nothing to ship, no design skills needed.\n\nSee the suite ($12.99, instant download):\nhttps://payhip.com/b/vqNSA\n\nWith care,\nJosiah, Forever Held"
+      "body": "Hi {first},\n\nWhen it comes to the printed pieces for the service, most families need three things: a program for guests to follow, a welcome sign at the entrance, and cards where people can share a favorite memory.\n\nOur Soft Botanical suite has all three, matching, in gentle sage and cream:\n\n- Funeral program (folds to 5.5 x 8.5 in)\n- Welcome sign (24 x 36 in, also prints at 16 x 24 or 12 x 18)\n- Share-a-memory cards (four per sheet)\n\nYou fill them in on your phone with the free Adobe Acrobat Reader app and print the same day, at home or at a print shop. Nothing to ship, no design skills needed.\n\nSee the suite ($12.99, instant download):\nhttps://payhip.com/b/vqNSA\n\nWith care,\nJosiah, Forever Held",
+      "preheader": "A matching program, welcome sign and memory cards you can print today.",
+      "cta": "See the Soft Botanical suite"
     },
     {
       "day": 7,
       "subject": "Questions families ask us",
-      "body": "Hi {first},\n\nA few questions that come up a lot, in case they help:\n\nHow many programs should I print? Usually one per household or couple, plus a few extra as keepsakes.\n\nCan a print shop print the welcome sign? Yes. Ask Staples, Office Depot or FedEx Office to print it at 24 x 36 in on foam board; it's often ready the same day.\n\nCan I add a photo? Yes, on a computer, in Adobe Acrobat Reader.\n\nIf you have a question of your own, just reply to this email or write to us here:\nhttps://foreverheld.pages.dev/contact.html\n\nYou'll hear from us now and then with gentle seasonal ideas and new designs. If that's not for you, the unsubscribe link is below.\n\nWith care,\nJosiah, Forever Held"
+      "body": "Hi {first},\n\nA few questions that come up a lot, in case they help:\n\nHow many programs should I print? Usually one per household or couple, plus a few extra as keepsakes.\n\nCan a print shop print the welcome sign? Yes. Ask Staples, Office Depot or FedEx Office to print it at 24 x 36 in on foam board; it's often ready the same day.\n\nCan I add a photo? Yes, on a computer, in Adobe Acrobat Reader.\n\nIf you have a question of your own, just reply to this email or write to us here:\nhttps://foreverheld.pages.dev/contact.html\n\nYou'll hear from us now and then with gentle seasonal ideas and new designs. If that's not for you, the unsubscribe link is below.\n\nWith care,\nJosiah, Forever Held",
+      "preheader": "How many programs to print, foam-board signs, adding a photo.",
+      "cta": "Write to us"
     }
   ]
 }
