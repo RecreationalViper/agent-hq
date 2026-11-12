@@ -32,6 +32,11 @@ collaborate without stepping on each other. Read it before your first change.
 - **Customers and money:** nothing that contacts customers, sends emails, changes prices or places real-money trades without a human approval step.
 - **The owner works from an iPhone:** anything he must do, write as short tap-by-tap steps.
 
+## Ploy leads, our agents follow (shift handoff)
+- Ploy AI leads the jobs listed in `ploy/status.md` (website, SEO/AEO, ads, leads, positioning). **Nobody changes, overwrites, publishes or redoes Ploy's work.**
+- While Ploy is on break (out of daily credits), our agents do the shift work assigned there and write it in their reports under `## For Ploy`.
+- Claude syncs Ploy → `ploy/` twice a day (free reads) and hands shift work back to Ploy (`ploy/shift/`) after its credits reset.
+
 ## Ploy credits (free plan: 700 AI credits a day, resets 7 pm New York / 00:00 UTC)
 - One job at a time; batch related asks into one message instead of many small ones.
 - Use the **lite** agent profile for small edits and questions; the full agent only for builds and audits.
