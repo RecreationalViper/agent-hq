@@ -4,6 +4,9 @@
 //   POST /payhip         Payhip webhook (paid, refunded)
 //   GET  /sales?days=30  recent sales for the agents (needs header x-read-token)
 //   POST /discord        Discord slash commands (/status, /sales, /ask, /run), owner/admins only
+//   GET  /canva/connect?key=...   owner-only: one-time "Connect Canva" sign-in (OAuth with PKCE)
+//   GET  /canva/callback          Canva sends the owner back here; tokens are kept in KV, never shown
+//   POST /canva/token             agents get a fresh Canva access token (needs header x-read-token)
 const sha256 = async (s) => [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s)))].map((b) => b.toString(16).padStart(2, "0")).join("");
 const json = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json" } });
 
@@ -53,6 +56,7 @@ export default {
       return json({ ok: true, days, sales: out.sort((a, b) => a.date.localeCompare(b.date)) });
     }
     if (req.method === "POST" && url.pathname === "/discord") return discord(req, env, ctx);
+    if (url.pathname.startsWith("/canva/")) return canva(req, url, env);
     if (url.pathname === "/privacy") return new Response(PRIVACY, { headers: { "content-type": "text/html; charset=utf-8" } });
     if (url.pathname === "/") return new Response("Forever Held sales feed is running.");
     return json({ ok: false, error: "not found" }, 404);
@@ -151,7 +155,7 @@ async function ask(env, question) {
 
 // /run choices -> GitHub workflow + inputs
 const RUNS = {
-  "content-creator": ["content-creator.yml", {}], "film": ["make-film.yml", { format: "film" }], "pin-video": ["make-film.yml", { format: "pin" }],
+  "content-creator": ["content-creator.yml", {}], "landing": ["content-creator.yml", { make: "landing" }], "film": ["make-film.yml", { format: "film" }], "pin-video": ["make-film.yml", { format: "pin" }],
   "research": ["research.yml", {}], "provider-check": ["provider-check.yml", {}], "trading-desk": ["trading-desk.yml", { action: "run" }],
   "head-trader-review": ["trading-desk.yml", { action: "review" }], "all-due": ["agent-hq.yml", { agent: "due" }]
 };
@@ -200,4 +204,58 @@ async function discord(req, env, ctx) {
     }
   } catch (e) { return reply(`❌ ${e.message}`); }
   return reply("Unknown command.");
+}
+
+
+// ---------- Canva (Connect API, private integration) ----------
+// Canva refresh tokens are single-use, so only this Worker refreshes them and keeps the newest one in KV.
+const CANVA_SCOPES = "design:content:read design:content:write design:meta:read asset:read asset:write profile:read";
+const b64url = (buf) => btoa(String.fromCharCode(...new Uint8Array(buf))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+const page = (title, body) => new Response(`<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title}</title><body style="font-family:-apple-system,sans-serif;background:#f7f3ec;color:#3d4a36;padding:40px 24px;text-align:center"><h2 style="font-weight:500">${title}</h2><p>${body}</p></body>`, { headers: { "content-type": "text/html; charset=utf-8" } });
+
+async function canvaTokenCall(env, params) {
+  const r = await fetch("https://api.canva.com/rest/v1/oauth/token", { method: "POST",
+    headers: { Authorization: "Basic " + btoa(`${env.CANVA_CLIENT_ID}:${env.CANVA_CLIENT_SECRET}`), "content-type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(params) });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok || !j.access_token) throw new Error(`Canva token HTTP ${r.status}: ${j.error_description || j.message || j.error || "failed"}`);
+  return { access: j.access_token, refresh: j.refresh_token, expires: Date.now() + (Number(j.expires_in) || 3600) * 1000 };
+}
+
+async function canva(req, url, env) {
+  if (!env.CANVA_CLIENT_ID || !env.CANVA_CLIENT_SECRET) return page("Canva isn't set up yet", "Save CANVA_CLIENT_ID and CANVA_CLIENT_SECRET as GitHub secrets, then run Deploy Sales Feed.");
+  const redirect = `${url.origin}/canva/callback`;
+  if (url.pathname === "/canva/connect") {
+    if (!env.CANVA_CONNECT_KEY || url.searchParams.get("key") !== env.CANVA_CONNECT_KEY) return page("Link expired", "Use the newest Connect Canva link from Discord #alerts.");
+    const verifier = b64url(crypto.getRandomValues(new Uint8Array(48)));
+    const state = b64url(crypto.getRandomValues(new Uint8Array(24)));
+    await env.SALES.put(`canva-state:${state}`, verifier, { expirationTtl: 900 });
+    const challenge = b64url(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(verifier)));
+    const q = new URLSearchParams({ code_challenge: challenge, code_challenge_method: "S256", scope: CANVA_SCOPES, response_type: "code", client_id: env.CANVA_CLIENT_ID, state, redirect_uri: redirect });
+    return Response.redirect(`https://www.canva.com/api/oauth/authorize?${q}`, 302);
+  }
+  if (url.pathname === "/canva/callback") {
+    const state = url.searchParams.get("state"), code = url.searchParams.get("code");
+    if (url.searchParams.get("error")) return page("Canva wasn't connected", `Canva said: ${url.searchParams.get("error")}. You can try the link again.`);
+    const verifier = state && await env.SALES.get(`canva-state:${state}`);
+    if (!verifier || !code) return page("Link expired", "Tap the Connect Canva link again (it works for 15 minutes).");
+    await env.SALES.delete(`canva-state:${state}`);
+    try {
+      const t = await canvaTokenCall(env, { grant_type: "authorization_code", code, code_verifier: verifier, redirect_uri: redirect });
+      await env.SALES.put("canva-tokens", JSON.stringify(t));
+      return page("Canva connected ✓", "The Content Creator can now make designs in your Canva account. You can close this page.");
+    } catch (e) { return page("Canva wasn't connected", e.message); }
+  }
+  if (req.method === "POST" && url.pathname === "/canva/token") {
+    if (!env.READ_TOKEN || req.headers.get("x-read-token") !== env.READ_TOKEN) return json({ ok: false, error: "unauthorized" }, 401);
+    const raw = await env.SALES.get("canva-tokens");
+    if (!raw) return json({ ok: false, error: "not_connected" }, 409);
+    let t = JSON.parse(raw);
+    if (t.expires - Date.now() < 10 * 60 * 1000) {
+      try { t = await canvaTokenCall(env, { grant_type: "refresh_token", refresh_token: t.refresh }); await env.SALES.put("canva-tokens", JSON.stringify(t)); }
+      catch (e) { return json({ ok: false, error: "refresh_failed", message: e.message }, 502); }
+    }
+    return json({ ok: true, access_token: t.access, expires: t.expires });
+  }
+  return json({ ok: false, error: "not found" }, 404);
 }

@@ -57,6 +57,13 @@ if (app?.verify_key) {
   if (process.env.GH_DISPATCH_TOKEN?.trim()) bindings.push({ type: "secret_text", name: "GH_TOKEN", text: process.env.GH_DISPATCH_TOKEN.trim() });
   console.log(`Discord commands: on${process.env.GH_DISPATCH_TOKEN?.trim() ? " (with /run)" : " (/run waits for GH_DISPATCH_TOKEN)"}`);
 }
+// Canva (Connect API): client id/secret from GitHub secrets; the owner connects once with a private link
+const CANVA_ID = (process.env.CANVA_CLIENT_ID || "").trim(), CANVA_SECRET = (process.env.CANVA_CLIENT_SECRET || "").trim();
+const canvaKey = CANVA_ID ? crypto.createHash("sha256").update("canva:" + PAYHIP + CANVA_ID).digest("hex").slice(0, 32) : "";
+if (CANVA_ID && CANVA_SECRET) {
+  bindings.push({ type: "plain_text", name: "CANVA_CLIENT_ID", text: CANVA_ID }, { type: "secret_text", name: "CANVA_CLIENT_SECRET", text: CANVA_SECRET }, { type: "secret_text", name: "CANVA_CONNECT_KEY", text: canvaKey });
+  console.log("Canva: client saved on the Worker");
+}
 const form = new FormData();
 form.append("metadata", new Blob([JSON.stringify({ main_module: "worker.js", compatibility_date: "2026-01-01", bindings })], { type: "application/json" }));
 form.append("worker.js", new Blob([await fs.readFile("workers/sales/worker.js", "utf8")], { type: "application/javascript+module" }), "worker.js");
@@ -73,13 +80,22 @@ for (let i = 0; i < 12; i++) {
   await new Promise((r) => setTimeout(r, 10000));
 }
 console.log(`RESULT: Payhip webhook address: ${base}/payhip`);
+if (CANVA_ID && CANVA_SECRET) {
+  const st = await fetch(`${base}/canva/token`, { method: "POST", headers: { "x-read-token": readToken } }).then((r) => r.json()).catch(() => ({}));
+  if (st.ok) console.log("RESULT: Canva connected (token works)");
+  else {
+    const link = `${base}/canva/connect?key=${canvaKey}`;
+    console.log(`RESULT: Canva not connected yet (${st.error || "no answer"}); connect link posted to Discord #alerts. Redirect URL for the Canva integration: ${base}/canva/callback`);
+    if (process.env.DISCORD_BOT_TOKEN) { const { alert } = await import("../discord.mjs"); await alert(`🎨 **Connect Canva** (one time, owner only): tap this link, sign in to Canva and press Allow:\n${link}`).catch((e) => console.log("Discord post failed:", e.message)); }
+  }
+}
 
 // 5. register the slash commands in the Agent HQ server and point Discord at the Worker
 if (app?.verify_key) {
   const D = { Authorization: `Bot ${process.env.DISCORD_BOT_TOKEN.trim()}`, "Content-Type": "application/json" };
   const guild = JSON.parse(await fs.readFile("discord.json", "utf8")).serverId;
   const agents = JSON.parse(await fs.readFile("agents.json", "utf8")).agents.map((a) => ({ name: a.name.slice(0, 100), value: a.id }));
-  const extra = [["Content Creator", "content-creator"], ["Product film (website)", "film"], ["Pinterest video pin", "pin-video"], ["Deep Researcher", "research"], ["Trading Desk", "trading-desk"], ["Head Trader review", "head-trader-review"], ["Provider Check", "provider-check"], ["All agents due today", "all-due"]].map(([name, value]) => ({ name, value }));
+  const extra = [["Content Creator", "content-creator"], ["Landing page (Canva)", "landing"], ["Product film (website)", "film"], ["Pinterest video pin", "pin-video"], ["Deep Researcher", "research"], ["Trading Desk", "trading-desk"], ["Head Trader review", "head-trader-review"], ["Provider Check", "provider-check"], ["All agents due today", "all-due"]].map(([name, value]) => ({ name, value }));
   const commands = [
     { name: "status", description: "When each agent last reported" },
     { name: "sales", description: "Sales today, this week and this month" },

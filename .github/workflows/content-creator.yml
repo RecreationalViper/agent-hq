@@ -4,6 +4,11 @@ on:
     - cron: "23 15 * * 2,5" # Tuesday and Friday, about 10:23am New York time
   workflow_dispatch:
     inputs:
+      make:
+        description: "What to make"
+        type: choice
+        options: [posts, landing]
+        default: posts
       posts:
         description: "How many posts to make"
         default: "5"
@@ -26,7 +31,7 @@ jobs:
         env:
           PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN }}
       - name: Write, design and post this week's content
-        run: node content-creator.mjs
+        run: node ${{ github.event.inputs.make == 'landing' && 'landing.mjs' || 'content-creator.mjs' }}
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -40,13 +45,16 @@ jobs:
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
           EXA_API_KEY_2: ${{ secrets.EXA_API_KEY_2 || secrets.EXA_KEY_2 || secrets.EXA_API_KEY2 }}
           ART_API_KEY: ${{ secrets.ART_API_KEY }}
+          PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
           CREATOR_POSTS: ${{ github.event.inputs.posts || '5' }}
       - name: Keep the images for 30 days
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: content-images
-          path: content/*/*.jpg
+          path: |
+            content/*/*.jpg
+            content/*/*.pdf
           retention-days: 30
           if-no-files-found: ignore
       - name: Save report and notes for the team
