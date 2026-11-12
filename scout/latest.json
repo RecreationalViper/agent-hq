@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T11:31:34.273Z",
+  "generatedAt": "2026-11-12T20:17:39.371Z",
   "date": "2026-11-12",
   "token": true,
   "searches": {
@@ -9,70 +9,27 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 15,
-  "rateRemaining": 9,
-  "newItems": 3,
+  "apiCalls": 12,
+  "rateRemaining": 18,
+  "newItems": 1,
   "blockedToday": 0,
   "shortlist": [
     {
-      "name": "emilkowalski/skills",
-      "url": "https://github.com/emilkowalski/skills",
-      "description": "Skills for Designers and Engineers.",
-      "stars": 56262,
-      "forks": 3286,
-      "language": "Markdown",
-      "license": "MIT",
-      "pushedAt": "2026-11-11T23:30:13Z",
+      "name": "hanlulong/awesome-ai-for-economists",
+      "url": "https://github.com/hanlulong/awesome-ai-for-economists",
+      "description": "A curated list of AI tools, agent skills, libraries, and resources for economics research, teaching, and policy analysis. Maintained by the OpenEcon team.",
+      "stars": 709,
+      "forks": 159,
+      "language": "",
+      "license": "CC0-1.0",
+      "pushedAt": "2026-11-07T18:59:08Z",
       "category": "skills",
-      "score": 83,
-      "tier": "adopt",
-      "reasons": [
-        "56,262 stars",
-        "updated this week",
-        "MIT license",
-        "well established",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [],
-      "skillFiles": true
-    },
-    {
-      "name": "codewhale-hq/Codewhale",
-      "url": "https://github.com/codewhale-hq/Codewhale",
-      "description": "An open-source coding agent for your terminal, written in Rust. It works with any model, can split one task across several agents, and every line of it is yours to read.",
-      "stars": 41175,
-      "forks": 3570,
-      "language": "Rust",
-      "license": "MIT",
-      "pushedAt": "2026-11-12T09:58:44Z",
-      "category": "efficiency",
-      "score": 74,
-      "tier": "adopt",
-      "reasons": [
-        "41,175 stars",
-        "updated this week",
-        "MIT license",
-        "well established"
-      ],
-      "flags": [],
-      "skillFiles": null
-    },
-    {
-      "name": "Pinvou/pinvou-agent",
-      "url": "https://github.com/Pinvou/pinvou-agent",
-      "description": "Open-source desktop AI agent for tools, files, knowledge, workflows, and real deliverables.",
-      "stars": 2985,
-      "forks": 434,
-      "language": "Rust",
-      "license": "MIT",
-      "pushedAt": "2026-11-12T11:19:14Z",
-      "category": "efficiency",
-      "score": 60,
+      "score": 58,
       "tier": "watch",
       "reasons": [
-        "2,985 stars",
+        "709 stars",
         "updated this week",
-        "MIT license"
+        "CC0-1.0 license"
       ],
       "flags": [],
       "skillFiles": null
@@ -81,73 +38,29 @@
   "byCategory": {
     "skills": [
       {
-        "name": "emilkowalski/skills",
-        "url": "https://github.com/emilkowalski/skills",
-        "description": "Skills for Designers and Engineers.",
-        "stars": 56262,
-        "forks": 3286,
-        "language": "Markdown",
-        "license": "MIT",
-        "pushedAt": "2026-11-11T23:30:13Z",
+        "name": "hanlulong/awesome-ai-for-economists",
+        "url": "https://github.com/hanlulong/awesome-ai-for-economists",
+        "description": "A curated list of AI tools, agent skills, libraries, and resources for economics research, teaching, and policy analysis. Maintained by the OpenEcon team.",
+        "stars": 709,
+        "forks": 159,
+        "language": "",
+        "license": "CC0-1.0",
+        "pushedAt": "2026-11-07T18:59:08Z",
         "category": "skills",
-        "score": 83,
-        "tier": "adopt",
+        "score": 58,
+        "tier": "watch",
         "reasons": [
-          "56,262 stars",
+          "709 stars",
           "updated this week",
-          "MIT license",
-          "well established",
-          "contains SKILL.md skill files"
+          "CC0-1.0 license"
         ],
         "flags": [],
-        "skillFiles": true
+        "skillFiles": null
       }
     ],
     "enhancement": [],
     "free-tokens": [],
-    "efficiency": [
-      {
-        "name": "codewhale-hq/Codewhale",
-        "url": "https://github.com/codewhale-hq/Codewhale",
-        "description": "An open-source coding agent for your terminal, written in Rust. It works with any model, can split one task across several agents, and every line of it is yours to read.",
-        "stars": 41175,
-        "forks": 3570,
-        "language": "Rust",
-        "license": "MIT",
-        "pushedAt": "2026-11-12T09:58:44Z",
-        "category": "efficiency",
-        "score": 74,
-        "tier": "adopt",
-        "reasons": [
-          "41,175 stars",
-          "updated this week",
-          "MIT license",
-          "well established"
-        ],
-        "flags": [],
-        "skillFiles": null
-      },
-      {
-        "name": "Pinvou/pinvou-agent",
-        "url": "https://github.com/Pinvou/pinvou-agent",
-        "description": "Open-source desktop AI agent for tools, files, knowledge, workflows, and real deliverables.",
-        "stars": 2985,
-        "forks": 434,
-        "language": "Rust",
-        "license": "MIT",
-        "pushedAt": "2026-11-12T11:19:14Z",
-        "category": "efficiency",
-        "score": 60,
-        "tier": "watch",
-        "reasons": [
-          "2,985 stars",
-          "updated this week",
-          "MIT license"
-        ],
-        "flags": [],
-        "skillFiles": null
-      }
-    ]
+    "efficiency": []
   },
   "blocked": [],
   "watching": [
