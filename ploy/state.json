@@ -1,0 +1,13 @@
+{
+  "about": "Who is on shift. Updated by Claude when it checks Ploy. Agents and scripts read it through ploy-state.mjs.",
+  "updatedAt": "2026-11-12T19:25:00Z",
+  "ploy": { "onShift": false, "working": false, "creditsResetAt": "2026-11-13T00:00:00Z", "note": "Out of daily credits (751/700)" },
+  "jobs": {
+    "website":     { "lead": "ploy", "together": false, "ployChat": "7d4ad127-5bf8-48df-82ac-6944349c94e2" },
+    "seo":         { "lead": "ploy", "together": false, "ployChat": "8c23416f-bcfa-4f29-9811-6bd06c1f43d1" },
+    "hero-cro":    { "lead": "ploy", "together": false, "ployChat": "184e6517-cf97-4c2b-b2fe-dff8e98b487d" },
+    "ads":         { "lead": "ploy", "together": false, "ployChat": "d5e70cb5-499f-4026-bc94-58a27974c95a" },
+    "positioning": { "lead": "ploy", "together": false, "ployChat": "25f95234-7f45-4681-bfe9-ffd7b2981c18" },
+    "leads":       { "lead": "ploy", "together": false, "ployChat": "7d4ad127-5bf8-48df-82ac-6944349c94e2" }
+  }
+}

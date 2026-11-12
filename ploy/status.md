@@ -4,7 +4,7 @@
 shift while Ploy is on break (out of daily credits). Claude syncs this file from Ploy and hands shift work back.
 
 - Ploy workspace: "Forever Held". Free plan: 700 AI credits a day, resets **7 pm New York (00:00 UTC)**.
-- Last sync: 2026-11-12 ~2:20 pm ET. **Ploy status: ON BREAK** (used 751 of 700 credits today).
+- Last sync: 2026-11-12 ~2:20 pm ET. **Ploy status: ON BREAK** (used 751 of 700 credits today). Live switch: `ploy/state.json` (see AGENTS.md "Shift lock").
 
 ## Shift rules (every agent, every AI team)
 1. **Never change, overwrite, publish or "fix" Ploy's work** (its pages, drafts, ad drafts, database rows). Ploy owns it.

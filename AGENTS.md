@@ -35,7 +35,14 @@ collaborate without stepping on each other. Read it before your first change.
 ## Ploy leads, our agents follow (shift handoff)
 - Ploy AI leads the jobs listed in `ploy/status.md` (website, SEO/AEO, ads, leads, positioning). **Nobody changes, overwrites, publishes or redoes Ploy's work.**
 - While Ploy is on break (out of daily credits), our agents do the shift work assigned there and write it in their reports under `## For Ploy`.
-- Claude syncs Ploy → `ploy/` twice a day (free reads) and hands shift work back to Ploy (`ploy/shift/`) after its credits reset.
+- Claude syncs Ploy → `ploy/` (free reads) and hands shift work back to Ploy (`ploy/shift/`) after its credits reset.
+- **Shift lock: `ploy/state.json` + `ploy-state.mjs`.** Before any code changes something in a Ploy job area, call
+  `mayChange(area)` (areas: website, seo, hero-cro, ads, positioning, leads). If it says no, save the work to `ploy/shift/` instead.
+  Agents with `"followsPloy": true` in agents.json get the live shift status in their prompt automatically.
+- **Working together:** only when the owner says so, Claude sets `"together": true` for that job. Even then, nobody overwrites
+  Ploy's pages; our side contributes through `ploy/shift/` and Ploy merges it.
+- **Never interrupt Ploy:** messages to Ploy are sent only when its chat is idle (not working, nothing pending), always as
+  `queue`, never `steer`, one batched message per chat.
 
 ## Ploy credits (free plan: 700 AI credits a day, resets 7 pm New York / 00:00 UTC)
 - One job at a time; batch related asks into one message instead of many small ones.

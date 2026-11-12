@@ -14,6 +14,7 @@ import { seoResearch } from "./seo.mjs";
 import { importDesign } from "./canva.mjs";
 import { report, postFiles, alert } from "./discord.mjs";
 import { flushUsage } from "./usage-log.mjs";
+import { mayChange } from "./ploy-state.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const require = createRequire(import.meta.url);
@@ -158,6 +159,16 @@ async function main() {
   } finally { await browser.close(); }
   await fs.writeFile(path.join(dir, "landing.jpg"), preview);
   await fs.writeFile(path.join(dir, "landing.pdf"), pdf);
+  // The website is Ploy's job: unless the owner set it to "together", this stays a draft for Ploy
+  // (saved under ploy/shift) and is not published to the store or Canva.
+  const gate = mayChange("website");
+  if (!gate.ok) {
+    await fs.mkdir(path.join(HERE, "ploy", "shift"), { recursive: true });
+    await fs.writeFile(path.join(HERE, "ploy", "shift", `${DATE}-website-landing-copy.md`), `# For Ploy: landing page copy draft (${DATE})\n\nPrepared by the Content Creator while Ploy leads the website (${gate.why}). Use or ignore.\n\n\`\`\`json\n${JSON.stringify(c, null, 2)}\n\`\`\`\n`);
+    console.log(`  website is Ploy's job: saved as a draft for Ploy (${gate.why})`);
+    if (process.env.LANDING_DRY !== "1") await postFiles("content-creator", `🖥️ Landing page copy drafted and handed to Ploy (Ploy leads the website). Preview attached.`, [{ name: "landing-page.jpg", data: preview, type: "image/jpeg" }]);
+    return;
+  }
   // Public copy (GitHub Pages) so Claude can import it into Canva through the owner's Canva connector
   // when the agent's own Canva sign-in isn't set up.
   await fs.mkdir(path.join(HERE, "store", "landing"), { recursive: true });

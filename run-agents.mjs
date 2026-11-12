@@ -1,6 +1,7 @@
 // Agent HQ routine runner — runs on GitHub Actions (free), calls Google Gemini (free tier),
 // and saves each agent's report into reports/ so the website can show it.
 import { gwFetch } from "./ai-gateway.mjs";
+import { shiftBlock } from "./ploy-state.mjs";
 import { flushUsage } from "./usage-log.mjs";
 import fs from "node:fs/promises";
 import { hasGroq, groqChat } from "./ai-fallback.mjs";
@@ -154,6 +155,7 @@ async function main() {
         task += `\n\n### ${path}\n${body ? body.slice(0, 24000) : `(the file ${path} is missing - say so and do not invent findings)`}`;
       }
     }
+    if (agent.followsPloy) task += await shiftBlock();
     if (agent.holidays) task += `\n\nUpcoming holidays and remembrance days (computed from the calendar, so the dates are real):\n${upcoming(date, agent.holidays)}`;
     if (agent.seo) {
       const r = await seoResearch(agent.seo).catch((e) => ({ text: "", notes: [`SEO data unavailable (${e.message})`] }));

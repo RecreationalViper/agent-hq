@@ -12,10 +12,9 @@
         "pinterest/stats.md",
         "content/seasonal.md",
         "email/stats.md",
-        "ploy/status.md",
         "ploy/brand.md"
       ],
-      "context": "PLOY SHIFT: Ploy AI (ploy.ai) leads the website, SEO, ads, leads and positioning jobs listed in ploy/status.md. Never change or redo Ploy's work. When Ploy is on break, do the shift work assigned to you there and put it in your report under a heading '## For Ploy' (prep Ploy can use: research, keywords, copy drafts, QA notes). Follow ploy/brand.md. No ad spend, no outreach."
+      "followsPloy": true
     },
     {
       "id": "seasonal",
@@ -41,10 +40,9 @@
         "content/seasonal.md",
         "email/stats.md",
         "store/media.json",
-        "ploy/status.md",
         "ploy/brand.md"
       ],
-      "context": "PLOY SHIFT: Ploy AI (ploy.ai) leads the website, SEO, ads, leads and positioning jobs listed in ploy/status.md. Never change or redo Ploy's work. When Ploy is on break, do the shift work assigned to you there and put it in your report under a heading '## For Ploy' (prep Ploy can use: research, keywords, copy drafts, QA notes). Follow ploy/brand.md. No ad spend, no outreach."
+      "followsPloy": true
     },
     {
       "id": "ideas",
@@ -54,10 +52,9 @@
       "doc": "etsy",
       "readsFiles": [
         "content/seasonal.md",
-        "ploy/status.md",
         "ploy/brand.md"
       ],
-      "context": "PLOY SHIFT: Ploy AI (ploy.ai) leads the website, SEO, ads, leads and positioning jobs listed in ploy/status.md. Never change or redo Ploy's work. When Ploy is on break, do the shift work assigned to you there and put it in your report under a heading '## For Ploy' (prep Ploy can use: research, keywords, copy drafts, QA notes). Follow ploy/brand.md. No ad spend, no outreach."
+      "followsPloy": true
     },
     {
       "id": "listing",
@@ -68,10 +65,9 @@
       "readsFiles": [
         "content/seasonal.md",
         "store/media.json",
-        "ploy/status.md",
         "ploy/brand.md"
       ],
-      "context": "PLOY SHIFT: Ploy AI (ploy.ai) leads the website, SEO, ads, leads and positioning jobs listed in ploy/status.md. Never change or redo Ploy's work. When Ploy is on break, do the shift work assigned to you there and put it in your report under a heading '## For Ploy' (prep Ploy can use: research, keywords, copy drafts, QA notes). Follow ploy/brand.md. No ad spend, no outreach."
+      "followsPloy": true
     },
     {
       "id": "credit-scout",
@@ -168,10 +164,9 @@
       },
       "instructions": "You are our competitor analyst. Using ONLY the fresh web results provided (real pages), study the shops and sites selling printable funeral programs, welcome signs and memory cards. Report: (1) a table of 8-12 competitors: name/site, what's included, price (only if the page states it, else 'not shown'), format (Canva, editable PDF, Word, Corjl, etc.), and one standout feature, each with its [n] link; (2) the usual price range and where our Soft Botanical bundle ($12.99, fill-in PDF, no Canva needed) sits; (3) 5 things competitors do that we should copy or beat (bundles, sizes, wording help, photo options, free samples, extra pieces like bookmarks or thank-you cards); (4) 3 ideas for our NEXT product based on gaps you see; (5) wording buyers seem to respond to (phrases repeated across listings). Never invent prices, reviews or sales numbers. Mark everything as research for the owner; nothing gets changed or published without approval.",
       "readsFiles": [
-        "ploy/status.md",
         "ploy/brand.md"
       ],
-      "context": "PLOY SHIFT: Ploy AI (ploy.ai) leads the website, SEO, ads, leads and positioning jobs listed in ploy/status.md. Never change or redo Ploy's work. When Ploy is on break, do the shift work assigned to you there and put it in your report under a heading '## For Ploy' (prep Ploy can use: research, keywords, copy drafts, QA notes). Follow ploy/brand.md. No ad spend, no outreach."
+      "followsPloy": true
     },
     {
       "id": "partner-finder",
@@ -201,11 +196,10 @@
       },
       "instructions": "You find possible partners who could recommend or bundle Forever Held printables: independent funeral homes, celebrants, celebration-of-life planners, grief support groups and local print shops. Using ONLY the fresh web results provided, list up to 10 promising businesses in the United States only (our files are US Letter and US print-shop sizes; skip anyone outside the US): name, type, city/region if stated, why they might be a fit (quote what their page says), and the page link [n]. Only use business information shown on their public pages; do not list private individuals or personal phone numbers or emails. Then suggest ONE short, kind partnership idea (e.g. a free sample kit or a family discount code) and a 4-sentence draft message the owner could send. IMPORTANT: this is a list and a draft only. Never contact anyone; the owner decides who, if anyone, to reach out to.",
       "readsFiles": [
-        "ploy/status.md",
         "ploy/brand.md",
         "ploy/leads.csv"
       ],
-      "context": "PLOY SHIFT: Ploy AI (ploy.ai) leads the website, SEO, ads, leads and positioning jobs listed in ploy/status.md. Never change or redo Ploy's work. When Ploy is on break, do the shift work assigned to you there and put it in your report under a heading '## For Ploy' (prep Ploy can use: research, keywords, copy drafts, QA notes). Follow ploy/brand.md. No ad spend, no outreach."
+      "followsPloy": true
     },
     {
       "id": "seo",
@@ -244,10 +238,9 @@
         "content/notes.md",
         "pinterest/stats.md",
         "store/media.json",
-        "ploy/status.md",
         "ploy/brand.md"
       ],
-      "context": "PLOY SHIFT: Ploy AI (ploy.ai) leads the website, SEO, ads, leads and positioning jobs listed in ploy/status.md. Never change or redo Ploy's work. When Ploy is on break, do the shift work assigned to you there and put it in your report under a heading '## For Ploy' (prep Ploy can use: research, keywords, copy drafts, QA notes). Follow ploy/brand.md. No ad spend, no outreach."
+      "followsPloy": true
     },
     {
       "id": "review",
@@ -259,10 +252,9 @@
       "readsFiles": [
         "pinterest/stats.md",
         "email/stats.md",
-        "ploy/status.md",
         "ploy/brand.md"
       ],
-      "context": "PLOY SHIFT: Ploy AI (ploy.ai) leads the website, SEO, ads, leads and positioning jobs listed in ploy/status.md. Never change or redo Ploy's work. When Ploy is on break, do the shift work assigned to you there and put it in your report under a heading '## For Ploy' (prep Ploy can use: research, keywords, copy drafts, QA notes). Follow ploy/brand.md. No ad spend, no outreach."
+      "followsPloy": true
     },
     {
       "id": "launch",
