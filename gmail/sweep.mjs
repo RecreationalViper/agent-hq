@@ -100,10 +100,12 @@ export async function accessToken(refresh, clientId = process.env.GMAIL_CLIENT_I
 
 export function client(token) {
   return async function api(path, init = {}) {
-    for (let attempt = 0; attempt < 4; attempt++) {
+    for (let attempt = 0; attempt < 6; attempt++) {
       const res = await fetch(GMAIL + path, { ...init, signal: AbortSignal.timeout(30000), headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" } });
       if (res.status === 429 || res.status >= 500) { await new Promise((r) => setTimeout(r, 1500 * (attempt + 1))); continue; }
       const d = await res.json().catch(() => ({}));
+      // Gmail reports "too many requests this minute" as a 403: wait for the per-minute allowance to refill, then carry on
+      if (res.status === 403 && /quota exceeded|rate limit|ratelimitexceeded/i.test(JSON.stringify(d.error || ""))) { await new Promise((r) => setTimeout(r, 20000 * (attempt + 1))); continue; }
       if (!res.ok) throw new Error(`Gmail ${res.status}: ${/has not been used|is disabled/i.test(d.error?.message || "") ? "the Gmail API isn't turned on for this Google project — enable it in Google Cloud" : res.status === 403 ? `permission denied (Google says: ${(d.error?.message || "no reason").slice(0, 140)}) — the refresh token needs the gmail.modify scope with Allow ticked` : (d.error?.message || "").slice(0, 200)}`);
       return d;
     }
@@ -127,6 +129,7 @@ async function fetchThreads(api, R) {
   for (const id of ids.slice(0, R.maxThreads)) {
     const q = new URLSearchParams([["format", "metadata"], ...HEADERS.map((h) => ["metadataHeaders", h])]);
     const t = await api(`/threads/${id}?${q}`);
+    await new Promise((r) => setTimeout(r, 120)); // stay well under Gmail's per-minute allowance
     const msgs = t.messages || [];
     const first = msgs.find((m) => !(m.labelIds || []).includes("SENT")) || msgs[0];
     if (!first) continue;
