@@ -210,6 +210,7 @@ for g in guides:
     faq_html = ("<h2>Questions</h2>\n" + "".join(f"<h3 style=\"font:500 18px/1.3 var(--serif);margin:16px 0 4px\">{e(q['q'])}</h3><p>{e(q['a'])}</p>" for q in faq)) if faq else ""
     related = [x for x in guides if x["slug"] != g["slug"]][:3]
     rel = ("<h2>More planning guides</h2><ul>" + "".join(f'<li><a href="{x["slug"]}.html">{e(x["h1"])}</a></li>' for x in related) + "</ul>") if related else ""
+    relpanel = f'<article class="panel glass legal">{rel}</article>' if rel else ""
     cta = f'''<section class="panel glass" style="text-align:center"><h2 class="section-title" style="font-size:28px">{e(g.get("cta_title") or "Everything for the service, in one gentle suite")}</h2>
 <p style="color:var(--ink-soft);margin:0 0 18px">Funeral program, welcome sign and memory cards you fill in on your phone and print today.</p>
 <div class="hero-cta"><a class="btn btn-sage" href="{KIT}">Get the suite · $12.99</a><a class="btn glass" href="{CHECKLIST}">Free planning checklist</a></div></section>'''
@@ -223,7 +224,7 @@ for g in guides:
 {secs}{faq_html}
 </article>
 {cta}
-<article class="panel glass legal">{rel}</article>'''
+{relpanel}'''
     page(g["slug"], g["title"].replace(" · Forever Held", ""), g["description"], body, head_extra=f'<script type="application/ld+json">{json.dumps(ld)}</script>\n')
 cards = "".join(f'<a class="glass" href="{g["slug"]}.html"><b>{e(g["h1"])}</b><span>{e(g["description"])}</span></a>' for g in guides)
 page("guides", "Planning guides", "Gentle, practical guides for planning a funeral or celebration of life: programs, welcome signs, memory cards and more.",
