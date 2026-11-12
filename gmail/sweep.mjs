@@ -232,10 +232,10 @@ async function main() {
 
 // ---------- selftest ----------
 function selftest(R) {
-  const mk = (from, subject, { to = "Josiah Cottingham <me@gmail.com>", labels = ["CATEGORY_UPDATES"], bulk = true, auth = "dmarc=pass", replyTo, youReplied = false } = {}) =>
+  const mk = (from, subject, { to = "Alex Sample <me@gmail.com>", labels = ["CATEGORY_UPDATES"], bulk = true, auth = "dmarc=pass", replyTo, youReplied = false } = {}) =>
     ({ id: subject, labels, youReplied, headers: { from, to, subject, "authentication-results": auth, ...(bulk ? { "list-unsubscribe": "<mailto:x@y>" } : {}), ...(replyTo ? { "reply-to": replyTo } : {}) } });
   const cases = [
-    ["phishing", mk("Improve Trust <caleb@improvetrust.com>", "Verify your e-deposit update, tyler", { to: "tyler cottingham <me@gmail.com>", bulk: false })],
+    ["phishing", mk("Improve Trust <caleb@improvetrust.com>", "Verify your e-deposit update, tyler", { to: "tyler sample <me@gmail.com>", bulk: false })],
     ["phishing", mk("Support <help@paypa1-secure.com>", "Your account suspended", { auth: "dmarc=fail", bulk: false })],
     ["keep", mk("Etsy <transaction@etsy.com>", "You made a sale on Etsy!")],
     ["keep", mk("Capital One <capitalone@notification.capitalone.com>", "Josiah, the payment status of one of your accounts changed")],
