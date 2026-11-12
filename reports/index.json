@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-12-researcher.md",
+    "agent": "researcher",
+    "name": "Deep Researcher",
+    "date": "2026-11-12"
+  },
+  {
     "file": "2026-11-11-trading-desk.md",
     "agent": "trading-desk",
     "name": "Trading Desk",

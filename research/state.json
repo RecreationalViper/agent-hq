@@ -1,5 +1,17 @@
 {
   "covered": [
+    "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+    "https://www.siliconreport.com/tether-unveils-botpsy-an-800m-parameter-on-device-ai-agent",
+    "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+    "https://aws.amazon.com/blogs/machine-learning/build-composable-interoperable-multi-agent-systems-with-a2a-on-aws/",
+    "https://aws.amazon.com/blogs/machine-learning/fine-grained-access-control-for-amazon-bedrock-managed-knowledge-base-tools/",
+    "https://aws.amazon.com/blogs/machine-learning/introducing-the-web-search-api-on-amazon-bedrock-agentcore/",
+    "https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability",
+    "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+    "https://hugovk.dev/blog/2026/lock-github-actions/",
+    "https://www.reuters.com/live/nvidia-live-board-meets-fate-ceo-jensen-huang-after-affair-reports-2026-11-12/",
+    "https://www.anthropic.com/news/public-benefit-fund",
+    "https://www.anthropic.com/news/roadshow-launch",
     "https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot",
     "https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-1-pro-on-amazon-bedrock/",
     "https://ernie.baidu.com/release/ernie-5-5-flash-preview/",
@@ -49,6 +61,6 @@
     "https://hunch.net/?p=13764006",
     "https://www.kadoa.com/companies/insights/ai-selloff-perspective"
   ],
-  "lastRun": "2026-11-11",
-  "lastNotion": "2026-11-11"
+  "lastRun": "2026-11-12",
+  "lastNotion": "2026-11-12"
 }
