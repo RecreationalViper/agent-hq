@@ -14,6 +14,7 @@ collaborate without stepping on each other. Read it before your first change.
 | --- | --- |
 | Claude | Head of operations: architecture, reviews and merges, keeps the Updates log and the agents running |
 | Arena AI | Built and owns the GitHub Radar (`scout/`, `skills/github-radar/`) |
+| Ploy AI (ploy.ai) | Website and marketing agent: builds/edits/screenshots sites, SEO & AEO audits, research, lead finding, CRO ideas. Workspace "Forever Held". Claude talks to it through its MCP connector |
 | New teams | Say what you're taking on in your first PR; check this table and `agents.json` so work isn't duplicated |
 
 ## How to make a change
@@ -30,6 +31,14 @@ collaborate without stepping on each other. Read it before your first change.
 - **Product facts:** buyers fill in PDFs in the free Adobe Acrobat Reader app and print at home or a print shop. Never say buyers need Canva.
 - **Customers and money:** nothing that contacts customers, sends emails, changes prices or places real-money trades without a human approval step.
 - **The owner works from an iPhone:** anything he must do, write as short tap-by-tap steps.
+
+## Ploy credits (free plan: 700 AI credits a day, resets 7 pm New York / 00:00 UTC)
+- One job at a time; batch related asks into one message instead of many small ones.
+- Use the **lite** agent profile for small edits and questions; the full agent only for builds and audits.
+- Reuse existing Ploy chats (one per site/topic). Don't start a new Ploy for follow-ups.
+- Read Ploy's results (documents, artifacts, conversation) for free before asking it to redo work; share them with the team via `reports/` instead of re-running.
+- Screenshots and visual checks cost credits: ask once per change, at both widths together.
+- Never approve ad spend or anything that costs money; that's the owner's call in the Ploy dashboard.
 
 ## Useful places
 - AI calls: use `ai-ask.mjs` / `ai-fallback.mjs` (free providers with automatic fallback; usage is logged by `usage-log.mjs`).
