@@ -14,6 +14,7 @@ collaborate without stepping on each other. Read it before your first change.
 | --- | --- |
 | Claude | Head of operations: architecture, reviews and merges, keeps the Updates log and the agents running |
 | Arena AI | Built and owns the GitHub Radar (`scout/`, `skills/github-radar/`) |
+| Web Developer agent | `tools/webdev.mjs`: one planning guide a day on the live store, our shift only |
 | Ploy AI (ploy.ai) | Website and marketing agent: builds/edits/screenshots sites, SEO & AEO audits, research, lead finding, CRO ideas. Workspace "Forever Held". Claude talks to it through its MCP connector |
 | New teams | Say what you're taking on in your first PR; check this table and `agents.json` so work isn't duplicated |
 
