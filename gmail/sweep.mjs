@@ -104,7 +104,7 @@ export function client(token) {
       const res = await fetch(GMAIL + path, { ...init, signal: AbortSignal.timeout(30000), headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" } });
       if (res.status === 429 || res.status >= 500) { await new Promise((r) => setTimeout(r, 1500 * (attempt + 1))); continue; }
       const d = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(`Gmail ${res.status}: ${/has not been used|is disabled/i.test(d.error?.message || "") ? "the Gmail API isn't turned on for this Google project — enable it in Google Cloud" : res.status === 403 ? "permission denied — when making the refresh token, use the gmail.modify scope and tick Allow" : (d.error?.message || "").slice(0, 200)}`);
+      if (!res.ok) throw new Error(`Gmail ${res.status}: ${/has not been used|is disabled/i.test(d.error?.message || "") ? "the Gmail API isn't turned on for this Google project — enable it in Google Cloud" : res.status === 403 ? `permission denied (Google says: ${(d.error?.message || "no reason").slice(0, 140)}) — the refresh token needs the gmail.modify scope with Allow ticked` : (d.error?.message || "").slice(0, 200)}`);
       return d;
     }
     throw new Error("Gmail kept rate-limiting");
