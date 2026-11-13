@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T11:17:55.451Z",
+  "generatedAt": "2026-11-13T20:08:22.574Z",
   "date": "2026-11-13",
   "token": true,
   "searches": {
@@ -9,101 +9,65 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 15,
-  "rateRemaining": 10,
-  "newItems": 2,
+  "apiCalls": 12,
+  "rateRemaining": 18,
+  "newItems": 1,
   "blockedToday": 0,
   "shortlist": [
     {
-      "name": "OrchestratorInc/agent-orchestrator",
-      "url": "https://github.com/OrchestratorInc/agent-orchestrator",
-      "description": "Plan, run and supervise fleets of agents from task to merged PR. Desktop (macOS, Windows, Linux) + iPhone & Android apps. Supports Claude Code, Codex & 35+ coding agents.",
-      "stars": 14531,
-      "forks": 1986,
+      "name": "jina-ai/node-DeepResearch",
+      "url": "https://github.com/jina-ai/node-DeepResearch",
+      "description": "Keep searching, reading webpages, reasoning until it finds the answer (or exceeding the token budget)",
+      "stars": 5242,
+      "forks": 463,
       "language": "TypeScript",
       "license": "Apache-2.0",
-      "pushedAt": "2026-11-13T11:14:26Z",
-      "category": "skills",
-      "score": 74,
-      "tier": "adopt",
-      "reasons": [
-        "14,531 stars",
-        "updated this week",
-        "Apache-2.0 license",
-        "well established"
-      ],
-      "flags": [],
-      "skillFiles": null
-    },
-    {
-      "name": "janestreet/agent_skills",
-      "url": "https://github.com/janestreet/agent_skills",
-      "description": "Agent skills",
-      "stars": 8014,
-      "forks": 520,
-      "language": "",
-      "license": "MIT",
-      "pushedAt": "2026-11-03T18:14:13Z",
-      "category": "skills",
-      "score": 61,
+      "pushedAt": "2026-11-13T09:00:46Z",
+      "category": "free-tokens",
+      "score": 62,
       "tier": "watch",
       "reasons": [
-        "8,014 stars",
-        "updated this month",
-        "MIT license",
-        "well established"
+        "5,242 stars",
+        "updated this week",
+        "Apache-2.0 license",
+        "well established",
+        "third-party source, needs checking"
       ],
-      "flags": [],
+      "flags": [
+        "unverified-offer"
+      ],
       "skillFiles": null
     }
   ],
   "byCategory": {
-    "skills": [
+    "skills": [],
+    "enhancement": [],
+    "free-tokens": [
       {
-        "name": "OrchestratorInc/agent-orchestrator",
-        "url": "https://github.com/OrchestratorInc/agent-orchestrator",
-        "description": "Plan, run and supervise fleets of agents from task to merged PR. Desktop (macOS, Windows, Linux) + iPhone & Android apps. Supports Claude Code, Codex & 35+ coding agents.",
-        "stars": 14531,
-        "forks": 1986,
+        "name": "jina-ai/node-DeepResearch",
+        "url": "https://github.com/jina-ai/node-DeepResearch",
+        "description": "Keep searching, reading webpages, reasoning until it finds the answer (or exceeding the token budget)",
+        "stars": 5242,
+        "forks": 463,
         "language": "TypeScript",
         "license": "Apache-2.0",
-        "pushedAt": "2026-11-13T11:14:26Z",
-        "category": "skills",
-        "score": 74,
-        "tier": "adopt",
-        "reasons": [
-          "14,531 stars",
-          "updated this week",
-          "Apache-2.0 license",
-          "well established"
-        ],
-        "flags": [],
-        "skillFiles": null
-      },
-      {
-        "name": "janestreet/agent_skills",
-        "url": "https://github.com/janestreet/agent_skills",
-        "description": "Agent skills",
-        "stars": 8014,
-        "forks": 520,
-        "language": "",
-        "license": "MIT",
-        "pushedAt": "2026-11-03T18:14:13Z",
-        "category": "skills",
-        "score": 61,
+        "pushedAt": "2026-11-13T09:00:46Z",
+        "category": "free-tokens",
+        "score": 62,
         "tier": "watch",
         "reasons": [
-          "8,014 stars",
-          "updated this month",
-          "MIT license",
-          "well established"
+          "5,242 stars",
+          "updated this week",
+          "Apache-2.0 license",
+          "well established",
+          "third-party source, needs checking"
         ],
-        "flags": [],
+        "flags": [
+          "unverified-offer"
+        ],
         "skillFiles": null
       }
     ],
-    "enhancement": [],
-    "free-tokens": [],
     "efficiency": []
   },
   "blocked": [],
