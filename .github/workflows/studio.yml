@@ -38,6 +38,7 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          REQUESTY_API_KEY: ${{ secrets.REQUESTY_API_KEY || secrets.REQUESTY_KEY || secrets.REQUESTY }}
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY || secrets.NVIDIA_KEY || secrets.NVIDIA_NIM_API_KEY || secrets.NIM_API_KEY || secrets.NGC_API_KEY || secrets.NVIDIA }}
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}

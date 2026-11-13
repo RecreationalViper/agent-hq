@@ -58,6 +58,6 @@ collaborate without stepping on each other. Read it before your first change.
 - Never approve ad spend or anything that costs money; that's the owner's call in the Ploy dashboard.
 
 ## Useful places
-- AI calls: use `ai-ask.mjs` / `ai-fallback.mjs` (free providers with automatic fallback; usage is logged by `usage-log.mjs`).
+- AI calls: use `ai-ask.mjs` / `ai-fallback.mjs` (free providers with automatic fallback, then Requesty on the owner's credits as the last resort; usage is logged by `usage-log.mjs`).
 - Discord posting: `discord.mjs`. Google Docs: `gdocs.mjs`. Website media list: `store/media.json`.
 - Provider health: `tools/provider-check.mjs` (Provider Check workflow).

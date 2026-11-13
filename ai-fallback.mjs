@@ -14,7 +14,7 @@ export const hasGroqKey = () => Boolean(process.env.GROQ_API_KEY);
 export const hasCloudflare = () => Boolean(process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID);
 // Any backup available? (Groq first, then Cloudflare Workers AI)
 export const hasOpenRouter = () => Boolean(process.env.OPENROUTER_API_KEY);
-export const hasGroq = () => hasGroqKey() || hasCloudflare() || hasOpenRouter() || Boolean(process.env.NVIDIA_API_KEY?.trim());
+export const hasGroq = () => hasGroqKey() || hasCloudflare() || hasOpenRouter() || Boolean(process.env.NVIDIA_API_KEY?.trim()) || Boolean((process.env.REQUESTY_API_KEY || process.env.REQUESTY_KEY || process.env.REQUESTY || "").trim());
 
 async function call(path, init = {}) {
   const res = await gwFetch(BASE + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${process.env.GROQ_API_KEY}`, "Content-Type": "application/json" } });
@@ -187,12 +187,52 @@ export async function nvidiaChat(system, user, { json = false, temperature = 0.7
   throw lastErr || new Error("NVIDIA could not answer");
 }
 
-// Backup chain used by every agent: Groq, then NVIDIA, then Cloudflare, then OpenRouter (free models only).
+// ---------- Requesty (router.requesty.ai; OpenAI-compatible router over many providers; uses the owner's credits) ----------
+// Last in the chain, so the free providers are always tried first. Cheap, capable models only.
+const RQ = process.env.REQUESTY_API_BASE || "https://router.requesty.ai/v1";
+const rqKey = () => (process.env.REQUESTY_API_KEY || process.env.REQUESTY_KEY || process.env.REQUESTY || "").trim();
+export const hasRequesty = () => Boolean(rqKey());
+const RQ_MODELS = (process.env.REQUESTY_MODELS || "google/gemini-2.5-flash,openai/gpt-4.1-mini,deepseek/deepseek-chat,openai/gpt-4o-mini").split(",").map((s) => s.trim()).filter(Boolean);
+let rqModels;
+async function rqCall(path, init = {}) {
+  const res = await fetch(RQ + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${rqKey()}`, "Content-Type": "application/json" } });
+  await trackResponse(RQ + path, init, res);
+  const text = await res.text();
+  let data; try { data = JSON.parse(text); } catch { data = {}; }
+  if (!res.ok || data.error) { const e = new Error(`Requesty ${res.status}: ${data.error?.message || text.slice(0, 200)}`); e.status = res.status; throw e; }
+  return data;
+}
+export async function requestyChat(system, user, { json = false, temperature = 0.7, maxChars = 40000 } = {}) {
+  const input = user.length > maxChars ? user.slice(0, maxChars) + "\n\n[Some input was trimmed to fit the backup AI's limits.]" : user;
+  rqModels ||= [...RQ_MODELS];
+  let lastErr;
+  for (const model of [...rqModels]) {
+    try {
+      const data = await rqCall("/chat/completions", { method: "POST", body: JSON.stringify({
+        model, temperature, max_tokens: 3000,
+        messages: [{ role: "system", content: system + (json ? "\nReply with valid JSON only." : "") }, { role: "user", content: input }]
+      }) });
+      const text = (data.choices?.[0]?.message?.content || "").replace(/<think>[\s\S]*?<\/think>/g, "").replace(/^```(?:json)?\s*|\s*```$/g, "").trim();
+      if (!text) throw new Error("Requesty returned an empty reply");
+      console.log(`  answered by backup AI: Requesty ${model}`);
+      rqModels = [model, ...rqModels.filter((m) => m !== model)];
+      return text;
+    } catch (e) {
+      lastErr = e;
+      if (e.status === 401 || e.status === 402 || e.status === 403) break; // bad key or out of credit
+      if (e.status === 404 || e.status === 400) rqModels = rqModels.filter((m) => m !== model); // model not available
+    }
+  }
+  throw lastErr || new Error("Requesty could not answer");
+}
+
+// Backup chain used by every agent: Groq, then NVIDIA, then Cloudflare, then OpenRouter (free models only),
+// then Requesty (paid credits, last so free allowances are always used first).
 // A provider whose daily free allowance is used up is skipped for the rest of the run (allowances reset daily).
 const usedUp = new Set();
 const DAILY = /per day|daily|RPD|TPD|requests per day|tokens per day|quota|neurons|credits|insufficient/i;
 export async function groqChat(system, user, opts = {}) {
-  let chain = [["Groq", hasGroqKey, groqOnly], ["NVIDIA", hasNvidia, nvidiaChat], ["Cloudflare", hasCloudflare, cloudflareChat], ["OpenRouter", hasOpenRouter, openRouterChat]].filter(([, has]) => has());
+  let chain = [["Groq", hasGroqKey, groqOnly], ["NVIDIA", hasNvidia, nvidiaChat], ["Cloudflare", hasCloudflare, cloudflareChat], ["OpenRouter", hasOpenRouter, openRouterChat], ["Requesty", hasRequesty, requestyChat]].filter(([, has]) => has());
   // strong mode (Content Creator): NVIDIA's largest models before Groq's faster, smaller one
   if (opts.strong) chain = [...chain.filter(([n]) => n === "NVIDIA"), ...chain.filter(([n]) => n !== "NVIDIA")];
   chain = chain.filter(([n]) => !usedUp.has(n)).concat(chain.filter(([n]) => usedUp.has(n))); // used-up providers go last

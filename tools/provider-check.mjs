@@ -105,6 +105,17 @@ if (process.env.OPENROUTER_API_KEY) {
   } catch (e) { console.log(`RESULT openrouter: FAILED: ${e.message}`); process.exitCode = 1; }
 } else console.log("RESULT openrouter: no key found (secret OPENROUTER_API_KEY missing or empty)");
 
+// Requesty check (paid credits; one tiny test call)
+{
+  const { hasRequesty, requestyChat } = await import("../ai-fallback.mjs");
+  if (hasRequesty()) {
+    try {
+      const t = await requestyChat("You are a test agent.", "Reply with the single word: ready", { temperature: 0 });
+      console.log(`RESULT requesty: WORKS, reply ${t.replace(/\s+/g, " ").slice(0, 40)}`);
+    } catch (e) { console.log(`RESULT requesty: FAILED: ${e.message}`); process.exitCode = 1; }
+  } else console.log("RESULT requesty: no key found (secret REQUESTY_API_KEY missing or empty)");
+}
+
 // Payhip API key check (read-only: lists coupons)
 if (process.env.PAYHIP_API_KEY) {
   try {
