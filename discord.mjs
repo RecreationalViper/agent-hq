@@ -19,9 +19,9 @@ export const CHANNELS = {
   "trading-desk": ["trading-desk", "Trading Desk (paper money): daily trades, Head Trader reviews, backtests"],
   research: ["research", "Deep Researcher, Credit Scout and GitHub Radar"],
   inbox: ["inbox", "Email team: Junk Sweeper results and Customer Care reply drafts"],
-  "studio-trends": ["studio-trends", "Studio: Trend Scout's daily clip opportunities (movies, games, anime)"],
-  studio: ["studio", "Studio: Director's clip plans, Social Strategist captions, Studio Critic reviews, Producer's weekly plan"],
-  "ads-studio": ["ads-studio", "Ads Studio: Ad Creative Director concepts and Ad Copywriter copy"],
+  "studio-trends": ["studio-trends", "Studio: Trend Scout's daily clip opportunities (movies, games, anime)", "studio"],
+  studio: ["studio", "Studio: Director's clip plans, Social Strategist captions, Studio Critic reviews, Producer's weekly plan", "studio"],
+  "ads-studio": ["ads-studio", "Ads Studio: Ad Creative Director concepts and Ad Copywriter copy", "studio"],
   alerts: ["alerts", "Anything that failed or needs your attention"]
 };
 // Which channel each agent reports to
@@ -44,19 +44,38 @@ async function api(path, init = {}) {
 // Creates the category and any missing channels; saves their ids to discord.json.
 export async function setupChannels() {
   const guilds = await api("/users/@me/guilds");
-  if (!guilds.length) throw new Error("The bot isn't in any server yet. Use the invite link first.");
-  const guild = guilds.find((g) => /agent hq/i.test(g.name)) || guilds[0];
-  const existing = await api(`/guilds/${guild.id}/channels`);
-  let cat = existing.find((c) => c.type === 4 && /agent hq/i.test(c.name));
-  if (!cat) cat = await api(`/guilds/${guild.id}/channels`, { method: "POST", body: JSON.stringify({ name: "Agent HQ", type: 4 }) });
-  const ids = {}, created = [];
-  for (const [key, [name, topic]] of Object.entries(CHANNELS)) {
-    let ch = existing.find((c) => c.type === 0 && c.name === name);
-    if (!ch) { ch = await api(`/guilds/${guild.id}/channels`, { method: "POST", body: JSON.stringify({ name, type: 0, topic, parent_id: cat.id }) }); created.push(name); }
-    ids[key] = ch.id;
+  const me = await api("/users/@me");
+  const invite = `https://discord.com/oauth2/authorize?client_id=${me.id}&scope=bot&permissions=85008`;
+  if (!guilds.length) throw new Error(`The bot isn't in any server yet. Invite it: ${invite}`);
+  // Studio channels (third element "studio") live in their own server, named with "Studio"; everything else in Agent HQ.
+  const studio = guilds.find((g) => /studio/i.test(g.name));
+  const guild = guilds.find((g) => /agent hq/i.test(g.name)) || guilds.find((g) => g !== studio) || guilds[0];
+  const ids = {}, created = [], removed = [];
+  async function build(g, catName, keys) {
+    const existing = await api(`/guilds/${g.id}/channels`);
+    let cat = existing.find((c) => c.type === 4 && c.name.toLowerCase() === catName.toLowerCase());
+    if (!cat) cat = await api(`/guilds/${g.id}/channels`, { method: "POST", body: JSON.stringify({ name: catName, type: 4 }) });
+    for (const key of keys) {
+      const [name, topic] = CHANNELS[key];
+      let ch = existing.find((c) => c.type === 0 && c.name === name);
+      if (!ch) { ch = await api(`/guilds/${g.id}/channels`, { method: "POST", body: JSON.stringify({ name, type: 0, topic, parent_id: cat.id }) }); created.push(name); }
+      ids[key] = ch.id;
+    }
+    return existing;
   }
-  await fs.writeFile("discord.json", JSON.stringify({ server: guild.name, serverId: guild.id, channels: ids }, null, 2) + "\n");
-  return { server: guild.name, created, total: Object.keys(ids).length };
+  const studioKeys = Object.keys(CHANNELS).filter((k) => CHANNELS[k][2] === "studio");
+  const mainKeys = Object.keys(CHANNELS).filter((k) => !studioKeys.includes(k));
+  const mainExisting = await build(guild, "Agent HQ", studio ? mainKeys : Object.keys(CHANNELS));
+  if (studio) {
+    await build(studio, "Studio", studioKeys);
+    // Studio channels moved to their own server: remove the old copies from Agent HQ.
+    for (const key of studioKeys) {
+      const old = mainExisting.find((c) => c.type === 0 && c.name === CHANNELS[key][0]);
+      if (old) { await api(`/channels/${old.id}`, { method: "DELETE" }); removed.push(old.name); }
+    }
+  }
+  await fs.writeFile("discord.json", JSON.stringify({ server: guild.name, serverId: guild.id, ...(studio ? { studioServer: studio.name, studioServerId: studio.id } : {}), channels: ids }, null, 2) + "\n");
+  return { server: guild.name, studioServer: studio?.name || null, created, removed, invite, total: Object.keys(ids).length };
 }
 
 async function channelId(key) {
