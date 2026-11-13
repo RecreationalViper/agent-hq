@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-12T20:17:39.371Z",
-  "date": "2026-11-12",
+  "generatedAt": "2026-11-13T01:58:45.781Z",
+  "date": "2026-11-13",
   "token": true,
   "searches": {
     "ran": 12,
@@ -15,52 +15,52 @@
   "blockedToday": 0,
   "shortlist": [
     {
-      "name": "hanlulong/awesome-ai-for-economists",
-      "url": "https://github.com/hanlulong/awesome-ai-for-economists",
-      "description": "A curated list of AI tools, agent skills, libraries, and resources for economics research, teaching, and policy analysis. Maintained by the OpenEcon team.",
-      "stars": 709,
-      "forks": 159,
-      "language": "",
-      "license": "CC0-1.0",
-      "pushedAt": "2026-11-07T18:59:08Z",
-      "category": "skills",
-      "score": 58,
+      "name": "tonhowtf/omniget",
+      "url": "https://github.com/tonhowtf/omniget",
+      "description": "Free, open source video downloader for Windows, macOS and Linux that AI agents can drive. Downloads from YouTube, Instagram, TikTok, X, Reddit, torrents and the sites yt-dlp supports. Its MCP server lets Claude Code, Cursor and Codex queue downloads, and it runs Claude Code, Codex, Gemini CLI and Ollama as agents.",
+      "stars": 14374,
+      "forks": 1244,
+      "language": "Rust",
+      "license": "GPL-3.0",
+      "pushedAt": "2026-09-27T03:44:29Z",
+      "category": "efficiency",
+      "score": 57,
       "tier": "watch",
       "reasons": [
-        "709 stars",
-        "updated this week",
-        "CC0-1.0 license"
+        "14,374 stars",
+        "GPL-3.0 license",
+        "well established"
       ],
       "flags": [],
       "skillFiles": null
     }
   ],
   "byCategory": {
-    "skills": [
+    "skills": [],
+    "enhancement": [],
+    "free-tokens": [],
+    "efficiency": [
       {
-        "name": "hanlulong/awesome-ai-for-economists",
-        "url": "https://github.com/hanlulong/awesome-ai-for-economists",
-        "description": "A curated list of AI tools, agent skills, libraries, and resources for economics research, teaching, and policy analysis. Maintained by the OpenEcon team.",
-        "stars": 709,
-        "forks": 159,
-        "language": "",
-        "license": "CC0-1.0",
-        "pushedAt": "2026-11-07T18:59:08Z",
-        "category": "skills",
-        "score": 58,
+        "name": "tonhowtf/omniget",
+        "url": "https://github.com/tonhowtf/omniget",
+        "description": "Free, open source video downloader for Windows, macOS and Linux that AI agents can drive. Downloads from YouTube, Instagram, TikTok, X, Reddit, torrents and the sites yt-dlp supports. Its MCP server lets Claude Code, Cursor and Codex queue downloads, and it runs Claude Code, Codex, Gemini CLI and Ollama as agents.",
+        "stars": 14374,
+        "forks": 1244,
+        "language": "Rust",
+        "license": "GPL-3.0",
+        "pushedAt": "2026-09-27T03:44:29Z",
+        "category": "efficiency",
+        "score": 57,
         "tier": "watch",
         "reasons": [
-          "709 stars",
-          "updated this week",
-          "CC0-1.0 license"
+          "14,374 stars",
+          "GPL-3.0 license",
+          "well established"
         ],
         "flags": [],
         "skillFiles": null
       }
-    ],
-    "enhancement": [],
-    "free-tokens": [],
-    "efficiency": []
+    ]
   },
   "blocked": [],
   "watching": [

@@ -1,12 +1,12 @@
-# GitHub Radar — 2026-11-12
+# GitHub Radar — 2026-11-13
 
 > Scanned 12 of 29 saved searches (12 returned data, 0 unchanged, 0 failed). 12 GitHub API calls, authenticated. Zero AI tokens used.
 
 ## Start here (1)
 
-- **[hanlulong/awesome-ai-for-economists](https://github.com/hanlulong/awesome-ai-for-economists)** 🟡 WATCH · score 58/100 · ⭐ 709 · CC0-1.0 · updated 5d ago
-  - A curated list of AI tools, agent skills, libraries, and resources for economics research, teaching, and policy analysis. Maintained by the OpenEco…
-  - Why: 709 stars; updated this week; CC0-1.0 license
+- **[tonhowtf/omniget](https://github.com/tonhowtf/omniget)** 🟡 WATCH · score 57/100 · ⭐ 14,374 · GPL-3.0 · updated 47d ago
+  - Free, open source video downloader for Windows, macOS and Linux that AI agents can drive. Downloads from YouTube, Instagram, TikTok, X, Reddit, tor…
+  - Why: 14,374 stars; GPL-3.0 license; well established
 
 ## Agent skills you could install (0)
 
