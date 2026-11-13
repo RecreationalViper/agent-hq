@@ -1,12 +1,15 @@
 # GitHub Radar — 2026-11-13
 
-> Scanned 12 of 29 saved searches (12 returned data, 0 unchanged, 0 failed). 12 GitHub API calls, authenticated. Zero AI tokens used.
+> Scanned 12 of 29 saved searches (12 returned data, 0 unchanged, 0 failed). 15 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (1)
+## Start here (2)
 
-- **[tonhowtf/omniget](https://github.com/tonhowtf/omniget)** 🟡 WATCH · score 57/100 · ⭐ 14,374 · GPL-3.0 · updated 47d ago
-  - Free, open source video downloader for Windows, macOS and Linux that AI agents can drive. Downloads from YouTube, Instagram, TikTok, X, Reddit, tor…
-  - Why: 14,374 stars; GPL-3.0 license; well established
+- **[OrchestratorInc/agent-orchestrator](https://github.com/OrchestratorInc/agent-orchestrator)** 🟢 ADOPT · score 74/100 · ⭐ 14,531 · Apache-2.0 · updated 0d ago
+  - Plan, run and supervise fleets of agents from task to merged PR. Desktop (macOS, Windows, Linux) + iPhone & Android apps. Supports Claude Code, Cod…
+  - Why: 14,531 stars; updated this week; Apache-2.0 license; well established
+- **[janestreet/agent_skills](https://github.com/janestreet/agent_skills)** 🟡 WATCH · score 61/100 · ⭐ 8,014 · MIT · updated 10d ago
+  - Agent skills
+  - Why: 8,014 stars; updated this month; MIT license; well established
 
 ## Agent skills you could install (0)
 
