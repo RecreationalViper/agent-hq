@@ -1,11 +1,11 @@
 {
   "about": "Who is on shift. Updated by Claude when it checks Ploy. Agents and scripts read it through ploy-state.mjs.",
-  "updatedAt": "2026-11-12T19:25:00Z",
+  "updatedAt": "2026-11-13T00:25:00Z",
   "ploy": {
-    "onShift": false,
-    "working": false,
-    "creditsResetAt": "2026-11-13T00:00:00Z",
-    "note": "Out of daily credits (751/700)"
+    "onShift": true,
+    "working": true,
+    "creditsResetAt": "2026-11-14T00:00:00Z",
+    "note": "Credits reset 7 pm ET Nov 12; hero C handover sent to hero-cro chat"
   },
   "jobs": {
     "website": {
