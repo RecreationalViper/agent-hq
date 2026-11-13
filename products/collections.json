@@ -1,5 +1,5 @@
 {
-  "about": "Every Forever Held design collection and its approval status. Agents may only list, pin, email or advertise collections with status \"approved\". See .claude/skills/design-collection/SKILL.md.",
+  "about": "Every Forever Held design collection. Agents may list, pin, email or advertise ONLY collections with status \"approved\", only inside their marketFrom-marketUntil window, and only link a checkout once it is a real payhip.com URL. Use these facts exactly; never invent pieces or sizes.",
   "collections": [
     {
       "id": "soft-botanical",
@@ -16,29 +16,71 @@
     {
       "id": "holiday-2026-A",
       "name": "Evergreen & Candlelight",
-      "status": "built",
+      "status": "approved",
       "season": "Christmas",
-      "preview": "products/fillable/previews/evergreen-suite.png",
-      "note": "owner picked all three concepts 2026-11-12; built, awaiting final approval",
-      "files": "products/fillable/out/Evergreen & Candlelight/"
+      "files": "products/fillable/out/Evergreen & Candlelight/",
+      "approved": "2026-11-13",
+      "price": "$8.99 (suggested)",
+      "marketFrom": "2026-11-20",
+      "marketUntil": "2026-12-26",
+      "audience": "Families spending Christmas without someone; \"Christmas in heaven\" searches",
+      "pieces": [
+        "Table Sign 8x10 in (\"This candle burns in loving memory of\")",
+        "Holiday memory cards 4.25x5.5 in, 4 per sheet (dark green + ink-saver light version)",
+        "Ornament keepsake cards 3.125x4.375 in arch, 4 per sheet, punch hole for ribbon",
+        "Start Here guide"
+      ],
+      "look": "pine green, cream, brass, cranberry; hand-drawn pine, berries, one candle",
+      "fonts": "GFS Baskerville + Inter (fill-in text in Times/Helvetica)",
+      "previewUrl": "https://foreverheld.pages.dev/img/holiday/evergreen-suite.jpg",
+      "checkout": "not live yet: owner uploads to Payhip; until a payhip link is here, don't post buy links",
+      "delivery": "fill-in PDFs: buyers type in free Adobe Acrobat Reader, print at home on US Letter or at a print shop"
     },
     {
       "id": "holiday-2026-B",
       "name": "Longest Night",
-      "status": "built",
+      "status": "approved",
       "season": "Blue Christmas, Hanukkah, solstice",
-      "preview": "products/fillable/previews/longest-night-suite.png",
-      "note": "owner picked all three concepts 2026-11-12; built, awaiting final approval",
-      "files": "products/fillable/out/Longest Night/"
+      "files": "products/fillable/out/Longest Night/",
+      "approved": "2026-11-13",
+      "price": "$9.99 (suggested)",
+      "marketFrom": "2026-11-20",
+      "marketUntil": "2026-12-31",
+      "audience": "Churches, hospices and grief groups holding Blue Christmas / Longest Night services (Dec 21); Hanukkah and solstice; faith-neutral, no religious symbols",
+      "pieces": [
+        "Table Sign 8x10 in (\"On the longest night we remember\"), dusk + ink-saver light version",
+        "Service program 11x8.5 in folding to 5.5x8.5 in: names remembered, order of service, candle words",
+        "Candle-lighting cards 4.25x5.5 in, 4 per sheet",
+        "Start Here guide"
+      ],
+      "look": "dusk gradient navy-to-lavender, silver, one four-point star",
+      "fonts": "Inter (fill-in text in Helvetica)",
+      "previewUrl": "https://foreverheld.pages.dev/img/holiday/longest-night-suite.jpg",
+      "checkout": "not live yet: owner uploads to Payhip; until a payhip link is here, don't post buy links",
+      "delivery": "fill-in PDFs: buyers type in free Adobe Acrobat Reader, print at home on US Letter or at a print shop"
     },
     {
       "id": "holiday-2026-C",
       "name": "Harvest Table",
-      "status": "built",
+      "status": "approved",
       "season": "Thanksgiving",
-      "preview": "products/fillable/previews/harvest-table-suite.png",
-      "note": "owner picked all three concepts 2026-11-12; built, awaiting final approval",
-      "files": "products/fillable/out/Harvest Table/"
+      "files": "products/fillable/out/Harvest Table/",
+      "approved": "2026-11-13",
+      "price": "$7.99 (suggested)",
+      "marketFrom": "2026-11-13",
+      "marketUntil": "2026-11-27",
+      "audience": "Families facing their first Thanksgiving with an empty chair",
+      "pieces": [
+        "Empty-Chair Sign 8x10 in (\"We saved a seat for you\")",
+        "\"I'm Thankful For\" memory cards 4.25x5.5 in, 4 per Letter sheet",
+        "Fold-over place cards 3.5x2 in folded, 4 per sheet (top line editable: In loving memory / guest name)",
+        "Start Here guide"
+      ],
+      "look": "oat, terracotta, mustard, olive, deep brown; wheat and autumn leaves",
+      "fonts": "Caladea + Inter (fill-in text in Times/Helvetica)",
+      "previewUrl": "https://foreverheld.pages.dev/img/holiday/harvest-table-suite.jpg",
+      "checkout": "not live yet: owner uploads to Payhip; until a payhip link is here, don't post buy links",
+      "delivery": "fill-in PDFs: buyers type in free Adobe Acrobat Reader, print at home on US Letter or at a print shop"
     }
   ]
 }

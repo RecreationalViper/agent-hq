@@ -1,6 +1,6 @@
 {
   "model": "auto",
-  "context": "Printable memorial kit business (funeral/celebration-of-life programs, welcome signs, share-a-memory cards) sold as fill-in PDFs (buyers type into them in the free Adobe Acrobat Reader app; Canva template links need a paid Canva plan, so we do not use them). Styles: Classic Elegance, Modern Minimal, Soft Watercolor Sky, Soft Botanical. STATUS: no shop is open yet. Brand: Forever Held (store at payhip.com/ForeverHeld, being set up now). Plan: sell first on Payhip (free to open, about 5% per sale), then open the Etsy shop ($15 fee) once sales cover it. Write listings so they work on both Payhip and Etsy, and never tell the owner to publish in an Etsy shop that doesn't exist yet. Owner works only from an iPhone, budget $0, goal is sustainable side income. The owner must approve before spending money, publishing listings or contacting customers. Buyers are grieving families: tone must be calm, respectful and simple. REAL PRODUCT SPECS (use these exactly, never guess sizes): Soft Botanical bundle = folded program printed on US Letter landscape (11x8.5 in) folding to 5.5x8.5 in, 4 panels, US Letter only (no A4); welcome sign 24x36 in (2:3, also prints 16x24 or 12x18); share-a-memory card 4.25x5.5 in, single card. Launch price $12.99. LINKS: product checkout https://payhip.com/b/vqNSA ; storefront https://foreverheld.pages.dev/ (use these in posts and pins). LIVE since Nov 9, 2026: Soft Botanical bundle at https://payhip.com/b/vqNSA ($12.99, 4 fill-in PDFs). Launch coupon PEACE25 = 25% off this product (use it in posts/pins). FREE LEAD MAGNET (live Nov 10, 2026): Free Funeral & Celebration of Life Planning Checklist, $0, https://payhip.com/b/eYJqS (3-page fill-in PDF). Its job is to grow the email list: point helpful, non-salesy pins and posts to it, especially for people just starting to plan. Downloads join the EmailOctopus list automatically (subscriber count in email/stats.md).",
+  "context": "Printable memorial kit business (funeral/celebration-of-life programs, welcome signs, share-a-memory cards) sold as fill-in PDFs (buyers type into them in the free Adobe Acrobat Reader app; Canva template links need a paid Canva plan, so we do not use them). Styles: Classic Elegance, Modern Minimal, Soft Watercolor Sky, Soft Botanical. STATUS: no shop is open yet. Brand: Forever Held (store at payhip.com/ForeverHeld, being set up now). Plan: sell first on Payhip (free to open, about 5% per sale), then open the Etsy shop ($15 fee) once sales cover it. Write listings so they work on both Payhip and Etsy, and never tell the owner to publish in an Etsy shop that doesn't exist yet. Owner works only from an iPhone, budget $0, goal is sustainable side income. The owner must approve before spending money, publishing listings or contacting customers. Buyers are grieving families: tone must be calm, respectful and simple. REAL PRODUCT SPECS (use these exactly, never guess sizes): Soft Botanical bundle = folded program printed on US Letter landscape (11x8.5 in) folding to 5.5x8.5 in, 4 panels, US Letter only (no A4); welcome sign 24x36 in (2:3, also prints 16x24 or 12x18); share-a-memory card 4.25x5.5 in, single card. Launch price $12.99. LINKS: product checkout https://payhip.com/b/vqNSA ; storefront https://foreverheld.pages.dev/ (use these in posts and pins). LIVE since Nov 9, 2026: Soft Botanical bundle at https://payhip.com/b/vqNSA ($12.99, 4 fill-in PDFs). Launch coupon PEACE25 = 25% off this product (use it in posts/pins). FREE LEAD MAGNET (live Nov 10, 2026): Free Funeral & Celebration of Life Planning Checklist, $0, https://payhip.com/b/eYJqS (3-page fill-in PDF). Its job is to grow the email list: point helpful, non-salesy pins and posts to it, especially for people just starting to plan. Downloads join the EmailOctopus list automatically (subscriber count in email/stats.md). COLLECTIONS (Nov 13, 2026): products/collections.json lists every design collection and its status. Approved holiday sets: Harvest Table (Thanksgiving), Evergreen & Candlelight (Christmas), Longest Night (Blue Christmas/Longest Night services, Hanukkah, solstice). Promote each only in its season window, and only link checkout once its Payhip link is in that file.",
   "agents": [
     {
       "id": "daily-task",
@@ -12,7 +12,8 @@
         "pinterest/stats.md",
         "content/seasonal.md",
         "email/stats.md",
-        "ploy/brand.md"
+        "ploy/brand.md",
+        "products/collections.json"
       ],
       "followsPloy": true
     },
@@ -24,7 +25,8 @@
       "saveAs": "content/seasonal.md",
       "doc": "etsy",
       "readsFiles": [
-        "pinterest/stats.md"
+        "pinterest/stats.md",
+        "products/collections.json"
       ],
       "instructions": "You keep the team's holiday calendar. Using ONLY the computed holiday list provided (never invent dates), plan the next 90 days for Forever Held. Pinterest users save holiday ideas 30-60 days early, so plan ahead. Write: (1) THIS WEEK: what the Content Creator, Content Planner and Email Marketer should make now and for which holiday, with 2-3 pin headline ideas and keywords each; (2) COMING UP: each holiday in the list with its date, how to honor it (remembrance angle, which of our products fit, what new product could fit), when to start posting, and whether a coupon makes sense (suggest only; the owner approves coupons); (3) PRODUCT IDEAS for the Product Builder tied to upcoming holidays (e.g. a remembrance ornament card for Christmas, an empty-chair place card for Thanksgiving). Mark very sensitive days (pregnancy and infant loss, 9/11) as remembrance-only: no sales, no coupons. Tone: gentle, never salesy about grief."
     },
@@ -40,7 +42,8 @@
         "content/seasonal.md",
         "email/stats.md",
         "store/media.json",
-        "ploy/brand.md"
+        "ploy/brand.md",
+        "products/collections.json"
       ],
       "followsPloy": true
     },
@@ -52,7 +55,8 @@
       "doc": "etsy",
       "readsFiles": [
         "content/seasonal.md",
-        "ploy/brand.md"
+        "ploy/brand.md",
+        "products/collections.json"
       ],
       "followsPloy": true
     },
@@ -65,7 +69,8 @@
       "readsFiles": [
         "content/seasonal.md",
         "store/media.json",
-        "ploy/brand.md"
+        "ploy/brand.md",
+        "products/collections.json"
       ],
       "followsPloy": true
     },
@@ -111,7 +116,7 @@
         "scout/latest.md"
       ],
       "context": "The owner runs Forever Held (fill-in memorial printables on Payhip) with a free agent team in this repo. WHAT WE ACTUALLY USE (only recommend things that plug into these): GitHub Actions (Node.js scripts, cron), Google Gemini API (free tier, main AI), backup chain Groq -> NVIDIA NIM -> Cloudflare Workers AI -> OpenRouter free models, all routed through a Cloudflare AI Gateway (caching, logs); Exa web search (small monthly cap), Apify (tiny cap), a Cloudflare Worker + KV (sales feed, Discord slash commands), Discord bot (reports), Gmail API (Customer Care, junk sweeper), EmailOctopus (mailing list), Pinterest API (pending), Payhip (store), Playwright + ffmpeg (images/video), reportlab (PDFs), Claude Code (the owner's builder; its usage is the owner's biggest limited resource). WHAT WE DON'T USE (don't recommend tools built for these): Obsidian or other notes apps, Python agent frameworks, self-hosted servers or GPUs, Docker hosting, paid SaaS, anything needing a Mac/PC always on. The owner works from an iPhone and pays $0. A zero-token scanner (scout/scan.mjs) writes scout/latest.md from GitHub; web findings on free credits come from Exa below.",
-      "instructions": "You are the analyst for the GitHub Radar. scout/latest.md below is real, freshly scanned GitHub data: new agent skills, AI enhancements that work with any model, legitimate free tokens/credits, and tools that cut AI usage. Work only from that file; you have no other findings. Write a short, phone-friendly report:\n\n1. 'Adopt today' — at most 3 items, best first. For each: one line on what it is, why it fits this owner's $0 / iPhone-only setup, and the exact 5-minute first step (what to open, what to tap, what to check). Skip anything that needs a server or a paid plan unless you explain the catch in the same line.\n2. 'Free tokens worth checking' — from the radar's licensed/active items AND the web results (free tiers, credits, startup programs). Prefer offers for services we already use or that slot into the backup chain with one API key. Include the official signup URL. For each: what the offer claims, the one thing to verify on the provider's own site, and the risk. Say plainly when an offer is third-party and unverified.\n3. 'Spend less with what you already have' — include at least one way to save the owner's Claude Code usage (e.g. moving a repeated task into an agent or script, smaller context, reusable skills) plus up to 2 concrete changes to this repo's own setup (model choice, prompt size, caching, batching, reusing reports instead of re-asking). Each with the exact edit or file to change. This is the part that lowers the owner's daily AI usage, so make it specific to this repo.\n4. 'Ignore for now' — anything that looked shiny but does not fit, with a 5-word reason.\n5. End with 'Do this now:' and exactly one action, 30 minutes or less, on a phone.\n\nRules: you cannot install, run, star, or pay for anything — never imply you did. Never recommend sharing an API key with a third-party proxy, using cracked or generated keys, multi-accounting for free credits, or anything against a provider's terms; if a radar item looks like that, tell the owner to skip it. If scout/latest.md shows nothing new, keep the whole report under 10 lines, say the radar is quiet, and give the standing playbook instead. FIT TEST before 'Adopt today': it must plug into what we actually use (see context) and run from GitHub Actions or the phone. If an item is for a tool we don't use (e.g. Obsidian), put it under 'Ignore for now' — never 'Adopt today'. If nothing passes, write 'Nothing to adopt today.'",
+      "instructions": "You are the analyst for the GitHub Radar. scout/latest.md below is real, freshly scanned GitHub data: new agent skills, AI enhancements that work with any model, legitimate free tokens/credits, and tools that cut AI usage. Work only from that file; you have no other findings. Write a short, phone-friendly report:\n\n1. 'Adopt today' \u2014 at most 3 items, best first. For each: one line on what it is, why it fits this owner's $0 / iPhone-only setup, and the exact 5-minute first step (what to open, what to tap, what to check). Skip anything that needs a server or a paid plan unless you explain the catch in the same line.\n2. 'Free tokens worth checking' \u2014 from the radar's licensed/active items AND the web results (free tiers, credits, startup programs). Prefer offers for services we already use or that slot into the backup chain with one API key. Include the official signup URL. For each: what the offer claims, the one thing to verify on the provider's own site, and the risk. Say plainly when an offer is third-party and unverified.\n3. 'Spend less with what you already have' \u2014 include at least one way to save the owner's Claude Code usage (e.g. moving a repeated task into an agent or script, smaller context, reusable skills) plus up to 2 concrete changes to this repo's own setup (model choice, prompt size, caching, batching, reusing reports instead of re-asking). Each with the exact edit or file to change. This is the part that lowers the owner's daily AI usage, so make it specific to this repo.\n4. 'Ignore for now' \u2014 anything that looked shiny but does not fit, with a 5-word reason.\n5. End with 'Do this now:' and exactly one action, 30 minutes or less, on a phone.\n\nRules: you cannot install, run, star, or pay for anything \u2014 never imply you did. Never recommend sharing an API key with a third-party proxy, using cracked or generated keys, multi-accounting for free credits, or anything against a provider's terms; if a radar item looks like that, tell the owner to skip it. If scout/latest.md shows nothing new, keep the whole report under 10 lines, say the radar is quiet, and give the standing playbook instead. FIT TEST before 'Adopt today': it must plug into what we actually use (see context) and run from GitHub Actions or the phone. If an item is for a tool we don't use (e.g. Obsidian), put it under 'Ignore for now' \u2014 never 'Adopt today'. If nothing passes, write 'Nothing to adopt today.'",
       "exa": {
         "days": 7,
         "searches": [
@@ -164,7 +169,8 @@
       },
       "instructions": "You are our competitor analyst. Using ONLY the fresh web results provided (real pages), study the shops and sites selling printable funeral programs, welcome signs and memory cards. Report: (1) a table of 8-12 competitors: name/site, what's included, price (only if the page states it, else 'not shown'), format (Canva, editable PDF, Word, Corjl, etc.), and one standout feature, each with its [n] link; (2) the usual price range and where our Soft Botanical bundle ($12.99, fill-in PDF, no Canva needed) sits; (3) 5 things competitors do that we should copy or beat (bundles, sizes, wording help, photo options, free samples, extra pieces like bookmarks or thank-you cards); (4) 3 ideas for our NEXT product based on gaps you see; (5) wording buyers seem to respond to (phrases repeated across listings). Never invent prices, reviews or sales numbers. Mark everything as research for the owner; nothing gets changed or published without approval.",
       "readsFiles": [
-        "ploy/brand.md"
+        "ploy/brand.md",
+        "products/collections.json"
       ],
       "followsPloy": true
     },
@@ -238,7 +244,8 @@
         "content/notes.md",
         "pinterest/stats.md",
         "store/media.json",
-        "ploy/brand.md"
+        "ploy/brand.md",
+        "products/collections.json"
       ],
       "followsPloy": true
     },
@@ -252,7 +259,8 @@
       "readsFiles": [
         "pinterest/stats.md",
         "email/stats.md",
-        "ploy/brand.md"
+        "ploy/brand.md",
+        "products/collections.json"
       ],
       "followsPloy": true
     },
@@ -263,7 +271,8 @@
       "doc": "etsy",
       "instructions": "Prepare everything the owner needs to launch the FIRST Forever Held product on Payhip today. Product: the Soft Botanical Celebration of Life bundle: an editable funeral program (4-page folded, US Letter and A4), a welcome sign, and share-a-memory cards, all as Canva templates the buyer edits for free. Deliver these sections with clear headings:\n1. Price: one recommended price and a 2-line reason (buyers are grieving families comparing Etsy-style printables). Also one launch-week discount idea.\n2. Payhip product title (under 80 characters).\n3. Product description ready to paste: what's included, sizes, how it works (buy, download the PDF, tap the Canva link, edit free on phone or computer, print at home or at a local print shop), a gentle note that it's a digital download (nothing is shipped), and this disclosure: 'Designed by me with the help of AI tools; previews show the real files you receive.'\n4. 'What you get' bullets.\n5. The full text for the 1-page delivery PDF: warm thank-you, a [CANVA LINK] placeholder button, printing tips (paper, sizes, where to print), and a [SUPPORT EMAIL] placeholder.\n6. Four preview images to make in Canva: what each shows and its short text overlay.\n7. Five Pinterest pin ideas (title + keyword-rich description) and two short video ideas.\n8. The owner's exact iPhone upload checklist: in Canva, share each design as a template link; make the delivery PDF; in Payhip, Add Product > Digital Download, upload the PDF, paste title/description, set price, add the 4 images, publish.\nDon't invent features that aren't listed; mark anything you're assuming.",
       "readsFiles": [
-        "store/media.json"
+        "store/media.json",
+        "products/collections.json"
       ]
     },
     {
@@ -275,7 +284,8 @@
       "readsFiles": [
         "content/seasonal.md",
         "pinterest/stats.md",
-        "store/media.json"
+        "store/media.json",
+        "products/collections.json"
       ],
       "instructions": "You turn the team's ideas into ONE ready-to-build product each week. Read this week's Product Ideas, Competitor Scout and Seasonal Planner work (in the team reports and files provided) plus real sales, and choose the single best next product: one that fits an upcoming holiday or a gap competitors leave, and pairs with our Soft Botanical or Classic Elegance styles. Write a complete build spec: product name; why now (cite the teammate who suggested it); every page with exact size (US Letter or standard US print sizes only); every fill-in field (field name, sample text in the same gentle voice as our kit, about how many lines); the artwork needed per page; a suggested price and whether it belongs in a bundle; and a Payhip title plus 3 preview image ideas. Our files are fill-in PDFs that buyers type into with the free Adobe Acrobat Reader: never mention Canva editing. End with 'Owner: approve this spec and Claude will build the PDFs.' This is a spec only; nothing is published without the owner's approval.",
       "reads": "all"
@@ -289,7 +299,8 @@
         "content/seasonal.md",
         "pinterest/stats.md",
         "email/stats.md",
-        "store/media.json"
+        "store/media.json",
+        "products/collections.json"
       ],
       "instructions": "Write this month's email to Forever Held buyers and subscribers, to send from Payhip's email tool. Read the Seasonal Planner's calendar and pick the most fitting moment this month (a holiday, a new product, or simply a gentle check-in). Write: a subject line (plus one alternative), a preview line, and a short email (120-180 words): warm, calm, useful first (a remembrance idea, a tip for planning a service, or a way to honor someone on the holiday), then one gentle link to the shop (https://payhip.com/ForeverHeld) and a coupon only if one is active. Never pressure grieving people, never use countdown urgency. Also give the best send date this month. Draft only; the owner sends it."
     },
