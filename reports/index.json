@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-13-youtube-watcher.md",
+    "agent": "youtube-watcher",
+    "name": "YouTube Shorts Watcher",
+    "date": "2026-11-13"
+  },
+  {
     "file": "2026-11-13-growth-coach.md",
     "agent": "growth-coach",
     "name": "Growth Coach",
@@ -21,12 +27,6 @@
     "file": "2026-11-13-studio-director.md",
     "agent": "studio-director",
     "name": "Director",
-    "date": "2026-11-13"
-  },
-  {
-    "file": "2026-11-13-youtube-watcher.md",
-    "agent": "youtube-watcher",
-    "name": "YouTube Shorts Watcher",
     "date": "2026-11-13"
   },
   {

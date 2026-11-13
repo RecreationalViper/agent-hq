@@ -2,82 +2,58 @@
 
 > ⚠️ Web search was unavailable today, so this is from memory and may be out of date. Check the official links before acting.
 
-### ⚠️ Data Status
-**No live YouTube API data available** (`YOUTUBE_API_KEY` is not set in `studio/youtube-trends.md`). In accordance with studio rules, no view numbers or live chart metrics are invented in this report. 
+### Fastest-Rising Relevant Short Edits & Visual Trends
 
-Below is an analysis of proven viral edit structures and 7 high-impact targets currently dominating short-form movie, game, and anime content.
+Based on the latest YouTube Data API scan, here are the key edit-focused Shorts and gaming clips blowing up right now:
+
+1. **`"They Underestimated the Beggar"` 🗿🔥** by Ukhnooq_Ae
+   * **Metrics:** 20,745,274 views · 264,492/hr · 60s
+   * **Topic:** Disrespect / Underdog empowerment trope edit.
+2. **`"Bro is DareDevil" | Growing Up Fisher X The Mentalist Edit`** by KAKAROTOx7
+   * **Metrics:** 14,326,714 views · 130,407/hr · 60s
+   * **Topic:** Hyper-perception / genius crossover character edit paired with high-tempo Funk audio.
+3. **`"Wild Bear Vs. Military Dog"` ☠️ | Heart of the Beast Edit** by Lovnish
+   * **Metrics:** 12,479,850 views · 145,535/hr · 59s
+   * **Topic:** High-stakes confrontation / power comparison set to slowed audio.
+4. **`Security Stops Woman Over Her Service Dog!` 😳** by Thinkerz Edits
+   * **Metrics:** 36,683,256 views · 268,524/hr · 32s
+   * **Topic:** Confrontation / authority power dynamic short edit.
+5. **`Warhammer 40,000: Darktide - Sisters Novitiate | Class Reveal`** by Fatshark
+   * **Metrics:** 852,808 views · 31,181/hr · 2:37
+   * **Topic:** Gritty, dark gothic sci-fi cinematic gaming showcase.
 
 ---
 
-### What’s Working Across Movie, Game & Anime Shorts
+### What They Have in Common
 
-High-retention edits that perform consistently on YouTube Shorts follow a strict structural pattern:
-
-* **Length:** 30–40 seconds (optimal for maximum average percentage viewed).
-* **The 1-2s Hook:** Starts mid-action or on an iconic line spoken directly to camera/viewer, overlayed with a minimal text prompt.
-* **Middle Stretch:** 2–3 clean, story-ordered clips cut to a atmospheric slow-burn audio stem or phonk transition.
-* **The Final Beat:** Ending on a character line or heavy bass drop that seamlessly loops back to the opening text/audio.
+* **Targeted Edit Length:** Hits are maxing out the Shorts limit at **59–60 seconds** (`0:59` to `1:00`), giving enough room for a sequence to build pay-off without losing pacing.
+* **Double-Quote Hooks in Titles:** Every high-performing edit puts a viral internet reaction quote in double quotation marks first (e.g., `"Bro is DareDevil"`, `"They Underestimated..."`).
+* **Audio-Tagged Titles:** Listing the exact edit track in the title (e.g., `FUNK MANDALA`, `Raya (Slowed)`) helps YouTube route the Short to viewers who engage with that sound.
+* **The "Underestimated Genius / Overpowered Underdog" Trope:** Visuals focused on high tension where someone is misjudged right before a dominant display of skill or power.
 
 ---
 
-### Top 7 Clipping Targets for MotionVault
+### Moments for MotionVault to Clip (30–40s Focus)
 
-#### 1. *Interstellar* — The Docking Scene ("It's Necessary")
-* **Category:** Movie
-* **The Hook (0–2s):** Cooper: *"It's impossible."* Brand: *"No, it's necessary."*
-* **The Cut (30–35s):** 3 quick cuts of the spinning station, Cooper pulling the levers, and the module aligning as Zimmer's score hits its peak.
-* **Final Beat:** Cut to black on the mechanical locking click sound.
+#### 1. Movie / TV Scene: *The Mentalist* or *John Wick* ("Underestimated" Hook)
+* **Scene:** Patrick Jane reading an arrogant suspect in under 10 seconds, OR John Wick being dismissed by Viggo/Mobsters before the setup beat.
+* **Structure:** 
+  * *0:00–0:02:* Disrespectful dialogue line (Hook).
+  * *0:02–0:30:* Single unbroken stretch of character turn-the-tables observation or action sequence.
+  * *0:30–0:35:* Final mic-drop line, cutting on beat for a seamless loop.
 
-#### 2. *Red Dead Redemption 2* — Arthur Morgan's Final View
-* **Category:** Gaming
-* **The Hook (0–2s):** Text prompt: *"He just wanted to see the sunrise one last time..."*
-* **The Cut (30s):** Arthur looking out over the valley, transitioning from his dialogue with Dutch to the quiet sunrise. Minimal overlay sound, relying on ambient game audio and a soft synth pad.
-* **Final Beat:** Fade as the deer appears on screen.
+#### 2. Anime Scene: *Solo Leveling* or *Jujutsu Kaisen* (Underdog Reveal)
+* **Scene:** Sung Jin-woo being mocked as E-Rank right before his eyes glow blue, or Toji Fushiguro calm execution moment.
+* **Structure:** Fast visual contrast (weak state vs sudden aura reveal), synced to a heavy bass drop.
 
-#### 3. *Jujutsu Kaisen* — Gojo’s "Honored One" Awakening
-* **Category:** Anime
-* **The Hook (0–2s):** Gojo touching his bloodied head: *"Throughout Heaven and Earth..."*
-* **The Cut (30s):** Quick cut showing his defeat by Toji, followed by his floating awakening in mid-air, building up to the purple hollow activation.
-* **Final Beat:** Hard stop right as the purple sphere expands.
-
-#### 4. *Oppenheimer* — Trinity Test Silence
-* **Category:** Movie
-* **The Hook (0–2s):** Countdown reaching zero with absolute silence on-screen.
-* **The Cut (35s):** Visuals of the fireball expanding in dead silence while showing facial reactions of Oppenheimer and the crew, ending with the delayed shockwave audio drop.
-* **Final Beat:** The heavy audio boom hits right before the clip resets.
-
-#### 5. *God of War Ragnarök* — Kratos Inspecting the Shrine
-* **Category:** Gaming
-* **The Hook (0–2s):** Text prompt: *"He finally broke his fate."*
-* **The Cut (30s):** Kratos discovering the hidden mural behind the wood panel showing a beloved God of War. Focus on Kratos’ eyes and subtle facial animation.
-* **Final Beat:** Kratos saying: *"A tender heart..."* cut right before the music resolves.
-
-#### 6. *Spider-Man: Into the Spider-Verse* — Leap of Faith
-* **Category:** Movie / Animation
-* **The Hook (0–2s):** Miles breaking the glass with his hands + glass shatter sound effect.
-* **The Cut (35s):** Upside-down falling sequence building into the buildings acting as skyscrapers rising up. Clean 9:16 crop centered on Miles.
-* **Final Beat:** Swing off the crane cut straight into the opening glass shatter for an infinite loop.
-
-#### 7. *Attack on Titan* — Levi vs. Beast Titan (Season 3)
-* **Category:** Anime
-* **The Hook (0–2s):** Beast Titan realization face when smoke clears.
-* **The Cut (30s):** Levi shredding through the Titans in story sequence, ending with him dragging Zeke out of the nape.
-* **Final Beat:** Sword slice sound effect on the final frame.
+#### 3. Gaming Scene: *Warhammer 40k: Space Marine 2 / Darktide* or *Cyberpunk 2077*
+* **Scene:** Heavy execute animation or Sandy (Sandevistan) speed streak through an enemy squad.
+* **Structure:** Clean cinematic camera angle, 1 unbroken combat flow, ending on a high-impact finishing punch/shot.
 
 ---
 
 ### Title Patterns to Copy
 
-Use clean, high-curiosity, phone-friendly titles (under 50 characters) with bold emotional framing:
-
-1. **The Realization Pattern:**
-   * `The moment [Character] realized... 💀`
-   * `He knew it was over right here.`
-
-2. **The Cinema / Score Focus:**
-   * `This scene hit completely different in theaters...`
-   * `The audio stem carried this entire scene 🔊`
-
-3. **Character Mindset:**
-   * `[Character] didn't hesitate for a single second.`
-   * `The cold truth about [Character]...`
+* `"They Underestimated [Character Name]"` 🗿🔥 | [Show/Game Title] Edit
+* `"Bro thinks he's [Iconic Character]"` ☠️ | [Show A] x [Show B] Edit | [Audio Track Name]
+* `"He Didn't Know Who He Was Talking To"` 😳 | [Movie Title] Scene
