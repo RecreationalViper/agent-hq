@@ -148,7 +148,7 @@ export async function openRouterChat(system, user, { json = false, temperature =
 const RQ = "https://router.requesty.ai/v1";
 const rqKey = () => (process.env.REQUESTY_API_KEY || process.env.REQUESTY_KEY || "").trim();
 export const hasRequesty = () => Boolean(rqKey());
-const RQ_PREFER = [/gpt-oss-120b/i, /deepseek.*(v3|chat|r1)/i, /qwen3/i, /llama-3\.3-70b/i, /llama-4/i, /gemini.*flash/i, /mistral/i, /gemma/i];
+const RQ_PREFER = [/nemotron.*ultra/i, /gpt-oss-120b/i, /deepseek.*(v3|chat|r1)/i, /qwen3/i, /llama-3\.3-70b/i, /llama-4/i, /gemini.*flash/i, /mistral/i, /gemma/i];
 let rqModels;
 async function rqCall(path, init = {}) {
   const res = await fetch(RQ + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${rqKey()}`, "Content-Type": "application/json", "HTTP-Referer": "https://foreverheld.pages.dev", "X-Title": "Agent HQ" } });
@@ -165,7 +165,7 @@ export async function requestyModels() {
   if (rqModels) return rqModels;
   const data = await rqCall("/models");
   const all = data.data || data.models || [];
-  const free = all.filter((m) => isFreeRq(m) && !/vision|image|embed|guard|whisper|tts|speech|transcri/i.test(m.id));
+  const free = all.filter((m) => isFreeRq(m) && !/vision|image|embed|guard|whisper|tts|speech|transcri|leanstral|coder|codestral/i.test(m.id));
   const rank = (i) => { const k = RQ_PREFER.findIndex((r) => r.test(i)); return k < 0 ? 99 : k; };
   const size = (i) => { const n = [...i.matchAll(/(\d+(?:\.\d+)?)b(?![a-z])/gi)].map((m) => Number(m[1])); return n.length ? Math.max(...n) : /super|large|ultra|pro/i.test(i) ? 60 : /mini|small|lite|nano/i.test(i) ? 5 : 20; };
   rqModels = free.map((m) => m.id).sort((a, b) => rank(a) - rank(b) || size(b) - size(a));
