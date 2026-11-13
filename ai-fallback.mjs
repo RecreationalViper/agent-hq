@@ -1,5 +1,6 @@
 import { gwFetch } from "./ai-gateway.mjs";
 import { trackResponse } from "./usage-log.mjs";
+import { outKey, skipIfOut, noteIfDaily } from "./ai-out.mjs";
 // Backup AI provider: Groq (free tier, OpenAI-compatible). Used only when Gemini is
 // busy or out of its free daily quota. Needs the GROQ_API_KEY secret.
 // Free-tier limits seen on this key: 1,000 requests/day and 8,000 tokens/minute,
@@ -151,8 +152,9 @@ export const hasRequesty = () => Boolean(rqKey());
 const RQ_PREFER = [/nemotron.*ultra/i, /gpt-oss-120b/i, /deepseek.*(v3|chat|r1)/i, /qwen3/i, /llama-3\.3-70b/i, /llama-4/i, /gemini.*flash/i, /mistral/i, /gemma/i];
 let rqModels;
 async function rqCall(path, init = {}) {
-  const res = await fetch(RQ + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${rqKey()}`, "Content-Type": "application/json", "HTTP-Referer": "https://foreverheld.pages.dev", "X-Title": "Agent HQ" } });
-  await trackResponse(RQ + path, init, res);
+  const key = outKey(RQ + path, init);
+  const res = (await skipIfOut(key)) || await fetch(RQ + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${rqKey()}`, "Content-Type": "application/json", "HTTP-Referer": "https://foreverheld.pages.dev", "X-Title": "Agent HQ" } });
+  if (!res.headers.get("x-ai-out")) { await trackResponse(RQ + path, init, res); await noteIfDaily(key, res); }
   const text = await res.text();
   let data; try { data = JSON.parse(text); } catch { data = {}; }
   if (!res.ok || data.error) { const e = new Error(`Requesty ${res.status}: ${data.error?.message || text.slice(0, 200)}`); e.status = res.status; throw e; }

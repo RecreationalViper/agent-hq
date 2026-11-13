@@ -4,6 +4,7 @@
 // Safe by design: if the gateway itself fails (not the AI provider), the call goes straight to the provider,
 // and the gateway is skipped for the rest of that run. Turn off with AI_GATEWAY=off.
 import { trackResponse } from "./usage-log.mjs";
+import { outKey, skipIfOut, noteIfDaily } from "./ai-out.mjs";
 const ACCOUNT = () => process.env.CLOUDFLARE_ACCOUNT_ID?.trim();
 export const GATEWAY_ID = process.env.AI_GATEWAY && process.env.AI_GATEWAY !== "off" ? process.env.AI_GATEWAY : "agent-hq";
 let disabled = process.env.AI_GATEWAY === "off";
@@ -32,9 +33,14 @@ export { withGatewayAuth };
 
 // Drop-in for fetch(): tries the gateway, falls back to the direct address on gateway problems.
 // Every AI response is also counted for the AI usage log (usage-log.mjs).
+// An AI whose free daily allowance is used up (shared note, see ai-out.mjs) is skipped without calling it.
 export async function gwFetch(url, init = {}) {
+  const key = outKey(url, init);
+  const skip = await skipIfOut(key);
+  if (skip) return skip;
   const res = await rawGwFetch(url, init);
   await trackResponse(url, init, res);
+  await noteIfDaily(key, res);
   return res;
 }
 async function rawGwFetch(url, init = {}) {

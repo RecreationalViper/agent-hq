@@ -42,7 +42,7 @@ async function gemini(path, init = {}) {
     let res;
     try { res = await gwFetch(GEMINI + path, { ...init, signal: AbortSignal.timeout(120000), headers: { "Content-Type": "application/json", "x-goog-api-key": KEY } }); }
     catch { if (attempt < 2) continue; throw new Error("BUSY: no answer"); }
-    if ((res.status === 429 || res.status === 503) && attempt < 2) { await sleep(20000); continue; }
+    if ((res.status === 429 || res.status === 503) && attempt < 2 && !/PerDay|per day|daily|shared note/i.test(await res.clone().text().catch(() => ""))) { await sleep(20000); continue; }
     const data = await res.json().catch(() => ({}));
     if (res.status === 429 || res.status === 503) throw new Error("BUSY: " + (data?.error?.message || res.status));
     if (!res.ok) throw new Error(data?.error?.message || `HTTP ${res.status}`);

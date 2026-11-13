@@ -52,7 +52,7 @@ async function api(path, init = {}) {
       if (attempt < 2) { console.log("  no answer, retrying..."); continue; }
       throw new Error("BUSY: Google didn't answer in time.");
     }
-    if ((res.status === 429 || res.status === 503) && attempt < 2) { console.log(`  busy (${res.status}), waiting...`); await sleep(20000); continue; }
+    if ((res.status === 429 || res.status === 503) && attempt < 2 && !/PerDay|per day|daily|shared note/i.test(await res.clone().text().catch(() => ""))) { console.log(`  busy (${res.status}), waiting...`); await sleep(20000); continue; }
     const data = await res.json().catch(() => ({}));
     if (res.status === 429 || res.status === 503) {
       const quota = (data?.error?.details || []).flatMap((d) => d.violations || []).map((v) => v.quotaId).filter(Boolean);
