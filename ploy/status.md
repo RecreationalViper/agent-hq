@@ -4,7 +4,7 @@
 shift while Ploy is on break (out of daily credits). Claude syncs this file from Ploy and hands shift work back.
 
 - Ploy workspace: "Forever Held". Free plan: 700 AI credits a day, resets **7 pm New York (00:00 UTC)**.
-- Last sync: 2026-11-12 ~2:20 pm ET. **Ploy status: ON BREAK** (used 751 of 700 credits today). Live switch: `ploy/state.json` (see AGENTS.md "Shift lock").
+- Last sync: 2026-11-12 ~7:15 pm ET. **Ploy status: ON SHIFT** (credits reset 7 pm; one short screenshot check used). Live switch: `ploy/state.json` (see AGENTS.md "Shift lock").
 
 ## Shift rules (every agent, every AI team)
 1. **While Ploy is running, hands off its jobs.** Research and notes only, under `## For Ploy`.
@@ -19,7 +19,7 @@ shift while Ploy is on break (out of daily credits). Claude syncs this file from
 ## Ploy's jobs
 | Job (Ploy chat) | What Ploy did | Status | Our shift work while Ploy is on break |
 | --- | --- | --- | --- |
-| **Website move to Ploy** (site "Forever Held") | Built the design system from foreverheld.pages.dev (keep design as is); header, footer and homepage sections in progress; 10 media assets queued | Unpublished, needs owner preview + approval before any switch. Ploy asked to confirm checkout link and checklist signup | Facts for Ploy: buy link https://payhip.com/b/vqNSA ($12.99); free checklist signup https://payhip.com/b/eYJqS (joins the EmailOctopus list) |
+| **Website move to Ploy** (site "Forever Held") | Built the design system from foreverheld.pages.dev (keep design as is); header, footer, hero/suite/steps/FAQ sections ready but **home page is still a placeholder** (Nov 12 7 pm check) | Unpublished. **foreverheld.pages.dev stays the main store** until Ploy's home page is assembled and the owner approves. Ploy paused /abm/[slug] mid-edit (one file has a syntax error); waiting on owner OK to finish. Ploy asked to confirm checkout link and checklist signup | Facts for Ploy: buy link https://payhip.com/b/vqNSA ($12.99); free checklist signup https://payhip.com/b/eYJqS (joins the EmailOctopus list) |
 | **SEO & AEO audit** | Audited search + AI-answer visibility; top opportunity = a **/funeral-program-template** page (draft started) | Turn stopped when credits ran out; draft page unpublished | **SEO Scout**: keyword variants and real questions for "funeral program template" (People Also Ask, autocomplete), and short FAQ answers in our voice, for Ploy to use |
 | **Hero CRO variants** | 3 hero mockups: A outcome + price up front, B reassurance + 4 steps under the buttons, C product first with one buy button | **Owner picked C** (Nov 12). Built on foreverheld.pages.dev at the owner's request; Ploy told to use it for its site and conversion tracking | Content Planner: track clicks on "Get the suite" vs the old hero in reports. Don't rebuild the hero |
 | **Ad campaigns (Meta)** | Research + 3 creatives: "Printed by tonight", "Type their name", "Helping a friend". Meta Ads connected; no Meta pixel on site (checkout is Payhip) | **Waiting on owner. Owner: no paid ads for now** | Content Creator may reuse the three angles for free organic Pinterest pins. No ad work |
@@ -30,3 +30,8 @@ shift while Ploy is on break (out of daily credits). Claude syncs this file from
 - `ploy/brand.md`: Forever Held brand guidelines as Ploy wrote them (colors, type, voice, imagery).
 - `ploy/memory.md`: Ploy's workspace memory (goals, ongoing operations).
 - `ploy/leads.csv`: Ploy's ABM accounts table.
+
+## Ploy's review of foreverheld.pages.dev (Nov 12, 7 pm)
+- Works: product + price + 3 real previews + "Get the suite · $12.99" on the first phone screen (hero C); real filled-in previews; trust line, 4 steps and FAQ answer a family's worries.
+- Fix 1 (Web Developer, our shift): on desktop the big candle photo pushes the buy panel below the first screen.
+- Fix 2 (Web Developer, our shift): on phones the refund / secure-checkout line sits under the video; move it up next to the first buy button.
