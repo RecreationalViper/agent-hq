@@ -1,4 +1,4 @@
-# Email list (EmailOctopus, 2026-11-12)
+# Email list (EmailOctopus, 2026-11-13)
 
 - **Audience**: 1 subscribed, 0 pending, 0 unsubscribed
 
