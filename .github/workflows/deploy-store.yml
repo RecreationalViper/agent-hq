@@ -30,8 +30,16 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          npx --yes wrangler@4 pages deploy store --project-name foreverheld --branch main --commit-dirty=true | tee deploy.log
+          set -o pipefail
+          # Cloudflare's API sometimes drops the connection; try up to 3 times and fail loudly if all do.
+          for i in 1 2 3; do
+            if npx --yes wrangler@4 pages deploy store --project-name foreverheld --branch main --commit-dirty=true 2>&1 | tee deploy.log; then ok=1; break; fi
+            echo "Publish attempt $i failed; retrying in 20s"; sleep 20
+          done
+          [ "${ok:-}" = 1 ] || { echo "RESULT: store publish FAILED after 3 tries" | tee -a $GITHUB_STEP_SUMMARY; exit 1; }
           echo "RESULT: store live at https://foreverheld.pages.dev" | tee -a $GITHUB_STEP_SUMMARY
+          # Confirm the security headers are being served
+          curl -sSI https://foreverheld.pages.dev/ | grep -iE "content-security-policy|strict-transport" | cut -c1-80 | tee -a $GITHUB_STEP_SUMMARY || true
       - name: Tell search engines (IndexNow)
         if: steps.deploy.outcome == 'success'
         continue-on-error: true
