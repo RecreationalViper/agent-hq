@@ -29,6 +29,8 @@ function today() {
 
 function isDue(agent, dow, date = "") {
   if (agent.enabled === false) return false;
+  // "group:studio" = the extra afternoon run: only that group's agents marked twiceDaily.
+  if (MODE.startsWith("group:")) return agent.group === MODE.slice(6) && agent.twiceDaily === true;
   if (MODE !== "due" && MODE !== "all") return agent.id === MODE;
   const s = String(agent.schedule || "manual").toLowerCase();
   if (s === "manual") return false;

@@ -782,6 +782,11 @@ jobs:
         run: node tools/pinterest-stats.mjs
         env:
           PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN }}
+      - name: Refresh studio YouTube data (read-only)
+        run: node tools/youtube-trends.mjs
+        continue-on-error: true
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       - name: Run agents
         run: node run-agents.mjs
         env:
