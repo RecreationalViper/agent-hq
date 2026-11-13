@@ -35,6 +35,28 @@ def footer(home=False):
 </footer>
 '''
 
+
+def contact_script():
+    """Contact form code lives in js/contact.js (no inline scripts, so the Content-Security-Policy can block injected ones)."""
+    (STORE / "js").mkdir(exist_ok=True)
+    (STORE / "js" / "contact.js").write_text(f'''const f = document.querySelector("form.contact"), msg = f.querySelector(".form-msg"), btn = f.querySelector("button");
+const show = (t, ok) => {{ msg.textContent = t; msg.className = "form-msg " + (ok ? "ok" : "err"); }};
+f.addEventListener("submit", async (e) => {{
+  e.preventDefault();
+  const d = Object.fromEntries(new FormData(f));
+  if (!d.name.trim() || !/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(d.email) || d.message.trim().length < 5) return show("Please add your name, a valid email and a message.", false);
+  btn.disabled = true; btn.textContent = "Sending…";
+  try {{
+    const r = await fetch("{CONTACT_API}", {{ method: "POST", headers: {{ "content-type": "application/json" }}, body: JSON.stringify(d) }});
+    const j = await r.json().catch(() => ({{}}));
+    if (!r.ok || !j.ok) throw new Error(j.error || "failed");
+    f.reset(); show("Thank you. Your message is on its way, and we'll reply to your email soon.", true);
+  }} catch (err) {{ show("Sorry, that didn't send. Please email us at {EMAIL}.", false); }}
+  btn.disabled = false; btn.textContent = "Send message";
+}});
+''')
+    return '<script src="js/contact.js" defer></script>\n'
+
 def page(slug, title, desc, body, script="", head_extra=""):
     html = f'''<!doctype html>
 <html lang="en">
@@ -98,24 +120,7 @@ page("contact", "Contact us", "Questions about your Forever Held order, editing 
   <ul><li><b>Didn't get your files?</b> Check your spam folder for the Payhip receipt; the download link is inside.</li>
   <li><b>Text won't change?</b> Open the file in Adobe Acrobat Reader, not your phone's built-in preview.</li>
   <li><b>Refunds:</b> see our <a href="refunds.html">refund policy</a>.</li></ul>
-</section>''', script=f'''<script>
-const f = document.querySelector("form.contact"), msg = f.querySelector(".form-msg"), btn = f.querySelector("button");
-const show = (t, ok) => {{ msg.textContent = t; msg.className = "form-msg " + (ok ? "ok" : "err"); }};
-f.addEventListener("submit", async (e) => {{
-  e.preventDefault();
-  const d = Object.fromEntries(new FormData(f));
-  if (!d.name.trim() || !/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(d.email) || d.message.trim().length < 5) return show("Please add your name, a valid email and a message.", false);
-  btn.disabled = true; btn.textContent = "Sending…";
-  try {{
-    const r = await fetch("{CONTACT_API}", {{ method: "POST", headers: {{ "content-type": "application/json" }}, body: JSON.stringify(d) }});
-    const j = await r.json().catch(() => ({{}}));
-    if (!r.ok || !j.ok) throw new Error(j.error || "failed");
-    f.reset(); show("Thank you. Your message is on its way, and we'll reply to your email soon.", true);
-  }} catch (err) {{ show("Sorry, that didn't send. Please email us at {EMAIL}.", false); }}
-  btn.disabled = false; btn.textContent = "Send message";
-}});
-</script>
-''')
+</section>''', script=contact_script())
 
 # ---------------- Terms of sale ----------------
 legal("terms", "Terms of sale", "Terms of sale and personal-use license for Forever Held printable downloads.",

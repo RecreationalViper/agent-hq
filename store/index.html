@@ -117,13 +117,6 @@
   <p class="foot-note">© 2026 Forever Held · Secure checkout by Payhip · Previews show the real files you receive.</p>
 </footer>
 
-<script>
-  // Swap the main gallery image when a thumbnail is tapped
-  const main = document.getElementById("main-img");
-  document.querySelectorAll(".thumbs button").forEach((b) => b.addEventListener("click", () => {
-    main.src = b.dataset.src; main.alt = b.dataset.alt;
-    document.querySelectorAll(".thumbs button").forEach((x) => x.setAttribute("aria-current", x === b));
-  }));
-</script>
+<script src="js/gallery.js" defer></script>
 </body>
 </html>

@@ -43,3 +43,8 @@ description: How to change the Forever Held website (storefront) and its media. 
 2. All links work and point to the URLs above.
 3. `store/media.json` is valid JSON and up to date.
 4. Add a dated line to the "Agent HQ – Updates" Google Doc.
+
+## Security (Aikido checks the live site)
+- No inline `<script>` code on store pages: put it in `store/js/<name>.js` and load it with `<script src="js/<name>.js" defer>`. JSON-LD (`type="application/ld+json"`) is fine inline.
+- `store/_headers` sets the Content-Security-Policy. Any new outside source (script, font, video, form endpoint) must be added there, or browsers will block it.
+- Build HTML from data with `textContent`, or escape it first; never put untrusted text into `innerHTML`.

@@ -579,6 +579,7 @@ details summary{cursor:pointer;color:var(--mute);font-size:14px}
   };
   function radarCard(i) {
     const d = document.createElement("div");
+    if (!/^https:\/\/github\.com\//.test(i.url || "")) i = Object.assign({}, i, { url: "https://github.com/" });
     const tier = TIER[i.tier] || TIER.watch;
     const notes = (i.flags || []).map(f => FLAG_TEXT[f]).filter(Boolean);
     d.className = "card";

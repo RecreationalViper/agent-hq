@@ -1,0 +1,10 @@
+# Security headers for foreverheld.pages.dev (Cloudflare Pages reads this file).
+# If a page needs a new outside source (a script, font, video or form endpoint), add it to the
+# Content-Security-Policy below or the browser will block it. Rules: skills/web/SKILL.md.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self'; connect-src 'self' https://foreverheld-sales.foreverheld.workers.dev; form-action 'self' https://foreverheld-sales.foreverheld.workers.dev; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  X-Frame-Options: DENY

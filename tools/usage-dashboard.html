@@ -59,6 +59,8 @@ function parse(result) {
   return out;
 }
 
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
 function render(storedAt) {
   const today = dayET(Date.now());
   const tday = rows.filter((r) => dayET(r.t) === today);
@@ -99,7 +101,7 @@ function render(storedAt) {
   const who = {};
   for (const r of tday) { const w = (who[r.who] ||= { calls: 0, ps: new Set() }); w.calls += r.calls; w.ps.add(r.p); }
   const wl = Object.entries(who).sort((a, b) => b[1].calls - a[1].calls);
-  document.getElementById("who").innerHTML = wl.length ? wl.map(([w, v]) => `<tr><td>${w}<div class="small">${[...v.ps].join(", ")}</div></td><td>${v.calls} calls</td></tr>`).join("") : '<tr><td class="muted">No runs logged yet today</td><td></td></tr>';
+  document.getElementById("who").innerHTML = wl.length ? wl.map(([w, v]) => `<tr><td>${esc(w)}<div class="small">${esc([...v.ps].join(", "))}</div></td><td>${Number(v.calls)} calls</td></tr>`).join("") : '<tr><td class="muted">No runs logged yet today</td><td></td></tr>';
   const when = storedAt ? new Date(storedAt) : new Date();
   document.getElementById("fresh").textContent = `${tday.length ? "" : "Nothing logged yet today · "}Updated ${when.toLocaleTimeString("en-US", { timeZone: TZ, hour: "numeric", minute: "2-digit" })}`;
 }
