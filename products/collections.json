@@ -1,10 +1,44 @@
 {
   "about": "Every Forever Held design collection and its approval status. Agents may only list, pin, email or advertise collections with status \"approved\". See .claude/skills/design-collection/SKILL.md.",
   "collections": [
-    { "id": "soft-botanical", "name": "Soft Botanical", "status": "approved", "live": "https://payhip.com/b/vqNSA" },
-    { "id": "classic-elegance", "name": "Classic Elegance", "status": "built", "note": "awaiting owner OK to list" },
-    { "id": "holiday-2026-A", "name": "Evergreen & Candlelight", "status": "concept", "season": "Christmas", "preview": "products/concepts/holiday-2026/concept-A.jpg" },
-    { "id": "holiday-2026-B", "name": "Longest Night", "status": "concept", "season": "Blue Christmas, Hanukkah, solstice", "preview": "products/concepts/holiday-2026/concept-B.jpg" },
-    { "id": "holiday-2026-C", "name": "Harvest Table", "status": "concept", "season": "Thanksgiving", "preview": "products/concepts/holiday-2026/concept-C.jpg" }
+    {
+      "id": "soft-botanical",
+      "name": "Soft Botanical",
+      "status": "approved",
+      "live": "https://payhip.com/b/vqNSA"
+    },
+    {
+      "id": "classic-elegance",
+      "name": "Classic Elegance",
+      "status": "built",
+      "note": "awaiting owner OK to list"
+    },
+    {
+      "id": "holiday-2026-A",
+      "name": "Evergreen & Candlelight",
+      "status": "built",
+      "season": "Christmas",
+      "preview": "products/fillable/previews/evergreen-suite.png",
+      "note": "owner picked all three concepts 2026-11-12; built, awaiting final approval",
+      "files": "products/fillable/out/Evergreen & Candlelight/"
+    },
+    {
+      "id": "holiday-2026-B",
+      "name": "Longest Night",
+      "status": "built",
+      "season": "Blue Christmas, Hanukkah, solstice",
+      "preview": "products/fillable/previews/longest-night-suite.png",
+      "note": "owner picked all three concepts 2026-11-12; built, awaiting final approval",
+      "files": "products/fillable/out/Longest Night/"
+    },
+    {
+      "id": "holiday-2026-C",
+      "name": "Harvest Table",
+      "status": "built",
+      "season": "Thanksgiving",
+      "preview": "products/fillable/previews/harvest-table-suite.png",
+      "note": "owner picked all three concepts 2026-11-12; built, awaiting final approval",
+      "files": "products/fillable/out/Harvest Table/"
+    }
   ]
 }

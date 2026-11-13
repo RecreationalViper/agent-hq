@@ -44,7 +44,7 @@
      "font": "I",
      "color": "#5f6e56",
      "multiline": true,
-     "value": "Like the leaves that turn and fall, you return to the quiet earth — and still, in every spring, we will find you.",
+     "value": "Like the leaves that turn and fall, you return to the quiet earth \u2014 and still, in every spring, we will find you.",
      "lead": 1.65
     },
     {
@@ -93,7 +93,7 @@
      "size": 11,
      "font": "S",
      "color": "#5f6e56",
-     "value": "1941  —  2026"
+     "value": "1941  \u2014  2026"
     },
     {
      "name": "Service item 1",
@@ -117,7 +117,7 @@
      "size": 12.5,
      "font": "I",
      "color": "#7a746c",
-     "value": "“Morning Has Broken” · Piano"
+     "value": "\u201cMorning Has Broken\u201d \u00b7 Piano"
     },
     {
      "name": "Service item 2",
@@ -213,7 +213,7 @@
      "size": 12.5,
      "font": "I",
      "color": "#7a746c",
-     "value": "“Over the Rainbow” · Lisa Chen"
+     "value": "\u201cOver the Rainbow\u201d \u00b7 Lisa Chen"
     },
     {
      "name": "Service item 6",
@@ -333,7 +333,7 @@
      "size": 12.5,
      "font": "I",
      "color": "#7a746c",
-     "value": "“What a Wonderful World”"
+     "value": "\u201cWhat a Wonderful World\u201d"
     },
     {
      "name": "Service date and place",
@@ -346,7 +346,7 @@
      "font": "S",
      "color": "#8a9a7b",
      "multiline": true,
-     "value": "SATURDAY, OCTOBER 11, 2026 · 11:00 AM\nWILLOW CREEK HALL · FAIRVIEW",
+     "value": "SATURDAY, OCTOBER 11, 2026 \u00b7 11:00 AM\nWILLOW CREEK HALL \u00b7 FAIRVIEW",
      "lead": 1.9
     },
     {
@@ -371,7 +371,7 @@
      "size": 12,
      "font": "I",
      "color": "#7a746c",
-     "value": "March 14, 1941  ·  October 2, 2026"
+     "value": "March 14, 1941  \u00b7  October 2, 2026"
     },
     {
      "name": "Life story",
@@ -385,7 +385,7 @@
      "color": "#4a4540",
      "multiline": true,
      "align": 0,
-     "value": "Eleanor was born on a spring morning in 1941 and spent her childhood on her family’s farm outside Fairview, where she learned to love early sunrises and tomato vines. She taught second grade for thirty-four years and could still name nearly every student she ever had.\n\nShe married her sweetheart, Robert, in 1963, and together they raised three children in a house that was never quiet and always smelled of coffee. Eleanor tended a garden the whole street admired, never missed a grandchild’s recital, and believed that a handwritten letter could fix almost anything.\n\nShe is survived by her children Anna, James and Thomas, seven grandchildren, and countless friends who were made to feel like family the moment they arrived.",
+     "value": "Eleanor was born on a spring morning in 1941 and spent her childhood on her family\u2019s farm outside Fairview, where she learned to love early sunrises and tomato vines. She taught second grade for thirty-four years and could still name nearly every student she ever had.\n\nShe married her sweetheart, Robert, in 1963, and together they raised three children in a house that was never quiet and always smelled of coffee. Eleanor tended a garden the whole street admired, never missed a grandchild\u2019s recital, and believed that a handwritten letter could fix almost anything.\n\nShe is survived by her children Anna, James and Thomas, seven grandchildren, and countless friends who were made to feel like family the moment they arrived.",
      "lead": 1.65
     }
    ]
@@ -439,7 +439,7 @@
      "size": 49,
      "font": "S",
      "color": "#5f6e56",
-     "value": "1941  —  2026"
+     "value": "1941  \u2014  2026"
     }
    ]
   },
@@ -497,7 +497,7 @@
      "size": 8,
      "font": "S",
      "color": "#5f6e56",
-     "value": "1941  —  2026",
+     "value": "1941  \u2014  2026",
      "page": 1
     },
     {
@@ -511,7 +511,7 @@
      "color": "#4a4540",
      "multiline": true,
      "lead": 1.7,
-     "value": "Those we love don’t go away, they walk beside us every day. Unseen, unheard, but always near, still loved, still missed and very dear.",
+     "value": "Those we love don\u2019t go away, they walk beside us every day. Unseen, unheard, but always near, still loved, still missed and very dear.",
      "page": 1
     }
    ],
@@ -541,7 +541,7 @@
      "color": "#4a4540",
      "multiline": true,
      "lead": 1.7,
-     "value": "Your kind words, flowers and presence meant more to us than we can say. Thank you for honoring Eleanor’s life and for holding our family close.",
+     "value": "Your kind words, flowers and presence meant more to us than we can say. Thank you for honoring Eleanor\u2019s life and for holding our family close.",
      "page": 1
     },
     {
@@ -604,7 +604,7 @@
      "size": 11,
      "font": "S",
      "color": "#5f6e56",
-     "value": "1941  —  2026",
+     "value": "1941  \u2014  2026",
      "page": 1
     },
     {
@@ -630,7 +630,7 @@
      "color": "#4a4540",
      "multiline": true,
      "lead": 1.55,
-     "value": "Saturday, October 11, 2026 · 11:00 AM\nWillow Creek Hall\n214 Maple Lane, Fairview",
+     "value": "Saturday, October 11, 2026 \u00b7 11:00 AM\nWillow Creek Hall\n214 Maple Lane, Fairview",
      "page": 1
     },
     {
@@ -685,7 +685,7 @@
      "color": "#4a4a52",
      "multiline": true,
      "lead": 1.65,
-     "value": "Our family is deeply grateful for your kindness, your prayers and your presence today. Thank you for honoring Robert’s life with us."
+     "value": "Our family is deeply grateful for your kindness, your prayers and your presence today. Thank you for honoring Robert\u2019s life with us."
     },
     {
      "name": "Reception details",
@@ -713,7 +713,7 @@
      "color": "#1f2d44",
      "multiline": true,
      "lead": 1.65,
-     "value": "“Well done, good and faithful servant.” — Matthew 25:23"
+     "value": "\u201cWell done, good and faithful servant.\u201d \u2014 Matthew 25:23"
     },
     {
      "name": "In lieu of flowers",
@@ -762,7 +762,7 @@
      "size": 13,
      "font": "I",
      "color": "#9c7a45",
-     "value": "1938  —  2026"
+     "value": "1938  \u2014  2026"
     },
     {
      "name": "Service item 1",
@@ -786,7 +786,7 @@
      "size": 12.5,
      "font": "I",
      "color": "#4a4a52",
-     "value": "“Morning Has Broken” · Piano"
+     "value": "\u201cMorning Has Broken\u201d \u00b7 Piano"
     },
     {
      "name": "Service item 2",
@@ -882,7 +882,7 @@
      "size": 12.5,
      "font": "I",
      "color": "#4a4a52",
-     "value": "“Amazing Grace”"
+     "value": "\u201cAmazing Grace\u201d"
     },
     {
      "name": "Service item 6",
@@ -1002,7 +1002,7 @@
      "size": 12.5,
      "font": "I",
      "color": "#4a4a52",
-     "value": "“It Is Well with My Soul”"
+     "value": "\u201cIt Is Well with My Soul\u201d"
     },
     {
      "name": "Service date and place",
@@ -1016,7 +1016,7 @@
      "color": "#9c7a45",
      "multiline": true,
      "lead": 1.7,
-     "value": "SATURDAY, OCTOBER 11, 2026 · 11:00 AM\nGRACE COMMUNITY CHURCH · FAIRVIEW"
+     "value": "SATURDAY, OCTOBER 11, 2026 \u00b7 11:00 AM\nGRACE COMMUNITY CHURCH \u00b7 FAIRVIEW"
     },
     {
      "name": "Name",
@@ -1040,7 +1040,7 @@
      "size": 13,
      "font": "I",
      "color": "#9c7a45",
-     "value": "May 2, 1938  ·  October 2, 2026"
+     "value": "May 2, 1938  \u00b7  October 2, 2026"
     },
     {
      "name": "Life story",
@@ -1109,7 +1109,7 @@
      "size": 64,
      "font": "I",
      "color": "#9c7a45",
-     "value": "1938  —  2026"
+     "value": "1938  \u2014  2026"
     }
    ]
   },
@@ -1167,7 +1167,7 @@
      "size": 11,
      "font": "I",
      "color": "#9c7a45",
-     "value": "1938  —  2026",
+     "value": "1938  \u2014  2026",
      "page": 1
     },
     {
@@ -1181,7 +1181,7 @@
      "color": "#4a4a52",
      "multiline": true,
      "lead": 1.7,
-     "value": "The Lord is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul. — Psalm 23",
+     "value": "The Lord is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul. \u2014 Psalm 23",
      "page": 1
     }
    ],
@@ -1211,7 +1211,7 @@
      "color": "#4a4a52",
      "multiline": true,
      "lead": 1.7,
-     "value": "Your kindness, prayers and presence meant more to us than words can say. Thank you for honoring Robert’s life and for standing beside our family.",
+     "value": "Your kindness, prayers and presence meant more to us than words can say. Thank you for honoring Robert\u2019s life and for standing beside our family.",
      "page": 1
     },
     {
@@ -1274,7 +1274,7 @@
      "size": 14,
      "font": "I",
      "color": "#cdb88e",
-     "value": "1938  —  2026",
+     "value": "1938  \u2014  2026",
      "page": 1
     },
     {
@@ -1300,7 +1300,7 @@
      "color": "#f3ede0",
      "multiline": true,
      "lead": 1.6,
-     "value": "Saturday, October 11, 2026 · 11:00 AM\nGrace Community Church\n410 Oak Street, Fairview",
+     "value": "Saturday, October 11, 2026 \u00b7 11:00 AM\nGrace Community Church\n410 Oak Street, Fairview",
      "page": 1
     },
     {
@@ -1337,6 +1337,806 @@
      "page": 1
     }
    ]
+  },
+  {
+   "file": "Evergreen & Candlelight/01 Table Sign - Evergreen & Candlelight (fill-in).pdf",
+   "title": "Holiday Memorial Table Sign - Evergreen & Candlelight",
+   "bg": "evergreen-sign.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 64,
+     "top": 474,
+     "width": 640,
+     "height": 80,
+     "size": 58,
+     "font": "R",
+     "color": "#22382e",
+     "value": "Margaret Anne Ellis"
+    },
+    {
+     "name": "Years",
+     "page": 1,
+     "left": 234,
+     "top": 566,
+     "width": 300,
+     "height": 24,
+     "size": 16,
+     "font": "S",
+     "color": "#2b2a27",
+     "value": "1948  -  2026"
+    },
+    {
+     "name": "Verse",
+     "page": 1,
+     "left": 120,
+     "top": 640,
+     "width": 528,
+     "height": 120,
+     "size": 24,
+     "font": "I",
+     "color": "#2b2a27",
+     "value": "Though your chair is quiet this Christmas,\nyour love still fills the room.",
+     "multiline": true,
+     "lead": 1.5
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 1,
+    "cols": 1,
+    "rows": 1
+   }
+  },
+  {
+   "file": "Evergreen & Candlelight/02 Memory Cards - Evergreen & Candlelight (fill-in).pdf",
+   "title": "Holiday Memory Cards - Evergreen & Candlelight",
+   "bg": "evergreen-card.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 40,
+     "top": 126,
+     "width": 328,
+     "height": 46,
+     "size": 32,
+     "font": "R",
+     "color": "#f7f1e4",
+     "value": "Grandma Maggie"
+    },
+    {
+     "name": "Memory",
+     "page": 1,
+     "left": 52,
+     "top": 200,
+     "width": 304,
+     "height": 230,
+     "size": 19,
+     "font": "I",
+     "color": "#f7f1e4",
+     "value": "She made the cinnamon rolls every Christmas morning and let us lick the spoon...",
+     "multiline": true,
+     "lead": 2.3,
+     "align": 0
+    },
+    {
+     "name": "Shared by",
+     "page": 1,
+     "left": 192,
+     "top": 450,
+     "width": 164,
+     "height": 18,
+     "size": 11,
+     "font": "S",
+     "color": "#f7f1e4",
+     "value": "",
+     "align": 0
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 0.94
+   }
+  },
+  {
+   "file": "Evergreen & Candlelight/02b Memory Cards (ink-saver) - Evergreen & Candlelight (fill-in).pdf",
+   "title": "Holiday Memory Cards - Evergreen & Candlelight",
+   "bg": "evergreen-card-light.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 40,
+     "top": 126,
+     "width": 328,
+     "height": 46,
+     "size": 32,
+     "font": "R",
+     "color": "#22382e",
+     "value": "Grandma Maggie"
+    },
+    {
+     "name": "Memory",
+     "page": 1,
+     "left": 52,
+     "top": 200,
+     "width": 304,
+     "height": 230,
+     "size": 19,
+     "font": "I",
+     "color": "#22382e",
+     "value": "She made the cinnamon rolls every Christmas morning and let us lick the spoon...",
+     "multiline": true,
+     "lead": 2.3,
+     "align": 0
+    },
+    {
+     "name": "Shared by",
+     "page": 1,
+     "left": 192,
+     "top": 450,
+     "width": 164,
+     "height": 18,
+     "size": 11,
+     "font": "S",
+     "color": "#22382e",
+     "value": "",
+     "align": 0
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 0.94
+   }
+  },
+  {
+   "file": "Evergreen & Candlelight/03 Ornament Cards - Evergreen & Candlelight (fill-in).pdf",
+   "title": "Christmas Memorial Ornament Cards - Evergreen & Candlelight",
+   "bg": "evergreen-ornament.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 30,
+     "top": 190,
+     "width": 240,
+     "height": 84,
+     "size": 30,
+     "font": "R",
+     "color": "#22382e",
+     "value": "Margaret\nAnne Ellis",
+     "multiline": true,
+     "lead": 1.1
+    },
+    {
+     "name": "Words",
+     "page": 1,
+     "left": 30,
+     "top": 290,
+     "width": 240,
+     "height": 40,
+     "size": 18,
+     "font": "I",
+     "color": "#2b2a27",
+     "value": "Christmas in heaven",
+     "multiline": true,
+     "lead": 1.3
+    },
+    {
+     "name": "Years",
+     "page": 1,
+     "left": 60,
+     "top": 366,
+     "width": 180,
+     "height": 18,
+     "size": 12,
+     "font": "S",
+     "color": "#2b2a27",
+     "value": "1948  -  2026"
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 1,
+    "cols": 2,
+    "rows": 2
+   }
+  },
+  {
+   "file": "Longest Night/01 Table Sign - Longest Night (fill-in).pdf",
+   "title": "Longest Night Memorial Table Sign - Longest Night",
+   "bg": "longest-sign.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 64,
+     "top": 372,
+     "width": 640,
+     "height": 76,
+     "size": 52,
+     "font": "S",
+     "color": "#ffffff",
+     "value": "Margaret Anne Ellis"
+    },
+    {
+     "name": "Years",
+     "page": 1,
+     "left": 234,
+     "top": 470,
+     "width": 300,
+     "height": 24,
+     "size": 16,
+     "font": "S",
+     "color": "#c9ccd8",
+     "value": "1948  -  2026"
+    },
+    {
+     "name": "Verse",
+     "page": 1,
+     "left": 130,
+     "top": 560,
+     "width": 508,
+     "height": 130,
+     "size": 23,
+     "font": "S",
+     "color": "#ffffff",
+     "value": "Even in the darkest night,\nyour light finds us.",
+     "multiline": true,
+     "lead": 1.55
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 1,
+    "cols": 1,
+    "rows": 1
+   }
+  },
+  {
+   "file": "Longest Night/01b Table Sign (ink-saver) - Longest Night (fill-in).pdf",
+   "title": "Longest Night Memorial Table Sign - Longest Night",
+   "bg": "longest-sign-light.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 64,
+     "top": 422,
+     "width": 640,
+     "height": 76,
+     "size": 52,
+     "font": "S",
+     "color": "#2a2d40",
+     "value": "Margaret Anne Ellis"
+    },
+    {
+     "name": "Years",
+     "page": 1,
+     "left": 234,
+     "top": 520,
+     "width": 300,
+     "height": 24,
+     "size": 16,
+     "font": "S",
+     "color": "#3c4570",
+     "value": "1948  -  2026"
+    },
+    {
+     "name": "Verse",
+     "page": 1,
+     "left": 130,
+     "top": 610,
+     "width": 508,
+     "height": 130,
+     "size": 23,
+     "font": "S",
+     "color": "#2a2d40",
+     "value": "Even in the darkest night,\nyour light finds us.",
+     "multiline": true,
+     "lead": 1.55
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 1,
+    "cols": 1,
+    "rows": 1
+   }
+  },
+  {
+   "file": "Longest Night/02 Program - Longest Night (fill-in).pdf",
+   "title": "Longest Night Service Program - Longest Night",
+   "bg": "longest-program.pdf",
+   "fields": [
+    {
+     "name": "Names remembered",
+     "page": 1,
+     "left": 64,
+     "top": 160,
+     "width": 400,
+     "height": 470,
+     "size": 15,
+     "font": "S",
+     "color": "#2a2d40",
+     "value": "Margaret Anne Ellis\nJames Robert Okafor\nRuth Ann Lindqvist\nDaniel \"Danny\" Pierce\nEsther Goldberg\nSamuel Thomas Reyes\nLily May Carter",
+     "multiline": true,
+     "lead": 2
+    },
+    {
+     "name": "Closing words",
+     "page": 1,
+     "left": 64,
+     "top": 660,
+     "width": 400,
+     "height": 96,
+     "size": 13,
+     "font": "S",
+     "color": "#3c4570",
+     "value": "However you came tonight, you are not alone. Take a candle home with you.",
+     "multiline": true,
+     "lead": 1.6
+    },
+    {
+     "name": "Title",
+     "page": 1,
+     "left": 568,
+     "top": 276,
+     "width": 448,
+     "height": 140,
+     "size": 50,
+     "font": "S",
+     "color": "#ffffff",
+     "value": "The Longest\nNight",
+     "multiline": true,
+     "lead": 1.15
+    },
+    {
+     "name": "When and where",
+     "page": 1,
+     "left": 568,
+     "top": 436,
+     "width": 448,
+     "height": 100,
+     "size": 15,
+     "font": "S",
+     "color": "#ffffff",
+     "value": "Monday, December 21, 2026\n7:00 in the evening\nGrace Fellowship Hall",
+     "multiline": true,
+     "lead": 1.7
+    },
+    {
+     "name": "Cover words",
+     "page": 1,
+     "left": 588,
+     "top": 596,
+     "width": 408,
+     "height": 60,
+     "size": 15,
+     "font": "S",
+     "color": "#ffffff",
+     "value": "For all who carry an empty place\ninto this season",
+     "multiline": true,
+     "lead": 1.6
+    },
+    {
+     "name": "Service item 1",
+     "page": 2,
+     "left": 64,
+     "top": 140,
+     "width": 400,
+     "height": 24,
+     "size": 17,
+     "font": "S",
+     "color": "#2a2d40",
+     "value": "Gathering music"
+    },
+    {
+     "name": "Service item 1 detail",
+     "page": 2,
+     "left": 64,
+     "top": 168,
+     "width": 400,
+     "height": 20,
+     "size": 13,
+     "font": "S",
+     "color": "#3c4570",
+     "value": ""
+    },
+    {
+     "name": "Service item 2",
+     "page": 2,
+     "left": 64,
+     "top": 212,
+     "width": 400,
+     "height": 24,
+     "size": 17,
+     "font": "S",
+     "color": "#2a2d40",
+     "value": "Welcome"
+    },
+    {
+     "name": "Service item 2 detail",
+     "page": 2,
+     "left": 64,
+     "top": 240,
+     "width": 400,
+     "height": 20,
+     "size": 13,
+     "font": "S",
+     "color": "#3c4570",
+     "value": "Rev. Anna Morales"
+    },
+    {
+     "name": "Service item 3",
+     "page": 2,
+     "left": 64,
+     "top": 284,
+     "width": 400,
+     "height": 24,
+     "size": 17,
+     "font": "S",
+     "color": "#2a2d40",
+     "value": "Reading"
+    },
+    {
+     "name": "Service item 3 detail",
+     "page": 2,
+     "left": 64,
+     "top": 312,
+     "width": 400,
+     "height": 20,
+     "size": 13,
+     "font": "S",
+     "color": "#3c4570",
+     "value": "Psalm 23"
+    },
+    {
+     "name": "Service item 4",
+     "page": 2,
+     "left": 64,
+     "top": 356,
+     "width": 400,
+     "height": 24,
+     "size": 17,
+     "font": "S",
+     "color": "#2a2d40",
+     "value": "Reflection"
+    },
+    {
+     "name": "Service item 4 detail",
+     "page": 2,
+     "left": 64,
+     "top": 384,
+     "width": 400,
+     "height": 20,
+     "size": 13,
+     "font": "S",
+     "color": "#3c4570",
+     "value": "Holding grief in a season of light"
+    },
+    {
+     "name": "Service item 5",
+     "page": 2,
+     "left": 64,
+     "top": 428,
+     "width": 400,
+     "height": 24,
+     "size": 17,
+     "font": "S",
+     "color": "#2a2d40",
+     "value": "The lighting of candles"
+    },
+    {
+     "name": "Service item 5 detail",
+     "page": 2,
+     "left": 64,
+     "top": 456,
+     "width": 400,
+     "height": 20,
+     "size": 13,
+     "font": "S",
+     "color": "#3c4570",
+     "value": "All are welcome to come forward"
+    },
+    {
+     "name": "Service item 6",
+     "page": 2,
+     "left": 64,
+     "top": 500,
+     "width": 400,
+     "height": 24,
+     "size": 17,
+     "font": "S",
+     "color": "#2a2d40",
+     "value": "Silence"
+    },
+    {
+     "name": "Service item 6 detail",
+     "page": 2,
+     "left": 64,
+     "top": 528,
+     "width": 400,
+     "height": 20,
+     "size": 13,
+     "font": "S",
+     "color": "#3c4570",
+     "value": ""
+    },
+    {
+     "name": "Service item 7",
+     "page": 2,
+     "left": 64,
+     "top": 572,
+     "width": 400,
+     "height": 24,
+     "size": 17,
+     "font": "S",
+     "color": "#2a2d40",
+     "value": "Closing blessing"
+    },
+    {
+     "name": "Service item 7 detail",
+     "page": 2,
+     "left": 64,
+     "top": 600,
+     "width": 400,
+     "height": 20,
+     "size": 13,
+     "font": "S",
+     "color": "#3c4570",
+     "value": ""
+    },
+    {
+     "name": "Service item 8",
+     "page": 2,
+     "left": 64,
+     "top": 644,
+     "width": 400,
+     "height": 24,
+     "size": 17,
+     "font": "S",
+     "color": "#2a2d40",
+     "value": ""
+    },
+    {
+     "name": "Service item 8 detail",
+     "page": 2,
+     "left": 64,
+     "top": 672,
+     "width": 400,
+     "height": 20,
+     "size": 13,
+     "font": "S",
+     "color": "#3c4570",
+     "value": ""
+    },
+    {
+     "name": "Candle words",
+     "page": 2,
+     "left": 592,
+     "top": 140,
+     "width": 400,
+     "height": 560,
+     "size": 15,
+     "font": "S",
+     "color": "#2a2d40",
+     "value": "We light this candle for the ones we have lost, and for the love that does not end.\n\nWe light this candle for the hard memories, and the gentle ones.\n\nWe light this candle for ourselves, that we may be kind to our own hearts.\n\nAnd we light this candle for hope, small and steady, like the returning sun.",
+     "multiline": true,
+     "lead": 1.75
+    }
+   ]
+  },
+  {
+   "file": "Longest Night/03 Candle-Lighting Cards - Longest Night (fill-in).pdf",
+   "title": "Candle-Lighting Remembrance Cards - Longest Night",
+   "bg": "longest-card.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 40,
+     "top": 214,
+     "width": 328,
+     "height": 44,
+     "size": 30,
+     "font": "S",
+     "color": "#2a2d40",
+     "value": "Dad"
+    },
+    {
+     "name": "What I carry",
+     "page": 1,
+     "left": 60,
+     "top": 336,
+     "width": 288,
+     "height": 140,
+     "size": 16,
+     "font": "S",
+     "color": "#2a2d40",
+     "value": "His terrible jokes and his steady hands.",
+     "multiline": true,
+     "lead": 2.4,
+     "align": 0
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 0.94
+   }
+  },
+  {
+   "file": "Harvest Table/01 Empty-Chair Sign - Harvest Table (fill-in).pdf",
+   "title": "Thanksgiving Memorial Empty-Chair Sign - Harvest Table",
+   "bg": "harvest-sign.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 64,
+     "top": 334,
+     "width": 640,
+     "height": 176,
+     "size": 74,
+     "font": "R",
+     "color": "#4b3527",
+     "value": "Margaret\nAnne Ellis",
+     "multiline": true,
+     "lead": 1.05
+    },
+    {
+     "name": "Years",
+     "page": 1,
+     "left": 234,
+     "top": 518,
+     "width": 300,
+     "height": 24,
+     "size": 16,
+     "font": "S",
+     "color": "#7a7a45",
+     "value": "1948  -  2026"
+    },
+    {
+     "name": "Verse",
+     "page": 1,
+     "left": 120,
+     "top": 580,
+     "width": 528,
+     "height": 120,
+     "size": 25,
+     "font": "I",
+     "color": "#4b3527",
+     "value": "Grateful for every year\nwe had you at this table.",
+     "multiline": true,
+     "lead": 1.5
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 1,
+    "cols": 1,
+    "rows": 1
+   }
+  },
+  {
+   "file": "Harvest Table/02 Thankful Cards - Harvest Table (fill-in).pdf",
+   "title": "\"I'm Thankful For\" Memory Cards - Harvest Table",
+   "bg": "harvest-card.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 40,
+     "top": 144,
+     "width": 328,
+     "height": 44,
+     "size": 32,
+     "font": "R",
+     "color": "#4b3527",
+     "value": "Uncle Ray"
+    },
+    {
+     "name": "Memory",
+     "page": 1,
+     "left": 50,
+     "top": 204,
+     "width": 308,
+     "height": 210,
+     "size": 18,
+     "font": "I",
+     "color": "#4b3527",
+     "value": "the way he carved the turkey like it was a sport, and every story that came with it.",
+     "multiline": true,
+     "lead": 2.35,
+     "align": 0
+    },
+    {
+     "name": "From",
+     "page": 1,
+     "left": 114,
+     "top": 454,
+     "width": 244,
+     "height": 18,
+     "size": 11,
+     "font": "S",
+     "color": "#4b3527",
+     "value": "",
+     "align": 0
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 0.94
+   }
+  },
+  {
+   "file": "Harvest Table/03 Place Cards - Harvest Table (fill-in).pdf",
+   "title": "Thanksgiving Place Cards - Harvest Table",
+   "bg": "harvest-place.pdf",
+   "fields": [
+    {
+     "name": "Top line",
+     "page": 1,
+     "left": 40,
+     "top": 246,
+     "width": 256,
+     "height": 16,
+     "size": 10,
+     "font": "S",
+     "color": "#b45f3c",
+     "value": "IN LOVING MEMORY"
+    },
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 40,
+     "top": 266,
+     "width": 256,
+     "height": 44,
+     "size": 32,
+     "font": "R",
+     "color": "#4b3527",
+     "value": "Grandpa Joe"
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 1,
+    "cols": 2,
+    "rows": 2
+   }
   }
  ]
 }

@@ -153,8 +153,10 @@ def px_rect(page_h_pt, left, top, width, height, scale=1, ox=0, oy=0):
     return (x0, y1 - height * PX * scale, x0 + width * PX * scale, y1)
 
 
-def build(out_dir):
+def build(out_dir, only=None):
     spec = json.loads((HERE / "fields.json").read_text())
+    if only:
+        spec["products"] = [p for p in spec["products"] if any(p["file"].startswith(o) for o in only)]
     out_dir = Path(out_dir); out_dir.mkdir(parents=True, exist_ok=True)
     made = []
     for prod in spec["products"]:
@@ -204,5 +206,7 @@ def build(out_dir):
 
 
 if __name__ == "__main__":
-    for p in build(sys.argv[1] if len(sys.argv) > 1 else HERE / "out"):
+    args = [a for a in sys.argv[1:] if not a.startswith("--only=")]
+    only = [a.split("=", 1)[1] for a in sys.argv[1:] if a.startswith("--only=")]
+    for p in build(args[0] if args else HERE / "out", only or None):
         print("built", p)
