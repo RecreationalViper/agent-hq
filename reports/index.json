@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-13-webdev.md",
+    "agent": "webdev",
+    "name": "Web Developer",
+    "date": "2026-11-13"
+  },
+  {
     "file": "2026-11-13-content-creator.md",
     "agent": "content-creator",
     "name": "Content Creator",
