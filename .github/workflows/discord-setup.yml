@@ -16,6 +16,7 @@ jobs:
         run: node tools/discord-setup.mjs
         env:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          STUDIO_DISCORD_BOT_TOKEN: ${{ secrets.STUDIO_DISCORD_BOT_TOKEN }}
       - name: Save channel list
         run: |
           git config user.name "agent-hq-bot"

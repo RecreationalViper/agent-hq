@@ -255,7 +255,10 @@ async function main() {
   }
   const failures = failed.length;
   console.log(`Done: ${due.length - failures} of ${due.length} agent(s) saved a report.`);
-  if (failures) await discordAlert(`⚠️ ${failures} agent(s) failed today: ${failed.map((a) => a.name).join(", ")}. The rest reported normally.`);
+  // Studio agents' failures go to Studio HQ (#studio-alerts); everything else to Agent HQ (#alerts).
+  const failedStudio = failed.filter((a) => a.group === "studio"), failedMain = failed.filter((a) => a.group !== "studio");
+  if (failedMain.length) await discordAlert(`⚠️ ${failedMain.length} agent(s) failed today: ${failedMain.map((a) => a.name).join(", ")}. The rest reported normally.`);
+  if (failedStudio.length) await discordAlert(`⚠️ ${failedStudio.length} studio agent(s) failed: ${failedStudio.map((a) => a.name).join(", ")}. The rest reported normally.`, "studio-alerts");
   if (failures === due.length) throw new Error("Every agent failed this run.");
 }
 
