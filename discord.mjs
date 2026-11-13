@@ -66,7 +66,9 @@ export async function setupChannels() {
     studioGuilds = await api("/users/@me/guilds", {}, studioToken);
     studioInvite = inviteFor((await api("/users/@me", {}, studioToken)).id);
   }
-  const studio = studioGuilds.find((g) => /studio/i.test(g.name));
+  let studio = studioGuilds.find((g) => /studio/i.test(g.name));
+  // Studio bot not invited yet: keep using Studio HQ through the Agent HQ bot, never fall back into Agent HQ.
+  if (!studio && STUDIO()) { studio = guilds.find((g) => /studio/i.test(g.name)); if (studio) studioToken = MAIN(); }
   const guild = guilds.find((g) => /agent hq/i.test(g.name)) || guilds.find((g) => !/studio/i.test(g.name)) || guilds[0];
   const ids = {}, created = [], removed = [];
   async function build(g, catName, keys, token) {
@@ -92,10 +94,10 @@ export async function setupChannels() {
       if (old) { await api(`/channels/${old.id}`, { method: "DELETE" }); removed.push(old.name); }
     }
     // Once the Studio bot runs Studio HQ, the Agent HQ bot leaves it so the servers stay separate.
-    if (STUDIO() && guilds.some((g) => g.id === studio.id)) { await api(`/users/@me/guilds/${studio.id}`, { method: "DELETE" }); leftStudio = true; }
+    if (studioToken === STUDIO() && STUDIO() && guilds.some((g) => g.id === studio.id)) { await api(`/users/@me/guilds/${studio.id}`, { method: "DELETE", body: "{}" }); leftStudio = true; }
   }
   await fs.writeFile("discord.json", JSON.stringify({ server: guild.name, serverId: guild.id, ...(studio ? { studioServer: studio.name, studioServerId: studio.id } : {}), channels: ids }, null, 2) + "\n");
-  return { server: guild.name, studioServer: studio?.name || null, studioBot: Boolean(STUDIO()), studioInvite, leftStudio, created, removed, invite, total: Object.keys(ids).length };
+  return { server: guild.name, studioServer: studio?.name || null, studioBot: Boolean(STUDIO()) && studioToken === STUDIO(), studioInvite, leftStudio, created, removed, invite, total: Object.keys(ids).length };
 }
 
 async function channelId(key) {
