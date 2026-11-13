@@ -1,49 +1,42 @@
 # Content Creator - 2026-11-12
 
-**This week:** Practical steps for a personal service: sizing, photos, printing, and holiday remembrance
+**This week:** Practical setup and personalization for the service day and holiday gatherings
 
-5 posts designed and sent to Discord #content (images there, ready to save).
+4 posts designed and sent to Discord #content (images there, ready to save).
 
-## 1. Pinterest: Choose the welcome sign size that fits your space
-- **Pin title:** Celebration of Life Welcome Sign Template — Three Sizes Included
-- **Caption:** Every venue is different. The Soft Botanical kit gives you all three welcome sign sizes in one download so you can print the one that fits your entryway. Fill in the free Adobe Reader app, save, and print at a local shop.
-- **Tags:** #welcomesigntemplate #celebrationoflifesign #funeralwelcomesign #memorialsignsizes #printablememorialkit #softbotanical
-- **Alt text:** A wooden easel holds a 24x36 welcome sign with soft botanical design; two smaller sizes lean beside it on a draped table with eucalyptus and warm window light.
+## 1. Pinterest: Place the welcome sign with care
+- **Pin title:** Funeral Welcome Sign Template: Place at Entrance for Celebration of Life
+- **Caption:** A welcome sign on an easel sets a peaceful tone as guests arrive. Our 24x36 Soft Botanical sign prints at three sizes and fills in on your phone. See the kit at foreverheld.pages.dev
+- **Tags:** #funeralwelcomesign #celebrationoflife #memorialsign #welcomesigntemplate #softbotanical #memorialdecor
+- **Alt text:** Soft Botanical welcome sign on a wooden easel in a softly lit room with white roses and candles
 - **Image:** 2026-11-12-1-pin.jpg
 
-## 2. Pinterest: Honor their memory at the Thanksgiving table
-- **Pin title:** Thanksgiving Memory Cards — Printable Share-a-Memory for the Holiday Table
-- **Caption:** The first holiday without them is hard. Tuck a share-a-memory card into each place setting so family can write a favorite story between courses. Cards print four per letter page, match the program and welcome sign.
-- **Tags:** #thanksgivinggrief #holidaymemorycards #shareamemoryprintable #memorialtablesetting #firstholidayafterloss #softbotanicalmemorial
-- **Alt text:** A Thanksgiving table with cream and sage linens; at each place a 4.25x5.5 memory card and pen sit beside the plate, a small pumpkin and candle center the table.
+## 2. Pinterest: Memory cards for the holiday table
+- **Pin title:** Share a Memory Card Template Printable: Holiday Remembrance Table Setup
+- **Caption:** Memory cards let family share stories at their own pace. Print four per sheet, cut, and place with pens. Part of the Soft Botanical bundle at foreverheld.pages.dev
+- **Tags:** #shareamemorycard #memorycardtemplate #holidayremembrance #thanksgivingmemorial #celebrationoflife #printablememorycards
+- **Alt text:** Soft Botanical memory cards on a linen table with eucalyptus sprigs and tea light candles
 - **Image:** 2026-11-12-2-pin.jpg
 
-## 3. Pinterest: Add photos to the program on your computer
-- **Pin title:** How to Add Photos to a Fill-In PDF Funeral Program — Desktop Tutorial
-- **Caption:** Photos go in on a computer. Open the PDF in free Adobe Acrobat Reader, click the photo box, choose your file, and it drops in perfectly sized. Print a test page at home, then send the final to your print shop.
-- **Tags:** #addphototopdf #funeralprogramphotos #editablepdfmemorial #adobereadertutorial #printablefuneralprogram #memorialprogramtemplate
-- **Alt text:** A laptop screen shows the Soft Botanical program cover in Adobe Reader with a photo being dropped into the placeholder; a printed proof lies next to the keyboard in soft morning light.
-- **Image:** 2026-11-12-3-pin.jpg
+## 3. TikTok / Reels: Type their story in minutes
+- **Caption:** Open the fill-in PDF in the free Adobe Reader app. Tap each field, type, and save. No design tools needed. Get the kit at foreverheld.pages.dev
+- **Tags:** #fillablepdf #funeralprogram #adobereader #phoneediting #memorialprogram #celebrationoflife
+- **Alt text:** Phone screen showing Adobe Reader with fillable PDF fields being typed into
+- **Image:** 2026-11-12-3-story.jpg
+- **Video script:** Hook: You can personalize the whole program from your phone. Beat 1: Show phone opening the PDF in Adobe Reader app. Beat 2: Show tapping a field and typing a name. Beat 3: Show saving and the final program ready to print. Close: Download the kit at foreverheld.pages.dev
 
-## 4. TikTok / Reels: Print at Staples, FedEx, or Walgreens
-- **Caption:** No home printer? Save the filled PDF to a USB drive or email it to Staples, FedEx Office, or Walgreens. Choose 32 lb paper for a nice feel. Pick up in hours. Link in bio for the kit.
-- **Tags:** #printatstaples #fedexprinting #walgreensphoto #samedayprinting #funeralprogramprinting #memorialstationery
-- **Alt text:** A calm watercolor scene of sage leaves and cream paper; overlay text reads 'Print at Staples, FedEx, or Walgreens — save PDF to USB or email, pick up same day.'
+## 4. Instagram: Fold the program into a booklet
+- **Caption:** Print the 11x8.5 landscape sheet double-sided. Fold in half to 5.5x8.5. Four panels ready for the service. Full bundle at foreverheld.pages.dev
+- **Tags:** #funeralprogramprinting #foldprogram #letterpaper #memorialbooklet #celebrationoflife #diyfuneral
+- **Alt text:** Hands folding a printed 11x8.5 landscape program in half to create a 5.5x8.5 booklet
 - **Image:** 2026-11-12-4-story.jpg
-- **Video script:** Hook: No printer at home? No problem. Beat 1: Show filled PDF on phone → tap Share → save to Files or email to self. Beat 2: Open Staples/FedEx/Walgreens site → upload PDF → choose 32 lb paper, double-sided. Beat 3: Confirm pickup time → show 'Ready in 2 hours' screen. Close: Link in bio for the fill-in PDF kit — $12.99 with code PEACE25.
-
-## 5. Instagram: Build a memory table in three steps
-- **Caption:** A memory table welcomes guests and holds their stories. 1) Stand the welcome sign on an easel. 2) Set out memory cards with pens and a basket. 3) Add a few framed photos and a candle. All matching, all printable. Shop the kit at the link in bio.
-- **Tags:** #memorytablesetup #memorialtableideas #celebrationoflifetable #funeralwelcomesign #shareamemorycards #softbotanicalkit
-- **Alt text:** A painted watercolor scene showing a memory table: welcome sign on easel, basket of memory cards with pens, framed photos, candles, and eucalyptus in sage and cream tones.
-- **Image:** 2026-11-12-5-story.jpg
-- **Video script:** Hook: A memory table takes 10 minutes and means everything. Beat 1: Place welcome sign on easel (show 24x36, then 16x24). Beat 2: Fan out memory cards in a basket with two pens. Beat 3: Add two framed photos and a pillar candle. Close: Everything matches — program, sign, cards. Get the kit at foreverheld.pages.dev, code PEACE25 saves 25%.
+- **Video script:** Hook: One sheet of paper becomes a four-panel booklet. Beat 1: Show printed 11x8.5 landscape program on table. Beat 2: Show hands folding it in half precisely. Beat 3: Show the finished 5.5x8.5 booklet standing up. Close: Get the full suite at foreverheld.pages.dev
 
 ## Notes for the Content Planner
-Created 3 pins and 2 stories with fresh angles: welcome sign sizing, Thanksgiving memory cards, desktop photo insertion, local print shop workflow, and 3-step memory table build.,Used Planner Idea 2 (welcome sign) but expanded to three sizes — a new angle not yet covered.,Used Planner Idea 3 (memory cards) but tied to Thanksgiving/holiday timing per Seasonal Planner — timely and evergreen.,Addressed my own note from last week: carousel-ready welcome sign sizes and desktop photo workflow (not phone).,Skipped Planner Idea 4 (home printing) and Idea 5 (bundle overview) to avoid overlap with recent posts and competitor-heavy 'how to print' content.,Next week: consider a pin on 'what to write in a memory card' (SEO: funeral memory card wording) and a story on folding the 11x8.5 program to 5.5x8.5 booklet.
+Created 2 pins (welcome sign placement, holiday memory cards) and 2 stories (phone personalization, folding program) with fresh angles not in recent headlines,Used Planner Idea 2 (welcome sign) but focused on placement/entrance rather than sizing — new angle,Used Planner Idea 3 (memory cards) but tied to holiday table use per Seasonal Planner — timely and distinct from previous Thanksgiving post,Addressed my own note from last week: folding the 11x8.5 program to 5.5x8.5 booklet as a story,Skipped Planner Idea 1 (before/after) and Idea 4 (home printing) to avoid overlap with competitor-heavy content and recent posts,Next week: consider a pin on 'what to write in a memory card' (SEO: funeral memory card wording) and a story on adding photos on desktop
 
 ## Requests for the SEO Scout
-What long-tail phrases do people use when searching 'funeral welcome sign 24x36' vs 'celebration of life sign 16x24'?,Are there rising searches for 'holiday grief memory cards' or 'Thanksgiving memorial place cards' in November?,What questions appear in People Also Ask for 'how to add photo to fillable PDF' or 'print PDF at Staples'?
+What long-tail phrases do people use when searching 'funeral welcome sign placement' or 'where to put welcome sign at celebration of life'?,Are there rising searches for 'holiday grief memory cards' or 'Thanksgiving memorial place cards' in November?,What questions appear in People Also Ask for 'how to fold funeral program' or 'print funeral program double sided'?
 
 ## For the owner to decide
-Approve using PEACE25 discount code in captions and video scripts (25% off $12.99 kit).,Confirm Thanksgiving-themed pin is appropriate for brand tone (grief support, not promotional).,Decide if we should create a dedicated 'Holiday Remembrance' board on Pinterest for seasonal pins.
+Approve using PEACE25 discount code in captions (currently not mentioned in these posts but available for holiday push),Confirm if we should create a dedicated 'Blue Christmas / Longest Night' pin for Dec 21 per Seasonal Planner (needs 30-day lead time)
