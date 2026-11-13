@@ -193,3 +193,7 @@ if (process.env.APIFY_TOKEN) {
     console.log(`RESULT apify: WORKS. Plan: ${me.data.plan?.id || "?"}; used this month: $${used ?? "?"} of $${max ?? "?"}`);
   } catch (e) { console.log(`RESULT apify: FAILED: ${e.message}`); process.exitCode = 1; }
 } else console.log("RESULT apify: no key found (secret APIFY_TOKEN missing or empty)");
+
+// Shared "out for today" notes (ai-out.mjs)
+{ const { aiOutStatus } = await import("../ai-out.mjs"); const st = await aiOutStatus();
+  console.log(`RESULT ai-out notes: ${st.store ? "store OK" : "NO STORE (" + st.problem + ")"}; ${st.notes.length ? st.notes.join("; ") : "no AI noted as out"}`); }

@@ -8,7 +8,8 @@ const TOK = () => process.env.CLOUDFLARE_API_TOKEN?.trim();
 const KV = () => `https://api.cloudflare.com/client/v4/accounts/${ACC()}/storage/kv/namespaces`;
 const H = () => ({ Authorization: `Bearer ${TOK()}` });
 const NS_TITLE = "foreverheld-sales";
-let ns, notes, told = new Set();
+let ns, notes, lastProblem = "", told = new Set();
+export async function aiOutStatus() { const n = await load(); return { store: Boolean(await nsId()), problem: lastProblem, notes: [...n].map(([k, t]) => `${k} until ${new Date(t).toISOString()}`) }; }
 
 async function nsId() {
   if (ns !== undefined) return ns;
@@ -16,7 +17,8 @@ async function nsId() {
   try {
     const j = await (await fetch(`${KV()}?per_page=100`, { headers: H(), signal: AbortSignal.timeout(10000) })).json();
     ns = (j.result || []).find((n) => n.title === NS_TITLE)?.id || null;
-  } catch {}
+    if (!ns) lastProblem = j.success === false ? `KV: ${j.errors?.[0]?.message || "not allowed"}` : `KV store "${NS_TITLE}" not found`;
+  } catch (e) { lastProblem = `KV: ${e.message}`; }
   return ns;
 }
 
