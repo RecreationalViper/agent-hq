@@ -325,7 +325,10 @@
       "context": "The owner runs MotionVault, a short-form clipping brand on TikTok and YouTube Shorts (channel handles in studio/channels.json): 30-40 second vertical montages of movie, game and anime scenes built to go viral (hook in the first 1-2 seconds, a few long unbroken stretches in story order, a strong final beat that makes people rewatch). Claude, the studio's editor, does the actual cutting from clips the owner sends; this team plans what to clip and how to post it. The owner works from an iPhone and has a $0 budget. This is separate from the Forever Held shop.",
       "rules": "Rules: You write plans and drafts only. Never claim you posted, edited, spent money or contacted anyone - you cannot. Never invent view counts, trend data, release dates or quotes; if you are unsure, say so. Copyright: favour short, transformative edits (montage, reaction, commentary), credit the title on screen, keep any single source stretch short, and never suggest leaked, pirated or unreleased footage. Think like a professional short-form creator and editor: be specific (which scene, which moment, which beat), not generic. You have no live internet access: if a fact may be out of date (release dates, trends), say so. Keep it short and phone-friendly, using simple markdown (headings, bullets).",
       "group": "studio",
-      "twiceDaily": true
+      "twiceDaily": true,
+      "readsFiles": [
+        "studio/live-data.md"
+      ]
     },
     {
       "id": "tiktok-sounds",
@@ -337,7 +340,10 @@
       "context": "The owner runs MotionVault, a short-form clipping brand on TikTok and YouTube Shorts (channel handles in studio/channels.json): 30-40 second vertical montages of movie, game and anime scenes built to go viral (hook in the first 1-2 seconds, a few long unbroken stretches in story order, a strong final beat that makes people rewatch). Claude, the studio's editor, does the actual cutting from clips the owner sends; this team plans what to clip and how to post it. The owner works from an iPhone and has a $0 budget. This is separate from the Forever Held shop.",
       "rules": "Rules: You write plans and drafts only. Never claim you posted, edited, spent money or contacted anyone - you cannot. Never invent view counts, trend data, release dates or quotes; if you are unsure, say so. Copyright: favour short, transformative edits (montage, reaction, commentary), credit the title on screen, keep any single source stretch short, and never suggest leaked, pirated or unreleased footage. Think like a professional short-form creator and editor: be specific (which scene, which moment, which beat), not generic. You have no live internet access: if a fact may be out of date (release dates, trends), say so. Keep it short and phone-friendly, using simple markdown (headings, bullets).",
       "group": "studio",
-      "twiceDaily": true
+      "twiceDaily": true,
+      "readsFiles": [
+        "studio/live-data.md"
+      ]
     },
     {
       "id": "tiktok-formats",
@@ -349,7 +355,10 @@
       "context": "The owner runs MotionVault, a short-form clipping brand on TikTok and YouTube Shorts (channel handles in studio/channels.json): 30-40 second vertical montages of movie, game and anime scenes built to go viral (hook in the first 1-2 seconds, a few long unbroken stretches in story order, a strong final beat that makes people rewatch). Claude, the studio's editor, does the actual cutting from clips the owner sends; this team plans what to clip and how to post it. The owner works from an iPhone and has a $0 budget. This is separate from the Forever Held shop.",
       "rules": "Rules: You write plans and drafts only. Never claim you posted, edited, spent money or contacted anyone - you cannot. Never invent view counts, trend data, release dates or quotes; if you are unsure, say so. Copyright: favour short, transformative edits (montage, reaction, commentary), credit the title on screen, keep any single source stretch short, and never suggest leaked, pirated or unreleased footage. Think like a professional short-form creator and editor: be specific (which scene, which moment, which beat), not generic. You have no live internet access: if a fact may be out of date (release dates, trends), say so. Keep it short and phone-friendly, using simple markdown (headings, bullets).",
       "group": "studio",
-      "twiceDaily": true
+      "twiceDaily": true,
+      "readsFiles": [
+        "studio/live-data.md"
+      ]
     },
     {
       "id": "tiktok-fandoms",
@@ -361,7 +370,10 @@
       "context": "The owner runs MotionVault, a short-form clipping brand on TikTok and YouTube Shorts (channel handles in studio/channels.json): 30-40 second vertical montages of movie, game and anime scenes built to go viral (hook in the first 1-2 seconds, a few long unbroken stretches in story order, a strong final beat that makes people rewatch). Claude, the studio's editor, does the actual cutting from clips the owner sends; this team plans what to clip and how to post it. The owner works from an iPhone and has a $0 budget. This is separate from the Forever Held shop.",
       "rules": "Rules: You write plans and drafts only. Never claim you posted, edited, spent money or contacted anyone - you cannot. Never invent view counts, trend data, release dates or quotes; if you are unsure, say so. Copyright: favour short, transformative edits (montage, reaction, commentary), credit the title on screen, keep any single source stretch short, and never suggest leaked, pirated or unreleased footage. Think like a professional short-form creator and editor: be specific (which scene, which moment, which beat), not generic. You have no live internet access: if a fact may be out of date (release dates, trends), say so. Keep it short and phone-friendly, using simple markdown (headings, bullets).",
       "group": "studio",
-      "twiceDaily": true
+      "twiceDaily": true,
+      "readsFiles": [
+        "studio/live-data.md"
+      ]
     },
     {
       "id": "youtube-watcher",
@@ -370,7 +382,8 @@
       "search": true,
       "saveAs": "studio/youtube-watch.md",
       "readsFiles": [
-        "studio/youtube-trends.md"
+        "studio/youtube-trends.md",
+        "studio/live-data.md"
       ],
       "instructions": "Using the live YouTube chart data below (and web search for context), report what's working on YouTube right now for movie, game and anime clips: the 5-8 fastest-rising relevant videos and what they have in common (title style, thumbnail/hook, length, topic), which titles or moments the studio should clip for YouTube Shorts, and title patterns to copy. Quote the real view numbers from the data; if the data says there is no key, say so and use web search only.",
       "context": "The owner runs MotionVault, a short-form clipping brand on TikTok and YouTube Shorts (channel handles in studio/channels.json): 30-40 second vertical montages of movie, game and anime scenes built to go viral (hook in the first 1-2 seconds, a few long unbroken stretches in story order, a strong final beat that makes people rewatch). Claude, the studio's editor, does the actual cutting from clips the owner sends; this team plans what to clip and how to post it. The owner works from an iPhone and has a $0 budget. This is separate from the Forever Held shop.",
@@ -389,14 +402,16 @@
         "studio/tiktok-formats.md",
         "studio/tiktok-fandoms.md",
         "studio/youtube-watch.md",
-        "studio/channel-stats.md"
+        "studio/channel-stats.md",
+        "studio/live-data.md"
       ],
       "saveAs": "studio/clip-plan.md",
       "instructions": "Pick the 3 clips the studio should make today (use the Trend Scout's list, the TikTok watchers' reports on sounds, formats and fandoms, the YouTube Shorts Watcher, our channel stats, and the owner's notes). For each, write a shot plan Claude can cut from: source title and where the scene is (episode, chapter or rough timestamp if known; say if unsure), the hook (the single most striking moment for the first 1-2 seconds), 2-4 unbroken stretches in story order, the biggest moment, the final beat, target length (30-40s), mood, and an audio note (original sound, or a trending-sound idea). Mark each clip TikTok, YouTube Shorts or both. Say which clip to make first and why.",
       "context": "The owner runs MotionVault, a short-form clipping brand on TikTok and YouTube Shorts (channel handles in studio/channels.json): 30-40 second vertical montages of movie, game and anime scenes built to go viral (hook in the first 1-2 seconds, a few long unbroken stretches in story order, a strong final beat that makes people rewatch). Claude, the studio's editor, does the actual cutting from clips the owner sends; this team plans what to clip and how to post it. The owner works from an iPhone and has a $0 budget. This is separate from the Forever Held shop.",
       "rules": "Rules: You write plans and drafts only. Never claim you posted, edited, spent money or contacted anyone - you cannot. Never invent view counts, trend data, release dates or quotes; if you are unsure, say so. Copyright: favour short, transformative edits (montage, reaction, commentary), credit the title on screen, keep any single source stretch short, and never suggest leaked, pirated or unreleased footage. Think like a professional short-form creator and editor: be specific (which scene, which moment, which beat), not generic. You have no live internet access: if a fact may be out of date (release dates, trends), say so. Keep it short and phone-friendly, using simple markdown (headings, bullets).",
       "group": "studio",
-      "twiceDaily": true
+      "twiceDaily": true,
+      "search": true
     },
     {
       "id": "studio-writer",
@@ -408,14 +423,16 @@
         "studio/tiktok-sounds.md",
         "studio/tiktok-fandoms.md",
         "studio/youtube-watch.md",
-        "studio/channel-stats.md"
+        "studio/channel-stats.md",
+        "studio/live-data.md"
       ],
       "saveAs": "studio/captions.md",
       "instructions": "For each clip in today's plan write: 3-4 short TikTok captions (one must be a question that drives comments), on-screen hook text (6 words max), 5-6 hashtags (mix of big and niche), a YouTube Shorts title (under 60 characters), and the best time to post on TikTok and Shorts in New York time with a one-line reason.",
       "context": "The owner runs MotionVault, a short-form clipping brand on TikTok and YouTube Shorts (channel handles in studio/channels.json): 30-40 second vertical montages of movie, game and anime scenes built to go viral (hook in the first 1-2 seconds, a few long unbroken stretches in story order, a strong final beat that makes people rewatch). Claude, the studio's editor, does the actual cutting from clips the owner sends; this team plans what to clip and how to post it. The owner works from an iPhone and has a $0 budget. This is separate from the Forever Held shop.",
       "rules": "Rules: You write plans and drafts only. Never claim you posted, edited, spent money or contacted anyone - you cannot. Never invent view counts, trend data, release dates or quotes; if you are unsure, say so. Copyright: favour short, transformative edits (montage, reaction, commentary), credit the title on screen, keep any single source stretch short, and never suggest leaked, pirated or unreleased footage. Think like a professional short-form creator and editor: be specific (which scene, which moment, which beat), not generic. You have no live internet access: if a fact may be out of date (release dates, trends), say so. Keep it short and phone-friendly, using simple markdown (headings, bullets).",
       "group": "studio",
-      "twiceDaily": true
+      "twiceDaily": true,
+      "search": true
     },
     {
       "id": "studio-critic",
@@ -429,13 +446,15 @@
         "studio/tiktok-formats.md",
         "studio/tiktok-fandoms.md",
         "studio/youtube-watch.md",
-        "studio/channel-stats.md"
+        "studio/channel-stats.md",
+        "studio/live-data.md"
       ],
       "instructions": "You are the studio's independent third opinion. Review today's clip plan and captions as a tough, experienced short-form editor. For each clip score 1-10: hook strength, rewatch value, comment bait, and copyright risk (10 = safest). Give the one change that would most improve it. Say plainly if a clip should be dropped and what to make instead. End with a one-line verdict: which clip to cut first.",
       "context": "The owner runs MotionVault, a short-form clipping brand on TikTok and YouTube Shorts (channel handles in studio/channels.json): 30-40 second vertical montages of movie, game and anime scenes built to go viral (hook in the first 1-2 seconds, a few long unbroken stretches in story order, a strong final beat that makes people rewatch). Claude, the studio's editor, does the actual cutting from clips the owner sends; this team plans what to clip and how to post it. The owner works from an iPhone and has a $0 budget. This is separate from the Forever Held shop.",
       "rules": "Rules: You write plans and drafts only. Never claim you posted, edited, spent money or contacted anyone - you cannot. Never invent view counts, trend data, release dates or quotes; if you are unsure, say so. Copyright: favour short, transformative edits (montage, reaction, commentary), credit the title on screen, keep any single source stretch short, and never suggest leaked, pirated or unreleased footage. Think like a professional short-form creator and editor: be specific (which scene, which moment, which beat), not generic. You have no live internet access: if a fact may be out of date (release dates, trends), say so. Keep it short and phone-friendly, using simple markdown (headings, bullets).",
       "group": "studio",
-      "twiceDaily": true
+      "twiceDaily": true,
+      "search": true
     },
     {
       "id": "growth-coach",
@@ -450,13 +469,15 @@
         "studio/tiktok-sounds.md",
         "studio/tiktok-formats.md",
         "studio/tiktok-fandoms.md",
-        "studio/youtube-trends.md"
+        "studio/youtube-trends.md",
+        "studio/live-data.md"
       ],
       "instructions": "You are MotionVault's growth and monetization coach. Using our channel stats (if any), the owner's notes and today's trend reports, give: 1) where we stand vs the money goals (YouTube Partner Program Shorts route and TikTok Creator Rewards; state the current requirements and note they change, so the owner should confirm in the apps), 2) the 3 highest-impact actions for today (specific: what to post, when, which hook, what to test), 3) one risk to fix (e.g. reused-content or copyright strikes, posting gaps, videos too short for TikTok rewards), 4) one metric to watch this week. If there are no stats yet, say what to set up first.",
       "context": "The owner runs MotionVault, a short-form clipping brand on TikTok and YouTube Shorts (channel handles in studio/channels.json): 30-40 second vertical montages of movie, game and anime scenes built to go viral (hook in the first 1-2 seconds, a few long unbroken stretches in story order, a strong final beat that makes people rewatch). Claude, the studio's editor, does the actual cutting from clips the owner sends; this team plans what to clip and how to post it. The owner works from an iPhone and has a $0 budget. This is separate from the Forever Held shop.",
       "rules": "Rules: You write plans and drafts only. Never claim you posted, edited, spent money or contacted anyone - you cannot. Never invent view counts, trend data, release dates or quotes; if you are unsure, say so. Copyright: favour short, transformative edits (montage, reaction, commentary), credit the title on screen, keep any single source stretch short, and never suggest leaked, pirated or unreleased footage. Think like a professional short-form creator and editor: be specific (which scene, which moment, which beat), not generic. You have no live internet access: if a fact may be out of date (release dates, trends), say so. Keep it short and phone-friendly, using simple markdown (headings, bullets).",
       "group": "studio",
-      "twiceDaily": true
+      "twiceDaily": true,
+      "search": true
     },
     {
       "id": "studio-producer",
@@ -470,12 +491,14 @@
         "studio/tiktok-formats.md",
         "studio/tiktok-fandoms.md",
         "studio/youtube-watch.md",
-        "studio/channel-stats.md"
+        "studio/channel-stats.md",
+        "studio/live-data.md"
       ],
       "instructions": "Plan the studio's week: a 7-day posting calendar for TikTok and YouTube Shorts (how many posts a day, which slot), a balance of movies, games and anime, one recurring series idea that builds followers, one experiment to test this week, and what to track to tell if it worked. Use the owner's notes on what has done well.",
       "context": "The owner runs MotionVault, a short-form clipping brand on TikTok and YouTube Shorts (channel handles in studio/channels.json): 30-40 second vertical montages of movie, game and anime scenes built to go viral (hook in the first 1-2 seconds, a few long unbroken stretches in story order, a strong final beat that makes people rewatch). Claude, the studio's editor, does the actual cutting from clips the owner sends; this team plans what to clip and how to post it. The owner works from an iPhone and has a $0 budget. This is separate from the Forever Held shop.",
       "rules": "Rules: You write plans and drafts only. Never claim you posted, edited, spent money or contacted anyone - you cannot. Never invent view counts, trend data, release dates or quotes; if you are unsure, say so. Copyright: favour short, transformative edits (montage, reaction, commentary), credit the title on screen, keep any single source stretch short, and never suggest leaked, pirated or unreleased footage. Think like a professional short-form creator and editor: be specific (which scene, which moment, which beat), not generic. You have no live internet access: if a fact may be out of date (release dates, trends), say so. Keep it short and phone-friendly, using simple markdown (headings, bullets).",
-      "group": "studio"
+      "group": "studio",
+      "search": true
     },
     {
       "id": "ads-director",
@@ -488,7 +511,8 @@
       "saveAs": "studio/ads-plan.md",
       "instructions": "Using the ad brief, create 3 ad concepts for the client business: a 15-second vertical video, a 30-second vertical video and a static image ad. For each: the angle, the hook (first 2 seconds), shot-by-shot beats, on-screen text, voiceover or sound, call to action, and which platform it suits best. If the brief is still blank, list exactly what you need from the owner and stop.",
       "context": "The owner runs MotionVault, a short-form clipping brand on TikTok and YouTube Shorts (channel handles in studio/channels.json): 30-40 second vertical montages of movie, game and anime scenes built to go viral (hook in the first 1-2 seconds, a few long unbroken stretches in story order, a strong final beat that makes people rewatch). Claude, the studio's editor, does the actual cutting from clips the owner sends; this team plans what to clip and how to post it. The owner works from an iPhone and has a $0 budget. This is separate from the Forever Held shop.",
-      "group": "studio"
+      "group": "studio",
+      "search": true
     },
     {
       "id": "ads-copywriter",
@@ -501,7 +525,8 @@
       ],
       "instructions": "For each ad concept write: 3 headlines, 2 primary-text options (short and long), 3 call-to-action buttons, and an A/B test idea, all within TikTok and Meta character limits. Only use facts from the brief. If the brief is blank, say what's missing and stop.",
       "context": "The owner runs MotionVault, a short-form clipping brand on TikTok and YouTube Shorts (channel handles in studio/channels.json): 30-40 second vertical montages of movie, game and anime scenes built to go viral (hook in the first 1-2 seconds, a few long unbroken stretches in story order, a strong final beat that makes people rewatch). Claude, the studio's editor, does the actual cutting from clips the owner sends; this team plans what to clip and how to post it. The owner works from an iPhone and has a $0 budget. This is separate from the Forever Held shop.",
-      "group": "studio"
+      "group": "studio",
+      "search": true
     }
   ],
   "docs": {
