@@ -21,12 +21,14 @@ export const CHANNELS = {
   inbox: ["inbox", "Email team: Junk Sweeper results and Customer Care reply drafts"],
   "studio-trends": ["studio-trends", "Studio: Trend Scout's daily clip opportunities (movies, games, anime)", "studio"],
   "tiktok-trends": ["tiktok-trends", "TikTok Sound, Format and Fandom Watchers: what's rising on TikTok right now", "studio"],
+  "youtube-trends": ["youtube-trends", "YouTube Shorts Watcher: live YouTube chart data and what to clip for Shorts", "studio"],
+  growth: ["growth", "Growth Coach: channel stats, monetization progress and today's top actions", "studio"],
   studio: ["studio", "Studio: Director's clip plans, Social Strategist captions, Studio Critic reviews, Producer's weekly plan", "studio"],
   "ads-studio": ["ads-studio", "Ads Studio: Ad Creative Director concepts and Ad Copywriter copy", "studio"],
   alerts: ["alerts", "Anything that failed or needs your attention"]
 };
 // Which channel each agent reports to
-export const AGENT_CHANNEL = { "daily-task": "daily-focus", content: "content", ideas: "product-ideas", listing: "listings", review: "weekly-review", "credit-scout": "research", "github-radar": "research", researcher: "research", "trading-desk": "trading-desk", "head-trader": "trading-desk", backtest: "trading-desk", launch: "listings", seo: "seo", "competitor-scout": "competitors", "partner-finder": "competitors", "content-creator": "content", webdev: "content", seasonal: "content", "email-marketer": "content", "product-builder": "product-ideas", bookkeeper: "sales", "customer-care": "sales", "studio-scout": "studio-trends", "tiktok-sounds": "tiktok-trends", "tiktok-formats": "tiktok-trends", "tiktok-fandoms": "tiktok-trends", "studio-director": "studio", "studio-writer": "studio", "studio-critic": "studio", "studio-producer": "studio", "ads-director": "ads-studio", "ads-copywriter": "ads-studio" };
+export const AGENT_CHANNEL = { "daily-task": "daily-focus", content: "content", ideas: "product-ideas", listing: "listings", review: "weekly-review", "credit-scout": "research", "github-radar": "research", researcher: "research", "trading-desk": "trading-desk", "head-trader": "trading-desk", backtest: "trading-desk", launch: "listings", seo: "seo", "competitor-scout": "competitors", "partner-finder": "competitors", "content-creator": "content", webdev: "content", seasonal: "content", "email-marketer": "content", "product-builder": "product-ideas", bookkeeper: "sales", "customer-care": "sales", "studio-scout": "studio-trends", "tiktok-sounds": "tiktok-trends", "tiktok-formats": "tiktok-trends", "tiktok-fandoms": "tiktok-trends", "youtube-watcher": "youtube-trends", "growth-coach": "growth", "studio-director": "studio", "studio-writer": "studio", "studio-critic": "studio", "studio-producer": "studio", "ads-director": "ads-studio", "ads-copywriter": "ads-studio" };
 
 export const hasDiscord = () => Boolean(process.env.DISCORD_BOT_TOKEN);
 
