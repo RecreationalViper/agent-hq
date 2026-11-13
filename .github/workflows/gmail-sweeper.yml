@@ -75,6 +75,6 @@ jobs:
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY || secrets.NVIDIA_KEY || secrets.NVIDIA_NIM_API_KEY || secrets.NIM_API_KEY || secrets.NGC_API_KEY || secrets.NVIDIA }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
-          GMAIL_SHOP_REFRESH_TOKEN: ${{ secrets.GMAIL_SHOP_REFRESH_TOKEN }}
+          GMAIL_SHOP_REFRESH_TOKEN: "" # PAUSED Nov 13, 2026 (Google flagged the shop Gmail); was secrets.GMAIL_SHOP_REFRESH_TOKEN
           GMAIL_SHOP_CLIENT_ID: ${{ secrets.GMAIL_SHOP_CLIENT_ID }}
           GMAIL_SHOP_CLIENT_SECRET: ${{ secrets.GMAIL_SHOP_CLIENT_SECRET }}

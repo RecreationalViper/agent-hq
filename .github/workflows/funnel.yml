@@ -1,8 +1,9 @@
 name: Email Funnel
 # Welcome series for new checklist subscribers (day 1, 3, 7) from the shop Gmail. Off until FUNNEL_MAILING_ADDRESS is saved.
 on:
-  schedule:
-    - cron: "23 */3 * * *" # every 3 hours
+  # PAUSED Nov 13, 2026: Google flagged the shop Gmail for suspicious activity. Manual runs only until it is cleared.
+  # schedule:
+  #   - cron: "23 */3 * * *" # every 3 hours
   push:
     branches: [main]
     paths: [email/test-request.txt] # change this file to send a [Test] copy of every step to the list (3 people max)
@@ -30,7 +31,7 @@ jobs:
           EMAILOCTOPUS_API_KEY: ${{ secrets.EMAILOCTOPUS_API_KEY }}
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
           FUNNEL_MAILING_ADDRESS: ${{ secrets.FUNNEL_MAILING_ADDRESS }}
-          GMAIL_SHOP_REFRESH_TOKEN: ${{ secrets.GMAIL_SHOP_REFRESH_TOKEN }}
+          GMAIL_SHOP_REFRESH_TOKEN: "" # PAUSED Nov 13, 2026 (Google flagged the shop Gmail); was secrets.GMAIL_SHOP_REFRESH_TOKEN
           GMAIL_SHOP_CLIENT_ID: ${{ secrets.GMAIL_SHOP_CLIENT_ID }}
           GMAIL_SHOP_CLIENT_SECRET: ${{ secrets.GMAIL_SHOP_CLIENT_SECRET }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
