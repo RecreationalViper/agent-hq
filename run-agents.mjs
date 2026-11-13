@@ -174,7 +174,8 @@ async function main() {
     }
     if (agent.reads) task += `\n\nThis week's team reports:${await weekOfReports(index, date, new Set(cfg.agents.filter((a) => a.context).map((a) => a.id)))}`;
     // Agents with "search": true can use Google Search (free on Gemini) and must cite sources.
-    const rules = search ? RULES.replace(/You have no live internet access:[^.]*\./, "You can search the web with Google Search: use it, prefer official sources, include the link for every claim, and say when something could not be confirmed.") : RULES;
+    const baseRules = agent.rules || RULES;
+    const rules = search ? baseRules.replace(/You have no live internet access:[^.]*\./, "You can search the web with Google Search: use it, prefer official sources, include the link for every claim, and say when something could not be confirmed.") : baseRules;
     const system = `You are "${agent.name}", an agent on a small AI team.\n\nContext: ${agent.context || cfg.context}\n\n${rules}`;
     const body = JSON.stringify({
       systemInstruction: { parts: [{ text: system }] },
