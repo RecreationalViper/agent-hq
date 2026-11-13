@@ -44,7 +44,7 @@ export function outKey(url, init) {
     if (/openrouter\.ai|\/openrouter\//.test(url)) return "OpenRouter";
     if (/requesty\.ai/.test(url)) return "Requesty";
   }
-  if (/api\.cloudflare\.com\/client\/v4\/accounts\/[^/]+\/ai\/run\//.test(url) && !/flux|lucid|stable-diffusion|phoenix|image/i.test(url)) return "Cloudflare";
+  if (/api\.cloudflare\.com\/client\/v4\/accounts\/[^/]+\/ai\/(run\/|v1\/chat\/completions)/.test(url) && !/flux|lucid|stable-diffusion|phoenix|image/i.test(url)) return "Cloudflare";
   return null;
 }
 
