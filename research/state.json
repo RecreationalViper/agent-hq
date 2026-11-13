@@ -1,5 +1,18 @@
 {
   "covered": [
+    "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+    "https://pasqualepillitteri.it/en/news/32984/baidu-releases-ernie-55-flash-preview-free-openrouter",
+    "https://aivionews.com/models/edge0-open-sources-145-billion-parameter-ai-model-built-to-run-on-a/",
+    "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+    "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/",
+    "https://openai.com/index/introducing-chatgpt-wallet",
+    "https://aws.amazon.com/blogs/machine-learning/tokenomics-at-scale-track-and-cap-amazon-bedrock-spend-per-iam-principal-with-cur-2-0-and-aws-budgets/",
+    "https://status.claude.com/incidents/nn11wk485zfn",
+    "https://status.cloud.microsoft/",
+    "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
+    "https://arxiv.org/abs/2611.17316v1",
+    "https://arxiv.org/abs/2611.17309v1",
+    "https://arxiv.org/abs/2611.17294v1",
     "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
     "https://www.siliconreport.com/tether-unveils-botpsy-an-800m-parameter-on-device-ai-agent",
     "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
@@ -61,6 +74,6 @@
     "https://hunch.net/?p=13764006",
     "https://www.kadoa.com/companies/insights/ai-selloff-perspective"
   ],
-  "lastRun": "2026-11-12",
-  "lastNotion": "2026-11-12"
+  "lastRun": "2026-11-13",
+  "lastNotion": "2026-11-13"
 }
