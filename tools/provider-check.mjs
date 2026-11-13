@@ -94,6 +94,17 @@ if (process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID) {
   }
 } else console.log(`RESULT cloudflare: missing ${!process.env.CLOUDFLARE_API_TOKEN ? "CLOUDFLARE_API_TOKEN " : ""}${!process.env.CLOUDFLARE_ACCOUNT_ID ? "CLOUDFLARE_ACCOUNT_ID" : ""}`);
 
+// Requesty check (free models only)
+if (process.env.REQUESTY_API_KEY || process.env.REQUESTY_KEY) {
+  const { requestyModels, requestyChat } = await import("../ai-fallback.mjs");
+  try {
+    const ms = await requestyModels();
+    console.log(`requesty: ${ms.length} free of ${ms.total} models, top picks: ${ms.slice(0, 5).join(", ")}`);
+    const t = await requestyChat("You are a test agent.", "Return JSON: {\"status\":\"ready\"}", { json: true, temperature: 0 });
+    console.log(`RESULT requesty: WORKS (free model), reply ${t.replace(/\s+/g, " ").replace(/[{}]/g, "").slice(0, 60)}`);
+  } catch (e) { console.log(`RESULT requesty: FAILED: ${e.message}`); process.exitCode = 1; }
+} else console.log("RESULT requesty: no key found (secret REQUESTY_API_KEY missing or empty)");
+
 // OpenRouter check (free models only)
 if (process.env.OPENROUTER_API_KEY) {
   const { openRouterModels, openRouterChat } = await import("../ai-fallback.mjs");

@@ -14,7 +14,7 @@ export const hasGroqKey = () => Boolean(process.env.GROQ_API_KEY);
 export const hasCloudflare = () => Boolean(process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID);
 // Any backup available? (Groq first, then Cloudflare Workers AI)
 export const hasOpenRouter = () => Boolean(process.env.OPENROUTER_API_KEY);
-export const hasGroq = () => hasGroqKey() || hasCloudflare() || hasOpenRouter() || Boolean(process.env.NVIDIA_API_KEY?.trim());
+export const hasGroq = () => hasGroqKey() || hasCloudflare() || hasOpenRouter() || Boolean(process.env.NVIDIA_API_KEY?.trim()) || Boolean((process.env.REQUESTY_API_KEY || process.env.REQUESTY_KEY || "").trim());
 
 async function call(path, init = {}) {
   const res = await gwFetch(BASE + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${process.env.GROQ_API_KEY}`, "Content-Type": "application/json" } });
@@ -143,6 +143,54 @@ export async function openRouterChat(system, user, { json = false, temperature =
   throw lastErr || new Error("OpenRouter could not answer");
 }
 
+// ---------- Requesty (requesty.ai router; OpenAI-compatible). FREE models only: 200 free requests/day ----------
+// Secret: REQUESTY_API_KEY (REQUESTY_KEY also accepted). Paid models are never called, so free credits aren't spent.
+const RQ = "https://router.requesty.ai/v1";
+const rqKey = () => (process.env.REQUESTY_API_KEY || process.env.REQUESTY_KEY || "").trim();
+export const hasRequesty = () => Boolean(rqKey());
+const RQ_PREFER = [/gpt-oss-120b/i, /deepseek.*(v3|chat|r1)/i, /qwen3/i, /llama-3\.3-70b/i, /llama-4/i, /gemini.*flash/i, /mistral/i, /gemma/i];
+let rqModels;
+async function rqCall(path, init = {}) {
+  const res = await fetch(RQ + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${rqKey()}`, "Content-Type": "application/json", "HTTP-Referer": "https://foreverheld.pages.dev", "X-Title": "Agent HQ" } });
+  await trackResponse(RQ + path, init, res);
+  const text = await res.text();
+  let data; try { data = JSON.parse(text); } catch { data = {}; }
+  if (!res.ok || data.error) { const e = new Error(`Requesty ${res.status}: ${data.error?.message || text.slice(0, 200)}`); e.status = res.status; throw e; }
+  return data;
+}
+// A model counts as free only if every price field it lists is 0 (or its id is marked free); unknown pricing = not free.
+const priceOf = (m) => [m.pricing?.prompt, m.pricing?.completion, m.input_price, m.output_price, m.price?.input, m.price?.output, m.input_cost_per_token, m.output_cost_per_token].filter((v) => v !== undefined && v !== null && v !== "");
+export const isFreeRq = (m) => { const p = priceOf(m); return (p.length > 0 && p.every((v) => Number(v) === 0)) || /(:|\/|-)free\b/i.test(m.id || ""); };
+export async function requestyModels() {
+  if (rqModels) return rqModels;
+  const data = await rqCall("/models");
+  const all = data.data || data.models || [];
+  const free = all.filter((m) => isFreeRq(m) && !/vision|image|embed|guard|whisper|tts|speech|transcri/i.test(m.id));
+  const rank = (i) => { const k = RQ_PREFER.findIndex((r) => r.test(i)); return k < 0 ? 99 : k; };
+  const size = (i) => { const n = [...i.matchAll(/(\d+(?:\.\d+)?)b(?![a-z])/gi)].map((m) => Number(m[1])); return n.length ? Math.max(...n) : /super|large|ultra|pro/i.test(i) ? 60 : /mini|small|lite|nano/i.test(i) ? 5 : 20; };
+  rqModels = free.map((m) => m.id).sort((a, b) => rank(a) - rank(b) || size(b) - size(a));
+  rqModels.total = all.length;
+  if (!rqModels.length) throw new Error(`Requesty lists ${all.length} models but none are marked free.`);
+  return rqModels;
+}
+export async function requestyChat(system, user, { json = false, temperature = 0.7, maxChars = 24000 } = {}) {
+  const input = user.length > maxChars ? user.slice(0, maxChars) + "\n\n[Some input was trimmed to fit the backup AI's limits.]" : user;
+  let lastErr;
+  for (const model of (await requestyModels()).slice(0, 3)) {
+    try {
+      const data = await rqCall("/chat/completions", { method: "POST", body: JSON.stringify({
+        model, temperature, max_tokens: 2500,
+        messages: [{ role: "system", content: system + (json ? "\nReply with valid JSON only." : "") }, { role: "user", content: input }]
+      }) });
+      const text = (data.choices?.[0]?.message?.content || "").replace(/<think>[\s\S]*?<\/think>/g, "").replace(/^```(?:json)?\s*|\s*```$/g, "").trim();
+      if (!text) throw new Error("Requesty returned an empty reply");
+      console.log(`  answered by backup AI: Requesty ${model}`);
+      return text;
+    } catch (e) { lastErr = e; if (e.status === 401 || e.status === 402 || e.status === 429) break; }
+  }
+  throw lastErr || new Error("Requesty could not answer");
+}
+
 // ---------- NVIDIA (build.nvidia.com hosted models, free developer access; OpenAI-compatible) ----------
 const NV = "https://integrate.api.nvidia.com/v1";
 const nvKey = () => process.env.NVIDIA_API_KEY?.trim();
@@ -187,12 +235,12 @@ export async function nvidiaChat(system, user, { json = false, temperature = 0.7
   throw lastErr || new Error("NVIDIA could not answer");
 }
 
-// Backup chain used by every agent: Groq, then NVIDIA, then Cloudflare, then OpenRouter (free models only).
+// Backup chain used by every agent: Groq, then NVIDIA, then Cloudflare, then Requesty, then OpenRouter (free models only).
 // A provider whose daily free allowance is used up is skipped for the rest of the run (allowances reset daily).
 const usedUp = new Set();
 const DAILY = /per day|daily|RPD|TPD|requests per day|tokens per day|quota|neurons|credits|insufficient/i;
 export async function groqChat(system, user, opts = {}) {
-  let chain = [["Groq", hasGroqKey, groqOnly], ["NVIDIA", hasNvidia, nvidiaChat], ["Cloudflare", hasCloudflare, cloudflareChat], ["OpenRouter", hasOpenRouter, openRouterChat]].filter(([, has]) => has());
+  let chain = [["Groq", hasGroqKey, groqOnly], ["NVIDIA", hasNvidia, nvidiaChat], ["Cloudflare", hasCloudflare, cloudflareChat], ["Requesty", hasRequesty, requestyChat], ["OpenRouter", hasOpenRouter, openRouterChat]].filter(([, has]) => has());
   // strong mode (Content Creator): NVIDIA's largest models before Groq's faster, smaller one
   if (opts.strong) chain = [...chain.filter(([n]) => n === "NVIDIA"), ...chain.filter(([n]) => n !== "NVIDIA")];
   chain = chain.filter(([n]) => !usedUp.has(n)).concat(chain.filter(([n]) => usedUp.has(n))); // used-up providers go last

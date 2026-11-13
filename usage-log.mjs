@@ -10,6 +10,7 @@ const tally = {};
 let hooked = false, flushed = false;
 
 const PROVIDERS = [
+  [/requesty\.ai/, "Requesty"],
   [/generativelanguage\.googleapis\.com|\/google-ai-studio\//, "Gemini"],
   [/api\.groq\.com|\/groq\//, "Groq"],
   [/openrouter\.ai|\/openrouter\//, "OpenRouter"],
