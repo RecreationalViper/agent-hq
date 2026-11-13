@@ -19,10 +19,13 @@ export const CHANNELS = {
   "trading-desk": ["trading-desk", "Trading Desk (paper money): daily trades, Head Trader reviews, backtests"],
   research: ["research", "Deep Researcher, Credit Scout and GitHub Radar"],
   inbox: ["inbox", "Email team: Junk Sweeper results and Customer Care reply drafts"],
+  "studio-trends": ["studio-trends", "Studio: Trend Scout's daily clip opportunities (movies, games, anime)"],
+  studio: ["studio", "Studio: Director's clip plans, Social Strategist captions, Studio Critic reviews, Producer's weekly plan"],
+  "ads-studio": ["ads-studio", "Ads Studio: Ad Creative Director concepts and Ad Copywriter copy"],
   alerts: ["alerts", "Anything that failed or needs your attention"]
 };
 // Which channel each agent reports to
-export const AGENT_CHANNEL = { "daily-task": "daily-focus", content: "content", ideas: "product-ideas", listing: "listings", review: "weekly-review", "credit-scout": "research", "github-radar": "research", researcher: "research", "trading-desk": "trading-desk", "head-trader": "trading-desk", backtest: "trading-desk", launch: "listings", seo: "seo", "competitor-scout": "competitors", "partner-finder": "competitors", "content-creator": "content", webdev: "content", seasonal: "content", "email-marketer": "content", "product-builder": "product-ideas", bookkeeper: "sales", "customer-care": "sales" };
+export const AGENT_CHANNEL = { "daily-task": "daily-focus", content: "content", ideas: "product-ideas", listing: "listings", review: "weekly-review", "credit-scout": "research", "github-radar": "research", researcher: "research", "trading-desk": "trading-desk", "head-trader": "trading-desk", backtest: "trading-desk", launch: "listings", seo: "seo", "competitor-scout": "competitors", "partner-finder": "competitors", "content-creator": "content", webdev: "content", seasonal: "content", "email-marketer": "content", "product-builder": "product-ideas", bookkeeper: "sales", "customer-care": "sales", "studio-scout": "studio-trends", "studio-director": "studio", "studio-writer": "studio", "studio-critic": "studio", "studio-producer": "studio", "ads-director": "ads-studio", "ads-copywriter": "ads-studio" };
 
 export const hasDiscord = () => Boolean(process.env.DISCORD_BOT_TOKEN);
 

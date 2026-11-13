@@ -6,6 +6,7 @@ collaborate without stepping on each other. Read it before your first change.
 ## What this repo is
 - **Agent HQ**: scheduled agents on GitHub Actions (`agents.json`, `run-agents.mjs`, `.github/workflows/`) that run the
   **Forever Held** shop: printable memorial kits sold on Payhip (https://payhip.com/b/vqNSA, $12.99).
+- **Studio**: short-form clipping (movies, games, anime) and client ads. Not part of the shop; studio agents never touch shop files.
 - **Storefront**: `store/` → https://foreverheld.pages.dev (Cloudflare Pages) and GitHub Pages as backup. Rules: `skills/web/SKILL.md`.
 - **Reports** from agents land in `reports/`; the team also posts to the owner's Discord.
 
@@ -16,6 +17,7 @@ collaborate without stepping on each other. Read it before your first change.
 | Arena AI | Built and owns the GitHub Radar (`scout/`, `skills/github-radar/`) |
 | Web Developer agent | `tools/webdev.mjs`: one planning guide a day on the live store, our shift only |
 | Ploy AI (ploy.ai) | Website and marketing agent: builds/edits/screenshots sites, SEO & AEO audits, research, lead finding, CRO ideas. Workspace "Forever Held". Claude talks to it through its MCP connector |
+| Studio team | `studio/` + studio agents in agents.json: TikTok/YouTube clip planning (Trend Scout, Director, Social Strategist, Studio Critic, Producer) and ads for a separate client business (Ad Creative Director, Ad Copywriter). Claude does the actual video cutting. Posts to #studio-trends, #studio, #ads-studio |
 | New teams | Say what you're taking on in your first PR; check this table and `agents.json` so work isn't duplicated |
 
 ## How to make a change
