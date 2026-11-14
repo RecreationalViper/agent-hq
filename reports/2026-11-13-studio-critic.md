@@ -1,37 +1,35 @@
 # Studio Critic - 2026-11-13
 
-**Clip Review – Scores (1‑10)**  
+> ⚠️ Web search was unavailable today, so this is from memory and may be out of date. Check the official links before acting.
 
-| Clip | Hook Strength | Rewatch Value | Comment‑Bait | Copyright Risk* |
-|------|---------------|---------------|--------------|-----------------|
-| **1 – Interstellar Docking** | 8 – Iconic line + Zimmer swell hits instantly | 9 – The “click‑to‑black” loop forces a replay | 7 – Question about “most stressful scene” invites debate | 9 – Official studio footage, but long unbroken stretch (≈20 s) is borderline; keep each source clip ≤ 5 s or add quick cut‑aways to stay safest |
-| **2 – God of War Ragnarök (Kratos vs. Thor)** | 7 – Bass‑rumble + stare‑down is solid but less universal | 7 – Fight climax is satisfying, but the fake‑out revive can feel “finished” → lower loop pull | 8 – “Who wins?” prompt is strong for gamers | 8 – PlayStation trailer footage is official, but the 28‑s unbroken fight may be flagged; consider inserting a 1‑s cut to a different angle |
-| **3 – Attack on Titan (Levi vs. Beast Titan)** | 9 – Immediate smash of Zeke’s smile → shock is a classic hook | 8 – Rapid‑cut action plus the off‑screen Cart Titan creates a “what‑happens‑next” loop | 9 – “Did you see that coming?” question drives anime fans to comment | 7 – Anime clips from Crunchyroll are copyrighted; using < 5 s of any single shot is safest. The current plan uses ~26 s continuous footage – higher risk. |
+**Clip‑by‑Clip Scorecard**  
+*(1 = weak / risky, 10 = strongest / safest)*  
 
-\*Score 10 = lowest risk (short, transformative, credited).  
+| Clip | Hook Strength | Rewatch Value | Comment Bait | Copyright Risk |
+|------|--------------|---------------|--------------|----------------|
+| **Vinland Saga – “I Have No Enemies”** | **8** – scream → dead‑silence is instantly arresting, but the first 0.5 s is a quick flash that can be missed on mobile scroll. | **7** – the slow‑zoom on Thorfinn’s face plus the black‑cut loop encourages a replay, but the three‑part stretch is a bit long for a 35‑sec edit. | **8** – “What would you give up to end the war?” works well; the on‑screen quote is comment‑magnet. | **6** – uses original anime audio (OST). To stay safe you must replace it with a royalty‑free string track or a short‑clip‑fair‑use “sound‑alike”. |
+| **JoJo – Steel Ball Run (Gyro → Johnny)** | **9** – eye‑flash + metallic spin hit in the first second is a classic high‑contrast hook for TikTok. | **8** – freeze‑frame on Johnny’s glowing eyes creates a perfect 1‑second loop; the three stretches stay under 30 s. | **7** – “Which JoJo moment gave you chills?” is good, but the edit leans heavily on hype rather than a discussion point. | **5** – JoJo is a heavily protected franchise; the Stand‑awakening sequence is a recognizable 5‑second clip. Use a short‑fair‑use excerpt (< 2 s) or overlay with a royalty‑free phonk track to lower risk. |
+| **MW4 – Ghost Tactical Breach** | **7** – mask‑pull + night‑vision snap is solid, but the rain‑y‑scene can look “muddy” on small phones if not colour‑graded. | **6** – the breach explosion on the bass drop loops okay, but the final “hand‑to‑radio” cliffhanger is only 1 s; viewers may scroll past. | **7** – “What’s your go‑to Ghost line?” invites comments, but the clip lacks a clear “question” moment inside the video itself. | **8** – Gameplay footage is generally safe under “fair use” for commentary/transformative edits, especially when under 30 s and with added audio. Still, avoid using the original in‑game soundtrack; replace with the trending **MEOW BOSS TEKK** (which is restricted for business accounts, so use a personal creator account or a royalty‑free equivalent). |
 
 ---
 
-### One‑Line Change That Would Most Improve Each Clip  
+### One Change That Would Most Improve Each Clip  
 
-| Clip | Change |
-|------|--------|
-| **Interstellar** | Insert a **2‑second cut to a different camera angle** (e.g., interior cockpit view) right before the final docking click, breaking the long unbroken stretch and keeping each source segment ≤ 5 s. |
-| **God of War** | Add a **quick 1‑second flash of the “Thor – Kratos” title card or UI element** at the 12‑s mark to create a visual beat and shorten the continuous fight footage. |
-| **Attack on Titan** | Replace the 20‑second continuous Levi‑vs‑Beast run with **three 5‑second slices** (different angles/close‑ups) stitched together, ensuring every source clip stays under 5 s and adding a tiny “zoom‑in” effect on the blade for extra impact. |
+| Clip | Change (single, highest impact) |
+|------|---------------------------------|
+| **Vinland Saga** | **Swap the original OST for a royalty‑free cinematic string build** (same emotional contour). This eliminates the biggest copyright risk and lets you keep the full 35 s without a “fair‑use” disclaimer. |
+| **JoJo** | **Trim the first combat stretch to 4 s and replace the raw Stand‑awakening footage with a 1‑second “glitch‑style” overlay (e.g., static + phonk beat)**. This keeps the hook punchy, reduces the recognizable clip length, and lowers the risk score. |
+| **MW4** | **Add a quick on‑screen text prompt (“Breach or no breach? Drop your favorite Ghost line”) right at 12 s, synced to the explosion**. This creates an in‑video comment hook, boosting comment bait without needing extra footage. |
 
 ---
 
 ### Drop / Replace Recommendation  
 
-**Drop Clip 3 (Attack on Titan – Levi vs. Beast Titan).**  
-*Why:* It carries the highest copyright risk (long anime footage) and would likely be flagged or muted on both platforms.  
+**Drop Clip 2 (JoJo Steel Ball Run).**  
+*Why:* It carries the highest copyright exposure (stand activation is a trademarked visual) and the audio track (**FUNK MANDALA**) is blocked for business accounts, forcing you to use a personal profile or risk a takedown.  
 
-**What to make instead:**  
-- **New Clip Idea:** *“Demon Slayer – Tanjiro’s Water Breathing Breakthrough”* (mid‑November anniversary of the series). Use ≤ 4 s of each official clip (opening, close‑up, final slash) with a strong sound drop from the “Dark Beach” track (personal account) and a hook line “When water becomes a weapon”. This keeps risk low, leverages a proven anime edit format, and still fits the November anime‑anniversary window.  
+**Make Instead:** A **short 15‑second “Power‑Up” montage** using **any** newly‑released episode of *Steel Ball Run* that is **public‑domain** (e.g., a quick “Gyro’s spin” shot that’s < 2 s) paired with a **royalty‑free high‑octane phonk** (search TikTok’s “Original Sound” library for a creator‑uploaded beat). Keep the hook to a single eye‑flash or ball‑spin, then loop the beat for a clean rewatch loop. This preserves the JoJo hype angle while dramatically lowering risk.
 
 ---
 
-### Verdict  
-
-**Cut the Interstellar docking scene first** (after adding the quick angle cut to lower copyright risk). It has the strongest hook, rewatch loop, and safe‑enough source material to go viral today.
+**One‑line verdict:** **Cut the JoJo Steel Ball Run edit first – replace it with a tiny, royalty‑free power‑up clip.**

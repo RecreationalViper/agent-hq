@@ -1,64 +1,58 @@
 # Director (updated 2026-11-13)
 
-### Channel Stats Notice
-`studio/channel-stats.md` is missing from the workspace, so channel performance metrics could not be factored into today's selection. Also, per `studio/notes.md`, the *Spider-Verse* montage is already completed and excluded from today's plan.
+> ⚠️ Web search was unavailable today, so this is from memory and may be out of date. Check the official links before acting.
+
+> ⚠️ **Data Note:** `studio/channel-stats.md` is currently missing. No channel-specific performance metrics have been invented or assumed.
 
 ---
 
-### Today's Top 3 Clip Plans for Claude
-
----
-
-### Clip 1: Interstellar — The Docking Scene ("It's Necessary")
-* **Target Platforms:** Both (TikTok & YouTube Shorts)
-* **Source & Location:** *Interstellar* (2014 movie), final act docking sequence (~2h 05m mark; exact timestamp varies by release).
-* **Target Length:** 35 seconds
-* **Mood:** Existential, high-tension, cinematic epic
-* **Hook (0-2s):** Case: *"It's impossible."* Cooper: *"No, it's necessary."* On-screen text: *"The most stressful 35 seconds in cinema history."*
+### Clip 1: Vinland Saga — "I Have No Enemies" (Emotional Narrative)
+* **Platforms:** Both (TikTok & YouTube Shorts)
+* **Source Title & Location:** *Vinland Saga* — Season 1 Episode 24 (rage combat / Askeladd's death) cut against Season 2 Episodes 9–22 (Farm Arc non-violence resolve).
+* **Hook (0–2s):** 0.5s flash cut of young Thorfinn screaming in Season 1 combat, abruptly snapping to dead silence and Farm Arc Thorfinn standing motionless taking a punch. On-screen text: *"He lost everything to gain peace."*
 * **Unbroken Stretches (Story Order):**
-  1. *Stretch 1 (2-14s):* Endurance station spinning out of control against black space as Cooper fires lander thrusters.
-  2. *Stretch 2 (14-25s):* Cockpit close-up showing Cooper and Brand struggling against G-force as rotation speeds match.
-  3. *Stretch 3 (25-31s):* Exterior view of the lander alignment mechanism matching the docking ring millimeter by millimeter.
-* **Biggest Moment (31-33s):** The Hans Zimmer organ score crescendo as the lander slams into the docking ring and locks.
-* **Final Beat (33-35s):** Violent mechanical click sound of the dock connecting, cutting abruptly to total silence and black screen—triggering a rewatch loop.
-* **Audio Note:** Hans Zimmer — *No Time for Caution*. (TikTok Personal: use trending Hans Zimmer synth edit audio. TikTok Business: use royalty-free cinematic synth/organ build from TikTok Commercial Library).
+  1. *Stretch 1 (2–10s):* Season 1 high-velocity dual-dagger combat showing Thorfinn's relentless rage.
+  2. *Stretch 2 (11–24s):* Season 2 Farm Arc unbroken sequence—Thorfinn taking blows from guards without raising his fists or fighting back.
+  3. *Stretch 3 (25–32s):* Close-up on Thorfinn's calm, scarred face addressing the soldiers.
+* **Biggest Moment (28–32s):** Slow zoom on Thorfinn's face as the audio swells on his quote: *"I have no enemies."*
+* **Final Beat (33–35s):** Abrupt cut to black on his final breath before a punch lands, forcing an emotional rewatch loop.
+* **Target Length:** 35 seconds.
+* **Mood:** Melancholic, Emotional, Stoic Redemption.
+* **Audio Note:** *Cinematic Strings & Emotional Vocal* (melancholic string intro swelling into dramatic orchestral vocals at 0:25).
 
 ---
 
-### Clip 2: God of War Ragnarök — Kratos vs. Thor First Fight
-* **Target Platforms:** Both (TikTok & YouTube Shorts)
-* **Source & Location:** *God of War Ragnarök* (2022 game), Chapter 1 boss sequence (Kratos vs. Thor at the house).
-* **Target Length:** 32 seconds
-* **Mood:** Heavy impact, mythic, raw combat
-* **Hook (0-2s):** Thor calling Mjølnir into his hand with heavy bass rumble; tense eye-contact stare-down. On-screen text: *"When two gods stop talking."*
+### Clip 2: JoJo's Bizarre Adventure: Steel Ball Run — Gyro Spin to Johnny Awakening
+* **Platforms:** Both (TikTok & YouTube Shorts)
+* **Source Title & Location:** *JoJo's Bizarre Adventure: Steel Ball Run (2nd - 3rd Stage)* — Stage 2/3 Horse Race sequence into Johnny's Stand awakening (exact timestamp/episode unsure as current season drops weekly).
+* **Hook (0–2s):** High-contrast eye-flash of Johnny Joestar lying in the dirt, cutting instantly to a 1-second metallic spin sound of Gyro’s Steel Ball.
 * **Unbroken Stretches (Story Order):**
-  1. *Stretch 1 (2-12s):* Leviathan Axe colliding with Mjølnir, creating the frozen lightning shockwave across the ice.
-  2. *Stretch 2 (12-22s):* Thor pinning Kratos down and grappling over the axe handle in story sequence.
-  3. *Stretch 3 (22-28s):* Kratos striking back, transitioning straight into Thor's overhead thunder slam.
-* **Biggest Moment (28-30s):** Thor's famous dialogue after the death fake-out: *"I'm not done with you yet."*
-* **Final Beat (30-32s):** The electrical revive shockwave slamming Kratos back to life, cutting hard to black on the lightning crack.
-* **Audio Note:** Original game sound layered with low-frequency bass boost. For TikTok personal profiles, pair with a Phonk track like *DVRST - Close Eyes* timed to the axe impact at 0:02.
+  1. *Stretch 1 (2–10s):* Gyro Zeppeli riding full-sprint on horseback, setting up the Steel Ball Spin trajectory.
+  2. *Stretch 2 (11–22s):* Johnny Joestar struggling on the ground, eyes shifting from desperation to dark resolve as Stand energy sparks around him.
+  3. *Stretch 3 (23–29s):* The full Stand activation energy blast tearing through the immediate surroundings.
+* **Biggest Moment (23–27s):** Heavy distorted bass drop right as Johnny's dark aura flares ("Mid-Battle Twist" format).
+* **Final Beat (28–30s):** Freeze-frame on Johnny's glowing eyes with a pitch-shifted bass decay beat for an instant loop.
+* **Target Length:** 30 seconds.
+* **Mood:** High-Octane, Dark Hype, Kinetic.
+* **Audio Note:** *MONTAGEM ZORA (SLOWED)* or *FUNK MANDALA* (build quiet tension during the horse sprint, slam the heavy bass drop on Stand reveal).
 
 ---
 
-### Clip 3: Attack on Titan — Levi vs. Beast Titan
-* **Target Platforms:** Both (TikTok & YouTube Shorts)
-* **Source & Location:** *Attack on Titan* Season 3, Episode 54 ("Hero") / Shiganshina battle.
-* **Target Length:** 30 seconds
-* **Mood:** Fast velocity, intense revenge, high-octane anime action
-* **Hook (0-2s):** Zeke's confident smirk instantly cut short as green smoke bursts out behind his shoulder. On-screen text: *"He didn't even see Levi coming..."*
+### Clip 3: Call of Duty: Modern Warfare 4 — Ghost Tactical Breach
+* **Platforms:** Both (TikTok & YouTube Shorts)
+* **Source Title & Location:** *Call of Duty: Modern Warfare 4* — Tactical night-vision campaign mission (exact timestamp/mission cutscene unsure).
+* **Hook (0–2s):** Ghost turning his skull mask toward the camera in heavy low-light rain, night-vision goggles snapping down.
 * **Unbroken Stretches (Story Order):**
-  1. *Stretch 1 (2-10s):* Levi spinning through the air, blinding the Beast Titan's eyes in under a second.
-  2. *Stretch 2 (10-20s):* Unbroken sequence of Levi shredding the Beast Titan's arms down to the nape.
-  3. *Stretch 3 (20-26s):* Zeke attempting to harden his neck, but Levi cuts straight through before crystal forms.
-* **Biggest Moment (26-28s):** Levi ripping Zeke out of the Titan neck and thrusting a blade straight through his mouth.
-* **Final Beat (28-30s):** Cart Titan swooping in off-screen to grab Zeke; hard cut to black a microsecond before contact.
-* **Audio Note:** High-bpm synth/Phonk or dramatic anime audio (e.g., *Crystal Castles - Transgender (Slowed)* on personal TikTok profiles). Silence all background music during the 0-2s hook, dropping the track right as the smoke clears.
+  1. *Stretch 1 (2–10s):* Cinematic slow-motion walk-up in the rain outside the target compound.
+  2. *Stretch 2 (11–22s):* Explosive door breach into unbroken night-vision thermal room clearing.
+  3. *Stretch 3 (23–28s):* Ghost lowering his rifle and standing stoic over the cleared room as smoke drifts.
+* **Biggest Moment (11–15s):** Breach charge detonation hard-synced to the primary synth/bass drop.
+* **Final Beat (29–30s):** Ghost bringing his hand up to his radio headset, cutting to black right before he speaks to drive comment engagement.
+* **Target Length:** 30 seconds.
+* **Mood:** Tactical, Cold, Stoic Aura.
+* **Audio Note:** *Heavy Industrial Synth / Dark Phonk* or *MEOW BOSS TEKK* (sync weapon clicks and breach cuts to the electronic synth pulse).
 
 ---
 
-### Which Clip to Make First & Why
-
-Make **Clip 1 (Interstellar — The Docking Scene)** first.
-
-* **Why:** November is the 12th anniversary window for *Interstellar*. The docking sequence is one of the highest-retention, highest-rewatch scenes in modern film history. It relies on universal visual tension and music rather than language, making it equally high-converting on both TikTok and YouTube Shorts algorithms.
+### Priority Order: Make Clip 1 (Vinland Saga) First
+**Why:** Fresh live scanner data shows story-driven Thorfinn edits are dominating YouTube Shorts right now (*SOHAIL* pulled **9.0M views** and *CorrupSNn* pulled **8.3M views** in under 7 days). It aligns with TikTok Format #2 ("THIS STORY BROKE MY HEART") and has massive comment-section potential without requiring complex VFX.

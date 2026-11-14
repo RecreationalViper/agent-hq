@@ -1,23 +1,5 @@
 [
   {
-    "file": "2026-11-13-webdev.md",
-    "agent": "webdev",
-    "name": "Web Developer",
-    "date": "2026-11-13"
-  },
-  {
-    "file": "2026-11-13-content-creator.md",
-    "agent": "content-creator",
-    "name": "Content Creator",
-    "date": "2026-11-13"
-  },
-  {
-    "file": "2026-11-13-youtube-watcher.md",
-    "agent": "youtube-watcher",
-    "name": "YouTube Shorts Watcher",
-    "date": "2026-11-13"
-  },
-  {
     "file": "2026-11-13-growth-coach.md",
     "agent": "growth-coach",
     "name": "Growth Coach",
@@ -42,6 +24,12 @@
     "date": "2026-11-13"
   },
   {
+    "file": "2026-11-13-youtube-watcher.md",
+    "agent": "youtube-watcher",
+    "name": "YouTube Shorts Watcher",
+    "date": "2026-11-13"
+  },
+  {
     "file": "2026-11-13-tiktok-fandoms.md",
     "agent": "tiktok-fandoms",
     "name": "TikTok Fandom Watcher",
@@ -63,6 +51,18 @@
     "file": "2026-11-13-studio-scout.md",
     "agent": "studio-scout",
     "name": "Trend Scout",
+    "date": "2026-11-13"
+  },
+  {
+    "file": "2026-11-13-webdev.md",
+    "agent": "webdev",
+    "name": "Web Developer",
+    "date": "2026-11-13"
+  },
+  {
+    "file": "2026-11-13-content-creator.md",
+    "agent": "content-creator",
+    "name": "Content Creator",
     "date": "2026-11-13"
   },
   {

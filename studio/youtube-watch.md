@@ -2,58 +2,68 @@
 
 > ⚠️ Web search was unavailable today, so this is from memory and may be out of date. Check the official links before acting.
 
-### Fastest-Rising Relevant Short Edits & Visual Trends
-
-Based on the latest YouTube Data API scan, here are the key edit-focused Shorts and gaming clips blowing up right now:
-
-1. **`"They Underestimated the Beggar"` 🗿🔥** by Ukhnooq_Ae
-   * **Metrics:** 20,745,274 views · 264,492/hr · 60s
-   * **Topic:** Disrespect / Underdog empowerment trope edit.
-2. **`"Bro is DareDevil" | Growing Up Fisher X The Mentalist Edit`** by KAKAROTOx7
-   * **Metrics:** 14,326,714 views · 130,407/hr · 60s
-   * **Topic:** Hyper-perception / genius crossover character edit paired with high-tempo Funk audio.
-3. **`"Wild Bear Vs. Military Dog"` ☠️ | Heart of the Beast Edit** by Lovnish
-   * **Metrics:** 12,479,850 views · 145,535/hr · 59s
-   * **Topic:** High-stakes confrontation / power comparison set to slowed audio.
-4. **`Security Stops Woman Over Her Service Dog!` 😳** by Thinkerz Edits
-   * **Metrics:** 36,683,256 views · 268,524/hr · 32s
-   * **Topic:** Confrontation / authority power dynamic short edit.
-5. **`Warhammer 40,000: Darktide - Sisters Novitiate | Class Reveal`** by Fatshark
-   * **Metrics:** 852,808 views · 31,181/hr · 2:37
-   * **Topic:** Gritty, dark gothic sci-fi cinematic gaming showcase.
+### Data Availability Note
+*TMDB data is unavailable today (no `TMDB_API_KEY`). Context derived from YouTube Data API, AniList, Steam, and Wikipedia trends.*
 
 ---
 
-### What They Have in Common
+### Top 6 Fastest-Rising & High-Performing Edits
+*(Quoting exact numbers from live data)*
 
-* **Targeted Edit Length:** Hits are maxing out the Shorts limit at **59–60 seconds** (`0:59` to `1:00`), giving enough room for a sequence to build pay-off without losing pacing.
-* **Double-Quote Hooks in Titles:** Every high-performing edit puts a viral internet reaction quote in double quotation marks first (e.g., `"Bro is DareDevil"`, `"They Underestimated..."`).
-* **Audio-Tagged Titles:** Listing the exact edit track in the title (e.g., `FUNK MANDALA`, `Raya (Slowed)`) helps YouTube route the Short to viewers who engage with that sound.
-* **The "Underestimated Genius / Overpowered Underdog" Trope:** Visuals focused on high tension where someone is misjudged right before a dominant display of skill or power.
+1. **"Bro is DareDevil" | Growing Up Fisher X The Mentalist Edit**
+   * **Views:** 14,556,802 views (126,625 views/hr)
+   * **Format:** 1:00 min vertical edit pairing action/tv footage with high-energy audio (Funk Mandala).
+2. **"Wild Bear Vs. Military Dog" ☠️ | Heart of the Beast Edit**
+   * **Views:** 12,790,458 views (140,786 views/hr)
+   * **Format:** 0:59 sec animal/action montage with slowed audio (`Raya`).
+3. **THIS STORY BROKE MY HEART 💔 | THORFINN MANGA EDIT**
+   * **Views:** 9,044,865 views
+   * **Format:** Emotional story-arc montage highlighting character sacrifice/growth.
+4. **"Older Brother Edit" - Vinland Saga Thorfinn**
+   * **Views:** 8,393,710 views
+   * **Format:** Relatable theme ("Brotherhood/Family") paired with character development scenes.
+5. **Bro changed his superhero in a second | Avengers Endgame**
+   * **Views:** 5,478,308 views
+   * **Format:** Short comic-relief/hype beat focused on a specific character pivot point.
+6. **Which Game Is BEST..? 💀🔥 | GTA 6 & COD MW4 Edit**
+   * **Views:** 504,950 views
+   * **Format:** Direct side-by-side vs comparison between two major gaming franchises (*GTA 6* vs *MW4*).
 
 ---
 
-### Moments for MotionVault to Clip (30–40s Focus)
+### Common Winning Elements
+* **Length:** 30–60 seconds (hitting the sweet spot for completion rate and looping).
+* **Title Pattern:** Quotes or relatable POV hooks in quotes (`"Bro is..."`, `"They Underestimated..."`) followed by clean metadata (`Title | Audio/Vibe | Hashtags`).
+* **Audio Pick:** Phonk, slowed tracks, or Brazilian Funk driving visual pacing (e.g., *FUNK MANDALA*, *Raya Slowed*).
+* **Hook Strategy:** Immediate high-arousal visual in seconds 0–2 (aura moments, intense dialogue, sudden action shift).
 
-#### 1. Movie / TV Scene: *The Mentalist* or *John Wick* ("Underestimated" Hook)
-* **Scene:** Patrick Jane reading an arrogant suspect in under 10 seconds, OR John Wick being dismissed by Viggo/Mobsters before the setup beat.
-* **Structure:** 
-  * *0:00–0:02:* Disrespectful dialogue line (Hook).
-  * *0:02–0:30:* Single unbroken stretch of character turn-the-tables observation or action sequence.
-  * *0:30–0:35:* Final mic-drop line, cutting on beat for a seamless loop.
+---
 
-#### 2. Anime Scene: *Solo Leveling* or *Jujutsu Kaisen* (Underdog Reveal)
-* **Scene:** Sung Jin-woo being mocked as E-Rank right before his eyes glow blue, or Toji Fushiguro calm execution moment.
-* **Structure:** Fast visual contrast (weak state vs sudden aura reveal), synced to a heavy bass drop.
+### What MotionVault Should Clip Next
 
-#### 3. Gaming Scene: *Warhammer 40k: Space Marine 2 / Darktide* or *Cyberpunk 2077*
-* **Scene:** Heavy execute animation or Sandy (Sandevistan) speed streak through an enemy squad.
-* **Structure:** Clean cinematic camera angle, 1 unbroken combat flow, ending on a high-impact finishing punch/shot.
+#### 1. Anime: *Vinland Saga* (Thorfinn) / *JoJo SBR* / *One Piece*
+* **Why:** Thorfinn edits are dominating anime views right now (8.3M+ and 9.0M+ views). *JoJo Steel Ball Run* is trending top 2 on AniList.
+* **Beat / Scene:** 
+  * *Vinland Saga*: Clip Thorfinn's transition from revenge to non-violence ("I have no enemies") cut against his father's memory.
+  * *JoJo SBR*: Fast-paced montage of Johnny Joestar & Gyro Zeppeli riding into horse races cut to phonk.
+
+#### 2. Gaming: *Call of Duty: Modern Warfare 4* & *GTA VI*
+* **Why:** *Modern Warfare 4* is #2 on Steam Top Sellers with multiple short edits rising; *GTA VI* continues high search interest on Wikipedia (73,739 views).
+* **Beat / Scene:** 
+  * *MW4*: Clip Captain Price or Ghost high-aura tactical entries / betrayal scenes (e.g., "She's More Than Evil" pattern).
+  * *GTA VI vs MW4*: Comparative montage cutting graphics and cinematic vehicular chases back-to-back.
+
+#### 3. Movies: *Godzilla / MonsterVerse* or *Avengers Endgame*
+* **Why:** *Godzilla* is trending on Wikipedia (75,047 views); MCU superhero shift clips are pulling 5.4M+ views.
+* **Beat / Scene:**
+  * Godzilla vs monster scale showcase: slow zoom onto atomic breath charging sound, cutting straight into impact beats.
 
 ---
 
 ### Title Patterns to Copy
-
-* `"They Underestimated [Character Name]"` 🗿🔥 | [Show/Game Title] Edit
-* `"Bro thinks he's [Iconic Character]"` ☠️ | [Show A] x [Show B] Edit | [Audio Track Name]
-* `"He Didn't Know Who He Was Talking To"` 😳 | [Movie Title] Scene
+1. **Aura / Disbelief Hook:**  
+   `"Bro Thought He Was Safe..." | [Movie/Game Name] Edit 💀🔥`
+2. **Emotional Story Hook:**  
+   `THIS SCENE BROKE EVERYONE 💔 | [Character Name] Edit`
+3. **VS / Comparison Hook:**  
+   `Which Aura Is Unmatched? 🗿 | [Game A] vs [Game B] #Shorts`
