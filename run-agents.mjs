@@ -9,11 +9,15 @@ import { hasGoogle, addUpdate, mdToLines } from "./gdocs.mjs";
 import { salesSummary } from "./sales.mjs";
 import { seoResearch } from "./seo.mjs";
 import { hasExa, researchBlock } from "./exa.mjs";
+import { newsBlock } from "./news.mjs";
 import { report as discordReport, alert as discordAlert } from "./discord.mjs";
 import { upcoming } from "./holidays.mjs";
 
 const API = process.env.API_BASE || "https://generativelanguage.googleapis.com/v1beta";
 const KEY = process.env.GEMINI_API_KEY;
+// Studio agents use their own Gemini key (separate Google project = separate free allowance) when it exists.
+const STUDIO_KEY = process.env.STUDIO_GEMINI_API_KEY?.trim();
+const keyFor = (agent) => (agent.group === "studio" && STUDIO_KEY) || KEY;
 const MODE = (process.env.RUN_MODE || "due").trim(); // "due", "all", or an agent id
 const TZ = process.env.TIME_ZONE || "America/New_York";
 
@@ -43,11 +47,11 @@ function isDue(agent, dow, date = "") {
   return Boolean(mo && Number(date.slice(8, 10)) === Number(mo[1]));
 }
 
-async function api(path, init = {}) {
+async function api(path, init = {}, key = KEY) {
   for (let attempt = 1; attempt <= 2; attempt++) {
     let res;
     try {
-      res = await gwFetch(API + path, { ...init, signal: AbortSignal.timeout(120000), headers: { "Content-Type": "application/json", "x-goog-api-key": KEY, ...(init.headers || {}) } });
+      res = await gwFetch(API + path, { ...init, signal: AbortSignal.timeout(120000), headers: { "Content-Type": "application/json", "x-goog-api-key": key, ...(init.headers || {}) } });
     } catch (e) {
       if (attempt < 2) { console.log("  no answer, retrying..."); continue; }
       throw new Error("BUSY: Google didn't answer in time.");
@@ -124,7 +128,7 @@ async function main() {
   if (!due.length) return;
 
   let models = await pickModels(cfg.model);
-  let geminiOut = false; // set once Gemini says its free daily limit is used up
+  const outFor = new Set(); // Gemini keys whose free daily limit is used up this run
   console.log(`Model: ${models[0]}`);
   await fs.mkdir("reports", { recursive: true });
   let index = await readJson("reports/index.json", []);
@@ -143,6 +147,9 @@ async function main() {
       }
     }
     const search = agent.search && noSearch !== true;
+    const key = keyFor(agent);
+    let geminiOut = outFor.has(key);
+    let liveWeb = 0; // real web data added to the task, independent of Google Search
     let task = `Today is ${date}.\n\nYour job: ${agent.instructions}`;
     if (Array.isArray(agent.pages) && agent.pages.length) {
       task += "\n\nToday's copies of these web pages (real and current - base your answer on them, link the page for each claim, and say when a page could not be loaded):";
@@ -155,6 +162,7 @@ async function main() {
       for (const path of agent.readsFiles) {
         const body = await fs.readFile(path, "utf8").catch(() => "");
         task += `\n\n### ${path}\n${body ? body.slice(0, 24000) : `(the file ${path} is missing - say so and do not invent findings)`}`;
+        if (body && /live-data|youtube-trends/.test(path)) liveWeb++;
       }
     }
     if (agent.followsPloy) task += await shiftBlock();
@@ -169,6 +177,12 @@ async function main() {
       const r = await researchBlock(agent.exa.searches.map((q) => (typeof q === "string" ? { query: q, since } : { since, ...q })), agent.id).catch(() => ({ results: [] }));
       console.log(`  Exa: ${r.results.length} web results`);
       if (r.results.length) task += `\n\nFresh web results found minutes ago with Exa search (real pages; cite them as [n] with their links, and never invent anything they don't say):\n${r.text}`;
+    }
+    // Google News headlines (free, no AI quota): real-time web results whichever AI answers.
+    if (Array.isArray(agent.news) && agent.news.length) {
+      const r = await newsBlock(agent.news).catch(() => ({ text: "", count: 0 }));
+      console.log(`  Google News: ${r.count} headlines`);
+      if (r.count) { liveWeb++; task += `\n\nFresh news headlines found minutes ago (Google News, real and dated; cite them with their links, and never claim more than a headline says):\n${r.text}`; }
     }
     if (agent.doc === "etsy") {
       salesText ??= await salesSummary().then((r) => r?.text || "").catch((e) => { console.log(`  sales feed unavailable: ${e.message}`); return ""; });
@@ -191,7 +205,7 @@ async function main() {
     for (let i = 0; i < models.length && i < 5 && !data && !geminiOut; ) {
       const m = models[i];
       try {
-        data = await api(`/${m}:generateContent`, { method: "POST", body });
+        data = await api(`/${m}:generateContent`, { method: "POST", body }, key);
         if (i) { console.log(`  answered by ${m} (using it first from now on)`); models = [m, ...models.filter((x) => x !== m)]; }
       } catch (err) {
         lastErr = err;
@@ -204,7 +218,7 @@ async function main() {
     if (!data && (geminiOut || lastErr?.message.startsWith("BUSY"))) {
       // Search agents first retry without search (the search quota is separate).
       if (search && !geminiOut && /quota/i.test(lastErr?.message || "")) throw lastErr;
-      if (/quota/i.test(lastErr?.message || "") && !geminiOut) { geminiOut = true; console.log("  Gemini's free daily limit is used up; switching the rest of today's agents to the backup AI"); }
+      if (/quota/i.test(lastErr?.message || "") && !geminiOut) { geminiOut = true; outFor.add(key); console.log(`  Gemini's free daily limit is used up${key === STUDIO_KEY ? " (studio key)" : ""}; switching agents on this key to the backup AI`); }
       if (!hasGroq()) throw lastErr || new Error("Gemini is out and no backup AI key is set");
       if (search) throw new Error("quota: backup AI has no web search");
       backupText = await groqChat(system, task, { temperature: 0.8 });
@@ -219,7 +233,9 @@ async function main() {
       sources += `\n- [${(w.title || w.uri).replace(/[\[\]]/g, "")}](${w.uri})`;
     }
     if (sources) text += `\n\n## Sources${sources}`;
-    if (agent.search && !search) text = `> ⚠️ Web search was unavailable today, so this is from memory and may be out of date. Check the official links before acting.\n\n${text}`;
+    if (agent.search && !search) text = liveWeb
+      ? `> ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).\n\n${text}`
+      : `> ⚠️ Web search was unavailable today, so this is from memory and may be out of date. Check the official links before acting.\n\n${text}`;
     const file = `${date}-${agent.id}.md`;
     await fs.writeFile(`reports/${file}`, `# ${agent.name} - ${date}\n\n${text}\n`);
     index = [{ file, agent: agent.id, name: agent.name, date }, ...index.filter((r) => r.file !== file)].slice(0, 300);
