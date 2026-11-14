@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-14-tiktok-formats.md",
+    "agent": "tiktok-formats",
+    "name": "TikTok Format Watcher",
+    "date": "2026-11-14"
+  },
+  {
     "file": "2026-11-14-tiktok-sounds.md",
     "agent": "tiktok-sounds",
     "name": "TikTok Sound Watcher",
