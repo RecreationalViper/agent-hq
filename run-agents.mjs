@@ -137,12 +137,16 @@ async function main() {
   due.sort((a, b) => Boolean(a.reads) - Boolean(b.reads));
 
   let salesText; // fetched once per run for the shop agents
+  const searchOut = new Set(); // Gemini keys whose Google Search allowance is used up this run
   async function runAgent(agent, noSearch = false) {
+    // Once Google Search is out on this key, later agents skip straight to the live feeds (saves ~2 min each).
+    if (agent.search && !noSearch && searchOut.has(keyFor(agent))) return runAgent(agent, true);
     if (agent.search && !noSearch) {
       try { return await runAgent(agent, "try"); }
       catch (e) {
         if (!/quota/i.test(e.message)) throw e;
-        console.log("  web search limit hit, answering without web search");
+        searchOut.add(keyFor(agent));
+        console.log(`  web search limit hit (${e.message.replace(/\s+/g, " ").slice(0, 300)}), answering without web search`);
         return runAgent(agent, true);
       }
     }

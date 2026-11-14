@@ -105,6 +105,21 @@ if (process.env.REQUESTY_API_KEY || process.env.REQUESTY_KEY) {
   } catch (e) { console.log(`RESULT requesty: FAILED: ${e.message}`); process.exitCode = 1; }
 } else console.log("RESULT requesty: no key found (secret REQUESTY_API_KEY missing or empty)");
 
+// Gemini + Google Search check for each key (main and studio): which models answer with search, and why not.
+for (const [label, key] of [["gemini-main", process.env.GEMINI_API_KEY], ["gemini-studio", process.env.STUDIO_GEMINI_API_KEY]]) {
+  if (!key?.trim()) { console.log(`RESULT ${label}: no key`); continue; }
+  for (const model of ["gemini-flash-latest", "gemini-2.5-flash"]) {
+    for (const search of [false, true]) {
+      try {
+        const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", headers: { "x-goog-api-key": key.trim(), "Content-Type": "application/json" }, body: JSON.stringify({ contents: [{ role: "user", parts: [{ text: search ? "What is today's top news headline? One line." : "Reply: ok" }] }], ...(search ? { tools: [{ google_search: {} }] } : {}) }), signal: AbortSignal.timeout(60000) });
+        const j = await r.json().catch(() => ({}));
+        const q = (j.error?.details || []).flatMap((d) => d.violations || []).map((v) => `${v.quotaId}${v.quotaValue ? "=" + v.quotaValue : ""}`).join(", ");
+        console.log(`RESULT ${label} ${model}${search ? " +search" : ""}: ${r.ok ? `WORKS${j.candidates?.[0]?.groundingMetadata ? " (grounded)" : ""}` : `HTTP ${r.status} ${String(j.error?.message || "").split(" For more")[0].slice(0, 160)}${q ? ` [${q}]` : ""}`}`);
+      } catch (e) { console.log(`RESULT ${label} ${model}${search ? " +search" : ""}: FAILED ${e.message}`); }
+    }
+  }
+}
+
 // OpenRouter check (free models only)
 if (process.env.OPENROUTER_API_KEY) {
   const { openRouterModels, openRouterChat } = await import("../ai-fallback.mjs");
