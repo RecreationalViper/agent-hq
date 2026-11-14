@@ -69,7 +69,7 @@ def build(name, c, out):
     section("Before you start", COMMON_START)
     for title, tip in c["pieces"]:
         section(title, [tip])
-    section("Need help?", ["Write to us any time at foreverheld.shop@gmail.com. We're glad to help with wording, printing or anything else."])
+    section("Need help?", ["Send us a message any time at foreverheld.pages.dev/contact. We're glad to help with wording, printing or anything else."])
     cv.save()
 
 
