@@ -105,7 +105,7 @@ export async function cloudflareChat(system, user, { json = false, temperature =
 
 // ---------- OpenRouter: FREE models only (ids ending in ":free", price $0) ----------
 const OR = process.env.OPENROUTER_API_BASE || "https://openrouter.ai/api/v1";
-const OR_PREFER = [/gpt-oss-120b/i, /llama-3\.3-70b/i, /deepseek.*(v3|chat)/i, /qwen3/i, /llama-4/i, /mistral-small/i, /gemma-3-27b/i];
+const OR_PREFER = [/gpt-oss-120b/i, /ernie-5\.5/i, /llama-3\.3-70b/i, /deepseek.*(v3|chat)/i, /qwen3/i, /llama-4/i, /mistral-small/i, /gemma-3-27b/i];
 let orModels;
 async function orCall(path, init = {}) {
   const res = await gwFetch(OR + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`, "Content-Type": "application/json", "X-Title": "Agent HQ" } });
