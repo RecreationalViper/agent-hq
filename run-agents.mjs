@@ -142,7 +142,7 @@ async function main() {
       try { return await runAgent(agent, "try"); }
       catch (e) {
         if (!/quota/i.test(e.message)) throw e;
-        console.log("  web search limit hit, answering without web search");
+        console.log(`  web search limit hit (${e.message.replace(/\s+/g, " ").slice(0, 300)}), answering without web search`);
         return runAgent(agent, true);
       }
     }
