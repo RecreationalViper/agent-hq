@@ -1,145 +1,228 @@
 {
-  "about": "Forever Held website media. Agents: use these exact public URLs when you reference or reuse brand media. Add new files here when you publish them on the site.",
-  "base": "https://recreationalviper.github.io/agent-hq/store/",
-  "videos": [
-    {
-      "id": "product-film",
-      "file": "video/forever-held-film.mp4",
-      "poster": "video/forever-held-poster.jpg",
-      "shape": "16:9, 1920x1080, 20s, muted",
-      "shows": "Opening painted scene, then the Soft Botanical program, welcome sign and memory cards",
-      "used_on": [
-        "storefront: under the hero"
-      ],
-      "good_for": [
-        "website",
-        "YouTube later",
-        "email (link to it with the poster)"
-      ]
-    },
-    {
-      "id": "pinterest-video-pin",
-      "file": "video/forever-held-pin.mp4",
-      "poster": "video/forever-held-pin-poster.jpg",
-      "shape": "2:3, 1000x1500, 19s, muted",
-      "shows": "Pan across the painted still with the suite: program, welcome sign, memory cards",
-      "used_on": [
-        "Pinterest (posted by the owner, board Celebration of Life Ideas)",
-        "storefront: 'See the whole suite in 19 seconds' section with buy + free checklist buttons"
-      ],
-      "good_for": [
-        "Pinterest video pins",
-        "Instagram/TikTok vertical (crop to 9:16)",
-        "landing page"
-      ]
-    }
-  ],
-  "images": [
-    {
-      "id": "program-cover",
-      "file": "img/program-cover.png"
-    },
-    {
-      "id": "program-inside",
-      "file": "img/program-inside.png"
-    },
-    {
-      "id": "welcome-sign",
-      "file": "img/welcome-sign.png"
-    },
-    {
-      "id": "memory-card",
-      "file": "img/memory-card.png"
-    },
-    {
-      "id": "logo-wide",
-      "file": "brand/logo-wide-tight.png"
-    },
-    {
-      "id": "logo-square",
-      "file": "brand/logo-square.png"
-    },
-    {
-      "id": "holiday-harvest-table",
-      "file": "img/holiday/harvest-table-suite.jpg",
-      "shows": "Harvest Table (Thanksgiving) holiday collection: real fill-in files with sample text",
-      "used_on": [],
-      "good_for": [
-        "pins",
-        "emails",
-        "listings",
-        "social posts"
-      ]
-    },
-    {
-      "id": "holiday-evergreen",
-      "file": "img/holiday/evergreen-suite.jpg",
-      "shows": "Evergreen & Candlelight (Christmas) holiday collection: real fill-in files with sample text",
-      "used_on": [],
-      "good_for": [
-        "pins",
-        "emails",
-        "listings",
-        "social posts"
-      ]
-    },
-    {
-      "id": "holiday-longest-night",
-      "file": "img/holiday/longest-night-suite.jpg",
-      "shows": "Longest Night (Blue Christmas) holiday collection: real fill-in files with sample text",
-      "used_on": [],
-      "good_for": [
-        "pins",
-        "emails",
-        "listings",
-        "social posts"
-      ]
-    },
-    {
-      "id": "holiday-harvest-table-scene",
-      "file": "img/holiday/harvest-table-1.jpg",
-      "shows": "Harvest Table set styled on a table (real files, sample text)",
-      "used_on": [
-        "storefront: Holiday section"
-      ],
-      "good_for": [
-        "pins",
-        "emails",
-        "social posts"
-      ]
-    },
-    {
-      "id": "holiday-evergreen-scene",
-      "file": "img/holiday/evergreen-1.jpg",
-      "shows": "Evergreen set styled on a table (real files, sample text)",
-      "used_on": [
-        "storefront: Holiday section"
-      ],
-      "good_for": [
-        "pins",
-        "emails",
-        "social posts"
-      ]
-    },
-    {
-      "id": "holiday-longest-night-scene",
-      "file": "img/holiday/longest-night-1.jpg",
-      "shows": "Longest Night set styled on a table (real files, sample text)",
-      "used_on": [
-        "storefront: Holiday section"
-      ],
-      "good_for": [
-        "pins",
-        "emails",
-        "social posts"
-      ]
-    }
-  ],
-  "links": {
-    "kit": "https://payhip.com/b/vqNSA",
-    "free_checklist_signup": "https://payhip.com/b/eYJqS",
-    "storefront": "https://foreverheld.pages.dev/",
-    "storefront_backup": "https://recreationalviper.github.io/agent-hq/store/",
-    "payhip_store": "https://payhip.com/ForeverHeld"
+ "about": "Forever Held website media. Agents: use these exact public URLs when you reference or reuse brand media. Add new files here when you publish them on the site.",
+ "base": "https://recreationalviper.github.io/agent-hq/store/",
+ "videos": [
+  {
+   "id": "product-film",
+   "file": "video/forever-held-film.mp4",
+   "poster": "video/forever-held-poster.jpg",
+   "shape": "16:9, 1920x1080, 20s, muted",
+   "shows": "Opening painted scene, then the Soft Botanical program, welcome sign and memory cards",
+   "used_on": [
+    "storefront: under the hero"
+   ],
+   "good_for": [
+    "website",
+    "YouTube later",
+    "email (link to it with the poster)"
+   ]
+  },
+  {
+   "id": "pinterest-video-pin",
+   "file": "video/forever-held-pin.mp4",
+   "poster": "video/forever-held-pin-poster.jpg",
+   "shape": "2:3, 1000x1500, 19s, muted",
+   "shows": "Pan across the painted still with the suite: program, welcome sign, memory cards",
+   "used_on": [
+    "Pinterest (posted by the owner, board Celebration of Life Ideas)",
+    "storefront: 'See the whole suite in 19 seconds' section with buy + free checklist buttons"
+   ],
+   "good_for": [
+    "Pinterest video pins",
+    "Instagram/TikTok vertical (crop to 9:16)",
+    "landing page"
+   ]
   }
+ ],
+ "images": [
+  {
+   "id": "program-cover",
+   "file": "img/program-cover.png"
+  },
+  {
+   "id": "program-inside",
+   "file": "img/program-inside.png"
+  },
+  {
+   "id": "welcome-sign",
+   "file": "img/welcome-sign.png"
+  },
+  {
+   "id": "memory-card",
+   "file": "img/memory-card.png"
+  },
+  {
+   "id": "logo-wide",
+   "file": "brand/logo-wide-tight.png"
+  },
+  {
+   "id": "logo-square",
+   "file": "brand/logo-square.png"
+  },
+  {
+   "id": "holiday-harvest-table",
+   "file": "img/holiday/harvest-table-suite.jpg",
+   "shows": "Harvest Table (Thanksgiving) holiday collection: real fill-in files with sample text",
+   "used_on": [],
+   "good_for": [
+    "pins",
+    "emails",
+    "listings",
+    "social posts"
+   ]
+  },
+  {
+   "id": "holiday-evergreen",
+   "file": "img/holiday/evergreen-suite.jpg",
+   "shows": "Evergreen & Candlelight (Christmas) holiday collection: real fill-in files with sample text",
+   "used_on": [],
+   "good_for": [
+    "pins",
+    "emails",
+    "listings",
+    "social posts"
+   ]
+  },
+  {
+   "id": "holiday-longest-night",
+   "file": "img/holiday/longest-night-suite.jpg",
+   "shows": "Longest Night (Blue Christmas) holiday collection: real fill-in files with sample text",
+   "used_on": [],
+   "good_for": [
+    "pins",
+    "emails",
+    "listings",
+    "social posts"
+   ]
+  },
+  {
+   "id": "holiday-harvest-table-scene",
+   "file": "img/holiday/harvest-table-1.jpg",
+   "shows": "Harvest Table set styled on a table (real files, sample text)",
+   "used_on": [
+    "storefront: Holiday section"
+   ],
+   "good_for": [
+    "pins",
+    "emails",
+    "social posts"
+   ]
+  },
+  {
+   "id": "holiday-evergreen-scene",
+   "file": "img/holiday/evergreen-1.jpg",
+   "shows": "Evergreen set styled on a table (real files, sample text)",
+   "used_on": [
+    "storefront: Holiday section"
+   ],
+   "good_for": [
+    "pins",
+    "emails",
+    "social posts"
+   ]
+  },
+  {
+   "id": "holiday-longest-night-scene",
+   "file": "img/holiday/longest-night-1.jpg",
+   "shows": "Longest Night set styled on a table (real files, sample text)",
+   "used_on": [
+    "storefront: Holiday section"
+   ],
+   "good_for": [
+    "pins",
+    "emails",
+    "social posts"
+   ]
+  },
+  {
+   "id": "page-e-card",
+   "file": "img/holiday/pages/e-card.jpg",
+   "what": "real page render from the fill-in PDF",
+   "used_on": [
+    "evergreen-candlelight.html"
+   ]
+  },
+  {
+   "id": "page-e-orn",
+   "file": "img/holiday/pages/e-orn.jpg",
+   "what": "real page render from the fill-in PDF",
+   "used_on": [
+    "evergreen-candlelight.html"
+   ]
+  },
+  {
+   "id": "page-e-sign",
+   "file": "img/holiday/pages/e-sign.jpg",
+   "what": "real page render from the fill-in PDF",
+   "used_on": [
+    "evergreen-candlelight.html"
+   ]
+  },
+  {
+   "id": "page-h-card",
+   "file": "img/holiday/pages/h-card.jpg",
+   "what": "real page render from the fill-in PDF",
+   "used_on": [
+    "harvest-table.html"
+   ]
+  },
+  {
+   "id": "page-h-cards",
+   "file": "img/holiday/pages/h-cards.jpg",
+   "what": "real page render from the fill-in PDF",
+   "used_on": [
+    "harvest-table.html"
+   ]
+  },
+  {
+   "id": "page-h-place",
+   "file": "img/holiday/pages/h-place.jpg",
+   "what": "real page render from the fill-in PDF",
+   "used_on": [
+    "harvest-table.html"
+   ]
+  },
+  {
+   "id": "page-h-sign",
+   "file": "img/holiday/pages/h-sign.jpg",
+   "what": "real page render from the fill-in PDF",
+   "used_on": [
+    "harvest-table.html"
+   ]
+  },
+  {
+   "id": "page-l-card",
+   "file": "img/holiday/pages/l-card.jpg",
+   "what": "real page render from the fill-in PDF",
+   "used_on": [
+    "longest-night.html"
+   ]
+  },
+  {
+   "id": "page-l-prog1",
+   "file": "img/holiday/pages/l-prog1.jpg",
+   "what": "real page render from the fill-in PDF",
+   "used_on": [
+    "longest-night.html"
+   ]
+  },
+  {
+   "id": "page-l-sign",
+   "file": "img/holiday/pages/l-sign.jpg",
+   "what": "real page render from the fill-in PDF",
+   "used_on": [
+    "longest-night.html"
+   ]
+  }
+ ],
+ "links": {
+  "kit": "https://payhip.com/b/vqNSA",
+  "free_checklist_signup": "https://payhip.com/b/eYJqS",
+  "storefront": "https://foreverheld.pages.dev/",
+  "storefront_backup": "https://recreationalviper.github.io/agent-hq/store/",
+  "payhip_store": "https://payhip.com/ForeverHeld",
+  "holiday_harvest_table_page": "https://foreverheld.pages.dev/harvest-table.html",
+  "holiday_evergreen_page": "https://foreverheld.pages.dev/evergreen-candlelight.html",
+  "holiday_longest_night_page": "https://foreverheld.pages.dev/longest-night.html"
+ }
 }

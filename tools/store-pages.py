@@ -237,7 +237,7 @@ page("guides", "Planning guides", "Gentle, practical guides for planning a funer
 <div class="cards">{cards or '<div class="glass"><b>Coming soon</b><span>Our first guides are on the way.</span></div>'}</div>''')
 
 # ---------------- sitemap + robots ----------------
-urls = ["", "guides.html", "contact.html", "about.html", "terms.html", "refunds.html", "privacy.html", "accessibility.html"] + [f'{g["slug"]}.html' for g in guides]
+urls = ["", "guides.html", "contact.html", "about.html", "terms.html", "refunds.html", "privacy.html", "accessibility.html", "harvest-table.html", "evergreen-candlelight.html", "longest-night.html"] + [f'{g["slug"]}.html' for g in guides]
 (STORE / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"  <url><loc>{SITE}/{u}</loc></url>\n" for u in urls) + "</urlset>\n")
 (STORE / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /landing/\nSitemap: {SITE}/sitemap.xml\n")
 
