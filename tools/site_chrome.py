@@ -82,7 +82,7 @@ def chrome(home=False):
 </div>
 <button class="fh-chatbtn" type="button" data-fh-chat aria-label="Ask the Forever Held assistant">{I_CHAT}<span>Ask us</span></button>
 <section class="fh-chat" id="fh-chat" role="dialog" aria-label="Forever Held assistant" hidden>
-  <header><div><b>Forever Held assistant</b><small>Automated answers, any time. A real person replies via <a href="contact.html">Contact us</a>.</small></div><button class="fh-icon" type="button" data-fh-close aria-label="Close chat">{I_CLOSE}</button></header>
+  <header><span class="fh-av"><img src="brand/mark.svg" alt=""></span><div class="fh-who"><b>Forever Held assistant</b><small>Automated answers, any time. A real person replies via <a href="contact.html">Contact us</a>.</small></div><button class="fh-icon" type="button" data-fh-close aria-label="Close chat">{I_CLOSE}</button></header>
   <div class="fh-log" aria-live="polite"></div>
   <form class="fh-cform"><textarea name="m" rows="1" maxlength="1200" placeholder="Ask a question…" aria-label="Your question"></textarea><button type="submit" aria-label="Send">{I_SEND}</button></form>
 </section>
