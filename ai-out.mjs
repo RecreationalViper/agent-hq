@@ -38,7 +38,7 @@ async function load() {
 // Which allowance a request uses: "Gemini:<model>", "Groq", "Cloudflare", "OpenRouter", "Requesty". null = not tracked.
 export function outKey(url, init) {
   if ((init?.method || "GET").toUpperCase() !== "POST") return null;
-  if (/generativelanguage\.googleapis\.com|\/google-ai-studio\//.test(url)) { const m = url.match(/models\/([^:/?]+):generateContent/); return m ? `Gemini:${m[1]}` : null; }
+  if (/generativelanguage\.googleapis\.com|\/google-ai-studio\//.test(url)) { const m = url.match(/models\/([^:/?]+):generateContent/); const studio = process.env.STUDIO_GEMINI_API_KEY && JSON.stringify(init?.headers || {}).includes(process.env.STUDIO_GEMINI_API_KEY.trim()); return m ? `${studio ? "GeminiStudio" : "Gemini"}:${m[1]}` : null; }
   if (/\/chat\/completions/.test(url)) {
     if (/api\.groq\.com|\/groq\//.test(url)) return "Groq";
     if (/openrouter\.ai|\/openrouter\//.test(url)) return "OpenRouter";
@@ -62,6 +62,7 @@ function resetAt(key) {
 }
 const DAILY = {
   Gemini: /PerDay|per day|daily/i,
+  GeminiStudio: /PerDay|per day|daily/i,
   Groq: /tokens per day|requests per day|\bTPD\b|\bRPD\b/i,
   Cloudflare: /daily free allocation|neurons/i,
   OpenRouter: /per-day|per day|free-models-per-day|daily/i,

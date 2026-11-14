@@ -21,6 +21,25 @@ async function section(title, fn) {
   catch (e) { sections.push(`## ${title}\n(unavailable today: ${e.message})`); console.log(`studio-live: ${title} failed: ${e.message}`); }
 }
 
+await section("Google Trends: what's spiking in search right now, worldwide", async () => {
+  const geos = { US: "United States", GB: "United Kingdom", CA: "Canada", JP: "Japan", KR: "South Korea", BR: "Brazil", MX: "Mexico", PH: "Philippines", IN: "India" };
+  const dec = (x = "") => x.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1").replace(/&amp;/g, "&").replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"').trim();
+  let out = "", ok = 0;
+  for (const [geo, name] of Object.entries(geos)) {
+    try {
+      const r = await fetch(`https://trends.google.com/trending/rss?geo=${geo}`, { signal: AbortSignal.timeout(20000), headers: { "User-Agent": UA } });
+      if (!r.ok) throw new Error(`${r.status}`);
+      const items = [...(await r.text()).matchAll(/<item>([\s\S]*?)<\/item>/g)].slice(0, 12).map(([, it]) => {
+        const g = (t) => dec((it.match(new RegExp(`<${t}>([\\s\\S]*?)</${t}>`)) || [])[1]);
+        return `${g("title")} (${g("ht:approx_traffic") || "?"}${g("ht:news_item_title") ? `; "${g("ht:news_item_title").slice(0, 90)}"` : ""})`;
+      });
+      out += `\n- **${name}:** ${items.join(" · ") || "none"}`; ok++;
+    } catch (e) { out += `\n- **${name}:** unavailable (${e.message})`; }
+  }
+  if (!ok) throw new Error("all Google Trends feeds failed");
+  return "Searches spiking in the last 24h per country (approx. searches). Pick out movies, shows, anime, games, actors and music." + out;
+});
+
 await section("Wikipedia: most-read articles yesterday (what people are curious about)", async () => {
   for (const back of [1, 2]) {
     const d = new Date(Date.now() - back * 864e5);
