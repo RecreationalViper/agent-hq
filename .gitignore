@@ -2,3 +2,4 @@ content/*/*.jpg
 content/*/*.pdf
 content/*/_*.html
 .film/
+__pycache__/

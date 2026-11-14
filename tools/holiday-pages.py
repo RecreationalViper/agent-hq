@@ -6,6 +6,7 @@ Fonts: store/fonts/*.woff (self-hosted, OFL). Usage: python3 tools/holiday-pages
 import json
 from html import escape as e
 from pathlib import Path
+import site_chrome as SC  # shared menu, search and assistant chat
 
 ROOT = Path(__file__).resolve().parent.parent
 STORE = ROOT / "store"
@@ -121,6 +122,8 @@ a{color:inherit}
 .nav{position:sticky;top:12px;z-index:5;margin:12px auto 0;max-width:1160px;width:calc(100%% - 24px);display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 18px;border-radius:999px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"%(serif)s",Georgia,serif;font-size:19px}
 .brand img{width:26px;height:26px}
+.brand{white-space:nowrap}
+@media (max-width:420px){.nav .np{display:none}}
 .nav .links{display:flex;gap:6px;align-items:center}
 .nav .links a{text-decoration:none;font-size:14px;padding:10px 14px;border-radius:999px;min-height:40px;display:inline-flex;align-items:center}
 .nav .links a.small{opacity:.8}
@@ -218,8 +221,8 @@ def build(s):
 <body>
 <div class="bg" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div><div class="{layer_cls}" aria-hidden="true">{layer_html}</div>
 <nav class="nav glass" aria-label="Main">
-  <a class="brand" href="./"><img src="brand/mark.svg" alt="">Forever Held</a>
-  <div class="links"><a class="small" href="#inside">What's inside</a><a class="small" href="contact.html">Contact</a><a class="btn amber" style="min-height:40px;padding:0 18px;font-size:14px" href="{checkout}">Get it · {price}</a></div>
+  <div class="fh-navl">{SC.MENU_BTN}<a class="brand" href="./"><img src="brand/mark.svg" alt="">Forever Held</a></div>
+  <div class="links">{SC.SEARCH_BTN}<a class="btn amber" style="min-height:40px;padding:0 18px;font-size:14px" href="{checkout}">Get it<span class="np"> · {price}</span></a></div>
 </nav>
 <main class="wrap">
   <header class="hero">
@@ -257,8 +260,10 @@ def build(s):
 </body>
 </html>
 '''
-    (STORE / f'{s["slug"]}.html').write_text(html)
+    (STORE / f'{s["slug"]}.html').write_text(SC.install(html))
     print("wrote", s["slug"] + ".html", len(html) // 1024, "KB")
 
 for s in SETS:
     build(s)
+SC.thumbs()
+print("search index:", SC.build_index(), "entries")

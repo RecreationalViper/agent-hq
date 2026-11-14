@@ -36,6 +36,8 @@ a{color:inherit}
 .nav{position:sticky;top:12px;z-index:5;margin:12px auto 0;max-width:1160px;width:calc(100% - 24px);display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 18px;border-radius:999px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"GFS Baskerville",Georgia,serif;font-size:19px}
 .brand img{width:26px;height:26px}
+.brand{white-space:nowrap}
+@media (max-width:420px){.nav .np{display:none}}
 .nav .links{display:flex;gap:6px;align-items:center}
 .nav .links a{text-decoration:none;font-size:14px;padding:10px 14px;border-radius:999px;min-height:40px;display:inline-flex;align-items:center}
 .nav .links a.small{opacity:.8}
@@ -90,12 +92,45 @@ h2{font-family:"GFS Baskerville",Georgia,serif;font-weight:400;font-size:clamp(3
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Evergreen & Candlelight - Christmas memorial printables", "description": "A Christmas memorial set: a candle table sign, holiday memory cards and ornament keepsake cards with their name. Fill in on your phone, print at home.", "image": "https://foreverheld.pages.dev/img/holiday/pages/e-sign.jpg", "brand": {"@type": "Brand", "name": "Forever Held"}, "offers": {"@type": "Offer", "price": "8.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://payhip.com/b/rdhVQ"}}</script>
+<link rel="stylesheet" href="chrome.css">
+<script src="js/site.js" defer></script>
 </head>
 <body>
+<!--fh-chrome-->
+<div class="fh-scrim" data-fh-close hidden></div>
+<aside class="fh-drawer" id="fh-drawer" aria-label="Menu" hidden>
+  <div class="fh-dhead"><a class="fh-brand" href="index.html"><img src="brand/mark.svg" alt="">Forever Held</a><button class="fh-icon" type="button" data-fh-close aria-label="Close menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <button class="fh-dsearch" type="button" data-fh-search><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><span>Search products and help</span></button>
+  <nav class="fh-dnav" aria-label="Store">
+    <p class="fh-label">Holiday 2026</p><a class="fh-prod" href="harvest-table.html"><img src="img/thumbs/harvest-table.jpg" alt="" loading="lazy" width="48" height="60"><span><b>Harvest Table</b><small>Thanksgiving · $7.99</small></span></a><a class="fh-prod" href="evergreen-candlelight.html"><img src="img/thumbs/evergreen.jpg" alt="" loading="lazy" width="48" height="60"><span><b>Evergreen &amp; Candlelight</b><small>Christmas · $8.99</small></span></a><a class="fh-prod" href="longest-night.html"><img src="img/thumbs/longest-night.jpg" alt="" loading="lazy" width="48" height="60"><span><b>Longest Night</b><small>Blue Christmas service · $9.99</small></span></a>
+    <p class="fh-label">Memorial suites</p><a class="fh-prod" href="index.html#suite"><img src="img/thumbs/soft-botanical.jpg" alt="" loading="lazy" width="48" height="60"><span><b>Soft Botanical suite</b><small>Funeral &amp; celebration of life · $12.99</small></span></a>
+    <a class="fh-free" href="https://payhip.com/b/eYJqS">Free planning checklist <small>Printable, sent to your email</small></a>
+    <details class="fh-acc" open><summary>Help</summary>
+      <a href="index.html#how">How it works</a><a href="guides.html">Planning guides</a><a href="index.html#faq-title">Questions families ask</a><button type="button" data-fh-chat>Ask our assistant</button><a href="contact.html">Contact us</a>
+    </details>
+    <details class="fh-acc"><summary>About &amp; policies</summary>
+      <a href="about.html">About Forever Held</a><a href="terms.html">Terms of sale</a><a href="refunds.html">Refund policy</a><a href="privacy.html">Privacy policy</a><a href="accessibility.html">Accessibility</a>
+    </details>
+  </nav>
+  <p class="fh-dfoot">Instant download · Secure checkout by Payhip</p>
+</aside>
+<div class="fh-search" id="fh-search" role="dialog" aria-modal="true" aria-label="Search the store" hidden>
+  <div class="fh-sbox">
+    <form class="fh-sform" role="search" action="#"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input type="search" name="q" placeholder="Search programs, signs, holidays, help…" aria-label="Search" autocomplete="off" enterkeyhint="search"><button class="fh-icon" type="button" data-fh-close aria-label="Close search"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></form>
+    <div class="fh-results" aria-live="polite"></div>
+  </div>
+</div>
+<button class="fh-chatbtn" type="button" data-fh-chat aria-label="Ask the Forever Held assistant"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10H9l-5 4v-14z"/></svg><span>Ask us</span></button>
+<section class="fh-chat" id="fh-chat" role="dialog" aria-label="Forever Held assistant" hidden>
+  <header><div><b>Forever Held assistant</b><small>Automated answers, any time. A real person replies via <a href="contact.html">Contact us</a>.</small></div><button class="fh-icon" type="button" data-fh-close aria-label="Close chat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
+  <div class="fh-log" aria-live="polite"></div>
+  <form class="fh-cform"><textarea name="m" rows="1" maxlength="1200" placeholder="Ask a question…" aria-label="Your question"></textarea><button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button></form>
+</section>
+<!--/fh-chrome-->
 <div class="bg" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div><div class="bok" aria-hidden="true"><i style="left:0%;top:0%;width:40px;height:40px;opacity:0.08"></i><i style="left:71%;top:37%;width:63px;height:63px;opacity:0.14"></i><i style="left:42%;top:74%;width:86px;height:86px;opacity:0.19"></i><i style="left:13%;top:21%;width:109px;height:109px;opacity:0.25"></i><i style="left:84%;top:58%;width:42px;height:42px;opacity:0.08"></i><i style="left:55%;top:5%;width:65px;height:65px;opacity:0.14"></i><i style="left:26%;top:42%;width:88px;height:88px;opacity:0.19"></i><i style="left:97%;top:79%;width:111px;height:111px;opacity:0.25"></i><i style="left:68%;top:26%;width:44px;height:44px;opacity:0.08"></i><i style="left:39%;top:63%;width:67px;height:67px;opacity:0.14"></i><i style="left:10%;top:10%;width:90px;height:90px;opacity:0.19"></i><i style="left:81%;top:47%;width:113px;height:113px;opacity:0.25"></i><i style="left:52%;top:84%;width:46px;height:46px;opacity:0.08"></i><i style="left:23%;top:31%;width:69px;height:69px;opacity:0.14"></i><i style="left:94%;top:68%;width:92px;height:92px;opacity:0.19"></i><i style="left:65%;top:15%;width:115px;height:115px;opacity:0.25"></i><i style="left:36%;top:52%;width:48px;height:48px;opacity:0.08"></i><i style="left:7%;top:89%;width:71px;height:71px;opacity:0.14"></i><i style="left:78%;top:36%;width:94px;height:94px;opacity:0.19"></i><i style="left:49%;top:73%;width:117px;height:117px;opacity:0.25"></i><i style="left:20%;top:20%;width:50px;height:50px;opacity:0.08"></i><i style="left:91%;top:57%;width:73px;height:73px;opacity:0.14"></i><i style="left:62%;top:4%;width:96px;height:96px;opacity:0.19"></i><i style="left:33%;top:41%;width:119px;height:119px;opacity:0.25"></i><i style="left:4%;top:78%;width:52px;height:52px;opacity:0.08"></i><i style="left:75%;top:25%;width:75px;height:75px;opacity:0.14"></i></div>
 <nav class="nav glass" aria-label="Main">
-  <a class="brand" href="./"><img src="brand/mark.svg" alt="">Forever Held</a>
-  <div class="links"><a class="small" href="#inside">What's inside</a><a class="small" href="contact.html">Contact</a><a class="btn amber" style="min-height:40px;padding:0 18px;font-size:14px" href="https://payhip.com/b/rdhVQ">Get it · $8.99</a></div>
+  <div class="fh-navl"><button class="fh-icon" type="button" data-fh-menu aria-label="Menu" aria-controls="fh-drawer" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><a class="brand" href="./"><img src="brand/mark.svg" alt="">Forever Held</a></div>
+  <div class="links"><button class="fh-icon" type="button" data-fh-search aria-label="Search the store" aria-controls="fh-search" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></button><a class="btn amber" style="min-height:40px;padding:0 18px;font-size:14px" href="https://payhip.com/b/rdhVQ">Get it<span class="np"> · $8.99</span></a></div>
 </nav>
 <main class="wrap">
   <header class="hero">

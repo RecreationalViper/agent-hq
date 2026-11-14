@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["workers/sales/**", "discord.json", "agents.json"]
+    paths: ["workers/sales/**", "discord.json", "agents.json", "tools/deploy-sales-feed.mjs"]
 permissions:
   contents: write
 concurrency: agent-hq
@@ -27,6 +27,9 @@ jobs:
           EMAILOCTOPUS_API_KEY: ${{ secrets.EMAILOCTOPUS_API_KEY }}
           CANVA_CLIENT_ID: ${{ secrets.CANVA_CLIENT_ID }}
           CANVA_CLIENT_SECRET: ${{ secrets.CANVA_CLIENT_SECRET }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
       - name: Save the feed address
         run: |
           git config user.name "agent-hq-bot"

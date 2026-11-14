@@ -2,6 +2,7 @@
 and refreshes the shared nav + footer on store/index.html. Run: python3 tools/store-pages.py
 Edit the CONTENT below, then re-run. Styles live in store/site.css. Rules: skills/web/SKILL.md."""
 import re, pathlib, json, html as H
+import site_chrome as SC  # shared menu, search and assistant chat (tools/site_chrome.py)
 
 STORE = pathlib.Path(__file__).resolve().parent.parent / "store"
 UPDATED = "November 12, 2026"
@@ -15,8 +16,8 @@ GARDEN = re.search(r'<div class="garden".*?</div>\n', (STORE / "index.html").rea
 def nav(home=False):
     h = "" if home else "index.html"
     return f'''<nav class="nav glass" aria-label="Main">
-  <a class="brand" href="{h or '#top'}"><img src="brand/mark.svg" alt="">Forever Held</a>
-  <div class="navlinks"><a class="txt hide-sm" href="{h}#how">How it works</a><a class="txt" href="contact.html">Contact</a><a class="btn btn-sage" href="{h}#suite">Shop</a></div>
+  <div class="fh-navl">{SC.MENU_BTN}<a class="brand" href="{h or '#top'}"><img src="brand/mark.svg" alt="">Forever Held</a></div>
+  <div class="navlinks">{SC.SEARCH_BTN}<a class="btn btn-sage" href="{h}#suite">Shop</a></div>
 </nav>
 '''
 
@@ -80,7 +81,7 @@ def page(slug, title, desc, body, script="", head_extra=""):
 {footer()}{script}</body>
 </html>
 '''
-    (STORE / f"{slug}.html").write_text(html)
+    (STORE / f"{slug}.html").write_text(SC.install(html))
 
 def legal(slug, title, desc, intro, sections):
     body = f'<header class="page-head"><h1>{title}</h1><p>{intro}</p><p class="updated">Last updated: {UPDATED}</p></header>\n<article class="panel glass legal">\n'
@@ -248,5 +249,7 @@ s = re.sub(r'<nav class="nav glass".*?</nav>\n', nav(home=True), s, flags=re.S)
 s = re.sub(r'<footer>.*?</footer>\n', footer(home=True), s, flags=re.S)
 if 'class="trust"' not in s:
     s = s.replace('<section aria-labelledby="faq-title">', '<p class="trust"><span>Instant download</span><span>Secure checkout by Payhip</span><span>Help from a real person</span><span><a href="refunds.html">Fair refund policy</a></span></p>\n\n  <section aria-labelledby="faq-title">', 1)
-p.write_text(s)
+p.write_text(SC.install(s, home=True))
+SC.thumbs()
+print("search index:", SC.build_index(), "entries")
 print("built:", ", ".join(sorted(x.name for x in STORE.glob("*.html"))))

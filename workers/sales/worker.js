@@ -5,6 +5,7 @@
 //   GET  /sales?days=30  recent sales for the agents (needs header x-read-token)
 //   POST /discord        Discord slash commands (/status, /sales, /ask, /run), owner/admins only
 //   POST /contact        storefront contact form -> KV (12 months) + Discord #sales (customer care)
+//   POST /chat           website assistant: answers shoppers from the site's own knowledge (store/search.json) + free AI keys
 //   GET  /canva/connect?key=...   owner-only: one-time "Connect Canva" sign-in (OAuth with PKCE)
 //   GET  /canva/callback          Canva sends the owner back here; tokens are kept in KV, never shown
 //   POST /canva/token             agents get a fresh Canva access token (needs header x-read-token)
@@ -59,6 +60,7 @@ export default {
     if (req.method === "POST" && url.pathname === "/discord") return discord(req, env, ctx);
     if (url.pathname.startsWith("/canva/")) return canva(req, url, env);
     if (url.pathname === "/contact") return contact(req, env);
+    if (url.pathname === "/chat") return chat(req, env, ctx);
     if (url.pathname === "/contacts") return contactsInbox(req, url, env);
     if (url.pathname === "/unsubscribe") return unsubscribe(req, url, env);
     if (url.pathname === "/privacy") return new Response(PRIVACY, { headers: { "content-type": "text/html; charset=utf-8" } });
@@ -347,4 +349,119 @@ async function unsubscribe(req, url, env) {
   }
   if (req.method === "POST") return new Response(null, { status: 204 });
   return html("You're unsubscribed", "You won't get any more emails from Forever Held. We're sorry for your loss, and we wish you peace.");
+}
+
+// ---------- Website assistant (POST /chat) ----------
+// The chat box on every store page. Knowledge = the live site's search.json (products, pages, guides, FAQ),
+// rebuilt on every store publish, so the assistant always matches the site. Free AI keys in order:
+// Groq -> Gemini -> Workers AI -> OpenRouter (:free). No chat text is stored. Soft limits use the
+// Cache API (no KV writes, the free plan only allows 1,000 a day).
+const SITE = "https://foreverheld.pages.dev";
+const CHAT_RULES = `You are the Forever Held assistant on the Forever Held website (${SITE}). Forever Held makes gentle printable memorial keepsakes: fill-in PDF files people type into in the free Adobe Acrobat Reader app on a phone or computer, then print at home or at a print shop (Staples, Office Depot, FedEx Office). Nothing is shipped. Buyers never need Canva or any paid app.
+
+Who you help: families planning a funeral, memorial, celebration of life, burial, cremation or a holiday without someone; and churches, pastors, chaplains, hospices, funeral homes and grief groups planning services.
+
+What you know: everything about funeral and memorial planning in the US and beyond, explained warmly and practically: what to do first after a death, death certificates, funeral homes and the FTC Funeral Rule (itemized price lists), costs (give typical US ranges and say they vary by area), burial vs cremation vs green burial, viewings, visitations and wakes, graveside and committal services, scattering ashes, columbaria, headstones, military honors, veterans' benefits, obituaries and eulogies (you can draft them), orders of service and readings, what pastors, priests, rabbis, imams and celebrants do and how to ask them, religious and cultural customs (Christian, Catholic, Jewish, Muslim, Hindu, Buddhist, secular and more), etiquette for guests, flowers and donations, thank-you notes, Blue Christmas and Longest Night services, and grief through the holidays.
+
+Rules:
+- Be calm, kind and clear. Plain words. Usually under 170 words; longer only when asked to write something (a eulogy, obituary, program wording, a prayer or reading).
+- Products, prices, sizes, policies and links: use ONLY the STORE FACTS below. Never invent a product, size, price, discount, review or policy. If the facts don't cover it, say so and point to ${SITE}/contact.html.
+- Mention a Forever Held product only when it truly fits the question, at most once per answer, with its page link. Never pressure. Planning help comes first.
+- You can't see orders, payments or downloads. For order help, refunds or a lost download link, send them to ${SITE}/contact.html, where a real person replies.
+- Laws and rules differ by state and country (who can sign certificates, ash scattering, home funerals). Give the general picture and suggest confirming with a local funeral director or the state.
+- You are an automated assistant, not a person. If asked, say so plainly, and that a real person answers through the contact page.
+- Don't name the company or model behind you. Don't give medical, legal or financial advice beyond general information.
+- If someone says they want to die or hurt themselves, respond with care and give the 988 Suicide & Crisis Lifeline (call or text 988 in the US) and emergency services (911).
+- Write plain text. Short paragraphs; "- " for lists; full https links. No markdown headings, tables or bold.`;
+
+async function chat(req, env, ctx) {
+  const origin = req.headers.get("origin") || "";
+  const okOrigin = CONTACT_ORIGINS.includes(origin) || /^https:\/\/[a-z0-9-]+\.foreverheld\.pages\.dev$/.test(origin) || /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin);
+  const cors = { "access-control-allow-origin": okOrigin ? origin : CONTACT_ORIGINS[0], "access-control-allow-methods": "POST, OPTIONS", "access-control-allow-headers": "content-type", vary: "origin" };
+  const reply = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store", ...cors } });
+  if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
+  if (req.method !== "POST") return reply({ ok: false, error: "method" }, 405);
+  if (!okOrigin) return reply({ ok: false, error: "forbidden" }, 403);
+  let d; try { d = await req.json(); } catch { return reply({ ok: false, error: "bad request" }, 400); }
+  const clean = (v, n) => String(v ?? "").replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, "").trim().slice(0, n);
+  const history = (Array.isArray(d.messages) ? d.messages : []).slice(-10)
+    .map((m) => ({ role: m?.role === "assistant" ? "assistant" : "user", content: clean(m?.content, m?.role === "assistant" ? 1500 : 1200) }))
+    .filter((m) => m.content);
+  if (!history.length || history[history.length - 1].role !== "user") return reply({ ok: false, error: "empty" }, 400);
+
+  // soft limits per data center: 40 messages per hour per visitor, 2,500 a day overall
+  const ip = req.headers.get("cf-connecting-ip") || "x";
+  const hour = new Date().toISOString().slice(0, 13), day = hour.slice(0, 10);
+  const userN = await bump(`chat-ip/${await sha256(ip + hour)}`, 3600, ctx);
+  const dayN = await bump(`chat-day/${day}`, 86400, ctx);
+  if (userN > 40 || dayN > 2500) return reply({ ok: false, error: "busy", text: `I'm getting a lot of questions right now. Please try again a little later, or send us a message at ${SITE}/contact.html and a real person will reply.` }, 429);
+
+  const facts = await storeFacts(history.filter((m) => m.role === "user").slice(-3).map((m) => m.content).join(" "), ctx);
+  const system = `${CHAT_RULES}\n\nSTORE FACTS (today is ${day}):\n${facts}`;
+  for (const ask of [groqChat, geminiChat, workersChat, openRouterChat]) {
+    try {
+      const text = (await ask(env, system, history))?.trim();
+      if (text) return reply({ ok: true, text: text.replace(/\*\*(.+?)\*\*/g, "$1").replace(/^#+\s*/gm, "").slice(0, 6000) });
+    } catch (e) { console.log(`chat: ${ask.name} failed: ${String(e.message || e).slice(0, 200)}`); }
+  }
+  return reply({ ok: false, error: "unavailable", text: `Sorry, I can't answer right now. Please try again in a minute, or message us at ${SITE}/contact.html and a real person will help.` }, 503);
+}
+
+async function bump(key, ttl, ctx) {
+  const k = new Request(`https://chat-limits.internal/${key}`), c = caches.default;
+  const n = (Number(await (await c.match(k))?.text()) || 0) + 1;
+  ctx.waitUntil(c.put(k, new Response(String(n), { headers: { "cache-control": `max-age=${ttl}` } })));
+  return n;
+}
+
+// Products always; plus the 4 pages/guides/FAQ entries that best match the question.
+async function storeFacts(q, ctx) {
+  let idx = [];
+  try {
+    const r = await fetch(`${SITE}/search.json`, { cf: { cacheTtl: 600, cacheEverything: true } });
+    if (r.ok) idx = (await r.json()).items || [];
+  } catch {}
+  if (!idx.length) return "(The store details could not be loaded. For product questions, point to " + SITE + " and " + SITE + "/contact.html.)";
+  const words = [...new Set(q.toLowerCase().match(/[a-z0-9]{3,}/g) || [])].filter((w) => !STOP.has(w));
+  const score = (it) => { const t = `${it.title} ${it.title} ${it.desc || ""} ${it.text || ""}`.toLowerCase(); return words.reduce((s, w) => s + (t.includes(w) ? (it.title.toLowerCase().includes(w) ? 3 : 1) : 0), 0); };
+  const products = idx.filter((it) => it.group === "Products");
+  const rest = idx.filter((it) => it.group !== "Products").map((it) => [score(it), it]).filter(([s]) => s > 0).sort((a, b) => b[0] - a[0]).slice(0, 4).map(([, it]) => it);
+  const fmt = (it, n) => `- ${it.title} (${SITE}/${it.url}): ${(it.text || it.desc || "").replace(/\s+/g, " ").slice(0, n)}`;
+  return `Products:\n${products.map((it) => fmt(it, 900)).join("\n")}\n\nRelevant pages:\n${rest.map((it) => fmt(it, 1600)).join("\n") || "(none matched)"}\n\nOther pages: ${idx.filter((it) => it.group !== "Products").map((it) => `${it.title} ${SITE}/${it.url}`).slice(0, 25).join("; ")}`;
+}
+const STOP = new Set("the and for you your are can how what with this that have does from about when where which will would should could there their them they our out any all get got just like want need into was were been its it's than then also more most some such very".split(" "));
+
+const timeout = () => AbortSignal.timeout(25000);
+async function openAiStyle(url, key, model, system, history, extra = {}) {
+  const r = await fetch(url, { method: "POST", signal: timeout(), headers: { authorization: `Bearer ${key}`, "content-type": "application/json" },
+    body: JSON.stringify({ model, messages: [{ role: "system", content: system }, ...history], max_tokens: 1400, temperature: 0.5, ...extra }) });
+  if (!r.ok) throw new Error(`${model} HTTP ${r.status} ${(await r.text()).slice(0, 120)}`);
+  return (await r.json()).choices?.[0]?.message?.content || "";
+}
+async function groqChat(env, system, history) {
+  if (!env.GROQ_API_KEY) throw new Error("no key");
+  return openAiStyle("https://api.groq.com/openai/v1/chat/completions", env.GROQ_API_KEY, "openai/gpt-oss-120b", system, history, { reasoning_effort: "low" });
+}
+async function geminiChat(env, system, history) {
+  if (!env.GEMINI_API_KEY) throw new Error("no key");
+  for (const model of ["gemini-flash-latest", "gemini-2.5-flash", "gemini-flash-lite-latest"]) {
+    const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", signal: timeout(),
+      headers: { "x-goog-api-key": env.GEMINI_API_KEY, "content-type": "application/json" },
+      body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents: history.map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] })), generationConfig: { maxOutputTokens: 1400, temperature: 0.5, thinkingConfig: { thinkingBudget: 0 } } }) });
+    if (r.status === 404 || r.status === 429) continue;
+    if (!r.ok) throw new Error(`gemini HTTP ${r.status}`);
+    const j = await r.json();
+    const t = (j.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("");
+    if (t) return t;
+  }
+  throw new Error("gemini: no model answered");
+}
+async function workersChat(env, system, history) {
+  if (!env.AI) throw new Error("no binding");
+  const out = await env.AI.run("@cf/openai/gpt-oss-120b", { instructions: system, input: history.map((m) => `${m.role === "assistant" ? "Assistant" : "Visitor"}: ${m.content}`).join("\n\n") + "\n\nAssistant:", reasoning: { effort: "low" } });
+  return typeof out === "string" ? out : out?.output_text || out?.response || (out?.output || []).flatMap((o) => o.content || []).map((c) => c.text || "").join("") || "";
+}
+async function openRouterChat(env, system, history) {
+  if (!env.OPENROUTER_API_KEY) throw new Error("no key");
+  return openAiStyle("https://openrouter.ai/api/v1/chat/completions", env.OPENROUTER_API_KEY, "openai/gpt-oss-120b:free", system, history);
 }

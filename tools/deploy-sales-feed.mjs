@@ -57,6 +57,10 @@ if (app?.verify_key) {
   if (process.env.GH_DISPATCH_TOKEN?.trim()) bindings.push({ type: "secret_text", name: "GH_TOKEN", text: process.env.GH_DISPATCH_TOKEN.trim() });
   console.log(`Discord commands: on${process.env.GH_DISPATCH_TOKEN?.trim() ? " (with /run)" : " (/run waits for GH_DISPATCH_TOKEN)"}`);
 }
+// Website assistant (POST /chat): free AI keys, tried in order Groq -> Gemini -> Workers AI -> OpenRouter
+for (const [name, v] of [["GROQ_API_KEY", process.env.GROQ_API_KEY], ["GEMINI_API_KEY", process.env.GEMINI_API_KEY], ["OPENROUTER_API_KEY", process.env.OPENROUTER_API_KEY]]) if (v?.trim()) bindings.push({ type: "secret_text", name, text: v.trim() });
+if (!bindings.some((b) => b.type === "ai")) bindings.push({ type: "ai", name: "AI" });
+console.log(`Website assistant keys: ${bindings.filter((b) => /GROQ|GEMINI|OPENROUTER/.test(b.name)).map((b) => b.name).join(", ") || "Workers AI only"}`);
 // Email list: lets the unsubscribe link in welcome emails remove people from EmailOctopus
 if (process.env.EMAILOCTOPUS_API_KEY?.trim()) bindings.push({ type: "secret_text", name: "EMAILOCTOPUS_API_KEY", text: process.env.EMAILOCTOPUS_API_KEY.trim() });
 // Canva (Connect API): client id/secret from GitHub secrets; the owner connects once with a private link

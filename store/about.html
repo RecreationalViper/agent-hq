@@ -12,15 +12,48 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
 <link rel="canonical" href="https://foreverheld.pages.dev/about.html">
+<link rel="stylesheet" href="chrome.css">
+<script src="js/site.js" defer></script>
 </head>
 <body>
+<!--fh-chrome-->
+<div class="fh-scrim" data-fh-close hidden></div>
+<aside class="fh-drawer" id="fh-drawer" aria-label="Menu" hidden>
+  <div class="fh-dhead"><a class="fh-brand" href="index.html"><img src="brand/mark.svg" alt="">Forever Held</a><button class="fh-icon" type="button" data-fh-close aria-label="Close menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <button class="fh-dsearch" type="button" data-fh-search><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><span>Search products and help</span></button>
+  <nav class="fh-dnav" aria-label="Store">
+    <p class="fh-label">Holiday 2026</p><a class="fh-prod" href="harvest-table.html"><img src="img/thumbs/harvest-table.jpg" alt="" loading="lazy" width="48" height="60"><span><b>Harvest Table</b><small>Thanksgiving · $7.99</small></span></a><a class="fh-prod" href="evergreen-candlelight.html"><img src="img/thumbs/evergreen.jpg" alt="" loading="lazy" width="48" height="60"><span><b>Evergreen &amp; Candlelight</b><small>Christmas · $8.99</small></span></a><a class="fh-prod" href="longest-night.html"><img src="img/thumbs/longest-night.jpg" alt="" loading="lazy" width="48" height="60"><span><b>Longest Night</b><small>Blue Christmas service · $9.99</small></span></a>
+    <p class="fh-label">Memorial suites</p><a class="fh-prod" href="index.html#suite"><img src="img/thumbs/soft-botanical.jpg" alt="" loading="lazy" width="48" height="60"><span><b>Soft Botanical suite</b><small>Funeral &amp; celebration of life · $12.99</small></span></a>
+    <a class="fh-free" href="https://payhip.com/b/eYJqS">Free planning checklist <small>Printable, sent to your email</small></a>
+    <details class="fh-acc" open><summary>Help</summary>
+      <a href="index.html#how">How it works</a><a href="guides.html">Planning guides</a><a href="index.html#faq-title">Questions families ask</a><button type="button" data-fh-chat>Ask our assistant</button><a href="contact.html">Contact us</a>
+    </details>
+    <details class="fh-acc"><summary>About &amp; policies</summary>
+      <a href="about.html">About Forever Held</a><a href="terms.html">Terms of sale</a><a href="refunds.html">Refund policy</a><a href="privacy.html">Privacy policy</a><a href="accessibility.html">Accessibility</a>
+    </details>
+  </nav>
+  <p class="fh-dfoot">Instant download · Secure checkout by Payhip</p>
+</aside>
+<div class="fh-search" id="fh-search" role="dialog" aria-modal="true" aria-label="Search the store" hidden>
+  <div class="fh-sbox">
+    <form class="fh-sform" role="search" action="#"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input type="search" name="q" placeholder="Search programs, signs, holidays, help…" aria-label="Search" autocomplete="off" enterkeyhint="search"><button class="fh-icon" type="button" data-fh-close aria-label="Close search"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></form>
+    <div class="fh-results" aria-live="polite"></div>
+  </div>
+</div>
+<button class="fh-chatbtn" type="button" data-fh-chat aria-label="Ask the Forever Held assistant"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10H9l-5 4v-14z"/></svg><span>Ask us</span></button>
+<section class="fh-chat" id="fh-chat" role="dialog" aria-label="Forever Held assistant" hidden>
+  <header><div><b>Forever Held assistant</b><small>Automated answers, any time. A real person replies via <a href="contact.html">Contact us</a>.</small></div><button class="fh-icon" type="button" data-fh-close aria-label="Close chat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
+  <div class="fh-log" aria-live="polite"></div>
+  <form class="fh-cform"><textarea name="m" rows="1" maxlength="1200" placeholder="Ask a question…" aria-label="Your question"></textarea><button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button></form>
+</section>
+<!--/fh-chrome-->
 <div class="garden" aria-hidden="true">
   <svg class="l1" viewBox="0 0 200 200"><g fill="#7f9670"><path d="M100 190C98 130 90 70 60 10" stroke="#6d7f5f" stroke-width="3" fill="none"/><ellipse cx="78" cy="58" rx="16" ry="7" transform="rotate(-50 78 58)"/><ellipse cx="62" cy="40" rx="15" ry="6" transform="rotate(30 62 40)"/><ellipse cx="92" cy="96" rx="18" ry="7" transform="rotate(-60 92 96)"/><ellipse cx="80" cy="84" rx="16" ry="7" transform="rotate(25 80 84)"/><ellipse cx="99" cy="138" rx="18" ry="7" transform="rotate(-70 99 138)"/><ellipse cx="88" cy="126" rx="17" ry="7" transform="rotate(20 88 126)"/></g></svg>
   <svg class="l2" viewBox="0 0 200 200"><g fill="#9db08d"><path d="M100 190C98 130 90 70 60 10" stroke="#8a9e7b" stroke-width="3" fill="none"/><ellipse cx="78" cy="58" rx="16" ry="7" transform="rotate(-50 78 58)"/><ellipse cx="62" cy="40" rx="15" ry="6" transform="rotate(30 62 40)"/><ellipse cx="92" cy="96" rx="18" ry="7" transform="rotate(-60 92 96)"/><ellipse cx="80" cy="84" rx="16" ry="7" transform="rotate(25 80 84)"/><ellipse cx="99" cy="138" rx="18" ry="7" transform="rotate(-70 99 138)"/></g></svg>
 </div>
 <nav class="nav glass" aria-label="Main">
-  <a class="brand" href="index.html"><img src="brand/mark.svg" alt="">Forever Held</a>
-  <div class="navlinks"><a class="txt hide-sm" href="index.html#how">How it works</a><a class="txt" href="contact.html">Contact</a><a class="btn btn-sage" href="index.html#suite">Shop</a></div>
+  <div class="fh-navl"><button class="fh-icon" type="button" data-fh-menu aria-label="Menu" aria-controls="fh-drawer" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><a class="brand" href="index.html"><img src="brand/mark.svg" alt="">Forever Held</a></div>
+  <div class="navlinks"><button class="fh-icon" type="button" data-fh-search aria-label="Search the store" aria-controls="fh-search" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></button><a class="btn btn-sage" href="index.html#suite">Shop</a></div>
 </nav>
 <main class="page" id="top">
 <header class="page-head"><h1>About Forever Held</h1><p>Gentle printable keepsakes for the days families need them most.</p></header>
