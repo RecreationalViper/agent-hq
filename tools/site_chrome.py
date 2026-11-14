@@ -11,7 +11,7 @@ STORE = ROOT / "store"
 CHECKLIST = "https://payhip.com/b/eYJqS"
 TODAY = datetime.date.today().isoformat()
 
-HEAD = '<link rel="stylesheet" href="chrome.css">\n<script src="js/site.js" defer></script>\n'
+HEAD = '<link rel="stylesheet" href="chrome.css">\n<link rel="stylesheet" href="motion.css">\n<script src="js/pre.js"></script>\n<script src="js/motion.js" defer></script>\n<script src="js/site.js" defer></script>\n'
 
 I_MENU = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>'
 I_SEARCH = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>'
@@ -57,6 +57,7 @@ def chrome(home=False):
     hol = "".join(_item(p, h) for p in holiday_products())
     link = lambda href, text: f'<a href="{href}">{text}</a>'
     return f'''<!--fh-chrome-->
+<div class="fh-aura" aria-hidden="true"><i></i><i></i><i></i></div>
 <div class="fh-scrim" data-fh-close hidden></div>
 <aside class="fh-drawer" id="fh-drawer" aria-label="Menu" hidden>
   <div class="fh-dhead"><a class="fh-brand" href="{h or '#top'}"><img src="brand/mark.svg" alt="">Forever Held</a><button class="fh-icon" type="button" data-fh-close aria-label="Close menu">{I_CLOSE}</button></div>
@@ -80,9 +81,9 @@ def chrome(home=False):
     <div class="fh-results" aria-live="polite"></div>
   </div>
 </div>
-<button class="fh-chatbtn" type="button" data-fh-chat aria-label="Ask the Forever Held assistant">{I_CHAT}<span>Ask us</span></button>
+<button class="fh-chatbtn" type="button" data-fh-chat aria-label="Ask the Forever Held assistant"><span class="fh-orb" aria-hidden="true"></span><span>Ask us</span></button>
 <section class="fh-chat" id="fh-chat" role="dialog" aria-label="Forever Held assistant" hidden>
-  <header><span class="fh-av"><img src="brand/mark.svg" alt=""></span><div class="fh-who"><b>Forever Held assistant</b><small>Automated answers, any time. A real person replies via <a href="contact.html">Contact us</a>.</small></div><button class="fh-icon" type="button" data-fh-close aria-label="Close chat">{I_CLOSE}</button></header>
+  <header><span class="fh-orb" aria-hidden="true"></span><div class="fh-who"><b>Forever Held assistant</b><small>Automated answers, any time. A real person replies via <a href="contact.html">Contact us</a>.</small></div><button class="fh-icon" type="button" data-fh-close aria-label="Close chat">{I_CLOSE}</button></header>
   <div class="fh-log" aria-live="polite"></div>
   <form class="fh-cform"><textarea name="m" rows="1" maxlength="1200" placeholder="Ask a question…" aria-label="Your question"></textarea><button type="submit" aria-label="Send">{I_SEND}</button></form>
 </section>
@@ -97,7 +98,7 @@ def strip_chrome(s):
 def install(s, home=False):
     """Put the chrome into a full page's HTML (idempotent): head links + drawer/search/chat after <body>."""
     s = strip_chrome(s)
-    s = s.replace(HEAD, "")
+    s = s.replace(HEAD, "").replace('<link rel="stylesheet" href="chrome.css">\n<script src="js/site.js" defer></script>\n', "")
     s = s.replace("</head>", HEAD + "</head>", 1)
     s = re.sub(r"(<body[^>]*>\n?)", lambda m: m.group(1) + chrome(home), s, count=1)
     return s

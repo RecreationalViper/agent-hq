@@ -25,13 +25,14 @@ def leaves():
     leaf = '<svg viewBox="0 0 40 40"><path d="M20 2C30 10 34 24 20 38C6 24 10 10 20 2Z" fill="currentColor"/><path d="M20 6V36" stroke="rgba(0,0,0,.25)" stroke-width="1"/></svg>'
     return "".join(f'<i style="left:{x}%;top:{y}%;transform:rotate({r}deg)">{leaf}</i>' for x, y, r in pts)
 
+MARQ = ["Instant download", "Fill in on your phone", "Print tonight", "Made with care"]
 ARCH = "border-radius:50% 50% 4px 4px / 35.5% 35.5% 4px 4px"
 
 SETS = [
  dict(id="holiday-2026-C", slug="harvest-table", serif="Caladea", serif_file="Caladea-Regular", serif_i="Caladea-Italic",
   title="Harvest Table · Thanksgiving memorial printables",
   desc="A Thanksgiving memorial set for the first holiday with an empty chair: a \"We saved a seat for you\" sign, thankful cards and place cards. Fill in on your phone, print at home.",
-  vars="--accent:#d8ad55;--accent2:#b45f3c;--text:#efe5d3;--deep:#2a1b12;--bgc:#1a110b",
+  vars="--aura:.15;--accent:#d8ad55;--accent2:#b45f3c;--text:#efe5d3;--deep:#2a1b12;--bgc:#1a110b",
   bg="""radial-gradient(60vw 50vw at 72% 30%, rgba(232,160,70,.42), transparent 60%),
   radial-gradient(50vw 40vw at 15% 85%, rgba(180,95,60,.35), transparent 60%),
   linear-gradient(180deg,#24160e,#120b07)""",
@@ -50,7 +51,7 @@ SETS = [
  dict(id="holiday-2026-A", slug="evergreen-candlelight", serif="GFS Baskerville", serif_file="GFSBaskerville", serif_i=None,
   title="Evergreen & Candlelight · Christmas memorial printables",
   desc="A Christmas memorial set: a candle table sign, holiday memory cards and ornament keepsake cards with their name. Fill in on your phone, print at home.",
-  vars="--accent:#e6c27a;--accent2:#8e2f3a;--text:#f4eedf;--deep:#0f1d16;--bgc:#0c1712",
+  vars="--aura:.15;--accent:#e6c27a;--accent2:#8e2f3a;--text:#f4eedf;--deep:#0f1d16;--bgc:#0c1712",
   bg="""radial-gradient(55vw 45vw at 70% 28%, rgba(245,190,100,.38), transparent 60%),
   radial-gradient(45vw 40vw at 12% 90%, rgba(142,47,58,.35), transparent 60%),
   linear-gradient(180deg,#183026,#0a140f)""",
@@ -69,7 +70,7 @@ SETS = [
  dict(id="holiday-2026-B", slug="longest-night", serif="InterL", serif_file=None, serif_i=None,
   title="Longest Night · Blue Christmas service printables",
   desc="Everything for a Blue Christmas or Longest Night service: an editable program, a memorial table sign and candle-lighting cards. Faith-neutral and ready to print.",
-  vars="--accent:#d9cfe0;--accent2:#3c4570;--text:#f2f1f8;--deep:#1b2140;--bgc:#141933",
+  vars="--aura:.22;--aura3:#8a8fd0;--accent:#d9cfe0;--accent2:#3c4570;--text:#f2f1f8;--deep:#1b2140;--bgc:#141933",
   bg="""radial-gradient(70vw 40vw at 50% 110%, rgba(217,207,224,.55), transparent 65%),
   radial-gradient(40vw 30vw at 75% 20%, rgba(138,143,179,.35), transparent 60%),
   linear-gradient(180deg,#10142b,#2a3160 60%,#4a4f7a)""",
@@ -157,6 +158,10 @@ h2{font-family:"%(serif)s",Georgia,serif;font-weight:%(hw)s;font-size:clamp(32px
 .step b{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%%;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);margin-bottom:14px;font-size:15px}
 .step h3{font-size:18px;font-weight:600;margin-bottom:6px}
 .step p{opacity:.8;font-size:15.5px}
+.marq{margin:26px calc(50%% - 50vw) 0;overflow:hidden;padding:10px 0;-webkit-mask:linear-gradient(90deg,transparent,#000 12%%,#000 88%%,transparent);mask:linear-gradient(90deg,transparent,#000 12%%,#000 88%%,transparent)}
+.marq>div{display:flex;align-items:center;gap:28px;width:max-content;animation:marq 38s linear infinite;font-family:"%(serif)s",Georgia,serif;font-style:italic;font-weight:%(hw)s;font-size:clamp(26px,5vw,54px);white-space:nowrap;opacity:.5}
+.marq i{width:9px;height:9px;border-radius:50%%;background:var(--accent);box-shadow:0 0 14px var(--accent);flex:none}
+@keyframes marq{to{transform:translateX(calc(-50%% - 14px))}}
 .final{border-radius:32px;padding:46px 26px;text-align:center}
 .final h2{margin-bottom:12px}
 .final .ctas{justify-content:center}
@@ -235,6 +240,7 @@ def build(s):
     </div>
     <div class="stack">{hero}</div>
   </header>
+  <div class="marq" aria-hidden="true"><div>{("<span>" + "</span><i></i><span>".join(MARQ) + "</span><i></i>") * 2}</div></div>
   <section id="inside" aria-labelledby="inside-h">
     <h2 id="inside-h">{e(s["h2"])}</h2>
     <div class="grid">{pieces}</div>

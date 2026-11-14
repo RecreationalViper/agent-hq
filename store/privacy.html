@@ -13,10 +13,14 @@
 <link rel="stylesheet" href="site.css">
 <link rel="canonical" href="https://foreverheld.pages.dev/privacy.html">
 <link rel="stylesheet" href="chrome.css">
+<link rel="stylesheet" href="motion.css">
+<script src="js/pre.js"></script>
+<script src="js/motion.js" defer></script>
 <script src="js/site.js" defer></script>
 </head>
 <body>
 <!--fh-chrome-->
+<div class="fh-aura" aria-hidden="true"><i></i><i></i><i></i></div>
 <div class="fh-scrim" data-fh-close hidden></div>
 <aside class="fh-drawer" id="fh-drawer" aria-label="Menu" hidden>
   <div class="fh-dhead"><a class="fh-brand" href="index.html"><img src="brand/mark.svg" alt="">Forever Held</a><button class="fh-icon" type="button" data-fh-close aria-label="Close menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
@@ -40,9 +44,9 @@
     <div class="fh-results" aria-live="polite"></div>
   </div>
 </div>
-<button class="fh-chatbtn" type="button" data-fh-chat aria-label="Ask the Forever Held assistant"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10H9l-5 4v-14z"/></svg><span>Ask us</span></button>
+<button class="fh-chatbtn" type="button" data-fh-chat aria-label="Ask the Forever Held assistant"><span class="fh-orb" aria-hidden="true"></span><span>Ask us</span></button>
 <section class="fh-chat" id="fh-chat" role="dialog" aria-label="Forever Held assistant" hidden>
-  <header><span class="fh-av"><img src="brand/mark.svg" alt=""></span><div class="fh-who"><b>Forever Held assistant</b><small>Automated answers, any time. A real person replies via <a href="contact.html">Contact us</a>.</small></div><button class="fh-icon" type="button" data-fh-close aria-label="Close chat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
+  <header><span class="fh-orb" aria-hidden="true"></span><div class="fh-who"><b>Forever Held assistant</b><small>Automated answers, any time. A real person replies via <a href="contact.html">Contact us</a>.</small></div><button class="fh-icon" type="button" data-fh-close aria-label="Close chat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
   <div class="fh-log" aria-live="polite"></div>
   <form class="fh-cform"><textarea name="m" rows="1" maxlength="1200" placeholder="Ask a question…" aria-label="Your question"></textarea><button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button></form>
 </section>

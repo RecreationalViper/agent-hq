@@ -1,0 +1,99 @@
+/* Site-wide motion layer (code: js/motion.js). Kinetic headlines, rolling-label buttons, living backgrounds,
+   scroll-linked hero, light that follows the pointer, and the assistant "orb". Loaded after chrome.css. */
+@property --fh-a{syntax:"<angle>";inherits:false;initial-value:0deg}
+@property --fh-f{syntax:"<length>";inherits:false;initial-value:0px}
+
+/* ---- living background ---- */
+.fh-aura{position:fixed;inset:-25%;z-index:-1;pointer-events:none}
+.fh-aura i{position:absolute;width:60vmax;height:60vmax;border-radius:50%;filter:blur(80px);opacity:var(--aura,.34);will-change:transform;animation:fh-drift 28s ease-in-out infinite alternate}
+.fh-aura i:nth-child(1){left:-5%;top:0;background:var(--accent,#cfe0bd)}
+.fh-aura i:nth-child(2){right:-5%;top:30%;background:var(--accent2,#f3dcc8);animation-duration:36s;animation-direction:alternate-reverse}
+.fh-aura i:nth-child(3){left:25%;bottom:-5%;width:45vmax;height:45vmax;background:var(--aura3,#e6dcf2);animation-duration:44s}
+@keyframes fh-drift{0%{transform:translate(-6%,-4%) scale(1)}50%{transform:translate(8%,6%) scale(1.18)}100%{transform:translate(-3%,10%) scale(.92)}}
+.stars i{animation:fh-tw 3.6s ease-in-out infinite}
+.stars i:nth-child(3n){animation-duration:5.2s;animation-delay:-2s}.stars i:nth-child(3n+1){animation-duration:4.4s;animation-delay:-1s}.stars i:nth-child(7n){animation-duration:2.6s}
+@keyframes fh-tw{50%{opacity:.08;scale:.6}}
+.bok i{animation:fh-bok 16s ease-in-out infinite alternate}
+.bok i:nth-child(2n){animation-duration:22s;animation-delay:-8s}.bok i:nth-child(3n){animation-duration:12s;animation-delay:-4s}
+@keyframes fh-bok{from{translate:0 0;scale:1}to{translate:24px -40px;scale:1.25}}
+.leaves i{animation:fh-leaf 18s ease-in-out infinite alternate}
+.leaves i:nth-child(2n){animation-duration:24s;animation-delay:-9s}.leaves i:nth-child(3n){animation-duration:15s;animation-delay:-5s}
+@keyframes fh-leaf{from{translate:0 -12px;rotate:-8deg}to{translate:26px 46px;rotate:26deg}}
+.garden svg{animation:fh-sway 11s ease-in-out infinite alternate;transform-origin:50% 100%}
+.garden svg:nth-child(2){animation-duration:15s;animation-delay:-6s}
+@keyframes fh-sway{from{rotate:-2.5deg}to{rotate:3deg}}
+
+/* ---- scroll progress + nav that tucks away ---- */
+.fh-prog{position:fixed;top:0;left:0;right:0;height:2.5px;z-index:70;pointer-events:none;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--accent2,#7f9270),var(--accent,#d8ad55));box-shadow:0 0 12px var(--accent,#d8ad55)}
+.nav{transition:transform .7s var(--fh-smooth),box-shadow .5s}
+.nav.fh-hide{transform:translateY(-170%)}
+
+/* ---- kinetic headlines: words rise out of a blur ---- */
+.fh-js:not(.fh-ready) main h1{opacity:0}
+.fh-k .fh-w{display:inline-block;opacity:0;transform:translateY(.55em) rotate(3deg) scale(.96);filter:blur(10px);transform-origin:0 100%;
+  transition:opacity .7s var(--fh-smooth),transform .95s var(--fh-spring),filter .8s var(--fh-smooth);transition-delay:calc(var(--w)*55ms + var(--kd,0ms))}
+.fh-k.fh-in .fh-w{opacity:1;transform:none;filter:none}
+.fh-k em .fh-w{transition-duration:.9s,1.2s,1s}
+
+/* ---- buttons: rolling label, light sweep, arrow, magnetic pull ---- */
+.btn{position:relative;overflow:hidden;translate:var(--tx,0) var(--ty,0);transition:transform .45s var(--fh-spring),translate .5s var(--fh-spring),box-shadow .45s var(--fh-smooth),filter .3s}
+.btn::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 32%,rgba(255,255,255,.5) 50%,transparent 68%);transform:translateX(-130%)}
+.btn:hover::after,.btn:active::after{transform:translateX(130%);transition:transform .9s var(--fh-smooth)}
+.btn.big::after,.hero .btn.amber::after,.final .btn::after{animation:fh-sheen 6s var(--fh-smooth) 2.2s infinite}
+@keyframes fh-sheen{0%,70%{transform:translateX(-130%)}100%{transform:translateX(130%)}}
+.fh-roll{display:inline-grid;overflow:hidden;line-height:1.35}
+.fh-roll>span{grid-area:1/1;transition:transform .6s var(--fh-smooth)}
+.fh-roll>span+span{transform:translateY(115%)}
+.btn:hover .fh-roll>span:first-child,.btn:active .fh-roll>span:first-child{transform:translateY(-115%)}
+.btn:hover .fh-roll>span+span,.btn:active .fh-roll>span+span{transform:none}
+.fh-arr{display:inline-grid;place-items:center;width:1.75em;height:1.75em;flex:none;margin:0 -.55em 0 .15em;border-radius:50%;overflow:hidden;background:rgba(255,255,255,.24);box-shadow:inset 0 1px 0 rgba(255,255,255,.5);transition:transform .6s var(--fh-spring),background .3s}
+.fh-arr svg{grid-area:1/1;width:.95em;height:.95em;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .55s var(--fh-smooth)}
+.fh-arr svg+svg{transform:translateX(-180%)}
+.btn:hover .fh-arr,.btn:active .fh-arr{transform:scale(1.12);background:rgba(255,255,255,.38)}
+.btn:hover .fh-arr svg:first-child,.btn:active .fh-arr svg:first-child{transform:translateX(180%)}
+.btn:hover .fh-arr svg+svg,.btn:active .fh-arr svg+svg{transform:none}
+
+/* ---- hero: floating pieces that drift with the scroll and lean toward the pointer ---- */
+.stack,.suite-row{transform:perspective(1100px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .7s var(--fh-smooth)}
+.stack img,.suite-row figure{translate:0 calc(var(--sc,0)*var(--k,0)*1px + var(--fh-f));animation:fh-float 7s ease-in-out infinite alternate;will-change:translate}
+.stack .s1,.suite-row figure:nth-child(1){--k:-.05}
+.stack .s2,.suite-row figure:nth-child(2){--k:-.16;animation-duration:9s;animation-delay:-3s}
+.stack .s3,.suite-row figure:nth-child(3){--k:.07;animation-duration:8s;animation-delay:-5s}
+@keyframes fh-float{from{--fh-f:5px}to{--fh-f:-9px}}
+
+/* ---- reveals: pictures settle into place; light follows the pointer on glass ---- */
+.fh-rv .frame img,.hcard.fh-rv img{scale:1.2;transition:scale 1.5s var(--fh-smooth)}
+.fh-rv.fh-seen .frame img,.hcard.fh-rv.fh-seen img{scale:1}
+.fh-glow{position:relative}
+.fh-glow::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .5s;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.26),transparent 65%)}
+@media (hover:hover){.fh-glow:hover::after{opacity:1}}
+.fh-drawer::before,.fh-sbox::before,.fh-chat::before{background:radial-gradient(70% 45% at var(--mx,10%) var(--my,-10%),rgba(255,255,255,.8),transparent 60%),radial-gradient(80% 50% at 110% 110%,rgba(160,190,140,.2),transparent 60%)}
+
+/* ---- the assistant orb ---- */
+.fh-orb{position:relative;display:inline-block;width:26px;height:26px;flex:none;border-radius:50%;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.7),0 0 16px rgba(190,205,160,.75),0 0 30px rgba(205,195,235,.45);animation:fh-breathe 3.6s ease-in-out infinite}
+.fh-orb::before{content:"";position:absolute;inset:-25%;background:conic-gradient(#8fbf7a,#f2b450,#a48cf0,#5fb6a2,#f28f7c,#8fbf7a);filter:blur(3px) saturate(1.25);animation:fh-spin 5s linear infinite}
+.fh-orb::after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 32% 26%,rgba(255,255,255,.85),rgba(255,255,255,0) 34%)}
+@keyframes fh-spin{to{rotate:360deg}}
+@keyframes fh-breathe{50%{scale:1.08}}
+.fh-busy .fh-orb::before,.fh-think .fh-orb::before{animation-duration:1.1s}
+.fh-chatbtn{color:var(--fh-ink);padding:0 20px 0 10px;gap:10px;background:linear-gradient(160deg,rgba(255,255,255,.82),rgba(255,255,255,.55));border:1px solid rgba(255,255,255,.9);
+  box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 rgba(255,255,255,.4),0 12px 34px rgba(30,28,24,.22),0 2px 6px rgba(0,0,0,.1)}
+.fh-chatbtn .fh-orb{width:34px;height:34px}
+.fh-chatbtn::after{animation:fh-halo2 3.2s ease-out 2s 3}
+@keyframes fh-halo2{0%{box-shadow:0 0 0 0 rgba(215,205,240,.7)}70%,100%{box-shadow:0 0 0 18px rgba(215,205,240,0)}}
+@media (max-width:560px){.fh-chatbtn{padding:0}.fh-chatbtn .fh-orb{width:40px;height:40px}}
+.fh-chat header .fh-orb{width:38px;height:38px}
+.fh-think{display:flex;align-items:center;gap:10px}
+.fh-think .fh-orb{width:20px;height:20px}
+.fh-think span:last-child{font-weight:500;background:linear-gradient(90deg,#8a8580 20%,#34312d 50%,#8a8580 80%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:fh-shim 1.6s linear infinite}
+@keyframes fh-shim{from{background-position:200% 0}to{background-position:-200% 0}}
+.fh-stream .fh-sw{animation:fh-word .55s var(--fh-smooth) backwards;animation-delay:calc(var(--w)*22ms)}
+@keyframes fh-word{from{opacity:0;filter:blur(6px);translate:0 4px}}
+.fh-cform{position:relative}
+.fh-cform::before{content:"";position:absolute;inset:-1.5px;border-radius:inherit;padding:1.5px;pointer-events:none;opacity:0;transition:opacity .4s;
+  background:conic-gradient(from var(--fh-a),#b9cba7,#f4d79f,#d2c6ee,#a8c9b4,#b9cba7);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:fh-ring 4s linear infinite}
+.fh-cform:focus-within::before,.fh-busy .fh-cform::before{opacity:1}
+.fh-cform:focus-within{box-shadow:var(--fh-edge),0 6px 28px rgba(190,180,230,.45)}
+@keyframes fh-ring{to{--fh-a:360deg}}
+
+@media (prefers-reduced-motion:reduce){.fh-k .fh-w{opacity:1;transform:none;filter:none}.fh-js main h1{opacity:1!important}.nav.fh-hide{transform:none}}

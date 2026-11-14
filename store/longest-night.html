@@ -17,7 +17,7 @@
 @font-face{font-family:InterH;src:url(fonts/Inter-SemiBold.woff) format("woff");font-weight:600;font-display:swap}
 @font-face{font-family:InterL;src:url(fonts/Inter-Light.woff) format("woff");font-weight:300;font-display:swap}
 
-:root{--accent:#d9cfe0;--accent2:#3c4570;--text:#f2f1f8;--deep:#1b2140;--bgc:#141933}
+:root{--aura:.22;--aura3:#8a8fd0;--accent:#d9cfe0;--accent2:#3c4570;--text:#f2f1f8;--deep:#1b2140;--bgc:#141933}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:InterH,system-ui,sans-serif;color:var(--text);background:var(--bgc);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -70,6 +70,10 @@ h2{font-family:"InterL",Georgia,serif;font-weight:300;font-size:clamp(32px,4.2vw
 .step b{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);margin-bottom:14px;font-size:15px}
 .step h3{font-size:18px;font-weight:600;margin-bottom:6px}
 .step p{opacity:.8;font-size:15.5px}
+.marq{margin:26px calc(50% - 50vw) 0;overflow:hidden;padding:10px 0;-webkit-mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marq>div{display:flex;align-items:center;gap:28px;width:max-content;animation:marq 38s linear infinite;font-family:"InterL",Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(26px,5vw,54px);white-space:nowrap;opacity:.5}
+.marq i{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent);flex:none}
+@keyframes marq{to{transform:translateX(calc(-50% - 14px))}}
 .final{border-radius:32px;padding:46px 26px;text-align:center}
 .final h2{margin-bottom:12px}
 .final .ctas{justify-content:center}
@@ -92,10 +96,14 @@ h2{font-family:"InterL",Georgia,serif;font-weight:300;font-size:clamp(32px,4.2vw
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Longest Night - Blue Christmas, Hanukkah, solstice memorial printables", "description": "Everything for a Blue Christmas or Longest Night service: an editable program, a memorial table sign and candle-lighting cards. Faith-neutral and ready to print.", "image": "https://foreverheld.pages.dev/img/holiday/pages/l-prog1.jpg", "brand": {"@type": "Brand", "name": "Forever Held"}, "offers": {"@type": "Offer", "price": "9.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://payhip.com/b/xSfZG"}}</script>
 <link rel="stylesheet" href="chrome.css">
+<link rel="stylesheet" href="motion.css">
+<script src="js/pre.js"></script>
+<script src="js/motion.js" defer></script>
 <script src="js/site.js" defer></script>
 </head>
 <body>
 <!--fh-chrome-->
+<div class="fh-aura" aria-hidden="true"><i></i><i></i><i></i></div>
 <div class="fh-scrim" data-fh-close hidden></div>
 <aside class="fh-drawer" id="fh-drawer" aria-label="Menu" hidden>
   <div class="fh-dhead"><a class="fh-brand" href="index.html"><img src="brand/mark.svg" alt="">Forever Held</a><button class="fh-icon" type="button" data-fh-close aria-label="Close menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
@@ -119,9 +127,9 @@ h2{font-family:"InterL",Georgia,serif;font-weight:300;font-size:clamp(32px,4.2vw
     <div class="fh-results" aria-live="polite"></div>
   </div>
 </div>
-<button class="fh-chatbtn" type="button" data-fh-chat aria-label="Ask the Forever Held assistant"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10H9l-5 4v-14z"/></svg><span>Ask us</span></button>
+<button class="fh-chatbtn" type="button" data-fh-chat aria-label="Ask the Forever Held assistant"><span class="fh-orb" aria-hidden="true"></span><span>Ask us</span></button>
 <section class="fh-chat" id="fh-chat" role="dialog" aria-label="Forever Held assistant" hidden>
-  <header><span class="fh-av"><img src="brand/mark.svg" alt=""></span><div class="fh-who"><b>Forever Held assistant</b><small>Automated answers, any time. A real person replies via <a href="contact.html">Contact us</a>.</small></div><button class="fh-icon" type="button" data-fh-close aria-label="Close chat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
+  <header><span class="fh-orb" aria-hidden="true"></span><div class="fh-who"><b>Forever Held assistant</b><small>Automated answers, any time. A real person replies via <a href="contact.html">Contact us</a>.</small></div><button class="fh-icon" type="button" data-fh-close aria-label="Close chat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
   <div class="fh-log" aria-live="polite"></div>
   <form class="fh-cform"><textarea name="m" rows="1" maxlength="1200" placeholder="Ask a question…" aria-label="Your question"></textarea><button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button></form>
 </section>
@@ -142,6 +150,7 @@ h2{font-family:"InterL",Georgia,serif;font-weight:300;font-size:clamp(32px,4.2vw
     </div>
     <div class="stack"><img class="s1" src="img/holiday/pages/l-sign.jpg" alt="Memorial table sign: On the longest night we remember"><img class="s2" src="img/holiday/pages/l-card.jpg" alt="Candle-lighting card"><img class="s3" src="img/holiday/pages/l-card.jpg" alt="" aria-hidden="true"></div>
   </header>
+  <div class="marq" aria-hidden="true"><div><span>Instant download</span><i></i><span>Fill in on your phone</span><i></i><span>Print tonight</span><i></i><span>Made with care</span><i></i><span>Instant download</span><i></i><span>Fill in on your phone</span><i></i><span>Print tonight</span><i></i><span>Made with care</span><i></i></div></div>
   <section id="inside" aria-labelledby="inside-h">
     <h2 id="inside-h">Everything your service needs.</h2>
     <div class="grid"><article class="card glass"><div class="frame"><img src="img/holiday/pages/l-prog1.jpg" alt="Service program - Longest Night Blue Christmas service set"></div><h3>Service program</h3><p>Folds to 5.5 x 8.5 in. Names remembered, order of service, candle words, all editable.</p></article><article class="card glass"><div class="frame"><img src="img/holiday/pages/l-sign.jpg" alt="Memorial table sign - Longest Night Blue Christmas service set"></div><h3>Memorial table sign</h3><p>8 x 10 in, plus an ink-saving version. &quot;On the longest night we remember.&quot;</p></article><article class="card glass"><div class="frame"><img src="img/holiday/pages/l-card.jpg" alt="Candle-lighting cards - Longest Night Blue Christmas service set"></div><h3>Candle-lighting cards</h3><p>Four to a page. Each person writes a name before the candles are lit.</p></article></div>

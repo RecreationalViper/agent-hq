@@ -11,7 +11,7 @@
   if (!reduce && "IntersectionObserver" in window) {
     const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("fh-seen"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
     const groups = new Map();
-    $$(".hcard, .card, .step, .cards > a, .faq details, main > section > h2, .panel, .final").forEach((t) => {
+    $$(".hcard, .card, .step, .cards > a, .faq details, .panel, .final, .marq").forEach((t) => {
       if (t.getBoundingClientRect().top < innerHeight * 0.9) return; // already on screen: leave it alone
       const g = t.parentElement, n = groups.get(g) || 0; groups.set(g, n + 1);
       t.style.setProperty("--d", Math.min(n, 5)); t.classList.add("fh-rv"); io.observe(t);
@@ -151,6 +151,19 @@
     m.role === "user" ? (d.textContent = m.content) : richText(d, m.content);
     log.append(d); return d;
   }
+  // answers appear word by word, like they are being written
+  function stream(d) {
+    if (reduce) return;
+    let w = 0;
+    const walk = (node) => [...node.childNodes].forEach((n) => {
+      if (n.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach((part) => { if (!part) return; if (/^\s+$/.test(part)) return frag.append(part); const sp = el("span", "fh-sw", part); sp.style.setProperty("--w", Math.min(w++, 200)); frag.append(sp); });
+        n.replaceWith(frag);
+      } else if (n.nodeType === 1) walk(n);
+    });
+    walk(d); d.classList.add("fh-stream");
+  }
   const toEnd = () => log.scrollTo({ top: log.scrollHeight, behavior: reduce ? "auto" : "smooth" });
   function drawAll() {
     log.replaceChildren();
@@ -169,7 +182,7 @@
     $(".fh-sugg", log)?.remove();
     msgs.push({ role: "user", content: q.slice(0, 1200) }); store.set("fh-chat", msgs);
     bubble(msgs[msgs.length - 1]); toEnd();
-    const t = el("div", "fh-msg a fh-typing"); t.append(el("i"), el("i"), el("i")); t.setAttribute("aria-label", "Writing an answer");
+    const t = el("div", "fh-msg a fh-think"); t.append(el("span", "fh-orb"), el("span", "", "Thinking…")); chatBox.classList.add("fh-busy");
     setTimeout(() => { if (busy) { log.append(t); toEnd(); } }, 250);
     let text, ok = false;
     try {
@@ -177,9 +190,9 @@
       const j = await r.json().catch(() => ({}));
       ok = !!j.ok; text = j.text || "Sorry, something went wrong. Please try again, or message us at https://foreverheld.pages.dev/contact.html";
     } catch { text = "I couldn't connect just now. Please check your connection and try again, or message us at https://foreverheld.pages.dev/contact.html"; }
-    busy = false; t.remove();
+    busy = false; t.remove(); chatBox.classList.remove("fh-busy");
     if (ok) { msgs.push({ role: "assistant", content: text }); store.set("fh-chat", msgs.slice(-20)); }
-    bubble({ role: "assistant", content: text }); toEnd();
+    stream(bubble({ role: "assistant", content: text })); toEnd();
     send.disabled = false; ta.focus({ preventScroll: true });
   }
   function grow() { ta.style.height = "auto"; ta.style.height = Math.min(ta.scrollHeight, 120) + "px"; }
