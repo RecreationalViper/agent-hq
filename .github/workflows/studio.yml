@@ -23,6 +23,9 @@ jobs:
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
       - name: Refresh studio YouTube data (read-only)
         run: node tools/youtube-trends.mjs
         continue-on-error: true
@@ -33,6 +36,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           STUDIO_GEMINI_API_KEY: ${{ secrets.STUDIO_GEMINI_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
           STUDIO_DISCORD_BOT_TOKEN: ${{ secrets.STUDIO_DISCORD_BOT_TOKEN }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY || secrets.GROQ_KEY || secrets.GROQ }}

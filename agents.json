@@ -335,7 +335,22 @@
         "new anime episode",
         "video game release date",
         "streaming new releases this week"
-      ]
+      ],
+      "tavily": [
+        "trending movie scene TikTok this week",
+        "new anime episode everyone is talking about",
+        "video game trailer reaction viral"
+      ],
+      "exa": {
+        "days": 3,
+        "searches": [
+          {
+            "query": "movie, anime or video game moment going viral on TikTok this week",
+            "num": 6,
+            "chars": 700
+          }
+        ]
+      }
     },
     {
       "id": "tiktok-sounds",
@@ -356,6 +371,10 @@
         "viral TikTok song",
         "TikTok audio trend",
         "song blowing up on TikTok"
+      ],
+      "tavily": [
+        "TikTok trending sounds this week",
+        "viral song TikTok edits"
       ]
     },
     {
@@ -377,7 +396,21 @@
         "viral TikTok edit",
         "YouTube Shorts trend",
         "TikTok new feature creators"
-      ]
+      ],
+      "tavily": [
+        "new TikTok edit trend",
+        "YouTube Shorts trending format"
+      ],
+      "exa": {
+        "days": 7,
+        "searches": [
+          {
+            "query": "new short-form video editing trend for movie and anime edits",
+            "num": 5,
+            "chars": 700
+          }
+        ]
+      }
     },
     {
       "id": "tiktok-fandoms",
@@ -399,7 +432,20 @@
         "Marvel DC trailer reaction",
         "Nintendo PlayStation Xbox announcement",
         "fans react movie"
-      ]
+      ],
+      "tavily": [
+        "fandom trending TikTok anime movies games this week"
+      ],
+      "exa": {
+        "days": 5,
+        "searches": [
+          {
+            "query": "anime, movie or game fandom trending on social media this week",
+            "num": 6,
+            "chars": 700
+          }
+        ]
+      }
     },
     {
       "id": "youtube-watcher",
@@ -525,6 +571,9 @@
         "YouTube Partner Program Shorts",
         "TikTok algorithm update",
         "YouTube Shorts monetization"
+      ],
+      "tavily": [
+        "grow movie clip TikTok account fast tips"
       ]
     },
     {

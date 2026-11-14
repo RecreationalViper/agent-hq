@@ -68,6 +68,37 @@ await section("Steam: top sellers and new releases (US)", async () => {
   return `- Top sellers: ${list("top_sellers").join(", ") || "none"}\n- New releases: ${list("new_releases").join(", ") || "none"}\n- Coming soon: ${list("coming_soon").join(", ") || "none"}`;
 });
 
+await section("MyAnimeList: anime airing this season and top airing now", async () => {
+  const season = await get("https://api.jikan.moe/v4/seasons/now?limit=15&sfw=true");
+  await new Promise((r) => setTimeout(r, 1200)); // Jikan allows ~3 requests a second
+  const top = await get("https://api.jikan.moe/v4/top/anime?filter=airing&limit=10&sfw=true");
+  const row = (a) => `- [${a.title_english || a.title}](${a.url}) · score ${a.score ?? "?"} · ${n(a.members)} members${a.episodes ? ` · ${a.episodes} eps` : ""}${a.broadcast?.string ? ` · airs ${a.broadcast.string}` : ""}`;
+  const pop = [...(season.data || [])].sort((a, b) => (b.members || 0) - (a.members || 0));
+  return `### This season, most followed\n${pop.map(row).join("\n")}\n\n### Top airing right now\n${(top.data || []).map(row).join("\n")}`;
+});
+
+await section("Twitch: most-watched games and streams right now", async () => {
+  const id = process.env.TWITCH_CLIENT_ID?.trim(), secret = process.env.TWITCH_CLIENT_SECRET?.trim();
+  if (!id || !secret) throw new Error("no TWITCH_CLIENT_ID / TWITCH_CLIENT_SECRET");
+  const tok = await get(`https://id.twitch.tv/oauth2/token?client_id=${id}&client_secret=${secret}&grant_type=client_credentials`, { method: "POST" });
+  const H = { headers: { "Client-Id": id, Authorization: `Bearer ${tok.access_token}` } };
+  const games = await get("https://api.twitch.tv/helix/games/top?first=20", H);
+  const streams = await get("https://api.twitch.tv/helix/streams?first=20", H);
+  const viewers = {};
+  for (const s of streams.data || []) viewers[s.game_name] = (viewers[s.game_name] || 0) + s.viewer_count;
+  return `### Top games by viewers now\n${(games.data || []).map((g, i) => `${i + 1}. ${g.name}`).join(" · ")}\n\n### Biggest live streams now\n${(streams.data || []).slice(0, 12).map((s) => `- ${s.user_name} · ${s.game_name} · ${n(s.viewer_count)} watching · "${String(s.title).slice(0, 80)}"`).join("\n")}`;
+});
+
+await section("Last.fm: songs rising right now (for TikTok sound ideas)", async () => {
+  const key = process.env.LASTFM_API_KEY?.trim();
+  if (!key) throw new Error("no LASTFM_API_KEY");
+  const lf = (q) => get(`https://ws.audioscrobbler.com/2.0/?${q}&api_key=${key}&format=json&limit=20`);
+  const world = await lf("method=chart.gettoptracks");
+  const us = await lf("method=geo.gettoptracks&country=united%20states");
+  const row = (t) => `${t.name} - ${t.artist?.name || t.artist?.["#text"] || ""} (${n(t.listeners)} listeners)`;
+  return `### Worldwide\n${(world.tracks?.track || []).map(row).join(" · ")}\n\n### United States\n${(us.tracks?.track || []).map(row).join(" · ")}`;
+});
+
 const YT = process.env.YOUTUBE_API_KEY?.trim();
 await section("YouTube: most-viewed short edits from the last 7 days", async () => {
   if (!YT) throw new Error("no YOUTUBE_API_KEY");

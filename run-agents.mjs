@@ -10,6 +10,7 @@ import { salesSummary } from "./sales.mjs";
 import { seoResearch } from "./seo.mjs";
 import { hasExa, researchBlock } from "./exa.mjs";
 import { newsBlock } from "./news.mjs";
+import { tavilyBlock } from "./tavily.mjs";
 import { report as discordReport, alert as discordAlert } from "./discord.mjs";
 import { upcoming } from "./holidays.mjs";
 
@@ -180,6 +181,7 @@ async function main() {
       const since = agent.exa.days ? new Date(Date.now() - agent.exa.days * 864e5).toISOString().slice(0, 10) : undefined;
       const r = await researchBlock(agent.exa.searches.map((q) => (typeof q === "string" ? { query: q, since } : { since, ...q })), agent.id).catch(() => ({ results: [] }));
       console.log(`  Exa: ${r.results.length} web results`);
+      if (r.results.length) liveWeb++;
       if (r.results.length) task += `\n\nFresh web results found minutes ago with Exa search (real pages; cite them as [n] with their links, and never invent anything they don't say):\n${r.text}`;
     }
     // Google News headlines (free, no AI quota): real-time web results whichever AI answers.
@@ -187,6 +189,12 @@ async function main() {
       const r = await newsBlock(agent.news).catch(() => ({ text: "", count: 0 }));
       console.log(`  Google News: ${r.count} headlines`);
       if (r.count) { liveWeb++; task += `\n\nFresh news headlines found minutes ago (Google News, real and dated; cite them with their links, and never claim more than a headline says):\n${r.text}`; }
+    }
+    // Tavily web search (free 1,000 credits/month, capped in tavily-usage.json).
+    if (Array.isArray(agent.tavily) && agent.tavily.length) {
+      const r = await tavilyBlock(agent.tavily, agent.id);
+      console.log(`  Tavily: ${r.count} web results`);
+      if (r.count) { liveWeb++; task += `\n\nFresh web search results found minutes ago (Tavily; real pages with links and snippets; cite them and never claim more than they say):\n${r.text}`; }
     }
     if (agent.doc === "etsy") {
       salesText ??= await salesSummary().then((r) => r?.text || "").catch((e) => { console.log(`  sales feed unavailable: ${e.message}`); return ""; });
