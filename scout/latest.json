@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-13T20:08:22.574Z",
-  "date": "2026-11-13",
+  "generatedAt": "2026-11-14T01:41:24.962Z",
+  "date": "2026-11-14",
   "token": true,
   "searches": {
     "ran": 12,
@@ -11,63 +11,13 @@
   },
   "apiCalls": 12,
   "rateRemaining": 18,
-  "newItems": 1,
+  "newItems": 0,
   "blockedToday": 0,
-  "shortlist": [
-    {
-      "name": "jina-ai/node-DeepResearch",
-      "url": "https://github.com/jina-ai/node-DeepResearch",
-      "description": "Keep searching, reading webpages, reasoning until it finds the answer (or exceeding the token budget)",
-      "stars": 5242,
-      "forks": 463,
-      "language": "TypeScript",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-13T09:00:46Z",
-      "category": "free-tokens",
-      "score": 62,
-      "tier": "watch",
-      "reasons": [
-        "5,242 stars",
-        "updated this week",
-        "Apache-2.0 license",
-        "well established",
-        "third-party source, needs checking"
-      ],
-      "flags": [
-        "unverified-offer"
-      ],
-      "skillFiles": null
-    }
-  ],
+  "shortlist": [],
   "byCategory": {
     "skills": [],
     "enhancement": [],
-    "free-tokens": [
-      {
-        "name": "jina-ai/node-DeepResearch",
-        "url": "https://github.com/jina-ai/node-DeepResearch",
-        "description": "Keep searching, reading webpages, reasoning until it finds the answer (or exceeding the token budget)",
-        "stars": 5242,
-        "forks": 463,
-        "language": "TypeScript",
-        "license": "Apache-2.0",
-        "pushedAt": "2026-11-13T09:00:46Z",
-        "category": "free-tokens",
-        "score": 62,
-        "tier": "watch",
-        "reasons": [
-          "5,242 stars",
-          "updated this week",
-          "Apache-2.0 license",
-          "well established",
-          "third-party source, needs checking"
-        ],
-        "flags": [
-          "unverified-offer"
-        ],
-        "skillFiles": null
-      }
-    ],
+    "free-tokens": [],
     "efficiency": []
   },
   "blocked": [],

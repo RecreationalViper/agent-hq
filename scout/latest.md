@@ -1,13 +1,10 @@
-# GitHub Radar — 2026-11-13
+# GitHub Radar — 2026-11-14
 
 > Scanned 12 of 29 saved searches (12 returned data, 0 unchanged, 0 failed). 12 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (1)
+## Start here (0)
 
-- **[jina-ai/node-DeepResearch](https://github.com/jina-ai/node-DeepResearch)** 🟡 WATCH · score 62/100 · ⭐ 5,242 · Apache-2.0 · updated 0d ago
-  - Keep searching, reading webpages, reasoning until it finds the answer (or exceeding the token budget)
-  - Why: 5,242 stars; updated this week; Apache-2.0 license; well established; third-party source, needs checking
-  - Watch out: third-party claim, verify on the provider's own site
+_Nothing new cleared the quality bar this scan. That is a normal, healthy result — the radar is rotating through its searches and will cover the rest next time._
 
 ## Agent skills you could install (0)
 
