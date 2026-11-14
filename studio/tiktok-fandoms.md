@@ -1,103 +1,85 @@
-# TikTok Fandom Watcher (updated 2026-11-13)
+# TikTok Fandom Watcher (updated 2026-11-14)
 
-> ⚠️ Web search was unavailable today, so this is from memory and may be out of date. Check the official links before acting.
+> ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# TikTok Fandom Watcher: Top 8 Trending Fandoms (Week of Nov 13, 2026)
-
-Here are the top 8 movie, game, and anime titles driving active fandom hype, edit views, and search curiosity on short-form right now.
-
----
-
-### 1. Steel Ball Run (JoJo's Bizarre Adventure)
-* **Why fans care now:** Currently airing the 2nd–3rd Stage arc with an AniList trending score of 352 (86% rating, Episode 9 airing Nov 20). Fandom hype for SBR animated edits is at an all-time peak.
-* **Hashtags:** `#steelballrun` `#jojosbizarreadventure` `#sbr` `#gyrozeppeli`
-* **Clip breakdown:** 
-  * *Hook (1-2s):* Gyro Zeppeli spinning a Steel Ball with a high-pitched metallic sound cue.
-  * *Body (15-20s):* Continuous horse-race sprint transitioning directly into Johnny's Stand evolution beat in story order.
-  * *Final beat:* Sudden frame-freeze on Johnny’s cold eyes with a slowed bass drop to force rewatches.
-* **Saturation:** **Medium-High** (competitive edit space, but SBR hype commands massive watch time).
-* **Source Link:** [AniList - SBR Stage 2-3](https://anilist.co/anime/210482)
+### 1. Black Clover (Season 2)
+* **Why fans care now:** Season 2 is actively releasing (Episode 8 airs 2026-11-21) with an AniList trending score of 822 across 109,451 fans. TikTok officially launched a global "TikTok Spotlight" campaign for *Black Clover* across 11 countries on Nov 11, 2026 [3].
+* **Hashtags:** `#blackclover` `#blackcloverseason2` `#asta` `#animeedit`
+* **The moment to clip (30-40s MotionVault edit):** 
+  * *Hook (0-2s):* Heavy bass drop synced to Asta revealing his Demon-Slayer Sword mid-transformation.
+  * *Body (2-32s):* Unbroken sequence of Asta’s anti-magic slash powering through an elemental spell in story order.
+  * *Rewatch Beat (32-36s):* Quick cut to his smirking face glowing with black aura just before impact.
+* **Saturation:** Moderate-High (campaign is driving massive creator uploads, act fast with clean audio drops).
+* **Source:** [AniList Black Clover Season 2](https://anilist.co/anime/195604) · [eiga.com TikTok Campaign](https://eiga.com/news/20261111/17/)
 
 ---
 
-### 2. Vinland Saga (Thorfinn Edits)
-* **Why fans care now:** Emotional character edits are exploding on YouTube Shorts/TikTok—top Thorfinn narrative edits hit **9.0M** and **8.3M views** this past week alone.
-* **Hashtags:** `#vinlandsaga` `#thorfinn` `#animeedit` `#noenemies`
-* **Clip breakdown:** 
-  * *Hook (1-2s):* Flash clip of young Thorfinn's screaming face cutting to dead silence.
-  * *Body (20s):* Unbroken sequence of slave-arc Thorfinn taking blows without striking back, building emotional weight.
-  * *Final beat:* Close-up quote "I have no enemies" with a sudden fade to black.
-* **Saturation:** **Oversaturated** (extremely high edit volume, but narrative/emotional cuts are outperforming standard hype edits).
-* **Source Link:** [YouTube Shorts Trend Data](https://youtu.be/YZXqUQcjihQ)
+### 2. Jujutsu Kaisen
+* **Why fans care now:** US and Asian TikTok fandoms are heavily active. Convosight tracking shows JJK character edits generated 3.4M views across 52 creators in Asia and 1.8M views in the US between Nov 4–14, 2026 [4, 5].
+* **Hashtags:** `#jujutsukaisen` `#gojosatoru` `#jjk` `#animeedit`
+* **The moment to clip (30-40s MotionVault edit):**
+  * *Hook (0-2s):* Gojo pulling down his blindfold with a slow-reverb vocal line.
+  * *Body (2-30s):* Smooth montage of Unlimited Void activation transitioning straight into Sukuna’s Domain Expansion counters.
+  * *Rewatch Beat (30-35s):* Toji Fushiguro’s sudden entrance frame cut right on a beat drop.
+* **Saturation:** **Oversaturated** (requires high-effort audio overlays or unique pacing to break through).
+* **Source:** [Convosight US JJK Moments](https://www.convosight.com/tools/moments/us/2026-11-13/jujutsu-kaisen-characters) · [Convosight Asia Manga Edits](https://www.convosight.com/tools/moments/asia/2026-11-14/jujutsu-kaisen-manga-edits)
 
 ---
 
-### 3. Call of Duty: Modern Warfare 4 & Ghost
-* **Why fans care now:** Top seller on Steam US; MW4 military "aura" edits and character loyalty/betrayal clips pulled **500k–380k views** in the last 7 days.
-* **Hashtags:** `#mw4` `#callofduty` `#simonghostriley` `#gamingedit`
-* **Clip breakdown:** 
-  * *Hook (1-2s):* Ghost turning towards the camera in rain, night-vision goggles snapping down.
-  * *Body (18s):* Tactical room-breach sequence in unbroken story order with muted gunshots under a dark phonk beat.
-  * *Final beat:* Ghost holding a radio check, cutting right before he answers to trigger comments.
-* **Saturation:** **High** (Ghost edits are standard TikTok fodder, but MW4 release wave gives fresh interest).
-* **Source Link:** [YouTube Shorts - COD MW4 Trend](https://youtu.be/Sl64s60Njf4)
+### 3. Call of Duty: Modern Warfare 4
+* **Why fans care now:** Currently holding a top seller spot on Steam US. Recent gameplay short edits on YouTube (e.g., REDLINE GAMINGz's character cuts) pulled 512,393 and 414,598 views over the past 5 days.
+* **Hashtags:** `#mw4` `#callofduty` `#taskforce141` `#gamingedit`
+* **The moment to clip (30-40s MotionVault edit):**
+  * *Hook (0-2s):* High-intensity door-breach frame in night vision.
+  * *Body (2-32s):* Tactical cinematic stretch showing Task Force 141 executing a coordinated raid without cuts.
+  * *Rewatch Beat (32-36s):* Ghost turning to camera with rain slicking his mask.
+* **Saturation:** Medium (high demand for cinematic story edits vs simple multiplayer highlights).
+* **Source:** Steam Top Sellers (US) · [YouTube MW4 Short Edit](https://youtu.be/w58d6Jgkjo8)
 
 ---
 
-### 4. The Apothecary Diaries Season 3
-* **Why fans care now:** Leads all AniList anime with a massive **529 trending score** (112k fans, Episode 8 airing Nov 20).
-* **Hashtags:** `#apothecarydiaries` `#maomao` `#jinshi` `#animefy`
-* **Clip breakdown:** 
-  * *Hook (1-2s):* Maomao’s signature deadpan glare when detecting poison.
-  * *Body (15-20s):* The court confrontation sequence leading up to her revealing the ingredient anomaly.
-  * *Final beat:* Jinshi's shocked reaction cut with a quick pitch-shifted audio chime.
-* **Saturation:** **Fresh / Low Saturation** (high view demand, relatively low competition for high-quality edits).
-* **Source Link:** [AniList - Apothecary Diaries S3](https://anilist.co/anime/195516)
+### 4. Re:ZERO -Starting Life in Another World- (Season 5)
+* **Why fans care now:** Season 5 was officially announced by Crunchyroll on Nov 14, 2026, sparking a fresh wave of hype across socials and sending its AniList trending score to 416.
+* **Hashtags:** `#rezero` `#subarunatsuki` `#rem` `#animeedit`
+* **The moment to clip (30-40s MotionVault edit):**
+  * *Hook (0-2s):* Subaru’s eye closeup glitching during a "Return by Death" trigger.
+  * *Body (2-30s):* Emotional sequence tracking Subaru's transition from despair to standing up against an Archbishop.
+  * *Rewatch Beat (30-34s):* Sudden silence cut with shadow hands wrapping around his neck.
+* **Saturation:** Low (announcement phase—ideal time to post announcement edit reaction edits before footage gets spammed).
+* **Source:** [Crunchyroll News Announcement](https://news.google.com/rss/articles/CBMizwFBVV95cUxPNHk2TVZJUjVlMkVpWENUT1JpN1RwRWhxaDFiSnUydl9JdzA1bHJCaGVqb1lLcUxuSjRQbWR5WjN6Wk5SNV80aDZJS1ZYbWloWXlmYjZ5cUwyLVc4V1NvQ2FLbE1JR2RucDRSeTM4SHVGelVrQ01qYVRSNVFVLXJhbFByMG5rSUpSMmhHNGRPbzF5WnJiSDVZYWgwUERDeGNwMS1tQzRSb3BZWmV2TDlYQXpidjFWc01ra05JbWJlZnlnVWlRaExsYTNHQTdMd2c?oc=5) · [AniList Re:Zero S5](https://anilist.co/anime/219904)
 
 ---
 
-### 5. Ramayana: Part 1
-* **Why fans care now:** Dominating Wikipedia search curiosity yesterday with **735,438 page views**, signaling a huge surge in public awareness for upcoming epic cinematic reveals.
-* **Hashtags:** `#ramayana` `#indiancinema` `#epicaction` `#cinematicedit`
-* **Clip breakdown:** 
-  * *Hook (1-2s):* High-contrast silhouette firing a glowing cosmic arrow.
-  * *Body (15s):* Wide dramatic shots of ancient armies and atmospheric environment reveals.
-  * *Final beat:* Heavy orchestral brass strike synced to title card reveal.
-* **Saturation:** **Low / High Opportunity** (huge global curiosity, few dedicated short-form editors on western FYPs).
-* **Source Link:** Wikipedia Daily Traffic Data (`Ramayana: Part 1`)
+### 5. Marvel / Avengers: Doomsday (Thor)
+* **Why fans care now:** Spiked in UK Google Trends (200+ searches) after fans started circulating viral rumors regarding an *Avengers: Doomsday* billboard plot twist involving Thor. The Wikipedia article for *Avengers: Doomsday* hit 49,416 views yesterday.
+* **Hashtags:** `#avengersdoomsday` `#thor` `#mcu` `#marveledit`
+* **The moment to clip (30-40s MotionVault edit):**
+  * *Hook (0-2s):* Lightning striking Stormbreaker from *Infinity War* with heavy bass.
+  * *Body (2-32s):* Retrospective montage connecting Thor’s peak MCU battle moments (*Ragnarok* entry to *Endgame* portal fight).
+  * *Rewatch Beat (32-36s):* Text overlay asking "Will Thor survive Doomsday?" over Thor's glowing eye close-up.
+* **Saturation:** Medium-High (the billboard rumor gives a fresh angle to re-edit classic MCU footage).
+* **Source:** UK Google Trends · Wikipedia Top Read (2026-11-13)
 
 ---
 
-### 6. One Piece (Emotional / Backstory Beats)
-* **Why fans care now:** Continuous juggernaut on AniList (769k fans); emotional character family/sacrifice edits peaked at **1.5M** and **1.3M views** on Shorts this week.
-* **Hashtags:** `#onepiece` `#luffy` `#onepieceedit` `#anime`
-* **Clip breakdown:** 
-  * *Hook (1-2s):* Emotional tear falling in slow-motion paired with a quiet vocal filter.
-  * *Body (20s):* Uninterrupted flashback beat showing acceptance into the crew.
-  * *Final beat:* Sudden switch to present-day Conqueror's Haki flash frame for maximum contrast.
-* **Saturation:** **Oversaturated** (requires tight storytelling over generic flash edits).
-* **Source Link:** [AniList - One Piece](https://anilist.co/anime/21) / [YouTube Shorts Trend](https://youtu.be/QDNp3rpF2MA)
+### 6. Grand Theft Auto VI
+* **Why fans care now:** Sustained massive curiosity: Wikipedia recorded 74,974 views yesterday. Global search trends spike around viral giveaways/Kick sweepstakes while fans wait for new footage.
+* **Hashtags:** `#gta6` `#grandtheftautovi` `#rockstargames` `#gamingedit`
+* **The moment to clip (30-40s MotionVault edit):**
+  * *Hook (0-2s):* Vice City neon skyline cut to engine rev.
+  * *Body (2-30s):* Continuous 4K cinematic cut of Lucia and Jason's getaway drive from Trailer 1 synced to a phonk sound.
+  * *Rewatch Beat (30-34s):* Bandana reveal shot cut right before the title card hits.
+* **Saturation:** **Oversaturated** (requires high visual polish or unique audio sync to rank).
+* **Source:** Wikipedia Top Read (2026-11-13)
 
 ---
 
-### 7. Godzilla Minus Zero
-* **Why fans care now:** Spiked on Wikipedia yesterday (**75,047 views**). Kaiju "destruction aura" edits reliably generate high watch-time on TikTok.
-* **Hashtags:** `#godzilla` `#godzillaminuszero` `#kaiju` `#monsterverse`
-* **Clip breakdown:** 
-  * *Hook (1-2s):* Godzilla’s dorsal fins glowing blue with charging sound effect.
-  * *Body (15s):* 1-2 long, unbroken shots of atomic breath razing city blocks in story sequence.
-  * *Final beat:* Silent 1-second pause right before the shockwave hits the camera frame.
-* **Saturation:** **Low-Medium** (fresh title hype, high visual impact).
-* **Source Link:** Wikipedia Daily Traffic Data (`Godzilla Minus Zero`)
-
----
-
-### 8. Grand Theft Auto VI (GTA 6)
-* **Why fans care now:** Sustained high interest (73k+ daily Wikipedia views); comparison edits against new releases (like MW4) are pulling hundreds of thousands of views on Shorts.
-* **Hashtags:** `#gta6` `#grandtheftauto` `#gta6trailer` `#rockstargames`
-* **Clip breakdown:** 
-  * *Hook (1-2s):* Neon Vice City skyline at dusk with engine revving audio.
-  * *Body (18s):* Seamless highway driving cuts synced to a retro 80s synthwave beat.
-  * *Final beat:* Fast cut to protagonist dual-wielding pose right before beat stops.
-* **Saturation:** **Oversaturated** (extremely high clip density; stick to high-contrast cinematic color grading to stand out).
-* **Source Link:** Wikipedia Daily Traffic Data / [YouTube Comparison Edit](https://youtu.be/Sl64s60Njf4)
+### 7. Honkai: Star Rail
+* **Why fans care now:** Active regional edits trend across Southeast Asia (Thailand, Indonesia, Philippines, Japan), generating 503K views across 41 creators in the last week focusing on character reactions and Aha lore edits [1].
+* **Hashtags:** `#honkaistarrail` `#hsr` `#hsredit` `#gamingedit`
+* **The moment to clip (30-40s MotionVault edit):**
+  * *Hook (0-2s):* Acheron unsheathing her blade with color-isolation filter.
+  * *Body (2-30s):* Unbroken Ultimate animation sequence transitioning straight into high-speed combat cuts.
+  * *Rewatch Beat (30-34s):* Red slash effect freezing right on the frame of impact.
+* **Saturation:** Low in US/EU, Medium in Asia (good niche to target for high engagement ratios).
+* **Source:** [Convosight Honkai Star Rail Moments](https://www.convosight.com/tools/moments/asia/2026-11-14/honkai-star-rail-characters)
