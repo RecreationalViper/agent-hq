@@ -2,9 +2,11 @@
 
 > Scanned 12 of 29 saved searches (12 returned data, 0 unchanged, 0 failed). 12 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (0)
+## Start here (1)
 
-_Nothing new cleared the quality bar this scan. That is a normal, healthy result — the radar is rotating through its searches and will cover the rest next time._
+- **[loopx-project/loopx](https://github.com/loopx-project/loopx)** 🟡 WATCH · score 70/100 · ⭐ 6,583 · Apache-2.0 · updated 0d ago
+  - The control plane for 24/7 always-on agents. Turn long-horizon goals into verifiable results across Codex, Claude Code, and custom runtimes—from lo…
+  - Why: 6,583 stars; updated this week; Apache-2.0 license; well established
 
 ## Agent skills you could install (0)
 
