@@ -1,58 +1,64 @@
-# TikTok Sound Watcher (updated 2026-11-13)
+# TikTok Sound Watcher (updated 2026-11-14)
 
-> ⚠️ Web search was unavailable today, so this is from memory and may be out of date. Check the official links before acting.
+> ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# Rising TikTok Sounds & Audio Trends for Edits
-
-Below are 5 trending sound profiles actively driving millions of views on short-form edits right now (based on fresh scanner data and short-form trends).
+Here are 6 rising TikTok sounds and songs identified from current edit trends and news data, formatted for quick reference on your phone.
 
 ---
 
-### 1. FUNK MANDALA — Dj Samir
-* **Why It’s Rising**: Currently driving massive view spikes on hero reveal and aura edits (e.g., 14.5M+ views on top recent edits). High-energy Indian/Brazilian phonk crossover beat.
-* **Edit Vibe**: High-octane Hype / Aura Reveal / Fast Action Transition.
-* **Ideal Cut Point**: Build tension during the vocal vocalization, then hit your primary impact frame (punch, shot, character frame reveal) right on the heavy bass drop beat.
-* **Best Fit Content**: Action movies (*Avengers*, *Daredevil*), tactical shooters (*Call of Duty: Modern Warfare 4*, *Bodycam*), or high-action anime power scenes (*Bleach*, *Black Clover*).
-* **Business Account Status**: ⚠️ **Blocked / Restricted for Business Accounts** (Commercial music track; best used on personal/creator TikTok profiles or as original audio upload).
+### 1. MONTAGEM ZORA (Slowed) – DJ Zora / Brazilian Funk Remix
+* **Why it’s rising:** Massive traction in short-form edit spaces, driving over 14.6M views on top YouTube Shorts edits this week.
+* **Edit Vibe:** High-energy hype, heavy battle montages, gaming clutches, intense anime fights (*Black Clover*, *Jujutsu Kaisen*).
+* **Beat / Drop to Cut On:** Build up with slow walking/dialogue hooks; cut aggressively on the heavy bass drop (bass slap) to showcase impact hits, power unleashes, or headshots.
+* **Source / Reference:** [Prox Editz Short](https://youtu.be/hrwjS08gj9w)
+* **Business Account Warning:** ⚠️ **Likely Blocked/Muted.** Phonk/remix audios often trigger copyright strikes on TikTok Business accounts. Use a standard creator profile or overlay user-uploaded audio.
 
 ---
 
-### 2. MONTAGEM ZORA (SLOWED)
-* **Why It’s Rising**: Heavy slowed Brazilian phonk trend with 13.3M+ views on recent bad-ass montage edits. 
-* **Edit Vibe**: Slow-Mo Reveal / Dark Aura / Badass Character Stance.
-* **Ideal Cut Point**: Match a slow character walk-up or eye-contact clip to the slowed opening beat, then slice to a fast 3-cut combo right when the distorted bass kicks in.
-* **Best Fit Content**: Anime villains/badasses (*Steel Ball Run JoJo*, *Bleach*), dark gaming montages (*Modern Warfare 4*, *GTA VI* teasers).
-* **Business Account Status**: ⚠️ **Restricted for Business Accounts** (Remix audio; requires personal creator account library access).
+### 2. Duvet – Bôa (Sped Up / Slowed / Original)
+* **Why it’s rising:** 1998 alt-rock track surging back onto the Billboard Hot 100 via viral TikTok nostalgia and anime aesthetic edits.
+* **Edit Vibe:** Atmospheric, melancholic, sci-fi introspective, psychological anime (*Serial Experiments Lain*, *Bleach*), dark gaming trailers (*GTA VI*).
+* **Beat / Drop to Cut On:** Hook on the opening clean guitar riff ("And you don't seem to understand..."); hit a slow-motion eye zoom or silhouette reveal right when the vocal echoes in.
+* **Source / Reference:** [AOL Music Coverage](https://news.google.com/rss/articles/CBMifkFVX3lxTE5WTUlUR29MYko0OXctUFpudllRcW9Wc0dXU1BTSGhKUFBMeEdZanFBUGczdTJpUFVORE5NdERfOVE3elFRdlRuYjFkczdRSDlhWEpENWxyUmlVTmhBUk1HSE9nbXhDWWVuc200UzBOOHdfSFlLY3YxQlBUZ1otZw?oc=5)
+* **Business Account Warning:** ⚠️ **Blocked for Commercial Use.** Major label release; restricted on TikTok Commercial Music Library.
 
 ---
 
-### 3. MEOW BOSS TEKK — Phonk Track / Sound Edit
-* **Why It’s Rising**: Dominating high-IQ gaming moments, brainrot flexes, and strategic play edits (500k+ views on recent gaming clips).
-* **Edit Vibe**: Hype Gaming / Meme Flex / Tactical IQ Play.
-* **Ideal Cut Point**: Sync the stuttering vocal pattern to fast-paced game UI clicks or weapon inspects, dropping the final shot right on the bass slam.
-* **Best Fit Content**: Fast-paced competitive gaming clips (*Minecraft* clutches, *Call of Duty*, *Fortnite* pirating plays), quick funny anime clips.
-* **Business Account Status**: ⚠️ **Likely Restricted for Business** (User-generated sound track; test in TikTok audio picker under standard audio settings).
+### 3. Dancing On My Own – Kings of Leon (Live/Acoustic Cover)
+* **Why it’s rising:** Millions of views across TikTok feeds following widespread viral sharing of their unreleased cover.
+* **Edit Vibe:** Lone warrior, anti-hero sacrifice, bittersweet cinematic moments (Batman, *Call of Duty: MW4* Task Force 141 moments).
+* **Beat / Drop to Cut On:** Start with quiet dialogue or character isolation; land the visual cut on the raspy vocal peak ("I'm right over here, why can't you see me?").
+* **Source / Reference:** [BroBible Coverage](https://news.google.com/rss/articles/CBMiowFBVV95cUxQ4TVHakJQQTlvSmpHZ3BBd21WVHRxOG1URnRHTFNhYV9mQml2emJvd0VxcURMbmQ0cHZTUmJJZUNsLUJ2TUp5dkZodjdRUEN0cWw0Um85b1RxNkgtMGVjUXRiUXJYZUdDQm05M0RDb0VMbWsyeTFRZ0dUMW4zZWZpS2VuTVZUcUlmWi1HWHoyRmJSS2tKaDM4ODVxcVRPeF9RR3JB?oc=5)
+* **Business Account Warning:** ⚠️ **Blocked for Business Accounts.** Commercial copyrighted work; posted as user audio on personal TikTok handles.
 
 ---
 
-### 4. Cinematic Strings & Emotional Vocal (Thorfinn / Grief Arc Audio)
-* **Why It’s Rising**: Story-driven anime edits are dominating organic engagement (top Vinland Saga edits pulling 8M–9M views this week).
-* **Edit Vibe**: Sad / Emotional / Tragedy to Redemption Story Arc.
-* **Ideal Cut Point**: Hold a single unbroken character shot during the quiet melancholic string buildup, then cut to a flashback memory frame on the dramatic vocal swelling beat.
-* **Best Fit Content**: Heavy emotional character arcs (*Vinland Saga Thorfinn*, *One Piece* backstories, *The Apothecary Diaries* emotional beats).
-* **Business Account Status**: ✅ **Business Account Safe** if using royalty-free cinematic string arrangements or custom royalty-free orchestra tracks; ⚠️ Restricted if using direct anime OST recordings.
+### 4. Sailor Song – Gigi Perez
+* **Why it’s rising:** Continuing strong performance across anime romance and tragic backstory edits (e.g., top-performing *One Piece* edits reaching 2.3M+ views).
+* **Edit Vibe:** Emotional character bonds, tragic backstories, sacrifice montage, sad anime (*One Piece*, *Firefly Wedding*).
+* **Beat / Drop to Cut On:** Hook on soft intro dialogue; transition to the emotional vocal swell ("Won't you kiss me...") right on a tragic character smile or tears dropping.
+* **Source / Reference:** [Yt_Orewa_Blue Edit](https://youtu.be/EO6kUmmjou8)
+* **Business Account Warning:** ⚠️ **Blocked for Business Use.** Official Sony/Columbia release.
 
 ---
 
-### 5. Heavy Industrial Synth / Heist Bass Pulse (GTA VI & Cyberpunk Vibe)
-* **Why It’s Rising**: Surging alongside massive interest in *GTA VI* and *Cyberpunk: Edgerunners 2* edit trends. 
-* **Edit Vibe**: Cyberpunk / Heist Hype / Futuristic Action.
-* **Ideal Cut Point**: Pulse beat edits—sync scene color flashes or glitch transitions on every sharp electronic synth pulse (every 0.5 seconds during the loop).
-* **Best Fit Content**: *Cyberpunk: Edgerunners*, *Grand Theft Auto VI* trailers/cinematics, *Bodycam* gameplay.
-* **Business Account Status**: ✅ **Business Friendly options available** under Commercial Music Library ("Cyberpunk synth" / "Dark synthwave" commercial filters).
+### 5. Meant To Be – Sped Up / Slowed Remix
+* **Why it’s rising:** Trending in cinematic superhero and gaming edits (top *Spider-Man* edits reaching 800k+ views).
+* **Edit Vibe:** Action-drama, tragic hero arcs, high-stakes superhero moments (MCU, Spider-Man, *Tokyo Revengers*).
+* **Beat / Drop to Cut On:** Cut on the dramatic snare snare drop; sync quick mask-on/mask-off or suit up shots to the rhythmic snare snaps.
+* **Source / Reference:** [BluSpider Gaming Edit](https://youtu.be/xlxLDE224i4)
+* **Business Account Warning:** ⚠️ **Restricted for Commercial Profiles.** Standard personal account access required.
 
 ---
 
-### Quick Editor Notes for Claude & MotionVault
-1. **Hook Timing**: For phonk sounds (*FUNK MANDALA*, *MONTAGEM ZORA*), place the character's signature look or hook beat within **0.8 to 1.2 seconds** before the drop.
-2. **Re-watch Trigger**: Fade the sound out slightly early at the end to force viewers to loop back to the punchy intro beat.
+### 6. Time – Acoustic Cover Style (Pink Floyd / Tyler Childers trend)
+* **Why it’s rising:** Re-emerging audio trend around acoustic/country takes on classic rock anthems.
+* **Edit Vibe:** Aging hero, grim Western, passing of time, villain retirement/downfall (*Red Dead Redemption*, *Logan*, veteran anime characters).
+* **Beat / Drop to Cut On:** Hook on clock-ticking sound FX; hit the dramatic character match-cut on the first heavy acoustic guitar strum or vocal entrance.
+* **Source / Reference:** [Country Chord Trend Report](https://news.google.com/rss/articles/CBMi-wFBVV95cUxNOWZzV0o4M0lpWkVrTGpodEpjMXFGTU41U3k4aXZEc0g4UWZjVVViWDNyU3JmQkFsc0lVanBObnYzNC02eFdmRkdab29SVnVtay0wekVjd3YtZndTeXYzYWtGbktiOWx4NHFFX0pqbC1GOHNhUmhzSVJVd0FKWk9UMGRvX3VBb3VROU1ISEx5UndHVDVEaU4wRUV5eG95cVc3SHRrWTZtd0NDOHdTOWwyNnM5dVBNUmxMa2RneVVWUlhaNWozUUdiZFFIZ2NydDh2T2Nwc3pKRmZPVHd3bUlsSTVWMkRFQzhMd3lkWU5oQnVtWW9RUWlsZ3VIcw?oc=5)
+* **Business Account Warning:** ⚠️ **Blocked for Commercial Accounts.** Publisher copyright applies.
+
+---
+
+### Quick Recommendation for MotionVault
+Since MotionVault operates on a **$0 budget** and relies on organic TikTok reach, post these using a **Personal Creator Account** (or attach trending sounds natively inside the TikTok app on your iPhone after cutting to a royalty-free placeholder track in editing).

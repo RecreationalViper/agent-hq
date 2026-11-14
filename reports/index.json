@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-14-tiktok-sounds.md",
+    "agent": "tiktok-sounds",
+    "name": "TikTok Sound Watcher",
+    "date": "2026-11-14"
+  },
+  {
     "file": "2026-11-14-researcher.md",
     "agent": "researcher",
     "name": "Deep Researcher",
