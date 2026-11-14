@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-14-researcher.md",
+    "agent": "researcher",
+    "name": "Deep Researcher",
+    "date": "2026-11-14"
+  },
+  {
     "file": "2026-11-13-head-trader.md",
     "agent": "head-trader",
     "name": "Head Trader",

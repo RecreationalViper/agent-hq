@@ -1,5 +1,18 @@
 {
   "covered": [
+    "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot",
+    "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december",
+    "https://unsloth.ai/docs/models/qwen3.8",
+    "https://github.com/ggml-org/ggml/releases/tag/v1.0.0",
+    "https://gcn.com/github-agentic-workflows-open-source-tool/23243/",
+    "https://github.blog/changelog/2026-11-13-manage-ai-scan-for-repositories-using-the-rest-api",
+    "https://aws.amazon.com/blogs/machine-learning/route-coding-agent-requests-to-the-right-model-on-amazon-bedrock-with-nvidia-nemo-switchyard/",
+    "https://aws.amazon.com/blogs/machine-learning/architecture-patterns-for-fast-session-startup-on-amazon-bedrock-agentcore-runtime/",
+    "https://haddyalchaer.com/jepa",
+    "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+    "https://www.perplexity.ai/hub/blog/perplexity-decider",
+    "https://aws.amazon.com/blogs/machine-learning/cost-attribution-and-controls-for-ai-developer-and-productivity-tools-on-amazon-bedrock/",
+    "https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/",
     "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
     "https://pasqualepillitteri.it/en/news/32984/baidu-releases-ernie-55-flash-preview-free-openrouter",
     "https://aivionews.com/models/edge0-open-sources-145-billion-parameter-ai-model-built-to-run-on-a/",
@@ -74,6 +87,6 @@
     "https://hunch.net/?p=13764006",
     "https://www.kadoa.com/companies/insights/ai-selloff-perspective"
   ],
-  "lastRun": "2026-11-13",
-  "lastNotion": "2026-11-13"
+  "lastRun": "2026-11-14",
+  "lastNotion": "2026-11-14"
 }
