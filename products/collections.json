@@ -20,7 +20,7 @@
       "season": "Christmas",
       "files": "products/fillable/out/Evergreen & Candlelight/",
       "approved": "2026-11-13",
-      "price": "$8.99 (suggested)",
+      "price": "$8.99",
       "marketFrom": "2026-11-20",
       "marketUntil": "2026-12-26",
       "audience": "Families spending Christmas without someone; \"Christmas in heaven\" searches",
@@ -33,8 +33,15 @@
       "look": "pine green, cream, brass, cranberry; hand-drawn pine, berries, one candle",
       "fonts": "GFS Baskerville + Inter (fill-in text in Times/Helvetica)",
       "previewUrl": "https://foreverheld.pages.dev/img/holiday/evergreen-suite.jpg",
-      "checkout": "not live yet: owner uploads to Payhip; until a payhip link is here, don't post buy links",
-      "delivery": "fill-in PDFs: buyers type in free Adobe Acrobat Reader, print at home on US Letter or at a print shop"
+      "checkout": "https://payhip.com/b/rdhVQ",
+      "delivery": "fill-in PDFs: buyers type in free Adobe Acrobat Reader, print at home on US Letter or at a print shop",
+      "live": "2026-11-13",
+      "listingImages": [
+        "products/fillable/previews/listing/evergreen-1.jpg",
+        "products/fillable/previews/listing/evergreen-2.jpg",
+        "products/fillable/previews/listing/evergreen-3.jpg",
+        "products/fillable/previews/listing/evergreen-4.jpg"
+      ]
     },
     {
       "id": "holiday-2026-B",
@@ -43,7 +50,7 @@
       "season": "Blue Christmas, Hanukkah, solstice",
       "files": "products/fillable/out/Longest Night/",
       "approved": "2026-11-13",
-      "price": "$9.99 (suggested)",
+      "price": "$9.99",
       "marketFrom": "2026-11-20",
       "marketUntil": "2026-12-31",
       "audience": "Churches, hospices and grief groups holding Blue Christmas / Longest Night services (Dec 21); Hanukkah and solstice; faith-neutral, no religious symbols",
@@ -56,8 +63,15 @@
       "look": "dusk gradient navy-to-lavender, silver, one four-point star",
       "fonts": "Inter (fill-in text in Helvetica)",
       "previewUrl": "https://foreverheld.pages.dev/img/holiday/longest-night-suite.jpg",
-      "checkout": "not live yet: owner uploads to Payhip; until a payhip link is here, don't post buy links",
-      "delivery": "fill-in PDFs: buyers type in free Adobe Acrobat Reader, print at home on US Letter or at a print shop"
+      "checkout": "https://payhip.com/b/xSfZG",
+      "delivery": "fill-in PDFs: buyers type in free Adobe Acrobat Reader, print at home on US Letter or at a print shop",
+      "live": "2026-11-13",
+      "listingImages": [
+        "products/fillable/previews/listing/longest-night-1.jpg",
+        "products/fillable/previews/listing/longest-night-2.jpg",
+        "products/fillable/previews/listing/longest-night-3.jpg",
+        "products/fillable/previews/listing/longest-night-4.jpg"
+      ]
     },
     {
       "id": "holiday-2026-C",
@@ -66,7 +80,7 @@
       "season": "Thanksgiving",
       "files": "products/fillable/out/Harvest Table/",
       "approved": "2026-11-13",
-      "price": "$7.99 (suggested)",
+      "price": "$7.99",
       "marketFrom": "2026-11-13",
       "marketUntil": "2026-11-27",
       "audience": "Families facing their first Thanksgiving with an empty chair",
@@ -79,8 +93,15 @@
       "look": "oat, terracotta, mustard, olive, deep brown; wheat and autumn leaves",
       "fonts": "Caladea + Inter (fill-in text in Times/Helvetica)",
       "previewUrl": "https://foreverheld.pages.dev/img/holiday/harvest-table-suite.jpg",
-      "checkout": "not live yet: owner uploads to Payhip; until a payhip link is here, don't post buy links",
-      "delivery": "fill-in PDFs: buyers type in free Adobe Acrobat Reader, print at home on US Letter or at a print shop"
+      "checkout": "https://payhip.com/b/xq34N",
+      "delivery": "fill-in PDFs: buyers type in free Adobe Acrobat Reader, print at home on US Letter or at a print shop",
+      "live": "2026-11-13",
+      "listingImages": [
+        "products/fillable/previews/listing/harvest-table-1.jpg",
+        "products/fillable/previews/listing/harvest-table-2.jpg",
+        "products/fillable/previews/listing/harvest-table-3.jpg",
+        "products/fillable/previews/listing/harvest-table-4.jpg"
+      ]
     }
   ]
 }

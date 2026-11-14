@@ -94,6 +94,45 @@
         "listings",
         "social posts"
       ]
+    },
+    {
+      "id": "holiday-harvest-table-scene",
+      "file": "img/holiday/harvest-table-1.jpg",
+      "shows": "Harvest Table set styled on a table (real files, sample text)",
+      "used_on": [
+        "storefront: Holiday section"
+      ],
+      "good_for": [
+        "pins",
+        "emails",
+        "social posts"
+      ]
+    },
+    {
+      "id": "holiday-evergreen-scene",
+      "file": "img/holiday/evergreen-1.jpg",
+      "shows": "Evergreen set styled on a table (real files, sample text)",
+      "used_on": [
+        "storefront: Holiday section"
+      ],
+      "good_for": [
+        "pins",
+        "emails",
+        "social posts"
+      ]
+    },
+    {
+      "id": "holiday-longest-night-scene",
+      "file": "img/holiday/longest-night-1.jpg",
+      "shows": "Longest Night set styled on a table (real files, sample text)",
+      "used_on": [
+        "storefront: Holiday section"
+      ],
+      "good_for": [
+        "pins",
+        "emails",
+        "social posts"
+      ]
     }
   ],
   "links": {

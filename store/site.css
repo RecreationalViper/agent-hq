@@ -194,3 +194,13 @@ form.contact { display: grid; gap: 14px }
 .play { display: inline-flex; align-items: center; gap: 10px; font-weight: 500; text-underline-offset: 4px }
 .play span { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid var(--sage); color: var(--sage); font-size: 12px; padding-left: 2px; text-decoration: none }
 @media (max-width: 520px) { .chips li + li { border-left: 0 } .hero-cta .btn { width: 100% } }
+
+/* Holiday collections */
+.holiday { padding: 40px 28px; margin: 28px auto }
+.holiday-lead { text-align: center; color: var(--ink-soft); margin: -6px auto 26px; max-width: 40em }
+.holiday-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px }
+.hcard { background: rgba(255,255,255,.55); border-radius: 18px; padding: 14px 14px 20px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 6px 20px rgba(0,0,0,.06) }
+.hcard img { width: 100%; border-radius: 12px; aspect-ratio: 4/3; object-fit: cover }
+.hcard h3 { margin: 6px 0 0; font-size: 22px }
+.hcard p { margin: 0 0 6px; color: var(--ink-soft); flex: 1 }
+.hcard .btn { align-self: flex-start }
