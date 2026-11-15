@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-15-webdev.md",
+    "agent": "webdev",
+    "name": "Web Developer",
+    "date": "2026-11-15"
+  },
+  {
     "file": "2026-11-15-review.md",
     "agent": "review",
     "name": "Weekly Review (Manager)",
