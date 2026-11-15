@@ -10,6 +10,6 @@ f.addEventListener("submit", async (e) => {
     const j = await r.json().catch(() => ({}));
     if (!r.ok || !j.ok) throw new Error(j.error || "failed");
     f.reset(); show("Thank you. Your message is on its way, and we'll reply to your email soon.", true);
-  } catch (err) { show("Sorry, that didn't send. Please email us at foreverheld.shop@gmail.com.", false); }
+  } catch (err) { show("Sorry, that didn't send. Please try again in a minute.", false); }
   btn.disabled = false; btn.textContent = "Send message";
 });

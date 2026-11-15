@@ -34,7 +34,7 @@
       "id": "content",
       "name": "Content Planner",
       "schedule": "weekly:mon",
-      "instructions": "Plan this week's free marketing: 5 short TikTok or Pinterest post ideas for our memorial kits. For each: the hook (first line), a 20-30 second script or pin text, and what to show on screen. The Content Creator turns your plan into finished images and captions on Tuesday and Friday, so make each idea concrete (which product to show, the angle, the keyword). Read the Content Creator's notes and build on them: use what they asked for, don't repeat headlines they already made. Tone: gentle, helpful, never salesy about grief.",
+      "instructions": "Plan this week's free marketing: 5 short TikTok or Pinterest post ideas for our memorial kits. For each: the hook (first line), a 20-30 second script or pin text, and what to show on screen. The Content Creator turns your plan into finished images and captions every day, so make each idea concrete (which product to show, the angle, the keyword). Read the Content Creator's notes and build on them: use what they asked for, don't repeat headlines they already made. Tone: gentle, helpful, never salesy about grief. Cover every live product in products/collections.json (status approved with a checkout link): the Soft Botanical suite and, while they're in season, the holiday sets (Harvest Table for Thanksgiving, Evergreen & Candlelight for Christmas, Longest Night for Blue Christmas services) with their own pages on foreverheld.pages.dev. In holiday season, most ideas should help families and churches plan those days.",
       "doc": "etsy",
       "readsFiles": [
         "content/notes.md",
@@ -221,7 +221,13 @@
           "celebration of life sign",
           "share a memory card",
           "funeral printable",
-          "memorial service template"
+          "memorial service template",
+          "first thanksgiving without",
+          "thanksgiving memorial table",
+          "first christmas without",
+          "christmas memorial ornament",
+          "blue christmas service",
+          "longest night service"
         ],
         "modifiers": [
           "canva",
@@ -239,7 +245,7 @@
         ],
         "maxCreditUsd": 3
       },
-      "instructions": "You are our SEO specialist. Using ONLY the real Google data provided (autocomplete suggestions and current Google results), write this week's search plan for the Soft Botanical bundle on Payhip and our storefront, also usable on Etsy and Pinterest later. Include: (1) the 10 best keyword phrases buyers actually type, grouped by intent, and why; (2) an improved product title (under 140 characters) and a 160-character meta description; (3) 13 tags of 20 characters or fewer; (4) 3 Pinterest pin titles with descriptions; (5) the questions from 'People also ask' we should answer in the product description or FAQ, with a one-line answer each; (6) what the top-ranking pages do that we should copy or beat. Mark it DRAFT: the owner approves before anything is changed or published. Also answer the Content Creator's keyword requests in the notes file, in a short final section 'For the Content Creator'. Keep tracking Canva searches and trends as market data (they show what buyers expect, and buyers who want 'no Canva needed' are an angle for us). But in any copy written for OUR listings, pins or pages, never say our kit is edited in Canva: it is fill-in PDFs typed in the free Adobe Acrobat Reader app.",
+      "instructions": "You are our SEO specialist. Using ONLY the real Google data provided (autocomplete suggestions and current Google results), write this week's search plan for our live products (the Soft Botanical bundle and the in-season holiday sets in products/collections.json) on Payhip and our storefront, also usable on Etsy and Pinterest later. Include: (1) the 10 best keyword phrases buyers actually type, grouped by intent, and why; (2) an improved product title (under 140 characters) and a 160-character meta description; (3) 13 tags of 20 characters or fewer; (4) 3 Pinterest pin titles with descriptions; (5) the questions from 'People also ask' we should answer in the product description or FAQ, with a one-line answer each; (6) what the top-ranking pages do that we should copy or beat. Mark it DRAFT: the owner approves before anything is changed or published. Also answer the Content Creator's keyword requests in the notes file, in a short final section 'For the Content Creator'. Keep tracking Canva searches and trends as market data (they show what buyers expect, and buyers who want 'no Canva needed' are an angle for us). But in any copy written for OUR listings, pins or pages, never say our kit is edited in Canva: it is fill-in PDFs typed in the free Adobe Acrobat Reader app.",
       "readsFiles": [
         "content/notes.md",
         "pinterest/stats.md",

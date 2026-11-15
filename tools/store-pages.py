@@ -6,7 +6,7 @@ import site_chrome as SC  # shared menu, search and assistant chat (tools/site_c
 
 STORE = pathlib.Path(__file__).resolve().parent.parent / "store"
 UPDATED = "November 12, 2026"
-EMAIL = "foreverheld.shop@gmail.com"
+CONTACT = '<a href="contact.html">contact form</a>'  # the shop inbox is unavailable, so every page points to the contact form
 KIT = "https://payhip.com/b/vqNSA"
 CHECKLIST = "https://payhip.com/b/eYJqS"
 CONTACT_API = "https://foreverheld-sales.foreverheld.workers.dev/contact"
@@ -32,7 +32,7 @@ def footer(home=False):
     <div><h3>Shop</h3><ul><li><a href="{h}#suite">Soft Botanical suite</a></li><li><a href="{CHECKLIST}">Free planning checklist</a></li><li><a href="{h}#watch-title">Watch the video</a></li></ul></div>
     <div><h3>Help</h3><ul><li><a href="{h}#how">How it works</a></li><li><a href="guides.html">Planning guides</a></li><li><a href="{h}#faq-title">Questions</a></li><li><a href="contact.html">Contact us</a></li></ul></div>
     <div><h3>Policies</h3><ul><li><a href="terms.html">Terms of sale</a></li><li><a href="refunds.html">Refund policy</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="accessibility.html">Accessibility</a></li></ul></div>
-    <div><h3>Forever Held</h3><ul><li><a href="about.html">About us</a></li><li><a href="mailto:{EMAIL}">Email us</a></li></ul></div>
+    <div><h3>Forever Held</h3><ul><li><a href="about.html">About us</a></li><li><a href="contact.html">Contact us</a></li></ul></div>
   </div>
   <p class="foot-note">© 2026 Forever Held · Secure checkout by Payhip · Previews show the real files you receive.</p>
 </footer>
@@ -54,7 +54,7 @@ f.addEventListener("submit", async (e) => {{
     const j = await r.json().catch(() => ({{}}));
     if (!r.ok || !j.ok) throw new Error(j.error || "failed");
     f.reset(); show("Thank you. Your message is on its way, and we'll reply to your email soon.", true);
-  }} catch (err) {{ show("Sorry, that didn't send. Please email us at {EMAIL}.", false); }}
+  }} catch (err) {{ show("Sorry, that didn't send. Please try again in a minute.", false); }}
   btn.disabled = false; btn.textContent = "Send message";
 }});
 ''')
@@ -122,7 +122,7 @@ page("contact", "Contact us", "Questions about your Forever Held order, editing 
 </section>
 <section class="panel glass legal">
   <h2>Other ways to reach us</h2>
-  <p>Email: <a href="mailto:{EMAIL}">{EMAIL}</a><br>We're an online-only shop, so there's no storefront to visit. Orders are processed securely by Payhip.</p>
+  <p>Message us through our {CONTACT}.<br>We're an online-only shop, so there's no storefront to visit. Orders are processed securely by Payhip.</p>
   <h2>Before you write</h2>
   <ul><li><b>Didn't get your files?</b> Check your spam folder for the Payhip receipt; the download link is inside.</li>
   <li><b>Text won't change?</b> Open the file in Adobe Acrobat Reader, not your phone's built-in preview.</li>
@@ -132,7 +132,7 @@ page("contact", "Contact us", "Questions about your Forever Held order, editing 
 # ---------------- Terms of sale ----------------
 legal("terms", "Terms of sale", "Terms of sale and personal-use license for Forever Held printable downloads.",
  "The short version: you're buying digital files to fill in and print for your own family's memorial. Please don't resell or share the files.", [
- ("Who we are", f"<p>Forever Held (\"we\", \"us\") is an independent online shop selling printable, editable memorial keepsakes. You can reach us at <a href=\"mailto:{EMAIL}\">{EMAIL}</a> or through our <a href=\"contact.html\">contact page</a>. By buying from us or using this website, you agree to these terms.</p>"),
+ ("Who we are", f"<p>Forever Held (\"we\", \"us\") is an independent online shop selling printable, editable memorial keepsakes. You can reach us through our <a href=\"contact.html\">contact page</a>. By buying from us or using this website, you agree to these terms.</p>"),
  ("What you're buying", "<p>Our products are digital files (fill-in PDFs). Nothing physical is shipped. Previews on this site show the real files; the names, dates and wording in them are samples for you to replace. Colors can look slightly different on screens and on different printers and papers.</p>"),
  ("Orders and payment", "<p>Checkout is handled by Payhip, which processes your payment securely; we never see or store your card details. Prices are in US dollars and may change, but the price you pay is the one shown at checkout. Any taxes are calculated at checkout.</p>"),
  ("Delivery", "<p>Your files are available to download right after payment, and Payhip also emails you a download link. If you don't receive it, check your spam folder or <a href=\"contact.html\">contact us</a> and we'll send it again.</p>"),
@@ -161,7 +161,7 @@ legal("refunds", "Refund policy", "Refund policy for Forever Held digital downlo
  ("Changed your mind?", "<p>If you haven't downloaded your files yet, contact us within 7 days of purchase for a full refund. Once files have been downloaded, we can't offer refunds for a change of mind, because the files can't be returned.</p>"),
  ("Not included", "<ul><li>Typing mistakes in edited files, or printing costs.</li><li>Differences in color caused by a particular screen, printer or paper.</li><li>Problems caused by editing in an app other than Adobe Acrobat Reader (we're still glad to help you get it working).</li></ul>"),
  ("How refunds are paid", "<p>Approved refunds go back to your original payment method through Payhip. Banks usually show them within 5 to 10 business days.</p>"),
- ("How to ask", f"<p>Use our <a href=\"contact.html\">contact form</a> (choose \"Refund request\") or email <a href=\"mailto:{EMAIL}\">{EMAIL}</a> with the email address you used and your order number if you have it. Please reach out to us before opening a dispute with your bank; we'll respond quickly.</p>"),
+ ("How to ask", f"<p>Use our <a href=\"contact.html\">contact form</a> (choose \"Refund request\") with the email address you used and your order number if you have it. Please reach out to us before opening a dispute with your bank; we'll respond quickly.</p>"),
  ("Your rights", "<p>This policy doesn't limit any rights you have under consumer protection laws where you live.</p>"),
 ])
 
@@ -175,10 +175,10 @@ legal("privacy", "Privacy policy", "How Forever Held collects, uses and protects
  ("How we use information", "<p>Only to deliver your order, answer your questions, handle refunds, send emails you signed up for, and keep basic sales records. We don't use your information for anything else.</p>"),
  ("Sharing", "<p>We don't sell or rent personal information, and we don't share it for advertising. We only use the service providers needed to run the shop (Payhip and its payment processors, EmailOctopus for email, and the secure systems that deliver contact messages to us).</p>"),
  ("How long we keep it", "<p>Contact messages are kept for up to 12 months. Order records are kept as long as needed for tax and accounting. You can unsubscribe from emails at any time.</p>"),
- ("Your choices and rights", f"<p>You can ask us to see, correct or delete your information, or to stop emailing you, by writing to <a href=\"mailto:{EMAIL}\">{EMAIL}</a>. Depending on where you live (for example California or the EU), you may have additional rights, and we'll honor them.</p>"),
+ ("Your choices and rights", f"<p>You can ask us to see, correct or delete your information, or to stop emailing you, by messaging us through our {CONTACT}. Depending on where you live (for example California or the EU), you may have additional rights, and we'll honor them.</p>"),
  ("Our Pinterest app", "<p>The Forever Held Pinterest app connects only to the Forever Held Pinterest account. It creates and organizes our own Pins and boards and reads our own Pin statistics. It does not access, collect or store data about other Pinterest users. Access tokens are stored securely and never shared.</p>"),
  ("Children", "<p>Our shop is for adults. We don't knowingly collect information from children under 13.</p>"),
- ("Changes and contact", f"<p>If we change this policy, we'll update the date at the top. Questions? <a href=\"contact.html\">Contact us</a> or email <a href=\"mailto:{EMAIL}\">{EMAIL}</a>.</p>"),
+ ("Changes and contact", f"<p>If we change this policy, we'll update the date at the top. Questions? <a href=\"contact.html\">Contact us</a>.</p>"),
 ])
 
 # ---------------- About ----------------
@@ -201,7 +201,7 @@ legal("accessibility", "Accessibility", "Forever Held's commitment to an accessi
  "We want everyone to be able to use our site and our printables.", [
  ("Our approach", "<p>We build this site to work well on phones, with screen readers and with keyboard navigation, with readable text sizes and clear contrast. Images and videos include text descriptions.</p>"),
  ("Our files", "<p>Our printables are fill-in PDFs that work in the free Adobe Acrobat Reader app, which supports screen readers and zoom.</p>"),
- ("Need help?", f"<p>If anything on this site or in our files is hard to use, please <a href=\"contact.html\">tell us</a> or email <a href=\"mailto:{EMAIL}\">{EMAIL}</a>. We'll help you get what you need and fix the problem.</p>"),
+ ("Need help?", f"<p>If anything on this site or in our files is hard to use, please <a href=\"contact.html\">tell us</a>. We'll help you get what you need and fix the problem.</p>"),
 ])
 
 # ---------------- Guides (SEO pages written by the Web Developer agent) ----------------
