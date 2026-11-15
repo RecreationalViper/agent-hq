@@ -69,14 +69,26 @@ await section("Steam: top sellers and new releases (US)", async () => {
 });
 
 await section("MyAnimeList: anime airing this season and top airing now", async () => {
-  // Jikan is a free community API and sometimes drops a request: retry a few times.
-  const jk = async (u) => { for (let i = 1; ; i++) { try { return await get(u); } catch (e) { if (i >= 3) throw e; await new Promise((r) => setTimeout(r, 4000 * i)); } } };
-  const season = await jk("https://api.jikan.moe/v4/seasons/now?limit=15&sfw=true");
-  await new Promise((r) => setTimeout(r, 1500)); // Jikan allows ~3 requests a second
-  const top = await jk("https://api.jikan.moe/v4/top/anime?filter=airing&limit=10&sfw=true");
-  const row = (a) => `- [${a.title_english || a.title}](${a.url}) · score ${a.score ?? "?"} · ${n(a.members)} members${a.episodes ? ` · ${a.episodes} eps` : ""}${a.broadcast?.string ? ` · airs ${a.broadcast.string}` : ""}`;
-  const pop = [...(season.data || [])].sort((a, b) => (b.members || 0) - (a.members || 0));
-  return `### This season, most followed\n${pop.map(row).join("\n")}\n\n### Top airing right now\n${(top.data || []).map(row).join("\n")}`;
+  const row = (a) => `- [${a.title}](${a.url}) · score ${a.score ?? "?"} · ${n(a.members)} members${a.episodes ? ` · ${a.episodes} eps` : ""}${a.airs ? ` · airs ${a.airs}` : ""}`;
+  const MAL = process.env.MAL_CLIENT_ID?.trim();
+  let season, top;
+  if (MAL) {
+    // Official MyAnimeList API (free Client ID).
+    const H = { headers: { "X-MAL-CLIENT-ID": MAL } };
+    const d = new Date(), y = d.getUTCFullYear(), sea = ["winter", "spring", "summer", "fall"][Math.floor(d.getUTCMonth() / 3)];
+    const f = "fields=mean,num_list_users,num_episodes,broadcast,alternative_titles&nsfw=false";
+    const map = (x) => { const a = x.node; return { title: a.alternative_titles?.en || a.title, url: `https://myanimelist.net/anime/${a.id}`, score: a.mean, members: a.num_list_users, episodes: a.num_episodes, airs: a.broadcast ? `${a.broadcast.day_of_the_week} ${a.broadcast.start_time || ""} JST`.trim() : "" }; };
+    season = ((await get(`https://api.myanimelist.net/v2/anime/season/${y}/${sea}?limit=40&sort=anime_num_list_users&${f}`, H)).data || []).map(map).slice(0, 15);
+    top = ((await get(`https://api.myanimelist.net/v2/anime/ranking?ranking_type=airing&limit=10&${f}`, H)).data || []).map(map);
+  } else {
+    // Fallback: Jikan (free community mirror, no key; often blocks GitHub's servers).
+    const jk = async (u) => { for (let i = 1; ; i++) { try { return await get(u); } catch (e) { if (i >= 3) throw e; await new Promise((r) => setTimeout(r, 4000 * i)); } } };
+    const map = (a) => ({ title: a.title_english || a.title, url: a.url, score: a.score, members: a.members, episodes: a.episodes, airs: a.broadcast?.string });
+    season = ((await jk("https://api.jikan.moe/v4/seasons/now?limit=15&sfw=true")).data || []).map(map).sort((a, b) => (b.members || 0) - (a.members || 0));
+    await new Promise((r) => setTimeout(r, 1500));
+    top = ((await jk("https://api.jikan.moe/v4/top/anime?filter=airing&limit=10&sfw=true")).data || []).map(map);
+  }
+  return `### This season, most followed\n${season.map(row).join("\n")}\n\n### Top airing right now\n${top.map(row).join("\n")}`;
 });
 
 await section("Twitch: most-watched games and streams right now", async () => {
