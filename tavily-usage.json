@@ -1,7 +1,8 @@
 {
   "month": "2026-11",
-  "credits": 4,
+  "credits": 10,
   "byAgent": {
-    "tiktok-sounds": 4
+    "tiktok-sounds": 4,
+    "studio-scout": 6
   }
 }
