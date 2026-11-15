@@ -1,5 +1,18 @@
 {
   "covered": [
+    "https://gcn.com/google-gemini-4-hydrogen-coding/23269/",
+    "https://www.marktechpost.com/2026/11/15/bland-tofu-1-full-duplex-speech-to-speech-model/",
+    "https://roboticsandautomationnews.com/2026/11/15/robbyant-launches-lingbot-touch-to-give-robots-a-sense-of-touch/107152/",
+    "https://patmcguinness.substack.com/p/ai-week-in-review-261114",
+    "https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/",
+    "https://foxaiworld.com/baidu-ernie-5-5-flash-preview-free-openrouter-limits/",
+    "https://www.codeandchain.com/en/articles/2026-11-15/article-90c84b63c44c",
+    "https://www.thenextgentechinsider.com/pulse/cognition-unveils-swe-2-flash-for-high-speed-low-cost-coding-automation",
+    "https://top10.dev/story/elms-compiler-is-getting-10x-faster-and-the-language-is-finally-moving-again-2440",
+    "https://dev.to/diflowrin/before-you-wire-a-free-llm-api-into-your-side-project-run-this-checklist-41ac",
+    "https://jakub.jankiewicz.org/blog/ai-code-open-source/",
+    "https://www.netmeister.org/blog/claude-delusion.html",
+    "https://projectzero.google/2026/11/disclosure-policy.html",
     "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot",
     "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december",
     "https://unsloth.ai/docs/models/qwen3.8",
@@ -87,6 +100,6 @@
     "https://hunch.net/?p=13764006",
     "https://www.kadoa.com/companies/insights/ai-selloff-perspective"
   ],
-  "lastRun": "2026-11-14",
-  "lastNotion": "2026-11-14"
+  "lastRun": "2026-11-15",
+  "lastNotion": "2026-11-15"
 }
