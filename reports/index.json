@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-15-content-creator.md",
+    "agent": "content-creator",
+    "name": "Content Creator",
+    "date": "2026-11-15"
+  },
+  {
     "file": "2026-11-15-webdev.md",
     "agent": "webdev",
     "name": "Web Developer",
@@ -81,12 +87,6 @@
     "file": "2026-11-15-researcher.md",
     "agent": "researcher",
     "name": "Deep Researcher",
-    "date": "2026-11-15"
-  },
-  {
-    "file": "2026-11-15-content-creator.md",
-    "agent": "content-creator",
-    "name": "Content Creator",
     "date": "2026-11-15"
   },
   {

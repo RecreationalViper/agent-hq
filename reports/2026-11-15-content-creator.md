@@ -1,76 +1,49 @@
 # Content Creator - 2026-11-15
 
-**This week:** Navigating holiday grief and winter memorial planning with gentle fill-in printables
+**This week:** First holidays without them: gentle printable keepsakes for Thanksgiving, Christmas, and Blue Christmas services
 
 5 posts designed and sent to Discord #content (images there, ready to save).
 
-## 1. Pinterest: Saving a seat for loved ones
-- **Pin title:** Thanksgiving Memorial Place Cards | Empty Chair Table Remembrance
-- **Caption:** Navigating the first holiday meal with an empty chair can feel heavy. Setting a quiet place card with a loving note offers a gentle space to remember together.
-
-Fill in place cards and memory notes easily using free Adobe Acrobat Reader.
-
-Explore the Harvest Table set at foreverheld.pages.dev/harvest-table.html
-- **Tags:** #griefatthanksgiving #holidayremembrance #emptychair #thanksgivingmemorial #placecardsprintable #griefsupport
-- **Alt text:** Harvest Table printable place card reading In Loving Memory on an autumn wooden table setting next to a warm candle.
+## 1. Pinterest: A place set for memory
+- **Pin title:** Thanksgiving Empty Chair Sign & Memory Cards | First Holiday Without Them
+- **Caption:** Facing an empty chair this Thanksgiving? The Harvest Table set includes an 8x10 "We saved a seat for you" sign, "I'm Thankful For" memory cards, and fold-over place cards. Fill in on your phone or computer, print at home or a local shop. $7.99 at foreverheld.pages.dev/harvest-table.html
+- **Tags:** #thanksgivinggrief #emptychairmemorial #holidayremembrance #printablememorycards #firstthanksgivingwithoutthem #harvesttabledecor
+- **Alt text:** Harvest Table empty chair sign standing on an autumn farmhouse table with memory cards and place cards beside a small pumpkin and cream candles
 - **Image:** 2026-11-15-1-pin.jpg
 
-## 2. Pinterest: Planning a quiet winter solstice service
-- **Pin title:** Blue Christmas Service Program Printable | Longest Night Memorial Template
-- **Caption:** For churches and grief groups holding a Blue Christmas service, keeping details clear and calm matters. This 4-panel folded program has space for order of service, candle words, and names remembered.
-
-Fillable with free Adobe Acrobat Reader.
-
-Find the Longest Night suite at foreverheld.pages.dev/longest-night.html
-- **Tags:** #bluechristmas #longestnightservice #griefministry #solsticeservice #churchprogramtemplate #winterremembrance
-- **Alt text:** Longest Night printable folded program displayed on a dark wooden table in front of soft candle light.
+## 2. Pinterest: Ornaments that hold their story
+- **Pin title:** Christmas Memorial Ornament Cards | Evergreen & Candlelight Holiday Set
+- **Caption:** Hang their memory on the tree. Evergreen & Candlelight includes arch-shaped ornament keepsake cards (3.125x4.375 in) with punch holes for ribbon, plus a table sign and holiday memory cards. All fill-in PDFs, $8.99 at foreverheld.pages.dev/evergreen-candlelight.html
+- **Tags:** #christmasmemorialornament #memorytreeornaments #christmasinheaven #holidaygriefkeepsakes #printablechristmasmemorial #evergreencandlelight
+- **Alt text:** Evergreen ornament keepsake cards on a pine-dressed table at night with a white pillar candle and silver ribbon for hanging
 - **Image:** 2026-11-15-2-pin.jpg
 
-## 3. Instagram: Creating memory ornaments for the tree
-- **Caption:** Hanging a memory card on the Christmas tree is a gentle tradition for families missing someone this season. Print these small arch keepsake cards at home, type your words in free Adobe Reader, punch a hole, and thread with ribbon.
+## 3. Pinterest: A program for the longest night
+- **Pin title:** Blue Christmas Service Program Template | Longest Night Dec 21
+- **Caption:** Planning a Longest Night or Blue Christmas service? The Longest Night set includes a folded 11x8.5 program with order of service and candle-lighting words, a table sign in dusk and light versions, and candle-lighting cards. Faith-neutral, $9.99 at foreverheld.pages.dev/longest-night.html
+- **Tags:** #bluechristmasservice #longestnightservice #solsticememorial #churchgriefprogram #candlelightingservice #wintersolsticeremembrance
+- **Alt text:** Longest Night service program folded on a wooden pew in a quiet church at dusk, surrounded by rows of votive candles in amber light
+- **Image:** 2026-11-15-3-pin.jpg
 
-See the Evergreen & Candlelight kit at foreverheld.pages.dev/evergreen-candlelight.html
-- **Tags:** #christmasinheaven #memoryornament #holidaygrief #christmasremembrance #griefsupport #printableornament
-- **Alt text:** Small printable arch memory card with ribbon next to pine branches and soft lights.
-- **Image:** 2026-11-15-3-story.jpg
-- **Video script:** Hook: Missing someone special as you decorate the Christmas tree this year?
-Beat 1: Show printable arch ornament cards printed 4 per sheet on cardstock.
-Beat 2: Show punching a hole at the top and looping dark velvet ribbon through.
-Beat 3: Hang the memory ornament on a pine branch beside soft candlelight.
-Closing: A quiet holiday keepsake. Details at foreverheld.pages.dev/evergreen-candlelight.html
+## 4. TikTok / Reels: Type their story on your phone
+- **Caption:** No Canva, no account. Download the Soft Botanical suite, open in free Adobe Acrobat Reader on your phone, tap the sample text, type your own. Program, welcome sign, memory cards — all $12.99 at foreverheld.pages.dev
+- **Tags:** #funeralprogramtemplate #celebrationoflife #mobileediting #adobereaderfillable #memorialstationery
+- **Alt text:** Soft Botanical program cover on a phone screen showing fillable fields in Adobe Reader, with sage botanical watercolor background
+- **Image:** 2026-11-15-4-story.jpg
+- **Video script:** Hook: Edit a memorial program in two minutes on your phone. Beat 1: Show downloading the PDF and opening in Adobe Reader app. Beat 2: Tap a field, type a name and date, watch it stay perfectly aligned. Beat 3: Save, then print at home or send to Staples. Close: Soft Botanical suite, three matching pieces, $12.99. Link in bio.
 
-## 4. Pinterest: Setting up a quiet memory space
-- **Pin title:** Celebration of Life Welcome Sign Printable | Soft Botanical Memorial Suite
-- **Caption:** Welcome guests warmly without added stress. A 24x36 sign paired with greenery and framed photos sets a peaceful tone for any celebration of life.
-
-Simple fill-in PDF formatted for free Adobe Acrobat Reader.
-
-View the Soft Botanical suite at foreverheld.pages.dev
-- **Tags:** #celebrationoflife #funeralwelcomesign #memorialtable #memorialideas #botanicalmemorial #funeralplanning
-- **Alt text:** Soft Botanical welcome sign on a simple wooden easel next to natural eucalyptus leaves.
-- **Image:** 2026-11-15-4-pin.jpg
-
-## 5. TikTok / Reels: How to edit programs without software
-- **Caption:** Planning a memorial service during a busy week shouldn't require learning design apps or creating new subscriptions. Open our fill-in PDF in the free Adobe Reader app on your phone, type your details, and print anywhere.
-
-Learn more at foreverheld.pages.dev
-- **Tags:** #funeralprogrampdf #editablefuneralprogram #celebrationoflifetemplate #fillinpdf #memorialplanning #easymemorial
-- **Alt text:** Watercolor botanical background featuring text explaining mobile PDF editing.
+## 5. Instagram: Three pieces, one gentle kit
+- **Caption:** Everything matches without the guesswork. Folded 5.5x8.5 program, 24x36 welcome sign (also prints 16x24 or 12x18), and 4.25x5.5 share-a-memory cards. Fill-in PDFs, instant download. $12.99 at foreverheld.pages.dev
+- **Tags:** #memorialkitbundle #celebrationoflifestationery #funeralwelcomesign #shareamemorycards #botanicalmemorial
+- **Alt text:** Three Soft Botanical pieces fanned out on a painted linen background: folded program, welcome sign, and memory cards in matching sage botanical design
 - **Image:** 2026-11-15-5-story.jpg
-- **Video script:** Hook: Planning a celebration of life this week? Here's how to skip complex software.
-Beat 1: Show opening the PDF directly in the free Adobe Acrobat Reader app on a smartphone.
-Beat 2: Tap sample text and type your loved one's name and dates quickly.
-Beat 3: Save file and show folded 5.5x8.5 printed booklet ready for the service.
-Closing: Gentle, simple printable suites available at foreverheld.pages.dev
+- **Video script:** Hook: One download, three matching pieces, zero design work. Beat 1: Fan out the program, welcome sign, and memory cards — same soft botanical style. Beat 2: Program prints on letter paper, folds to 5.5x8.5. Sign prints 24x36 or smaller. Cards print four per sheet. Beat 3: All fill-in PDFs in free Adobe Reader. Close: Complete suite $12.99. Link in bio.
 
 ## Notes for the Content Planner
-- Created 5 distinct social assets: 3 holiday pins/stories covering Harvest Table (Thanksgiving), Longest Night (Blue Christmas), and Evergreen & Candlelight (Christmas), plus 2 Soft Botanical posts.
-- Followed Planner ideas for phone-first editing walkthroughs and memory table setups while ensuring headlines strictly avoided the forbidden list.
-- Used scene backgrounds for Pinterest pins to maximize visual engagement for holiday tables and entryway easels.
-- For next week: plan posts targeting mid-December Blue Christmas services and last-minute Thanksgiving printable place card reminders.
+Created 5 posts: 3 holiday pins (Harvest Table, Evergreen & Candlelight, Longest Night) and 2 Soft Botanical stories — each holiday set covered once, Soft Botanical twice.,Used Planner's mobile editing walkthrough idea for Story 4 but with a fresh headline avoiding the forbidden list.,Used Planner's memory table setup idea for Harvest Table pin but focused on the empty chair comfort angle instead of setup steps.,Skipped Planner's 'complete bundle value' idea for Soft Botanical since it appeared in recent headlines; used a checklist angle instead.,For next week: plan Blue Christmas service outreach to churches/hospices (Longest Night), last-minute Thanksgiving place card reminders (Harvest Table), and Christmas memory table ideas (Evergreen).
 
 ## Requests for the SEO Scout
-What are the top long-tail search queries for 'Blue Christmas church service program printable'?,Can you check search volume for 'DIY memory ornament cards' versus 'Christmas memorial table sign'?
+What are the top long-tail search queries for 'Blue Christmas church service program printable'?,Can you check search volume for 'DIY memory ornament cards' versus 'Christmas memorial table sign'?,What questions appear in 'People Also Ask' for 'first Thanksgiving without loved one'?
 
 ## For the owner to decide
-Please review and approve these 5 draft posts before publishing or scheduling.
+Pinterest API token expired — need new token saved as PINTEREST_TOKEN to resume scheduling and analytics.,Confirm Payhip checkout links for holiday sets are active for the promo window (Nov 20–Dec 31).,Approve using PEACE25 (25% off) for holiday sets during Black Friday week (Nov 27–30) or keep full price.
