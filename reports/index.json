@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-14-tiktok-fandoms.md",
+    "agent": "tiktok-fandoms",
+    "name": "TikTok Fandom Watcher",
+    "date": "2026-11-14"
+  },
+  {
     "file": "2026-11-14-growth-coach.md",
     "agent": "growth-coach",
     "name": "Growth Coach",
@@ -27,12 +33,6 @@
     "file": "2026-11-14-youtube-watcher.md",
     "agent": "youtube-watcher",
     "name": "YouTube Shorts Watcher",
-    "date": "2026-11-14"
-  },
-  {
-    "file": "2026-11-14-tiktok-fandoms.md",
-    "agent": "tiktok-fandoms",
-    "name": "TikTok Fandom Watcher",
     "date": "2026-11-14"
   },
   {

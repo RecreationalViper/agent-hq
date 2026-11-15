@@ -2,88 +2,88 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-Here are the 7 most active movie, game, and anime fandoms on TikTok this week, ranked by momentum and clip potential.
+Here are the 7 most active movie, game, and anime fandoms on TikTok and social platforms this week, ranked from highest growth potential to most saturated.
 
 ---
 
-### 1. Black Clover (Season 2 & Official TikTok Spotlight)
-* **Status:** ⚠️ **Oversaturated** (High official push, heavy competition)
-* **Why fans care now:** TikTok launched an official global campaign for *Black Clover* across 11 countries featuring exclusive profile frames [[5](https://secure.eiga.com/news/20261111/17/)]. Season 2 is currently releasing on AniList with Episode 8 airing Nov 21 [[AniList](https://anilist.co/anime/195604)].
-* **Hashtags:** `#blackclover` `#blackclovers2` `#astablackclover` `#animeedit`
-* **Moment to clip:** Asta's Demon-Union transformation during a major boss clash.
-  * *Hook (1-2s):* Sudden screen zoom into Asta's anti-magic black wing sprouting with heavy audio bass drop.
-  * *Story stretch:* Unbroken sequence of dual-sword clashing and energy swings in story order.
-  * *Final beat:* Asta delivering a final heavy downward slash cut right before impact to force rewatches.
-* **Source:** [TikTok Spotlight Campaign News](https://secure.eiga.com/news/20261111/17/) · [AniList](https://anilist.co/anime/195604)
+### 1. Black Clover (Anime)
+* **Why fans care now:** TikTok launched an official global `#ブラッククローバー` TikTok Spotlight campaign across 11 countries on Nov 11, 2026 [5]. Season 2 is currently airing with an 8.89 rating on MAL and holds top trending spots on AniList.
+* **Hashtags:** `#blackclover` `#blackcloverseason2` `#asta` `#blackcloveredit`
+* **Moment to clip:** 
+  * *Hook (0-2s):* Asta yelling while unlocking Black Asta / Demon-Slayer sword form.
+  * *Body (2-28s):* Unbroken sequence of Asta slicing through magic in story order.
+  * *Final Beat (28-35s):* Heavy impact slash that cuts to black on the clash, triggering a loop rewatch.
+* **Source:** [TikTok x Black Clover Global Spotlight Campaign News](https://secure.eiga.com/news/20261111/17/) / [AniList Black Clover S2](https://anilist.co/anime/195604)
+* **Market Note:** **HIGH POTENTIAL.** Slightly crowded, but the active official TikTok campaign gives algorithmic boosting to posts using campaign tags.
 
 ---
 
 ### 2. Attack on Titan (2015 Live-Action Movie)
-* **Status:** 🟢 **Low Saturation / High Viral Potential** (Unexpected trend spike)
-* **Why fans care now:** The 2015 Japanese live-action movie unexpectedly surged to #1 on Crunchyroll’s worldwide movie charts this week, causing shock and meme reactions across social media [[3](https://drezzed.clownfishtv.com/p/the-2015-live-action-attack-on-titan)].
-* **Hashtags:** `#attackontitan` `#aotliveaction` `#titan` `#crunchyroll`
-* **Moment to clip:** The Colossal Titan peering over Wall Maria in live-action practical effects.
-  * *Hook (1-2s):* Giant practical skinless face rising over the wall with intense sound design.
-  * *Story stretch:* Wall crumbling and people fleeing as titan hands reach inside.
-  * *Final beat:* Eren staring up in silent horror, cut right on his widening eyes.
-* **Source:** [Crunchyroll Chart News](https://drezzed.clownfishtv.com/p/the-2015-live-action-attack-on-titan)
+* **Why fans care now:** In a sudden viral spike on Nov 14, 2026, the 2015 Japanese live-action *Attack on Titan* movie surged to **#1 on Crunchyroll’s worldwide movie chart** [2], prompting viral memes and shock posts across TikTok.
+* **Hashtags:** `#attackontitan` `#aot` `#aotliveaction` `#attackontitanedit`
+* **Moment to clip:**
+  * *Hook (0-2s):* On-screen text: *"Why is everyone watching the 2015 live-action movie on Crunchyroll right now? 💀"* showing the Colossal Titan peaking over Wall Maria.
+  * *Body (2-25s):* Unbroken sequence of the live-action Titan breach horror sequence.
+  * *Final Beat (25-30s):* Sudden Titan jaw snap toward the screen.
+* **Source:** [FlixPatrol / Crunchyroll Live-Action AoT Spike Report](https://drezzed.clownfishtv.com/p/the-2015-live-action-attack-on-titan)
+* **Market Note:** **BREAKOUT TREND / LOW SATURATION.** Fresh news hook on an 11-year-old movie creates high curiosity click-through.
 
 ---
 
-### 3. Call of Duty: Modern Warfare 4
-* **Status:** ⚠️ **Oversaturated** (Flooded mainstream topic)
-* **Why fans care now:** Currently a Top Seller on Steam and trending heavily on Twitch (#19 overall) and YouTube Shorts with narrative character betrayal edits [[YouTube](https://youtu.be/w58d6Jgkjo8)].
-* **Hashtags:** `#mw4` `#modernwarfare4` `#callofduty` `#gamingedit`
-* **Moment to clip:** Campaign betrayal or squad sacrifice climax.
-  * *Hook (1-2s):* Slow-motion gun drawn directly at the camera with dramatic voiceover dialogue.
-  * *Story stretch:* Tense tactical crossfire sequence leading up to the final trigger pull.
-  * *Final beat:* Radio static audio blackout right as the muzzle flash lights up the screen.
-* **Source:** [YouTube Short Edit](https://youtu.be/w58d6Jgkjo8)
+### 3. Steel Ball Run: JoJo's Bizarre Adventure (Anime)
+* **Why fans care now:** Sitting at a massive **9.03 rating on MyAnimeList** (#1 Top Airing) with Episode 9 dropping Nov 20, 2026. The racing arc visuals are dominant in anime edit spaces.
+* **Hashtags:** `#steelballrun` `#jojosbizarreadventure` `#johnnyjoestar` `#sbr`
+* **Moment to clip:**
+  * *Hook (0-2s):* Johnny Joestar’s glowing eye zoom as Tusk manifests.
+  * *Body (2-30s):* Horseback race sequence with Gyro Zeppeli throwing the Steel Ball in full animated motion.
+  * *Final Beat (30-35s):* Gyro’s spin impact landing, freezing on his iconic pose.
+* **Source:** [MyAnimeList SBR Ranking](https://myanimelist.net/anime/61469) / [AniList SBR](https://anilist.co/anime/210482)
+* **Market Note:** **HIGH POTENTIAL.** High edit quality demand on TikTok; passionate niche audience that drives high comment engagement.
 
 ---
 
-### 4. Re:ZERO -Starting Life in Another World- (Season 5 Announcement)
-* **Status:** 🟢 **Fresh News / Low Saturation**
-* **Why fans care now:** Season 5 was officially confirmed on Nov 14 with a first-look visual, sparking immediate fan hype across Crunchyroll and CBR [[News](https://news.google.com/rss/articles/CBMizwFBVV95cUxPNHk2TVZJUjVlMkVpXENUT1JpN1RwRWhxaDFiSnUydl9JdzA1bHJCaGVqb1lLcUxuSjRQbWR5WjN6Wk5SNV80aDZJS1ZYbWloWXlmYjZ5cUwyLVc4V1NvQ2FastM)].
-* **Hashtags:** `#rezero` `#subaru` `#rezeroseason5` `#animeannouncement`
-* **Moment to clip:** Subaru’s iconic "Return by Death" mental breakdown and resurgence beat.
-  * *Hook (1-2s):* Eerie dark shadow hands audio chime echoing with Subaru gasping awake.
-  * *Story stretch:* Rapid unbroken montage of previous death loops culminating in his resolve.
-  * *Final beat:* Subaru grabbing his head and shouting his vow to save Emilia, cut sharp before tears fall.
-* **Source:** [Crunchyroll Season 5 News](https://news.google.com/rss/articles/CBMizwFBVV95cUxPNHk2TVZJUjVlMkVpXENUT1JpN1RwRWhxaDFiSnUydl9JdzA1bHJCaGVqb1lLcUxuSjRQbWR5WjN6Wk5SNV80aDZJS1ZYbWloWXlmYjZ5cUwyLVc4V1NvQ2FastM) · [AniList](https://anilist.co/anime/219904)
+### 4. Exterminauts (Gaming)
+* **Why fans care now:** Massive co-streamed push at TwitchCon this week; blew up to **56,000+ live viewers** on Twitch under creator partnerships (stableronaldo, NiceWigg) [Twitch Live Data].
+* **Hashtags:** `#exterminauts` `#gaming` `#gamingedit` `#twitchcon`
+* **Moment to clip:**
+  * *Hook (0-2s):* High-energy clip of a chaotic squad wipe / extraction moment synced to trending audio (e.g. *Duvet* or Panchiko).
+  * *Body (2-25s):* Rapid gameplay clip montage of intense combat in story order.
+  * *Final Beat (25-30s):* Clutch headshot or explosive victory screen.
+* **Source:** Twitch Live Directory Data (2026-11-15)
+* **Market Note:** **EMERGING / LOW SATURATION.** Streamers are driving curiosity, but edit channels haven't saturated TikTok yet.
 
 ---
 
-### 5. Jujutsu Kaisen
-* **Status:** ⚠️ **Oversaturated** (Extremely dense creator space)
-* **Why fans care now:** Character edits (Gojo, Sukuna, Toji, Yuta) generated over 3.4M views across creators this week in Asia and global feeds [[4](https://www.convosight.com/tools/moments/asia/2026-11-14/jujutsu-kaisen-manga-edits)].
-* **Hashtags:** `#jujutsukaisen` `#jjk` `#gojo` `#sukuna`
-* **Moment to clip:** Gojo untying his blindfold for "Domain Expansion: Infinite Void".
-  * *Hook (1-2s):* Close-up hand sliding blindfold down to reveal Six Eyes glowing.
-  * *Story stretch:* Hand sign forming cut to space/infinite imagery void sequence.
-  * *Final beat:* Gojo smirk close-up as the opponent freezes solid.
-* **Source:** [Convosight JJK Edit Analytics](https://www.convosight.com/tools/moments/asia/2026-11-14/jujutsu-kaisen-manga-edits)
+### 5. Chiikawa (Anime / Movie)
+* **Why fans care now:** *Chiikawa the Movie: The Secret of the Mermaid Island* went viral on news outlets on Nov 12 after announcing moviegoers would receive blunt-weapon movie props as admission bonuses [ABEMA TIMES]. Holds a 8.63 score on MAL.
+* **Hashtags:** `#chiikawa` `#chiikawadiaries` `#anime` `#chiikawamovie`
+* **Moment to clip:**
+  * *Hook (0-2s):* Text overlay: *"They passed out actual weapons for this cute movie 😭"* showing Chiikawa pulling out a weapon.
+  * *Body (2-22s):* Cute character suddenly entering violent anime battle action.
+  * *Final Beat (22-26s):* Chiikawa crying while holding the weapon.
+* **Source:** [ABEMA TIMES Chiikawa Movie Announcement](https://news.google.com/rss/articles/CBMiWEFVX3lxTE9PdzlnTF9Kczd4N3JrWk1ZUnUwY2NwQ0hrMVBocmlDNHlvQ3NaeFRCTUR3cEJ1MkVHQm5DUDZVUUZmckhfSWwxM3J...)
+* **Market Note:** **HIGH VIRALITY POTENTIAL.** Contradiction edits (cute + aggressive) perform exceptionally well on TikTok Shorts.
 
 ---
 
-### 6. The Apothecary Diaries Season 3
-* **Status:** 🟡 **Moderate Saturation / High Rewatch Engagement**
-* **Why fans care now:** Currently releasing Season 3 with an 85% score on AniList, heading into Episode 8 on Nov 20 [[AniList](https://anilist.co/anime/195516)].
+### 6. The Apothecary Diaries Season 3 (Anime)
+* **Why fans care now:** Season 3 is actively releasing (Ep 8 airs Nov 20) with high AniList engagement (240 trend score, 113k fans) and an 8.6 MAL score.
 * **Hashtags:** `#theapothecarydiaries` `#maomao` `#jinshi` `#kusuriyanohitorigoto`
-* **Moment to clip:** Maomao’s sudden sharp glare when detecting poison at court.
-  * *Hook (1-2s):* Maomao taking a bite, eyes narrowing into deadpan scary intensity.
-  * *Story stretch:* Unbroken sequence of her explaining the poison scheme to trembling nobles.
-  * *Final beat:* Jinshi’s fascinated/stunned smirk in the background as Maomao wipes her mouth.
-* **Source:** [AniList Page](https://anilist.co/anime/195516)
+* **Moment to clip:**
+  * *Hook (0-2s):* Maomao’s iconic unbothered expression face-off with Jinshi.
+  * *Body (2-25s):* Story sequence showing Maomao unraveling a court poison mystery step-by-step.
+  * *Final Beat (25-30s):* Jinshi getting flustered by Maomao's clinical response.
+* **Source:** [MyAnimeList Apothecary Diaries S3](https://myanimelist.net/anime/61987)
+* **Market Note:** **MODERATE SATURATION.** Performs reliably well with female edit audiences and romance dynamic clips.
 
 ---
 
-### 7. Grand Theft Auto VI / GTA V (Heist & Hype)
-* **Status:** ⚠️ **Oversaturated** (Constant high volume)
-* **Why fans care now:** GTA VI sits in Wikipedia's top-read trends (74k+ daily views), while GTA V holds #5 on Twitch with major creator heist finales pulling 36k+ concurrent viewers.
-* **Hashtags:** `#gta6` `#gtavi` `#gtarp` `#gamingmontage`
-* **Moment to clip:** High-speed police chase jump or cinematic robbery escape.
-  * *Hook (1-2s):* Car flying over a bridge gap with sirens blaring underneath.
-  * *Story stretch:* Smooth driver POV steering through narrow alleyways amid gunfire.
-  * *Final beat:* Vehicle vanishing into subway tunnel darkness right as red police lights flare behind.
-* **Source:** [Twitch Stream Data & Wikipedia Trends]
+### 7. Jujutsu Kaisen (Manga/Anime)
+* **Why fans care now:** Convosight regional analytics (Nov 14, 2026) report 3.4M views across TikTok/IG character edits for Gojo, Sukuna, Toji, and Yuta [4].
+* **Hashtags:** `#jujutsukaisen` `#jjk` `#gojosatoru` `#jjkedit`
+* **Moment to clip:**
+  * *Hook (0-2s):* Gojo lifting his blindfold or Toji pulling out the Inverted Spear of Heaven.
+  * *Body (2-28s):* Fast-paced fight cuts in story order with heavy bass sync.
+  * *Final Beat (28-33s):* Hollow Purple effect cutoff.
+* **Source:** [Convosight JJK Manga & Character Edits Report](https://www.convosight.com/tools/moments/asia/2026-11-14/jujutsu-kaisen-manga-edits)
+* **Market Note:** **OVERSATURATED.** Millions of edits already exist. Only attempt if Claude cuts precise audio timing on trending audio (like Olivia Rodrigo's *the cure* or Panchiko's *D>E>A>T>H>M>E>T>A>L*).
