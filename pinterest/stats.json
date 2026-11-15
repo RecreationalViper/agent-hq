@@ -1,4 +1,4 @@
 {
-  "updated": "2026-11-15T20:47:11.603Z",
-  "error": "Pinterest 401: Authentication failed."
+  "updated": "2026-11-15T22:03:04.655Z",
+  "error": "Pinterest 401: Token authorization failed: InactiveConsumer"
 }
