@@ -1,74 +1,62 @@
-# Social Strategist (updated 2026-11-14)
+# Social Strategist (updated 2026-11-15)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-*Note: `studio/channel-stats.md` is missing, so posting windows and platform strategies are calibrated against today's live scanner metrics across Twitch, Steam, AniList, and YouTube Shorts.*
+> ⚠️ **Notice:** `studio/channel-stats.md` is currently missing from the repository. Posting times and recommendations below are based on global audience engagement patterns and today's trending data without past channel performance metrics.
 
 ---
 
-## 🎬 Clip 1: Call of Duty: Modern Warfare 4 — "Loyalty at Peak" Standoff
+### Clip 1: *Steel Ball Run: JoJo's Bizarre Adventure* (Anime)
 
+* **TikTok Captions:**
+  1. Gyro Zeppeli’s Spin hits different when the distortion kicks in. 🎯
+  2. Episode 9 animation quality is completely out of this world. 🔥
+  3. Who truly carried the Steel Ball Run race: Gyro or Diego? 👇
+  4. The exact moment the Spin activated, everything changed. 🌀
 * **On-Screen Hook Text (6 words max):**  
-  `He chose loyalty over survival.`
-
-* **TikTok Captions:**  
-  1. He really chose loyalty over survival under crossfire... 🗿  
-  2. **Question:** Would you take the bullet for the team or pull the trigger first? 👇  
-  3. Task Force 141 never breaks, no matter the pressure. ⚔️  
-  4. Radio static cut at the end hit way too hard. 🔥
-
-* **Hashtags (5-6 mix):**  
-  `#mw4` `#modernwarfare4` `#gamingedit` `#callofduty` `#taskforce141` `#loyalty`
-
+  *Who truly carried Steel Ball Run?*
+* **Hashtags (6):**  
+  `#SteelBallRun` `#JoJosBizarreAdventure` `#AnimeEdit` `#GyroZeppeli` `#SBR` `#AnimeTok`
 * **YouTube Shorts Title (under 60 chars):**  
-  `They Underestimated Task Force 141 🗿🔥 #shorts #mw4` *(52 chars)*
-
-* **Best Posting Times (New York / EST):**  
-  * **TikTok:** 4:00 PM EST — *Aligns with post-school/work gaming scroll hours when Steam top-seller interest peaks.*  
-  * **Shorts:** 6:00 PM EST — *Matches evening YouTube viewing spikes for high-velocity tactical gaming edits.*
+  Who Truly Carried Steel Ball Run? 🌀🔥 *(39 chars)*
+* **Best Posting Times (EST):**
+  * **TikTok (5:00 PM EST):** Catches high school/college students right during peak after-school anime scrolling hours.
+  * **YouTube Shorts (7:00 PM EST):** Aligns with prime North American evening YouTube traffic for anime clips.
 
 ---
 
-## 🎬 Clip 2: Ebenezer (Johnny Depp) — Dark Victorian Transformation
+### Clip 2: *GTA VI* — "Macca & Friends" / Leonida Satire (Gaming)
 
+* **TikTok Captions:**
+  1. Rockstar really put a full animated show inside Vice City. 🐊
+  2. The Leonida satire in GTA 6 is going to be completely insane. 🏎️
+  3. Is GTA 6 going to be the most detailed game ever made? 👇
+  4. Speeding through Vice City hits different on a Sunday. 🔥
 * **On-Screen Hook Text (6 words max):**  
-  `Nobody recognized him until this scene...`
-
-* **TikTok Captions:**  
-  1. Johnny Depp’s transformation in this scene gives straight goosebumps. 🕯️  
-  2. **Question:** Is Johnny Depp’s Scrooge about to be the darkest movie villain of 2026? 👇  
-  3. The candle flame freeze right before the apparition... 🖤  
-  4. Look closely at his eye reflection at the last second. 👁️
-
-* **Hashtags (5-6 mix):**  
-  `#ebenezer` `#johnnydepp` `#movieedit` `#darkaesthetic` `#horror` `#scrooge`
-
+  *Rockstar put a cartoon inside GTA6*
+* **Hashtags (6):**  
+  `#GTA6` `#GTAVI` `#RockstarGames` `#GamingEdit` `#ViceCity` `#GamingTikTok`
 * **YouTube Shorts Title (under 60 chars):**  
-  `Nobody Expected Him To Look Like This ☠️🔥 #shorts` *(50 chars)*
-
-* **Best Posting Times (New York / EST):**  
-  * **TikTok:** 7:00 PM EST — *Dark horror/cinematic aesthetic edits perform best during late evening ambient scroll sessions.*  
-  * **Shorts:** 8:30 PM EST — *Capitalizes on prime-time moviegoer discussion following its #1 weekend box office opening.*
+  Rockstar Put A Cartoon Inside GTA 6 💀 *(40 chars)*
+* **Best Posting Times (EST):**
+  * **TikTok (3:00 PM EST):** Gaming clip engagement spikes sharply in mid-afternoon as weekend streaming chatter peaks.
+  * **YouTube Shorts (6:00 PM EST):** Early evening peak for gaming Shorts discovery and trailer breakdowns.
 
 ---
 
-## 🎬 Clip 3: Black Clover Season 2 — Asta's Demon-Union Transformation
+### Clip 3: *Ebenezer* (Movie)
 
+* **TikTok Captions:**
+  1. Johnny Depp's performance in Ebenezer is chilling. 🕯️
+  2. The tension build in this scene had me holding my breath. 👁️
+  3. Would you stand your ground or run if you saw this shadow? 👇
+  4. When the spirit stepped into the light, the room went cold. ❄️
 * **On-Screen Hook Text (6 words max):**  
-  `This transformation just broke the feed...`
-
-* **TikTok Captions:**  
-  1. Asta really turned anti-magic into a pure masterpiece. ⚔️🔥  
-  2. **Question:** Is Demon-Union Asta the #1 transformation in Season 2 so far? 👇  
-  3. The bass drop right when the black wing sprouted was unreal. 🗿  
-  4. Re-watching this sequence until Episode 8 drops. 💥
-
-* **Hashtags (5-6 mix):**  
-  `#blackclover` `#astablackclover` `#blackclovers2` `#animeedit` `#demonunion` `#anime`
-
+  *He realized he was not alone...*
+* **Hashtags (6):**  
+  `#Ebenezer` `#JohnnyDepp` `#MovieEdit` `#HorrorTok` `#CinematicEdit` `#MovieTok`
 * **YouTube Shorts Title (under 60 chars):**  
-  `Bro Actually Has Anti-Magic Wings 😭🔥 #shorts` *(47 chars)*
-
-* **Best Posting Times (New York / EST):**  
-  * **TikTok:** 2:00 PM EST — *Rides peak afternoon feed algorithms boosted by TikTok’s active 11-country Black Clover campaign.*  
-  * **Shorts:** 5:00 PM EST — *Hits the prime early-evening window when AniList and anime Shorts engagement surge.*
+  THIS SCENE BROKE THE SILENCE 🕯️ *(32 chars)*
+* **Best Posting Times (EST):**
+  * **TikTok (8:00 PM EST):** Dark, gothic drama clips thrive during late-night bedtime scrolling on TikTok.
+  * **YouTube Shorts (9:00 PM EST):** High night-owl viewer completion rates on atmospheric movie montages.

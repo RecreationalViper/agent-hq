@@ -1,37 +1,57 @@
-# Trend Scout (updated 2026-11-14)
+# Trend Scout (updated 2026-11-15)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-### 1. Movie: *Ebenezer* (Johnny Depp) – Dark Victorian Transformation
-* **Why it will get views now:** *Ebenezer* just hit #1 at the box office with an opening Friday of $6.7M (tracking over $20M for the weekend per *Variety* and *Deadline*), and pulled 78,621 Wikipedia views yesterday. Public curiosity around Johnny Depp's return to studio filmmaking is peaking.
-* **Exact scene to clip:** Pull from the official trailer: the slow-burn opening close-up of a withered, unrecognizable Ebenezer Scrooge counting coins in candle-light, transitioning sharply into his terrifying first supernatural encounter with the spirits. Keep the visual pacing deliberate for 3-4 seconds, then sync Spirit reveals to heavy bass drops.
-* **Sound idea:** Panchiko’s *"D>E>A>T>H>M>E>T>A>L"* (spiking at 17,348 US listeners on Last.fm) or Radiohead's *"Creep"*.
-* **Source:** [Variety Box Office Report](https://news.google.com/rss/articles/CBMinAFBVV95cUxNVTRXSUdNUnZta05jWl9YMmlkRWJHZDJPcGZ3UGpZVUJtUzZVYkkwc2tUbHhLcTd2QS1fTWtwMzJNUXNqTGVNTjJMeGh4Umx5S0k1cTRLVjl4OUFLVnFBS0ZIZUVtdEVWR3VIb2tNb3VFSkcyS3ZlWGlDR1JLYnZVbGFBd0xJMFZuekdCSTVTRi1oR1FzYWIyTmltNGk?oc=5)
+# MotionVault: 5 Best Clip Opportunities (Nov 15, 2026)
+
+Here are today’s top 5 viral clipping opportunities across anime, games, movies, and TikTok formats, ranked by instant engagement potential.
 
 ---
 
-### 2. Gaming: *Grand Theft Auto VI* – "Macca & Friends" In-Game Satire
-* **Why it will get views now:** *GTA VI* search interest is surging across mainstream media (CNBC, GMA, Marca) with 74,974 Wikipedia views. A fresh news hook broke today via *The Economic Times*: Rockstar revealed "Macca & Friends," a satirical animated cartoon broadcast playing inside the game world.
-* **Exact scene to clip:** Clip the official trailer snippet featuring the colorful, crude 2D animation of "Macca the Gator and his wetland friends" on an in-game CRT TV, abruptly pulling back to a chaotic, high-contrast, neon Vice City street crime scene outside the window. The stark contrast between children's cartoon parody and gritty crime is built for TikTok retention.
-* **Source:** [The Economic Times GTA 6 Feature](https://m.economictimes.com/news/new-updates/gta-6-to-bring-animated-tv-entertainment-inside-the-game-heres-what-trailer-shows/articleshow/135827185.cms)
+### 1. *Steel Ball Run: JoJo's Bizarre Adventure* (Anime)
+* **Why it will get views now:** Currently the #1 top-airing anime globally (MAL score 9.03). Episode 9 just dropped to critical acclaim (covered by Anime News Network on Nov 13), driving huge hype across TikTok anime edits.
+* **Exact Scene to Clip:** Gyro Zeppeli and Diego Brando’s high-stakes horse sprint / Spin activation scene.
+  * **Hook (0-2s):** Heavy horse hoofbeat audio sync into Gyro drawing his Steel Ball.
+  * **Middle (2-30s):** Unbroken race sequence keeping narrative flow in story order as physics distort.
+  * **Final Beat (30-35s):** Diego's eye transformation cut synced to a hard bass drop, triggering immediate rewatches.
+* **Source:** [MyAnimeList - Steel Ball Run](https://myanimelist.net/anime/61469)
 
 ---
 
-### 3. Anime: "Talk To Me Doja" (*Yamada-kun and the Seven Witches*)
-* **Why it will get views now:** A verified TikTok dance and edit trend broke out between Nov 7–13 [1]. It pairs a sped-up cut of Doja Cat's *"Like That"* with Urara Shiraishi swaying bashfully. Anime dance edits currently dominate Shorts (e.g., recent dance edits pulling 6M+ views).
-* **Exact scene to clip:** Take the 2015 anime clip of Urara Shiraishi swaying side-to-side with hands folded under her chin (ep 1 / credit sequence). Build a 30-second transformative loop: start with 2 seconds of Urara's shy dance, hard-cut on the beat to a quick reel of intense anime character face-offs/powers, then snap right back to Urara's shy swaying on the final beat.
-* **Source:** [Meme.com: Talk To Me Doja Trend](https://meme.com/memes/talk-to-me-doja) [1]
+### 2. *GTA VI* / "Macca & Friends" In-Game Animated Teaser (Gaming)
+* **Why it will get views now:** News broke yesterday/today (Nov 14–15) revealing Rockstar’s in-game animated TV series *Macca & Friends* set inside *GTA 6*'s fictional state of Leonida. GTA VI is spiking heavily on Wikipedia (#23) and Twitch streams.
+* **Exact Scene to Clip:** The official trailer footage of Macca the Gator wreaking havoc in the Leonida wetlands.
+  * **Hook (0-2s):** On-screen text: *"Rockstar put an actual cartoon inside GTA 6..."* over a wild gator jump shot.
+  * **Middle (2-25s):** Fast, unbroken stretch of the absurd satire animation.
+  * **Final Beat (25-30s):** Quick cut to the GTA VI logo / channel credit freeze-frame.
+* **Source:** [Economic Times Report on GTA VI Macca & Friends](https://m.economictimes.com/news/new-updates/gta-6-to-bring-animated-tv-entertainment-inside-the-game/articleshow/135827185.cms)
 
 ---
 
-### 4. Movie Trailer: *The Thomas Crown Affair* (Michael B. Jordan Remake)
-* **Why it will get views now:** Amazon MGM dropped the official trailer today (Nov 14), reported by *Deadline*. Heist aesthetics, sleek tailoring, and high-adrenaline escapes consistently pull millions on short-form feeds (similar to recent 2M-5M view movie edits on YouTube Shorts).
-* **Exact scene to clip:** From the official trailer: start with Michael B. Jordan adjusting his cufflinks in a grand museum hall, holding eye contact with security cameras (first 2 seconds hook), then let an unbroken 5-second chase sequence run as alarms trigger, cutting immediately on a sly grin before he disappears into a crowded train station.
-* **Source:** [Deadline Official Trailer Release](https://news.google.com/rss/articles/CBMijgFBVV95cUxNXzVVMXhsdXdhdXhLQkF4VlVpQWlPZW5BdHdXQjREc2ZhclB2RHhwaFN5OGxaR0ZiY3o3OXFNWUhzcEgydVVhUjNjeE9hdFU4aUpLWkNoTmJSUmM3U3YxUGZrLTNhc2pnXzJHVHUzbWE1dWhWOWNWTFNRd1hJdlk1emJYUUdOeTdreldIU25n?oc=5)
+### 3. *Ebenezer* (2026 Movie Release)
+* **Why it will get views now:** *Ebenezer* starring Johnny Depp officially took the #1 spot at the weekend box office today ($19M opening per Variety/Deadline), marking Depp's first #1 film opening in 8 years. Search curiosity is peaking worldwide (Wikipedia #20).
+* **Exact Scene to Clip:** The intense dark confrontation scene between Ebenezer Scrooge and the first spirit from the official trailer.
+  * **Hook (0-2s):** Depp’s voiceover quote: *"Why do you haunt me?"* over a shadow creeping across the floor.
+  * **Middle (2-28s):** Uncut tension building up as light flickers and the spirit manifests.
+  * **Final Beat (28-32s):** Sudden jump-cut shut door or loud sound hit, compelling viewers to loop it.
+* **Source:** [Variety Box Office Report](https://variety.com)
 
 ---
 
-### 5. Gaming / Narrative: *Call of Duty: Modern Warfare 4* – "Loyalty at Peak" Edit
-* **Why it will get views now:** *Call of Duty: Modern Warfare 4* sits as a top seller on Steam US and in Twitch's top 20 games right now. Narrative character edits focusing on loyalty and sacrifice are generating big traction on Shorts this week (*"She's More Then Evil"*: 533K views; *"Loyalty at peak"*: 427K views).
-* **Exact scene to clip:** The high-stakes standoff cutscene between Task Force 141 leads. Start right on the voice line confrontational hook ("Who told you to trust me?"), hold the tense standoff unedited for 6-8 seconds to build genuine emotional weight, and resolve into a fast 4-beat muzzle flash sequence.
-* **Source:** [Steam US Top Sellers](studio/live-data.md) & [YouTube Shorts MW4 "Loyalty at peak"](https://youtu.be/YabJ0gB457E)
+### 4. TikTok Trend: "Talk To Me Doja" (*Yamada-kun and the Seven Witches*)
+* **Why it will get views now:** Spiking on TikTok right now (Nov 13-15). Pairs a sped-up cut of Doja Cat's *Like That* with Urara Shiraishi’s shy side-to-side sway from the 2015 anime. Anime edits using this exact sound are pulling high engagement.
+* **Exact Scene to Clip:** Urara Shiraishi swaying side-to-side with hands folded under her chin.
+  * **Hook (0-2s):** High-pitched vocal beat drop synced with her looking up at the camera.
+  * **Middle (2-20s):** Clean, high-framerate montage of Urara and similar bashful anime character moments synced to the rhythm.
+  * **Final Beat (20-25s):** Seamless loop back to the initial sway so the song seamlessly repeats.
+* **Source:** [Know Your Meme / Meme.com - Talk To Me Doja](https://meme.com/memes/talk-to-me-doja)
+
+---
+
+### 5. *World of Warcraft Forever* (Gaming Culture)
+* **Why it will get views now:** World of Warcraft is currently the #2 most-watched game on Twitch. A viral story published Nov 13 on Know Your Meme featured couples getting hooked on *World of Warcraft Forever* late into the night, sparking high casual gaming interest.
+* **Exact Scene to Clip:** High-intensity cinematic raid/boss execution clip.
+  * **Hook (0-2s):** Text overlay: *"POV: You said 'one last dungeon' at 1 AM"* into an explosive boss roar.
+  * **Middle (2-30s):** Unbroken, high-action spell montage in story order showing a desperate boss fight clutch.
+  * **Final Beat (30-35s):** Sudden wipe or victory shout with punchy audio exit.
+* **Source:** [Know Your Meme Editorial](https://trending.knowyourmeme.com/editorials/husband-gets-his-wife-to-try-world-of-warcraft-forever-in-viral-video-and-she-instantly-gets-addicted)

@@ -3,56 +3,55 @@
 Live from the YouTube Data API. Views/hr = views since upload ÷ hours since upload.
 
 ## Film & Animation: fastest-rising
-- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 18,623,981 views · 1,257,135/hr · 123,547 likes · 427 comments · 0:10
-- [#funny #prank #comedy #memes #skit #fyp](https://youtu.be/ivN4kaMtILQ) · ★彡 New Hindi Dj Vibes 彡★ · 80,168,313 views · 757,016/hr · 380,134 likes · 272 comments · 0:31
-- [OMG he actually wore it 🤣 #funny #comedy #humor #prank](https://youtu.be/_1_OO5Wm5Dg) · WearTheGag · 12,093,348 views · 243,721/hr · 67,306 likes · 709 comments · 0:10
-- [‎"They Underestimated the Beggar" 🗿🔥](https://youtu.be/zD5NWTkvdj8) · Ukhnooq_Ae · 22,951,567 views · 213,007/hr · 724,646 likes · 6,275 comments · 1:00
-- [Better luck next time ✌️](https://youtu.be/icAiXuU_1I8) · Smirk · 4,700,983 views · 212,323/hr · 137,979 likes · 490 comments · 0:18
-- [The Mandalorian | 🥰The Cutest Father-Son Duo Ever! 👨‍👦#shorts  #movierecap](https://youtu.be/zAuybj_cd6g) · Sona Darus · 5,590,123 views · 195,615/hr · 256,288 likes · 1,473 comments · 2:50
-- [Johnny Depp says he believes in goats](https://youtu.be/ClQTsoa23FU) · Pubity · 15,578,159 views · 190,480/hr · 390,094 likes · 11,720 comments · 0:19
-- [Teaching my students an important lesson about the consequences of too much screen time 🤣](https://youtu.be/0J3ZhOUGquE) · Aaron Dinin · 14,877,221 views · 149,789/hr · 646,199 likes · 13,067 comments · 2:19
+- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 26,286,548 views · 819,497/hr · 158,983 likes · 524 comments · 0:10
+- [OMG he actually wore it 🤣 #funny #comedy #humor #prank](https://youtu.be/_1_OO5Wm5Dg) · WearTheGag · 17,044,520 views · 254,847/hr · 88,524 likes · 902 comments · 0:10
+- [‎"They Underestimated the Beggar" 🗿🔥](https://youtu.be/zD5NWTkvdj8) · Ukhnooq_Ae · 24,806,779 views · 198,435/hr · 772,523 likes · 6,667 comments · 1:00
+- [Johnny Depp says he believes in goats](https://youtu.be/ClQTsoa23FU) · Pubity · 16,635,718 views · 167,961/hr · 411,087 likes · 12,334 comments · 0:19
+- [Better luck next time ✌️](https://youtu.be/icAiXuU_1I8) · Smirk · 6,355,495 views · 161,297/hr · 195,295 likes · 651 comments · 0:18
+- [CIA Meeting Cold Open - SNL](https://youtu.be/R_8UPhJNrZ4) · Saturday Night Live · 2,198,631 views · 161,042/hr · 49,790 likes · 2,286 comments · 6:00
+- [The Mandalorian | 🥰The Cutest Father-Son Duo Ever! 👨‍👦#shorts  #movierecap](https://youtu.be/zAuybj_cd6g) · Sona Darus · 7,194,148 views · 156,944/hr · 331,818 likes · 1,849 comments · 2:50
+- [Go from WIFE ➡️ BABY 👀 #charlesandsylvia #wolfieandsylvia #couplescomedy](https://youtu.be/Lhx8X1P4eUg) · MoreWolfie · 3,636,205 views · 139,438/hr · 116,712 likes · 341 comments · 1:20
 
 ## Film & Animation: short videos (3 min or less)
-- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 18,623,981 views · 1,257,135/hr · 123,547 likes · 427 comments · 0:10
-- [#funny #prank #comedy #memes #skit #fyp](https://youtu.be/ivN4kaMtILQ) · ★彡 New Hindi Dj Vibes 彡★ · 80,168,313 views · 757,016/hr · 380,134 likes · 272 comments · 0:31
-- [OMG he actually wore it 🤣 #funny #comedy #humor #prank](https://youtu.be/_1_OO5Wm5Dg) · WearTheGag · 12,093,348 views · 243,721/hr · 67,306 likes · 709 comments · 0:10
-- [‎"They Underestimated the Beggar" 🗿🔥](https://youtu.be/zD5NWTkvdj8) · Ukhnooq_Ae · 22,951,567 views · 213,007/hr · 724,646 likes · 6,275 comments · 1:00
-- [Better luck next time ✌️](https://youtu.be/icAiXuU_1I8) · Smirk · 4,700,983 views · 212,323/hr · 137,979 likes · 490 comments · 0:18
-- [The Mandalorian | 🥰The Cutest Father-Son Duo Ever! 👨‍👦#shorts  #movierecap](https://youtu.be/zAuybj_cd6g) · Sona Darus · 5,590,123 views · 195,615/hr · 256,288 likes · 1,473 comments · 2:50
-- [Johnny Depp says he believes in goats](https://youtu.be/ClQTsoa23FU) · Pubity · 15,578,159 views · 190,480/hr · 390,094 likes · 11,720 comments · 0:19
-- [Teaching my students an important lesson about the consequences of too much screen time 🤣](https://youtu.be/0J3ZhOUGquE) · Aaron Dinin · 14,877,221 views · 149,789/hr · 646,199 likes · 13,067 comments · 2:19
+- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 26,286,548 views · 819,497/hr · 158,983 likes · 524 comments · 0:10
+- [OMG he actually wore it 🤣 #funny #comedy #humor #prank](https://youtu.be/_1_OO5Wm5Dg) · WearTheGag · 17,044,520 views · 254,847/hr · 88,524 likes · 902 comments · 0:10
+- [‎"They Underestimated the Beggar" 🗿🔥](https://youtu.be/zD5NWTkvdj8) · Ukhnooq_Ae · 24,806,779 views · 198,435/hr · 772,523 likes · 6,667 comments · 1:00
+- [Johnny Depp says he believes in goats](https://youtu.be/ClQTsoa23FU) · Pubity · 16,635,718 views · 167,961/hr · 411,087 likes · 12,334 comments · 0:19
+- [Better luck next time ✌️](https://youtu.be/icAiXuU_1I8) · Smirk · 6,355,495 views · 161,297/hr · 195,295 likes · 651 comments · 0:18
+- [The Mandalorian | 🥰The Cutest Father-Son Duo Ever! 👨‍👦#shorts  #movierecap](https://youtu.be/zAuybj_cd6g) · Sona Darus · 7,194,148 views · 156,944/hr · 331,818 likes · 1,849 comments · 2:50
+- [Go from WIFE ➡️ BABY 👀 #charlesandsylvia #wolfieandsylvia #couplescomedy](https://youtu.be/Lhx8X1P4eUg) · MoreWolfie · 3,636,205 views · 139,438/hr · 116,712 likes · 341 comments · 1:20
+- [Teaching my students an important lesson about the consequences of too much screen time 🤣](https://youtu.be/0J3ZhOUGquE) · Aaron Dinin · 15,587,844 views · 133,706/hr · 671,878 likes · 13,551 comments · 2:19
 
 ## Gaming: fastest-rising
-- [Catching Hackers on BalSMP](https://youtu.be/GjtmOI_C0Lk) · KlingKlong · 2,379,506 views · 585,491/hr · 2,482 likes · 1 comments · 95:39
-- [🔴 LIVE! - NOT ENDING UNTIL I FIND THE PIRATE TOKEN!](https://youtu.be/j_ERpYeOJUI) · Typical Gamer · 3,016,135 views · 241,013/hr · 26,967 likes · 222 comments · 714:59
-- [League of Legends: New Dawn Teaser](https://youtu.be/vs3p3mNhRXo) · League of Legends · 494,445 views · 135,363/hr · 23,239 likes · 2,744 comments · 2:02
-- [GLITCH PRODUCTIONS ALL BOSSES (NO DAMAGE)](https://youtu.be/G7ECpIyXC2Y) · GLITCH · 3,319,990 views · 111,976/hr · 150,511 likes · 10,330 comments · 5:20
-- [REVEALING MY NEW FORTNITE ICON SKIN! 🕺🏴‍☠️](https://youtu.be/Kush1FqnhbU) · IShowSpeed · 2,186,776 views · 92,431/hr · 34,536 likes · 753 comments · 163:42
-- [GTA 6: 25 Things You NEED TO KNOW](https://youtu.be/A9fifS608C8) · gameranx · 745,674 views · 87,101/hr · 13,216 likes · 1,724 comments · 25:39
-- [GTA6 Launch Day Will Be INSANE](https://youtu.be/BA23aWqUV0I) · Joe Bartolozzi · 498,618 views · 84,980/hr · 12,984 likes · 988 comments · 21:21
-- [Five Nights At Freddy's 3 In Real Life](https://youtu.be/AYDlQ7U_TW8) · Shiloh & Bros · 2,761,457 views · 80,411/hr · 50,688 likes · 8,688 comments · 37:16
+- [GEN vs BLG | WORLDS 2026 | Finals](https://youtu.be/fFlOTEiQ9x0) · LoL Esports · 6,925,419 views · 388,927/hr · 38,915 likes · 374 comments · 551:31
+- [BLAST Rivals Hong Kong 2026, GRAND FINAL - Team Spirit vs FURIA](https://youtu.be/Hhw5YxvloNE) · BLAST Premier · 1,984,731 views · 291,274/hr · 17,732 likes · 106 comments · 296:47
+- [🔴 LIVE! - FINDING the *PIRATE TOKEN* in FORTNITE!!](https://youtu.be/gmVvsUIQqOg) · Typical Gamer · 2,682,716 views · 155,384/hr · 18,799 likes · 88 comments · 714:59
+- [[中文] GEN vs BLG | WORLDS 2026 | Finals](https://youtu.be/lPg9kC-kNZY) · LoLEsportsTW  · 2,143,879 views · 120,531/hr · 6,177 likes · 639 comments · 383:22
+- [NEW WEAPON AND OFF-HAND FOR BEDROCK! | TwitchCon San Diego](https://youtu.be/5um9-i2Ta7w) · Minecraft · 1,813,531 views · 95,928/hr · 63,879 likes · 6,821 comments · 2:28
+- [GTA 6: Everything You NEED To Know (3 Days Left)](https://youtu.be/wEGdTkRL-uI) · TGG · 889,341 views · 76,300/hr · 25,935 likes · 2,266 comments · 54:54
+- [League of Legends: New Dawn Teaser](https://youtu.be/vs3p3mNhRXo) · League of Legends · 1,538,886 views · 73,580/hr · 40,570 likes · 4,834 comments · 2:02
+- [GTA6 Launch Day Will Be INSANE](https://youtu.be/BA23aWqUV0I) · Joe Bartolozzi · 1,527,872 views · 66,058/hr · 26,374 likes · 1,440 comments · 21:21
 
 ## Gaming: short videos (3 min or less)
-- [League of Legends: New Dawn Teaser](https://youtu.be/vs3p3mNhRXo) · League of Legends · 494,445 views · 135,363/hr · 23,239 likes · 2,744 comments · 2:02
-- [INDIE CROSS EP3// SNEAK PEEK](https://youtu.be/6xSD11AtCqU) · MORØ · 714,492 views · 27,371/hr · 64,756 likes · 5,741 comments · 0:56
-- [ULTRAKILL 96 - Employee of the Month (8-S)](https://youtu.be/VayOkHla1jg) · Hakita · 193,711 views · 25,109/hr · 19,296 likes · 2,022 comments · 1:02
+- [NEW WEAPON AND OFF-HAND FOR BEDROCK! | TwitchCon San Diego](https://youtu.be/5um9-i2Ta7w) · Minecraft · 1,813,531 views · 95,928/hr · 63,879 likes · 6,821 comments · 2:28
+- [League of Legends: New Dawn Teaser](https://youtu.be/vs3p3mNhRXo) · League of Legends · 1,538,886 views · 73,580/hr · 40,570 likes · 4,834 comments · 2:02
 
 ## Entertainment: fastest-rising
-- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 18,623,981 views · 1,257,128/hr · 123,547 likes · 427 comments · 0:10
-- [Allah Tala ke madad 😭 #ytshorts #news #prayer#today#trending #emotional#youtubeshorts#shorts](https://youtu.be/Z7q91PbjPjc) · Hope Islam · 101,060,882 views · 599,253/hr · 439,080 likes · 553 comments · 0:27
-- [Cutting A Watermelon With Dental Floss 😮](https://youtu.be/VOI9-Gx2EaY) · Zack D. Films · 5,464,335 views · 538,388/hr · 246,764 likes · 8,415 comments · 0:36
-- [Bro Made a Simple Task Impossible 😭 #shorts #usa](https://youtu.be/5R3BYTqAHjc) · IDDSI · 13,075,105 views · 440,949/hr · 273,045 likes · 2,377 comments · 0:32
-- [Shortest Woman Vs Tallest Woman Got Arrested](https://youtu.be/P3eeQXn04q4) · Law By Mike · 33,547,352 views · 437,636/hr · 237,770 likes · 370 comments · 0:38
-- [Phillies land All-Star closer Jhoan Duran ahead of MLB trade deadline 👀🔥 #jhoanduran](https://youtu.be/0L2RdAVUbLk) · Eryihjy outrfj · 20,108,118 views · 404,973/hr · 113,557 likes · 90 comments · 0:31
-- [Ranking Underwater Moments #funny #funnyvideo #underwater](https://youtu.be/lPNUXTwFNUY) · MrRanker · 46,186,771 views · 364,697/hr · 1,046,196 likes · 2,319 comments · 0:36
-- [The Funniest Family Ever 🤣](https://youtu.be/3W9j8D3S-Jc) · Daily Tales · 9,286,663 views · 284,470/hr · 334,744 likes · 824 comments · 0:15
+- [$250,000 Hunger Games In Real Life](https://youtu.be/q6fgVVmdpgY) · MrBeast · 42,709,529 views · 1,648,143/hr · 854,378 likes · 47,105 comments · 33:58
+- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 26,286,548 views · 819,495/hr · 158,983 likes · 524 comments · 0:10
+- [Cutting A Watermelon With Dental Floss 😮](https://youtu.be/VOI9-Gx2EaY) · Zack D. Films · 13,366,340 views · 487,623/hr · 528,579 likes · 15,607 comments · 0:36
+- [Shortest Woman Vs Tallest Woman Got Arrested](https://youtu.be/P3eeQXn04q4) · Law By Mike · 35,078,581 views · 373,504/hr · 247,633 likes · 378 comments · 0:38
+- [Ranking Underwater Moments #funny #funnyvideo #underwater](https://youtu.be/lPNUXTwFNUY) · MrRanker · 48,257,342 views · 335,339/hr · 1,094,992 likes · 2,429 comments · 0:36
+- [Phillies land All-Star closer Jhoan Duran ahead of MLB trade deadline 👀🔥 #jhoanduran](https://youtu.be/0L2RdAVUbLk) · Eryihjy outrfj · 20,870,952 views · 311,903/hr · 118,634 likes · 100 comments · 0:31
+- [Bro Made a Simple Task Impossible 😭 #shorts #usa](https://youtu.be/5R3BYTqAHjc) · IDDSI · 13,313,693 views · 283,789/hr · 276,813 likes · 2,427 comments · 0:32
+- [OMG he actually wore it 🤣 #funny #comedy #humor #prank](https://youtu.be/_1_OO5Wm5Dg) · WearTheGag · 17,044,520 views · 254,847/hr · 88,524 likes · 902 comments · 0:10
 
 ## Entertainment: short videos (3 min or less)
-- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 18,623,981 views · 1,257,128/hr · 123,547 likes · 427 comments · 0:10
-- [Allah Tala ke madad 😭 #ytshorts #news #prayer#today#trending #emotional#youtubeshorts#shorts](https://youtu.be/Z7q91PbjPjc) · Hope Islam · 101,060,882 views · 599,253/hr · 439,080 likes · 553 comments · 0:27
-- [Cutting A Watermelon With Dental Floss 😮](https://youtu.be/VOI9-Gx2EaY) · Zack D. Films · 5,464,335 views · 538,388/hr · 246,764 likes · 8,415 comments · 0:36
-- [Bro Made a Simple Task Impossible 😭 #shorts #usa](https://youtu.be/5R3BYTqAHjc) · IDDSI · 13,075,105 views · 440,949/hr · 273,045 likes · 2,377 comments · 0:32
-- [Shortest Woman Vs Tallest Woman Got Arrested](https://youtu.be/P3eeQXn04q4) · Law By Mike · 33,547,352 views · 437,636/hr · 237,770 likes · 370 comments · 0:38
-- [Phillies land All-Star closer Jhoan Duran ahead of MLB trade deadline 👀🔥 #jhoanduran](https://youtu.be/0L2RdAVUbLk) · Eryihjy outrfj · 20,108,118 views · 404,973/hr · 113,557 likes · 90 comments · 0:31
-- [Ranking Underwater Moments #funny #funnyvideo #underwater](https://youtu.be/lPNUXTwFNUY) · MrRanker · 46,186,771 views · 364,697/hr · 1,046,196 likes · 2,319 comments · 0:36
-- [The Funniest Family Ever 🤣](https://youtu.be/3W9j8D3S-Jc) · Daily Tales · 9,286,663 views · 284,470/hr · 334,744 likes · 824 comments · 0:15
+- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 26,286,548 views · 819,495/hr · 158,983 likes · 524 comments · 0:10
+- [Cutting A Watermelon With Dental Floss 😮](https://youtu.be/VOI9-Gx2EaY) · Zack D. Films · 13,366,340 views · 487,623/hr · 528,579 likes · 15,607 comments · 0:36
+- [Shortest Woman Vs Tallest Woman Got Arrested](https://youtu.be/P3eeQXn04q4) · Law By Mike · 35,078,581 views · 373,504/hr · 247,633 likes · 378 comments · 0:38
+- [Ranking Underwater Moments #funny #funnyvideo #underwater](https://youtu.be/lPNUXTwFNUY) · MrRanker · 48,257,342 views · 335,339/hr · 1,094,992 likes · 2,429 comments · 0:36
+- [Phillies land All-Star closer Jhoan Duran ahead of MLB trade deadline 👀🔥 #jhoanduran](https://youtu.be/0L2RdAVUbLk) · Eryihjy outrfj · 20,870,952 views · 311,903/hr · 118,634 likes · 100 comments · 0:31
+- [Bro Made a Simple Task Impossible 😭 #shorts #usa](https://youtu.be/5R3BYTqAHjc) · IDDSI · 13,313,693 views · 283,789/hr · 276,813 likes · 2,427 comments · 0:32
+- [OMG he actually wore it 🤣 #funny #comedy #humor #prank](https://youtu.be/_1_OO5Wm5Dg) · WearTheGag · 17,044,520 views · 254,847/hr · 88,524 likes · 902 comments · 0:10
+- [Security Stops Woman Over Her Service Dog! 😳 #usa](https://youtu.be/XV4tDwBtNIY) · Thinkerz Edits · 45,672,063 views · 249,317/hr · 1,293,768 likes · 5,612 comments · 0:32
