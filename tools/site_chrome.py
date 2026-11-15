@@ -144,7 +144,7 @@ def build_index():
         items.append({"group": "Pages", "title": title, "url": f"index.html#{anchor}", "desc": desc, "text": _text(sec.group(0)) if sec else ""})
     # guides + pages
     guides = {json.loads(f.read_text())["slug"] for f in (STORE / "content/pages").glob("*.json")}
-    skip = {"index", "harvest-table", "evergreen-candlelight", "longest-night"}
+    skip = {"index", "next", "harvest-table", "evergreen-candlelight", "longest-night"}
     for f in sorted(STORE.glob("*.html")):
         if f.stem in skip or f.stem.startswith("google"):
             continue

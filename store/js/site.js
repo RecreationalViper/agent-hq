@@ -215,6 +215,7 @@
     setTimeout(() => { chatBtn.hidden = false; chatBtn.style.animation = "none"; void chatBtn.offsetWidth; chatBtn.style.animation = "fh-pop .6s var(--fh-spring) backwards"; chatBtn.focus({ preventScroll: true }); }, reduce ? 0 : 220);
   }
 
+  window.fhAsk = (q) => openChat(q); // used by the home page composer
   // ---- wiring ----
   document.addEventListener("click", (e) => {
     const t = e.target.closest("[data-fh-menu],[data-fh-search],[data-fh-chat],[data-fh-close]");
