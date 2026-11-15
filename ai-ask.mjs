@@ -67,8 +67,8 @@ export async function ask(system, prompt, { json = false, temperature = 0.4, str
         // Strong mode: a "pro" model's free limit is separate, so drop just the pro models and carry on with flash.
         if (/quota/i.test(e.message) && strong && /pro/i.test(m)) { console.log(`  ${m.replace("models/", "")} free limit used up, using the next best model`); save(list.filter((x) => !/pro/i.test(x))); continue; }
         if (/quota/i.test(e.message)) { geminiOut = true; console.log("  Gemini's free daily limit is used up; using the backup AI"); break; }
-        if (/BUSY|JSON|Unexpected/i.test(e.message)) { i++; continue; }
-        throw e;
+        if (/BUSY|JSON|Unexpected|HTTP 5\d\d|overloaded|unavailable|internal/i.test(e.message)) { i++; continue; } // a passing server hiccup: try the next model
+        break; // anything else: hand the job to the backup AIs instead of failing the run
       }
     }
   }
