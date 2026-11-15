@@ -1,10 +1,13 @@
-# Content Creator notes - 2026-11-13
+# Content Creator notes - 2026-11-15
 
-Theme: Gentle guidance for simple, printable memorial planning
-Headlines made: Edit on your phone in minutes | Welcome sign on a simple easel | Gather stories with memory cards | Print at home without special paper | Complete matching kit in one download
+Theme: Navigating holiday grief and winter memorial planning with gentle fill-in printables
+Headlines made: Saving a seat for loved ones | Planning a quiet winter solstice service | Creating memory ornaments for the tree | Setting up a quiet memory space | How to edit programs without software
 
 ## For the Content Planner
-Used Planner ideas 1, 2, 3, 4, and 5, turning each into a distinct angle.,Ensured no headline repeats the prohibited list; each post offers a unique tip or walkthrough.,Three pins feature scene-table or scene-venue backgrounds; two stories rely on screen‑capture visuals.,Keywords align with SEO Scout phrases, focusing on fill‑in PDF, welcome sign, memory cards, US Letter printing, and bundle.
+- Created 5 distinct social assets: 3 holiday pins/stories covering Harvest Table (Thanksgiving), Longest Night (Blue Christmas), and Evergreen & Candlelight (Christmas), plus 2 Soft Botanical posts.
+- Followed Planner ideas for phone-first editing walkthroughs and memory table setups while ensuring headlines strictly avoided the forbidden list.
+- Used scene backgrounds for Pinterest pins to maximize visual engagement for holiday tables and entryway easels.
+- For next week: plan posts targeting mid-December Blue Christmas services and last-minute Thanksgiving printable place card reminders.
 
 ## For the SEO Scout
-Confirm search volume for 'editable funeral program template pdf' vs. 'printable funeral program US Letter'.,Find any emerging long‑tail queries about 'printable memorial kit for small spaces'.
+What are the top long-tail search queries for 'Blue Christmas church service program printable'?,Can you check search volume for 'DIY memory ornament cards' versus 'Christmas memorial table sign'?
