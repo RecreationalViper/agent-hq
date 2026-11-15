@@ -1,4 +1,4 @@
 {
-  "updated": "2026-11-15T22:03:04.655Z",
-  "error": "Pinterest 401: Token authorization failed: InactiveConsumer"
+  "updated": "2026-11-15T22:14:45.997Z",
+  "error": "Pinterest 401: Your application consumer type is not supported, please contact support."
 }
