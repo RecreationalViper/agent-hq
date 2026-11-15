@@ -34,7 +34,17 @@ async function pickModels(strong = false) {
     .map((m) => m.name).sort((a, b) => rank(a) - rank(b) || ver(b) - ver(a));
 }
 
-const parse = (text, json) => json ? JSON.parse(text.replace(/^```(?:json)?\s*|\s*```$/g, "").trim()) : text;
+// Lenient JSON: backup AIs sometimes wrap it in prose, leave trailing commas, or use smart quotes.
+function parse(text, json) {
+  if (!json) return text;
+  let t = text.replace(/^```(?:json)?\s*|\s*```$/g, "").trim();
+  try { return JSON.parse(t); } catch (e) {
+    const a = t.search(/[[{]/), b = Math.max(t.lastIndexOf("}"), t.lastIndexOf("]"));
+    if (a >= 0 && b > a) t = t.slice(a, b + 1);
+    t = t.replace(/[\u201C\u201D]/g, '"').replace(/,\s*([}\]])/g, "$1").replace(/([{,]\s*)([A-Za-z_][\w-]*)\s*:/g, '$1"$2":');
+    try { return JSON.parse(t); } catch { throw e; }
+  }
+}
 
 export async function ask(system, prompt, { json = false, temperature = 0.4, strong = false, who = "agent" } = {}) {
   let lastErr;
@@ -72,6 +82,11 @@ export async function ask(system, prompt, { json = false, temperature = 0.4, str
       }
     }
   }
-  if (hasGroq()) return parse(await groqChat(system, prompt, { json, temperature, strong }), json);
+  if (hasGroq()) { // a backup that sends broken JSON gets two more tries before the run gives up
+    for (let t = 0; t < 3; t++) {
+      try { return parse(await groqChat(system, prompt + (t && json ? "\n\nReply with ONLY valid JSON: double-quoted keys and strings, no comments, no trailing commas." : ""), { json, temperature: t ? Math.min(temperature, 0.5) : temperature, strong }), json); }
+      catch (e) { lastErr = e; if (!json || !/JSON|Unexpected|property name/i.test(e.message)) throw e; console.log(`  backup AI sent broken JSON (${e.message.slice(0, 60)}), asking again`); }
+    }
+  }
   throw lastErr || new Error("No AI available");
 }
