@@ -11,7 +11,9 @@ KIT = "https://payhip.com/b/vqNSA"
 CHECKLIST = "https://payhip.com/b/eYJqS"
 CONTACT_API = "https://foreverheld-sales.foreverheld.workers.dev/contact"
 
-GARDEN = re.search(r'<div class="garden".*?</div>\n', (STORE / "index.html").read_text(), re.S).group(0)
+ROOT = STORE.parent
+CLASSIC = ROOT / "tools/templates/home-classic.html"  # the previous home page, kept as the source of shared decoration
+GARDEN = re.search(r'<div class="garden".*?</div>\n', CLASSIC.read_text(), re.S).group(0)
 
 def nav(home=False):
     h = "" if home else "index.html"
@@ -72,10 +74,14 @@ def page(slug, title, desc, body, script="", head_extra=""):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="v3.css">
+<link rel="stylesheet" href="v3-inner.css">
+<meta name="theme-color" content="#10110f">
 <link rel="canonical" href="https://foreverheld.pages.dev/{slug}.html">
 {head_extra}</head>
-<body>
-{GARDEN}{nav()}<main class="page" id="top">
+<body class="v3 v3i">
+<div class="grain" aria-hidden="true"></div>
+{nav()}<main class="page" id="top">
 {body}
 </main>
 {footer()}{script}</body>
@@ -242,14 +248,9 @@ urls = ["", "guides.html", "contact.html", "about.html", "terms.html", "refunds.
 (STORE / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"  <url><loc>{SITE}/{u}</loc></url>\n" for u in urls) + "</urlset>\n")
 (STORE / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /landing/\nSitemap: {SITE}/sitemap.xml\n")
 
-# ---------------- Home page: shared nav + footer + trust line ----------------
-p = STORE / "index.html"
-s = p.read_text()
-s = re.sub(r'<nav class="nav glass".*?</nav>\n', nav(home=True), s, flags=re.S)
-s = re.sub(r'<footer>.*?</footer>\n', footer(home=True), s, flags=re.S)
-if 'class="trust"' not in s:
-    s = s.replace('<section aria-labelledby="faq-title">', '<p class="trust"><span>Instant download</span><span>Secure checkout by Payhip</span><span>Help from a real person</span><span><a href="refunds.html">Fair refund policy</a></span></p>\n\n  <section aria-labelledby="faq-title">', 1)
-p.write_text(SC.install(s, home=True))
+# ---------------- Home page: the v3 design, built by tools/home-v3.py ----------------
+import subprocess, sys
+subprocess.run([sys.executable, str(ROOT / "tools/home-v3.py"), "index.html"], check=True)
 SC.thumbs()
 print("search index:", SC.build_index(), "entries")
 print("built:", ", ".join(sorted(x.name for x in STORE.glob("*.html"))))

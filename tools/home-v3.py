@@ -1,5 +1,5 @@
 """Builds the v3 "candlelit night" home page. Styles: store/v3.css, code: store/js/v3.js.
-Usage: python3 tools/home-v3.py            -> store/next.html (preview, not indexed)
+Usage: python3 tools/home-v3.py [file]     -> store/index.html (the live home page); store-pages.py runs this
 Uses the shared menu/search/assistant from tools/site_chrome.py and prices from products/collections.json."""
 import sys, html as H
 from pathlib import Path
@@ -61,7 +61,12 @@ PAGE = f'''<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex">
+<meta name="p:domain_verify" content="8acdd87413202b93720b2631d7974500"/>
+<link rel="canonical" href="https://foreverheld.pages.dev/">
+<meta property="og:title" content="Forever Held · Memorial printables">
+<meta property="og:description" content="Funeral programs, welcome signs, memory cards and holiday remembrance sets you fill in on your phone and print today.">
+<meta property="og:image" content="https://foreverheld.pages.dev/video/forever-held-poster.jpg">
+<meta property="og:url" content="https://foreverheld.pages.dev/">
 <title>Forever Held · Memorial printables</title>
 <meta name="description" content="Gentle memorial printables you type into on your phone and print today: funeral programs, welcome signs, memory cards and holiday remembrance sets.">
 <meta name="theme-color" content="#10110f">
@@ -116,7 +121,7 @@ PAGE = f'''<!doctype html>
   </div></div></div>
 </div></section>
 
-<section class="block" id="collections" aria-labelledby="col-h"><div class="wrap">
+<section class="block" id="collections" aria-labelledby="col-h"><span id="suite"></span><span id="holiday"></span><div class="wrap">
   <div class="sec-head"><p class="crumb"><b>✳</b> Forever Held / 04 <span>Collections</span></p><h2 id="col-h">Made for the days <em>that matter most.</em></h2>
     <div class="filters" role="group" aria-label="Filter collections"><button type="button" data-filter="all" aria-pressed="true">All</button><button type="button" data-filter="funeral" aria-pressed="false">Funeral</button><button type="button" data-filter="holiday" aria-pressed="false">Holiday</button><button type="button" data-filter="church" aria-pressed="false">Church service</button></div></div>
   <div class="projects">
@@ -176,8 +181,8 @@ PAGE = f'''<!doctype html>
 </body>
 </html>
 '''
-out = STORE / (sys.argv[1] if len(sys.argv) > 1 else "next.html")
-html = SC.install(PAGE)
+out = STORE / (sys.argv[1] if len(sys.argv) > 1 else "index.html")
+html = SC.install(PAGE, home=True)
 # v3.css must come after the shared chrome styles so its dark-glass overrides win
 html = html.replace('<link rel="stylesheet" href="v3.css">\n', "").replace('<link rel="stylesheet" href="motion.css">\n', '<link rel="stylesheet" href="motion.css">\n<link rel="stylesheet" href="v3.css">\n')
 out.write_text(html)

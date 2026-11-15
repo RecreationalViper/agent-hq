@@ -1,0 +1,36 @@
+/* v3 "candlelit night" skin for the inner pages (contact, about, policies, guides). Loads after site.css + v3.css.
+   Built into every page by tools/store-pages.py. */
+.v3i{--paper:#10110f;--moss:#f2efe6;--ink-soft:#a9a69d;--sage:#e6b47f;font-size:17px}
+.v3i .garden{display:none}
+.v3i .nav.glass{background:rgba(24,25,23,.62);border-color:var(--line);backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 16px 40px rgba(0,0,0,.35)}
+.v3i .nav{width:min(1080px,100% - 20px);margin-left:calc(min(1080px,100% - 20px)/-2)}
+.v3i .nav .btn-sage{min-height:40px;padding:0 18px;font-size:14px}
+.v3i .glass{background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.08);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.v3i .page{width:min(860px,100% - 36px);padding:110px 0 40px}
+.v3i .page-head{padding:30px 0 26px}
+.v3i .page-head::before{content:"✳  Forever Held";display:block;margin-bottom:20px;font:400 11.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.v3i .page-head h1{font:400 clamp(46px,9vw,92px)/.95 var(--serif);letter-spacing:-.015em;margin:0 0 16px}
+.v3i .page-head p{color:#cfccc2;font-size:clamp(16.5px,1.6vw,19px);max-width:36em}
+.v3i .page-head .updated{color:var(--muted);font-size:13px;letter-spacing:.06em;margin-top:12px}
+.v3i .panel{border-radius:28px;padding:clamp(22px,4vw,36px)}
+.v3i .legal h2,.v3i .panel h2{font:400 clamp(26px,3vw,34px)/1.1 var(--serif);color:var(--ink)}
+.v3i .legal p,.v3i .legal li,.v3i .panel p,.v3i .panel li{color:#c9c6bc}
+.v3i .panel a{color:var(--gold)}
+.v3i .section-title{font:400 clamp(34px,5vw,58px)/1 var(--serif)}
+.v3i .cards>*{border-radius:24px;padding:22px;transition:transform .6s var(--ease),border-color .4s}
+.v3i .cards b{font:400 25px/1.15 var(--serif);color:var(--ink)}
+.v3i .cards span{color:var(--muted)}
+@media (hover:hover){.v3i .cards>a:hover{border-color:rgba(230,180,127,.45)}}
+.v3i .field label{color:var(--ink);font-weight:500;letter-spacing:.01em}
+.v3i .field input,.v3i .field select,.v3i .field textarea{background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--ink);box-shadow:none;border-radius:16px}
+.v3i .field input:focus,.v3i .field select:focus,.v3i .field textarea:focus{border-color:rgba(230,180,127,.6);outline:none;box-shadow:0 0 0 4px rgba(230,180,127,.12)}
+.v3i .field select option{background:#1b1c19;color:var(--ink)}
+.v3i .field small,.v3i .hp{color:var(--muted)}
+.v3i .form-msg.ok{background:rgba(169,189,149,.16);color:#d6e4c8}.v3i .form-msg.err{background:rgba(230,120,100,.15);color:#f2c3b6}
+.v3i .btn-sage,.v3i .btn.btn-sage{color:#1b140c;border-color:rgba(255,235,205,.6);background:linear-gradient(160deg,#f3cfa3,#d99a5f);box-shadow:inset 0 1px 0 rgba(255,255,255,.65),0 14px 44px rgba(230,170,110,.28)}
+.v3i footer{width:min(1080px,100% - 36px);border-top:1px solid var(--line);color:var(--muted);margin-top:30px}
+.v3i footer .brand{color:var(--ink)}.v3i footer .brand img{filter:brightness(0) invert(.92) sepia(.3)}
+.v3i .foot-grid h3{color:var(--gold)}.v3i .foot-note{border-color:var(--line)}
+.v3i footer a{color:#cfccc2}
+.v3i .trust{color:var(--muted)}
+.v3i ::selection{background:rgba(230,180,127,.35)}

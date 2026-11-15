@@ -28,7 +28,7 @@ PAGES = {
     "holiday-2026-A": ("evergreen-candlelight.html", "Christmas", "img/thumbs/evergreen.jpg"),
     "holiday-2026-B": ("longest-night.html", "Blue Christmas service", "img/thumbs/longest-night.jpg"),
 }
-SOFT = {"name": "Soft Botanical suite", "label": "Funeral & celebration of life", "price": "$12.99", "url": "index.html#suite", "thumb": "img/thumbs/soft-botanical.jpg"}
+SOFT = {"name": "Soft Botanical suite", "label": "Funeral & celebration of life", "price": "$12.99", "url": "index.html#collections", "thumb": "img/thumbs/soft-botanical.jpg"}
 
 
 def collections():
@@ -131,20 +131,20 @@ def build_index():
                 f'. {c.get("delivery", "")}. Buy: {c["checkout"]}. Who it is for: {c.get("audience", "")}. Look: {c.get("look", "")}.')
         items.append({"group": "Products", "title": f'{c["name"]} · {p["label"]} set', "url": p["url"], "desc": f'{p["label"]} memorial printables · {c["price"]}', "img": p["thumb"], "text": text})
     idx = strip_chrome((STORE / "index.html").read_text())
-    suite = re.search(r'<section class="suite.*?</section>', idx, re.S)
-    items.append({"group": "Products", "title": "Soft Botanical Celebration of Life Suite", "url": "index.html#suite", "desc": "Funeral program, welcome sign and memory cards · $12.99", "img": SOFT["thumb"],
+    suite = re.search(r'<section class="suite.*?</section>', (ROOT / "tools/templates/home-classic.html").read_text(), re.S)
+    items.append({"group": "Products", "title": "Soft Botanical Celebration of Life Suite", "url": "index.html#collections", "desc": "Funeral program, welcome sign and memory cards · $12.99", "img": SOFT["thumb"],
                   "text": "Soft Botanical Celebration of Life Suite, $12.99, instant download, buy: https://payhip.com/b/vqNSA. " + (_text(suite.group(0)) if suite else "")})
     items.append({"group": "Products", "title": "Free planning checklist", "url": CHECKLIST, "desc": "Free printable checklist, sent to your email", "img": "",
                   "text": "A free printable funeral and celebration of life planning checklist. Get it at https://payhip.com/b/eYJqS; it also signs you up for gentle seasonal updates."})
     # FAQ on the home page
     for q, a in re.findall(r'<details class="glass"><summary>([^<]*)</summary><p>(.*?)</p></details>', idx, re.S):
         items.append({"group": "Questions", "title": H.unescape(re.sub(r"<[^>]+>", "", q)), "url": "index.html#faq-title", "desc": H.unescape(re.sub(r"<[^>]+>", "", a))[:140], "text": H.unescape(re.sub(r"<[^>]+>", "", a))})
-    for anchor, title, desc in [("how", "How it works", "From checkout to printed in an evening"), ("holiday", "Holiday sets", "For the first holidays without them")]:
+    for anchor, title, desc in [("how", "How it works", "From checkout to printed in an evening"), ("collections", "Collections", "Funeral, holiday and church service sets")]:
         sec = re.search(rf'<section[^>]*id="{anchor}".*?</section>', idx, re.S)
         items.append({"group": "Pages", "title": title, "url": f"index.html#{anchor}", "desc": desc, "text": _text(sec.group(0)) if sec else ""})
     # guides + pages
     guides = {json.loads(f.read_text())["slug"] for f in (STORE / "content/pages").glob("*.json")}
-    skip = {"index", "next", "harvest-table", "evergreen-candlelight", "longest-night"}
+    skip = {"index", "next", "classic", "harvest-table", "evergreen-candlelight", "longest-night"}
     for f in sorted(STORE.glob("*.html")):
         if f.stem in skip or f.stem.startswith("google"):
             continue
