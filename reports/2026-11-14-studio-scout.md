@@ -2,54 +2,36 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-Here are the **top 5 short-form clip opportunities** for MotionVault today, ordered by immediate viral potential.
+### 1. Movie: *Ebenezer* (Johnny Depp) – Dark Victorian Transformation
+* **Why it will get views now:** *Ebenezer* just hit #1 at the box office with an opening Friday of $6.7M (tracking over $20M for the weekend per *Variety* and *Deadline*), and pulled 78,621 Wikipedia views yesterday. Public curiosity around Johnny Depp's return to studio filmmaking is peaking.
+* **Exact scene to clip:** Pull from the official trailer: the slow-burn opening close-up of a withered, unrecognizable Ebenezer Scrooge counting coins in candle-light, transitioning sharply into his terrifying first supernatural encounter with the spirits. Keep the visual pacing deliberate for 3-4 seconds, then sync Spirit reveals to heavy bass drops.
+* **Sound idea:** Panchiko’s *"D>E>A>T>H>M>E>T>A>L"* (spiking at 17,348 US listeners on Last.fm) or Radiohead's *"Creep"*.
+* **Source:** [Variety Box Office Report](https://news.google.com/rss/articles/CBMinAFBVV95cUxNVTRXSUdNUnZta05jWl9YMmlkRWJHZDJPcGZ3UGpZVUJtUzZVYkkwc2tUbHhLcTd2QS1fTWtwMzJNUXNqTGVNTjJMeGh4Umx5S0k1cTRLVjl4OUFLVnFBS0ZIZUVtdEVWR3VIb2tNb3VFSkcyS3ZlWGlDR1JLYnZVbGFBd0xJMFZuekdCSTVTRi1oR1FzYWIyTmltNGk?oc=5)
 
 ---
 
-### 1. *Ebenezer* (2026) – Box Office #1 Theatrical Drop
-* **Why it will get views now:** Johnny Depp’s return to major studio releases is dominating entertainment headlines today. *Ebenezer* opened at **#1 with $6.7M on Friday** (pacing toward a $20M+ weekend per *Deadline* and *Variety*), and Wikipedia logged **78,600+ views** yesterday. Interest is at its absolute peak right now.
-* **Exact scene to clip:** The official trailer’s chilling confrontation sequence between Ebenezer Scrooge and the supernatural visitation. 
-  * **0–2s Hook:** Hard punch-in on Ebenezer’s cold, disdainful scowl.
-  * **2–25s Story Flow:** Let the spectral atmosphere build unbroken—slow audio fade, sudden apparition manifest, Scrooge backing into his chair.
-  * **Final Beat:** Ebenezer’s spine-chilling line delivery cut dead on the vocal snap, cutting abruptly to the title card to trigger comments and rewatches.
-* **Source:** Official studio theatrical trailer ([Variety Box Office Report](https://variety.com/)).
+### 2. Gaming: *Grand Theft Auto VI* – "Macca & Friends" In-Game Satire
+* **Why it will get views now:** *GTA VI* search interest is surging across mainstream media (CNBC, GMA, Marca) with 74,974 Wikipedia views. A fresh news hook broke today via *The Economic Times*: Rockstar revealed "Macca & Friends," a satirical animated cartoon broadcast playing inside the game world.
+* **Exact scene to clip:** Clip the official trailer snippet featuring the colorful, crude 2D animation of "Macca the Gator and his wetland friends" on an in-game CRT TV, abruptly pulling back to a chaotic, high-contrast, neon Vice City street crime scene outside the window. The stark contrast between children's cartoon parody and gritty crime is built for TikTok retention.
+* **Source:** [The Economic Times GTA 6 Feature](https://m.economictimes.com/news/new-updates/gta-6-to-bring-animated-tv-entertainment-inside-the-game-heres-what-trailer-shows/articleshow/135827185.cms)
 
 ---
 
-### 2. *Grand Theft Auto VI* – "Macca & Friends" In-Game TV Satire
-* **Why it will get views now:** *GTA VI* is heavily trending on Wikipedia (**74,900+ views**) and news outlets (*CNBC*, *Variety*, *The Economic Times*). Social media is actively reacting to official footage reveals of **"Macca & Friends"**—an in-game animated Saturday-morning cartoon parody following an alligator across fictional Leonida.
-* **Exact scene to clip:** The Macca the Gator animated TV broadcast snippet from the official Rockstar promotional trailer.
-  * **0–2s Hook:** Bright, innocent retro cartoon intro with Macca the Gator.
-  * **2–25s Story Flow:** Keep the clip continuous as the cute animated scene spirals into absurd, classic *GTA*-style violent satire.
-  * **Final Beat:** Cut instantly on the title bumper or the shocked in-game viewer reaction shot.
-* **Source:** Rockstar Games / Promotional trailer clips ([The Economic Times](https://m.economictimes.com/news/new-updates/gta-6-to-bring-animated-tv-entertainment-inside-the-game-heres-what-trailer-shows/articleshow/135827185.cms)).
+### 3. Anime: "Talk To Me Doja" (*Yamada-kun and the Seven Witches*)
+* **Why it will get views now:** A verified TikTok dance and edit trend broke out between Nov 7–13 [1]. It pairs a sped-up cut of Doja Cat's *"Like That"* with Urara Shiraishi swaying bashfully. Anime dance edits currently dominate Shorts (e.g., recent dance edits pulling 6M+ views).
+* **Exact scene to clip:** Take the 2015 anime clip of Urara Shiraishi swaying side-to-side with hands folded under her chin (ep 1 / credit sequence). Build a 30-second transformative loop: start with 2 seconds of Urara's shy dance, hard-cut on the beat to a quick reel of intense anime character face-offs/powers, then snap right back to Urara's shy swaying on the final beat.
+* **Source:** [Meme.com: Talk To Me Doja Trend](https://meme.com/memes/talk-to-me-doja) [1]
 
 ---
 
-### 3. *League of Legends* – Worlds 2026 Grand Finals (GEN vs BLG)
-* **Why it will get views now:** Currently dominating global live streaming: over **450,000+ concurrent viewers** across Twitch right now (Caedrel alone at **257K+**, Riot Games at **97K+**), with BLG trending in Google Searches across the UK, Brazil, and Korea.
-* **Exact scene to clip:** A decisive game-ending Baron fight or base race from the clean broadcast feed.
-  * **0–2s Hook:** In-game alert siren / shoutcaster audible gasp with team health bars dropping.
-  * **2–25s Story Flow:** Unbroken overhead team-fight replay tracking the game-winning ultimate or flank.
-  * **Final Beat:** The explosive Nexus shatter sync-cut with the sudden eruption of the arena stage confetti and player booth reactions.
-* **Source:** Riot Games Official Worlds 2026 Finals Stream ([Twitch Riot Games](https://twitch.tv/riotgames)).
+### 4. Movie Trailer: *The Thomas Crown Affair* (Michael B. Jordan Remake)
+* **Why it will get views now:** Amazon MGM dropped the official trailer today (Nov 14), reported by *Deadline*. Heist aesthetics, sleek tailoring, and high-adrenaline escapes consistently pull millions on short-form feeds (similar to recent 2M-5M view movie edits on YouTube Shorts).
+* **Exact scene to clip:** From the official trailer: start with Michael B. Jordan adjusting his cufflinks in a grand museum hall, holding eye contact with security cameras (first 2 seconds hook), then let an unbroken 5-second chase sequence run as alarms trigger, cutting immediately on a sly grin before he disappears into a crowded train station.
+* **Source:** [Deadline Official Trailer Release](https://news.google.com/rss/articles/CBMijgFBVV95cUxNXzVVMXhsdXdhdXhLQkF4VlVpQWlPZW5BdHdXQjREc2ZhclB2RHhwaFN5OGxaR0ZiY3o3OXFNWUhzcEgydVVhUjNjeE9hdFU4aUpLWkNoTmJSUmM3U3YxUGZrLTNhc2pnXzJHVHUzbWE1dWhWOWNWTFNRd1hJdlk1emJYUUdOeTdreldIU25n?oc=5)
 
 ---
 
-### 4. *Jujutsu Kaisen* – High-Velocity Character Aura Edits
-* **Why it will get views now:** Cross-platform data shows *Jujutsu Kaisen* fan edits reached **3.4M views** across 52 creators over the past week on TikTok. Short-form audiences are heavily consuming Toji, Gojo, and Sukuna power edits synced to surging alt-pop/rock audios (such as bôa’s *"Duvet"* or rising tracks like Olivia Rodrigo's *"the cure"*).
-* **Exact scene to clip:** Toji Fushiguro vs. Gojo Satoru (the high-frame-rate physical beatdown or Gojo's awakened "Honored One" sequence).
-  * **0–2s Hook:** Extreme slow-motion close-up of Gojo’s blindfold lift or Toji's cold smirk.
-  * **2–25s Story Flow:** 2–3 unbroken stretches of dynamic hand-to-hand fight choreography kept in chronological order.
-  * **Final Beat:** The Hollow Purple release gesture cut right as the purple orb expands to hit the audio drop.
-* **Source:** Official anime release ([Convosight JJK Edit Trend Analysis](https://www.convosight.com/tools/moments/asia/2026-11-14/jujutsu-kaisen-manga-edits)).
-
----
-
-### 5. *Yamada-kun and the Seven Witches* – "Talk To Me Doja" Trend
-* **Why it will get views now:** Fresh TikTok trend tracked by meme monitors this weekend: Urara Shiraishi’s shy sway dance paired with a sped-up version of Doja Cat’s *"Like That"*.
-* **Exact scene to clip:** Urara Shiraishi swaying side-to-side with hands tucked under her chin, turned into a seamless looping micro-montage.
-  * **0–2s Hook:** Urara’s initial bashful bounce starting directly on beat.
-  * **2–25s Story Flow:** 3 to 4 sequential cuts alternating between the smooth, rhythmic dance loops and matched character eye-contact moments.
-  * **Final Beat:** Loop the ending sway frames perfectly into frame 1 so the short loops indefinitely on mobile screens.
-* **Source:** Liden Films official footage ([Meme.com Trend Report](https://meme.com/memes/talk-to-me-doja)).
+### 5. Gaming / Narrative: *Call of Duty: Modern Warfare 4* – "Loyalty at Peak" Edit
+* **Why it will get views now:** *Call of Duty: Modern Warfare 4* sits as a top seller on Steam US and in Twitch's top 20 games right now. Narrative character edits focusing on loyalty and sacrifice are generating big traction on Shorts this week (*"She's More Then Evil"*: 533K views; *"Loyalty at peak"*: 427K views).
+* **Exact scene to clip:** The high-stakes standoff cutscene between Task Force 141 leads. Start right on the voice line confrontational hook ("Who told you to trust me?"), hold the tense standoff unedited for 6-8 seconds to build genuine emotional weight, and resolve into a fast 4-beat muzzle flash sequence.
+* **Source:** [Steam US Top Sellers](studio/live-data.md) & [YouTube Shorts MW4 "Loyalty at peak"](https://youtu.be/YabJ0gB457E)

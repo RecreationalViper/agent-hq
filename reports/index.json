@@ -1,14 +1,32 @@
 [
   {
-    "file": "2026-11-14-studio-scout.md",
-    "agent": "studio-scout",
-    "name": "Trend Scout",
+    "file": "2026-11-14-growth-coach.md",
+    "agent": "growth-coach",
+    "name": "Growth Coach",
     "date": "2026-11-14"
   },
   {
-    "file": "2026-11-14-tiktok-sounds.md",
-    "agent": "tiktok-sounds",
-    "name": "TikTok Sound Watcher",
+    "file": "2026-11-14-studio-critic.md",
+    "agent": "studio-critic",
+    "name": "Studio Critic",
+    "date": "2026-11-14"
+  },
+  {
+    "file": "2026-11-14-studio-writer.md",
+    "agent": "studio-writer",
+    "name": "Social Strategist",
+    "date": "2026-11-14"
+  },
+  {
+    "file": "2026-11-14-studio-director.md",
+    "agent": "studio-director",
+    "name": "Director",
+    "date": "2026-11-14"
+  },
+  {
+    "file": "2026-11-14-youtube-watcher.md",
+    "agent": "youtube-watcher",
+    "name": "YouTube Shorts Watcher",
     "date": "2026-11-14"
   },
   {
@@ -18,15 +36,27 @@
     "date": "2026-11-14"
   },
   {
-    "file": "2026-11-14-webdev.md",
-    "agent": "webdev",
-    "name": "Web Developer",
-    "date": "2026-11-14"
-  },
-  {
     "file": "2026-11-14-tiktok-formats.md",
     "agent": "tiktok-formats",
     "name": "TikTok Format Watcher",
+    "date": "2026-11-14"
+  },
+  {
+    "file": "2026-11-14-tiktok-sounds.md",
+    "agent": "tiktok-sounds",
+    "name": "TikTok Sound Watcher",
+    "date": "2026-11-14"
+  },
+  {
+    "file": "2026-11-14-studio-scout.md",
+    "agent": "studio-scout",
+    "name": "Trend Scout",
+    "date": "2026-11-14"
+  },
+  {
+    "file": "2026-11-14-webdev.md",
+    "agent": "webdev",
+    "name": "Web Developer",
     "date": "2026-11-14"
   },
   {
