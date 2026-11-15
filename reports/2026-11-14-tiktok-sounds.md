@@ -2,63 +2,74 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-Here are 6 rising TikTok sounds and songs identified from current edit trends and news data, formatted for quick reference on your phone.
+# Trending TikTok Sounds & Edits Watch (Nov 14, 2026)
+
+Here are 7 rising sounds and music tracks spiking in streams, news, and edit counts that fit MotionVault's short-form anime, movie, and gaming edit formats.
 
 ---
 
-### 1. MONTAGEM ZORA (Slowed) – DJ Zora / Brazilian Funk Remix
-* **Why it’s rising:** Massive traction in short-form edit spaces, driving over 14.6M views on top YouTube Shorts edits this week.
-* **Edit Vibe:** High-energy hype, heavy battle montages, gaming clutches, intense anime fights (*Black Clover*, *Jujutsu Kaisen*).
-* **Beat / Drop to Cut On:** Build up with slow walking/dialogue hooks; cut aggressively on the heavy bass drop (bass slap) to showcase impact hits, power unleashes, or headshots.
-* **Source / Reference:** [Prox Editz Short](https://youtu.be/hrwjS08gj9w)
-* **Business Account Warning:** ⚠️ **Likely Blocked/Muted.** Phonk/remix audios often trigger copyright strikes on TikTok Business accounts. Use a standard creator profile or overlay user-uploaded audio.
+### 1. "Shotta’s." – Season 25
+* **Why it's rising:** The UK R&B/drill track just went viral on TikTok, leading to a major record deal with Isekai Records/Create.
+* **Edit Type:** Fast-paced hype / gritty combat montage (e.g., *Black Clover* fight scenes, *Call of Duty: Modern Warfare 4*, *Steel Ball Run*).
+* **Beat/Drop to Cut On:** Hard sub-bass drop right on the chorus hook line (~0:15).
+* **Business Account Status:** 🛑 **Blocked** for TikTok Commercial Sound Library (label copyright). Personal/creator profile required.
+* **Source:** [Music Business Worldwide Article](https://news.google.com/rss/articles/CBMiiAJBVV95cUxPdmk0aS1WNVFQOUxtdHpMQ3dpOFBFY3lfSlZGOHQzNGR4dDdXdkJNR0N5cGVqTEs4YVkwLVRNc1FSOTJ0YVBZOWdxcXdzcjRSZDFhaXZXdHhTYVZlMTRlckl1Q3Z4RHFMVmhmSkZ6YXlmWWZlLXlXMjlhb1haV0VUa3R6XzJveklzUnVVNDI2VGxoN1AtYlJYRDVPaUYteGJmYV9UZzF0WENwY1_xeubw?oc=5)
 
 ---
 
-### 2. Duvet – Bôa (Sped Up / Slowed / Original)
-* **Why it’s rising:** 1998 alt-rock track surging back onto the Billboard Hot 100 via viral TikTok nostalgia and anime aesthetic edits.
-* **Edit Vibe:** Atmospheric, melancholic, sci-fi introspective, psychological anime (*Serial Experiments Lain*, *Bleach*), dark gaming trailers (*GTA VI*).
-* **Beat / Drop to Cut On:** Hook on the opening clean guitar riff ("And you don't seem to understand..."); hit a slow-motion eye zoom or silhouette reveal right when the vocal echoes in.
-* **Source / Reference:** [AOL Music Coverage](https://news.google.com/rss/articles/CBMifkFVX3lxTE5WTUlUR29MYko0OXctUFpudllRcW9Wc0dXU1BTSGhKUFBMeEdZanFBUGczdTJpUFVORE5NdERfOVE3elFRdlRuYjFkczdRSDlhWEpENWxyUmlVTmhBUk1HSE9nbXhDWWVuc200UzBOOHdfSFlLY3YxQlBUZ1otZw?oc=5)
-* **Business Account Warning:** ⚠️ **Blocked for Commercial Use.** Major label release; restricted on TikTok Commercial Music Library.
+### 2. "the cure" – Olivia Rodrigo
+* **Why it's rising:** #1 trending track worldwide on Last.fm (923,000+ listeners) and US (18,600+ listeners).
+* **Edit Type:** Tragic character backstory / emotional beat switch (e.g., *Re:Zero*, *Bleach* character deaths, emotional superhero arc).
+* **Beat/Drop to Cut On:** Cut right on the sudden vocal belt into the synth wall at the chorus transition.
+* **Business Account Status:** 🛑 **Blocked** for business accounts. Must use personal account sound upload or user audio.
+* **Source:** Last.fm Global & US Charts
 
 ---
 
-### 3. Dancing On My Own – Kings of Leon (Live/Acoustic Cover)
-* **Why it’s rising:** Millions of views across TikTok feeds following widespread viral sharing of their unreleased cover.
-* **Edit Vibe:** Lone warrior, anti-hero sacrifice, bittersweet cinematic moments (Batman, *Call of Duty: MW4* Task Force 141 moments).
-* **Beat / Drop to Cut On:** Start with quiet dialogue or character isolation; land the visual cut on the raspy vocal peak ("I'm right over here, why can't you see me?").
-* **Source / Reference:** [BroBible Coverage](https://news.google.com/rss/articles/CBMiowFBVV95cUxQ4TVHakJQQTlvSmpHZ3BBd21WVHRxOG1URnRHTFNhYV9mQml2emJvd0VxcURMbmQ0cHZTUmJJZUNsLUJ2TUp5dkZodjdRUEN0cWw0Um85b1RxNkgtMGVjUXRiUXJYZUdDQm05M0RDb0VMbWsyeTFRZ0dUMW4zZWZpS2VuTVZUcUlmWi1HWHoyRmJSS2tKaDM4ODVxcVRPeF9RR3JB?oc=5)
-* **Business Account Warning:** ⚠️ **Blocked for Business Accounts.** Commercial copyrighted work; posted as user audio on personal TikTok handles.
+### 3. "Nicole Kidman" – ADÉLA
+* **Why it's rising:** Massive surge across US music streams (318,000+ global listeners; 17,800+ US listeners).
+* **Edit Type:** High-aura character reveal / bad-bitch attitude edits (e.g., *The Apothecary Diaries*, *GTA VI* female leads, badass anime heroines).
+* **Beat/Drop to Cut On:** Sharp snare kick right as the vocal line drops into the main bass line.
+* **Business Account Status:** 🛑 **Blocked** for business accounts.
+* **Source:** Last.fm Charts
 
 ---
 
-### 4. Sailor Song – Gigi Perez
-* **Why it’s rising:** Continuing strong performance across anime romance and tragic backstory edits (e.g., top-performing *One Piece* edits reaching 2.3M+ views).
-* **Edit Vibe:** Emotional character bonds, tragic backstories, sacrifice montage, sad anime (*One Piece*, *Firefly Wedding*).
-* **Beat / Drop to Cut On:** Hook on soft intro dialogue; transition to the emotional vocal swell ("Won't you kiss me...") right on a tragic character smile or tears dropping.
-* **Source / Reference:** [Yt_Orewa_Blue Edit](https://youtu.be/EO6kUmmjou8)
-* **Business Account Warning:** ⚠️ **Blocked for Business Use.** Official Sony/Columbia release.
+### 4. "Duvet" – bôa
+* **Why it's rising:** Perennial anime edit staple undergoing another massive viral surge (2.1M+ global listeners).
+* **Edit Type:** Nostalgic / Melancholic slow-mo reveal (e.g., atmospheric anime aesthetics, *Apothecary Diaries*, cinematic game landscapes).
+* **Beat/Drop to Cut On:** Cut on the opening guitar riff swell right before the drum hit ("And you don't seem to understand...").
+* **Business Account Status:** ⚠️ **Restricted** for standard business accounts without licensing. Use creator sound uploads.
+* **Source:** Last.fm Global Charts
 
 ---
 
-### 5. Meant To Be – Sped Up / Slowed Remix
-* **Why it’s rising:** Trending in cinematic superhero and gaming edits (top *Spider-Man* edits reaching 800k+ views).
-* **Edit Vibe:** Action-drama, tragic hero arcs, high-stakes superhero moments (MCU, Spider-Man, *Tokyo Revengers*).
-* **Beat / Drop to Cut On:** Cut on the dramatic snare snare drop; sync quick mask-on/mask-off or suit up shots to the rhythmic snare snaps.
-* **Source / Reference:** [BluSpider Gaming Edit](https://youtu.be/xlxLDE224i4)
-* **Business Account Warning:** ⚠️ **Restricted for Commercial Profiles.** Standard personal account access required.
+### 5. "D>E>A>T>H>M>E>T>A>L" – Panchiko
+* **Why it's rising:** Top 5 rising indie track in US listener data (17,300+ US listeners).
+* **Edit Type:** Dark / Villain transformation / Edgy psychological edit (e.g., *Light Yagami*, *Godzilla Minus Zero*, dark antiheroes).
+* **Beat/Drop to Cut On:** Cut on the sudden burst of lo-fi shoegaze guitar distortion.
+* **Business Account Status:** 🛑 **Blocked** for business accounts.
+* **Source:** Last.fm US Charts
 
 ---
 
-### 6. Time – Acoustic Cover Style (Pink Floyd / Tyler Childers trend)
-* **Why it’s rising:** Re-emerging audio trend around acoustic/country takes on classic rock anthems.
-* **Edit Vibe:** Aging hero, grim Western, passing of time, villain retirement/downfall (*Red Dead Redemption*, *Logan*, veteran anime characters).
-* **Beat / Drop to Cut On:** Hook on clock-ticking sound FX; hit the dramatic character match-cut on the first heavy acoustic guitar strum or vocal entrance.
-* **Source / Reference:** [Country Chord Trend Report](https://news.google.com/rss/articles/CBMi-wFBVV95cUxNOWZzV0o4M0lpWkVrTGpodEpjMXFGTU41U3k4aXZEc0g4UWZjVVViWDNyU3JmQkFsc0lVanBObnYzNC02eFdmRkdab29SVnVtay0wekVjd3YtZndTeXYzYWtGbktiOWx4NHFFX0pqbC1GOHNhUmhzSVJVd0FKWk9UMGRvX3VBb3VROU1ISEx5UndHVDVEaU4wRUV5eG95cVc3SHRrWTZtd0NDOHdTOWwyNnM5dVBNUmxMa2RneVVWUlhaNWozUUdiZFFIZ2NydDh2T2Nwc3pKRmZPVHd3bUlsSTVWMkRFQzhMd3lkWU5oQnVtWW9RUWlsZ3VIcw?oc=5)
-* **Business Account Warning:** ⚠️ **Blocked for Commercial Accounts.** Publisher copyright applies.
+### 6. "malemo" (Slowed/Reverbed) & GTA VI Soundtracks
+* **Why it's rising:** Driven by massive *GTA VI* hype and YouTube Shorts trends (325,000+ views on recent GTA 6 edit Shorts).
+* **Edit Type:** Hype / Open-world gaming montage (*GTA VI*, *Bodycam*, high-speed drive edits).
+* **Beat/Drop to Cut On:** Deep 808 bass punch right after the slowed vocal intro.
+* **Business Account Status:** 🛑 **Blocked** for commercial use.
+* **Source:** [CBC GTA VI Track Coverage](https://news.google.com/rss/articles/CBMiqgFBVV95cUxQam1UYy1GSTk3TVg0dFJ1N3F0UEpzMkJkS0NoeXU5RUt3TnBIMHBLRlQtR05rWVJMSXE5NGMtanpvU1V6R3dSNkh2dG5iMTBlS01OaC1uaHpPYzhXZkQ2R3I2WHUxdWU4UFdPZ01LZEd0dWhuTHlIdUxhY3d5akJXTWljMDNWSnpQNWRDWlp4Qjh1RmJMMVA2YlNfbmUzV2k3WUVIZ2RaSWNDUQ?oc=5)
 
 ---
 
-### Quick Recommendation for MotionVault
-Since MotionVault operates on a **$0 budget** and relies on organic TikTok reach, post these using a **Personal Creator Account** (or attach trending sounds natively inside the TikTok app on your iPhone after cutting to a royalty-free placeholder track in editing).
+### 7. "Oh Yeah?" – Steve Lacy
+* **Why it's rising:** Spiking in US listener trends (13,400+ US listeners) as a background track for fast-cut edit transitions.
+* **Edit Type:** Quirky / Comedy / Smooth slice-of-life edit (e.g., *Ranma 1/2*, *Even the Student Council Has Its Holes!*, funny gaming glitches).
+* **Beat/Drop to Cut On:** Snappy funk guitar rhythm switch.
+* **Business Account Status:** 🛑 **Blocked** for business accounts.
+* **Source:** Last.fm US Charts
+
+---
+
+### 💡 Quick Takeaway for MotionVault:
+Since **all copyrighted label tracks are blocked for TikTok Business Accounts**, ensure the owner posts from a **Personal/Creator account type** on TikTok to access these audio tracks directly, or cut the edits to user-created sound uploads.
