@@ -15,7 +15,7 @@ export const hasGroqKey = () => Boolean(process.env.GROQ_API_KEY);
 export const hasCloudflare = () => Boolean(process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID);
 // Any backup available? (Groq first, then Cloudflare Workers AI)
 export const hasOpenRouter = () => Boolean(process.env.OPENROUTER_API_KEY);
-export const hasGroq = () => hasGroqKey() || hasCloudflare() || hasOpenRouter() || Boolean(process.env.NVIDIA_API_KEY?.trim()) || Boolean((process.env.REQUESTY_API_KEY || process.env.REQUESTY_KEY || "").trim());
+export const hasGroq = () => hasGitHubModels() || hasGroqKey() || hasCloudflare() || hasOpenRouter() || Boolean(process.env.NVIDIA_API_KEY?.trim()) || Boolean((process.env.REQUESTY_API_KEY || process.env.REQUESTY_KEY || "").trim());
 
 async function call(path, init = {}) {
   const res = await gwFetch(BASE + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${process.env.GROQ_API_KEY}`, "Content-Type": "application/json" } });
@@ -237,12 +237,45 @@ export async function nvidiaChat(system, user, { json = false, temperature = 0.7
   throw lastErr || new Error("NVIDIA could not answer");
 }
 
-// Backup chain used by every agent: Groq, then NVIDIA, then Cloudflare, then Requesty, then OpenRouter (free models only).
+// ---------- GitHub Models (models.github.ai; free with the repo's own GITHUB_TOKEN, no signup) ----------
+// Free daily request limits per model; needs `permissions: models: read` in the workflow.
+const GHM = "https://models.github.ai/inference";
+const ghmKey = () => (process.env.GITHUB_MODELS_TOKEN || "").trim();
+export const hasGitHubModels = () => Boolean(ghmKey());
+const GHM_MODELS = (process.env.GITHUB_MODELS || "openai/gpt-4.1-mini,openai/gpt-4o-mini,meta/llama-3.3-70b-instruct,deepseek/deepseek-v3-0324,openai/gpt-4.1").split(",").map((s) => s.trim()).filter(Boolean);
+let ghmModels;
+export async function githubModelsChat(system, user, { json = false, temperature = 0.7, maxChars = 24000 } = {}) {
+  const input = user.length > maxChars ? user.slice(0, maxChars) + "\n\n[Some input was trimmed to fit the backup AI's limits.]" : user;
+  ghmModels ||= [...GHM_MODELS];
+  let lastErr;
+  for (const model of [...ghmModels]) {
+    try {
+      const init = { method: "POST", body: JSON.stringify({ model, temperature, max_tokens: 3000, messages: [{ role: "system", content: system + (json ? "\nReply with valid JSON only." : "") }, { role: "user", content: input }] }) };
+      const res = await fetch(`${GHM}/chat/completions`, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${ghmKey()}`, "Content-Type": "application/json", Accept: "application/json" } });
+      await trackResponse(`${GHM}/chat/completions`, init, res);
+      const text0 = await res.text();
+      let data; try { data = JSON.parse(text0); } catch { data = {}; }
+      if (!res.ok) { const e = new Error(`GitHub Models ${res.status}: ${data.error?.message || data.message || text0.slice(0, 160)}`); e.status = res.status; throw e; }
+      const text = (data.choices?.[0]?.message?.content || "").replace(/<think>[\s\S]*?<\/think>/g, "").replace(/^```(?:json)?\s*|\s*```$/g, "").trim();
+      if (!text) throw new Error("GitHub Models returned an empty reply");
+      console.log(`  answered by backup AI: GitHub Models ${model}`);
+      ghmModels = [model, ...ghmModels.filter((m) => m !== model)];
+      return text;
+    } catch (e) {
+      lastErr = e;
+      if (e.status === 401 || e.status === 403) break; // token lacks models: read
+      if (e.status === 404 || e.status === 400 || e.status === 413 || e.status === 429) ghmModels = ghmModels.filter((m) => m !== model); // unavailable, too long or out for today: next model
+    }
+  }
+  throw lastErr || new Error("GitHub Models could not answer");
+}
+
+// Backup chain used by every agent: Groq, then GitHub Models, then NVIDIA, then Cloudflare, then Requesty, then OpenRouter (free models only).
 // A provider whose daily free allowance is used up is skipped for the rest of the run (allowances reset daily).
 const usedUp = new Set();
 const DAILY = /per day|daily|RPD|TPD|requests per day|tokens per day|quota|neurons|credits|insufficient/i;
 export async function groqChat(system, user, opts = {}) {
-  let chain = [["Groq", hasGroqKey, groqOnly], ["NVIDIA", hasNvidia, nvidiaChat], ["Cloudflare", hasCloudflare, cloudflareChat], ["Requesty", hasRequesty, requestyChat], ["OpenRouter", hasOpenRouter, openRouterChat]].filter(([, has]) => has());
+  let chain = [["Groq", hasGroqKey, groqOnly], ["GitHub Models", hasGitHubModels, githubModelsChat], ["NVIDIA", hasNvidia, nvidiaChat], ["Cloudflare", hasCloudflare, cloudflareChat], ["Requesty", hasRequesty, requestyChat], ["OpenRouter", hasOpenRouter, openRouterChat]].filter(([, has]) => has());
   // strong mode (Content Creator): NVIDIA's largest models before Groq's faster, smaller one
   if (opts.strong) chain = [...chain.filter(([n]) => n === "NVIDIA"), ...chain.filter(([n]) => n !== "NVIDIA")];
   chain = chain.filter(([n]) => !usedUp.has(n)).concat(chain.filter(([n]) => usedUp.has(n))); // used-up providers go last

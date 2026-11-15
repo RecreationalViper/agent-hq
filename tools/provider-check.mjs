@@ -94,6 +94,15 @@ if (process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID) {
   }
 } else console.log(`RESULT cloudflare: missing ${!process.env.CLOUDFLARE_API_TOKEN ? "CLOUDFLARE_API_TOKEN " : ""}${!process.env.CLOUDFLARE_ACCOUNT_ID ? "CLOUDFLARE_ACCOUNT_ID" : ""}`);
 
+// GitHub Models check (free with the workflow's own token)
+{
+  const { hasGitHubModels, githubModelsChat } = await import("../ai-fallback.mjs");
+  if (hasGitHubModels()) {
+    try { const t = await githubModelsChat("You are a test agent.", "Reply with the single word: ready", { temperature: 0 }); console.log(`RESULT github-models: WORKS, reply ${t.replace(/\s+/g, " ").slice(0, 40)}`); }
+    catch (e) { console.log(`RESULT github-models: FAILED: ${e.message}`); }
+  } else console.log("RESULT github-models: no token (GITHUB_MODELS_TOKEN missing)");
+}
+
 // Requesty check (free models only)
 if (process.env.REQUESTY_API_KEY || process.env.REQUESTY_KEY) {
   const { requestyModels, requestyChat } = await import("../ai-fallback.mjs");
