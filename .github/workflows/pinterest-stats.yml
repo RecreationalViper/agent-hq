@@ -17,7 +17,4 @@ jobs:
           PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN }}
       - name: Save
         run: |
-          git config user.name "agent-hq-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add pinterest
-          git diff --cached --quiet || (git commit -m "Pinterest stats" && git pull --rebase -X theirs && git push)
+          SAVE_STRATEGY="-X theirs" bash tools/save.sh "Pinterest stats" pinterest

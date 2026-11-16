@@ -56,11 +56,7 @@ jobs:
       - name: Save reports
         if: always()
         run: |
-          git config user.name "agent-hq-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git diff --cached --quiet || git commit -m "Studio afternoon update"
-          for i in 1 2 3; do git pull --rebase -X theirs origin main && git push && break; sleep 5; done
+          SAVE_STRATEGY="-X theirs" bash tools/save.sh "Studio afternoon update"
       - name: Tell Discord if this run failed
         if: failure()
         run: node tools/discord-alert.mjs "Studio afternoon run failed"

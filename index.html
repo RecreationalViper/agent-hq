@@ -575,7 +575,8 @@ details summary{cursor:pointer;color:var(--mute);font-size:14px}
     "stale": "Not updated in a long time.",
     "many-open-issues": "Lots of open issues.",
     "learning-material": "Course or reading material, not a ready tool.",
-    "off-topic": "Not clearly on topic."
+    "off-topic": "Not clearly on topic.",
+    "newborn": "Brand-new repo — unproven, watch before adopting."
   };
   function radarCard(i) {
     const d = document.createElement("div");
@@ -588,6 +589,8 @@ details summary{cursor:pointer;color:var(--mute);font-size:14px}
       '<span class="pill" style="color:' + tier.color + ';border-color:' + tier.color + '">' + tier.label + '</span></div>' +
       '<div class="mute" style="margin:4px 0">⭐ ' + i.stars.toLocaleString() + ' · ' + esc(i.license || "no license") + ' · updated ' + daysAgo(i.pushedAt) + 'd ago' + (i.skillFiles === true ? ' · has SKILL.md' : '') + '</div>' +
       '<div>' + esc(i.description || "(no description)") + '</div>' +
+      (i.source === "watched" && i.skillPath ? '<div style="margin-top:6px">🆕 New file: <a href="https://github.com/' + esc(i.name) + '/blob/HEAD/' + esc(i.skillPath) + '" target="_blank" rel="noopener">' + esc(i.skillPath) + '</a></div>' : '') +
+      (i.newborn ? '<div class="mute" style="margin-top:6px">🆕 Launched in the last few weeks — watch before adopting.</div>' : '') +
       (i.reasons && i.reasons.length ? '<div class="mute" style="margin-top:6px">Why: ' + esc(i.reasons.join(" · ")) + '</div>' : '') +
       (notes.length ? '<div class="mute" style="margin-top:6px;color:var(--warn)">⚠ ' + esc(notes.join(" ")) + '</div>' : '') +
       '<div class="row" style="margin-top:8px"><a class="btn ghost" href="' + esc(i.url) + '" target="_blank" rel="noopener">Open on GitHub</a></div>';
@@ -607,9 +610,10 @@ details summary{cursor:pointer;color:var(--mute);font-size:14px}
     const d = radarData;
     const when = new Date(d.generatedAt);
     meta.innerHTML = 'Last scan ' + esc(when.toLocaleString()) + ' · ' + d.searches.ran + ' searches · ' + d.apiCalls + ' GitHub calls · <b>0 AI tokens</b>';
-    const shortNames = new Set((d.shortlist || []).map(i => i.name));
+    // New skills inside watched repos and early launches come first: that is the news.
+    const shortNames = new Set([...(d.shortlist || []), ...(d.watched || []), ...(d.newborn || [])].map(i => i.name));
     const rest = Object.values(d.byCategory || {}).flat().filter(i => !shortNames.has(i.name));
-    let items = [...(d.shortlist || []), ...rest];
+    let items = [...(d.newborn || []), ...(d.watched || []), ...(d.shortlist || []), ...rest];
     if (radarFilter === "adopt") items = items.filter(i => i.tier === "adopt");
     list.innerHTML = "";
     if (!items.length) {

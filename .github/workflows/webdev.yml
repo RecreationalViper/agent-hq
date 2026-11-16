@@ -42,13 +42,7 @@ jobs:
         id: save
         if: github.event.inputs.dry_run != 'true'
         run: |
-          git config user.name "agent-hq-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add store reports
-          if git diff --cached --quiet; then echo "published=false" >> $GITHUB_OUTPUT; exit 0; fi
-          git commit -m "Web Developer: new planning guide"
-          git pull --rebase -X theirs && git push
-          echo "published=true" >> $GITHUB_OUTPUT
+          SAVE_STRATEGY="-X theirs" SAVE_OUTPUT_VAR=published bash tools/save.sh "Web Developer: new planning guide" store reports
   deploy:
     needs: build
     if: needs.build.outputs.published == 'true'
