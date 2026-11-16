@@ -2,85 +2,100 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# Active TikTok Fandoms Watchlist (Week of Nov 15, 2026)
+# TikTok Fandom Watchlist (Week of Nov 15, 2026)
 
-Here are the 7 top movie, gaming, and anime fandoms buzzing on TikTok and YouTube Shorts right now, ranked by potential viral momentum. 
-
-*Note for Claude: Keep edits transformative, short, credit the title on-screen, and pair with trending audio like Olivia Rodrigo's "the cure" or Malcolm Todd's "Earrings" where fitting.*
+Targeting high-engagement fandoms for 30–40s vertical edits on MotionVault. Ranked by current viral momentum and edit potential.
 
 ---
 
-### 1. Zelda: Ocarina of Time Remake (Game)
-* **Why fans care now:** Massive breaking news—sells 5.2M copies in four days as Nintendo’s fastest-selling Switch 2 title ([gHacks News](https://news.google.com/rss/articles/CBMi2AFBVV95cUxNMVMwc01qUkFIUC0zd1FxQlZzalB4OUF3dVU4SEFvZWl6UWp2N3VSYjNnWDZzZ2doNkt0S0J4YktESDJQTF8xaEI2VjkzUlRESmpWZEpwZUZ1b01GMTNVbVBscEVIa2RqMmtoMGZhcldfQ2lBak9CRWxsbC10SGg4dlpNSFE5eHpQbmNpWlFsSzFZRlBnUTlHWU9CR3lzdVRNVXhuRk9PdGxMREtBN1o1NzljQzNCSHVLQnBXTFpNLXVsalBDaGRUWldXdVdvRldicVl1SEF1TVE?oc=5)). Nostalgia hype is at an all-time peak.
-* **Hashtags:** `#Zelda` `#OcarinaOfTime` `#Switch2` `#GamingEdit`
-* **The Moment to Clip:**
-  * **Hook (1-2s):** Young Link pulling the Master Sword from the Pedestal of Time with sound effect heavy bass-drop.
-  * **Body Stretch:** Unbroken transition cutscene showing adult Link stepping into the light.
-  * **Final Rewatch Beat:** Ganondorf turning around with dark aura glaring into camera.
-* **Market Status:** **Oversaturated / High Competition.** Everyone is clipping this—edit quality and audio timing must be elite.
+### 1. The Legend of Zelda: Ocarina of Time Remake (Game)
+* **Why fans care now:** Fresh off launch, selling 5.2 million copies in 4 days as Nintendo's fastest-selling Switch 2 release ([gHacks](https://news.google.com/rss/articles/CBMi2AFBVV95cUxNMVMwc01qUkFIUC0zd1FxQlZzalB4OUF3dVU4SEFvZWl6UWp2N3VSYjNnWDZzZ2doNkt0S0J4YktESDJQTF8xaEI2VjkzUlRESmpWZEpwZUZ1b01GMTNVbVBscEVIa2RqMmtoMGZhcldfQ2lBak9CRWxsbC10SGg4dlpNSFE5eHpQbmNpWlFsSzFZRlBnUTlHWU9CR3lzdVRNVXhuRk9PdGxMREtBN1o1NzljQzNCSHVLQnBXTFpNLXVsalBDaGRUWldXdVdvRldicVl1SEF1TVE?oc=5)). Currently #11 top watched on Twitch.
+* **Hashtags:** `#OcarinaOfTime` `#ZeldaSwitch2` `#ZeldaRemake` `#GamingEdit`
+* **Moment to clip:**
+  * *Hook (0–2s):* Side-by-side transition showing N64 Ganondorf confronting modern remake Ganondorf.
+  * *Body (3–30s):* Clean, unbroken cinematic cut of Link pulling the Master Sword from the Pedestal of Time into adult form.
+  * *Rewatch loop (31–35s):* Smash cut back to Navi's "Hey, listen!" soundbite timed to a black screen.
+* **Saturation:** Low to Moderate (Brand new release window; high demand for cinematic remake comparisons).
 
 ---
 
-### 2. Steel Ball Run: JoJo's Bizarre Adventure (Anime)
-* **Why fans care now:** Sitting comfortably at **#1 Top Airing Anime** on MyAnimeList with a 9.03 rating ([MAL](https://myanimelist.net/anime/61469)). Part 7 edits are everywhere.
-* **Hashtags:** `#SteelBallRun` `#JoJosBizarreAdventure` `#SBR` `#AnimeEdit`
-* **The Moment to Clip:**
-  * **Hook (1-2s):** Gyro Zeppeli spinning his Steel Ball with visual distortion impact.
-  * **Body Stretch:** High-speed horse race starting line montage in story order.
-  * **Final Rewatch Beat:** Johnny Joestar’s intense glowing eyes close-up.
-* **Market Status:** **High Opportunity.** Massive fanbase eager to share high-aesthetic edits.
+### 2. Jujutsu Kaisen (Anime / Manga)
+* **Why fans care now:** Massive evergreen edit volume. Convosight tracked 3.4M views across 52 creator edits in Asia between Nov 5–15 ([Convosight](https://www.convosight.com/tools/moments/asia/2026-11-14/jujutsu-kaisen-manga-edits)), with fan edits continuing to dominate YouTube Shorts (e.g. 1.1M+ views on recent Gojo/Toji shorts).
+* **Hashtags:** `#JJK` `#JujutsuKaisenEdit` `#GojoSatoru` `#AnimeEdit`
+* **Moment to clip:**
+  * *Hook (0–2s):* Sudden eye close-up / blindfold drop of Gojo timed to heavy bass drop.
+  * *Body (3–28s):* Unbroken sequence of Toji vs. Gojo hollow purple wind-up in chronological flow.
+  * *Rewatch loop (29–35s):* Sukuna's malevolent shrine hand sign fading back into the opening frame.
+* **Saturation:** **Extremely Oversaturated.** Needs top-tier audio syncing (e.g. Panchiko or Olivia Rodrigo trending sounds) and crisp color grading to stand out.
 
 ---
 
-### 3. Ramayana: Part 1 (Movie)
-* **Why fans care now:** Top 1 global Wikipedia article yesterday (581k+ reads) and spiking worldwide on Google Trends as teaser clips drop ([Wikipedia](https://en.wikipedia.org/wiki/Ramayana:_Part_1)).
-* **Hashtags:** `#Ramayana` `#RanbirKapoor` `#RamayanaMovie` `#MovieEdit`
-* **The Moment to Clip:**
-  * **Hook (1-2s):** Silhouette hero entry shot with heavy cinematic sound effect.
-  * **Body Stretch:** Scenic landscape draw-of-the-bow sequence.
-  * **Final Rewatch Beat:** Flaming arrow release frame that loops seamlessly back to the start.
-* **Market Status:** **High Opportunity / Low Edit Saturation on Western TikTok.** Excellent untapped reach potential.
+### 3. Grand Theft Auto / GTA 6 (Game)
+* **Why fans care now:** Huge spike in curiosity (72,813 Wikipedia views yesterday; Google Trends UK spiking on "GTA 6 physical copy code flaw"). Twitch GTA streams remain top-tier with streamers like Lacy hyping Miami teasers and Tumblurr pulling 45k+ live viewers.
+* **Hashtags:** `#GTA6` `#GTAV` `#GrandTheftAuto` `#GamingClips`
+* **Moment to clip:**
+  * *Hook (0–2s):* High-speed police cruiser PIT maneuver spinning out.
+  * *Body (3–30s):* 25-second continuous escape sequence across Vice City neon beachfront, matching beat drops to tire screeches.
+  * *Rewatch loop (31–35s):* "Wasted" splash screen or seamless camera pan into the sky that loops back to the road.
+* **Saturation:** High. Keep the edit purely focused on cinematic atmospheric driving rather than standard meme gameplay.
 
 ---
 
 ### 4. Genshin Impact (Game)
-* **Why fans care now:** Official showcase of Mitya’s fan-art dance cutscenes featuring Zhongli, Ei, and Anastasya driving 1.8M+ fan edit views ([Trari News](https://trari.com/en/story/genshinimpact-37864/)).
-* **Hashtags:** `#GenshinImpact` `#GenshinFanart` `#Zhongli` `#GenshinEdit`
-* **The Moment to Clip:**
-  * **Hook (1-2s):** Zhongli's Planet Befall meteor impact sync.
-  * **Body Stretch:** Raiden Ei’s sword draw cutscene transition.
-  * **Final Rewatch Beat:** Character pose turn matching beat drop.
-* **Market Status:** **Oversaturated.** High volume; requires trending audio pairing (e.g., bôa's *"Duvet"*) to beat the algorithm.
+* **Why fans care now:** Convosight logged 1.8M views across 48 creators (Nov 5–15) focusing on character builds and animations ([Convosight](https://www.convosight.com/tools/moments/asia/2026-11-14/genshin-impact-characters)), plus official buzz around Mitya's fan-art dance showcases ([Trari](https://trari.com/en/story/genshinimpact-37864/)).
+* **Hashtags:** `#GenshinImpact` `#GenshinEdit` `#Zhongli` `#RaidenShogun`
+* **Moment to clip:**
+  * *Hook (0–2s):* Raiden Shogun pulling the Musou no Hitotachi sword.
+  * *Body (3–28s):* Burst cutscene montage flowing seamlessly between Zhongli's meteor drop and Raiden's domain slash.
+  * *Rewatch loop (29–35s):* Rapid character turnaround timed to an abrupt audio cut.
+* **Saturation:** High, but choreography/burst transition edits have strong algorithmic retention.
 
 ---
 
-### 5. Black Clover Season 2 (Anime)
-* **Why fans care now:** Holding 88% on AniList (Trending Score 422) with Episode 8 airing this week ([AniList](https://anilist.co/anime/195604)).
-* **Hashtags:** `#BlackClover` `#Asta` `#BlackCloverSeason2` `#AnimeTok`
-* **The Moment to Clip:**
-  * **Hook (1-2s):** Asta transforming into Devil Union mode frame 1.
-  * **Body Stretch:** 12-second continuous battle sequence in chronological order.
-  * **Final Rewatch Beat:** Heavy anti-magic sword slam impact freeze-frame.
-* **Market Status:** **Moderate Saturation.** High demand for clean fight edits without dialogue clutter.
+### 5. JoJo's Bizarre Adventure: Steel Ball Run (Anime)
+* **Why fans care now:** Holds a 9.03 rating on MyAnimeList (Top Airing #1) and a trending score of 139 on AniList, heading into Episode 9 on Nov 20, 2026.
+* **Hashtags:** `#SteelBallRun` `#JJBA` `#SBR` `#JoJosBizarreAdventure`
+* **Moment to clip:**
+  * *Hook (0–2s):* Gyro Zeppeli spinning the steel ball with sound design isolated.
+  * *Body (3–30s):* Continuous horse-racing sprint stretch: Johnny Joestar unlocking his Stand alongside Gyro navigating canyon obstacles.
+  * *Rewatch loop (31–34s):* Freeze frame on iconic manga panel overlay transitioning back to the opening shot.
+* **Saturation:** Moderate. JoJo fans prioritize aesthetic color shifts and phonk/rock audio pairings.
 
 ---
 
-### 6. The Apothecary Diaries Season 3 (Anime)
-* **Why fans care now:** High engagement anime rating 8.61 on MAL ([MAL](https://myanimelist.net/anime/61987)); episode drops every Friday creating consistent weekly trend cycles.
-* **Hashtags:** `#TheApothecaryDiaries` `#Maomao` `#Jinshi` `#AnimeRomance`
-* **The Moment to Clip:**
-  * **Hook (1-2s):** Maomao’s iconic deadpan side-eye reaction.
-  * **Body Stretch:** Tense micro-interaction sequence between Jinshi and Maomao.
-  * **Final Rewatch Beat:** Jinshi’s slow smirk close-up timed to beat sync.
-* **Market Status:** **High Rewatch Potential.** Romantic/tension edits drive replay counts among dedicated fan communities.
+### 6. The Punisher: One Last Kill (Movie / Marvel)
+* **Why fans care now:** Official trailer dropped Nov 13 highlighting Jon Bernthal's return as a "one-man army" ([JoBlo](https://news.google.com/rss/articles/CBMiaEFVX3lxTE4xNlZ2aG02TmlPU3luSDlJMlc5bUZ0c3o1ZVFDVm43U3ZZdmQ5Mm5BUVBxaUl5ZktQRV9HbTNDYzRzdjhjWWdBUWczdFZwZWpoaFNBN3dmTzJ1djJCWlliTHRkdnY3dTJJ0gFuQVVfeXFMTWlnUEduV0tQUHRjNWdZcV9nMDNody1GbmlkNFhyOG1QZW1pUUxYMmNZZU5Idk1mR1gtU2tHTEtNZDE1X1FvNk5DZXNzYkVtNnFyVFJUZ05VdnRpMmJqVlJMdDJTaU5uZUUwQUFvNWc?oc=5)).
+* **Hashtags:** `#ThePunisher` `#JonBernthal` `#MarvelEdit` `#FrankCastle`
+* **Moment to clip:**
+  * *Hook (0–2s):* Heavy shotgun reload audio paired with Frank Castle glaring into the camera in rain.
+  * *Body (3–28s):* Raw hallway or corridor fight beats from official trailer footage kept in chronological, visceral pacing.
+  * *Rewatch loop (29–33s):* Spray-painting the skull emblem on body armor, cutting right before the final stroke.
+* **Saturation:** Low. Fresh trailer release gives early-mover advantage before fan trailers flood feeds.
 
 ---
 
-### 7. Grand Theft Auto VI (Game)
-* **Why fans care now:** Staying steady in top Wikipedia articles (72k+ reads) and massive stream chatter as pre-release rumors circulate ([Wikipedia](https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI)).
-* **Hashtags:** `#GTA6` `#GTAVI` `#RockstarGames` `#GamingTikTok`
-* **The Moment to Clip:**
-  * **Hook (1-2s):** Neon Vice City sunset view with high-revving engine sound.
-  * **Body Stretch:** Fast-paced car chase cuts in story order.
-  * **Final Rewatch Beat:** Police spotlight flash cutting abruptly to black.
-* **Market Status:** **Oversaturated.** Focus strictly on ultra-clean color grading and slick audio transitions.
+### 7. Black Clover Season 2 (Anime)
+* **Why fans care now:** Top tier shonen activity: #2 on MAL top airing with an 8.89 score and 262 trending score on AniList, leading up to Episode 8 on Nov 21, 2026.
+* **Hashtags:** `#BlackClover` `#Asta` `#Yuno` `#AnimeClips`
+* **Moment to clip:**
+  * *Hook (0–2s):* Asta's demon slayer sword slamming into the ground.
+  * *Body (3–29s):* High-frame-rate combat stretch: Asta and Yuno executing tandem spell strikes in chronological order without choppy jump cuts.
+  * *Rewatch loop (30–34s):* Asta shouting his grimoire summon line, cut sharply on the flash.
+* **Saturation:** Moderate to High. Straight combat fluidity wins here over heavy filter effects.
+
+---
+
+### 8. The Apothecary Diaries Season 3 (Anime)
+* **Why fans care now:** MAL score of 8.60 (230k+ members) and AniList score 223 heading into Episode 8 on Nov 20, 2026. Highly shareable among female and general anime audiences.
+* **Hashtags:** `#TheApothecaryDiaries` `#KusuriyaNoHitorigoto` `#Maomao` `#Jinshi`
+* **Moment to clip:**
+  * *Hook (0–2s):* Maomao's classic dry, skeptical side-eye expression.
+  * *Body (3–28s):* Unbroken palace investigation sequence—Maomao tasting an ingredient, diagnosing poison, and delivering a deadpan reveal.
+  * *Rewatch loop (29–33s):* Jinshi's exaggerated blushing reaction looping back into Maomao's unimpressed gaze.
+* **Saturation:** Low to Moderate. Focus is usually dialogue/story rather than AMVs, making narrative-hook montages stand out.
+
+---
+
+### Production Notes for MotionVault
+* **Sound Selection:** Test alternative rising tracks from the charts (e.g., bôa's *"Duvet"* for JoJo/Genshin, or Panchiko's *"D>E>A>T>H>M>E>T>A>L"* for dark shonen/Punisher cuts).
+* **Copyright Hygiene:** On-screen watermark of the title name, ensure cuts use only officially published trailers/episodes, and keep continuous clip segments under transformative commentary/montage standards.

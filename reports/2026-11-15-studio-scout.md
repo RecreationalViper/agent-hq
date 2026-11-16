@@ -2,56 +2,51 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# MotionVault: 5 Best Clip Opportunities (Nov 15, 2026)
-
-Here are today’s top 5 viral clipping opportunities across anime, games, movies, and TikTok formats, ranked by instant engagement potential.
-
----
-
-### 1. *Steel Ball Run: JoJo's Bizarre Adventure* (Anime)
-* **Why it will get views now:** Currently the #1 top-airing anime globally (MAL score 9.03). Episode 9 just dropped to critical acclaim (covered by Anime News Network on Nov 13), driving huge hype across TikTok anime edits.
-* **Exact Scene to Clip:** Gyro Zeppeli and Diego Brando’s high-stakes horse sprint / Spin activation scene.
-  * **Hook (0-2s):** Heavy horse hoofbeat audio sync into Gyro drawing his Steel Ball.
-  * **Middle (2-30s):** Unbroken race sequence keeping narrative flow in story order as physics distort.
-  * **Final Beat (30-35s):** Diego's eye transformation cut synced to a hard bass drop, triggering immediate rewatches.
-* **Source:** [MyAnimeList - Steel Ball Run](https://myanimelist.net/anime/61469)
+### 1. Grand Theft Auto VI – "Macca & Friends" In-Game Reveal (Gaming)
+* **Why it will get views now:** Massive anticipation wave right now. GTA VI spiked to 72,813 Wikipedia views yesterday, while related search terms hit Google Trends UK and international 24-hour YouTube broadcast events are rolling out. Rockstar's newly revealed in-game animated TV satire, *Macca & Friends*, has ignited viral reaction threads.
+* **Exact scene to clip:** The official trailer reveal of "Macca & Friends" set inside Leonida. 
+  * *0:00–0:02 (Hook):* Ultra-crisp GTA VI cinematic landscape cutting abruptly to the 2D cartoon alligator grinning.
+  * *0:03–0:25 (Body):* An unbroken stretch of Macca causing chaotic swamp mayhem in satirical retro animation.
+  * *0:26–0:32 (Final beat):* Hard smash cut back to high-res Vice City neon night skyline with the game logo.
+* **Audio idea:** Pair with a rising TikTok alternative edit sound like *D>E>A>T>H>M>E>T>A>L* by Panchiko.
+* **Source link:** [The Economic Times Coverage](https://m.economictimes.com/news/new-updates/gta-6-to-bring-animated-tv-entertainment-inside-the-game-heres-what-trailer-shows/articleshow/135827185.cms)
 
 ---
 
-### 2. *GTA VI* / "Macca & Friends" In-Game Animated Teaser (Gaming)
-* **Why it will get views now:** News broke yesterday/today (Nov 14–15) revealing Rockstar’s in-game animated TV series *Macca & Friends* set inside *GTA 6*'s fictional state of Leonida. GTA VI is spiking heavily on Wikipedia (#23) and Twitch streams.
-* **Exact Scene to Clip:** The official trailer footage of Macca the Gator wreaking havoc in the Leonida wetlands.
-  * **Hook (0-2s):** On-screen text: *"Rockstar put an actual cartoon inside GTA 6..."* over a wild gator jump shot.
-  * **Middle (2-25s):** Fast, unbroken stretch of the absurd satire animation.
-  * **Final Beat (25-30s):** Quick cut to the GTA VI logo / channel credit freeze-frame.
-* **Source:** [Economic Times Report on GTA VI Macca & Friends](https://m.economictimes.com/news/new-updates/gta-6-to-bring-animated-tv-entertainment-inside-the-game/articleshow/135827185.cms)
+### 2. Ebenezer – Johnny Depp Transformation (Movie)
+* **Why it will get views now:** Currently #1 at the box office with a $19M opening weekend (Johnny Depp's first box-office chart-topper in 8 years). The film's Wikipedia page pulled 78,001 views yesterday, generating heavy search buzz across Variety and Deadline.
+* **Exact scene to clip:** Ebenezer Scrooge's intro scene from the official theatrical teaser.
+  * *0:00–0:02 (Hook):* Extreme close-up of Depp blowing out a candle flame, revealing his gaunt, prosthetic makeup in shadows.
+  * *0:03–0:24 (Body):* Unbroken slow-burn dialogue delivering Scrooge’s icy refusal to charity workers, capturing Depp's distinct cadence.
+  * *0:25–0:30 (Final beat):* A sudden cold cut on the iron door slamming shut, echoing the title card.
+* **Source link:** [Deadline Sunday AM Box Office Report](https://news.google.com/rss/articles/CBMibEFVX3lxTE8yTUtLOFNjM0VnYzlNTGZGWTdRYXVhNWE5ZWZ2blNsQVlnQXBGbjBiZzhHc1pzcmNCVnB2NVpUTnpoYi1rejVSdGY1cWc4cFRyN2xodzZpeFBJQ3lkLTRXYXoxRU5vakZjMkt4bw?oc=5)
 
 ---
 
-### 3. *Ebenezer* (2026 Movie Release)
-* **Why it will get views now:** *Ebenezer* starring Johnny Depp officially took the #1 spot at the weekend box office today ($19M opening per Variety/Deadline), marking Depp's first #1 film opening in 8 years. Search curiosity is peaking worldwide (Wikipedia #20).
-* **Exact Scene to Clip:** The intense dark confrontation scene between Ebenezer Scrooge and the first spirit from the official trailer.
-  * **Hook (0-2s):** Depp’s voiceover quote: *"Why do you haunt me?"* over a shadow creeping across the floor.
-  * **Middle (2-28s):** Uncut tension building up as light flickers and the spirit manifests.
-  * **Final Beat (28-32s):** Sudden jump-cut shut door or loud sound hit, compelling viewers to loop it.
-* **Source:** [Variety Box Office Report](https://variety.com)
+### 3. Steel Ball Run: JoJo's Bizarre Adventure – Ep. 9 Stand Battle (Anime)
+* **Why it will get views now:** Holds an extraordinary 9.03 score on MyAnimeList (#1 top airing anime right now) and is trending on AniList. Episode 9 just dropped to critical acclaim on Anime News Network.
+* **Exact scene to clip:** Johnny Joestar and Gyro Zeppeli's high-speed Stand encounter during the race.
+  * *0:00–0:02 (Hook):* Gyro flicking the green Steel Ball with the signature metallic sound design.
+  * *0:03–0:22 (Body):* Kinetic, unbroken sequence of the horses galloping neck-and-neck through the dust while enemy Stand bullets rip through the ground.
+  * *0:23–0:30 (Final beat):* Johnny raising his hand as his fingernails begin spinning with Tusk's rotational energy, cutting right before the shot fires.
+* **Source link:** [Anime News Network Review](https://news.google.com/rss/articles/CBMimwFBVV95cUxPbmV1X0pJZzQ2SzhNVk5wWFlESzZibUtjTXdMWTNiZlV5QXdBV09OelA0aVVJWTUta1hZVVdBZ0NhZnhmRjRhZmtPTFhNSWdNck5qSk5MMmdHZzFCWE8yUnU2d0I0VUlGMXdQa0pzSFA1clVOSWN5SFdoNGpNN0VvS3VKTF84REN6bGVTeFBEdTlobFloUldaZWxWOA?oc=5)
 
 ---
 
-### 4. TikTok Trend: "Talk To Me Doja" (*Yamada-kun and the Seven Witches*)
-* **Why it will get views now:** Spiking on TikTok right now (Nov 13-15). Pairs a sped-up cut of Doja Cat's *Like That* with Urara Shiraishi’s shy side-to-side sway from the 2015 anime. Anime edits using this exact sound are pulling high engagement.
-* **Exact Scene to Clip:** Urara Shiraishi swaying side-to-side with hands folded under her chin.
-  * **Hook (0-2s):** High-pitched vocal beat drop synced with her looking up at the camera.
-  * **Middle (2-20s):** Clean, high-framerate montage of Urara and similar bashful anime character moments synced to the rhythm.
-  * **Final Beat (20-25s):** Seamless loop back to the initial sway so the song seamlessly repeats.
-* **Source:** [Know Your Meme / Meme.com - Talk To Me Doja](https://meme.com/memes/talk-to-me-doja)
+### 4. The Body – Netflix Viral Mystery Sequence (Streaming/Show)
+* **Why it will get views now:** Shot up to 90,665 Wikipedia page views yesterday and spiked on Google Trends Brazil. Word-of-mouth describes it as "*Mean Girls* meets *The Crucible*," driving huge social curiosity.
+* **Exact scene to clip:** The tense cafeteria confrontation from the official promo/pilot.
+  * *0:00–0:02 (Hook):* Dead silence in a crowded room with text overlay: *"When everyone in school knows your secret..."*
+  * *0:03–0:24 (Body):* An unbroken camera push-in tracking the lead character walking past whispering groups toward the central table.
+  * *0:25–0:32 (Final beat):* Sharp, brutal one-liner delivery to the antagonist, cutting right as the lunch tray drops.
+* **Source link:** [Forbes What To Watch Nov 13–15](https://news.google.com/rss/articles/CBMivAFBVV95cUxOMXphek1jRjZrYkVFeXdRYzlIR2NZenFxT0llTFNVcGtmU0lnYTNyMGpXblFrWnBLUFRtYlZXd0x1NVFzODFjUGhYMV9lbjQxY082ZGlkTVdJd081cWl5RkpaZEk5Q1NBdDE2dW1zQ01Yb3V4N05LenE4TFFkMmlyejVhUlFRV0hZRUkyYS1relZDZWxNRUl3anB2RE1od1g5MjI0a2pVbHo0YTdQMEFlcWkwODY3ZGZIdDB3bA?oc=5)
 
 ---
 
-### 5. *World of Warcraft Forever* (Gaming Culture)
-* **Why it will get views now:** World of Warcraft is currently the #2 most-watched game on Twitch. A viral story published Nov 13 on Know Your Meme featured couples getting hooked on *World of Warcraft Forever* late into the night, sparking high casual gaming interest.
-* **Exact Scene to Clip:** High-intensity cinematic raid/boss execution clip.
-  * **Hook (0-2s):** Text overlay: *"POV: You said 'one last dungeon' at 1 AM"* into an explosive boss roar.
-  * **Middle (2-30s):** Unbroken, high-action spell montage in story order showing a desperate boss fight clutch.
-  * **Final Beat (30-35s):** Sudden wipe or victory shout with punchy audio exit.
-* **Source:** [Know Your Meme Editorial](https://trending.knowyourmeme.com/editorials/husband-gets-his-wife-to-try-world-of-warcraft-forever-in-viral-video-and-she-instantly-gets-addicted)
+### 5. You Can See Everything – Nathan Fielder Mystery Trailer (Movie)
+* **Why it will get views now:** Pulled 62,887 Wikipedia views yesterday following director confirmation that the official trailer went viral over the weekend. Nathan Fielder’s involvement guarantees debate and rewatches in comment sections.
+* **Exact scene to clip:** The uncanny surveillance stare-down from the official teaser trailer.
+  * *0:00–0:02 (Hook):* Uncomfortably long, unbroken wide shot of the subject staring blankly directly at the lens.
+  * *0:03–0:22 (Body):* Eerie dialogue playback layered over disjointed security monitor feeds and Elizabeth Holmes case archival callbacks.
+  * *0:23–0:30 (Final beat):* Sudden glitch cut with an ambiguous line of audio that forces viewers to rewatch to catch the background clue.
+* **Source link:** [Yahoo Entertainment / CinemaBlend](https://www.yahoo.com/entertainment/videos/elizabeth-holmes-documentary-director-shares-170636268.html)

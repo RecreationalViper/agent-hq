@@ -2,74 +2,69 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# High-Performing Short-Form Edit Formats (TikTok & YouTube Shorts)
-
-*Date: November 15, 2026*
-
----
-
-### 1. "The Exact Moment When..." Narrative Arc Edit
-* **What Makes It Work:** Combines a strong emotional hook in seconds 1–2 with a 30–40 second story progression. Rather than quick random cuts, it builds tension toward a single payoff moment, driving completion rates past 80%.
-* **MotionVault Example:** 
-  * **Title:** *Black Clover Season 2* (currently scoring 8.89 on MAL).
-  * **Execution:** Frame 1 text overlay: *"The exact moment Asta realized he didn't need magic to break the realm..."* Cut 3–4 tight story-order clips leading up to his demon-clash scene. 
-  * **Sound Pairing:** Olivia Rodrigo – *"the cure"* (spiking with 923,138 listeners on Last.fm).
-* **Source:** [THIS STORY BROKE MY HEART 💔 | Part 3, THORFINN EDIT🥀](https://youtu.be/iArv9yUvtiQ) (5,788,797 views) & [Video Editing Styles for Shorts | StoryCut](https://www.storycut.com/blog/video-editing-styles)
+### 1. The Narrative Setup / Misdirection Hook
+* **What makes it work:** Opens with an intriguing 1–2 second title card setting up an emotional or tonal expectation (e.g., *"Nobody expected him to show up"* or *"At first, everyone thought it was just a joke"*), then plays 2–3 unbroken beats that subvert or deliver on the claim. Viewers stay to see the resolution.
+* **Proof & Data:** YouTube Shorts using curiosity narrative hooks are pulling multi-millions this week, such as yymovie’s *[At first, everyone thought it was just a joke](https://youtu.be/8bZAe8VEFXA)* (3.14M views) and Moki Movies’ *[Nobody Expected Him To Show Up](https://youtu.be/RWxGkO0kjH8)* (3.05M views).
+* **Studio Execution (*The Apothecary Diaries Season 3*):** 
+  * *Hook (0–2s):* On-screen text: *"They thought she was just an ordinary maid."* 
+  * *Body (3–25s):* Clean, unedited stretch of Maomao deducing a poisoning attempt with quiet dialogue audio.
+  * *Outro beat (26–32s):* Sudden silence, cut to her flat, chilling reaction shot.
 
 ---
 
-### 2. Character Popularity & Versus Ranking Edit
-* **What Makes It Work:** Split-screen or sequential side-by-side clips asking audience opinion. Viewers replay to verify rankings and trigger high-volume debate in the comment section.
-* **MotionVault Example:**
-  * **Title:** *Steel Ball Run: JoJo's Bizarre Adventure* (top airing score 9.03 on MAL).
-  * **Execution:** Rapid 2-second clip transitions ranking character presence and aura (e.g., Johnny Joestar vs. Gyro Zeppeli). Text overlay: *"Who truly carried Steel Ball Run?"*
-  * **Sound Pairing:** Radiohead – *"Creep"* (4,270,371 listeners on Last.fm), slowed/reverb edit.
-* **Source:** [Who's the most popular 🤔? | Jujutsu Kaisen Edit](https://youtu.be/KuJfCdrCBZM) (1,097,182 views) and [Ranking Best Voice In Mimic Party](https://youtu.be/rMIcoiAue_k) (1,799,432 views).
+### 2. The Melancholic Character Arc / Downfall Edit
+* **What makes it work:** Focuses on tragedy or quiet character progression rather than pure action hype. Pairs muted dialogue with rising shoegaze, indie, or melancholic audio (tracks like bôa's *Duvet* or Panchiko's *D>E>A>T>H>M>E>T>A>L*, both surging on Last.fm).
+* **Proof & Data:** Emotional character journey shorts command massive watch times, exemplified by SOHAIL’s *[THIS STORY BROKE MY HEART 💔 | Part 3, THORFINN EDIT](https://youtu.be/iArv9yUvtiQ)* (5.88M views).
+* **Studio Execution (*Cyberpunk: Edgerunners 2*):**
+  * *Hook (0–3s):* Low-pass audio of a character smiling, fading into heavy bass.
+  * *Body (4–28s):* Contrast shots between early optimism and cyberpsychosis/loss, letting the animation breathe without over-cutting.
+  * *Outro beat (29–35s):* Unbroken close-up shot as audio fades to ambient city noise.
 
 ---
 
-### 3. "Surpassed His Limits" Velocity Sync Edit
-* **What Makes It Work:** Speed-ramping (fast zooms during action impacts, slow-motion during impact hits) perfectly synced to heavy bass hits. Works exceptionally well for high-octane anime or tactical gaming combat clips.
-* **MotionVault Example:**
-  * **Title:** *Call of Duty®: Modern Warfare® 4* or *Bodycam* (Top sellers on Steam).
-  * **Execution:** Ultra-tight, 0.5-second speed curves on gunfights/clutches, ending on a calm, unbroken 3-second victory finish. 
-  * **Sound Pairing:** Arctic Monkeys – *"505"* (3,205,141 listeners on Last.fm).
-* **Source:** [After losing both arms, he surpassed his own limits.🔥](https://youtu.be/K_zd8tR8utA) (2,467,277 views).
+### 3. The Side-by-Side Community Debate / "Who Is Better?"
+* **What makes it work:** Pits two iconic figures, forms, or moments against each other. It exploits fandom loyalty and forces high comment-section engagement (debating power scaling or charisma), which feeds algorithm distribution.
+* **Proof & Data:** Direct comparison edits drive strong organic engagement, such as YUJI’s *[Who's the most popular 🤔? | Jujutsu Kaisen Edit](https://youtu.be/KuJfCdrCBZM)* (1.11M views, 1,642 comments).
+* **Studio Execution (*Steel Ball Run: JoJo's Bizarre Adventure*):**
+  * *Hook (0–2s):* Split-screen or quick flicker: *"Johnny Joestar vs. Gyro Zeppeli: Who carried the race?"*
+  * *Body (3–26s):* 12 seconds highlighting Gyro’s Steel Ball precision, followed by 12 seconds of Johnny’s nail bullet progression.
+  * *Outro beat (27–33s):* Sudden freeze frame asking viewers to vote in the comments.
 
 ---
 
-### 4. POV Relatable Mood Overlay
-* **What Makes It Work:** A atmospheric aesthetic clip combined with a deeply specific POV text prompt. Because the viewer reads the text while watching the clip, rewatch loops occur naturally.
-* **MotionVault Example:**
-  * **Title:** *Cyberpunk: Edgerunners 2* (219,355 members on MAL).
-  * **Execution:** Unbroken 15-second cinematic shot of Night City highway driving with subtle color grading. Text: *"POV: You're driving through Night City listening to alt-rock thinking about 2077..."*
-  * **Sound Pairing:** bôa – *"Duvet"* (2,179,420 listeners on Last.fm).
-* **Source:** [Fan Edits Are Legal With Moonbeem | IndieWire](https://www.indiewire.com/news/general-news/fan-edits-legal-moonbeem-approved-clips-from-filmmakers-1235226818/)
+### 4. Raw Immersion / Hyper-Diegetic Audio Cut
+* **What makes it work:** Strips out external meme sound effects and music entirely. It relies 100% on high-fidelity in-game or in-scene diegetic sound (breathing, footsteps, reload mechanics, muffled explosions) to trigger visceral tension.
+* **Proof & Data:** Bodycam shooters and gritty tactical gameplay remain top Steam sellers, while creators leverage raw tactical visuals for viral reach, analyzed in StoryCut's breakdown on micro-sound and zoom pacing ([StoryCut: Video Editing Styles](https://www.storycut.com/blog/video-editing-styles)).
+* **Studio Execution (*Bodycam* / Tactical Gameplay):**
+  * *Hook (0–2s):* Zero music; loud bodycam static click and the sound of heavy breathing in a dark hallway.
+  * *Body (3–24s):* A single continuous breach sequence with zero artificial transitions.
+  * *Outro beat (25–30s):* Flashbang detonation cutting immediately to pure black audio silence.
 
 ---
 
-### 5. "Nobody Expected Him To Show Up" Entrance Hype Edit
-* **What Makes It Work:** Silent/quiet 1.5-second setup followed by a sudden character entry beat-drop. Captures immediate curiosity and triggers nostalgia or thrill.
-* **MotionVault Example:**
-  * **Title:** *Grand Theft Auto VI / V* (GTA VI spiking on Wikipedia with 72,813 views) or *One Piece* (Ep 1181 hype).
-  * **Execution:** 2-second setup of enemy characters talking, cut abruptly to a surprise entrance scene with high volume swell. On-screen text: *"When the entire server thought he was gone..."*
-  * **Sound Pairing:** TV Girl – *"Lovers Rock"* (2,342,029 listeners on Last.fm).
-* **Source:** [Nobody Expected Him To Show Up](https://youtu.be/RWxGkO0kjH8) (2,980,392 views).
+### 5. Escalation / "Power Awakening" Velocity Edit
+* **What makes it work:** Starts slow with dialogue or a character being underestimated, then switches on a precise beat drop into speed-ramped combat cuts, synched to the drum strike.
+* **Proof & Data:** Power awakening clips continue dominating engagement charts, seen in STV Pro’s *[He gained the power of God🪽😂](https://youtu.be/2BdKgZeT_z0)* (5.07M views) and Realistic films’ *[After losing both arms, he surpassed his own limits](https://youtu.be/K_zd8tR8utA)* (2.54M views).
+* **Studio Execution (*Black Clover Season 2*):**
+  * *Hook (0–4s):* Antagonist monologue; Asta standing beaten down.
+  * *Beat Drop (5s):* Sudden velocity speed ramp synched to heavy bass hitting as the anti-magic grimoire flares.
+  * *Body (6–26s):* 3 unbroken high-frame-rate combat exchanges.
+  * *Outro beat (27–32s):* Sword slamming into the ground with screen shake, held for rewatch looping.
 
 ---
 
-### 6. Curiosity Hook Recap ("At First, Everyone Thought...")
-* **What Makes It Work:** Uses mystery-based text overlays that force the viewer to stay until the ending beat to get resolution.
-* **MotionVault Example:**
-  * **Title:** *The Apothecary Diaries Season 3* (230,490 members on MAL).
-  * **Execution:** 30-second scene montage of Maomao investigating palace events. Text overlay: *"At first, everyone thought it was just an accident..."*
-  * **Sound Pairing:** Ambient tension pad transitioning into a low-sub drop.
-* **Source:** [At first, everyone thought it was just a joke](https://youtu.be/8bZAe8VEFXA) (3.04M views).
+### 6. Interactive Character Tier / Ranking Format
+* **What makes it work:** Ranks abilities, transformations, or voice acting clips sequentially. Viewers stick around until #1 to validate their personal opinions.
+* **Proof & Data:** Ranking formats maintain steady retention, such as Xenomz’s *[Ranking Best Voice In Mimic Party ☠️](https://youtu.be/rMIcoiAue_k)* (1.83M views).
+* **Studio Execution (*One Piece*):**
+  * *Hook (0–2s):* Bold headline: *"Top 3 Most Disrespectful Haki Moments Ranked"*.
+  * *Body (3–27s):* #3 (quick 6s cut), #2 (8s cut), leading up to #1 with full scene buildup.
+  * *Outro beat (28–34s):* Leaves the #1 spot open for debate: *"Did Shanks beat this?"*
 
 ---
 
-### Formats Flagged as Fading ⚠️
+### 📉 Formats That Are Fading
 
-* **High-Frequency Flash/Strobe Edits:** Over-edited 2023-style seizure flashes and heavy screen shakes distract from story arcs and cause immediate viewer drop-off (and epilepsy warnings on TikTok).
-* **Raw Clip Dumps (No Hook/No Subtitles):** Unedited 30-second scene clips without text context or tailored audio drop off sharply in retention within 2 seconds.
-* **Static "Top 5" Slideshows:** Static images with generic transition wipes fail on video feeds; algorithms favor fluid video montages with clear narrative hooks.
+* **Over-Cooked CapCut Shake/Flash Spam:** Hyperactive camera shaking, heavy RGB split, and rainbow strobe flashes on every single frame are being skipped. Audiences favor legible choreography and clean 4K upscaled visual clarity over visual distortion ([StoryCut Analysis](https://www.storycut.com/blog/video-editing-styles)).
+* **Subway Surfers / Split-Screen Sludge:** Splitting anime or movie scenes with generic mobile gameplay underneath has lost engagement. Platform algorithms prioritize full-frame 9:16 vertical immersion, and viewers swipe away from split clutter.
+* **Generic Slowed+Reverb Phonk Over Unrelated Scenes:** Phonk tracks slapped over calm conversational anime scenes without beat-matching or emotional relevance feel dated; mood-specific indie rock or high-energy diegetic audio is performing better.

@@ -2,77 +2,91 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# YouTube Shorts Trend Report & Clipping Plan (2026-11-15)
+# YouTube Shorts Trending Intelligence (2026-11-15)
 
-Here is your breakdown of what is performing best on YouTube Shorts right now for movie, game, and anime content, along with actionable clip concepts for **MotionVault**.
-
----
-
-## 1. Top Rising Shorts & Key Patterns
-
-### Fastest-Rising & High-Performing Relevant Videos
-* **"They Underestimated the Beggar" 🗿🔥** (*Ukhnooq_Ae*)  
-  * **24,806,779 views** (198,435/hr) · 1:00  
-  * *Theme:* Underdog revenge / secret flex arc.
-* **THIS STORY BROKE MY HEART 💔 | Part 3, THORFINN EDIT🥀** (*𝙎𝙊𝙃𝘼𝙄𝙇*)  
-  * **5,788,797 views** (194,012 likes) · Short edit  
-  * *Theme:* Emotional tragedy montage with clear story beats.
-* **Bro actually has wings 😭** (*Anime TV*)  
-  * **6,516,546 views** (88,625 likes) · Short edit  
-  * *Theme:* Visual shock hook / reaction-inducing moment.
-* **This romance wasn't quite what he had imagined** (*yymovie*)  
-  * **6,257,791 views** (293,269 likes) · Short edit  
-  * *Theme:* Narrative subversion / unexpected plot twist.
-* **The Mandalorian | 🥰The Cutest Father-Son Duo Ever! 👨‍👦** (*Sona Darus*)  
-  * **7,194,148 views** (156,944/hr) · 2:50  
-  * *Theme:* Iconic character relationships / emotional highlights.
-* **League of Legends: New Dawn Teaser** (*League of Legends*)  
-  * **1,538,886 views** (73,580/hr) · 2:02  
-  * *Theme:* Cinematic tension build-up and high-impact action visuals.
-
-### What These Winners Have in Common
-* **Length:** 30–60 seconds yields maximum completion and rewatch loop rate.
-* **Hook (0-2s):** Immediate emotional positioning ("Underestimated", "Broke my heart", "Bro actually...").
-* **Narrative Pacing:** Clear escalation (Weakness → Escalation → Shocking Payoff).
-* **Title Aesthetic:** Conversational lower-case or short punchy statements anchored with 1–2 expressive emojis (`🗿`, `💔`, `😭`, `🔥`).
+Live data analysis for **MotionVault** short-form clipping strategy (Movie, Game & Anime).
 
 ---
 
-## 2. Recommended Clipping Plan for MotionVault
+## 1. Top Rising Clips & Edits Right Now
 
-### Concept 1: Anime — *Vinland Saga* (Thorfinn's Transformation)
-* **Topic / Trend Focus:** Emotional story arcs (*Vinland Saga*, *Black Clover Season 2*, and *JoJo: Steel Ball Run* are spiking on MAL/AniList).
-* **Target Duration:** 35 seconds.
-* **Hook (0–2s):** Close-up on Thorfinn's exhausted eyes with text overlay: *"He gave up violence... until this happened."*
-* **Body (3–28s):** 3 unbroken story clips in order showing his non-violent vow, getting pushed to the brink, and standing unbothered through incoming hits.
-* **Final Beat (29–35s):** Fade out right as he utters *"I have no enemies,"* holding the emotional frame for 2 seconds to force a rewatch loop.
+From today's YouTube API charts and recent top-performing edits:
 
-### Concept 2: Movie — *Godzilla Minus One* / Kaiju Flex
-* **Topic / Trend Focus:** Monster/action cinematic flex (Wikipedia search spike for *Godzilla Minus Zero*).
-* **Target Duration:** 30 seconds.
-* **Hook (0–2s):** Sudden silence + text overlay: *"They realized too late what they woke up..."*
-* **Body (3–25s):** Sirens blaring → ground shaking reaction shot → massive energy charging scene.
-* **Final Beat (26–30s):** Atomic breath ignition right on the beat drop, cutting to black 0.5s before impact so viewers loop back to see it again.
-
-### Concept 3: Gaming — *Grand Theft Auto VI* / Cinematic Hype
-* **Topic / Trend Focus:** Massive search interest & Twitch hype around *GTA 6*.
-* **Target Duration:** 35 seconds.
-* **Hook (0–2s):** Fast-cut engine roar with text: *"Gaming cinematics reached a point of no return."*
-* **Body (3–30s):** High-velocity montage showing seamless world detail, high-speed chase cutscenes, and character lighting transitions in story order.
-* **Final Beat (31–35s):** Smooth fade-to-black on a sharp dialogue punchline.
+1. **"They Underestimated the Beggar" 🗿🔥**  
+   *Channel:* Ukhnooq_Ae | **24,923,753 views** (190,110 views/hr) | Length: 1:00
+2. **“An elegant gentleman assassin who follows the rules.”☠️🔥 | Most Dangerous Game**  
+   *Channel:* Yah Bak | **2,650,774 views** (165,626 views/hr) | Length: 2:56
+3. **The Mandalorian | 🥰The Cutest Father-Son Duo Ever! 👨‍👦 #shorts #movierecap**  
+   *Channel:* Sona Darus | **7,368,267 views** (141,893 views/hr) | Length: 2:50
+4. **Bro actually has wings 😭 #anime #shorts**  
+   *Channel:* Anime TV | **6,640,919 views** | 89,951 likes
+5. **This romance wasn't quite what he had imagined #movie #edit #shorts**  
+   *Channel:* yymovie | **6,391,162 views** | 298,926 likes
+6. **THIS STORY BROKE MY HEART 💔 | Part 3, THORFINN EDIT🥀**  
+   *Channel:* 𝙎𝙊𝙃𝘼𝙄𝙇 | **5,888,660 views** | 196,316 likes
+7. **He gained the power of God🪽😂 #movie #shorts #edit**  
+   *Channel:* STV Pro | **5,078,944 views** | 263,223 likes
+8. **Zoro's New Sword Is Trying To Kill Him 💀**  
+   *Channel:* zsy | **1,372,894 views** | 51,680 likes
 
 ---
 
-## 3. Title Patterns to Copy
+## 2. What They Have in Common
 
-1. **Underdog / Flex Formula:**  
-   * `"They Underestimated Him 🗿🔥"`  
-   * `"Nobody expected him to show up like this 💀"`
+* **Title Style:** 
+  * Character quote or archetype hook: *"They Underestimated the [X]"*, *“An elegant gentleman assassin…”*.
+  * High-emotion punctuation and paired emojis: `🗿🔥`, `☠️🔥`, `😭`, `💀`.
+* **Hook & Framing (0–2s):** 
+  * Instant visual contradiction or high-stakes premise established immediately with bold, centered text (e.g., underdog about to strike, overpowered character holding back).
+* **Length:** 
+  * High-production montage edits cluster tightly between **30–45 seconds**. 
+  * Scene cutdowns/recaps push 1:00–2:50, but tight, looping 35-second edits consistently capture higher rewatch retention.
+* **Core Tropes:** 
+  * The "Underestimated Badass" (silent competency).
+  * Devastating emotional turning points (e.g., Thorfinn's trauma).
+  * Ludicrous power flexes or unexpected dominance.
 
-2. **Emotional Story Hook:**  
-   * `"THIS SCENE BROKE EVERYONE 💔"`  
-   * `"He gave up everything for this moment 🥀"`
+---
 
-3. **Disbelief / Reaction Hook:**  
-   * `"Bro actually pulled this off 😭"`  
-   * `"This scene didn't feel real 😳"`
+## 3. Recommended Scenes to Clip for MotionVault
+
+### Anime
+* **Steel Ball Run: JoJo's Bizarre Adventure** (Currently #1 on MAL with a 9.03 score; 258,075 members):
+  * *The Beat:* Gyro Zeppeli using the Steel Ball Spin for the first time or Johnny Joestar's determination scene.
+  * *Pacing:* 30s vertical cut. 2-second hook establishing Gyro's calm demeanor, straight into the kinetic spin physics, closing on the opponent's shock.
+* **Vinland Saga (Thorfinn):**
+  * *The Beat:* Contrast edit — Thorfinn's ruthless dual-dagger rampage vs. his older, pacifist "I have no enemies" stare.
+  * *Audio pairing idea from trending charts:* Slowed intro transitioning into *Duvet* by bôa (spiking on Last.fm US with 17,135 listeners).
+* **One Piece (Zoro / Enma):**
+  * *The Beat:* Zoro taming Enma as it drains his Haki, ending on his cold smirk before slicing the cliff.
+
+### Gaming
+* **Bodycam / Bodycam Zombies** (#1 Top Seller on Steam; Asmongold's video pulled 598,137 views):
+  * *The Beat:* Ultra-realistic flashlight breach into a dark room, unexpected zombie lunge, laser precision hip-fire takedown.
+  * *Style:* Raw in-game audio mixed with intense tactical silence.
+* **Grand Theft Auto (Hype surging with GTA 6 Wikipedia at 72,813 views; TGG's breakdown at 1,351,451 views):**
+  * *The Beat:* Classic Michael / Trevor standoff cut into vertical cinematic format, highlighting Rockstar's dialogue pacing.
+
+### Movies
+* **The Mandalorian:**
+  * *The Beat:* Din Djarin's hallway rescue scene — blaster bolts deflecting off Beskar armor in complete silence, ending with the whistle-bird launch.
+  * *Framing:* The "Untouchable Protector" trope.
+
+---
+
+## 4. Title Patterns to Copy
+
+* `"They Underestimated The [Character Archetype] 🗿🔥"`
+* `"“Quote that proves they shouldn't have messed with him.” ☠️"`
+* `"Bro really thought he stood a chance 💀"`
+* `"When the quiet one finally snaps... 😳🔥"`
+* `"He wasn't fighting to win, he was fighting to survive 🥀"`
+
+---
+
+## 5. Editing Rules for Claude
+
+* **First 1.5 seconds:** Full screen action or hard dialogue line with large yellow/white sans-serif subtitles (stroke outline).
+* **Mid-section:** Max 2 unbroken camera movements in chronological sequence (keep fair use / transformative standard).
+* **Final 3 seconds:** Sudden beat cut right before an impact or punchline to force an automatic replay loop.
+* **Compliance:** Title watermark in subtle lower-third text (e.g., `Source: JoJo Part 7 / David Production`). No unreleased leaks.

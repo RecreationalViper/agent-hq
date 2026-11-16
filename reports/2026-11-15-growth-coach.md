@@ -2,62 +2,68 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# MotionVault Growth & Monetization Coaching Plan (Nov 15, 2026)
+### 1. Where We Stand vs. Money Goals
+
+MotionVault is currently at **Day 1 / Stage 0** (0 subscribers, 1 total view across 2 uploads, TikTok stats unlinked). 
+
+| Program | Core Requirements* | Current Status | Gap |
+| :--- | :--- | :--- | :--- |
+| **YouTube Partner Program (Shorts)** | 1,000 subscribers + 10M valid public Shorts views in 90 days *(or 500 subs + 3M views for Fan Funding)* | 0 subs / 1 view | 1,000 subs / 10M views |
+| **TikTok Creator Rewards** | 10,000 followers + 100,000 views in last 30 days + **videos must be 1 min+ (60s+)** | 0 followers / 0 views | 10,000 followers / 100k views |
+
+*\*Platform monetization thresholds change frequently and vary by region; always confirm the latest terms inside YouTube Studio and the TikTok Creator Hub.*
+
+> **Key Realization:** Our current 30–40s format **cannot** monetize directly via TikTok Creator Rewards (which strictly pays on original videos over 60 seconds). For now, 30–40s edits serve purely as **follower drivers on TikTok** and **direct monetization drivers on YouTube Shorts**.
 
 ---
 
-### 📊 1. Monetization Goals & Current Standing
+### 2. The 3 Highest-Impact Actions for Today
 
-> ⚠️ **Notice:** `studio/channel-stats.md` is currently missing from the repository, so no past performance metrics exist. Additionally, your YouTube channel handle is missing in `studio/channels.json`.
+#### Action 1: Deploy Clip 1 (*Steel Ball Run: JoJo’s Bizarre Adventure*)
+* **When to post:** Peak evening scroll (5:00 PM – 7:30 PM local).
+* **Hook (0:00–0:02):** Extreme close-up of Gyro spinning the Steel Ball with isolated metallic audio. Centered bold text: *"They thought it was just a regular horse race 💀"*
+* **Audio:** Rising edit track *"Duvet"* by bôa (17,135 US daily listeners on Last.fm) or *"Earned It"* by The Weeknd (synced bass drop at 0:03).
+* **What to test:** **Auto-replay looping.** Cut abruptly on Johnny Joestar's nail bullet release straight to black silence at 0:33.
 
-#### Monetization Requirements 
-*(Note: Platform requirements change over time—always verify current thresholds directly inside your TikTok Creator Tools and YouTube Studio app).*
+#### Action 2: Deploy Clip 2 (*GTA VI – "Macca & Friends"*)
+* **When to post:** Lunchtime scroll (12:00 PM – 2:00 PM local).
+* **Hook (0:00–0:02):** Crisp neon Leonida skyline smash-cutting to the 2D cartoon alligator. Text: *"Rockstar put an entire animated show inside GTA 6 😭"*
+* **Audio:** *"D>E>A>T>H>M>E>T>A>L"* by Panchiko (surging on Last.fm edit feeds with 17.5k US listeners). Match the distortion fuzz to the 0:17 match cut.
+* **What to test:** Match-cut retention (measuring whether the seamless swap from 2D animation to next-gen game physics holds retention past 15 seconds).
 
-* **TikTok Creator Rewards Program:**
-  * 10,000 followers.
-  * 100,000 valid video views in the last 30 days.
-  * **Critical Constraint:** Videos **must be at least 1 minute (60+ seconds) long** to qualify for Creator Rewards payouts.
-* **YouTube Partner Program (Shorts Route):**
-  * **Lower Tier (Fan Funding/Super Chats):** 500 subscribers + 3 million valid public Shorts views in 90 days.
-  * **Full Tier (Ad Revenue Sharing):** 1,000 subscribers + 10 million valid public Shorts views in 90 days.
-
-#### Current Standing:
-* **Progress:** Unquantified / 0% tracked. 
-* **Immediate Baseline:** Set up metric tracking and link your YouTube channel before uploading.
-
----
-
-### 🚀 2. Top 3 Highest-Impact Actions for Today
-
-1. **Post the *Steel Ball Run* Anime Clip FIRST**
-   * **Platforms:** TikTok (`@motionvault36`) and YouTube Shorts.
-   * **Best Posting Window:** 4:00 PM – 7:00 PM local time (peak evening viewing window).
-   * **Hook (0–2s):** On-screen text: *"Who truly carried Steel Ball Run?"* synced to heavy horse hoofbeats right as Gyro's eyes flare.
-   * **Audio:** Radiohead – *"Creep"* (slowed/reverb). Ensure your TikTok account is set to a personal/creator profile to avoid commercial library mute restrictions on label music.
-
-2. **Complete Channel Setup & Create `channel-stats.md`**
-   * Add your YouTube channel handle and URL into `studio/channels.json`.
-   * Create the file `studio/channel-stats.md` to begin logging baseline metrics (followers, 24-hr view counts, retention rates) after every post.
-
-3. **Post & Test the *GTA VI* "Macca & Friends" Edit**
-   * **Posting Window:** 3 to 4 hours after the SBR post.
-   * **What to Test:** On TikTok, test extending the Director's 35-second cut into a **61-second narrative edit** (stitch the cartoon reveal into Vice City car chase action) to test if retention holds for TikTok Rewards eligibility vs. the short 35s cut on YouTube Shorts.
-   * **Hook:** On-screen text: *"Rockstar put an actual cartoon inside GTA 6..."* over the gator jump.
+#### Action 3: Overhaul Existing Titles & Hooks on Uploaded Shorts
+* **Problem:** Our first two Shorts (*Godzilla vs. Kong* at 0 views, *Shang-Chi* at 1 view) use generic, low-intent titles (*"This went crazy 👏😮‍💨"*, *"Shang-Chi is the GOAT 🎥🔥"*). Algorithms have no semantic hook to match audiences.
+* **Immediate fix (edit in YouTube Studio app):**
+  * Change *Godzilla vs. Kong* to: *"When Kong realized who he was actually fighting 💀 #godzillavskong #movieclips"*
+  * Change *Shang-Chi* to: *"They thought he was just a valet driver 😮‍💨 #shangchi #marvel #moviescenes"*
+* **What to test:** Whether narrative curiosity titles trigger algorithmic indexing within 24 hours compared to emoji titles.
 
 ---
 
-### ⚠️ 3. One Critical Risk to Fix
+### 3. One Critical Risk to Fix
 
-**Risk: Disqualification via <60s Video Length & Reused Content Flags**
-* **The Risk:** 
-  1. The current planned clips (32–38s) are ideal for YouTube Shorts virality, but **earn $0 on TikTok Creator Rewards** because they fall under the 60-second threshold.
-  2. Posting raw movie/anime footage without transformative editing risks automated "Reused Content" demonetization flags on YouTube.
-* **The Fix:** Ensure Claude's cuts remain strictly **transformative** (narrative story arc ordering, speed-ramped transitions, visual color grading, custom text overlays, and audio syncs). For TikTok releases specifically, test extended 60+ second formats by building 2-stage narrative clips.
+**The "Reused Content" Demonetization Trap & Length Bottleneck.**
+
+1. **YouTube Reused Content:** Reposting raw movie/game scenes without transformative narrative context will fail YPP manual review. To stay clean at $0 budget:
+   * Keep continuous stretches short (under 12–15 seconds per shot).
+   * Always include on-screen editorial subtitles and lower-third source attribution (e.g., `Source: David Production / JJBA`).
+   * Add high-contrast speed ramping or color grades so the automated Content ID flags it as an edit rather than a rip.
+2. **TikTok Monetization:** If we eventually want TikTok ad checks, we will need to test a **65-second "Scene Breakdown / 2-Part Escalation"** format. Keep 30–40s for YouTube Shorts volume, but plan 61s+ cuts for TikTok once follower counts approach 10k.
 
 ---
 
-### 📈 4. One Metric to Watch This Week
+### 4. One Metric to Watch This Week
 
-**Metric: 3-Second Retention Rate / Percentage Viewed**
-* **Target:** >70% of viewers staying past second 3, and >80% average percentage viewed overall on 30–40s edits.
-* **Why:** Both TikTok and YouTube Shorts algorithms decide whether to push a clip to tens of thousands of FYP/Shorts feeds based entirely on how many people drop off in the first 2 seconds. If retention is high, virality follows.
+**YouTube Shorts: "Viewed vs. Swiped Away" Ratio.**
+
+* **Where to find it:** YouTube Studio Mobile App → Analytics → Content → Shorts → *How many chose to view*.
+* **Target Benchmark:** **75% or higher Viewed** (less than 25% swiped away).
+* **Why it matters:** If your first 1–2 second hook fails, your "Viewed" rate will plunge below 60%, and YouTube's algorithm instantly chokes distribution to zero views.
+
+---
+
+### 5. Setup Checklist (Do This First)
+
+1. **Link TikTok Stats:** Add TikTok follower count, total likes, and latest video views into `studio/channel-stats.md` on the next run so we can track cross-platform growth.
+2. **Verify YouTube Studio Mobile:** Ensure intermediate/advanced features are active (phone verification) so YouTube doesn't cap daily Short uploads or throttle URL descriptions.
+3. **Set Account Type to Creator:** Confirm the `@motionvault36` TikTok profile is set to a **Creator / Personal Account** (not a Business Account) to ensure commercial music from Olivia Rodrigo, Panchiko, and The Weeknd can be added without sound-muting flags.

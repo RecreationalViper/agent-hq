@@ -2,61 +2,69 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-> ⚠️ **Notice:** `studio/channel-stats.md` is currently missing from the repository. Posting times and recommendations below are based on global audience engagement patterns and today's trending data without past channel performance metrics.
+### Clip 1: Steel Ball Run: JoJo’s Bizarre Adventure (Anime)
+
+* **On-Screen Hook Text (6 words max):**  
+  *Not just a horse race 💀*
+
+* **TikTok Captions:**  
+  1. Gyro did not come to play fair 💀  
+  2. The animation jump in Episode 9 is completely unreal.  
+  3. Who has the most broken Stand in Part 7 so far?  
+  4. Bro really thought he was in a normal race 😭  
+
+* **Hashtags:**  
+  `#SteelBallRun #SBR #JoJosBizarreAdventure #AnimeEdit #GyroZeppeli #JJBA`
+
+* **YouTube Shorts Title (<60 chars):**  
+  `They Thought It Was A Normal Race 💀` (36 characters)
+
+* **Posting Times (New York / EST):**  
+  * **TikTok (7:30 PM EST):** Peak evening unwind hours when high-retention anime edits get maximum US algorithmic watch-time.  
+  * **Shorts (4:00 PM EST):** Captures afternoon dismissal traffic and sets up the clip for YouTube's evening feed push.
 
 ---
 
-### Clip 1: *Steel Ball Run: JoJo's Bizarre Adventure* (Anime)
+### Clip 2: Grand Theft Auto VI – "Macca & Friends" (Gaming)
 
-* **TikTok Captions:**
-  1. Gyro Zeppeli’s Spin hits different when the distortion kicks in. 🎯
-  2. Episode 9 animation quality is completely out of this world. 🔥
-  3. Who truly carried the Steel Ball Run race: Gyro or Diego? 👇
-  4. The exact moment the Spin activated, everything changed. 🌀
 * **On-Screen Hook Text (6 words max):**  
-  *Who truly carried Steel Ball Run?*
-* **Hashtags (6):**  
-  `#SteelBallRun` `#JoJosBizarreAdventure` `#AnimeEdit` `#GyroZeppeli` `#SBR` `#AnimeTok`
-* **YouTube Shorts Title (under 60 chars):**  
-  Who Truly Carried Steel Ball Run? 🌀🔥 *(39 chars)*
-* **Best Posting Times (EST):**
-  * **TikTok (5:00 PM EST):** Catches high school/college students right during peak after-school anime scrolling hours.
-  * **YouTube Shorts (7:00 PM EST):** Aligns with prime North American evening YouTube traffic for anime clips.
+  *Rockstar really went this far 😭*
+
+* **TikTok Captions:**  
+  1. Rockstar put a whole animated show inside GTA 6 😭  
+  2. That match cut into Leonida was too clean.  
+  3. What is the first location you're exploring in Leonida?  
+  4. The swamp physics in this game look terrifyingly real.  
+
+* **Hashtags:**  
+  `#GTA6 #GrandTheftAuto #GamingEdit #Leonida #RockstarGames #GTA6Clips`
+
+* **YouTube Shorts Title (<60 chars):**  
+  `GTA 6 Details Are Getting Out Of Hand 💀` (41 characters)
+
+* **Posting Times (New York / EST):**  
+  * **TikTok (8:15 PM EST):** Prime night-time slot for gaming content when core console/PC players browse before logging off.  
+  * **Shorts (1:00 PM EST):** Catches US lunch breaks while aligning with peak evening gaming traffic across the UK and Europe.
 
 ---
 
-### Clip 2: *GTA VI* — "Macca & Friends" / Leonida Satire (Gaming)
+### Clip 3: Ebenezer – Johnny Depp Transformation (Movie)
 
-* **TikTok Captions:**
-  1. Rockstar really put a full animated show inside Vice City. 🐊
-  2. The Leonida satire in GTA 6 is going to be completely insane. 🏎️
-  3. Is GTA 6 going to be the most detailed game ever made? 👇
-  4. Speeding through Vice City hits different on a Sunday. 🔥
 * **On-Screen Hook Text (6 words max):**  
-  *Rockstar put a cartoon inside GTA6*
-* **Hashtags (6):**  
-  `#GTA6` `#GTAVI` `#RockstarGames` `#GamingEdit` `#ViceCity` `#GamingTikTok`
-* **YouTube Shorts Title (under 60 chars):**  
-  Rockstar Put A Cartoon Inside GTA 6 💀 *(40 chars)*
-* **Best Posting Times (EST):**
-  * **TikTok (3:00 PM EST):** Gaming clip engagement spikes sharply in mid-afternoon as weekend streaming chatter peaks.
-  * **YouTube Shorts (6:00 PM EST):** Early evening peak for gaming Shorts discovery and trailer breakdowns.
+  *Nobody recognized Johnny Depp here ☠️*
 
----
+* **TikTok Captions:**  
+  1. Didn't realize it was Johnny Depp until he spoke ☠️  
+  2. That cold glare at the end gave actual chills.  
+  3. Is this going to be Johnny Depp's best villain role?  
+  4. He commanded the entire room without raising his voice.  
 
-### Clip 3: *Ebenezer* (Movie)
+* **Hashtags:**  
+  `#JohnnyDepp #Ebenezer #MovieEdit #Cinematic #Scrooge #MovieClips`
 
-* **TikTok Captions:**
-  1. Johnny Depp's performance in Ebenezer is chilling. 🕯️
-  2. The tension build in this scene had me holding my breath. 👁️
-  3. Would you stand your ground or run if you saw this shadow? 👇
-  4. When the spirit stepped into the light, the room went cold. ❄️
-* **On-Screen Hook Text (6 words max):**  
-  *He realized he was not alone...*
-* **Hashtags (6):**  
-  `#Ebenezer` `#JohnnyDepp` `#MovieEdit` `#HorrorTok` `#CinematicEdit` `#MovieTok`
-* **YouTube Shorts Title (under 60 chars):**  
-  THIS SCENE BROKE THE SILENCE 🕯️ *(32 chars)*
-* **Best Posting Times (EST):**
-  * **TikTok (8:00 PM EST):** Dark, gothic drama clips thrive during late-night bedtime scrolling on TikTok.
-  * **YouTube Shorts (9:00 PM EST):** High night-owl viewer completion rates on atmospheric movie montages.
+* **YouTube Shorts Title (<60 chars):**  
+  `Nobody Recognized Johnny Depp Here ☠️` (37 characters)
+
+* **Posting Times (New York / EST):**  
+  * **TikTok (6:00 PM EST):** The post-work commuter window where high-atmosphere, dialogue-heavy cinematic clips retain viewers.  
+  * **Shorts (11:30 AM EST):** Midday cinematic browsing peak on YouTube Shorts where trailer/film recaps see fast early velocity.
