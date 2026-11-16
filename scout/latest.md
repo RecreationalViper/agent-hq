@@ -2,9 +2,11 @@
 
 > Scanned 12 of 29 saved searches (12 returned data, 0 unchanged, 0 failed). 12 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (0)
+## Start here (1)
 
-_Nothing new cleared the quality bar this scan. That is a normal, healthy result — the radar is rotating through its searches and will cover the rest next time._
+- **[FareedKhan-dev/all-agentic-architectures](https://github.com/FareedKhan-dev/all-agentic-architectures)** 🟡 WATCH · score 60/100 · ⭐ 4,757 · MIT · updated 1d ago
+  - 35 production-grade agentic AI architectures (Reflexion, LATS, GraphRAG, MemGPT, Voyager, BrowserAgent, ...) — a Python library and runnable textbo…
+  - Why: filed under skills; 4,757 stars; updated this week; MIT license
 
 ## Agent skills you could install (0)
 

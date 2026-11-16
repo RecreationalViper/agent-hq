@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T06:50:07.069Z",
+  "generatedAt": "2026-11-16T19:43:58.191Z",
   "date": "2026-11-16",
   "token": true,
   "searches": {
@@ -11,11 +11,55 @@
   },
   "apiCalls": 12,
   "rateRemaining": 18,
-  "newItems": 0,
+  "newItems": 1,
   "blockedToday": 0,
-  "shortlist": [],
+  "shortlist": [
+    {
+      "name": "FareedKhan-dev/all-agentic-architectures",
+      "url": "https://github.com/FareedKhan-dev/all-agentic-architectures",
+      "description": "35 production-grade agentic AI architectures (Reflexion, LATS, GraphRAG, MemGPT, Voyager, BrowserAgent, ...) — a Python library and runnable textbook with multi-provider LLM support and a 17-task benchmark leaderboard.",
+      "stars": 4757,
+      "forks": 797,
+      "language": "Jupyter Notebook",
+      "license": "MIT",
+      "pushedAt": "2026-11-16T07:19:04Z",
+      "category": "skills",
+      "score": 60,
+      "tier": "watch",
+      "reasons": [
+        "filed under skills",
+        "4,757 stars",
+        "updated this week",
+        "MIT license"
+      ],
+      "flags": [],
+      "skillFiles": null
+    }
+  ],
   "byCategory": {
-    "skills": [],
+    "skills": [
+      {
+        "name": "FareedKhan-dev/all-agentic-architectures",
+        "url": "https://github.com/FareedKhan-dev/all-agentic-architectures",
+        "description": "35 production-grade agentic AI architectures (Reflexion, LATS, GraphRAG, MemGPT, Voyager, BrowserAgent, ...) — a Python library and runnable textbook with multi-provider LLM support and a 17-task benchmark leaderboard.",
+        "stars": 4757,
+        "forks": 797,
+        "language": "Jupyter Notebook",
+        "license": "MIT",
+        "pushedAt": "2026-11-16T07:19:04Z",
+        "category": "skills",
+        "score": 60,
+        "tier": "watch",
+        "reasons": [
+          "filed under skills",
+          "4,757 stars",
+          "updated this week",
+          "MIT license"
+        ],
+        "flags": [],
+        "skillFiles": null
+      }
+    ],
     "enhancement": [],
     "free-tokens": [],
     "efficiency": []
