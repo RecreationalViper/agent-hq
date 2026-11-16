@@ -39,10 +39,7 @@ jobs:
       - name: Save results
         if: always()
         run: |
-          git config user.name "agent-hq-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A reports research exa-usage.json
-          git diff --cached --quiet || (git commit -m "Deep Researcher update" && git pull --rebase && git push)
+          bash tools/save.sh "Deep Researcher update" reports research exa-usage.json
       - name: Tell Discord if this run failed
         if: failure()
         run: node tools/discord-alert.mjs "Deep Researcher run failed"

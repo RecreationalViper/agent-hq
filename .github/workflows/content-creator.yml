@@ -62,14 +62,9 @@ jobs:
       - name: Save report and notes for the team
         if: always()
         run: |
-          git config user.name "agent-hq-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for p in reports content pinterest exa-usage.json claude-usage.json store/landing store/pins ploy/shift; do [ -e "$p" ] && git add -A "$p"; done; true
-          git diff --cached --quiet && exit 0
-          git commit -m "Content Creator update"
-          # Other agents push all day: retry so a race never loses the pins.
-          for i in 1 2 3 4 5; do git pull --rebase -X theirs && git push && exit 0; echo "push race, retry $i"; sleep $((i * 7)); done
-          exit 1
+          # Other agents push all day: save.sh rebases and retries so a race never loses the pins.
+          SAVE_STRATEGY="-X theirs" SAVE_RETRIES=5 bash tools/save.sh "Content Creator update" \
+            reports content pinterest exa-usage.json claude-usage.json store/landing store/pins ploy/shift
   publish:
     needs: create
     if: always()
