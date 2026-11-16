@@ -145,6 +145,18 @@ Product facts (never contradict): the files are fill-in PDFs. Buyers download th
 Voice: warm, calm, practical, quietly reassuring. Never salesy about grief, no urgency tricks, no "limited time", no emojis in headlines, never mention death in a shocking way. Lead with help (a tip, a checklist, a comforting idea), mention the kit gently.
 Rules: drafts only - the owner decides what to post. Never invent reviews, testimonials, customer stories, statistics or prices other than the listed ones. Disclose nothing false. Use keywords from the real SEO data naturally. Return valid JSON only.`;
 
+// Content angles, rotated daily so the pins keep changing. Each is a save-worthy idea, not an ad.
+const ANGLES = {
+  "soft-botanical": ["what to write on a celebration of life welcome sign", "share-a-memory card prompts guests can answer", "celebration of life checklist for the week before", "how to edit the fill-in PDFs on a phone in minutes", "memory table ideas (photos, candles, a guest book)", "gentle wording for a funeral program", "how a friend can help a grieving family with the printing", "keepsake ideas: keep the memory cards in a box or book"],
+  "holiday-2026-C": ["ways to honor a loved one at Thanksgiving dinner", "what to write on an empty-chair place card", "a gratitude card table activity that includes them", "the first Thanksgiving without them: small rituals", "Thanksgiving remembrance table ideas", "how kids can share a memory at the table"],
+  "holiday-2026-A": ["memorial ornament ideas for the tree", "lighting a candle for them at Christmas dinner", "the first Christmas without them: gentle traditions", "a remembrance corner by the tree", "a Christmas memory card for each guest", "how to include them in the family photo or toast"],
+  "holiday-2026-B": ["how to plan a Blue Christmas or Longest Night service", "order of service ideas for a Longest Night service", "what to put in a Blue Christmas program", "candle-lighting moment ideas for a church service", "how churches can welcome grieving people in December", "remembrance cards for a Longest Night service"]
+};
+function angles(products) {
+  const day = Math.floor(Date.parse(DATE) / 864e5);
+  return products.flatMap((p) => { const a = ANGLES[p.id] || []; return a.length ? [0, 1].map((k) => `${p.name}: ${a[(day * 2 + k) % a.length]}`) : []; });
+}
+
 function writePrompt(team, data, history, products) {
   const cat = products.map((p) => `- id "${p.id}": ${p.name}, ${p.price}, ${p.season}. Page: ${p.page}. Pieces: ${p.pieces.join("; ")}. Pictures you can use: ${THEMES[p.id].images.join(", ")}${p.audience ? `. For: ${p.audience}` : ""}`).join("\n");
   const holidays = products.filter((p) => p.id !== "soft-botanical");
@@ -155,7 +167,12 @@ ${cat}
 ${holidays.length ? `\nIt's holiday season: make at least ${Math.min(holidays.length, Math.max(COUNT - 2, 1))} posts about the holiday sets (every set above gets at least one), the rest about Soft Botanical. Families plan these weeks ahead, so speak to that (the first Thanksgiving or Christmas without them, a remembrance table, a church's Blue Christmas service).` : ""}
 
 Backgrounds: most pins should be photo scenes, which do best on Pinterest. Each product has its own photo look (Harvest Table = autumn farmhouse table, Evergreen = pine and candlelight at night, Longest Night = candles in a quiet church at dusk, Soft Botanical = linen and greenery): "scene-table" (the printable lying on that product's table, seen from above) or "scene-venue" (that product's sign standing on a wooden easel). Use "botanical" or "painted" for at most one pin and for stories.
-Mix: ${Math.max(COUNT - 2, 1)} Pinterest pins (format "pin") and 2 vertical TikTok/Reels/Instagram story posts (format "story"). Every post must be different in angle (tip, checklist, comfort, how-it-works, keepsake idea...).
+Mix: ${Math.max(COUNT - 2, 1)} Pinterest pins (format "pin") and 2 vertical TikTok/Reels/Instagram story posts (format "story"). Every post must be different in angle.
+
+# Make it useful, not an ad
+Pinterest rewards pins people SAVE: ideas, how-tos and lists. Headlines must not just name the product ("Welcome sign printable" is weak; "What to write on a welcome sign" is strong). Today's angles to draw from (use at least 3 different ones):
+${angles(products).map((a) => `- ${a}`).join("\n")}
+At least 2 pins use background "tips": an idea-list pin with 3-5 short numbered "tips" on the image (each max 8 words, practical and specific, written by you, no quotes from books, songs or famous people). The other pins use the photo scenes.
 Do NOT repeat these recent headlines: ${history.slice(0, 30).join(" | ") || "(none yet)"}
 
 Return JSON:
@@ -169,7 +186,8 @@ Return JSON:
    "subline": "text ON the image under the headline, max 14 words",
    "product": "the product id from the list above",
    "product_image": "one of that product's pictures",
-   "background": "scene-table" | "scene-venue" | "botanical" | "painted",
+   "background": "scene-table" | "scene-venue" | "tips" | "botanical" | "painted",
+   "tips": ["tips background only: 3-5 short numbered ideas, max 8 words each; empty otherwise"],
    "scene_prompt": "for scene backgrounds: a few words of props and light that suit that product's season, to vary the photo (e.g. 'a cup of cider, cinnamon sticks' or 'white roses, pillar candles'). No people, no text.",
    "art_prompt": "for painted backgrounds: a soft watercolor scene (flowers, leaves, light, candles, paper) with NO text, NO people, calm cream/sage palette, empty space in the center",
    "pin_title": "Pinterest title, max 100 chars, keyword first (pins only, else empty)",
@@ -279,6 +297,7 @@ h1{font-weight:500;font-size:92px;line-height:1.02;letter-spacing:-.01em;text-wr
 
 function pageHtml(post, painted) {
   if (/^scene-/.test(post.background || "") && post.format !== "story") return sceneHtml(post, painted);
+  const tips = post.background === "tips" ? (post.tips || []).filter(Boolean).slice(0, 5) : [];
   const story = post.format === "story";
   const t = THEMES[post.product] || THEMES["soft-botanical"];
   const W = story ? 1080 : 1000, H = story ? 1920 : 1500;
@@ -312,12 +331,19 @@ h1{font-weight:500;font-size:${story ? 96 : 82}px;line-height:1.02;max-width:${s
 .sub{font-style:italic;font-size:${story ? 42 : 36}px;line-height:1.25;color:${t.sub};max-width:${story ? 820 : 760}px;margin-top:${story ? 26 : 20}px;text-wrap:balance}
 .product{margin-top:${story ? 64 : 46}px;background:#fff;padding:${story ? 16 : 14}px;box-shadow:0 18px 40px -18px rgba(0,0,0,${t.dark ? .8 : .45}),0 2px 6px rgba(0,0,0,.15);transform:rotate(-1.2deg)}
 .product img{display:block;max-width:${story ? 640 : 600}px;max-height:${story ? 640 : 470}px;object-fit:contain}
+.tips{list-style:none;margin-top:${story ? 56 : 40}px;width:100%;max-width:${story ? 860 : 800}px;text-align:left;counter-reset:t}
+.tips li{counter-increment:t;display:flex;gap:26px;align-items:baseline;font-size:${story ? 50 : 44}px;line-height:1.15;padding:${story ? 22 : 17}px 0;border-top:1px solid ${t.line}}
+.tips li:last-child{border-bottom:1px solid ${t.line}}
+.tips li:before{content:counter(t);font-family:Cinzel;font-size:.6em;color:${t.accent};min-width:44px;text-align:center}
+.is-tips .leaf{opacity:.07!important}.is-tips .art{display:none}.is-tips .wrap{justify-content:center;padding-top:${story ? 200 : 120}px;padding-bottom:${story ? 420 : 330}px}.is-tips .foot{position:absolute;left:${story ? 90 : 80}px;bottom:${story ? 150 : 110}px;margin:0}
+.mini{position:absolute;right:${story ? 70 : 60}px;bottom:${story ? 120 : 96}px;background:#fff;padding:8px;transform:rotate(4deg);box-shadow:0 14px 30px -12px rgba(0,0,0,.5)}
+.mini img{display:block;max-width:${story ? 300 : 250}px;max-height:${story ? 330 : 270}px}
 .foot{margin-top:auto;font-style:italic;font-size:${story ? 34 : 29}px;color:${t.sub}}
 .foot b{font-style:normal;font-family:Cinzel;font-weight:400;font-size:.62em;letter-spacing:.3em;display:block;margin-top:10px;color:${t.accent}}
-</style></head><body>${bg}<div class="frame"></div>
+</style></head><body${tips.length >= 3 ? ' class="is-tips"' : ""}>${bg}<div class="frame"></div>
 <div class="wrap"><div class="brand">FOREVER HELD</div><h1>${esc(post.headline)}</h1>${post.subline ? `<p class="sub">${esc(post.subline)}</p>` : ""}
-<div class="product"><img src="${img}"></div>
-<div class="foot">${post.product === "soft-botanical" ? "Editable printable memorial kit" : `${esc((t.page && post.kicker) || "Printable remembrance set")}`}<b>INSTANT DOWNLOAD</b></div></div></body></html>`;
+${tips.length >= 3 ? `<ol class="tips">${tips.map((x) => `<li>${esc(x)}</li>`).join("")}</ol>` : `<div class="product"><img src="${img}"></div>`}
+<div class="foot"${tips.length >= 3 ? ` style="text-align:left"` : ""}>${post.product === "soft-botanical" ? "Editable printable memorial kit" : `${esc((t.page && post.kicker) || "Printable remembrance set")}`}<b>INSTANT DOWNLOAD</b></div></div>${tips.length >= 3 ? `<div class="mini"><img src="${img}"></div>` : ""}</body></html>`;
 }
 
 function loadPlaywright() {
@@ -348,6 +374,7 @@ async function main() {
   for (const post of posts) { // keep every post on a real product with its own pictures
     if (!products.some((p) => p.id === post.product)) post.product = "soft-botanical";
     if (!THEMES[post.product].images.includes(post.product_image)) post.product_image = THEMES[post.product].images[0];
+    if (post.background === "tips" && (post.tips || []).filter(Boolean).length < 3) post.background = "scene-table"; // no list, no list pin
   }
   if (!posts.length) throw new Error("The writer returned no posts.");
 
