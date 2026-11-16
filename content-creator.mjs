@@ -152,6 +152,18 @@ const ANGLES = {
   "holiday-2026-A": ["memorial ornament ideas for the tree", "lighting a candle for them at Christmas dinner", "the first Christmas without them: gentle traditions", "a remembrance corner by the tree", "a Christmas memory card for each guest", "how to include them in the family photo or toast"],
   "holiday-2026-B": ["how to plan a Blue Christmas or Longest Night service", "order of service ideas for a Longest Night service", "what to put in a Blue Christmas program", "candle-lighting moment ideas for a church service", "how churches can welcome grieving people in December", "remembrance cards for a Longest Night service"]
 };
+// Every form in a set gets its own spotlight: one featured piece per set per day, rotating.
+const PIECE = {
+  "program-cover": "Funeral program (front cover)", "program-inside": "Funeral program (inside pages: obituary, order of service)",
+  "welcome-sign": "Welcome sign, 24x36 / 18x24 poster", "memory-card": "Share-a-memory cards",
+  "h-sign": "Empty-chair sign 8x10 (\"We saved a seat for you\")", "h-card": "\"I'm thankful for\" memory cards", "h-cards": "Memory cards printed 4 per sheet", "h-place": "Fold-over place cards (\"In loving memory\" or a guest name)",
+  "e-sign": "Candle table sign 8x10 (\"This candle burns in loving memory of\")", "e-card": "Christmas memory cards (dark green or ink-saver light)", "e-orn": "Ornament keepsake cards with a ribbon hole",
+  "l-sign": "Longest Night table sign 8x10", "l-card": "Candle-lighting cards", "l-prog1": "Blue Christmas service program (names remembered, order of service)"
+};
+function featured(products) {
+  const day = Math.floor(Date.parse(DATE) / 864e5);
+  return products.map((p) => { const im = THEMES[p.id]?.images || []; return im.length ? [0, 1].map((k) => im[(day + k * 2) % im.length]).filter((v, i, a) => a.indexOf(v) === i).map((k) => `${p.name}: ${PIECE[k] || k} (picture "${k}")`) : []; }).flat();
+}
 function angles(products) {
   const day = Math.floor(Date.parse(DATE) / 864e5);
   return products.flatMap((p) => { const a = ANGLES[p.id] || []; return a.length ? [0, 1].map((k) => `${p.name}: ${a[(day * 2 + k) % a.length]}`) : []; });
@@ -172,6 +184,10 @@ Mix: ${Math.max(COUNT - 2, 1)} Pinterest pins (format "pin") and 2 vertical TikT
 # Make it useful, not an ad
 Pinterest rewards pins people SAVE: ideas, how-tos and lists. Headlines must not just name the product ("Welcome sign printable" is weak; "What to write on a welcome sign" is strong). Today's angles to draw from (use at least 3 different ones):
 ${angles(products).map((a) => `- ${a}`).join("\n")}
+# Show the forms we sell
+Each set has several different forms (signs, cards, place cards, programs, ornament cards). Market them one at a time: every post spotlights ONE specific piece, names it plainly (what it is, its size or use), and uses that piece's picture as product_image. Today's featured pieces (cover these first, one post each where you can):
+${featured(products).map((f) => `- ${f}`).join("\n")}
+Make the headline or tips about how that piece is used (e.g. place cards: "Set one at their chair"; ornament cards: "Hang one on the tree").
 At least 2 pins use background "tips": an idea-list pin with 3-5 short numbered "tips" on the image (each max 8 words, practical and specific, written by you, no quotes from books, songs or famous people). The other pins use the photo scenes.
 Do NOT repeat these recent headlines: ${history.slice(0, 30).join(" | ") || "(none yet)"}
 
@@ -185,7 +201,8 @@ Return JSON:
    "kicker": "holiday sets only: tiny label above the headline, max 4 words (e.g. 'Thanksgiving remembrance', 'For a Blue Christmas service'); empty for Soft Botanical",
    "subline": "text ON the image under the headline, max 14 words",
    "product": "the product id from the list above",
-   "product_image": "one of that product's pictures",
+   "piece": "the form this post spotlights, in plain words (e.g. 'fold-over place cards')",
+   "product_image": "the picture of that piece (from the featured list or that product's pictures)",
    "background": "scene-table" | "scene-venue" | "tips" | "botanical" | "painted",
    "tips": ["tips background only: 3-5 short numbered ideas, max 8 words each; empty otherwise"],
    "scene_prompt": "for scene backgrounds: a few words of props and light that suit that product's season, to vary the photo (e.g. 'a cup of cider, cinnamon sticks' or 'white roses, pillar candles'). No people, no text.",
