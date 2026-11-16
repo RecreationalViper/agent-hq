@@ -1,13 +1,13 @@
 {
   "month": "2026-11",
-  "spent": 0.63,
-  "calls": 90,
+  "spent": 0.644,
+  "calls": 92,
   "byAgent": {
     "provider-check": 0.007,
     "competitor-scout": 0.056,
     "partner-finder": 0.042,
     "credit-scout": 0.042,
-    "content-creator": 0.126,
+    "content-creator": 0.14,
     "researcher": 0.147,
     "github-radar": 0.084,
     "tiktok-fandoms": 0.049,

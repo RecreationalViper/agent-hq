@@ -1,10 +1,10 @@
-# Content Creator notes - 2026-11-15
+# Content Creator notes - 2026-11-16
 
-Theme: First holidays without them: gentle printable keepsakes for Thanksgiving, Christmas, and Blue Christmas services
-Headlines made: A place set for memory | Ornaments that hold their story | A program for the longest night | Type their story on your phone | Three pieces, one gentle kit
+Theme: Gentle holiday remembrance and service planning: comforting rituals for first holidays without them and easy mobile PDF editing
+Headlines made: First Thanksgiving without them | Planning a Blue Christmas service | A gentle holiday remembrance table | Week before celebration of life guide | How to edit memorial files on phone
 
 ## For the Content Planner
-Created 5 posts: 3 holiday pins (Harvest Table, Evergreen & Candlelight, Longest Night) and 2 Soft Botanical stories — each holiday set covered once, Soft Botanical twice.,Used Planner's mobile editing walkthrough idea for Story 4 but with a fresh headline avoiding the forbidden list.,Used Planner's memory table setup idea for Harvest Table pin but focused on the empty chair comfort angle instead of setup steps.,Skipped Planner's 'complete bundle value' idea for Soft Botanical since it appeared in recent headlines; used a checklist angle instead.,For next week: plan Blue Christmas service outreach to churches/hospices (Longest Night), last-minute Thanksgiving place card reminders (Harvest Table), and Christmas memory table ideas (Evergreen).
+Created 5 distinct posts featuring all live products: Harvest Table (post 1), Longest Night (post 2), Evergreen & Candlelight (post 3), and Soft Botanical (posts 4 & 5). Followed the Planner's mobile walk-through and memory table ideas while applying fresh headlines to avoid recent duplicates. Used 2 tips pins to maximize Pinterest save rates. For next week, recommend drafting last-minute print-at-home Thanksgiving reminders and early December Blue Christmas outreach.
 
 ## For the SEO Scout
-What are the top long-tail search queries for 'Blue Christmas church service program printable'?,Can you check search volume for 'DIY memory ornament cards' versus 'Christmas memorial table sign'?,What questions appear in 'People Also Ask' for 'first Thanksgiving without loved one'?
+What are the top search queries for printable Blue Christmas church order of service templates?,Are searchers typing 'memorial table sign Thanksgiving' or 'empty chair Thanksgiving sign' more frequently?
