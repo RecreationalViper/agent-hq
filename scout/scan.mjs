@@ -23,6 +23,7 @@ const CONFIG_PATH = "scout/config.json";
 const OUT_JSON = "scout/latest.json";
 const OUT_MD = "scout/latest.md";
 const STATE_PATH = "scout/seen.json";
+const WATCHED_PATH = "scout/watched.json";
 
 const TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || "";
 const DRY = process.argv.includes("--dry-run");
@@ -136,6 +137,14 @@ function fitsCategory(category, hay) {
   return category === "enhancement" ? true : AI_WORDS.test(hay);
 }
 
+// Newborn hits have no honest "assigned" category — let the content decide.
+function bestCategoryStrict(hay) {
+  for (const cat of ["skills", "enhancement", "efficiency", "free-tokens"]) {
+    if (fitsCategory(cat, hay)) return { category: cat, moved: true };
+  }
+  return { category: "enhancement", moved: true, offTopic: true };
+}
+
 function bestCategory(assigned, hay) {
   if (fitsCategory(assigned, hay)) return { category: assigned, moved: false };
   for (const cat of ["skills", "enhancement", "efficiency", "free-tokens"]) {
@@ -148,7 +157,8 @@ function bestCategory(assigned, hay) {
 
 // Turns one GitHub search hit into a judgement: score, tier, reasons, flags.
 // Purpose: surface things worth 5 minutes of the owner's time and bury the scams.
-function judge(repo, category, cfg, today) {
+function judge(repo, category, cfg, today, opts = {}) {
+  const newborn = Boolean(opts.newborn);
   const name = repo.full_name;
   const owner = (repo.owner?.login || "").toLowerCase();
   const desc = repo.description || "";
@@ -172,7 +182,7 @@ function judge(repo, category, cfg, today) {
   const flags = [];
 
   // Move the hit to the category it truly belongs to (GitHub search is fuzzy).
-  const placed = bestCategory(category, hay);
+  const placed = newborn ? bestCategoryStrict(hay) : bestCategory(category, hay);
   category = placed.category;
   if (placed.offTopic) { score -= 14; flags.push("off-topic"); reasons.push("matched the search but not clearly about this topic"); }
   else if (placed.moved) { score -= 4; reasons.push(`filed under ${category}`); }
@@ -203,15 +213,26 @@ function judge(repo, category, cfg, today) {
   if (repo.open_issues_count > 400 && stars < 500) { score -= 5; flags.push("many-open-issues"); }
 
   // 6. Established = big, licensed AND maintained. That combination is rarely a trap.
-  if (stars >= 5000 && license && pushDays <= 60) { score += 6; reasons.push("well established"); }
+  if (!newborn && stars >= 5000 && license && pushDays <= 60) { score += 6; reasons.push("well established"); }
 
   // 7. Courses and tutorials are fine, but real tools should outrank them.
   if (/(for.?beginners|tutorial|course|curriculum|\blessons?\b|handbook|roadmap|cheat.?sheet)/i.test(hay)) {
     score -= 9; flags.push("learning-material");
   }
 
-  // 8. Too new to trust on hype alone.
-  if (ageDays < 14 && stars < 150) { score -= 12; flags.push("brand-new"); }
+  // 8. Too new to trust on hype alone — except in the newborn lane, whose whole job is
+  //    to surface launches early. There the penalty is replaced by a small bonus and
+  //    the tier is capped at WATCH: early does not mean proven.
+  if (newborn) {
+    score += 16;
+    flags.push("newborn");
+    reasons.push(`new repo, ${ageDays} day${ageDays === 1 ? "" : "s"} old`);
+    // Three stars in three days is a real signal; three stars in three years is not.
+    if (stars >= 5) { score += 6; reasons.push("early traction"); }
+  } else if (ageDays < 14 && stars < 150) {
+    score -= 12;
+    flags.push("brand-new");
+  }
 
   // 9. Category-specific checks.
   if (category === "free-tokens") {
@@ -242,8 +263,121 @@ function judge(repo, category, cfg, today) {
   // A phone-only owner can't run a server, so anything needing a host is never a
   // straight "adopt" — it stays visible, just with honest expectations.
   if (tier === "adopt" && (flags.includes("self-host-required") || flags.includes("third-party-proxy") || flags.includes("tos-risk"))) tier = "watch";
+  if (newborn && tier === "adopt") tier = "watch";
 
-  return { name, category, blocked: false, score, tier, reasons, flags };
+  return { name, category, blocked: false, score, tier, reasons, flags, newborn };
+}
+
+// ---------------------------------------------------------------- watched repos
+
+// A repo-level scanner has a blind spot: once a repo is "seen", brand-new skills added
+// inside it are invisible forever. This compares the SKILL.md paths at the repo's newest
+// commit with the ones we stored last time, so a new skill in a repo you already know
+// still gets reported.
+//
+// `known` is null on the first look: no baseline, so nothing can be called "new" yet.
+function newSkillFiles(known, paths) {
+  if (!Array.isArray(known)) return [];
+  const have = new Set(known);
+  return (paths || []).filter((p) => !have.has(p));
+}
+
+async function scanWatched(cfg, limits, state, today) {
+  const conf = await readJson(WATCHED_PATH, null);
+  const list = (conf?.repos || []).map((e) => (typeof e === "string" ? { repo: e } : e))
+    .filter((e) => typeof e.repo === "string" && e.repo.includes("/"));
+  if (!list.length) return { items: [], ran: 0, newFiles: 0 };
+
+  const l = { reposPerRun: 3, maxFilesPerRepo: 3000, reportPerRepo: 3, ...(conf.limits || {}) };
+  state.watched ||= {};
+
+  // Forget repos the owner removed from the config.
+  const keep = new Set(list.map((e) => e.repo));
+  for (const key of Object.keys(state.watched)) if (!keep.has(key)) delete state.watched[key];
+
+  // Rotate like the searches: a few repos per run, all of them over a few runs.
+  const count = Math.min(l.reposPerRun, list.length);
+  const start = (state.watchCursor || 0) % list.length;
+  const slice = Array.from({ length: count }, (_, i) => list[(start + i) % list.length]);
+  state.watchCursor = (start + count) % list.length;
+  console.log(`Watched repos: ${count}/${list.length} (${slice.map((e) => e.repo).join(", ")})`);
+
+  const items = [];
+  let newFiles = 0;
+
+  for (const entry of slice) {
+    const full = entry.repo;
+    const [owner, name] = full.split("/");
+    const prev = state.watched[full] || {};
+    try {
+      const head = await gh(`/repos/${owner}/${name}/commits?per_page=1`);
+      const sha = head.data?.[0]?.sha;
+      if (!sha) { console.log(`  ~ ${full}: no commits`); }
+      else if (sha === prev.sha) { console.log(`  = ${full}: unchanged`); }
+      else {
+        const tree = await gh(`/repos/${owner}/${name}/git/trees/${sha}?recursive=1`);
+        const paths = (tree.data?.tree || [])
+          .filter((t) => t.type === "blob" && /(^|\/)SKILL\.md$/.test(t.path))
+          .map((t) => t.path);
+
+        const baseline = !Array.isArray(prev.files);
+        const added = newSkillFiles(prev.files, paths);
+        // Small repos keep their full path list. A mega-aggregator (thousands of skill
+        // files) keeps only a count, so the state file can't explode.
+        state.watched[full] = paths.length <= l.maxFilesPerRepo
+          ? { sha, files: paths, count: paths.length, at: today }
+          : { sha, files: null, count: paths.length, at: today };
+
+        if (baseline) {
+          console.log(`  ~ ${full}: baseline, ${paths.length} skill file(s)`);
+        } else {
+          const grew = Math.max(0, paths.length - (prev.count || 0));
+          const found = Array.isArray(prev.files) ? added : grew > 0 ? [null] : [];
+          if (!found.length) {
+            console.log(`  ~ ${full}: changed, no new skills`);
+          } else {
+            newFiles += found.length;
+            const meta = await gh(`/repos/${owner}/${name}`);
+            const verdict = judge(meta.data, "skills", cfg, today);
+            const shown = found.slice(0, l.reportPerRepo);
+            for (const path of shown) {
+              const reasons = [...(verdict.reasons || [])];
+              if (path) reasons.unshift(`new skill file: ${path}`);
+              else reasons.unshift(`about ${grew} new skill file(s), too many to list`);
+              items.push({
+                repo: meta.data,
+                name: full,
+                category: "skills",
+                score: Math.min(100, Math.max(78, (verdict.score || 0) + 6)),
+                tier: (verdict.flags || []).includes("no-license") ? "watch" : "adopt",
+                reasons,
+                flags: verdict.flags || [],
+                skillPath: path,
+                commitUrl: `https://github.com/${full}/commits/${sha}`,
+                source: "watched"
+              });
+            }
+            const rest = found.length - shown.length;
+            if (rest > 0) {
+              items.push({
+                repo: meta.data, name: full, category: "skills",
+                score: 76, tier: "watch",
+                reasons: [`${rest} more new skill file(s) in this repo`],
+                flags: verdict.flags || [], skillPath: null,
+                commitUrl: `https://github.com/${full}/commits/${sha}`, source: "watched"
+              });
+            }
+            console.log(`  + ${full}: ${found.length} new skill file(s)`);
+          }
+        }
+      }
+    } catch (e) {
+      console.error(`  ! ${full}: ${e.message}`);
+    }
+    await sleep(limits.queryDelayMs);
+  }
+
+  return { items, ran: slice.length, newFiles };
 }
 
 // ---------------------------------------------------------------- scan
@@ -273,14 +407,19 @@ async function main() {
   console.log(`Rotation window: ${slice.map((s) => s.category).join(", ")}`);
 
   const since = daysAgo(60);
+  const newbornSince = daysAgo(Number(limits.newbornAgeDays || 14));
   const found = [];
   const ledger = { ok: 0, unchanged: 0, failed: 0, skippedMatches: 0 };
 
   for (const { category, q } of slice) {
-    const query = q.replace(/\{since\}/g, since) + (limits.minStars ? ` stars:>=${limits.minStars}` : "");
+    // The newborn lane looks for repos created in the last few weeks, so it uses its
+    // own (much lower) star floor — a two-week-old repo with 6 stars is the point.
+    const newbornLane = category === "newborn";
+    const floor = newbornLane ? Number(limits.newbornMinStars ?? 5) : limits.minStars;
+    const query = q.replace(/\{since\}/g, since).replace(/\{new\}/g, newbornSince) + (floor ? ` stars:>=${floor}` : "");
     // No sort parameter on purpose: GitHub's best-match ranking weighs stars and
     // relevance together, while pushed:>60d already keeps everything fresh.
-    const path = `/search/repositories?q=${encodeURIComponent(query)}&per_page=30`;
+    const path = `/search/repositories?q=${encodeURIComponent(query)}&per_page=${newbornLane ? 20 : 30}`;
     const prev = state.queries[query];
     try {
       const res = await gh(path, { etag: prev?.etag, allow304: true });
@@ -292,7 +431,7 @@ async function main() {
       ledger.ok++;
       const items = res.data?.items || [];
       console.log(`  + ${category}: ${items.length} hits — ${query}`);
-      for (const repo of items) found.push({ repo, category });
+      for (const repo of items) found.push({ repo, category, newborn: newbornLane });
       state.queries[query] = { etag: res.etag, lastRun: new Date().toISOString(), total: res.data?.total_count ?? items.length };
     } catch (e) {
       ledger.failed++;
@@ -309,21 +448,24 @@ async function main() {
     if (v?.lastRun && new Date(v.lastRun).getTime() < cutoff) delete state.queries[k];
   }
 
-  // Dedupe within this run (a repo can match several searches): keep the best category hit.
+  // Dedupe within this run: a repo can match several searches. Keep the first real
+  // category, remember if any lane flagged it newborn, and never let the placeholder
+  // "newborn" category itself leak into the report.
   const byName = new Map();
-  for (const { repo, category } of found) {
+  for (const { repo, category, newborn } of found) {
     const prior = byName.get(repo.full_name);
-    if (!prior) byName.set(repo.full_name, { repo, category });
-    else if (prior.category === "skills" && category !== "skills") byName.set(repo.full_name, { repo, category });
+    if (!prior) { byName.set(repo.full_name, { repo, category, newborn }); continue; }
+    prior.newborn = prior.newborn || newborn;
+    if (prior.category === "newborn" && category !== "newborn") prior.category = category;
   }
 
   const fresh = [];
   let alreadyKnown = 0, blockedNow = [];
 
-  for (const { repo, category } of byName.values()) {
+  for (const { repo, category, newborn } of byName.values()) {
     const name = repo.full_name;
     if (state.seen[name] || state.blocked[name]) { alreadyKnown++; continue; }
-    const verdict = judge(repo, category, cfg, today);
+    const verdict = judge(repo, category, cfg, today, { newborn });
 
     if (verdict.blocked) {
       state.blocked[name] = { at: today, why: verdict.flags[0] };
@@ -340,9 +482,16 @@ async function main() {
       tier: verdict.tier,
       reasons: verdict.reasons,
       flags: verdict.flags,
+      newborn: Boolean(verdict.newborn),
+      source: "search",
       isNew: true
     });
   }
+
+  // Look inside the repos we watch for skills added since last time. These bypass the
+  // "already seen" filter on purpose — the repo is old, the skill file is not.
+  const watched = await scanWatched(cfg, limits, state, today);
+  fresh.push(...watched.items);
 
   // Newest thinking first, and prove skill repos really contain skill files.
   fresh.sort((a, b) => b.score - a.score);
@@ -356,7 +505,7 @@ async function main() {
       item.skillFiles = (res.data?.total_count || 0) > 0;
       if (item.skillFiles) { item.reasons.push("contains SKILL.md skill files"); item.score = Math.min(100, item.score + 8); }
       inspected++;
-      if (item.score >= 72 && item.tier === "watch" && !item.flags.includes("no-license")) item.tier = "adopt";
+      if (item.score >= 72 && item.tier === "watch" && !item.newborn && !item.flags.includes("no-license")) item.tier = "adopt";
     } catch (e) {
       item.skillFiles = null;
     }
@@ -365,6 +514,7 @@ async function main() {
 
   // Remember everything we judged so it never shows up twice.
   for (const item of fresh) {
+    if (item.source === "watched") continue; // the repo is already known; the file is the news
     state.seen[item.name] = {
       first: today, last: today, stars: item.repo.stargazers_count,
       score: item.score, tier: item.tier, category: item.category
@@ -384,9 +534,16 @@ async function main() {
     state.seen = Object.fromEntries(seenEntries.slice(0, limits.seenCap));
   }
 
-  const reportable = fresh.filter((i) => i.score >= minScore);
+  // Three report lanes: new skills inside watched repos, brand-new repos, and the
+  // normal search results. Each item appears in exactly one place.
+  const reportableAll = fresh.filter((i) => i.score >= minScore);
+  const watchedTop = reportableAll.filter((i) => i.source === "watched");
+  const newbornTop = reportableAll.filter((i) => i.newborn)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, Number(limits.newbornPerRun ?? 3));
+  const reportable = reportableAll.filter((i) => i.source !== "watched" && !i.newborn);
   const byCategory = {};
-  for (const cat of Object.keys(cfg.targets)) {
+  for (const cat of ["skills", "enhancement", "free-tokens", "efficiency"]) {
     byCategory[cat] = reportable.filter((i) => i.category === cat).slice(0, limits.maxReportPerCategory);
   }
   const shortlist = [...reportable].slice(0, limits.shortlistSize);
@@ -405,19 +562,22 @@ async function main() {
     searches: { ran: slice.length, total: all.length, ok: ledger.ok, unchanged: ledger.unchanged, failed: ledger.failed },
     apiCalls,
     rateRemaining: rateLeft,
-    newItems: reportable.length,
+    newItems: reportableAll.length,
     blockedToday: blockedNow.length,
     shortlist: shortlist.map(shape),
+    watched: watchedTop.map(shape),
+    newborn: newbornTop.map(shape),
     byCategory: Object.fromEntries(Object.entries(byCategory).map(([k, v]) => [k, v.map(shape)])),
     blocked: blockedNow.slice(0, 10),
-    watching
+    watching,
+    watchedRepos: { ran: watched.ran, newSkillFiles: watched.newFiles }
   };
 
   const md = digest(out, cfg);
   if (DRY) {
     console.log("\n--- scout/latest.md (dry run, not written) ---\n");
     console.log(md);
-    console.log(`\nAPI calls: ${apiCalls}, new reportable: ${reportable.length}`);
+    console.log(`\nAPI calls: ${apiCalls}, new reportable: ${reportableAll.length}`);
     return;
   }
 
@@ -428,7 +588,7 @@ async function main() {
   // started) so a quiet radar doesn't spam the repo with timestamp-only commits.
   const prev = await readJson(OUT_JSON, null);
   const dayChanged = prev?.date !== today;
-  if (reportable.length || dayChanged || !prev) {
+  if (reportableAll.length || dayChanged || !prev) {
     await fs.writeFile(OUT_JSON, JSON.stringify(out, null, 2));
     await fs.writeFile(OUT_MD, md);
     console.log(`Wrote ${OUT_JSON} and ${OUT_MD}`);
@@ -436,7 +596,7 @@ async function main() {
     console.log("No new finds and same day — leaving latest.* untouched (nothing to report).");
   }
 
-  console.log(`Done: ${reportable.length} new item(s), ${blockedNow.length} filtered, ${alreadyKnown} already known, ${ledger.unchanged} unchanged searches, ${apiCalls} API calls.`);
+  console.log(`Done: ${reportableAll.length} new item(s) (${watchedTop.length} inside watched repos, ${newbornTop.length} new launches), ${blockedNow.length} filtered, ${alreadyKnown} already known, ${ledger.unchanged} unchanged searches, ${apiCalls} API calls.`);
 }
 
 function shape(i) {
@@ -455,7 +615,11 @@ function shape(i) {
     tier: i.tier,
     reasons: i.reasons,
     flags: i.flags,
-    skillFiles: i.skillFiles ?? null
+    skillFiles: i.skillFiles ?? null,
+    source: i.source || "search",
+    newborn: Boolean(i.newborn),
+    skillPath: i.skillPath || null,
+    commitUrl: i.commitUrl || null
   };
 }
 
@@ -483,7 +647,8 @@ function flagNote(flags) {
     "stale": "not updated in a long time",
     "many-open-issues": "lots of open issues",
     "off-topic": "matched the search but not clearly on topic",
-    "learning-material": "course/reading material, not a ready-to-use tool"
+    "learning-material": "course/reading material, not a ready-to-use tool",
+    "newborn": "brand-new repo — unproven, watch before adopting"
   };
   return flags.map((f) => notes[f]).filter(Boolean);
 }
@@ -516,9 +681,35 @@ function digest(out, cfg) {
   }
   L.push("");
 
+  // New skills inside repos we already know. The repo is old; the file is the news.
+  if (out.watched && out.watched.length) {
+    L.push(`## New inside repos you watch (${out.watched.length})`);
+    L.push("");
+    for (const w of out.watched) {
+      const file = w.skillPath
+        ? "[" + w.skillPath + "](https://github.com/" + w.name + "/blob/HEAD/" + w.skillPath + ")"
+        : "[see the commit](" + (w.commitUrl || w.url) + ")";
+      L.push(`- **[${w.name}](${w.url})** ${tierChip(w.tier)} · ⭐ ${w.stars.toLocaleString()} · ${w.license || "no license"}`);
+      L.push(`  - Added: ${file}`);
+      const notes = flagNote(w.flags);
+      if (notes.length) L.push(`  - Watch out: ${notes.join("; ")}`);
+    }
+    L.push("");
+  }
+
+  // Early launches: reported, but capped and always WATCH — new is not the same as good.
+  if (out.newborn && out.newborn.length) {
+    L.push(`## Just launched — new repos (${out.newborn.length})`);
+    L.push("");
+    L.push("_Created in the last few weeks. Surfaced early on purpose, so they stay WATCH until they have a track record._");
+    L.push("");
+    for (const n of out.newborn) L.push(line(n).trimEnd());
+    L.push("");
+  }
+
   // Everything appears exactly once: the shortlist is the cross-category top picks,
   // the sections below show the rest so nothing is repeated.
-  const shortNames = new Set(out.shortlist.map((i) => i.name));
+  const shortNames = new Set([...out.shortlist, ...(out.watched || []), ...(out.newborn || [])].map((i) => i.name));
   for (const cat of ["skills", "enhancement", "free-tokens", "efficiency"]) {
     const items = (out.byCategory[cat] || []).filter((i) => !shortNames.has(i.name));
     L.push(`## ${CAT_TITLE[cat]} (${items.length})`);
@@ -549,6 +740,8 @@ function digest(out, cfg) {
   L.push("- **🟢 ADOPT** = established, licensed, recently updated. Worth 5 minutes.");
   L.push("- **🟡 WATCH** = promising but missing something (no license, new, third-party claim).");
   L.push("- Scores are the radar's own heuristic (stars, freshness, license, maintainer, relevance) — not a promise of quality.");
+  L.push("- **New inside repos you watch** = a SKILL.md added to a repo we already knew (from `scout/watched.json`). These used to be invisible.");
+  L.push("- **Just launched** = repos created in the last two weeks, kept at WATCH until they prove themselves.");
   L.push("- Nothing here has been installed, run, or paid for. That is your call, and it is logged as pending approval.");
   L.push("");
   return L.join("\n");
@@ -568,6 +761,7 @@ async function runSelfTest() {
     archived: false, fork: false, open_issues_count: 10, html_url: "https://github.com/someone/repo", ...o
   });
 
+  const daysAgoDate = (n) => new Date(Date.now() - n * 86400000).toISOString();
   const cases = [
     ["scam: api key generator", mk({ full_name: "x/free-openai-api-key-generator", description: "Unlimited free OpenAI API keys generator, no limits" }), "skills", "blocked"],
     ["scam: cracked premium", mk({ full_name: "x/claude-premium-crack", description: "Claude premium cracked accounts, nulled" }), "skills", "blocked"],
@@ -580,19 +774,35 @@ async function runSelfTest() {
     ["caution: key pool proxy", mk({ full_name: "x/free-llm-api-proxy", description: "Free LLM API proxy and key pool, no api key needed" }), "free-tokens", "blocked|watch|skip"],
     ["ignored: fork", mk({ fork: true }), "skills", "skip"],
     ["ignored: stale", mk({ pushed_at: "2021-01-01T00:00:00Z" }), "skills", "skip"],
-    ["ignored: brand new hype", mk({ stargazers_count: 4, created_at: now, description: "Unlimited infinite free tokens forever no limits" }), "free-tokens", "skip|blocked"]
+    ["ignored: brand new hype", mk({ stargazers_count: 4, created_at: now, description: "Unlimited infinite free tokens forever no limits" }), "free-tokens", "skip|blocked"],
+    // The newborn lane exists so early launches are reported instead of buried.
+    ["newborn: young repo with real signal", mk({ full_name: "someone/new-skills", stargazers_count: 9, created_at: daysAgoDate(3), description: "Agent skills for Claude and Gemini, MIT licensed, works with any model", topics: ["agent-skills"] }), "skills", "watch"],
+    ["newborn: never ADOPT on day three", mk({ stargazers_count: 9000, created_at: daysAgoDate(2), description: "Agent skills collection for every model", topics: ["skills"] }), "skills", "watch"]
   ];
 
   let pass = 0;
   for (const [label, repo, cat, expect] of cases) {
-    const v = judge(repo, cat, cfg, todayISO());
+    const v = judge(repo, cat, cfg, todayISO(), { newborn: label.startsWith("newborn:") });
     const got = v.blocked ? "blocked" : v.tier;
     const ok = expect.split("|").includes(got);
     if (ok) pass++;
     console.log(`${ok ? "PASS" : "FAIL"}  ${label} → ${got} (${v.blocked ? v.reasons[0] : v.score})${ok ? "" : `  expected ${expect}`}`);
   }
-  console.log(`\n${pass}/${cases.length} passed`);
-  if (pass !== cases.length) process.exit(1);
+  // Watched-repo diffing: the first look is a baseline, later looks report only additions.
+  const diffChecks = [
+    ["watched: first look is a baseline (no false news)", newSkillFiles(null, ["a/SKILL.md", "b/SKILL.md"]).length === 0],
+    ["watched: detects an added skill file", newSkillFiles(["a/SKILL.md"], ["a/SKILL.md", "b/SKILL.md"]).join(",") === "b/SKILL.md"],
+    ["watched: unchanged repo reports nothing", newSkillFiles(["a/SKILL.md"], ["a/SKILL.md"]).length === 0],
+    ["watched: removed files are not news", newSkillFiles(["a/SKILL.md", "b/SKILL.md"], ["a/SKILL.md"]).length === 0]
+  ];
+  const total = cases.length + diffChecks.length;
+  for (const [label, ok] of diffChecks) {
+    if (ok) pass++;
+    console.log(`${ok ? "PASS" : "FAIL"}  ${label}`);
+  }
+
+  console.log(`\n${pass}/${total} passed`);
+  if (pass !== total) process.exit(1);
 }
 
 const selfTest = process.argv.includes("--selftest");

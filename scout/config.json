@@ -1,5 +1,5 @@
 {
-  "note": "Settings for the GitHub Radar (scout/scan.mjs). Edit this file to steer what gets scanned. Queries use normal GitHub search syntax. {since} is replaced automatically with a rolling date so results stay fresh.",
+  "note": "Settings for the GitHub Radar (scout/scan.mjs). Edit this file to steer what gets scanned. Queries use normal GitHub search syntax. {since} is replaced automatically with a rolling date so results stay fresh. The 'newborn' list finds repos created in the last {new} days (default 14) so early launches are reported instead of buried; those are always capped at WATCH. Skill files added inside existing repos come from scout/watched.json.",
   "limits": {
     "queriesPerRun": 12,
     "minStars": 8,
@@ -7,9 +7,18 @@
     "shortlistSize": 5,
     "queryDelayMs": 2200,
     "inspectSkillFiles": 4,
-    "seenCap": 1500
+    "seenCap": 1500,
+    "newbornPerRun": 3,
+    "newbornAgeDays": 14,
+    "newbornMinStars": 5
   },
   "targets": {
+    "newborn": [
+      "created:>{new} agent skills in:name,description,readme",
+      "created:>{new} \"SKILL.md\" in:readme",
+      "created:>{new} llm cost tokens in:description",
+      "created:>{new} free llm api in:description"
+    ],
     "skills": [
       "topic:claude-skills stars:>5 pushed:>{since}",
       "topic:agent-skills stars:>5 pushed:>{since}",

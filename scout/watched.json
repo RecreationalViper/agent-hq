@@ -1,0 +1,22 @@
+{
+  "note": "Repos the radar looks inside, not just at. New SKILL.md files added here are reported even though the repo itself was seen long ago. Verified counts (Nov 2026): anthropics/skills 20, google/skills 209, microsoft/skills 211, github/awesome-copilot 481. Keep this list small and high-signal: each entry costs one API call per scan, and broad aggregators (thousands of skill files) produce noise rather than news.",
+  "repos": [
+    { "repo": "anthropics/skills", "why": "official Anthropic skill collection" },
+    { "repo": "anthropics/claude-plugins-official", "why": "official plugin + skill directory" },
+    { "repo": "google/skills", "why": "Google's agent skills" },
+    { "repo": "microsoft/skills", "why": "Microsoft's Azure/AKS skills" },
+    { "repo": "obra/superpowers", "why": "popular skills framework" },
+    { "repo": "github/awesome-copilot", "why": "community instructions/agents/skills" },
+    { "repo": "openai/openai-agents-python", "why": "OpenAI agent skills" },
+    { "repo": "google/adk-recipes", "why": "Agent Development Kit recipes" },
+    { "repo": "modelcontextprotocol/servers", "why": "reference MCP servers + skills" },
+    { "repo": "vercel/ai", "why": "AI SDK skills" },
+    { "repo": "NVIDIA/SkillEvaluator", "why": "skill quality evaluation" },
+    { "repo": "cloudflare/agents", "why": "Cloudflare agent skills" }
+  ],
+  "limits": {
+    "reposPerRun": 3,
+    "maxFilesPerRepo": 3000,
+    "reportPerRepo": 3
+  }
+}
