@@ -1,101 +1,77 @@
-# TikTok Fandom Watcher (updated 2026-11-15)
+# TikTok Fandom Watcher (updated 2026-11-16)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# TikTok Fandom Watchlist (Week of Nov 15, 2026)
-
-Targeting high-engagement fandoms for 30–40s vertical edits on MotionVault. Ranked by current viral momentum and edit potential.
+Here are the top 7 movie, game, and anime fandoms buzzing on TikTok and short-form platforms this week (week of Nov 16, 2026), ranked by momentum and short-form edit potential:
 
 ---
 
-### 1. The Legend of Zelda: Ocarina of Time Remake (Game)
-* **Why fans care now:** Fresh off launch, selling 5.2 million copies in 4 days as Nintendo's fastest-selling Switch 2 release ([gHacks](https://news.google.com/rss/articles/CBMi2AFBVV95cUxNMVMwc01qUkFIUC0zd1FxQlZzalB4OUF3dVU4SEFvZWl6UWp2N3VSYjNnWDZzZ2doNkt0S0J4YktESDJQTF8xaEI2VjkzUlRESmpWZEpwZUZ1b01GMTNVbVBscEVIa2RqMmtoMGZhcldfQ2lBak9CRWxsbC10SGg4dlpNSFE5eHpQbmNpWlFsSzFZRlBnUTlHWU9CR3lzdVRNVXhuRk9PdGxMREtBN1o1NzljQzNCSHVLQnBXTFpNLXVsalBDaGRUWldXdVdvRldicVl1SEF1TVE?oc=5)). Currently #11 top watched on Twitch.
-* **Hashtags:** `#OcarinaOfTime` `#ZeldaSwitch2` `#ZeldaRemake` `#GamingEdit`
-* **Moment to clip:**
-  * *Hook (0–2s):* Side-by-side transition showing N64 Ganondorf confronting modern remake Ganondorf.
-  * *Body (3–30s):* Clean, unbroken cinematic cut of Link pulling the Master Sword from the Pedestal of Time into adult form.
-  * *Rewatch loop (31–35s):* Smash cut back to Navi's "Hey, listen!" soundbite timed to a black screen.
-* **Saturation:** Low to Moderate (Brand new release window; high demand for cinematic remake comparisons).
+### 1. James Bond (007) — *Movie / Breaking Controversy*
+* **Why fans care now:** Massive breaking news today—Robert Pattinson was officially announced as the new James Bond. The internet is intensely divided ("Batman can't be Bond" debate vs cinematic hype), driving huge reaction traffic.
+* **Hashtags:** `#JamesBond` `#RobertPattinson` `#007` `#Bond26`
+* **Moment to clip:** A side-by-side transition edit comparing Pattinson in *Tenet* / *The Batman* (1-2s dark suit entrance hook) straight into classic 007 gun-barrel action, ending on the iconic Bond martini line or gunshot cut.
+* **Source:** [BBC News](https://news.google.com/rss/articles/CBMiWEFVX3lxTFBaSWFRbVVtWnlQMy16Zzh2T2pmbTUtNThTVURWbmxudUF0c2xDQlN0UFRCWktmcXdpS0R0RGI2djlVSjJQeU5jNXNGWEZYTHhtdDlOYWNfRWQ?oc=5)
+* **Saturation status:** **Rapidly Spiking / High Competition** (must post within 24–48 hours of casting news).
 
 ---
 
-### 2. Jujutsu Kaisen (Anime / Manga)
-* **Why fans care now:** Massive evergreen edit volume. Convosight tracked 3.4M views across 52 creator edits in Asia between Nov 5–15 ([Convosight](https://www.convosight.com/tools/moments/asia/2026-11-14/jujutsu-kaisen-manga-edits)), with fan edits continuing to dominate YouTube Shorts (e.g. 1.1M+ views on recent Gojo/Toji shorts).
-* **Hashtags:** `#JJK` `#JujutsuKaisenEdit` `#GojoSatoru` `#AnimeEdit`
-* **Moment to clip:**
-  * *Hook (0–2s):* Sudden eye close-up / blindfold drop of Gojo timed to heavy bass drop.
-  * *Body (3–28s):* Unbroken sequence of Toji vs. Gojo hollow purple wind-up in chronological flow.
-  * *Rewatch loop (29–35s):* Sukuna's malevolent shrine hand sign fading back into the opening frame.
-* **Saturation:** **Extremely Oversaturated.** Needs top-tier audio syncing (e.g. Panchiko or Olivia Rodrigo trending sounds) and crisp color grading to stand out.
+### 2. Steel Ball Run: JoJo’s Bizarre Adventure — *Anime*
+* **Why fans care now:** Currently sitting as the #1 Top Airing anime on MyAnimeList (9.03 rating) with Episode 9 dropping Nov 20. SBR is universally praised by the JoJo fandom and generates massive high-engagement edit trends.
+* **Hashtags:** `#SteelBallRun` `#JoJosBizarreAdventure` `#SBR` `#GyroZeppeli`
+* **Moment to clip:** Johnny Joestar & Gyro Zeppeli horse racing start. Hook in 1s on Gyro's golden spin reveal, keep a 15s unbroken horse gallop story stretch, and end on Johnny’s glowing-eye awakening beat.
+* **Source:** [MyAnimeList - Steel Ball Run](https://myanimelist.net/anime/61469)
+* **Saturation status:** Moderate (high demand, but quality story edits rank easily).
 
 ---
 
-### 3. Grand Theft Auto / GTA 6 (Game)
-* **Why fans care now:** Huge spike in curiosity (72,813 Wikipedia views yesterday; Google Trends UK spiking on "GTA 6 physical copy code flaw"). Twitch GTA streams remain top-tier with streamers like Lacy hyping Miami teasers and Tumblurr pulling 45k+ live viewers.
-* **Hashtags:** `#GTA6` `#GTAV` `#GrandTheftAuto` `#GamingClips`
-* **Moment to clip:**
-  * *Hook (0–2s):* High-speed police cruiser PIT maneuver spinning out.
-  * *Body (3–30s):* 25-second continuous escape sequence across Vice City neon beachfront, matching beat drops to tire screeches.
-  * *Rewatch loop (31–35s):* "Wasted" splash screen or seamless camera pan into the sky that loops back to the road.
-* **Saturation:** High. Keep the edit purely focused on cinematic atmospheric driving rather than standard meme gameplay.
+### 3. Grand Theft Auto VI (GTA 6) — *Game*
+* **Why fans care now:** Pre-load hype and official launch week streams are dominating Twitch and search trends worldwide right now as creators tease incoming launch gameplay.
+* **Hashtags:** `#GTA6` `#GTAVI` `#ViceCity` `#GTA6Trailer`
+* **Moment to clip:** Vice City highway driving montage. Hook on a 1s high-speed car crash/drift, transitioning into Jason and Lucia side-by-side heist beat, ending on the Vice City sunset title drop with siren SFX.
+* **Source:** [Twitch Live Scans] / [Wikipedia Top Read](https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI)
+* **Saturation status:** **EXTREMELY OVERSATURATED** (needs pristine audio sync or unique story framing to go viral).
 
 ---
 
-### 4. Genshin Impact (Game)
-* **Why fans care now:** Convosight logged 1.8M views across 48 creators (Nov 5–15) focusing on character builds and animations ([Convosight](https://www.convosight.com/tools/moments/asia/2026-11-14/genshin-impact-characters)), plus official buzz around Mitya's fan-art dance showcases ([Trari](https://trari.com/en/story/genshinimpact-37864/)).
-* **Hashtags:** `#GenshinImpact` `#GenshinEdit` `#Zhongli` `#RaidenShogun`
-* **Moment to clip:**
-  * *Hook (0–2s):* Raiden Shogun pulling the Musou no Hitotachi sword.
-  * *Body (3–28s):* Burst cutscene montage flowing seamlessly between Zhongli's meteor drop and Raiden's domain slash.
-  * *Rewatch loop (29–35s):* Rapid character turnaround timed to an abrupt audio cut.
-* **Saturation:** High, but choreography/burst transition edits have strong algorithmic retention.
+### 4. Black Clover Season 2 — *Anime*
+* **Why fans care now:** Rated 8.89 on MAL and trending high on AniList with Episode 8 airing Nov 21. Battle climax scenes are currently pulling high watch times on short-form feeds.
+* **Hashtags:** `#BlackClover` `#Asta` `#BlackCloverSeason2` `#AnimeEdit`
+* **Moment to clip:** Asta’s Black Form awakening vs enemy spell barrage. Hook on a 1-2s anti-magic sword unsheathing, hold through a unbroken 12s blade clash in story order, cut to black right on Asta's demonic yell echo.
+* **Source:** [MyAnimeList - Black Clover S2](https://myanimelist.net/anime/61967)
+* **Saturation status:** Moderate-High.
 
 ---
 
-### 5. JoJo's Bizarre Adventure: Steel Ball Run (Anime)
-* **Why fans care now:** Holds a 9.03 rating on MyAnimeList (Top Airing #1) and a trending score of 139 on AniList, heading into Episode 9 on Nov 20, 2026.
-* **Hashtags:** `#SteelBallRun` `#JJBA` `#SBR` `#JoJosBizarreAdventure`
-* **Moment to clip:**
-  * *Hook (0–2s):* Gyro Zeppeli spinning the steel ball with sound design isolated.
-  * *Body (3–30s):* Continuous horse-racing sprint stretch: Johnny Joestar unlocking his Stand alongside Gyro navigating canyon obstacles.
-  * *Rewatch loop (31–34s):* Freeze frame on iconic manga panel overlay transitioning back to the opening shot.
-* **Saturation:** Moderate. JoJo fans prioritize aesthetic color shifts and phonk/rock audio pairings.
+### 5. Genshin Impact — *Game*
+* **Why fans care now:** Official showcase featured Mitya's fan-art dance animation paired with Archon cutscenes (Zhongli & Raiden Shogun), driving 1.8M+ views across Asian short-form platforms.
+* **Hashtags:** `#GenshinImpact` `#Zhongli` `#GenshinEdit` `#RaidenShogun`
+* **Moment to clip:** Rhythm sync cut comparing Archon burst animations to beat drops. Hook in 1s on Zhongli’s meteor summon ("I will have order"), followed by unbroken burst animation beats, ending on Raiden Shogun’s domain slash.
+* **Source:** [Trari Newsroom](https://trari.com/en/story/genshinimpact-37864/) / [Convosight Data](https://www.convosight.com/tools/moments/asia/2026-11-14/genshin-impact-characters)
+* **Saturation status:** High on basic builds, but **Moderate** on cinematic Archon lore edits.
 
 ---
 
-### 6. The Punisher: One Last Kill (Movie / Marvel)
-* **Why fans care now:** Official trailer dropped Nov 13 highlighting Jon Bernthal's return as a "one-man army" ([JoBlo](https://news.google.com/rss/articles/CBMiaEFVX3lxTE4xNlZ2aG02TmlPU3luSDlJMlc5bUZ0c3o1ZVFDVm43U3ZZdmQ5Mm5BUVBxaUl5ZktQRV9HbTNDYzRzdjhjWWdBUWczdFZwZWpoaFNBN3dmTzJ1djJCWlliTHRkdnY3dTJJ0gFuQVVfeXFMTWlnUEduV0tQUHRjNWdZcV9nMDNody1GbmlkNFhyOG1QZW1pUUxYMmNZZU5Idk1mR1gtU2tHTEtNZDE1X1FvNk5DZXNzYkVtNnFyVFJUZ05VdnRpMmJqVlJMdDJTaU5uZUUwQUFvNWc?oc=5)).
-* **Hashtags:** `#ThePunisher` `#JonBernthal` `#MarvelEdit` `#FrankCastle`
-* **Moment to clip:**
-  * *Hook (0–2s):* Heavy shotgun reload audio paired with Frank Castle glaring into the camera in rain.
-  * *Body (3–28s):* Raw hallway or corridor fight beats from official trailer footage kept in chronological, visceral pacing.
-  * *Rewatch loop (29–33s):* Spray-painting the skull emblem on body armor, cutting right before the final stroke.
-* **Saturation:** Low. Fresh trailer release gives early-mover advantage before fan trailers flood feeds.
+### 6. The Apothecary Diaries Season 3 — *Anime*
+* **Why fans care now:** Episode 8 airs Nov 20; holding an 8.6 rating on MAL. Excellent non-shonen pick that captures high female and general anime audiences on TikTok.
+* **Hashtags:** `#TheApothecaryDiaries` `#Maomao` `#KusuriyaNoHitorigoto` `#MaomaoEdit`
+* **Moment to clip:** Maomao’s unhinged poison tasting reaction cut against Jinshi’s stunned expression. Hook in 1s on her crazed smile, hold on the unbroken 10s poison explanation dialogue, resolve on Jinshi's facepalm.
+* **Source:** [MyAnimeList - Apothecary Diaries S3](https://myanimelist.net/anime/61987)
+* **Saturation status:** **Low-Moderate / High Opportunity** (much lower competition than battle shonen).
 
 ---
 
-### 7. Black Clover Season 2 (Anime)
-* **Why fans care now:** Top tier shonen activity: #2 on MAL top airing with an 8.89 score and 262 trending score on AniList, leading up to Episode 8 on Nov 21, 2026.
-* **Hashtags:** `#BlackClover` `#Asta` `#Yuno` `#AnimeClips`
-* **Moment to clip:**
-  * *Hook (0–2s):* Asta's demon slayer sword slamming into the ground.
-  * *Body (3–29s):* High-frame-rate combat stretch: Asta and Yuno executing tandem spell strikes in chronological order without choppy jump cuts.
-  * *Rewatch loop (30–34s):* Asta shouting his grimoire summon line, cut sharply on the flash.
-* **Saturation:** Moderate to High. Straight combat fluidity wins here over heavy filter effects.
+### 7. Jujutsu Kaisen — *Anime / Manga*
+* **Why fans care now:** Global "JJK in Concert" tour news and ongoing character edit momentum (Gojo, Sukuna, Toji) pulled over 3.6M TikTok views in weekly scanner tracking.
+* **Hashtags:** `#JujutsuKaisen` `#GojoSatoru` `#JJK` `#Sukuna`
+* **Moment to clip:** Gojo unmasking his Six Eyes synced to a orchestral/bass audio track. Hook on the 1s blindfold pull, hold unbroken through Domain Expansion hand sign, final beat on the "Infinite Void" flash.
+* **Source:** [Convosight JJK Edits](https://www.convosight.com/tools/moments/asia/2026-11-14/jujutsu-kaisen-manga-edits) / [The Sun Malaysia](https://news.google.com/rss/articles/CBMigAFBVV95cUxQb2VGOHZwSHRGaVh5aXRCZkJPVjVOQzhEeTZndDNXazdiVHdCQzA5TUVMckl2MTQ0dmY5eVFwYUlxYmh5a3FsYWJ2NUtSd3dyNjRGMEliNWhtQnBwVDd4Y2VSNkZXWHVoaTAtNTFaNUwxdFZHUTVVaS1qU0FJRmtFVw?oc=5)
+* **Saturation status:** **OVERSATURATED** (requires top-tier audio mixing like orchestral bass boosts to cut through).
 
 ---
 
-### 8. The Apothecary Diaries Season 3 (Anime)
-* **Why fans care now:** MAL score of 8.60 (230k+ members) and AniList score 223 heading into Episode 8 on Nov 20, 2026. Highly shareable among female and general anime audiences.
-* **Hashtags:** `#TheApothecaryDiaries` `#KusuriyaNoHitorigoto` `#Maomao` `#Jinshi`
-* **Moment to clip:**
-  * *Hook (0–2s):* Maomao's classic dry, skeptical side-eye expression.
-  * *Body (3–28s):* Unbroken palace investigation sequence—Maomao tasting an ingredient, diagnosing poison, and delivering a deadpan reveal.
-  * *Rewatch loop (29–33s):* Jinshi's exaggerated blushing reaction looping back into Maomao's unimpressed gaze.
-* **Saturation:** Low to Moderate. Focus is usually dialogue/story rather than AMVs, making narrative-hook montages stand out.
-
----
-
-### Production Notes for MotionVault
-* **Sound Selection:** Test alternative rising tracks from the charts (e.g., bôa's *"Duvet"* for JoJo/Genshin, or Panchiko's *"D>E>A>T>H>M>E>T>A>L"* for dark shonen/Punisher cuts).
-* **Copyright Hygiene:** On-screen watermark of the title name, ensure cuts use only officially published trailers/episodes, and keep continuous clip segments under transformative commentary/montage standards.
+### 8. Vinland Saga (Thorfinn "No Enemies" Arc) — *Anime / Evergreen Viral Edit*
+* **Why fans care now:** Re-emerged as a dominant YouTube Shorts / TikTok audio trend this week, with top fan edits pulling 6M+ views (*"THIS STORY BROKE MY HEART"* and *"You Have No Enemies"*).
+* **Hashtags:** `#VinlandSaga` `#Thorfinn` `#YouHaveNoEnemies` `#VinlandSagaEdit`
+* **Moment to clip:** Older farm-arc Thorfinn standing in snow stating "I have no enemies" juxtaposed against his rage-filled young warrior duels. Hook on a heavy punch impact (1s), 15s unbroken emotional dialogue stretch, ending on snow falling in silence.
+* **Source:** [YouTube Shorts Edit - Sohail](https://youtu.be/iArv9yUvtiQ) / [YouTube Shorts Edit - Eric](https://youtu.be/BVIX9vh6LBQ)
+* **Saturation status:** Moderate (emotional audio tracks continuously re-viralize this edit format).

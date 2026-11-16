@@ -1,70 +1,74 @@
-# Social Strategist (updated 2026-11-15)
+# Social Strategist (updated 2026-11-16)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-### Clip 1: Steel Ball Run: JoJo’s Bizarre Adventure (Anime)
-
-* **On-Screen Hook Text (6 words max):**  
-  *Not just a horse race 💀*
-
-* **TikTok Captions:**  
-  1. Gyro did not come to play fair 💀  
-  2. The animation jump in Episode 9 is completely unreal.  
-  3. Who has the most broken Stand in Part 7 so far?  
-  4. Bro really thought he was in a normal race 😭  
-
-* **Hashtags:**  
-  `#SteelBallRun #SBR #JoJosBizarreAdventure #AnimeEdit #GyroZeppeli #JJBA`
-
-* **YouTube Shorts Title (<60 chars):**  
-  `They Thought It Was A Normal Race 💀` (36 characters)
-
-* **Posting Times (New York / EST):**  
-  * **TikTok (7:30 PM EST):** Peak evening unwind hours when high-retention anime edits get maximum US algorithmic watch-time.  
-  * **Shorts (4:00 PM EST):** Captures afternoon dismissal traffic and sets up the clip for YouTube's evening feed push.
+# MotionVault Social Strategy & Distribution Plan (2026-11-16)
 
 ---
 
-### Clip 2: Grand Theft Auto VI – "Macca & Friends" (Gaming)
+### Clip 1: *Steel Ball Run: JoJo’s Bizarre Adventure* — Gyro’s Golden Spin
 
-* **On-Screen Hook Text (6 words max):**  
-  *Rockstar really went this far 😭*
+* **On-Screen Hook Text (6 words max):**
+  `The moment the spin unlocked...`
 
-* **TikTok Captions:**  
-  1. Rockstar put a whole animated show inside GTA 6 😭  
-  2. That match cut into Leonida was too clean.  
-  3. What is the first location you're exploring in Leonida?  
-  4. The swamp physics in this game look terrifyingly real.  
+* **TikTok Captions (Draft Options):**
+  1. The spin energy is unmatched 🌀🔥 Who's ready for Episode 9 this week? *(Comment driver)*
+  2. Gyro Zeppeli really showed us what peak animation looks like.
+  3. That Golden Ratio aura drop went way too hard.
+  4. Save this edit before Episode 9 drops 📌
 
-* **Hashtags:**  
-  `#GTA6 #GrandTheftAuto #GamingEdit #Leonida #RockstarGames #GTA6Clips`
+* **Hashtags (5-6 mix):**
+  `#SteelBallRun #JoJosBizarreAdventure #GyroZeppeli #AnimeEdit #SBR #GoldenSpin`
 
-* **YouTube Shorts Title (<60 chars):**  
-  `GTA 6 Details Are Getting Out Of Hand 💀` (41 characters)
+* **YouTube Shorts Title (<60 chars):**
+  `Gyro Zeppeli Unlocked God Mode 🌀🔥` *(35 chars)*
 
-* **Posting Times (New York / EST):**  
-  * **TikTok (8:15 PM EST):** Prime night-time slot for gaming content when core console/PC players browse before logging off.  
-  * **Shorts (1:00 PM EST):** Catches US lunch breaks while aligning with peak evening gaming traffic across the UK and Europe.
+* **Best Posting Time (NY Time / EST):**
+  * **TikTok:** 12:30 PM EST | **Shorts:** 1:00 PM EST
+  * **Reason:** Catches the US East Coast lunch-break scroll while leveraging active search volume for *Steel Ball Run* (#1 on MyAnimeList).
 
 ---
 
-### Clip 3: Ebenezer – Johnny Depp Transformation (Movie)
+### Clip 2: *Black Clover Season 2* — Asta’s "God-Mode" Awakening
 
-* **On-Screen Hook Text (6 words max):**  
-  *Nobody recognized Johnny Depp here ☠️*
+* **On-Screen Hook Text (6 words max):**
+  `Nobody expected him to show up...`
 
-* **TikTok Captions:**  
-  1. Didn't realize it was Johnny Depp until he spoke ☠️  
-  2. That cold glare at the end gave actual chills.  
-  3. Is this going to be Johnny Depp's best villain role?  
-  4. He commanded the entire room without raising his voice.  
+* **TikTok Captions (Draft Options):**
+  1. Is Asta’s Anti-Magic transformation the cleanest flex in modern anime? *(Comment driver)*
+  2. He really sliced through every spell in continuous motion ⚔️
+  3. When the single wing pops out, you know it's over for them.
+  4. Black Clover S2 is carrying battle shonen right now 🔥
 
-* **Hashtags:**  
-  `#JohnnyDepp #Ebenezer #MovieEdit #Cinematic #Scrooge #MovieClips`
+* **Hashtags (5-6 mix):**
+  `#BlackClover #Asta #BlackCloverSeason2 #AnimeEdit #AntiMagic #BlackCloverEdit`
 
-* **YouTube Shorts Title (<60 chars):**  
-  `Nobody Recognized Johnny Depp Here ☠️` (37 characters)
+* **YouTube Shorts Title (<60 chars):**
+  `Nobody Expected Him To Show Up ☠️🔥` *(34 chars)*
 
-* **Posting Times (New York / EST):**  
-  * **TikTok (6:00 PM EST):** The post-work commuter window where high-atmosphere, dialogue-heavy cinematic clips retain viewers.  
-  * **Shorts (11:30 AM EST):** Midday cinematic browsing peak on YouTube Shorts where trailer/film recaps see fast early velocity.
+* **Best Posting Time (NY Time / EST):**
+  * **TikTok:** 4:30 PM EST | **Shorts:** 5:00 PM EST
+  * **Reason:** Lines up with after-school/after-work hours on the East Coast when high-energy battle shonen edits pull peak watch times.
+
+---
+
+### Clip 3: *Vinland Saga* — Thorfinn "I Have No Enemies" Narrative Edit
+
+* **On-Screen Hook Text (6 words max):**
+  `THIS STORY BROKE MY HEART 💔`
+
+* **TikTok Captions (Draft Options):**
+  1. Did Thorfinn make the right choice by walking away from revenge? *(Comment driver)*
+  2. From pure rage to absolute peace... Thorfinn’s growth hits different.
+  3. "I have no enemies. Nobody in this world is my enemy." ❄️
+  4. Put on headphones for this one 🎧
+
+* **Hashtags (5-6 mix):**
+  `#VinlandSaga #Thorfinn #YouHaveNoEnemies #VinlandSagaEdit #AnimeEdit #Duvet`
+
+* **YouTube Shorts Title (<60 chars):**
+  `THIS STORY BROKE MY HEART 💔 | Thorfinn` *(39 chars)*
+
+* **Best Posting Time (NY Time / EST):**
+  * **TikTok:** 8:00 PM EST | **Shorts:** 8:30 PM EST
+  * **Reason:** Fits the late-night melancholic scroll window where slowed audio edits (bôa - "Duvet") achieve high retention and comment debates.
