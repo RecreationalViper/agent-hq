@@ -317,7 +317,7 @@ h1{font-weight:500;font-size:92px;line-height:1.02;letter-spacing:-.01em;text-wr
 
 function pageHtml(post, painted) {
   if (/^scene-/.test(post.background || "") && post.format !== "story") return sceneHtml(post, painted);
-  const tips = post.background === "tips" ? (post.tips || []).filter(Boolean).slice(0, 5) : [];
+  const tips = post.background === "tips" ? (post.tips || []).map((x) => String(x).replace(/^\s*(\d+[.)]|[-•*])\s*/, "").trim()).filter(Boolean).slice(0, 5) : []; // the pin numbers them itself
   const story = post.format === "story";
   const t = THEMES[post.product] || THEMES["soft-botanical"];
   const W = story ? 1080 : 1000, H = story ? 1920 : 1500;
