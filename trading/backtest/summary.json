@@ -1,27 +1,27 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-16",
   "period": {
-    "from": "2024-12-23",
-    "to": "2026-11-09",
+    "from": "2024-12-31",
+    "to": "2026-11-16",
     "tradingDays": 471
   },
   "strategy": "Every 5 trading days, hold the top 5 assets by momentum score (0.6×20-day + 0.4×5-day return, trend bonus, RSI>75 penalty) that are above their 50-day average; max 2 single stocks; equal slots; the rest in cash.",
   "strategyResult": {
-    "total": 0.05234540930130649,
-    "annual": 0.027733767941308995,
-    "maxDrawdown": -0.26278288386234716,
-    "sharpe": 0.2365826115383432
+    "total": 0.0476349868195971,
+    "annual": 0.025264680652771432,
+    "maxDrawdown": -0.2627822398634112,
+    "sharpe": 0.22569530192285397
   },
   "benchmarkSPY": {
-    "total": 0.3030051239440523,
-    "annual": 0.1524728087564402,
-    "maxDrawdown": -0.18737314922641835,
-    "sharpe": 0.9392865720250884
+    "total": 0.28758590691605046,
+    "annual": 0.14514039911424081,
+    "maxDrawdown": -0.18737314922641823,
+    "sharpe": 0.9013549081164451
   },
   "trades": 501,
   "roundTrips": 248,
   "winRate": 0.47580645161290325,
-  "profitFactor": 1.0666758471846867,
+  "profitFactor": 1.065205916645382,
   "assumptions": {
     "start": "$50",
     "fills": "next day's open",
@@ -32,6 +32,6 @@
   "data": {
     "symbols": 36,
     "pages": 2,
-    "sha256": "e8dd9e2316562c3023e724419898f0d25f80816531a19c0271db8eb78ca4a964"
+    "sha256": "eb9fd8e8ac44a1b05a6fdb74483074548a034e26cb28717511abe470973ea02e"
   }
 }
