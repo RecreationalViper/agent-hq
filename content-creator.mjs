@@ -160,6 +160,8 @@ const PIECE = {
   "e-sign": "Candle table sign 8x10 (\"This candle burns in loving memory of\")", "e-card": "Christmas memory cards (dark green or ink-saver light)", "e-orn": "Ornament keepsake cards with a ribbon hole",
   "l-sign": "Longest Night table sign 8x10", "l-card": "Candle-lighting cards", "l-prog1": "Blue Christmas service program (names remembered, order of service)"
 };
+// Short name printed on the pin, e.g. "Fold-over place cards".
+const pieceName = (k) => (PIECE[k] || "").replace(/\s*\(.*?\)/g, "").replace(/,.*$/, "").trim();
 function featured(products) {
   const day = Math.floor(Date.parse(DATE) / 864e5);
   return products.map((p) => { const im = THEMES[p.id]?.images || []; return im.length ? [0, 1].map((k) => im[(day + k * 2) % im.length]).filter((v, i, a) => a.indexOf(v) === i).map((k) => `${p.name}: ${PIECE[k] || k} (picture "${k}")`) : []; }).flat();
@@ -303,13 +305,14 @@ h1{font-weight:500;font-size:92px;line-height:1.02;letter-spacing:-.01em;text-wr
 .legs{position:relative;flex:1;width:420px}
 .leg{position:absolute;top:-4px;bottom:-40px;width:26px;background:linear-gradient(90deg,#a87a4b,#8a6238);border-radius:3px;transform-origin:top}
 .leg.l{left:0;transform:rotate(7deg)}.leg.r{right:0;transform:rotate(-7deg)}
+.piece{position:absolute;left:0;right:0;bottom:128px;z-index:4;text-align:center;font-family:-apple-system,"Helvetica Neue",Arial,sans-serif;font-size:20px;letter-spacing:.24em;text-transform:uppercase;color:${t.accent}}
 .brand{position:absolute;left:0;right:0;bottom:54px;z-index:4;text-align:center;font-size:50px;font-weight:500}
 .brand:before,.brand:after{content:"";display:inline-block;width:130px;height:1px;background:${t.accent};opacity:.7;vertical-align:middle;margin:0 26px}
 </style></head><body>${bg}
 <div class="head">${post.product !== "soft-botanical" ? `<p class="kicker">${esc((THEMES[post.product].page ? post.kicker || "" : "") || "")}</p>` : ""}<h1>${esc(post.headline)}</h1>${post.subline ? `<p class="sub">${esc(post.subline)}</p>` : ""}</div>
 <div class="stage">${venue ? `<div class="easel"><div class="paper sign" style="position:relative"><img src="${img}"></div><div class="ledge"></div><div class="legs"><div class="leg l"></div><div class="leg r"></div></div></div>`
   : `<div class="paper main"><img src="${img}"></div>${second ? `<div class="paper cards"><img src="${second}"></div>` : ""}`}</div>
-<div class="bottom"></div><div class="brand">Forever Held</div></body></html>`;
+<div class="bottom"></div>${pieceName(key) ? `<div class="piece">${esc(pieceName(key))}</div>` : ""}<div class="brand">Forever Held</div></body></html>`;
 }
 
 function pageHtml(post, painted) {
@@ -360,7 +363,7 @@ h1{font-weight:500;font-size:${story ? 96 : 82}px;line-height:1.02;max-width:${s
 </style></head><body${tips.length >= 3 ? ' class="is-tips"' : ""}>${bg}<div class="frame"></div>
 <div class="wrap"><div class="brand">FOREVER HELD</div><h1>${esc(post.headline)}</h1>${post.subline ? `<p class="sub">${esc(post.subline)}</p>` : ""}
 ${tips.length >= 3 ? `<ol class="tips">${tips.map((x) => `<li>${esc(x)}</li>`).join("")}</ol>` : `<div class="product"><img src="${img}"></div>`}
-<div class="foot"${tips.length >= 3 ? ` style="text-align:left"` : ""}>${post.product === "soft-botanical" ? "Editable printable memorial kit" : `${esc((t.page && post.kicker) || "Printable remembrance set")}`}<b>INSTANT DOWNLOAD</b></div></div>${tips.length >= 3 ? `<div class="mini"><img src="${img}"></div>` : ""}</body></html>`;
+<div class="foot"${tips.length >= 3 ? ` style="text-align:left"` : ""}>${esc(pieceName(post.product_image) || (post.product === "soft-botanical" ? "Editable printable memorial kit" : (t.page && post.kicker) || "Printable remembrance set"))}<b>INSTANT DOWNLOAD</b></div></div>${tips.length >= 3 ? `<div class="mini"><img src="${img}"></div>` : ""}</body></html>`;
 }
 
 function loadPlaywright() {
