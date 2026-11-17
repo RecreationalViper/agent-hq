@@ -2,73 +2,73 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# MotionVault Social Strategy & Distribution Plan (2026-11-16)
+Here is the social posting strategy for today’s three clips:
 
 ---
 
-### Clip 1: *Steel Ball Run: JoJo’s Bizarre Adventure* — Gyro’s Golden Spin
+### Clip 1 (Gaming): "Saying Goodbye to Los Santos" (GTA V → GTA VI)
 
 * **On-Screen Hook Text (6 words max):**
-  `The moment the spin unlocked...`
+  > *Saying goodbye to Los Santos forever.* (6 words)
 
-* **TikTok Captions (Draft Options):**
-  1. The spin energy is unmatched 🌀🔥 Who's ready for Episode 9 this week? *(Comment driver)*
-  2. Gyro Zeppeli really showed us what peak animation looks like.
-  3. That Golden Ratio aura drop went way too hard.
-  4. Save this edit before Episode 9 drops 📌
+* **TikTok Captions:**
+  1. 13 years of memories in Los Santos. Time to pack our bags and close the chapter.
+  2. Where were you when GTA V first dropped in 2013?
+  3. One last sunset cruise down Del Perro Freeway before Vice City takes over.
+  4. See you on the other side. 🌴🚗
 
-* **Hashtags (5-6 mix):**
-  `#SteelBallRun #JoJosBizarreAdventure #GyroZeppeli #AnimeEdit #SBR #GoldenSpin`
+* **Hashtags (5–6):**
+  `#gtavi` `#gta6` `#gtav` `#gta6hype` `#rockstargames` `#lossantos`
 
-* **YouTube Shorts Title (<60 chars):**
-  `Gyro Zeppeli Unlocked God Mode 🌀🔥` *(35 chars)*
+* **YouTube Shorts Title (< 60 characters):**
+  > `13 years in Los Santos ends now 🌴🚗 #GTA6` *(42 chars)*
 
-* **Best Posting Time (NY Time / EST):**
-  * **TikTok:** 12:30 PM EST | **Shorts:** 1:00 PM EST
-  * **Reason:** Catches the US East Coast lunch-break scroll while leveraging active search volume for *Steel Ball Run* (#1 on MyAnimeList).
+* **Posting Times (New York Time / EST):**
+  * **TikTok: 7:00 PM EST** — Peaks during prime evening gaming chatter while pre-release hype streams are live.
+  * **Shorts: 3:30 PM EST** — Allows YouTube's recommendation engine 2–3 hours to index the video right before the 6–9 PM US traffic surge.
 
 ---
 
-### Clip 2: *Black Clover Season 2* — Asta’s "God-Mode" Awakening
+### Clip 2 (Movies/Actor): Robert Pattinson – "The Evolution"
 
 * **On-Screen Hook Text (6 words max):**
-  `Nobody expected him to show up...`
+  > *They laughed when he was cast.* (6 words)
 
-* **TikTok Captions (Draft Options):**
-  1. Is Asta’s Anti-Magic transformation the cleanest flex in modern anime? *(Comment driver)*
-  2. He really sliced through every spell in continuous motion ⚔️
-  3. When the single wing pops out, you know it's over for them.
-  4. Black Clover S2 is carrying battle shonen right now 🔥
+* **TikTok Captions:**
+  1. From teenage vampire to one of the most intense actors alive today.
+  2. Did Robert Pattinson give us the most brutal Batman combat scene ever?
+  3. The pure physical presence in this subway sequence still gives chills.
+  4. He didn't just play the role—he owned it. 🦇
 
-* **Hashtags (5-6 mix):**
-  `#BlackClover #Asta #BlackCloverSeason2 #AnimeEdit #AntiMagic #BlackCloverEdit`
+* **Hashtags (5–6):**
+  `#thebatman` `#robertpattinson` `#batmanedit` `#filmtok` `#cinematics` `#batman`
 
-* **YouTube Shorts Title (<60 chars):**
-  `Nobody Expected Him To Show Up ☠️🔥` *(34 chars)*
+* **YouTube Shorts Title (< 60 characters):**
+  > `They really laughed when he was cast 🗿🦇` *(41 chars)*
 
-* **Best Posting Time (NY Time / EST):**
-  * **TikTok:** 4:30 PM EST | **Shorts:** 5:00 PM EST
-  * **Reason:** Lines up with after-school/after-work hours on the East Coast when high-energy battle shonen edits pull peak watch times.
+* **Posting Times (New York Time / EST):**
+  * **TikTok: 12:30 PM EST** — Catches the midday lunch-break scroll where debate-driven film culture takes gain fast traction.
+  * **Shorts: 5:00 PM EST** — Hits high-engagement movie viewers wrapping up work and school commutes on the East Coast.
 
 ---
 
-### Clip 3: *Vinland Saga* — Thorfinn "I Have No Enemies" Narrative Edit
+### Clip 3 (Anime): *Vinland Saga* – "I Have No Enemies"
 
 * **On-Screen Hook Text (6 words max):**
-  `THIS STORY BROKE MY HEART 💔`
+  > *He spent youth as a demon.* (6 words)
 
-* **TikTok Captions (Draft Options):**
-  1. Did Thorfinn make the right choice by walking away from revenge? *(Comment driver)*
-  2. From pure rage to absolute peace... Thorfinn’s growth hits different.
-  3. "I have no enemies. Nobody in this world is my enemy." ❄️
-  4. Put on headphones for this one 🎧
+* **TikTok Captions:**
+  1. From taking lives in cold blood to taking 100 punches with a calm heart.
+  2. Is Thorfinn’s transformation the greatest redemption arc in all of anime?
+  3. True strength isn't learning how to fight—it's learning when to stop.
+  4. He finally understood what his father tried to teach him. 🕊️🌾
 
-* **Hashtags (5-6 mix):**
-  `#VinlandSaga #Thorfinn #YouHaveNoEnemies #VinlandSagaEdit #AnimeEdit #Duvet`
+* **Hashtags (5–6):**
+  `#vinlandsaga` `#thorfinn` `#animeedit` `#animetok` `#vinlandsagaedit` `#ihavenoenemies`
 
-* **YouTube Shorts Title (<60 chars):**
-  `THIS STORY BROKE MY HEART 💔 | Thorfinn` *(39 chars)*
+* **YouTube Shorts Title (< 60 characters):**
+  > `He finally found peace... 🥹🥀 #vinlandsaga` *(45 chars)*
 
-* **Best Posting Time (NY Time / EST):**
-  * **TikTok:** 8:00 PM EST | **Shorts:** 8:30 PM EST
-  * **Reason:** Fits the late-night melancholic scroll window where slowed audio edits (bôa - "Duvet") achieve high retention and comment debates.
+* **Posting Times (New York Time / EST):**
+  * **TikTok: 9:00 PM EST** — Late-night "chill/emotional" scrolling window where introspective anime edits and audio like bôa's *Duvet* hit peak completion rates.
+  * **Shorts: 1:00 PM EST** — Early afternoon slot captures the European evening anime audience alongside US daytime viewers.

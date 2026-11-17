@@ -1,17 +1,5 @@
 [
   {
-    "file": "2026-11-16-backtest.md",
-    "agent": "backtest",
-    "name": "Backtest Analyst",
-    "date": "2026-11-16"
-  },
-  {
-    "file": "2026-11-16-studio-producer.md",
-    "agent": "studio-producer",
-    "name": "Producer",
-    "date": "2026-11-16"
-  },
-  {
     "file": "2026-11-16-growth-coach.md",
     "agent": "growth-coach",
     "name": "Growth Coach",
@@ -63,6 +51,18 @@
     "file": "2026-11-16-studio-scout.md",
     "agent": "studio-scout",
     "name": "Trend Scout",
+    "date": "2026-11-16"
+  },
+  {
+    "file": "2026-11-16-backtest.md",
+    "agent": "backtest",
+    "name": "Backtest Analyst",
+    "date": "2026-11-16"
+  },
+  {
+    "file": "2026-11-16-studio-producer.md",
+    "agent": "studio-producer",
+    "name": "Producer",
     "date": "2026-11-16"
   },
   {

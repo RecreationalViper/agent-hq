@@ -1,199 +1,199 @@
-# Live data (2026-11-16)
+# Live data (2026-11-17)
 
 Collected minutes before this run from free public sources. These numbers are real; quote them, and don't invent others.
 
 ## Google Trends: what's spiking in search right now, worldwide
 Searches spiking in the last 24h per country (approx. searches). Pick out movies, shows, anime, games, actors and music.
-- **United States:** car chase (500+; "Hwy. 78 in Loganville closed in both directions after crash") · the motley fool (500+; "3 Financial Stocks to Buy and Hold That Turned $1,000 Into More Than $5,000 Over the Past ") · ed bastian (500+; "‘Absurd’: Delta CEO says it takes longer to fly from ATL to LGA today than in the 1950s") · malta vs gibraltar (1000+; "Gibraltar vs Malta: UEFA Nations League stats & head-to-head") · ncaa women's soccer tournament 2026 (500+; "2026 DI women's soccer championship: Selection show info, bracket, schedule") · spacex stocks (5000+; "Why SpaceX Stock Is Down After Its Historic Starship Catch") · lauren blake boultier (200+; "'The Bachelor' season 30 to feature NFL quarterback Sam Hartman") · katie holmes (200+; "Katie Holmes and Gwyneth Paltrow Upgraded Their Blue Jeans for This Rich-Looking Denim Tre") · clarence thomas first amendment warning (5000+; "Supreme Court won’t review implicit bias mandate for California medical courses") · bleeding green nation (200+; "Week 11 Flex Scheduling: Giants vs. Jaguars moves to 4:25 p.m. ET on Nov. 22")
-- **United Kingdom:** luke littler (2000+; "Grand Slam of Darts: Commentary, updates, scores, analysis with Luke Littler, Gerwyn Price") · ricky hatton (500+; "Thousands enjoy Game4Ricky as stars turn out at the Joie Stadium") · power cut (200+; "Nearly 500 homes hit by sudden power cut as engineers rush to scene") · sidecar tt (100+; "Nick Crowe strongly criticises the TT organisers’ approach") · wayne rooney weight loss (1000+; "I’m A Celeb’s Wayne Rooney lifts lid on dramatic weight loss, stopping boozing & how his m") · wayne rooney age (500+; "Inside Wayne Rooney's luxurious Cheshire home, complete with multiple bars and its own foo") · who won im a celeb 2024 (500+; "I'm A Celeb fans are convinced they already know who will win the show this year") · ashley roberts strictly come dancing return (2000+; "Angela Rippon and Ashley Roberts are the first celebrities returning for the Strictly Come") · leigh francis i'm a celebrity (200+; "Scarlett Moffatt: ‘I hope I’m A Celebrity shows the real Leigh Francis’") · polio (200+; "Mothers fear for Gaza’s children as polio returns amid genocide")
-- **Canada:** ambassadeur (200+; "Ottawa et Washington peuvent s’entendre sur le français, affirme l’ex-ambassadeur américai") · abbotsford (100+; "Pedestrian seriously injured after being hit by truck in Abbotsford") · korey dropkin (100+; "Dropkin to sub on Team Dunstone at HearingLife National") · brajan gruda (200+; "Klares Votum: Gruda einer für die Bayern") · nations league standings (200+; "Belgium 4-1 Italy: Comeback win secures Nations League quarter-final spot") · blackout (200+; "Did The Simpsons predict a mass power outage on 17 November? And what to expect if it were") · nvidia earnings (100+; "Nasdaq falls more than 2%, extending slide to third day as Nvidia drags down AI trade") · cole hauser (500+; "‘Yellowstone’s Cole Hauser Developing FBI Action Thriller ‘Pale Horse’ Alongside Constanti") · elizabeth hurley (100+; "Billy Ray Cyrus and Elizabeth Hurley Make the Red Carpet a Family Affair at the Baby2Baby ") · alemania - países bajos (100+; "Alemania 5-0 Países Bajos: resumen, goles y resultado")
-- **Japan:** 福岡天気 (500+; "【北九州市八幡西区】11/17 最高17℃、ひんやりする場面も、朝から昼間は雨の予想【朝版】") · 静岡市 天気 (200+; "【静岡市駿河区】11/17 最高17℃、ひんやりする場面も、昼間から夜は雨の予想【朝版】") · 日中首脳会談 2025 (1000+; "エネルギー分野でASEANと協力 中国は高市氏との接触を徹底回避") · スンスン 47 都 道府県 (2000+; "「SUNSUN meets 47」がはじまります") · 天氣 (200+; "冷空氣要來了！賈新興曬「一圖」 未來10天天氣一次看") · 仙台天気 (100+; "【大崎市】11/17 最低1℃、冷え込み、夜は雨の予想【朝版】") · 宮崎市天気 (100+; "【宮崎市】11/17 最高21℃、朝から昼間は雨、昼間は強く降る予想【朝版】") · 下院 (100+) · グリ下の帝王 (200+; "大阪 “グリ下の帝王”逮捕 生活保護費を不正受給か") · 四国電力 (200+; "「よんでんコンシェルジュ」全会員情報流出 愛媛は約２０万件 委託先サービスに不正アクセス【愛媛】（テレビ愛媛）")
-- **South Korea:** 아리바이오 (100+; "[아리바이오의 도전과 가치] ⑤국내 바이오기업의 전례를 새로 쓰다 - 미래가치의 상단은?") · 코트 (500+; "겨울에 '이것' 없으면 코트 잘못 입는 거예요") · 항공모함 (200+; "루스벨트함도 중동 도착…이란 주변에 미 항모 3척 집결") · 개인정보 (500+; "서울시립대 “15명 개인정보 유출”…경찰에 수사 의뢰") · 일기예보 (100+; "[기고]더 잦아지는 위험기상, 울산기상지청이 필요하다") · 박세리 (500+; "박세리, 운동하느라 사춘기 ‘스킵’ 고백... “50대인 지금 누구보다 예민해”") · 리친청 (500+; "'속기파' 리친청, 구쯔하오 꺾고 삼성화재배 결승 선착") · 월드컵 (100+; "잉글랜드, 스페인 43경기 무패행진 끝내") · 연금 (10000+; "노사정, 퇴직연금 기능강화 입법 협력…영세사업장 연착륙 지원") · 윤이나 (500+; "최혜진, 통한의 보기 2개…10번째 준우승")
-- **Brazil:** portal leo dias (200+; "Deborah Secco lança primeira cena de ‘Bruna Surfistinha 2': 'Um dos mergulhos mais intenso") · holanda x (200+; "Alemanha 5 x 0 Holanda | Liga das Nações: melhores momentos") · diretor-geral (1000+; "PF deve encaminhar ao STF na quarta-feira novos relatórios sobre ministros citados em conv") · carlos cuesta (200+; "Cuesta é liberado pelo Vasco e vai para Alemanha tratar lesão com Galatasaray") · uefa nations league (500+; "País de Gales x Portugal: onde assistir ao vivo, horário, palpite e prováveis escalações d") · dias toffoli (200+; "Moraes acompanha Toffoli e vota para salvar provas da Vaza Jato") · gabriela duarte (200+; "O que levou José de Abreu a brigar com deputado eleito e sobrar para atriz da Globo") · florian wirtz (200+; "Deutschland gegen Niederlande im Liveticker: Gewinnt Jürgen Klopp sein erstes »Finale« als") · papa (1000+; "Keiko deixa Peru em meio a visita de Leão 14 e reaviva críticas de papa a Fujimori") · diesel (500+; "Fim de subsídio ao diesel importado eleva custo e preço deve subir nas bombas")
-- **Mexico:** rafael márquez (200+; "EN VIVO México vs Jamaica: minuto a minuto Cuartos de Final Vuelta Nations League") · canada vs (1000+; "Luis Fernando Tena: "Tenemos confianza y creemos en nuestras fuerzas"") · polonia vs suecia (100+; "Polonia vs Suecia | Pronóstico y cuotas 17.11.2026") · nations league uefa (100+; "Nations League quarter-finals: Who is through? Who can join them? What is the state of pla") · dinamarca vs noruega (100+; "Cuándo juegan Dinamarca vs. Noruega por la Nations League: equipo, fecha, hora y TV en viv") · bancos estados unidos (500+; "Miles de clientes de grandes bancos en Estados Unidos no pueden acceder a sus cuentas en l") · chase (200+; "Thousands of customers report trouble with online banking services") · florian wirtz (200+; "Livestream - Nations League: Deutschland gegen die Niederlande") · estadísticas de selección de fútbol de grecia contra selección de fútbol de serbia (500+; "Greece vs Serbia: UEFA Nations League stats & head-to-head") · medvedev (200+; "Licensable picture: Tennis 2026: Nitto ATP Finals: Medvedev Cobolli")
-- **Philippines:** germany vs netherlands (200+; "Germany vs Netherlands: UEFA Nations League stats & head-to-head") · charlito mendoza bir tax collection (100+; "Holiday shipments seen boosting BoC collections") · thanksgiving 2026 (200+; "Thanksgiving 2026. Meals to go, buffets more in Daytona area") · gta 6 (100+; "Grand Theft Auto 6 features a hyper-realistic and localized dynamic weather system") · gta 6 release date (200+; "Grand Theft Auto VI: Pre-Load Now") · samsung galaxy s27 ultra (500+; "Exclusive: Galaxy S27, S27+, S27 Pro, S27 Ultra Camera Sensors Revealed") · jack lowden (200+; "‘Slow Horses’ Renewed For Seasons 9 & 10 At Apple TV") · denis villeneuve (100+; "Aston Martin hérite d'un Bond passé par Volvo : Robert Pattinson") · callum turner (500+; "Jack Lowden gets major career boost after losing James Bond role to Robert Pattinson") · oil (500+; "Oil Is Falling. Why Aren’t Prices?")
-- **India:** florian wirtz (100+; "Wirtz und Gruda zaubern: Deutschland gegen die Niederlande - alle Tore") · nations league standings (200+; "Italy vs Belgium player ratings — Azzurri knocked out of Nations League after 1-4 loss") · விமானம் (100+; "சீனாவில் மின்சார விமானம் முதல் முறையாக பரிசோதனை") · daniil medvedev (500+; "Hot Shot: How on earth did Cobolli save this break point vs. Medvedev in Turin!") · philipp treu (200+; "Scherhant schiesst Deutschland herrlich in Führung") · i play rocky (100+; "‘I Play Rocky’ movie review: Anthony Ippolito makes this underdog story sing") · fed chairman kevin warsh speech (2000+; "Fed Chair Warsh Remarks at Federal Reserve Conference in San Francisco") · al (100+; "Humaid Al-Shamsi։ Leading the World’s Largest Contribution with 10 Specialized Research Pa") · quinten timber (200+; "Frenkie de Jong kan na wegvallen bij Oranje zondag gewoon meedoen bij Barça") · brajan gruda (500+; "Klares Votum: Gruda einer für die Bayern")
+- **United States:** phil collins (5000+; "Phil Collins shares health update at Rock & Roll Hall of Fame induction") · rangers (500+; "Blackhawks and Rangers Make Goaltending Trade") · connections hint november 16 (20000+; "NYT Connections Answers for November 16, 2026") · brian hallisay (200+; "Jennifer Love Hewitt Reveals the Secret to 13 Years of Marriage with Husband Brian Hallisa") · madden movie (1000+; "David O. Russell’s ‘Madden’ Biopic Is Out Next Week — Does Anybody Know or Care?") · long beach st vs ucla (500+; "No. 9 Men's Basketball to Host Long Beach State, Cal State Fullerton") · grand canyon (200+; "No survivors after aircraft goes down near North Rim of Grand Canyon") · optimizely (200+; "Sprawling Malware Attack Reportedly Affects Zoom and Other Major Brands") · ralph fiennes (200+; "Ralph Fiennes jokes new Bond Robert Pattinson should play Voldemort in Harry Potter series") · the odyssey (2000+; "Zendaya “Felt Overwhelmed” on the Set of The Odyssey. Luckily, Tom Holland Came to Support")
+- **United Kingdom:** rockstar games gta vi (200+; "New Zealand tricks and annual leave - the lengths fans are going to for GTA 6") · kyren wilson (500+; "Champion of Champions snooker results: Kyren Wilson wins third straight title with win ove") · timberwolves vs trail blazers (200+; "Blazers’ Injury Report Remains Unchanged for First Matchup With T-Wolves") · heat vs rockets (200+; "%$#[ＬＩＶＥＳｔｒｅａｍ]NOW!!] Rockets vs Heat Live Free TV 16 November 2026") · florence pugh (100+; "Glenn Close cries! John Malkovich weeps! But it’s Nathan Fielder everyone wants to talk to") · ravens vs chargers (1000+; "Chargers vs. Ravens (17 Nov, 2026) Live Score") · pelicans vs warriors (500+; "[ＦＲＥＥ-ＬＩＶＥ] Pelicans v Warriors Live HD Free") · jennifer lawrence (500+; "'The Hunger Games: Sunrise On The Reaping' NYC Premiere Red Carpet Photos: Jennifer Lawren") · black friday deals (500+; "Amazon Extends Black Friday And Cyber Monday Sales To 12 Days") · canada vs guatemala (500+; "José Pinto confía en la remontada de la azul y blanco")
+- **Canada:** nikita tolopilo (200+; "Canucks Reassign Jacob Quillan; Recall Nikita Tolopilo") · peg munson (100+; "‘The Golden Bachelor’s Peg Munson Reveals Reason for Mel Owens Breakup: ‘It Wasn’t Mutual’") · lamelo ball (200+; "Micah Nori makes head-turning Luka Doncic-LaMelo Ball comparison") · carson daly (100+; "Carson Daly’s Health Issues: Mental Health Journey, Surgery & More") · take two stock (100+; "Take-Two shares rise premarket as Jefferies sees strong GTA VI pre-orders") · blue jays trade rumors clement valenzuela (100+; "Realistic returns after reported trade buzz around Blue Jays' Clement, Valenzuela, Lukes a") · snowfall warning (500+; "Up to 20 cm: Snow to create difficult travel on parts of the Prairies") · joel embiid (200+; "NBA Highlights: 76ers 135, Nets 123") · your breath in charcoal (2000+; "Five Canadian authors up for the $100,000 Giller Prize") · gabe perreault (200+; "Perreault's slick goal")
+- **Japan:** 磯山さやか (500+; "磯山さやか、43歳で連ドラ単独初主演「私ですか？」オファーに驚き（サンケイスポーツ）") · 安倍なつみ (200+) · suica 新キャラ (200+; "Suicaのペンギン「後任」、あす発表―！ SNS一番人気は “キモかわ”？？ 候補3キャラ、結果は（LASISA）") · いとうあさこ (500+; "いとうあさこ、紅白出場者発表巡り私見「あれがちょっと残念だった…何だろうね？」") · 王貞治 (1000+; "「世界のホームラン王」王貞治さんも登場…!「アドバイス生かしながら、自分で自分の道を進んで…」長野市で野球の体験イベント…子どもたちに野球に興味を持ってもらおうと企画、約1800人") · 田淵幸一 (200+; "「走れない、守れない高給取りがいる」西武の新監督・広岡達朗に容赦なく批判され怒り心頭の田淵幸一…「いろいろあったけど、今は感謝している」（Number Web）") · 交通安全 (200+; "应急科普丨低温雨雪冰冻天气 公路安全行车指南请查收") · ナゲッツ 対 サンズ (200+; "Suns-Nuggets: 3 Prop Bets Experts Love Tonight") · 嶋基宏 (1000+; "工藤監督就任の中日 コーチら発表") · 国家公務員 (200+; "国家公務員の兄が“係長”から“課長”に昇進し、年収が「1000万円」を超えたそうです！ 公務員は安定しているイメージでしたが、民間企業の管理職と比べると、年収はどれくらい違うのでし")
+- **South Korea:** 김선태 (2000+; "AI 안경 쓰고 공무원 시험 본 '충주맨', 25점 받은 이유가") · 장동혁 (1000+; "장동혁, 한동훈 장인상 조문… 7분간 머물러") · 장민기 (500+; "'9위 추락' KIA 마운드의 희망이었는데…방출 칼바람에 야구공 놓는다 "인생에서 가장 빛나는 추억"") · embassy (100+; "(LEAD) S. Korea seeks to reconstruct aging embassy in U.S. amid uncertainty over funding") · 예비소집일 (100+; "수능 수험생 여러분! 전자기기 가져오지 마세요! - 카드/한컷 | 멀티미디어") · 피의자 (1000+; "제 발 저려 시작된 추격전...6명 다치고 실탄까지 쏴") · 상장 (200+; ""이 신호 뜨면 주식 팔아라?"…앤트로픽 상장 앞두고 나온 경고 [분석+]") · 너구리 (1000+; "농심, '볶음너구리' 정식 판매 전환…신제품 '매콤마요'도 출시") · 2027 (200+; "Raye, Rosalía and Ella Langley Top a Women-Led 2027 Grammys Field") · 미스터트롯4 (2000+; "‘미스터트롯4′ 12월 17일 첫 방송...김중연, 양지원, 박지후, 남궁진 등 티저로 베일 벗어")
+- **Brazil:** dean wade (100+; "76ers' Dean Wade: Running with starters Monday") · bancos eua (200+; "Falha técnica afeta serviços de grandes bancos dos Estados Unidos") · julius randle (100+; "Nets' Julius Randle: Cleared to return after getting stitches") · michael porter jr. (100+; "Michael Porter Jr. sits for personal reasons — but he should be back soon") · celtics (500+; "[!Buffstreams!] Where To Watch Magic vs Celtics Live Free NBA Game in US UK AU 16 November") · zendaya (1000+; "Fortuna de Zendaya impressiona! Atriz acumula cinco imóveis milionários e mansões luxuosas") · the economist 2027 (500+; "Tom Standage’s ten trends to watch in 2027") · deborah blando hoje (200+) · metsul meteorologia (50000+; "Tempestades atuam em todo o Rio Grande do Sul nos próximos dias") · alane dias (200+; "Alane Dias desabafa sobre pressão estética na carreira de modelo e bailarina: 'Já maltrate")
+- **Mexico:** acción (100+; "Acciones de Mayne Pharma suben por oferta de compra de $407 mil millones") · guardia nacional de méxico (100+; "Guardia Nacional destituye a 17 elementos por presentar certificados de estudios falsos") · gales vs portugal (100+; "Dónde ver Gales vs Portugal: Hora y canal TV para la UEFA Nations League 2026") · gta vi (1000+; "The biggest entertainment event of the year isn’t a movie — it’s ‘Grand Theft Auto VI’") · predicción (100+; "The Economist revela su portada de 2027; Irán, era post-Trump, la IA y otras tendencias qu") · gran apagon mundial (1000+; "¿Se irán la luz e Internet durante tres días? Esto se sabe del supuesto apagón mundial") · quien entro a la mansion vip (200+; "Estreno de ‘La Mansión VIP 2’: Así quedaron los cuartos en el arranque del reality show") · los angeles chargers (100+; "Bears 27-24 Buccaneers (Nov 8, 2026) Final Score") · indonesia (200+; "Magnitude-6.6 earthquake prompts scientist's 'drop, cover, hold' reminder") · zay flowers (100+; "Derrick Henry Fantasy Rankings & Outlook")
+- **Philippines:** yaxel lendeborg (500+; "Warriors' Yaxel Lendeborg (1-for-13) 'flustered' in blowout loss to Spurs") · joel embiid (200+; "76ers 135-123 Nets (Nov 16, 2026) Game Recap") · lol new dawn (100+; "TL;DW: Season 1 2027 Dev Update") · nolan traoré (200+; "Nets' Nolan Traore: Returning to first unit") · deni avdija (200+; "Lane Kiffin blames LSU's $40+ million roster after loss to Texas: 'we'll have better roste") · brooklyn nets vs 76ers match player stats (500+; "Bruins vs Red Wings Picks, Prop Bets For November 18, 2026 - NHL Predictions") · bam adebayo (1000+; "Heat 128-110 Rockets (17 Nov, 2026) Final Score") · sara duterte p817m wealth defense subpoenas (1000+; "VP defense turns to gov’t witnesses over P817-M wealth") · jalen suggs (100+; "Jalen Suggs News: Starting Monday") · goga bitadze (100+; "Magic see success with Bitadze, Vucevic duo on floor; Wagner nominated for weekly award")
+- **India:** india vix (500+; "India VIX Falls 7.41% to 14.04 as Markets Recover") · sgx (100+; "Singapore shares fall in tandem with key Asian markets on AI uncertainty; STI down 0.9%") · रामायण (1000+; "12वें दिन बदला Ramayana की कमाई का गणित, सोमवार को रणबीर कपूर की फिल्म ने किया शॉकिंग कलेक") · investing com (200+; "Form 4 RiverNorth Opportunistic Municipal Income Fund: Jonathan Paul Browne (Portfolio Man") · global market (1000+; "Sikkim Supreme enters global markets with exports to US and Australia") · ಉಪೇಂದ್ರ (100+; "ಸಹೋದರನ ಮದುವೆಯಲ್ಲಿ ನಟ ಉಪೇಂದ್ರ ಮಕ್ಕಳ ಸ್ಟನ್ನಿಂಗ್​ ಲುಕ್​: ಆಯುಷ್​-ಐಶ್ವರ್ಯ ಫೋಟೋಗಳು ವೈರಲ್​") · ঘূর্ণিঝড় (10000+; "‘অ্যাকভানের’ চিন্তায় উপকূলীয় এলাকার বাসিন্দাদের সরানোর নির্দেশ ওড়িশার, সজাগ অন্ধ্রও, আগাম") · கள்ளக்குறிச்சி (500+; "பெண் அதிகாரிகளின் ஆளுமையில் கள்ளக்குறிச்சி மாவட்டம்") · zee business live (200+; "Sensex at 95,000 or 1 lakh? Morgan Stanley says India’s 3D engine is putting stocks at an ") · nuggets vs suns (200+; "Phoenix Suns vs Denver Nuggets Prediction, Picks & Odds | NBA Monday")
 
 ## Wikipedia: most-read articles yesterday (what people are curious about)
-Date: 2026/11/15. Pick out the movies, shows, anime, games and actors.
-- Archive of Our Own: 860,729 views
-- 9/11: 673,012 views
-- Ramayana: Part 1: 591,692 views
-- UFC 334: 321,149 views
-- Jensen Huang: 194,070 views
-- Full Gear (2026): 175,811 views
-- Josh Hokit: 168,260 views
-- Sean Duffy: 161,039 views
-- Kayla Harrison: 145,493 views
-- Kirk Cousins: 121,498 views
-- The Body (TV series): 120,538 views
-- Elizabeth Holmes: 115,753 views
-- Ansel Adams: 115,262 views
-- Amon-Ra St. Brown: 112,331 views
-- Russell Brand: 109,938 views
-- Stephen Thompson (fighter): 106,236 views
-- .xxx: 105,406 views
-- Ebenezer (2026 film): 98,174 views
-- Richard Sterban: 96,199 views
-- Amanda Nunes: 95,411 views
-- Ciryl Gane: 90,061 views
-- John Mulaney: 89,468 views
-- Arch Manning: 83,253 views
-- Jailer 2: 82,569 views
-- Grand Theft Auto VI: 82,149 views
-- 2026–27 UEFA Nations League: 79,669 views
-- Adolf Hitler: 77,931 views
-- The End of Oak Street: 77,707 views
-- Phil Collins: 75,595 views
-- Scene (2026 film): 75,488 views
-- Alice Huang (executive): 71,596 views
-- Sara Boustany: 69,765 views
-- Godzilla Minus Zero: 69,353 views
-- You Can See Everything: 69,140 views
-- James Trafford: 68,822 views
-- Phoebe Bridgers: 66,489 views
-- Empress Elisabeth of Austria: 66,052 views
-- Ronaldinho: 65,734 views
-- Hannah Fry: 65,480 views
-- Nvidia: 65,277 views
-- UEFA Nations League: 64,739 views
-- 2026 United States elections: 58,863 views
-- Fernando Mendoza: 58,053 views
-- Heartland (2026 film): 58,016 views
-- Billy Evans (businessman): 55,262 views
-- Michèle Lamy: 54,867 views
-- The Odyssey (2026 film): 53,018 views
-- Kristina Bogic: 52,779 views
-- Black Doves: 52,424 views
-- Chris Van Hollen: 52,381 views
+Date: 2026/11/16. Pick out the movies, shows, anime, games and actors.
+- Robert Pattinson: 1,363,657 views
+- Ramayana: Part 1: 551,941 views
+- Archive of Our Own: 463,687 views
+- Suki Waterhouse: 378,948 views
+- Robert Pattinson filmography: 191,139 views
+- Saturn Devouring His Son: 176,155 views
+- Jensen Huang: 162,987 views
+- .xxx: 153,348 views
+- The Body (TV series): 136,145 views
+- Mordechai Vanunu: 132,656 views
+- Russell Brand: 127,981 views
+- Sharad Kapoor: 118,510 views
+- Daniel Craig: 107,838 views
+- Grand Theft Auto VI: 106,689 views
+- Sean Duffy: 102,558 views
+- 2026–27 UEFA Nations League: 100,581 views
+- John Malkovich: 93,805 views
+- Jeff Bezos: 92,773 views
+- 69th Annual Grammy Awards: 92,752 views
+- Ebenezer (2026 film): 87,439 views
+- Elizabeth Holmes: 84,504 views
+- Palestine national football team: 83,074 views
+- Ansel Adams: 78,113 views
+- Kirk Cousins: 76,919 views
+- Lizzy Pattinson: 76,545 views
+- James Bond: 76,019 views
+- Joe Burrow: 75,566 views
+- Sara Boustany: 70,797 views
+- UEFA Nations League: 70,723 views
+- Miguel Ángel Félix Gallardo: 70,590 views
+- Portrayal of James Bond in film: 69,500 views
+- Ricky Wilson (singer): 68,908 views
+- The Odyssey (2026 film): 66,870 views
+- James Trafford: 66,321 views
+- Denis Villeneuve: 65,188 views
+- Aaron Rodgers: 65,183 views
+- Scene (2026 film): 64,882 views
+- Phil Collins: 64,816 views
+- Dan Hicks (sportscaster): 64,158 views
+- You Can See Everything: 61,889 views
+- Callum Turner: 60,216 views
+- Pierce Brosnan: 59,946 views
+- Jailer 2: 59,529 views
+- Alice Huang (executive): 58,052 views
+- Riley Green: 57,850 views
+- Godzilla Minus Zero: 57,569 views
+- Nvidia: 57,058 views
+- John Mulaney: 56,515 views
+- Empress Elisabeth of Austria: 54,295 views
+- Kristen Stewart: 53,125 views
 
 ## AniList: trending anime right now
-- [Hello, I am a Witch and my Crush Wants me to Make a Love Potion!](https://anilist.co/anime/207191) · trending score 349 · 33,104 fans · 74% · RELEASING · ep 8 airs 2026-11-23
-- [Overgeared](https://anilist.co/anime/212888) · trending score 315 · 64,744 fans · 76% · RELEASING · ep 9 airs 2026-11-22
-- [ONE PIECE](https://anilist.co/anime/21) · trending score 282 · 770,458 fans · 87% · RELEASING · ep 1181 airs 2027-01-03
-- [So What's Wrong with Getting Reborn as a Goblin?](https://anilist.co/anime/209219) · trending score 270 · 23,693 fans · 65% · RELEASING · ep 8 airs 2026-11-23
-- [Black Clover Season 2](https://anilist.co/anime/195604) · trending score 178 · 110,705 fans · 88% · RELEASING · ep 8 airs 2026-11-21
-- [PSYREN](https://anilist.co/anime/204011) · trending score 173 · 24,714 fans · 70% · RELEASING · ep 7 airs 2026-11-23
-- [Black Clover](https://anilist.co/anime/97940) · trending score 162 · 605,735 fans · 79% · FINISHED
-- [The Apothecary Diaries Season 3](https://anilist.co/anime/195516) · trending score 161 · 114,152 fans · 85% · RELEASING · ep 8 airs 2026-11-20
-- [Even the Student Council Has Its Holes!](https://anilist.co/anime/191656) · trending score 148 · 54,229 fans · 74% · RELEASING · ep 8 airs 2026-11-21
-- [Full Clearing Another World under a Goddess with Zero Believers](https://anilist.co/anime/205896) · trending score 119 · 24,003 fans · 65% · RELEASING · ep 7 airs 2026-11-22
-- [Blue Box Season 2](https://anilist.co/anime/189123) · trending score 118 · 53,720 fans · 81% · RELEASING · ep 7 airs 2026-11-22
-- [Bleach](https://anilist.co/anime/269) · trending score 112 · 537,992 fans · 79% · FINISHED
-- [As a Reincarnated Aristocrat, I'll Use My Appraisal Skill to Rise in the World Season 3](https://anilist.co/anime/185756) · trending score 111 · 31,315 fans · 68% · RELEASING · ep 9 airs 2026-11-22
-- [Reborn as a Space Mercenary: I Woke Up Piloting the Strongest Starship!](https://anilist.co/anime/186541) · trending score 109 · 31,337 fans · 69% · RELEASING · ep 8 airs 2026-11-22
-- [STEEL BALL RUN JoJo's Bizarre Adventure 2nd - 3rd STAGE](https://anilist.co/anime/210482) · trending score 101 · 52,321 fans · 86% · RELEASING · ep 9 airs 2026-11-20
+- [Overgeared](https://anilist.co/anime/212888) · trending score 271 · 64,744 fans · 76% · RELEASING · ep 9 airs 2026-11-22
+- [Hello, I am a Witch and my Crush Wants me to Make a Love Potion!](https://anilist.co/anime/207191) · trending score 227 · 33,104 fans · 74% · RELEASING · ep 8 airs 2026-11-23
+- [ONE PIECE](https://anilist.co/anime/21) · trending score 217 · 770,458 fans · 87% · RELEASING · ep 1181 airs 2027-01-03
+- [So What's Wrong with Getting Reborn as a Goblin?](https://anilist.co/anime/209219) · trending score 203 · 23,693 fans · 65% · RELEASING · ep 8 airs 2026-11-23
+- [Black Clover Season 2](https://anilist.co/anime/195604) · trending score 150 · 110,705 fans · 88% · RELEASING · ep 8 airs 2026-11-21
+- [PSYREN](https://anilist.co/anime/204011) · trending score 126 · 24,714 fans · 70% · RELEASING · ep 7 airs 2026-11-23
+- [The Apothecary Diaries Season 3](https://anilist.co/anime/195516) · trending score 116 · 114,152 fans · 85% · RELEASING · ep 8 airs 2026-11-20
+- [Black Clover](https://anilist.co/anime/97940) · trending score 108 · 605,735 fans · 79% · FINISHED
+- [Full Clearing Another World under a Goddess with Zero Believers](https://anilist.co/anime/205896) · trending score 103 · 24,003 fans · 65% · RELEASING · ep 7 airs 2026-11-22
+- [Even the Student Council Has Its Holes!](https://anilist.co/anime/191656) · trending score 97 · 54,229 fans · 74% · RELEASING · ep 8 airs 2026-11-21
+- [Reborn as a Space Mercenary: I Woke Up Piloting the Strongest Starship!](https://anilist.co/anime/186541) · trending score 96 · 31,337 fans · 69% · RELEASING · ep 8 airs 2026-11-22
+- [Blue Box Season 2](https://anilist.co/anime/189123) · trending score 94 · 53,720 fans · 81% · RELEASING · ep 7 airs 2026-11-22
+- [Bleach](https://anilist.co/anime/269) · trending score 77 · 537,992 fans · 79% · FINISHED
+- [Dragon Ball Super: Beerus](https://anilist.co/anime/206814) · trending score 77 · 32,143 fans · 80% · RELEASING · ep 7 airs 2026-11-22
+- [The Exiled Heavy Knight Knows How to Game the System](https://anilist.co/anime/180136) · trending score 75 · 77,351 fans · 67% · RELEASING · ep 21 airs 2026-11-19
 
 ## Steam: top sellers and new releases (US)
-- Top sellers: Steam Frame, Steam Frame, Bodycam, Call of Duty®: Modern Warfare® 4, Steam Deck, Steam Deck, Crimson Desert Enhanced, Steam Controller, Zombies Aren't Real, Spirit Crossing
-- New releases: Swirl Together, Hidden Cats in Spooky Carnival, Dark Workshop Simulator, Keeping Up, Left4Sol, Threshold Zero, RemparZ, Code Market, Visual Novel, At Once, My Lord!
-- Coming soon: Temple Of The Machine God, 世界樹と護符の約束 - Phase 1：葉冠編, Farmstead Market Simulator, Sir, We Have a Pit Problem! Demo, Green Guy Goes Grappling Demo, Kern, Blamcon's Light Gun Arcade, The Worldtree and the Omamori Promise, Big Deck, Big Fun, Uncosy
+- Top sellers: Steam Frame, Steam Frame, Bodycam, Call of Duty®: Modern Warfare® 4, Steam Deck, Steam Deck, Zombies Aren't Real, Steam Controller, Crimson Desert Enhanced, Moon Sweepers
+- New releases: Perfect Wives: Midsummer Party, MythTunes: OST, Lofi & BGM Player, Cooking Adventure, Birza, One Million Gallons, Pump And Dump, Don't Panic, Defend!, Rogue's Cog, Streamer Manager, STEEL GULLET
+- Coming soon: Leverage Real Estate Simulator, AMIDA Q, Shades of Fear - North Loop, Who Framed The Cat?, Pinata Smash: Incremental Circus, Butaro's Overtime Office, Jurassic Paradise: No Escape, Tarot: Deck of Celestials, Angel Investor Simulator™, Pill & Chill
 
 ## MyAnimeList: anime airing this season and top airing now
 ### This season, most followed
-- [One Piece](https://myanimelist.net/anime/21) · score 8.72 · 2,746,775 members · airs sunday 23:15 JST
-- [Case Closed](https://myanimelist.net/anime/235) · score 8.18 · 383,579 members · airs saturday 18:00 JST
-- [Steel Ball Run: JoJo's Bizarre Adventure](https://myanimelist.net/anime/61469) · score 9.03 · 258,357 members
-- [The Apothecary Diaries Season 3](https://myanimelist.net/anime/61987) · score 8.6 · 231,378 members · 12 eps · airs friday 23:00 JST
-- [Cyberpunk: Edgerunners 2](https://myanimelist.net/anime/61990) · score 8.14 · 220,722 members · 10 eps
-- [Black Clover Season 2](https://myanimelist.net/anime/61967) · score 8.89 · 179,662 members · airs saturday 23:00 JST
-- [Reincarnated as a Sword Season 2](https://myanimelist.net/anime/53913) · score 7.51 · 118,850 members · 12 eps · airs thursday 00:00 JST
-- [The Exiled Heavy Knight Knows How to Game the System](https://myanimelist.net/anime/59741) · score 6.8 · 111,072 members · 26 eps · airs friday 00:26 JST
-- [Blue Box Season 2](https://myanimelist.net/anime/61323) · score 8.15 · 108,017 members · 12 eps · airs sunday 16:30 JST
-- [Firefly Wedding](https://myanimelist.net/anime/63293) · score 7.74 · 97,262 members · 12 eps · airs friday 23:30 JST
-- [Shin Chan](https://myanimelist.net/anime/966) · score 7.83 · 96,054 members · airs saturday 16:30 JST
-- [Tokyo Revengers: War of the Three Titans Arc](https://myanimelist.net/anime/59088) · score 7.83 · 87,515 members · 13 eps · airs saturday 01:23 JST
-- [Even the Student Council Has Its Holes!](https://myanimelist.net/anime/61578) · score 7.75 · 86,951 members · 12 eps · airs sunday 00:30 JST
-- [The Ramparts of Ice Season 2](https://myanimelist.net/anime/64534) · score 8.33 · 76,907 members · 13 eps · airs thursday 23:56 JST
-- [Made in Abyss: Mezameru Shinpi](https://myanimelist.net/anime/54250) · score 7.39 · 76,537 members · 1 eps
+- [One Piece](https://myanimelist.net/anime/21) · score 8.72 · 2,746,848 members · airs sunday 23:15 JST
+- [Case Closed](https://myanimelist.net/anime/235) · score 8.18 · 383,582 members · airs saturday 18:00 JST
+- [Steel Ball Run: JoJo's Bizarre Adventure](https://myanimelist.net/anime/61469) · score 9.03 · 258,425 members
+- [The Apothecary Diaries Season 3](https://myanimelist.net/anime/61987) · score 8.61 · 231,552 members · 12 eps · airs friday 23:00 JST
+- [Cyberpunk: Edgerunners 2](https://myanimelist.net/anime/61990) · score 8.14 · 220,996 members · 10 eps
+- [Black Clover Season 2](https://myanimelist.net/anime/61967) · score 8.89 · 179,804 members · airs saturday 23:00 JST
+- [Reincarnated as a Sword Season 2](https://myanimelist.net/anime/53913) · score 7.51 · 118,885 members · 12 eps · airs thursday 00:00 JST
+- [The Exiled Heavy Knight Knows How to Game the System](https://myanimelist.net/anime/59741) · score 6.8 · 111,125 members · 26 eps · airs friday 00:26 JST
+- [Blue Box Season 2](https://myanimelist.net/anime/61323) · score 8.15 · 108,092 members · 12 eps · airs sunday 16:30 JST
+- [Firefly Wedding](https://myanimelist.net/anime/63293) · score 7.74 · 97,405 members · 12 eps · airs friday 23:30 JST
+- [Shin Chan](https://myanimelist.net/anime/966) · score 7.83 · 96,058 members · airs saturday 16:30 JST
+- [Tokyo Revengers: War of the Three Titans Arc](https://myanimelist.net/anime/59088) · score 7.83 · 87,560 members · 13 eps · airs saturday 01:23 JST
+- [Even the Student Council Has Its Holes!](https://myanimelist.net/anime/61578) · score 7.75 · 87,147 members · 12 eps · airs sunday 00:30 JST
+- [The Ramparts of Ice Season 2](https://myanimelist.net/anime/64534) · score 8.33 · 76,986 members · 13 eps · airs thursday 23:56 JST
+- [Made in Abyss: Mezameru Shinpi](https://myanimelist.net/anime/54250) · score 7.39 · 76,552 members · 1 eps
 
 ### Top airing right now
-- [Steel Ball Run: JoJo's Bizarre Adventure](https://myanimelist.net/anime/61469) · score 9.03 · 258,357 members
-- [Black Clover Season 2](https://myanimelist.net/anime/61967) · score 8.89 · 179,662 members · airs saturday 23:00 JST
-- [One Piece](https://myanimelist.net/anime/21) · score 8.72 · 2,746,775 members · airs sunday 23:15 JST
-- [Chiikawa](https://myanimelist.net/anime/50250) · score 8.63 · 28,644 members · airs friday 07:40 JST
-- [The Apothecary Diaries Season 3](https://myanimelist.net/anime/61987) · score 8.6 · 231,378 members · 12 eps · airs friday 23:00 JST
-- [Renegade Immortal](https://myanimelist.net/anime/55809) · score 8.47 · 13,432 members · 180 eps
-- [Heaven Official's Blessing Short Films](https://myanimelist.net/anime/60988) · score 8.46 · 12,915 members
-- [The Ramparts of Ice Season 2](https://myanimelist.net/anime/64534) · score 8.33 · 76,907 members · 13 eps · airs thursday 23:56 JST
+- [Steel Ball Run: JoJo's Bizarre Adventure](https://myanimelist.net/anime/61469) · score 9.03 · 258,425 members
+- [Black Clover Season 2](https://myanimelist.net/anime/61967) · score 8.89 · 179,804 members · airs saturday 23:00 JST
+- [One Piece](https://myanimelist.net/anime/21) · score 8.72 · 2,746,848 members · airs sunday 23:15 JST
+- [Chiikawa](https://myanimelist.net/anime/50250) · score 8.63 · 28,656 members · airs friday 07:40 JST
+- [The Apothecary Diaries Season 3](https://myanimelist.net/anime/61987) · score 8.61 · 231,552 members · 12 eps · airs friday 23:00 JST
+- [Renegade Immortal](https://myanimelist.net/anime/55809) · score 8.47 · 13,433 members · 180 eps
+- [Heaven Official's Blessing Short Films](https://myanimelist.net/anime/60988) · score 8.45 · 12,917 members
+- [The Ramparts of Ice Season 2](https://myanimelist.net/anime/64534) · score 8.33 · 76,986 members · 13 eps · airs thursday 23:56 JST
 - [Swallowed Star 4th Season](https://myanimelist.net/anime/56524) · score 8.32 · 6,787 members · 175 eps
-- [Tales of Herding Gods](https://myanimelist.net/anime/59953) · score 8.31 · 16,716 members
+- [Tales of Herding Gods](https://myanimelist.net/anime/59953) · score 8.31 · 16,717 members
 
 ## Twitch: most-watched games and streams right now
 ### Top games by viewers now
-1. Just Chatting · 2. Grand Theft Auto V · 3. World of Warcraft · 4. ROB RUN · 5. Fortnite · 6. Kings League · 7. League of Legends · 8. Dota 2 · 9. Minecraft · 10. Counter-Strike · 11. IRL · 12. Escape from Tarkov · 13. VALORANT · 14. The Legend of Zelda: Ocarina of Time · 15. Rocket League · 16. Slots · 17. Path of Exile · 18. Rainbow Six Siege · 19. Call of Duty: Warzone · 20. QSMP
+1. Just Chatting · 2. World of Warcraft · 3. ROB RUN · 4. Family Feud · 5. Fortnite · 6. Liar's Bar · 7. League of Legends · 8. Grand Theft Auto V · 9. Escape from Tarkov · 10. Deadlock · 11. The Legend of Zelda: Ocarina of Time · 12. VALORANT · 13. Call of Duty: Warzone · 14. Minecraft · 15. Counter-Strike · 16. Dota 2 · 17. Dead by Daylight · 18. Marvel Rivals · 19. Always On · 20. Path of Exile
 
 ### Biggest live streams now
-- Tumblurr · Kings League · 75,957 watching · "🏆⚽KINGS LEAGUE CUP ULTIMA GIORNATA |  ORE 20 🔵 STALLIONS vs CIRCUS 🟣 PER LA S"
-- IlloJuan · Grand Theft Auto V · 60,371 watching · "2 DÍAS 📅 ADIÓS GTA 5 👋🏻 QUE ALGUIEN ME PELLIZQUE 🥺 BUENOS AIRES ENDING 🥰 - "
-- zackrawrr · Just Chatting · 50,017 watching · "[DROPS ON] UNBANNED FOREVER WOW  LEVELING BIG DAY HUGE DRAMA NEW GAMES BIG NEWS "
-- HasanAbi · Just Chatting · 41,150 watching · "🗽TRUMP TO ASIA🗽JENSEN MIGHT BE BACK?🗽ZOHRAN DISBANDS SRG!!🎞️CVH vs SCHUMER📽"
-- aminematue · Just Chatting · 40,371 watching · "Bonsoir tout le monde je suis déja en nostalgie de ma vie de catcheur"
-- TheRealKnossi · IRL · 32,135 watching · "WorldTour Miami - GTA VI Launch Week"
-- Peereira7 · Just Chatting · 27,669 watching · "🥊EL MEJOR STREAMER🥊GANGATHON I🥊DIA 13🥊NUESTRA VELADA🥊VELADA DEL MES🥊GTA VI"
-- Jynxzi · Rainbow Six Siege · 27,399 watching · "[677/730] 🔴 PUSHING LEGENDS DIV ON R6 -> PIRATE TOKEN HUNT 🔴 MIRACULOUS MONDAY"
-- jasontheween · Just Chatting · 24,482 watching · "🔴HELLO🔴VESPA SIDECAR CAME🔴EPICNESS🔴MIAMI TMR🔴GTA VI SOON🔴"
-- Gotaga · Just Chatting · 22,837 watching · "🔥 OVERTIME M8 | Les CEOs reviennent sur la saison 2025/2026"
-- Trymacs · CRACK · 20,870 watching · "20 uhr RV there yet! Später TCG Simulator! Mittwoch 12 Uhr 5 Tage Stream GTA 6! "
-- ilrossopiubelloditwitch · Just Chatting · 18,677 watching · "🏝️☀️30 DAYS 2.0☀️23:00 CONFRONTO PRESS E DENISA⭐️00:00 ANNUNCIO CON BUSTA🚨02:0"
+- caseoh_ · Family Feud · 54,692 watching · "🟨LOSING MY MIND🟨"
+- TheBurntPeanut · Liar's Bar · 50,845 watching · "LIARS BAR | GETTING DRUNK ON MONDAY | FART IN MY MOUTH | #BUNGULATE"
+- 加藤純一うん〇ちゃん · ROB RUN · 17,975 watching · "ROB RUN！！"
+- Lacy · Just Chatting · 15,296 watching · "🏍️ BIKER DAY 🏍️ JOINING A BIKER GANG 🏍️ LACY x BRAEDEN 🏍️ LETS GET NEGATIVE "
+- Tfue · ROB RUN · 14,049 watching · "Robbing banks and kissing cops (NEW SERVER)"
+- ElMariana · Playrooms · 12,460 watching · "🌲 LOS ARBOLES TE ODIAN PT 2 🌲+ 🥵 PLAYROOMS 🥵 || 12 HORAS PARA GTA VI 🔫"
+- Pikabooirl · World of Warcraft · 12,148 watching · "WOW FOREVER FINALLY OUT HYPEEE! MULTISTREAMING! !rxp !youtube !vetra #ad"
+- PlaqueBoyMax · Just Chatting · 12,107 watching · "UNDERGROUND (nickatnite and dutie) VS MAINSTREAM (zias and b lou) AUX BATTLE! SE"
+- summit1g · DayZ · 12,018 watching · "dayz chillin - !journey for %10 off - !starforge @StarforgeSystems"
+- MOONMOON · World of Warcraft · 11,512 watching · "(48+ sub rogue) The Hero of Hillsbrad: the Highwayman"
+- jasontheween · Just Chatting · 11,100 watching · "🔴HELLO🔴VESPA SIDECAR CAME🔴EPICNESS🔴MIAMI TMR🔴GTA VI SOON🔴"
+- sasatikk · ROB RUN · 8,969 watching · "1200万のヘリコプターがついにくる Day3 ROB RUN"
 
 ## Last.fm: songs rising right now (for TikTok sound ideas)
 ### Worldwide
-Nicole Kidman - ADÉLA (319,809 listeners) · the cure - Olivia Rodrigo (924,065 listeners) · Ain't In LA - ADÉLA (325,685 listeners) · stupid song - Olivia Rodrigo (797,593 listeners) · Earrings - Malcolm Todd (1,242,434 listeners) · expectations (feat. Chappell Roan) - Olivia Rodrigo (195,143 listeners) · Housewife - Tate McRae (138,973 listeners) · Duvet - bôa (2,180,693 listeners) · hey boyyy - Slayyyter (65,117 listeners) · expectations - Olivia Rodrigo (640,794 listeners) · maggots for brains - Olivia Rodrigo (642,264 listeners) · Creep - Radiohead (4,271,204 listeners) · drop dead - Olivia Rodrigo (959,186 listeners) · 505 - Arctic Monkeys (3,206,034 listeners) · Stateside + Zara Larsson - PinkPantheress (1,481,181 listeners) · Lovers Rock - TV Girl (2,342,783 listeners) · brand new chanel$ - Slayyyter (164,594 listeners) · Bags - Clairo (1,700,027 listeners) · D>E>A>T>H>M>E>T>A>L - Panchiko (998,331 listeners) · Melatonin - Tinashe (143,413 listeners)
+Nicole Kidman - ADÉLA (321,300 listeners) · the cure - Olivia Rodrigo (925,018 listeners) · Ain't In LA - ADÉLA (326,800 listeners) · stupid song - Olivia Rodrigo (798,313 listeners) · Earrings - Malcolm Todd (1,243,393 listeners) · Duvet - bôa (2,181,976 listeners) · expectations (feat. Chappell Roan) - Olivia Rodrigo (196,075 listeners) · Housewife - Tate McRae (140,138 listeners) · hey boyyy - Slayyyter (67,941 listeners) · expectations - Olivia Rodrigo (641,560 listeners) · maggots for brains - Olivia Rodrigo (642,756 listeners) · Creep - Radiohead (4,272,035 listeners) · 505 - Arctic Monkeys (3,206,855 listeners) · drop dead - Olivia Rodrigo (959,743 listeners) · Lovers Rock - TV Girl (2,343,583 listeners) · Stateside + Zara Larsson - PinkPantheress (1,481,732 listeners) · Bags - Clairo (1,700,652 listeners) · D>E>A>T>H>M>E>T>A>L - Panchiko (999,195 listeners) · brand new chanel$ - Slayyyter (165,247 listeners) · Melatonin - Tinashe (144,063 listeners)
 
 ### United States
 the cure - Olivia Rodrigo (18,713 listeners) · Earrings - Malcolm Todd (17,692 listeners) · D>E>A>T>H>M>E>T>A>L - Panchiko (17,643 listeners) · Duvet - bôa (17,573 listeners) · Nicole Kidman - ADÉLA (17,194 listeners) · stupid song - Olivia Rodrigo (16,778 listeners) · 505 - Arctic Monkeys (15,972 listeners) · Lovers Rock - TV Girl (14,943 listeners) · Creep - Radiohead (14,778 listeners) · Mr. Brightside - The Killers (14,370 listeners) · Bags - Clairo (14,232 listeners) · Everlong - Foo Fighters (13,743 listeners) · expectations - Olivia Rodrigo (13,600 listeners) · nothing - Steve Lacy (13,462 listeners) · maggots for brains - Olivia Rodrigo (13,374 listeners) · Oh Yeah? - Steve Lacy (13,059 listeners) · Let Down - Radiohead (13,047 listeners) · Ain't In LA - ADÉLA (12,933 listeners) · The Feeling - Steve Lacy (12,913 listeners) · expectations (feat. Chappell Roan) - Olivia Rodrigo (12,881 listeners)
 
 ## YouTube: most-viewed short edits from the last 7 days
 ### "movie edit"
-- ["Wild Bear Vs. Military Dog" ☠️ | Heart of the Beast Edit | Raya (Slowed) | #Shorts #Edit #Trending](https://youtu.be/iCXQW_3Xayw) · Lovnish · 14,952,836 views · 0 likes · 1,225 comments · 2026-11-10
-- [This romance wasn't quite what he had imagined #movie #edit #shorts](https://youtu.be/PXER65OZKtI) · yymovie · 6,687,590 views · 312,269 likes · 2,546 comments · 2026-11-12
-- [He gained the power of God🪽😂 #movie #shorts #edit #fyp #trending](https://youtu.be/2BdKgZeT_z0) · STV Pro  · 5,643,436 views · 293,544 likes · 1,534 comments · 2026-11-10
-- [The Middle nice edit #netflix #peliculas #peliculasrecomendadas #movie #cine](https://youtu.be/VyvKRrbOgn0) · Peliya · 4,926,349 views · 95,805 likes · 190 comments · 2026-11-10
-- [How do special forces carry out rescue operations? #shorts #edit  #movie](https://youtu.be/aFXyQgzqDvs) · 武影天下 · 4,876,867 views · 66,984 likes · 55 comments · 2026-11-11
-- [Spider-Man is looking for drugs in prison!☠️🔥#Trending #shorts #movie](https://youtu.be/bqSYvIRD4qo) · MovieLover · 3,085,606 views · 133,042 likes · 2,325 comments · 2026-11-12
-- [Nobody Expected Him To Show Up](https://youtu.be/RWxGkO0kjH8) · Moki Movies · 3,204,001 views · 51,308 likes · 253 comments · 2026-11-10
-- [Bitten by a Dragonfly, He Becomes a Superhero🦋#movie    #film  #funny  #edit  #shorts](https://youtu.be/gg2SunO-gfg) · Niu_Edits · 2,302,359 views · 57,376 likes · 416 comments · 2026-11-10
-- [Ultron Unlocked God Mode | "VISIONQUEST" edit](https://youtu.be/o9mvSKB2Cko) · Johan D. Villain · 3,170,344 views · 93,892 likes · 539 comments · 2026-11-11
-- [Would you like a smart assistant like this?🔥#movie #edit #foryou #funny](https://youtu.be/DY9V-uonUEw) · Realistic films · 2,327,346 views · 98,781 likes · 764 comments · 2026-11-10
+- ["Wild Bear Vs. Military Dog" ☠️ | Heart of the Beast Edit | Raya (Slowed) | #Shorts #Edit #Trending](https://youtu.be/iCXQW_3Xayw) · Lovnish · 15,026,686 views · 0 likes · 1,232 comments · 2026-11-10
+- [This romance wasn't quite what he had imagined #movie #edit #shorts](https://youtu.be/PXER65OZKtI) · yymovie · 6,766,873 views · 315,364 likes · 2,609 comments · 2026-11-12
+- [He gained the power of God🪽😂 #movie #shorts #edit #fyp #trending](https://youtu.be/2BdKgZeT_z0) · STV Pro  · 5,828,489 views · 299,071 likes · 1,569 comments · 2026-11-10
+- [The Middle nice edit #netflix #peliculas #peliculasrecomendadas #movie #cine](https://youtu.be/VyvKRrbOgn0) · Peliya · 5,410,018 views · 102,718 likes · 207 comments · 2026-11-10
+- [How do special forces carry out rescue operations? #shorts #edit  #movie](https://youtu.be/aFXyQgzqDvs) · 武影天下 · 4,965,678 views · 68,489 likes · 55 comments · 2026-11-11
+- [Spider-Man is looking for drugs in prison!☠️🔥#Trending #shorts #movie](https://youtu.be/bqSYvIRD4qo) · MovieLover · 3,170,640 views · 136,846 likes · 2,400 comments · 2026-11-12
+- [Nobody Expected Him To Show Up](https://youtu.be/RWxGkO0kjH8) · Moki Movies · 3,238,976 views · 51,613 likes · 255 comments · 2026-11-10
+- [Bitten by a Dragonfly, He Becomes a Superhero🦋#movie    #film  #funny  #edit  #shorts](https://youtu.be/gg2SunO-gfg) · Niu_Edits · 2,327,670 views · 57,662 likes · 419 comments · 2026-11-10
+- [Would you like a smart assistant like this?🔥#movie #edit #foryou #funny](https://youtu.be/DY9V-uonUEw) · Realistic films · 2,374,441 views · 100,754 likes · 779 comments · 2026-11-10
+- [" Line Nahi Hai 🔥🥶 " - | Chhichhore Movie Edit | Heavenly ( Slowed )](https://youtu.be/rgtCtboFAHs) · Dhoni Creation  · 3,102,457 views · 85,950 likes · 117 comments · 2026-11-10
 
 ### "anime edit"
-- [THIS STORY BROKE MY HEART 💔 | Part 3, THORFINN EDIT🥀#Short #viralshorts #story #anime #viral #foryou](https://youtu.be/iArv9yUvtiQ) · 𝙎𝙊𝙃𝘼𝙄𝙇  · 6,270,265 views · 205,189 likes · 827 comments · 2026-11-11
-- [Mais crianças assim no mundo 🥹🌹](https://youtu.be/y63mYuFOIxQ) · Eric 愛 · 2,311,206 views · 0 likes · 1,033 comments · 2026-11-11
-- [Melhor sair desse lugar rápido 👀🥀](https://youtu.be/FnA5N2SmtBc) · Eric 愛 · 2,680,106 views · 0 likes · 2,298 comments · 2026-11-15
-- [Saku and Haru Took Pool Cleaning Too Far 😳](https://youtu.be/SHnOjxoZsrs) · AniRelic · 1,562,333 views · 0 likes · 38 comments · 2026-11-10
-- [Who's the most popular 🤔? | Jujutsu Kaisen Edit | #gojo #toji #edit](https://youtu.be/KuJfCdrCBZM) · YUJI公 · 1,199,746 views · 91,854 likes · 1,723 comments · 2026-11-10
-- [IN THIS WORLD EVERYONE IS CRAYONS 💀, THORFINN EDIT🥀 #Short #viralshorts #story #anime #viral #foryou](https://youtu.be/Jt0APrOk6aw) · JJ GROWS · 1,151,732 views · 22,497 likes · 185 comments · 2026-11-15
-- [gerçekkk #ddlc #ytdayibenionecikarnolur #kesfeteyyiz #art#bl#anime#edit#lifeisbutadream#madokamagica](https://youtu.be/VgWXzV604hA) · 𓋹𝙍𝙖𝙫𝙯𝙖_𝙤𝙣𝙞-𝙘𝙝𝙖𝙣⛥ · 1,815,650 views · 26,019 likes · 138 comments · 2026-11-13
-- [WHAT IF TANJIRO KAMADO DIED?! 💀💔 | DEMON SLAYER #anime #demonslayer #animeopening](https://youtu.be/CdGqBrqjz14) · Xenzo · 1,548,016 views · 0 likes · 43 comments · 2026-11-10
-- [Saviour of the Universe - Absolute Goku | Dragon Ball 「Manga Edit」 | #goku #dragonball #dbz](https://youtu.be/bYVSrUeKWA8) · SARAN EDITZ · 1,357,942 views · 0 likes · 635 comments · 2026-11-11
-- ["Você não tem inimigos..." 🥹🔥](https://youtu.be/BVIX9vh6LBQ) · Eric 愛 · 1,474,950 views · 0 likes · 337 comments · 2026-11-13
+- [THIS STORY BROKE MY HEART 💔 | Part 3, THORFINN EDIT🥀#Short #viralshorts #story #anime #viral #foryou](https://youtu.be/iArv9yUvtiQ) · 𝙎𝙊𝙃𝘼𝙄𝙇  · 6,376,862 views · 207,420 likes · 842 comments · 2026-11-11
+- [Mais crianças assim no mundo 🥹🌹](https://youtu.be/y63mYuFOIxQ) · Eric 愛 · 2,314,002 views · 0 likes · 1,034 comments · 2026-11-11
+- [Melhor sair desse lugar rápido 👀🥀](https://youtu.be/FnA5N2SmtBc) · Eric 愛 · 2,695,030 views · 0 likes · 2,318 comments · 2026-11-15
+- [IN THIS WORLD EVERYONE IS CRAYONS 💀, THORFINN EDIT🥀 #Short #viralshorts #story #anime #viral #foryou](https://youtu.be/Jt0APrOk6aw) · JJ GROWS · 1,285,609 views · 24,320 likes · 197 comments · 2026-11-15
+- [gerçekkk #ddlc #ytdayibenionecikarnolur #kesfeteyyiz #art#bl#anime#edit#lifeisbutadream#madokamagica](https://youtu.be/VgWXzV604hA) · 𓋹𝙍𝙖𝙫𝙯𝙖_𝙤𝙣𝙞-𝙘𝙝𝙖𝙣⛥ · 1,838,069 views · 26,069 likes · 138 comments · 2026-11-13
+- [Saku and Haru Took Pool Cleaning Too Far 😳](https://youtu.be/SHnOjxoZsrs) · AniRelic · 1,586,824 views · 0 likes · 38 comments · 2026-11-10
+- [Who's the most popular 🤔? | Jujutsu Kaisen Edit | #gojo #toji #edit](https://youtu.be/KuJfCdrCBZM) · YUJI公 · 1,208,389 views · 92,340 likes · 1,729 comments · 2026-11-10
+- [Saviour of the Universe - Absolute Goku | Dragon Ball 「Manga Edit」 | #goku #dragonball #dbz](https://youtu.be/bYVSrUeKWA8) · SARAN EDITZ · 1,386,777 views · 0 likes · 641 comments · 2026-11-11
+- [Wait a minute #anime #jjkgame #jujutsukaisen #peak #edit #jjk #gojo #maheto #megumi #toji #sukuna](https://youtu.be/4lP6C7Jo_Ew) · Nova X  · 1,323,364 views · 20,740 likes · 499 comments · 2026-11-10
+- ["Você não tem inimigos..." 🥹🔥](https://youtu.be/BVIX9vh6LBQ) · Eric 愛 · 1,477,913 views · 0 likes · 337 comments · 2026-11-13
 
 ### "gaming edit"
-- [POV: Buying an NVIDIA GPU in 2026 💀😂#shorts#gpu#gaming#nvidia #graphicscard](https://youtu.be/A5sE7l8SbL4) · The Dynamic Edit · 4,839,289 views · 51,555 likes · 1,308 comments · 2026-11-12
-- [Bro is totally shocked 😱#edit](https://youtu.be/xArujGdP1ag) · BIRJU GAMING  · 2,411,409 views · 74,876 likes · 357 comments · 2026-11-11
-- [Ajjubhai X Sheru Bhai 🔥☠️ #sheru #king #short](https://youtu.be/DwuH_rmMRcw) · SATISH 300K · 2,049,796 views · 27,824 likes · 156 comments · 2026-11-12
-- [The Greatest 🗿 Player in Minecraft History. #roblox #bloxfruit #shorts #fyp #edit](https://youtu.be/z6u4ieZiP8w) · OhGaps · 1,680,200 views · 35,928 likes · 1,973 comments · 2026-11-12
-- [Women's Gaming PC vs. Men's Gaming PC Part 1.  #trollface #edit #bestmoments #shorts #feedshorts](https://youtu.be/vrV_G_KU2CY) · LITTLE_EDITES · 1,179,089 views · 27,692 likes · 136 comments · 2026-11-11
-- [Friendly Fire Final Boss 🥀](https://youtu.be/LzFyWqSoAiM) · Xena R · 1,348,251 views · 22,570 likes · 216 comments · 2026-11-11
-- [The Players Ass Is Cooked💀🔥#poppyplaytime #edit #gaming #funny #painful #jokes #gameplay #catnap](https://youtu.be/ZIU5lwFcuV0) · BEYOND Playtime · 1,733,106 views · 4,670 likes · 34 comments · 2026-11-12
-- ["The Good Old Memories.." 🥹💖 - Nostalgic Games Edit #edit #shorts #trending](https://youtu.be/vogtRS5Cr5M) · 4y4xn_am · 814,054 views · 40,373 likes · 1,400 comments · 2026-11-10
-- [Brawl stars Funny Moments #brawlstars](https://youtu.be/vqCER72_LyY) · RlVAL · 727,145 views · 23,604 likes · 123 comments · 2026-11-12
-- [Bro Beat magnus 💀🧠 | Witty Alien Edit | MEOW BOSS TEKK](https://youtu.be/icI2iQuZHHQ) · Chalupa · 779,959 views · 18,328 likes · 291 comments · 2026-11-10
+- [POV: Buying an NVIDIA GPU in 2026 💀😂#shorts#gpu#gaming#nvidia #graphicscard](https://youtu.be/A5sE7l8SbL4) · The Dynamic Edit · 4,916,484 views · 52,350 likes · 1,327 comments · 2026-11-12
+- [Bro is totally shocked 😱#edit](https://youtu.be/xArujGdP1ag) · BIRJU GAMING  · 2,418,649 views · 75,178 likes · 359 comments · 2026-11-11
+- [Ajjubhai X Sheru Bhai 🔥☠️ #sheru #king #short](https://youtu.be/DwuH_rmMRcw) · SATISH 300K · 2,069,889 views · 28,554 likes · 160 comments · 2026-11-12
+- [The Greatest 🗿 Player in Minecraft History. #roblox #bloxfruit #shorts #fyp #edit](https://youtu.be/z6u4ieZiP8w) · OhGaps · 1,685,182 views · 35,984 likes · 1,976 comments · 2026-11-12
+- [Yamal x Ronaldo Skills 🔥🤣🥅](https://youtu.be/QJEKCOF4s4k) · GOALZO  · 1,928,346 views · 0 likes · 18 comments · 2026-11-10
+- [Women's Gaming PC vs. Men's Gaming PC Part 1.  #trollface #edit #bestmoments #shorts #feedshorts](https://youtu.be/vrV_G_KU2CY) · LITTLE_EDITES · 1,233,469 views · 28,946 likes · 147 comments · 2026-11-11
+- [Friendly Fire Final Boss 🥀](https://youtu.be/LzFyWqSoAiM) · Xena R · 1,395,832 views · 23,117 likes · 221 comments · 2026-11-11
+- [The Players Ass Is Cooked💀🔥#poppyplaytime #edit #gaming #funny #painful #jokes #gameplay #catnap](https://youtu.be/ZIU5lwFcuV0) · BEYOND Playtime · 1,882,362 views · 4,994 likes · 34 comments · 2026-11-12
+- ["The Good Old Memories.." 🥹💖 - Nostalgic Games Edit #edit #shorts #trending](https://youtu.be/vogtRS5Cr5M) · 4y4xn_am · 824,424 views · 40,773 likes · 1,415 comments · 2026-11-10
+- [Brawl stars Funny Moments #brawlstars](https://youtu.be/vqCER72_LyY) · RlVAL · 748,080 views · 23,893 likes · 127 comments · 2026-11-12
 
 ## TMDB: trending movies and shows today
-- The Odyssey (movie, 2026) · popularity 486
-- The Hunger Games: Sunrise on the Reaping (movie, 2026) · popularity 65
-- The Beast (movie, 2026) · popularity 85
-- Avengers: Doomsday (movie, 2026) · popularity 163
-- The Body (tv, 2026) · popularity 163
-- VisionQuest (tv, 2026) · popularity 309
-- Ebenezer (movie, 2026) · popularity 128
-- Other Mommy (movie, 2026) · popularity 400
-- The Lord of the Rings: The Rings of Power (tv, 2022) · popularity 1747
-- Godzilla Minus Zero (movie, 2026) · popularity 150
-- Resident Evil (movie, 2026) · popularity 501
-- The Chosen (tv, 2019) · popularity 89
-- Heart of the Beast (movie, 2026) · popularity 599
-- Spider-Man: Brand New Day (movie, 2026) · popularity 350
-- Heartland (movie, 2026) · popularity 114
+- The Odyssey (movie, 2026) · popularity 457
+- The Hunger Games: Sunrise on the Reaping (movie, 2026) · popularity 89
+- Avengers: Doomsday (movie, 2026) · popularity 169
+- The Beast (movie, 2026) · popularity 89
+- The Body (tv, 2026) · popularity 191
+- VisionQuest (tv, 2026) · popularity 287
+- The Lord of the Rings: The Rings of Power (tv, 2022) · popularity 1918
+- Ebenezer (movie, 2026) · popularity 130
+- Other Mommy (movie, 2026) · popularity 421
+- Godzilla Minus Zero (movie, 2026) · popularity 137
+- The Chosen (tv, 2019) · popularity 102
+- Resident Evil (movie, 2026) · popularity 451
+- Spider-Man: Brand New Day (movie, 2026) · popularity 334
+- Heart of the Beast (movie, 2026) · popularity 555
+- Crash (tv, 2024) · popularity 14

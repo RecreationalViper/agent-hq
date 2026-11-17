@@ -2,74 +2,82 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# YouTube Shorts Trend Analysis & Action Plan
-*Date: November 16, 2026*
+# MotionVault Shorts Intel — Nov 16, 2026
+
+Fast-rising chart analysis across movie, anime, and game clips, plus 3 immediate edit concepts Claude can cut today.
 
 ---
 
-## 🚀 6 Fastest-Rising Relevant Short Edits & Clips
-*(Quoted directly from live YouTube scanner data)*
+## 1. Fastest-Rising Relevant Clips & Edits
 
-1. **"They Underestimated the Beggar" 🗿🔥** (Ukhnooq_Ae)
-   * **Views:** 24,991,544 (164,085 views/hr) | **Length:** 1:00
-   * **Focus:** Disrespected hero / undercover power flex (movie edit).
+*Data quoted directly from live US charts & 7-day edit trackers:*
 
-2. **"Wild Bear Vs. Military Dog" ☠️ | Heart of the Beast Edit | Raya (Slowed)** (Lovnish)
-   * **Views:** 14,952,836 | **Length:** Short edit
-   * **Focus:** High-stakes animal/creature battle with slowed phonk audio.
+1. **"They Underestimated the Beggar" 🗿🔥** (Ukhnooq_Ae)  
+   • **Stats:** 25,006,718 views · 158,334 views/hr · 775,222 likes (1:00)  
+   • **Format:** Classic "disrespected protagonist reveals real status/power" movie trope. High retention through delayed payoff.
 
-3. **THIS STORY BROKE MY HEART 💔 | Part 3, THORFINN EDIT🥀** (𝙎𝙊𝙃𝘼𝙄𝙇)
-   * **Views:** 6,270,265 | **Length:** Short edit
-   * **Focus:** Emotional character arc / revenge-to-peace narrative (*Vinland Saga*).
+2. **Security Stops Woman Over Her Service Dog! 😳** (Thinkerz Edits)  
+   • **Stats:** 48,725,861 views · 225,465 views/hr · 1,388,524 likes (0:32)  
+   • **Format:** High-friction confrontation, dialogue-driven opening 2 seconds, unbroken story tension.
 
-4. **"An elegant gentleman assassin who follows the rules."☠️🔥 | Most Dangerous Game** (Yah Bak)
-   * **Views:** 5,020,855 (134,930 views/hr) | **Length:** 2:56
-   * **Focus:** Cold, calculated assassin tropes with high-energy dialogue audio.
+3. **"Wild Bear Vs. Military Dog" ☠️ | Heart of the Beast Edit** (Lovnish)  
+   • **Stats:** 15,026,686 views · 1,232 comments  
+   • **Format:** Action matchup montage set to slowed phonk/ambient audio (*Raya*). Fast visual hook, visceral climax.
 
-5. **Ultron Unlocked God Mode | "VISIONQUEST" edit** (Johan D. Villain)
-   * **Views:** 3,170,344 | **Length:** Short edit
-   * **Focus:** Villain overpowering heroes / "God mode" aura flex.
+4. **THIS STORY BROKE MY HEART 💔 | Part 3, THORFINN EDIT🥀** (𝙎𝙊𝙃𝘼𝙄𝙇)  
+   • **Stats:** 6,376,862 views · 207,420 likes  
+   • **Format:** *Vinland Saga* character arc contrast edit (violent past Thorfinn cut against peaceful "I have no enemies" farmer Thorfinn).
 
-6. **Spider-Man is looking for drugs in prison!☠️🔥** (MovieLover)
-   * **Views:** 3,085,606 | **Length:** Short edit
-   * **Focus:** Shocking/out-of-context superhero scene hook.
+5. **This romance wasn't quite what he had imagined #movie #edit** (yymovie)  
+   • **Stats:** 6,766,873 views · 315,364 likes  
+   • **Format:** Subverted expectation trope. Opens on an innocent premise and flips into dark or comedic chaos at 0:18.
 
----
+6. **POV: Buying an NVIDIA GPU in 2026 💀😂** (The Dynamic Edit)  
+   • **Stats:** 4,916,484 views · 52,350 likes  
+   • **Format:** Relatable gaming culture satire, snappy pacing, memetic sound design.
 
-## 🔑 What These Viral Edits Have in Common
-
-* **The Hook (First 1-2 Seconds):** Text on screen frames a clear narrative dynamic: disrespect ("They Underestimated..."), power transformation ("God Mode"), or emotional stakes ("THIS STORY BROKE MY HEART").
-* **Audio Trends:** Heavy use of slowed/reverbed phonk tracks (e.g., *Raya Slowed*) for action clips, or dramatic slowed instrumental tracks for character arcs.
-* **Length:** Sweet spot is 30–60 seconds for storytelling clips. Longer edits (1:00–2:56) succeed when formatted like full mini-episodes.
-* **Core Tropes That Work Best Right Now:**
-  1. *The Underestimated Protagonist* (disrespected character reveals insane strength).
-  2. *Cold/Calculated Villains/Assassins* ("aura" edits).
-  3. *Tragic Character Transformations* (Thorfinn, tragic villain backstories).
+7. **GTA 6 Marathon / Streamer Crossover Trailers** (Kai Cenat Live / IShowSpeed)  
+   • **Stats:** 1,028,209 views (141,070/hr) & 657,057 views (128,996/hr)  
+   • **Format:** Extreme cultural hunger for *Grand Theft Auto VI* visuals (106k+ daily Wikipedia views; spiking on UK/Mexico trends).
 
 ---
 
-## 🎬 Specific Scenes MotionVault Should Clip Next
+## 2. What the Winners Have in Common
 
-### 1. Anime: *Steel Ball Run: JoJo's Bizarre Adventure* / *Vinland Saga* / *Black Clover*
-* **Clip Concept:** *Steel Ball Run* — Gyro Zeppeli & Johnny Joestar stand-off / Spin reveal.
-  * **The Beat (35s):** 0–2s Hook ("He traded everything for one shot..."), 3–28s unbroken clip of the tension/technique, 29–35s impact shot looping back to start.
-* **Clip Concept:** *Vinland Saga* — Thorfinn "I Have No Enemies" moment.
-  * **The Beat (30s):** Capitalize on the Thorfinn trend currently pulling 6M+ views; audio overlay with emotional slowed music.
-
-### 2. Movies: *Godzilla Minus One / Minus Zero* or Classic "Disrespected Hero" Scenes
-* **Clip Concept:** Godzilla Atomic Breath Charging Scene.
-  * **The Beat (30s):** Text: *"When the music stops, run."* 1–3s build-up of dorsal fins popping out, 4–25s continuous charging sound & explosion, 26–30s silence/aftermath rewatch loop.
-
-### 3. Gaming: *GTA VI / Vice City Atmosphere* or *Call of Duty: Modern Warfare 4*
-* **Clip Concept:** *GTA VI* Vice City police chase or hype montage (leveraging peak *GTA 6* search trends on Twitch/Google).
-  * **The Beat (30s):** High-speed neon night-drive/chase set to synthwave sound (*Duvet* or *Creep* slowed remix).
+* **Length:** Sweet spot is **31–36 seconds** (or concise 10–12 second gags). The 30–35s zone hits maximum average percentage viewed (APV) when using unbroken story stretches.
+* **The First 1.5 Seconds:** No channel intros. The clip immediately opens on an insult, an impossible standoff, or an absurd visual premise.
+* **Title Strategy:** Quoted spoken lines or narrative stakes (`"They Underestimated the Beggar"`, `Nobody Expected Him To Show Up`) paired with 1–2 emojis (`🗿🔥`, `💀`, `👀`).
+* **Soundscape:** Slowed reverb instrumentals or melancholy alt-rock (Last.fm US charts show *Duvet* by bôa and Radiohead's *Let Down* surging heavily for introspective edits).
 
 ---
 
-## 🏷️ Title Patterns to Copy
+## 3. MotionVault Action Plan: 3 Edits to Clip
 
-* `“They Underestimated The [Character Class]” 🗿🔥`
-* `[Character Name] Unlocked God Mode ☠️🔥`
-* `THIS SCENE BROKE THE INTERNET 💔 | [Title] Edit`
-* `He rules by one rule only… ☠️ | [Movie/Show Name]`
-* `Nobody expected him to do this… 😳`
+### Edit 1 (Anime): *Vinland Saga* / Thorfinn — "You Have No Enemies"
+* **Why now:** Thorfinn edits dominate recent anime edit charts (2 separate viral edits this week totaling over 7.6M views).
+* **The Hook (0–3s):** Thorfinn's dead-eyed younger self covered in blood in England, dagger drawn. Text overlay: *"He used to be a monster..."*
+* **The Stretch (3–25s):** 2 long cuts from Season 2: Thorfinn taking 100 punches without raising his fists, cut against Askeladd’s deathbed advice.
+* **Final Beat (25–34s):** Cuts to him looking out at the farmland smiling with the quote: *"I have no enemies."* Audio drop on bôa's *Duvet* (slowed guitar riff).
+* **Title:** He finally found peace... 🥹🥀 #vinlandsaga #anime #edit
+
+### Edit 2 (Gaming): *GTA VI* Vice City Nostalgia to Next-Gen
+* **Why now:** GTA 6 search is surging worldwide (UK, Mexico, Wikipedia top 15).
+* **The Hook (0–2s):** Tommy Vercetti stepping out of the classic PS2 Vice City ocean hotel, neon pink flare. Text: *"Vice City 2002 vs 2026"*
+* **The Stretch (3–24s):** Smooth vertical wipe matching camera angles of cruising Ocean Drive in 2002 to Lucia & Jason drifting past modern Miami strip malls.
+* **Final Beat (24–32s):** Beat drops on a high-speed police chase PIT maneuver into an abrupt cut to the iconic logo splash.
+* **Title:** Vice City never truly changes 🌴🔥 #gta6 #gaming #rockstargames
+
+### Edit 3 (Movie/Actor): Robert Pattinson — The Transformation Arc
+* **Why now:** Robert Pattinson exploded to #1 on Wikipedia (1,363,657 views yesterday) following viral casting buzz.
+* **The Hook (0–2s):** Twilight Edward Cullen glittering in the forest. Hard cut sound effect: *"People laughed at him for years..."*
+* **The Stretch (3–26s):** Unbroken cuts of raw physical intensity: screaming into the lighthouse light (*The Lighthouse*), the alleyway beatdown (*The Batman*), and adrenaline sprint in *Good Time*.
+* **Final Beat (26–33s):** Slow zoom on Bruce Wayne taking off the cowl with bruised eyes. Audio resolves smoothly to invite an immediate loop.
+* **Title:** They really called him just a teen heartthrob 🗿🦇 #batman #robertpattinson #movie
+
+---
+
+## 4. Title Patterns to Copy
+* `‎"They Thought He Was [Weak/Harmless]" 🗿🔥`
+* `Nobody expected him to do this... 👀💀`
+* `POV: You realize what he went through 💔`
+* `This scene gave everyone chills 🥶 #movie`

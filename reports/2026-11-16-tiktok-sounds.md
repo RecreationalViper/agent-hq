@@ -2,71 +2,52 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# TikTok Sound Watcher Briefing — Trending Sounds for MotionVault
-
-Here are 6 rising sounds across current TikTok trends, Last.fm spikes, and edit communities that fit MotionVault's movie, game, and anime focus.
+Here are 6 rising TikTok sounds and tracks confirmed in fresh data that fit short-form movie, anime, and gaming edits:
 
 ---
 
-### 1. "Earned It" — The Weeknd (Remix / Slowed Edits)
-* **Why it's rising:** Spiking across TikTok AMV and short-form edit creators (recently fueled by viral motorcycle and anime character aesthetic edits).
-* **Edit style:** Slow-mo reveal / Dark romance / Flexing badasses.
-* **Beat / Drop to cut on:** Hard cut on the bass drop right when the main vocal hits (*"Cause girl, you earned it"*). Sync the drop with a smooth slow-motion character entrance or a camera zoom reveal.
-* **Best source pairing:** *Steel Ball Run: JoJo's Bizarre Adventure* (Gyro Zeppeli / Johnny Joestar walk-ups) or *GTA 6* dynamic gameplay cuts.
-* **Business Account status:** **Blocked / Restricted.** Major label release (Universal Music Group). Must use a standard Personal Creator account to avoid mute.
-* **Source:** [KnowYourMeme Edit Trend Reference](https://knowyourmeme.com/memes/sundx-at6-edit-bike-guy)
+### 1. "Funk Do Bounce" – Arii
+* **Why it's rising:** Documented by [Know Your Meme](https://trending.knowyourmeme.com/editorials/guides/who-is-french-midas-the-viral-fortnite-cosplayer-dancing-at-protests-in-france-and-spawning-memes-explained) as the breakout phonk track driving viral *Fortnite* and gaming cosplay edits across TikTok.
+* **Edit style:** High-tempo hype, fast-paced gaming clips, or aggressive anime fight sequences.
+* **Beat / Cut moment:** Cut right on the explosive Brazilian phonk 808 sub-bass drop after the pitched-up vocal chop hook.
+* **Business account status:** **Likely blocked** for TikTok Business accounts due to indie phonk copyright distribution; standard personal creator accounts only.
 
 ---
 
-### 2. "Funk Do Bounce" — AriiPhonk
-* **Why it's rising:** Surging in gaming edits, cosplay clips, and action montages across TikTok and YouTube Shorts.
-* **Edit style:** High-energy hype / Fast-cut action montage.
-* **Beat / Drop to cut on:** The heavy bass drop immediately following the vocal sample hook. Cut rapidly on every 16th-note snare/bass hit during intense fight sequences.
-* **Best source pairing:** *Black Clover Season 2* battle scenes or *Call of Duty: Modern Warfare 4* / *Bodycam* gameplay highlights.
-* **Business Account status:** **Usually Available**, but depends on whether it's accessed via TikTok's Commercial Audio Library or creator uploads. Safe to check library beforehand.
-* **Source:** [French Midas Trend Coverage](https://trending.knowyourmeme.com/editorials/guides/who-is-french-midas-the-viral-fortnite-cosplayer-dancing-at-protests-in-france-and-spawning-memes-explained)
+### 2. "Earned It" – The Weeknd
+* **Why it's rising:** Re-surging rapidly in anime edits via the viral "Sundx AT6 / Bike Guy" AMV trend ([Know Your Meme](https://knowyourmeme.com/memes/sundx-at6-edit-bike-guy)), generating over 550,000 views in a single day on TikTok edit re-uploads.
+* **Edit style:** Slow-mo reveal, character aura/swagger, or anti-hero tributes.
+* **Beat / Cut moment:** The slow orchestral swell leading right into the heavy first beat of the chorus (*"'Cause girl you're perfect..."*).
+* **Business account status:** **Blocked** on TikTok Business Accounts (Universal Music Group commercial licensing).
 
 ---
 
-### 3. "Duvet" — bôa
-* **Why it's rising:** Trending on Last.fm charts (2.1M+ listeners worldwide). Resurgent nostalgia sound heavily favored by late-night anime edit channels.
-* **Edit style:** Sad / Melancholic / Aesthetic mood piece.
-* **Beat / Drop to cut on:** Cut as the acoustic guitar intro transitions into full vocals and drums (*"And you don't seem to understand..."*). Perfect for a 2-second hook intro leading into unbroken emotional stretches.
-* **Best source pairing:** *The Apothecary Diaries Season 3*, *One Piece* tragic backstory montages, or melancholic cinematic movie scenes.
-* **Business Account status:** **Likely Restricted.** Commercial copyrighted track. Use personal profile.
-* **Source:** [Last.fm Duvet Charts](https://www.last.fm/music/b%C3%B4a/_/Duvet)
+### 3. "Duvet" – bôa
+* **Why it's rising:** Trending heavily on streaming charts with over 2.18M listeners on [Last.fm](https://metricool.com/trending-tiktok-songs), maintaining its status as a core staple in melancholic and aesthetic anime edits.
+* **Edit style:** Nostalgic, melancholic, or psychological anime/movie sequences (e.g., emotional reflection scenes).
+* **Beat / Cut moment:** The sudden vocal entry on *"And you don't seem to understand..."* transitioning immediately into the clean guitar strum.
+* **Business account status:** **Blocked** for Business Accounts; accessible only via personal creator audio libraries.
 
 ---
 
-### 4. "D>E>A>T>H>M>E>T>A>L" — Panchiko
-* **Why it's rising:** Spiking on global and US Last.fm charts (~1M listeners). Highly popular among underground anime and indie edit communities.
-* **Edit style:** Gritty / Lo-fi angst / Villain origin story.
-* **Beat / Drop to cut on:** Transition from low audio/whisper intro to the sudden burst of distorted shoegaze guitar and heavy drums. Cut to high-impact visuals on the guitar fuzz drop.
-* **Best source pairing:** *Cyberpunk: Edgerunners 2*, *Made in Abyss*, or dark anti-hero movie scenes.
-* **Business Account status:** **Restricted.** Independent label distribution, generally cleared only for standard personal accounts.
-* **Source:** [Last.fm Panchiko Trend Data](https://www.last.fm/music/Panchiko/_/D%2EE%2EA%2ET%2EH%2EM%2EE%2ET%2EA%2EL)
+### 4. "D>E>A>T>H>M>E>T>A>L" – Panchiko
+* **Why it's rising:** Clocking over 17,600 US listeners and nearing 1M worldwide listeners on [Last.fm](https://metricool.com/trending-tiktok-songs), riding a wave of lo-fi shoegaze resurgence in TikTok cinematic video edits.
+* **Edit style:** Bittersweet, reflective, or tragic character arcs (pairs naturally with trending *Thorfinn / Vinland Saga* style "no enemies" narratives).
+* **Beat / Cut moment:** The tape-flutter lo-fi intro breaking into the loud, fuzz-distorted opening guitar riff.
+* **Business account status:** **Indie catalog** – occasionally unflagged, but generally restricted on registered commercial accounts.
 
 ---
 
-### 5. "Raya (Slowed)" — Audio Remix / User Sound
-* **Why it's rising:** Driving millions of views on action edits across YouTube Shorts and TikTok (featured in top-performing animal/military fight edits).
-* **Edit style:** Brutal action / High-stakes confrontation / Power scaling edit.
-* **Beat / Drop to cut on:** Cut on the heavy slowed sub-bass hit following the ambient cinematic swell. Use the initial synth note as the 1-second hook where two opponents face off.
-* **Best source pairing:** Cinematic movie showdowns, monster/beast fights, or *One Piece* conqueror's haki scene edits.
-* **Business Account status:** **Unrestricted / User Sound.** Usually uploaded as an edit audio track, but prone to copyright claims if claimed by the original score owner.
-* **Source:** [YouTube Shorts Edit Reference](https://youtu.be/iCXQW_3Xayw)
+### 5. "505" – Arctic Monkeys
+* **Why it's rising:** High on US and global Last.fm trackers (3.2M+ listeners) as an evergreen dramatic audio used across movie and TV edits for peak emotional payoffs.
+* **Edit style:** Dramatic confrontation, betrayal, or intense climax in movie and game cutscenes.
+* **Beat / Cut moment:** The explosive drum-kit crash and organ crescendo at 4:15 (*"I'd probably still adore you..."*). Cut directly from low-tension close-ups to intense action on the crash.
+* **Business account status:** **Blocked** for Business Accounts (Domino Recording Co. copyright).
 
 ---
 
-### 6. "505" — Arctic Monkeys
-* **Why it's rising:** Continuous high placement on US and global streaming trends (3.2M+ listeners). A staple soundtrack for character angst and climax montages.
-* **Edit style:** Dramatic buildup / Emotional climax / Rewatch-bait ending.
-* **Beat / Drop to cut on:** The iconic climax drop where the organ swells into pounding drums and heavy guitar (*"I'm going back to 505..."*). Hold long unbroken emotional cuts during the piano intro, then flash cut fast on the climax beat.
-* **Best source pairing:** High-drama anime romance (*Blue Box Season 2*, *Firefly Wedding*) or intense movie character arcs.
-* **Business Account status:** **Blocked.** Major label track (Domino Record Co.). Restricted to standard accounts.
-* **Source:** [Last.fm 505 Trend Data](https://www.last.fm/music/Arctic+Monkeys/_/505)
-
----
-
-### Account Strategy Note
-Since MotionVault runs on a standard TikTok creator profile, you can utilize the copyrighted/major label sounds (**"Earned It"**, **"Duvet"**, **"505"**). If crossposting to YouTube Shorts, prioritize pitching user-remixed slowed audio or royalty-cleared phonk (**"Funk Do Bounce"**, **"Raya (Slowed)"**) to avoid Content ID audio mutes.
+### 6. "V-Cut" – Ghetto Ba
+* **Why it's rising:** Featured on [Metricool's Trending TikTok Songs chart (Nov 16, 2026)](https://metricool.com/trending-tiktok-songs) as a top 10 viral audio for fast pacing.
+* **Edit style:** Snappy transition edits, rapid beat-matched game montages, or speed-ramped action.
+* **Beat / Cut moment:** Fast, percussive downbeats perfect for 0.3-second rapid flash cuts on character movements or weapon reloads.
+* **Business account status:** Check the in-app TikTok Commercial Music Library directly before posting; tracks spotlighted by Metricool often have commercial clearances, but availability varies by territory.
