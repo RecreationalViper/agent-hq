@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T04:00:23.085Z",
+  "generatedAt": "2026-11-17T16:20:41.068Z",
   "date": "2026-11-17",
   "token": true,
   "searches": {
@@ -9,72 +9,118 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 18,
-  "rateRemaining": 4994,
-  "newItems": 1,
-  "blockedToday": 0,
-  "shortlist": [
+  "apiCalls": 43,
+  "rateRemaining": 9,
+  "newItems": 26,
+  "blockedToday": 1,
+  "shortlist": [],
+  "watched": [],
+  "newborn": [
     {
-      "name": "srbhptl39/MCP-SuperAssistant",
-      "url": "https://github.com/srbhptl39/MCP-SuperAssistant",
-      "description": "Brings MCP to ChatGPT, DeepSeek, Perplexity, Grok, Gemini, Google AI Studio, OpenRouter, DeepSeek, T3 Chat and more...",
-      "stars": 2638,
-      "forks": 377,
+      "name": "agentes-chat/agentes-chat",
+      "url": "https://github.com/agentes-chat/agentes-chat",
+      "description": "Open-source, self-hosted Slack alternative where your team and AI agents work together in channels and DMs. Agents run on Claude, ChatGPT/Codex, Gemini or Grok, with MCP tools, their own computer and browser, routines, memory and approvals. Web, desktop and phone apps. Docker Compose + Postgres. AGPL-3.0.",
+      "stars": 1669,
+      "forks": 299,
       "language": "TypeScript",
-      "license": "MIT",
-      "pushedAt": "2026-11-16T18:46:58Z",
+      "license": "AGPL-3.0",
+      "pushedAt": "2026-11-17T14:28:04Z",
       "category": "skills",
-      "score": 60,
+      "score": 90,
       "tier": "watch",
       "reasons": [
         "filed under skills",
-        "2,638 stars",
+        "1,669 stars",
         "updated this week",
-        "MIT license"
+        "AGPL-3.0 license",
+        "new repo, 9 days old",
+        "early traction",
+        "contains SKILL.md skill files"
       ],
-      "flags": [],
-      "skillFiles": null,
+      "flags": [
+        "newborn",
+        "self-host-required"
+      ],
+      "skillFiles": true,
       "source": "search",
-      "newborn": false,
+      "newborn": true,
+      "skillPath": null,
+      "commitUrl": null
+    },
+    {
+      "name": "DIYgod/pinky",
+      "url": "https://github.com/DIYgod/pinky",
+      "description": "Let AI use your iPhone or Android phone, with you in the loop: any MCP agent from macOS, Windows or Linux, or Pinky itself, right on the phone.",
+      "stars": 2357,
+      "forks": 248,
+      "language": "Go",
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-17T11:11:24Z",
+      "category": "skills",
+      "score": 88,
+      "tier": "watch",
+      "reasons": [
+        "filed under skills",
+        "2,357 stars",
+        "updated this week",
+        "Apache-2.0 license",
+        "new repo, 11 days old",
+        "early traction",
+        "contains SKILL.md skill files"
+      ],
+      "flags": [
+        "newborn"
+      ],
+      "skillFiles": true,
+      "source": "search",
+      "newborn": true,
+      "skillPath": null,
+      "commitUrl": null
+    },
+    {
+      "name": "boringmarketer/boring-marketing-skills",
+      "url": "https://github.com/boringmarketer/boring-marketing-skills",
+      "description": "31 free marketing skills for your AI agent: research, positioning, copy, pages, SEO, AI search, ads, email and content, plus a deep local-business pack. MIT.",
+      "stars": 432,
+      "forks": 179,
+      "language": "Python",
+      "license": "MIT",
+      "pushedAt": "2026-11-16T18:29:00Z",
+      "category": "skills",
+      "score": 84,
+      "tier": "watch",
+      "reasons": [
+        "filed under skills",
+        "432 stars",
+        "updated this week",
+        "MIT license",
+        "new repo, 1 day old",
+        "early traction",
+        "contains SKILL.md skill files"
+      ],
+      "flags": [
+        "newborn"
+      ],
+      "skillFiles": true,
+      "source": "search",
+      "newborn": true,
       "skillPath": null,
       "commitUrl": null
     }
   ],
-  "watched": [],
-  "newborn": [],
   "byCategory": {
-    "skills": [
-      {
-        "name": "srbhptl39/MCP-SuperAssistant",
-        "url": "https://github.com/srbhptl39/MCP-SuperAssistant",
-        "description": "Brings MCP to ChatGPT, DeepSeek, Perplexity, Grok, Gemini, Google AI Studio, OpenRouter, DeepSeek, T3 Chat and more...",
-        "stars": 2638,
-        "forks": 377,
-        "language": "TypeScript",
-        "license": "MIT",
-        "pushedAt": "2026-11-16T18:46:58Z",
-        "category": "skills",
-        "score": 60,
-        "tier": "watch",
-        "reasons": [
-          "filed under skills",
-          "2,638 stars",
-          "updated this week",
-          "MIT license"
-        ],
-        "flags": [],
-        "skillFiles": null,
-        "source": "search",
-        "newborn": false,
-        "skillPath": null,
-        "commitUrl": null
-      }
-    ],
+    "skills": [],
     "enhancement": [],
     "free-tokens": [],
     "efficiency": []
   },
-  "blocked": [],
+  "blocked": [
+    {
+      "name": "nishant-Tiwari24/cracked",
+      "why": "matched the scam / key-generator filter",
+      "stars": 328
+    }
+  ],
   "watching": [
     {
       "name": "anthropics/claude-plugins-official",
