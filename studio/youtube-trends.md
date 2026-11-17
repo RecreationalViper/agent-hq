@@ -3,59 +3,57 @@
 Live from the YouTube Data API. Views/hr = views since upload ÷ hours since upload.
 
 ## Film & Animation: fastest-rising
-- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 30,667,747 views · 471,810/hr · 175,822 likes · 556 comments · 0:10
-- [OMG he actually wore it 🤣 #funny #comedy #humor #prank](https://youtu.be/_1_OO5Wm5Dg) · WearTheGag · 23,827,182 views · 238,737/hr · 116,416 likes · 1,129 comments · 0:10
-- [#funny #comedy #movie #memes](https://youtu.be/0L2RdAVUbLk) · Eryihjy outrfj · 21,305,557 views · 213,400/hr · 120,790 likes · 106 comments · 0:31
-- [Never Say Goodbye and Walk the Same Way… 👀🛏️ #shorts](https://youtu.be/afLFSN2Zo_U) · Oddly Crucial · 4,873,347 views · 169,039/hr · 172,163 likes · 3,235 comments · 0:34
-- [‎"They Underestimated the Beggar" 🗿🔥](https://youtu.be/zD5NWTkvdj8) · Ukhnooq_Ae · 25,006,718 views · 158,334/hr · 775,222 likes · 6,701 comments · 1:00
-- [Johnny Depp says he believes in goats](https://youtu.be/ClQTsoa23FU) · Pubity · 17,295,509 views · 131,057/hr · 420,224 likes · 12,709 comments · 0:19
-- [The Most Confused Rookie Ever 🤣😭](https://youtu.be/X8h3XPxnfzU) · Sunday Football Shorts · 17,303,681 views · 127,888/hr · 254,505 likes · 550 comments · 0:12
-- [Better luck next time ✌️](https://youtu.be/icAiXuU_1I8) · Smirk · 9,125,572 views · 126,172/hr · 309,806 likes · 921 comments · 0:18
+- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 32,338,676 views · 393,614/hr · 183,155 likes · 569 comments · 0:10
+- [#naofloppa](https://youtu.be/hEcdqXV1EmU) · qrk9 · 8,391,769 views · 284,534/hr · 287,565 likes · 1,514 comments · 0:24
+- [OMG he actually wore it 🤣 #funny #comedy #humor #prank](https://youtu.be/_1_OO5Wm5Dg) · WearTheGag · 27,064,617 views · 231,394/hr · 132,617 likes · 1,337 comments · 0:10
+- [Phillies land All Star closer Jhoan Duran ahead of MLB trade deadline 👀🔥 #JhoanDuran](https://youtu.be/3ZZB0lrMSv4) · AI Dream Factory · 9,636,980 views · 219,047/hr · 49,716 likes · 89 comments · 0:30
+- [#funny #comedy #movie #memes](https://youtu.be/0L2RdAVUbLk) · Eryihjy outrfj · 21,379,668 views · 182,737/hr · 121,378 likes · 107 comments · 0:31
+- [I just wanted to watch a movie](https://youtu.be/_duZzXRVLFE) · Verzen · 3,772,750 views · 145,269/hr · 81,713 likes · 1,627 comments · 0:14
+- [‎"They Underestimated the Beggar" 🗿🔥](https://youtu.be/zD5NWTkvdj8) · Ukhnooq_Ae · 25,061,245 views · 143,130/hr · 776,247 likes · 6,706 comments · 1:00
+- [The Most Confused Rookie Ever 🤣😭](https://youtu.be/X8h3XPxnfzU) · Sunday Football Shorts · 19,409,248 views · 127,306/hr · 292,384 likes · 615 comments · 0:12
 
 ## Film & Animation: short videos (3 min or less)
-- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 30,667,747 views · 471,810/hr · 175,822 likes · 556 comments · 0:10
-- [OMG he actually wore it 🤣 #funny #comedy #humor #prank](https://youtu.be/_1_OO5Wm5Dg) · WearTheGag · 23,827,182 views · 238,737/hr · 116,416 likes · 1,129 comments · 0:10
-- [#funny #comedy #movie #memes](https://youtu.be/0L2RdAVUbLk) · Eryihjy outrfj · 21,305,557 views · 213,400/hr · 120,790 likes · 106 comments · 0:31
-- [Never Say Goodbye and Walk the Same Way… 👀🛏️ #shorts](https://youtu.be/afLFSN2Zo_U) · Oddly Crucial · 4,873,347 views · 169,039/hr · 172,163 likes · 3,235 comments · 0:34
-- [‎"They Underestimated the Beggar" 🗿🔥](https://youtu.be/zD5NWTkvdj8) · Ukhnooq_Ae · 25,006,718 views · 158,334/hr · 775,222 likes · 6,701 comments · 1:00
-- [Johnny Depp says he believes in goats](https://youtu.be/ClQTsoa23FU) · Pubity · 17,295,509 views · 131,057/hr · 420,224 likes · 12,709 comments · 0:19
-- [The Most Confused Rookie Ever 🤣😭](https://youtu.be/X8h3XPxnfzU) · Sunday Football Shorts · 17,303,681 views · 127,888/hr · 254,505 likes · 550 comments · 0:12
-- [Better luck next time ✌️](https://youtu.be/icAiXuU_1I8) · Smirk · 9,125,572 views · 126,172/hr · 309,806 likes · 921 comments · 0:18
+- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 32,338,676 views · 393,614/hr · 183,155 likes · 569 comments · 0:10
+- [#naofloppa](https://youtu.be/hEcdqXV1EmU) · qrk9 · 8,391,769 views · 284,534/hr · 287,565 likes · 1,514 comments · 0:24
+- [OMG he actually wore it 🤣 #funny #comedy #humor #prank](https://youtu.be/_1_OO5Wm5Dg) · WearTheGag · 27,064,617 views · 231,394/hr · 132,617 likes · 1,337 comments · 0:10
+- [Phillies land All Star closer Jhoan Duran ahead of MLB trade deadline 👀🔥 #JhoanDuran](https://youtu.be/3ZZB0lrMSv4) · AI Dream Factory · 9,636,980 views · 219,047/hr · 49,716 likes · 89 comments · 0:30
+- [#funny #comedy #movie #memes](https://youtu.be/0L2RdAVUbLk) · Eryihjy outrfj · 21,379,668 views · 182,737/hr · 121,378 likes · 107 comments · 0:31
+- [I just wanted to watch a movie](https://youtu.be/_duZzXRVLFE) · Verzen · 3,772,750 views · 145,269/hr · 81,713 likes · 1,627 comments · 0:14
+- [‎"They Underestimated the Beggar" 🗿🔥](https://youtu.be/zD5NWTkvdj8) · Ukhnooq_Ae · 25,061,245 views · 143,130/hr · 776,247 likes · 6,706 comments · 1:00
+- [The Most Confused Rookie Ever 🤣😭](https://youtu.be/X8h3XPxnfzU) · Sunday Football Shorts · 19,409,248 views · 127,306/hr · 292,384 likes · 615 comments · 0:12
 
 ## Gaming: fastest-rising
-- [🔴IF I CRINGE = YOU GET ROBUX..🔴](https://youtu.be/jCKyWXOrncI) · Ninjagaming · 868,947 views · 243,553/hr · 2,382 likes · 8 comments · 98:03
-- [The Last Modded GTA 5 Free Roam Video...](https://youtu.be/wt_W2w_N_Jk) · SMii7Y · 1,251,687 views · 164,251/hr · 54,198 likes · 2,353 comments · 20:35
-- [🔴 LIVE! - NOT ENDING UNTIL I FIND THE PIRATE TOKEN!!!!](https://youtu.be/3McEJfR_oig) · Typical Gamer · 2,591,750 views · 161,877/hr · 19,754 likes · 60 comments · 715:01
-- [GTA 6 MARATHON | Official Trailer](https://youtu.be/_AY5krZErfg) · Kai Cenat Live · 1,028,209 views · 141,070/hr · 42,057 likes · 2,704 comments · 2:59
-- [iSHOWSPEED x GTA 6 | OFFICIAL TRAILER](https://youtu.be/2BRL4ALMCyA) · IShowSpeed · 657,057 views · 128,996/hr · 32,320 likes · 2,038 comments · 1:07
-- [ROBBING AND RUNNING CARTEL BOSS](https://youtu.be/9Fg5GEqGddk) · HutchMF · 388,488 views · 124,360/hr · 4,270 likes · 10 comments · 561:51
-- [NBA 2K27 x GTA 6 (Grand Theft Auto 6) - Official Vice City Crossover Trailer](https://youtu.be/0e746-1G_sE) · IGN · 1,245,052 views · 112,915/hr · 15,276 likes · 1,433 comments · 1:26
-- [This Is Heartbreaking](https://youtu.be/fr7iir5_sYE) · Dolan Darkest · 1,174,415 views · 98,591/hr · 27,177 likes · 1,593 comments · 2:01
+- [THE GAME AWARDS: 2026 Nominee Reveal! (Game of the Year)](https://youtu.be/_e0oJSfmIFU) · thegameawards · 933,706 views · 249,266/hr · 28,901 likes · 4,009 comments · 11:23
+- [🔴LIVE | AOE 2 | GETTING DRUNK ON MONDAY | ME AND JOHN VS HARD BOTS | FART IN MY MOUTH | #BUNGULATE](https://youtu.be/CW_rULxbDs0) · TheBurntPeanut · 1,444,235 views · 128,294/hr · 12,129 likes · 150 comments · 549:12
+- [The Last Modded GTA 5 Free Roam Video...](https://youtu.be/wt_W2w_N_Jk) · SMii7Y · 3,058,380 views · 123,428/hr · 92,305 likes · 3,109 comments · 20:35
+- [iSHOWSPEED x GTA 6 | OFFICIAL TRAILER](https://youtu.be/2BRL4ALMCyA) · IShowSpeed · 2,170,921 views · 97,562/hr · 68,955 likes · 3,000 comments · 1:07
+- [Less Than 24 Hours to GTA 6... NEW INFO - 6 Screenshots + My Content Plans For Launch](https://youtu.be/-AFSP8PJzKs) · TGG · 1,175,348 views · 82,279/hr · 34,248 likes · 3,289 comments · 11:32
+- [🔴 LIVE! - NOT ENDING UNTIL I FIND THE PIRATE TOKEN!!!!](https://youtu.be/3McEJfR_oig) · Typical Gamer · 2,613,078 views · 78,782/hr · 19,839 likes · 68 comments · 715:01
+- [GTA 6 MARATHON | Official Trailer](https://youtu.be/_AY5krZErfg) · Kai Cenat Live · 1,799,230 views · 73,598/hr · 63,804 likes · 3,535 comments · 2:59
+- [Legendary Equipment in December Crafting Event!](https://youtu.be/8Q3_GmlSe7A) · Judo Sloth Gaming · 508,849 views · 63,717/hr · 13,649 likes · 1,500 comments · 16:48
 
 ## Gaming: short videos (3 min or less)
-- [GTA 6 MARATHON | Official Trailer](https://youtu.be/_AY5krZErfg) · Kai Cenat Live · 1,028,209 views · 141,070/hr · 42,057 likes · 2,704 comments · 2:59
-- [iSHOWSPEED x GTA 6 | OFFICIAL TRAILER](https://youtu.be/2BRL4ALMCyA) · IShowSpeed · 657,057 views · 128,996/hr · 32,320 likes · 2,038 comments · 1:07
-- [NBA 2K27 x GTA 6 (Grand Theft Auto 6) - Official Vice City Crossover Trailer](https://youtu.be/0e746-1G_sE) · IGN · 1,245,052 views · 112,915/hr · 15,276 likes · 1,433 comments · 1:26
-- [This Is Heartbreaking](https://youtu.be/fr7iir5_sYE) · Dolan Darkest · 1,174,415 views · 98,591/hr · 27,177 likes · 1,593 comments · 2:01
-- [Warframe | Warframe: Tau Official Teaser - Watch Devstream 199 on November 27!](https://youtu.be/Mgv4nC-A_GY) · PlayWarframe · 149,004 views · 19,042/hr · 7,302 likes · 484 comments · 0:30
-- [UFC 6 PRIDE FC Expansion Official Reveal](https://youtu.be/2AOSvToZaDQ) · EA SPORTS UFC · 207,353 views · 17,468/hr · 7,443 likes · 1,194 comments · 1:49
+- [iSHOWSPEED x GTA 6 | OFFICIAL TRAILER](https://youtu.be/2BRL4ALMCyA) · IShowSpeed · 2,170,921 views · 97,562/hr · 68,955 likes · 3,000 comments · 1:07
+- [GTA 6 MARATHON | Official Trailer](https://youtu.be/_AY5krZErfg) · Kai Cenat Live · 1,799,230 views · 73,598/hr · 63,804 likes · 3,535 comments · 2:59
+- [GTA6 Livestream - Nov 18](https://youtu.be/4jzYed83Zpc) · VanossGaming · 761,512 views · 42,317/hr · 36,577 likes · 1,444 comments · 1:12
+- [2nd Anniversary Celebration Trailer | Two Years of Marvel Rivals](https://youtu.be/dXHSPs5bblQ) · Marvel Rivals · 117,695 views · 39,378/hr · 7,170 likes · 455 comments · 0:57
 
 ## Entertainment: fastest-rising
-- [$250,000 Hunger Games In Real Life](https://youtu.be/q6fgVVmdpgY) · MrBeast · 64,335,099 views · 1,093,436/hr · 1,112,113 likes · 56,864 comments · 33:58
-- [She found the loophole in dad’s rules 💀](https://youtu.be/CpR5Qm5_H5k) · Marcus Kell · 4,804,905 views · 824,120/hr · 49,763 likes · 240 comments · 0:10
-- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 30,667,747 views · 471,809/hr · 175,822 likes · 556 comments · 0:10
-- [Cutting A Watermelon With Dental Floss 😮](https://youtu.be/VOI9-Gx2EaY) · Zack D. Films · 14,913,539 views · 247,179/hr · 589,395 likes · 17,146 comments · 0:36
-- [Security Stops Woman Over Her Service Dog! 😳 #usa](https://youtu.be/XV4tDwBtNIY) · Thinkerz Edits · 48,725,861 views · 225,465/hr · 1,388,524 likes · 6,075 comments · 0:32
-- [Are These People Real or AI?🤖](https://youtu.be/Y548TJ6LJpQ) · Colby Martel · 33,052,282 views · 220,586/hr · 741,333 likes · 4,444 comments · 1:08
-- [Never Say Goodbye and Walk the Same Way… 👀🛏️ #shorts](https://youtu.be/afLFSN2Zo_U) · Oddly Crucial · 4,873,347 views · 169,039/hr · 172,163 likes · 3,235 comments · 0:34
-- [Bro Made a Simple Task Impossible 😭 #shorts #usa](https://youtu.be/5R3BYTqAHjc) · IDDSI · 13,372,200 views · 167,492/hr · 279,102 likes · 2,450 comments · 0:32
+- [$250,000 Hunger Games In Real Life](https://youtu.be/q6fgVVmdpgY) · MrBeast · 71,314,724 views · 938,406/hr · 1,182,696 likes · 59,837 comments · 33:58
+- [She found the loophole in dad’s rules 💀](https://youtu.be/CpR5Qm5_H5k) · Marcus Kell · 10,996,862 views · 478,366/hr · 104,118 likes · 466 comments · 0:10
+- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 32,338,676 views · 393,614/hr · 183,155 likes · 569 comments · 0:10
+- [#naofloppa](https://youtu.be/hEcdqXV1EmU) · qrk9 · 8,391,769 views · 284,533/hr · 287,565 likes · 1,514 comments · 0:24
+- [Are These People Real or AI?🤖](https://youtu.be/Y548TJ6LJpQ) · Colby Martel · 35,756,975 views · 214,118/hr · 793,801 likes · 4,762 comments · 1:08
+- [Security Stops Woman Over Her Service Dog! 😳 #usa](https://youtu.be/XV4tDwBtNIY) · Thinkerz Edits · 49,817,780 views · 213,562/hr · 1,422,004 likes · 6,242 comments · 0:32
+- [Cutting A Watermelon With Dental Floss 😮](https://youtu.be/VOI9-Gx2EaY) · Zack D. Films · 15,256,155 views · 196,871/hr · 603,577 likes · 17,427 comments · 0:36
+- [At least he said good night 💔](https://youtu.be/SyWpa2mHolI) · staring bacon · 9,152,814 views · 190,667/hr · 86,686 likes · 668 comments · 0:13
 
 ## Entertainment: short videos (3 min or less)
-- [She found the loophole in dad’s rules 💀](https://youtu.be/CpR5Qm5_H5k) · Marcus Kell · 4,804,905 views · 824,120/hr · 49,763 likes · 240 comments · 0:10
-- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 30,667,747 views · 471,809/hr · 175,822 likes · 556 comments · 0:10
-- [Cutting A Watermelon With Dental Floss 😮](https://youtu.be/VOI9-Gx2EaY) · Zack D. Films · 14,913,539 views · 247,179/hr · 589,395 likes · 17,146 comments · 0:36
-- [Security Stops Woman Over Her Service Dog! 😳 #usa](https://youtu.be/XV4tDwBtNIY) · Thinkerz Edits · 48,725,861 views · 225,465/hr · 1,388,524 likes · 6,075 comments · 0:32
-- [Are These People Real or AI?🤖](https://youtu.be/Y548TJ6LJpQ) · Colby Martel · 33,052,282 views · 220,586/hr · 741,333 likes · 4,444 comments · 1:08
-- [Never Say Goodbye and Walk the Same Way… 👀🛏️ #shorts](https://youtu.be/afLFSN2Zo_U) · Oddly Crucial · 4,873,347 views · 169,039/hr · 172,163 likes · 3,235 comments · 0:34
-- [Bro Made a Simple Task Impossible 😭 #shorts #usa](https://youtu.be/5R3BYTqAHjc) · IDDSI · 13,372,200 views · 167,492/hr · 279,102 likes · 2,450 comments · 0:32
-- [‎"They Underestimated the Beggar" 🗿🔥](https://youtu.be/zD5NWTkvdj8) · Ukhnooq_Ae · 25,006,718 views · 158,334/hr · 775,222 likes · 6,701 comments · 1:00
+- [She found the loophole in dad’s rules 💀](https://youtu.be/CpR5Qm5_H5k) · Marcus Kell · 10,996,862 views · 478,366/hr · 104,118 likes · 466 comments · 0:10
+- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 32,338,676 views · 393,614/hr · 183,155 likes · 569 comments · 0:10
+- [#naofloppa](https://youtu.be/hEcdqXV1EmU) · qrk9 · 8,391,769 views · 284,533/hr · 287,565 likes · 1,514 comments · 0:24
+- [Are These People Real or AI?🤖](https://youtu.be/Y548TJ6LJpQ) · Colby Martel · 35,756,975 views · 214,118/hr · 793,801 likes · 4,762 comments · 1:08
+- [Security Stops Woman Over Her Service Dog! 😳 #usa](https://youtu.be/XV4tDwBtNIY) · Thinkerz Edits · 49,817,780 views · 213,562/hr · 1,422,004 likes · 6,242 comments · 0:32
+- [Cutting A Watermelon With Dental Floss 😮](https://youtu.be/VOI9-Gx2EaY) · Zack D. Films · 15,256,155 views · 196,871/hr · 603,577 likes · 17,427 comments · 0:36
+- [At least he said good night 💔](https://youtu.be/SyWpa2mHolI) · staring bacon · 9,152,814 views · 190,667/hr · 86,686 likes · 668 comments · 0:13
+- [bros hair is a whip #longhair](https://youtu.be/7ay1oyfGnTw) · Greg Batocabe · 10,219,420 views · 143,153/hr · 243,368 likes · 2,357 comments · 0:18
