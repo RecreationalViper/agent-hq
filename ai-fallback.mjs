@@ -214,9 +214,18 @@ export async function nvidiaModels() {
   const rank = (i) => { const k = NV_PREFER.findIndex((r) => r.test(i)); return k < 0 ? 99 : k; };
   const size = (i) => { const n = [...i.matchAll(/(\d+(?:\.\d+)?)b(?![a-z])/gi)].map((m) => Number(m[1])); return n.length ? Math.max(...n) : /ultra|super|large/i.test(i) ? 60 : 10; };
   // preferred models first, then everything else by size (some listed models aren't enabled for every account)
-  nvModels = ids.filter((i) => size(i) >= 20 || rank(i) < 99).sort((a, b) => rank(a) - rank(b) || size(b) - size(a));
+  // only general chat families: NVIDIA also lists science/calibration/simulation models that answer in essays, not JSON
+  const chat = (i) => /llama|nemotron|qwen|deepseek|kimi|mistral|mixtral|gemma|gpt-oss|glm|minimax|phi-?4/i.test(i) && !/calibrat|ising|cosmos|physic|bio|genmol|diffus|nemoguard|content-safety|translat|riva/i.test(i);
+  nvModels = ids.filter((i) => chat(i) && (size(i) >= 20 || rank(i) < 99)).sort((a, b) => rank(a) - rank(b) || size(b) - size(a));
   if (!nvModels.length) throw new Error("NVIDIA lists no suitable chat models for this key");
   return nvModels;
+}
+// Same lenient check ai-ask.mjs uses: JSON somewhere in the reply, small slips allowed.
+function looksLikeJson(t) {
+  const a = t.search(/[[{]/), b = Math.max(t.lastIndexOf("}"), t.lastIndexOf("]"));
+  if (a < 0 || b <= a) return false;
+  const x = t.slice(a, b + 1).replace(/[\u201C\u201D]/g, '"').replace(/,\s*([}\]])/g, "$1").replace(/([{,]\s*)([A-Za-z_][\w-]*)\s*:/g, '$1"$2":');
+  try { JSON.parse(x); return true; } catch { return false; }
 }
 export async function nvidiaChat(system, user, { json = false, temperature = 0.7, maxChars = 40000 } = {}) {
   const input = user.length > maxChars ? user.slice(0, maxChars) + "\n\n[Some input was trimmed to fit the backup AI's limits.]" : user;
@@ -224,15 +233,16 @@ export async function nvidiaChat(system, user, { json = false, temperature = 0.7
   for (const model of [...(await nvidiaModels())].slice(0, 8)) {
     try {
       const data = await nvCall("/chat/completions", { method: "POST", body: JSON.stringify({
-        model, temperature, max_tokens: 4096,
+        model, temperature, max_tokens: json ? 12000 : 4096, // a 5-post plan is long; 4096 cut it off mid-string
         messages: [{ role: "system", content: system + (json ? "\nReply with valid JSON only." : "") }, { role: "user", content: input }]
       }) });
       const text = (data.choices?.[0]?.message?.content || "").replace(/<think>[\s\S]*?<\/think>/g, "").replace(/^```(?:json)?\s*|\s*```$/g, "").trim();
       if (!text) throw new Error("NVIDIA returned an empty reply");
+      if (json && !looksLikeJson(text)) { nvModels = [...nvModels.filter((m) => m !== model), model]; throw new Error(`NVIDIA ${model} did not reply in JSON`); } // next model, and this one goes last
       console.log(`  answered by backup AI: NVIDIA ${model}`);
       nvModels = [model, ...nvModels.filter((m) => m !== model)]; // stick with the one that works
       return text;
-    } catch (e) { lastErr = e; if (e.status === 401 || e.status === 403) break; if (e.status === 404) nvModels = nvModels.filter((m) => m !== model); }
+    } catch (e) { lastErr = e; if (/did not reply in JSON/.test(e.message)) console.log(`  ${e.message}, trying another model`); if (e.status === 401 || e.status === 403) break; if (e.status === 404) nvModels = nvModels.filter((m) => m !== model); }
   }
   throw lastErr || new Error("NVIDIA could not answer");
 }
