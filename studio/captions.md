@@ -2,75 +2,52 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# Social Strategy & Posting Plan (2026-11-17)
+## 🎬 Clip 1 – **GTA VI “Heist Trailer”**  
 
-Here are the captions, on-screen text, hashtags, Shorts titles, and posting schedules for today's 3 clips.
+| Item | Details |
+|------|---------|
+| **TikTok captions** (pick 3‑4) | 1. “🚨 Heist in 3…2…1 – can you feel the rush? 🔥”  <br>2. “What’s the first thing you’d steal in Vice City? 👀👇” *(question for comments)* <br>3. “💥 Vault blast + police radio = instant replay material 🎧” <br>4. “Tag a friend who’d love to join the crew! #HeistSquad” |
+| **On‑screen hook text** | **“Ready for the biggest heist?”** |
+| **Hashtags** | `#GTAVI` `#HeistTrailer` `#NeonPulse` `#GamingEdit` `#ViralClip` |
+| **YouTube Shorts title** | **“GTA VI Heist Trailer – 30‑Sec adrenaline rush”** |
+| **Best posting time (NY)** | **20:00 – 20:30 EST** – Evening is peak for gaming fans on TikTok and Shorts; the 8 PM slot hits both after‑school/after‑work scrolls and the nightly “gaming news” surge.  
 
----
 
-## Clip 1: "Goodbye Los Santos" — GTA V to GTA VI Torch-Passing
 
-* **On-Screen Hook Text (6 words max):**
-  * `Goodbye Los Santos... 12 years later 🗿`
+## 🎬 Clip 2 – **One Piece “Gear 5 King’s Fist”**  
 
-* **TikTok Captions:**
-  1. 12 years in Los Santos coming to an end. Vice City awaits 🌴
-  2. The end of an era. Thank you Los Santos 🗿
-  3. Which GTA V main character are you going to miss the most?
-  4. From Los Santos to Vice City... we are so ready 🔥
+| Item | Details |
+|------|---------|
+| **TikTok captions** | 1. “⚡️ Gear 5’s King Fist – the moment we’ve all waited for! 👊” <br>2. “Which opponent would you smash with this punch? 🤔👇” *(question for comments)* <br>3. “The roar that shook the Grand Line 🌊 #OnePiece” <br>4. “Replay this 3× if you felt the impact! 🔁” |
+| **On‑screen hook text** | **“Luffy’s ultimate punch!”** |
+| **Hashtags** | `#OnePiece` `#Gear5` `#AnimeEdit` `#KingFist` `#EpicMoment` |
+| **YouTube Shorts title** | **“One Piece Gear 5 – King’s Fist in 30 seconds”** |
+| **Best posting time (NY)** | **13:00 – 13:30 EST** – Early‑afternoon catches the global anime fanwave (US lunch break, EU afternoon) and aligns with the Reddit/TikTok buzz window for the episode teaser.  
 
-* **Hashtags (5-6):**
-  * `#GTAVI #GTAV #GTA6 #LosSantos #GamingTikTok #ViceCity`
 
-* **YouTube Shorts Title (< 60 chars):**
-  * `Goodbye Los Santos... GTA 6 is Here 🗿🔥 #shorts` *(46 chars)*
 
-* **Best Posting Times (EST / New York Time):**
-  * **TikTok (4:00 PM EST):** Hits the after-school and off-work gaming crowd right as evening launch-week Twitch streams go live.
-  * **YouTube Shorts (5:00 PM EST):** Aligns with the peak evening surge on YouTube Shorts for high-hype gaming content ahead of GTA VI.
+## 🎬 Clip 3 – **The Laid‑Off Cheat‑Granting Mage – Episode 8 “Unlimited Mana”**  
 
----
+| Item | Details |
+|------|---------|
+| **TikTok captions** | 1. “⚡️ Unlimited Mana activated – spell overload! ✨” <br>2. “What would you do with infinite magic? Comment! 🪄👇” *(question for comments)* <br>3. “That moment when the mage goes *BAM* 💥 #CheatMage” <br>4. “If you’re not re‑watching this, you missed the Easter egg 👀” |
+| **On‑screen hook text** | **“Unlimited Mana – UNLEASHED!”** |
+| **Hashtags** | `#CheatMage` `#AnimeMagic` `#LevelUp` `#AnimeEdit` `#SpoilerAlert` |
+| **YouTube Shorts title** | **“Cheat‑Mage Episode 8 – Unlimited Mana preview”** |
+| **Best posting time (NY)** | **22:00 – 22:30 EST** – Late‑night is when anime fans binge‑watch and check spoilers; the 10 PM slot maximises reach for both US night‑owls and Asian viewers who are still active.  
 
-## Clip 2: Asta’s Anti-Magic Strike — *Black Clover Season 2*
 
-* **On-Screen Hook Text (6 words max):**
-  * `They forgot who he was... 💀🔥`
 
-* **TikTok Captions:**
-  1. Never underestimate a wizard with zero magic 💀
-  2. Asta really unlocked maximum aura here 🔥
-  3. Is Asta’s Demon-Slayer sword the coldest weapon in anime?
-  4. Anti-magic hits different in Season 2 🗡️
+### Quick reminder for the owner (iPhone‑friendly)
 
-* **Hashtags (5-6):**
-  * `#BlackClover #Asta #AnimeTok #BlackCloverSeason2 #AnimeEdit #AntiMagic`
+1. **Record** each source clip with iPhone screen‑record.  
+2. **Trim** in‑app to the exact timestamps above (keep each source < 5 s).  
+3. **Add** the on‑screen hook text (6 words max) and the lower‑third title.  
+4. **Sync** the beat‑points:  
+   * GTA VI – use **“Neon Pulse”** cut on the boom‑snap at 0:01.8.  
+   * One Piece – keep the original roar; add a subtle “boom” at the impact.  
+   * Cheat‑Mage – add a sparkle synth at the spell’s peak.  
+5. **Export** 1080×1920, 30 fps, 30‑35 s.  
+6. **Upload** at the times listed, copy the captions/hashtags, and cross‑post to YouTube Shorts.  
 
-* **YouTube Shorts Title (< 60 chars):**
-  * `They Forgot Who Asta Was 💀🔥 #anime #shorts` *(42 chars)*
-
-* **Best Posting Times (EST / New York Time):**
-  * **TikTok (7:00 PM EST):** Prime anime FYP scrolling hour when high-energy fight edits get maximum rewatches and shares.
-  * **YouTube Shorts (8:00 PM EST):** Late evening matches peak YouTube anime consumption for high-aura combat edits.
-
----
-
-## Clip 3: The Ghost in the Midnight Dark — *Ebenezer* (2026)
-
-* **On-Screen Hook Text (6 words max):**
-  * `What if you saw your regret? 🕯️`
-
-* **TikTok Captions:**
-  1. Johnny Depp as Scrooge is going to be so dark 🕯️
-  2. That jump scare at the end hit way too hard 💀
-  3. Would you stay in this room overnight for $100,000?
-  4. The eerie silence before the storm... 🥶
-
-* **Hashtags (5-6):**
-  * `#Ebenezer #JohnnyDepp #HorrorTok #MovieEdit #Ebenezer2026 #SpookyTikTok`
-
-* **YouTube Shorts Title (< 60 chars):**
-  * `Johnny Depp in EBENEZER (2026) 🕯️💀 #shorts` *(42 chars)*
-
-* **Best Posting Times (EST / New York Time):**
-  * **TikTok (9:00 PM EST):** Late-night scrolling window when eerie and atmospheric horror clips gain higher watch-through rates.
-  * **YouTube Shorts (9:30 PM EST):** Captures the late-night movie edit audience seeking thriller and horror previews.
+Good luck – those first seconds are the key to looping! 🚀

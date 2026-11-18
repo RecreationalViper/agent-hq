@@ -2,50 +2,17 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-### Studio Critic Review
+**Clip‑by‑Clip Review**
 
-Here is my honest critique of today’s clip plan and captions. As a short-form editor, my focus is strictly on **0-2s retention, pacing velocity, and algorithm safety**. 
+| # | Clip | Hook (1‑10) | Rewatch (1‑10) | Comment‑bait (1‑10) | Copyright‑risk (1‑10) | One change that would most improve it |
+|---|------|------------|---------------|--------------------|----------------------|----------------------------------------|
+| 1 | **GTA VI – Heist Trailer** | **9** – the siren + finger‑on‑trigger combo is instantly recognizable and hits the beat in <2 s. | **8** – the vault‑burst and police‑radio drop give a clear loop point that makes people replay. | **7** – “What would you steal?” question is good, but the clip itself doesn’t force a comment. | **9** – Rockstar footage is official and under 5 s per source, so it’s safe. | **Add a 1‑second “quick‑reaction” overlay** (e.g., a caption “🔥💰” that flashes right after the vault opens) to give viewers a visual prompt to comment “What’s the first loot?” – this lifts comment‑bait without altering the footage. |
+| 2 | **One Piece – Gear 5 “King’s Fist”** | **8** – the silhouette wind‑up is a strong hook, but the first 2 s are dark; a quick flash of Luffy’s face could tighten it. | **7** – the impact freeze‑frame loops well, but the beat ends abruptly; a tiny echo → re‑play feel would help. | **8** – the “Which opponent would you smash?” prompt is spot‑on for anime fans. | **6** – Toei’s preview is official, but the clip is >5 s of continuous footage (0:02‑0:18 = 16 s). Must cut into ≤5 s segments or add overlays to stay safe. | **Split the 16‑second stretch into three <5‑second pieces** (wind‑up, face close‑up, impact) and intersperse a rapid‑cut caption (“⚡️”). This keeps each source under the safe limit and adds visual rhythm, improving both risk and rewatch value. |
+| 3 | **The Laid‑Off Cheat‑Granting Mage – “Unlimited Mana”** | **7** – the glow‑hand start is decent but a bit slow; the first 2 s could be tighter. | **6** – the long 1‑minute preview is trimmed to 36 s, but the climax (spell burst) is a single long stretch; viewers may not feel a loop. | **6** – the “What would you do with infinite magic?” question is good, but the clip itself doesn’t create a debate. | **7** – Crunchyroll preview is official, but the longest unbroken segment (0:45‑1:04 ≈ 19 s) exceeds the safe 5‑second rule. | **Insert a quick cut at the 0:55 mark** (mid‑spell swirl) and add a flash‑text “⚡️ UNLIMITED!” – this breaks the long stretch, lowers risk, and adds a visual hook that invites comments (“What spell would you cast first?”). |
 
----
+### Drop / Replace Recommendation
+- **Drop the One Piece clip in its current form** – the copyright risk is the lowest (6) because it exceeds the 5‑second safe window, and fixing it would require more editing time than the payoff.  
+- **Make instead:** a **30‑second montage of the *pre‑teaser* “Gear 5” reaction compilation** (use fan‑reaction clips from TikTok that are under 5 s each, with clear credit). Reaction clips are lower risk (they’re user‑generated) and still give the same hype boost.
 
-### Clip 1: "Goodbye Los Santos" — GTA V to GTA VI Torch-Passing
-
-* **Scores:**
-  * **Hook Strength:** 9/10 (High urgency, 2 days to launch, sub-bass drop on Vinewood sign hits fast)
-  * **Rewatch Value:** 8/10 (Satisfying transition from nostalgic GTA V clips to Vice City trailer cut creates a smooth loop)
-  * **Comment Bait:** 8/10 (Asking which main character viewers will miss most triggers instant debates in comments)
-  * **Copyright Risk:** 7/10 (10 = safest; official trailer + game cuts are generally safe, but add on-screen game title credits)
-* **The One Change to Improve It:** **Cut the GTA V flashback body down from 24 seconds to 12 seconds total** (3–4 seconds max per heist/chase beat). 35 seconds is too dragged out for a hype transition; speeding up the recap makes the Vice City trailer reveal land with much higher energy.
-
----
-
-### Clip 2: Asta’s Anti-Magic Strike — *Black Clover Season 2*
-
-* **Scores:**
-  * **Hook Strength:** 6/10 (Sword slam is decent, but *"They forgot who he was..."* is slightly generic)
-  * **Rewatch Value:** 7/10 (Good velocity cuts on the synth audio)
-  * **Comment Bait:** 6/10 (Hook text doesn't force a debate or strong opinion)
-  * **Copyright Risk:** 5/10 (TV anime clips over 30 seconds are heavily targeted by automated copyright mutes on Shorts/TikTok)
-* **The One Change to Improve It:** **Delete Stretch 1 entirely (the 9-second enemy barrage build-up).** Jump straight from the sword slam hook into Asta flying through the spells at 0:02. Keep total clip length under 20 seconds to maximize retention and lower copyright bot detection.
-
----
-
-### Clip 3: The Ghost in the Midnight Dark — *Ebenezer* (2026)
-
-* **Scores:**
-  * **Hook Strength:** 4/10 (Pitch black candle blow-out lacks visual movement for mobile scrolling)
-  * **Rewatch Value:** 3/10 (Jump scares rarely get rewatched once the trick is known)
-  * **Comment Bait:** 5/10 (Standard horror question)
-  * **Copyright Risk:** 6/10 (Studio trailer footage)
-* **Verdict:** **DROP THIS CLIP IMMEDIATELY.** 
-* **Why:** 19 seconds of dark bedroom footage and creaking wood before *any* action happens will cause an 80%+ drop-off in the first 2 seconds. Short-form feeds kill slow theatrical builds.
-* **What to Make Instead:** **Steel Ball Run: JoJo's Bizarre Adventure — San Diego Beach Horse Race Start** (Trend #3). 
-  * *Hook (0-2s):* Extreme close-up of Gyro Zeppeli spinning his Steel Ball with heavy screen shake overlay (`"The Spin Begins 🗿"`).
-  * *Body (2-18s):* Fast velocity cuts of the cannon blast starting the horse race.
-  * *Final Beat (18-22s):* Hard flash cut on Gyro's golden smile. JoJo edits drive massive aura engagement and looping rewatches.
-
----
-
-### One-Line Verdict
-
-**Cut Clip 3 (*Ebenezer*) first—it’s far too slow for short-form retention—and replace it immediately with *Steel Ball Run*.**
+### One‑Line Verdict
+**Cut the One Piece Gear 5 clip first and replace it with a quick fan‑reaction montage.**
