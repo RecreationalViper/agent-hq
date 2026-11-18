@@ -1,5 +1,19 @@
 {
   "covered": [
+    "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+    "https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot",
+    "https://ai123.com/newshub/18564",
+    "https://aiworldtoday.com/news/tencent-hy4-flash-api-pricing-everyday-ai-work",
+    "https://github.blog/changelog/2026-11-17-openais-gpt-6-2-astra-and-gpt-6-2-sol-now-available",
+    "https://github.blog/changelog/2026-11-17-copilot-code-review-adaptive-effort-secret-detection-and-more",
+    "https://openai.com/index/inside-the-codex-sandbox",
+    "https://github.blog/engineering/engineering-principles/building-the-agent-host-protocol-for-sessions-that-continue-across-devices/",
+    "https://arxiv.org/abs/2611.23216v1",
+    "https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review/",
+    "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
+    "https://calif.io/java4shell/",
+    "https://www.infoq.com/news/2026/11/vercel-ui-sdk/",
+    "https://news.lavx.hu/article/solid-2-0-reaches-stable-with-async-built-into-its-reactive-graph",
     "https://gcn.com/google-gemini-4-hydrogen-coding/23269/",
     "https://www.marktechpost.com/2026/11/15/bland-tofu-1-full-duplex-speech-to-speech-model/",
     "https://roboticsandautomationnews.com/2026/11/15/robbyant-launches-lingbot-touch-to-give-robots-a-sense-of-touch/107152/",
@@ -100,6 +114,6 @@
     "https://hunch.net/?p=13764006",
     "https://www.kadoa.com/companies/insights/ai-selloff-perspective"
   ],
-  "lastRun": "2026-11-15",
-  "lastNotion": "2026-11-15"
+  "lastRun": "2026-11-18",
+  "lastNotion": "2026-11-18"
 }
