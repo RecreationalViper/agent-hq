@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-17T16:20:41.068Z",
-  "date": "2026-11-17",
+  "generatedAt": "2026-11-18T01:03:18.105Z",
+  "date": "2026-11-18",
   "token": true,
   "searches": {
     "ran": 12,
@@ -9,118 +9,126 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 43,
+  "apiCalls": 24,
   "rateRemaining": 9,
-  "newItems": 26,
-  "blockedToday": 1,
-  "shortlist": [],
-  "watched": [],
-  "newborn": [
+  "newItems": 2,
+  "blockedToday": 0,
+  "shortlist": [
     {
-      "name": "agentes-chat/agentes-chat",
-      "url": "https://github.com/agentes-chat/agentes-chat",
-      "description": "Open-source, self-hosted Slack alternative where your team and AI agents work together in channels and DMs. Agents run on Claude, ChatGPT/Codex, Gemini or Grok, with MCP tools, their own computer and browser, routines, memory and approvals. Web, desktop and phone apps. Docker Compose + Postgres. AGPL-3.0.",
-      "stars": 1669,
-      "forks": 299,
-      "language": "TypeScript",
-      "license": "AGPL-3.0",
-      "pushedAt": "2026-11-17T14:28:04Z",
-      "category": "skills",
-      "score": 90,
-      "tier": "watch",
-      "reasons": [
-        "filed under skills",
-        "1,669 stars",
-        "updated this week",
-        "AGPL-3.0 license",
-        "new repo, 9 days old",
-        "early traction",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [
-        "newborn",
-        "self-host-required"
-      ],
-      "skillFiles": true,
-      "source": "search",
-      "newborn": true,
-      "skillPath": null,
-      "commitUrl": null
-    },
-    {
-      "name": "DIYgod/pinky",
-      "url": "https://github.com/DIYgod/pinky",
-      "description": "Let AI use your iPhone or Android phone, with you in the loop: any MCP agent from macOS, Windows or Linux, or Pinky itself, right on the phone.",
-      "stars": 2357,
-      "forks": 248,
+      "name": "GetStream/Agents",
+      "url": "https://github.com/GetStream/Agents",
+      "description": "Quickly build text, voice and video agents. Fast, Go based Agent backend with SDKs for every language. Sensible defaults for search, knowledge, skills, telephony, sandboxes, memory and persistence. Sovereign AI. Take control of your AI.",
+      "stars": 8216,
+      "forks": 703,
       "language": "Go",
       "license": "Apache-2.0",
-      "pushedAt": "2026-11-17T11:11:24Z",
+      "pushedAt": "2026-11-17T21:45:06Z",
       "category": "skills",
-      "score": 88,
+      "score": 70,
       "tier": "watch",
       "reasons": [
         "filed under skills",
-        "2,357 stars",
+        "8,216 stars",
         "updated this week",
         "Apache-2.0 license",
-        "new repo, 11 days old",
-        "early traction",
-        "contains SKILL.md skill files"
+        "well established"
       ],
-      "flags": [
-        "newborn"
-      ],
-      "skillFiles": true,
+      "flags": [],
+      "skillFiles": null,
       "source": "search",
-      "newborn": true,
+      "newborn": false,
       "skillPath": null,
       "commitUrl": null
     },
     {
-      "name": "boringmarketer/boring-marketing-skills",
-      "url": "https://github.com/boringmarketer/boring-marketing-skills",
-      "description": "31 free marketing skills for your AI agent: research, positioning, copy, pages, SEO, AI search, ads, email and content, plus a deep local-business pack. MIT.",
-      "stars": 432,
-      "forks": 179,
+      "name": "Jakeschincariol/day-trader-skill",
+      "url": "https://github.com/Jakeschincariol/day-trader-skill",
+      "description": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk a dollar.",
+      "stars": 8416,
+      "forks": 2008,
       "language": "Python",
       "license": "MIT",
-      "pushedAt": "2026-11-16T18:29:00Z",
+      "pushedAt": "2026-10-20T14:18:00Z",
       "category": "skills",
-      "score": 84,
-      "tier": "watch",
+      "score": 75,
+      "tier": "adopt",
       "reasons": [
-        "filed under skills",
-        "432 stars",
-        "updated this week",
+        "8,416 stars",
+        "updated this month",
         "MIT license",
-        "new repo, 1 day old",
-        "early traction",
+        "well established",
         "contains SKILL.md skill files"
       ],
-      "flags": [
-        "newborn"
-      ],
+      "flags": [],
       "skillFiles": true,
       "source": "search",
-      "newborn": true,
+      "newborn": false,
       "skillPath": null,
       "commitUrl": null
     }
   ],
+  "watched": [],
+  "newborn": [],
   "byCategory": {
-    "skills": [],
+    "skills": [
+      {
+        "name": "GetStream/Agents",
+        "url": "https://github.com/GetStream/Agents",
+        "description": "Quickly build text, voice and video agents. Fast, Go based Agent backend with SDKs for every language. Sensible defaults for search, knowledge, skills, telephony, sandboxes, memory and persistence. Sovereign AI. Take control of your AI.",
+        "stars": 8216,
+        "forks": 703,
+        "language": "Go",
+        "license": "Apache-2.0",
+        "pushedAt": "2026-11-17T21:45:06Z",
+        "category": "skills",
+        "score": 70,
+        "tier": "watch",
+        "reasons": [
+          "filed under skills",
+          "8,216 stars",
+          "updated this week",
+          "Apache-2.0 license",
+          "well established"
+        ],
+        "flags": [],
+        "skillFiles": null,
+        "source": "search",
+        "newborn": false,
+        "skillPath": null,
+        "commitUrl": null
+      },
+      {
+        "name": "Jakeschincariol/day-trader-skill",
+        "url": "https://github.com/Jakeschincariol/day-trader-skill",
+        "description": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk a dollar.",
+        "stars": 8416,
+        "forks": 2008,
+        "language": "Python",
+        "license": "MIT",
+        "pushedAt": "2026-10-20T14:18:00Z",
+        "category": "skills",
+        "score": 75,
+        "tier": "adopt",
+        "reasons": [
+          "8,416 stars",
+          "updated this month",
+          "MIT license",
+          "well established",
+          "contains SKILL.md skill files"
+        ],
+        "flags": [],
+        "skillFiles": true,
+        "source": "search",
+        "newborn": false,
+        "skillPath": null,
+        "commitUrl": null
+      }
+    ],
     "enhancement": [],
     "free-tokens": [],
     "efficiency": []
   },
-  "blocked": [
-    {
-      "name": "nishant-Tiwari24/cracked",
-      "why": "matched the scam / key-generator filter",
-      "stars": 328
-    }
-  ],
+  "blocked": [],
   "watching": [
     {
       "name": "anthropics/claude-plugins-official",
@@ -151,18 +159,18 @@
       "first": "2026-11-06"
     },
     {
-      "name": "github/awesome-copilot",
-      "score": 84,
-      "tier": "adopt",
-      "category": "enhancement",
-      "first": "2026-11-06"
+      "name": "agentes-chat/agentes-chat",
+      "score": 90,
+      "tier": "watch",
+      "category": "skills",
+      "first": "2026-11-17"
     },
     {
-      "name": "google/adk-recipes",
-      "score": 84,
-      "tier": "adopt",
+      "name": "DIYgod/pinky",
+      "score": 88,
+      "tier": "watch",
       "category": "skills",
-      "first": "2026-11-06"
+      "first": "2026-11-17"
     }
   ],
   "watchedRepos": {
