@@ -1,85 +1,91 @@
-# Director (updated 2026-11-17)
+# Director (updated 2026-11-18)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-## 3 Clips to Make Today (📅 2026‑11‑17)
+# Today's 3 Clips — Shot Plans for Claude
 
-| # | Channel | Why it’s the **first** to post | Why it’s on the list | Notes |
-|---|---------|--------------------------------|----------------------|-------|
-| 1 | **TikTok + YouTube Shorts** | **GTA VI Heist Trailer** is the *newest* drop (11 :17 UTC) and already has **millions of views** on Rockstar’s channel. The hook is instantly recognisable and the beat‑drop is perfect for looping. | #1 in Trend Scout. | Highest potential for immediate virality. |
-| 2 | **TikTok + YouTube Shorts** | **One Piece – Gear 5 “King’s Fist”** is a *premier teaser* for a future episode. One Piece has the *largest anime fanbase* (770k on MyAnimeList) and the teaser is already trending on Reddit/TikTok. | #5 in Trend Scout, but the hype for the upcoming episode is *moment‑sensitive* (fans will re‑watch the teaser). | Strong hook, clear payoff, easy to caption. |
-| 3 | **TikTok + YouTube Shorts** | **The Laid‑Off Cheat‑Granting Mage – Episode 8** is a *top‑ranked AniList anime* and the episode airs in a week. The “Unlimited Mana” moment is a *pure visual shock* that’s already being shared as a preview clip. | #2 in Trend Scout. | Perfect for a “spoiler‑teaser” format that drives clicks to Crunchyroll. |
+**Priority order:**  
+1. **Apothecary Diaries S3 Ep 8 Teaser** — airs **tomorrow (Nov 20)**, prep tonight, drop Friday morning JST.  
+2. **Steel Ball Run Manga-Panel + OP Sync** — first-mover, no anime footage yet, evergreen.  
+3. **Jujutsu Kaisen Neon Visual Match-Cut** — key visual dropped **today**, ride 48-h wave.
 
-> **Why this order?**  
-> 1️⃣ GTA VI – new, high‑energy, massive search spike.  
-> 2️⃣ One Piece – the *next‑episode buzz* is already rolling; the clip will keep the hype alive.  
-> 3️⃣ Mage Anime – the *anticipation window* is still wide (7 days) and the clip will serve as a “must‑watch” preview.
+All three: **TikTok + YouTube Shorts** (9:16, 30–40 s, title card + credit bottom-left in first 1 s).
 
 ---
 
-## Clip 1 – GTA VI “Heist Trailer” (30‑40 s)
+## 1. The Apothecary Diaries S3 — “The Secret Letter” Teaser Arc (Part 1/3)
 
-| Element | Details |
-|---------|---------|
-| **Source** | Rockstar “GTA VI – Heist Trailer” (YouTube, 2026‑11‑17). <https://www.youtube.com/watch?v=GTA6_HeistTrailer> |
-| **Hook (0‑2 s)** | 0 :00‑0 :02 – Fast‑cut montage: city skyline, police siren, finger on trigger (“Ready?”). |
-| **Unbroken stretches** | 1. 0 :02‑0 :08 – Quick city fly‑by with gun‑fire overlay.<br>2. 0 :08‑0 :15 – Protagonist pulling a weapon in a dark alley.<br>3. 0 :15‑0 :22 – A dramatic close‑up of a bank vault opening. |
-| **Biggest moment** | 0 :22‑0 :28 – The vault door bursts open, a bright light flashes, and the gun is fired. |
-| **Final beat** | 0 :28‑0 :30 – Police radio “All units, move!” syncs to a sharp synth drop (Neon Pulse #1). |
-| **Target length** | 30‑35 s (trim to 32 s). |
-| **Mood** | High‑energy, adrenaline‑packed. |
-| **Audio note** | Use **“Neon Pulse” – Luna Vibe** (TikTok #1). Cut on the boom‑snap at 0:01.8. Add a quick caption: “GTA VI – Heist in 3…2…1…” |
+**Why first:** Ep 8 airs **tomorrow Nov 20** (Friday 23:00 JST). Fandom is small but *high-engagement* (MAL 8.60, 232k; AniList 85%, 114k). The “secret letter” twist is already being discussed in forums. A 3-part emotional story arc (Thorfinn-style) locks in binge loops. Low saturation = our best shot at algorithm pickup for a 0-sub channel.
 
-> **Editing tip:** Keep each source clip < 5 s, use 10‑frame cuts, and overlay the title “GTA VI – Heist Trailer” in a bold sans‑serif font on the lower‑third.
+**Format:** Multi-Part Emotional Story Arc (Anime) — *TikTok Formats #1*  
+**Sound:** **“Duvet — bôa”** (guitar riff 0:00 → vocal 0:17 → chorus swell 1:00) — ✅ Business-safe, perennial anime-edit staple, melancholic slow-mo vibe.  
+**Mood:** Tense, intimate, “something just changed.”
 
----
+| Beat | Source & Location | What Claude Cuts | Duration | Notes |
+|------|-------------------|------------------|----------|-------|
+| **Hook (0–1.5 s)** | Ep 8 preview (Crunchyroll teaser) **0:05–0:08** — sealed amber envelope on dark wood, fingers breaking wax seal. | Single tight shot, **no audio** from source; bring in *Duvet* guitar riff at 0:00. | 1.5 s | On-screen: **“THE SECRET LETTER #1”** (sans-serif, bottom-left). |
+| **Stretch 1 (1.5–5 s)** | Ep 7 **18:30–18:38** — Jinshi pins Maomao against wall (“wall-slam”), her deadpan “You’re heavy” (18:38–18:42). | Two unbroken beats: slam → her face, eyes unmoved. | 3.5 s | Velocity: 0.8× on impact, back to 1× on her line. |
+| **Stretch 2 (5–9 s)** | Ep 8 **~0:12–0:18** (exact ts TBD — owner watches live tomorrow) — parchment unfurls, forbidden royal decree visible, subtitle “Your destiny is sealed.” | One continuous pull-back from extreme close-up to full letter. | 4 s | *Duvet* vocal enters 0:17 (≈ 6.5 s in edit). |
+| **Biggest Moment (9–13 s)** | Ep 8 **~0:20–0:26** — Maomao’s sharp intake of breath, eyes widening; rapid cut to shadowy figure on balcony (preview 0:05–0:08). | Two shots, hard cut on gasp. | 4 s | *Duvet* chorus swell hits here (1:00 mark). |
+| **Final Beat (13–15 s)** | Freeze on balcony silhouette → smash to black → white text: **“PART 2 TOMORROW”** | 2 s | Loop point: gasp → text → replay. |
 
-## Clip 2 – One Piece “Gear 5 King’s Fist” (30‑40 s)
-
-| Element | Details |
-|---------|---------|
-| **Source** | Toei Animation “One Piece – Next Episode Preview” (YouTube, 2026‑11‑17). <https://www.youtube.com/watch?v=OP1181_Preview> |
-| **Hook (0‑2 s)** | 0 :02‑0 :04 – Luffy’s silhouette wind‑up, the background fades to black. |
-| **Unbroken stretches** | 1. 0 :04‑0 :12 – Luffy’s face, eyes blazing, as he clenches the fist.<br>2. 0 :12‑0 :19 – The “King’s Fist” wind‑up reaches maximum power.<br>3. 0 :19‑0 :26 – The fist slams into the Emperor’s silhouette, causing a shockwave. |
-| **Biggest moment** | 0 :26‑0 :30 – The impact boom and Luffy’s roar. |
-| **Final beat** | 0 :30‑0 :32 – Freeze‑frame of the Emperor’s shocked expression, synced to the last chord of the audio. |
-| **Target length** | 32‑34 s. |
-| **Mood** | Epic, explosive, “hero‑moment” vibe. |
-| **Audio note** | Keep the original sound (to preserve the iconic roar). Add a subtle “boom” overlay at the impact. Caption: “Gear 5 – King’s Fist” in a comic‑style font. |
-
-> **Editing tip:** Use a quick zoom‑in on Luffy during the wind‑up, and a slow‑motion blur on the impact to emphasize the beat.
+**Target:** 35 s.  
+**Caption (both platforms):**  
+`The letter changes everything. 💌🕯️ #ApothecaryDiaries #Maomao #Jinshi #animeedit #part1`  
+**Credit card (end frame, 1 s):** `The Apothecary Diaries S3 Ep 8 — Crunchyroll`
 
 ---
 
-## Clip 3 – The Laid‑Off Cheat‑Granting Mage – Episode 8 (30‑40 s)
+## 2. Steel Ball Run — “They Thought Johnny Was Broken” (Manga-Panel + OP Sync)
 
-| Element | Details |
-|---------|---------|
-| **Source** | Crunchyroll “The Laid‑Off Cheat‑Granting Mage – Episode 8 Preview” (official, 2026‑11‑17). <https://www.crunchyroll.com/the-laid-off-cheat-granting-mage/episode-8-preview> |
-| **Hook (0‑2 s)** | 0 :45‑0 :47 – The mage’s hand reaches out, a bright *glow* begins to form. |
-| **Unbroken stretches** | 1. 0 :47‑0 :53 – The spell “Unlimited Mana” activates: swirling blue energy envelops the mage.<br>2. 0 :53‑0 :58 – The main hero’s eyes widen; a *“Whoa!”* reaction is heard.<br>3. 0 :58‑1 :04 – The mage levitates, the energy crackles, and a burst of light explodes. |
-| **Biggest moment** | 1 :04‑1 :07 – The spell reaches full power; the energy explodes outward. |
-| **Final beat** | 1 :07‑1 :10 – The hero’s shocked gasp syncs with a short *whoosh* sound. |
-| **Target length** | 35‑38 s (trim to 36 s). |
-| **Mood** | Magical, surprise, high‑stakes. |
-| **Audio note** | Use the original soundtrack. Add a subtle *sparkle* synth at the spell’s peak to enhance the beat. Caption: “Unlimited Mana – 1.0” in a playful, neon font. |
+**Why second:** MAL **#1 top airing** (9.03, 258k members), anime TBA 2027. **Zero footage exists** — first-mover advantage for manga-panel edits. “They Thought X Was Y” format (TikTok Formats #2) just did 2.08 M views for Zoro. Johnny’s nail-bullets → Gyro’s steel balls → “GO! GO! GO!” is a perfect 3-beat underdog arc.
 
-> **Editing tip:** Keep the mage’s glow < 5 s; use a quick fade‑in/out to maintain the 30‑s window. Add a subtle text overlay that appears on the hero’s gasp (“Whoa!”) to reinforce the reaction.
+**Format:** “They Thought X Was Y” Character Reveal + Phonk Beat-Sync  
+**Sound:** **“D>E>A>T>H>M>E>T>A>L — Panchiko”** (distortion drop at **1:30** = drums + fuzz bass) — ✅ Business-safe, indie, hype-build energy.  
+**Mood:** Gritty, kinetic, “world ending” hype.
+
+| Beat | Source & Location | What Claude Cuts | Duration | Notes |
+|------|-------------------|------------------|----------|-------|
+| **Hook (0–1.5 s)** | Official colored manga **Ch. 1, p. 12** — Johnny in wheelchair, legs useless, rain on face. | Static panel, slow zoom in. **No sound** yet. | 1.5 s | On-screen: **“THEY THOUGHT JOHNNY WAS BROKEN”** |
+| **Stretch 1 (1.5–6 s)** | Ch. 12 **pp. 8–9** — Johnny fires nail bullets (3 panels: aim → spark → impact). | 3 panels, **each on the kick** (velocity 0.5× → 2× → 0.5× every 2 beats). | 4.5 s | *Panchiko* verses (washed-out) underneath. |
+| **Stretch 2 (6–11 s)** | Ch. 5 **pp. 14–15** — Gyro’s steel balls spinning, centrifugal lines, “Scan” caption. | 2 panels + 1 wide spread, same velocity ramp. | 5 s | Build tension; no drop yet. |
+| **Biggest Moment (11–16 s)** | Ch. 1 **p. 45** — Johnny stands, nail glowing, “**GO! GO! GO!**” (OP lyrics). | Single iconic panel, hold 1.5 s → smash cut to **“Bloody Stream” instrumental drop** (1:30 distortion). | 5 s | **Velocity 2× on drop**, shake effect. |
+| **Final Beat (16–18 s)** | Ch. 95 **p. 18** — Johnny & Gyro side-by-side, “**STEEL BALL RUN**” logo. | Freeze 1 s → text: **“ANIME TBA — MANGA COMPLETE”** | 2 s | Loop: logo → back to wheelchair. |
+
+**Target:** 38 s.  
+**Caption:**  
+`They thought he was broken. He became a legend. 🗿💥 #SteelBallRun #JoJoPart7 #JohnnyJoestar #GyroZeppeli #mangaedit`  
+**Credit card:** `JoJo’s Bizarre Adventure Part 7: Steel Ball Run — Shueisha / Araki`
 
 ---
 
-### Quick Production Checklist (iPhone‑friendly)
+## 3. Jujutsu Kaisen — “Neon Maki / Red Hikaru” Match-Cut Velocity Edit
 
-1. **Screen‑record** each source clip (YouTube/Steam preview) using iPhone’s built‑in screen‑record.  
-2. **Trim** in the TikTok app:  
-   * Use the 10‑frame cut tool.  
-   * Keep each source < 5 s.  
-3. **Overlay** on‑screen titles:  
-   * “GTA VI – Heist Trailer”  
-   * “One Piece – Gear 5”  
-   * “Unlimited Mana – Episode 8”  
-4. **Add captions** (brief, emoji‑rich) that match the beat.  
-5. **Export** at 30 fps, 1080×1920, 30‑40 s.  
-6. **Upload** to TikTok (use “Neon Pulse” for GTA), then cross‑post to YouTube Shorts with the same file.
+**Why third:** Official X dropped **“Neon Collection” full-body visuals today (Nov 18)** — Maki in suit, Hikaru casual. Japanese fans exploding (“Maki too handsome,” “Hikaru’s bad mood look”). Moderate saturation, fresh art = 48-h window. Funk Mandala / Phonk Beat-Sync (TikTok Formats #3) is the *exact* template creators are copying this week (CapCut tutorials Nov 13 & 17).
 
-> **Tip:** Schedule the GTA clip first because it has the highest current engagement potential; the other two will keep the channel active and diversify the content mix.
+**Format:** Funk Mandala / Phonk Beat-Sync Velocity (Anime)  
+**Sound:** **“BAD PIGGIES FUNK — CHAXZER”** (heavy bass drop **0:15**, repeats every 8 bars) — ✅ Business-safe, phonk staple for action edits.  
+**Mood:** Sharp, stylish, “tech-wow” energy.
+
+| Beat | Source & Location | What Claude Cuts | Duration | Notes |
+|------|-------------------|------------------|----------|-------|
+| **Hook (0–1 s)** | **Neon Collection key visual (today’s drop)** — Maki in suit, neon rim-light, freeze-frame. | Static art, **glitch zoom** on eyes. | 1 s | On-screen: **“NEON COLLECTION DROP”** |
+| **Stretch 1 (1–6 s)** | S2 Ep 18 **0:42–0:50** — Maki’s Domain Expansion “Threefold Affliction” (3 cuts: chant → barrier close → slash). | **Each cut on the kick** (0.5× → 2× velocity). | 5 s | *CHAXZER* bass drop at 0:15 = first slash. |
+| **Stretch 2 (6–11 s)** | **Neon visual** — Maki pose → **match-cut** to Hikaru’s neon visual (same framing, color flip). | 2 art frames, 0.3 s each, synced to next 2 kicks. | 5 s | Transition: screen shake + chromatic aberration. |
+| **Stretch 3 (11–16 s)** | S2 Ep 23 **1:12–1:18** — Hikaru “Cursed Technique Reversal: Red” (charge → release → shockwave). | 3 cuts, velocity ramp continues. | 5 s | Second bass drop (0:23) = Red release. |
+| **Biggest Moment (16–21 s)** | Neon visual **both characters side-by-side** (fan-edit composite) → **“JUJUTSU KAISEN S2”** logo. | Hold 2 s on composite, 1 s logo. | 5 s | Third drop (0:31) = logo slam. |
+| **Final Beat (21–23 s)** | Freeze on logo → white text: **“CULLING GAME PART 2 IN PRODUCTION”** | 2 s | Loop point. |
+
+**Target:** 33 s.  
+**Caption:**  
+`New visuals just dropped. Maki & Hikaru in neon. ⚡️🔴 #JujutsuKaisen #MakiZenin #Hikaru #NeonCollection #animeedit`  
+**Credit card:** `Jujutsu Kaisen S2 — MAPPA / Crunchyroll`
+
+---
+
+## Quick Handoff Checklist for Claude
+
+| Clip | Source Files Owner Must Supply | Sound File (pre-download) | Export Name |
+|------|--------------------------------|---------------------------|-------------|
+| 1. Apothecary Teaser | Ep 7 (18:30–18:42), Ep 8 preview, **Ep 8 raw (watch tomorrow AM)** | `Duvet_boa_0-100.mp3` | `MV_Apothecary_P1_20261120` |
+| 2. Steel Ball Run | Official colored manga panels (Ch. 1, 5, 12, 95) —

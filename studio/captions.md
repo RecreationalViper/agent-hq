@@ -1,53 +1,86 @@
-# Social Strategist (updated 2026-11-17)
+# Social Strategist (updated 2026-11-18)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-## 🎬 Clip 1 – **GTA VI “Heist Trailer”**  
+# Social Pack — 2026-11-18 (3 Clips)
 
-| Item | Details |
-|------|---------|
-| **TikTok captions** (pick 3‑4) | 1. “🚨 Heist in 3…2…1 – can you feel the rush? 🔥”  <br>2. “What’s the first thing you’d steal in Vice City? 👀👇” *(question for comments)* <br>3. “💥 Vault blast + police radio = instant replay material 🎧” <br>4. “Tag a friend who’d love to join the crew! #HeistSquad” |
-| **On‑screen hook text** | **“Ready for the biggest heist?”** |
-| **Hashtags** | `#GTAVI` `#HeistTrailer` `#NeonPulse` `#GamingEdit` `#ViralClip` |
-| **YouTube Shorts title** | **“GTA VI Heist Trailer – 30‑Sec adrenaline rush”** |
-| **Best posting time (NY)** | **20:00 – 20:30 EST** – Evening is peak for gaming fans on TikTok and Shorts; the 8 PM slot hits both after‑school/after‑work scrolls and the nightly “gaming news” surge.  
+---
 
+## 1. The Apothecary Diaries S3 — “The Secret Letter” Teaser Arc (Part 1/3)
 
+### TikTok Captions
+1. The letter changes everything. 💌🕯️ #ApothecaryDiaries #Maomao #Jinshi #animeedit #part1  
+2. That wall-slam wasn't the twist. *This* letter is. 👀  
+3. **What does the decree actually say? Drop your theory below.** 👇  
+4. Maomao's face when she reads it… I'm not ready. 😭
 
-## 🎬 Clip 2 – **One Piece “Gear 5 King’s Fist”**  
+### On-Screen Hook (6 words max)
+**THE SECRET LETTER #1**
 
-| Item | Details |
-|------|---------|
-| **TikTok captions** | 1. “⚡️ Gear 5’s King Fist – the moment we’ve all waited for! 👊” <br>2. “Which opponent would you smash with this punch? 🤔👇” *(question for comments)* <br>3. “The roar that shook the Grand Line 🌊 #OnePiece” <br>4. “Replay this 3× if you felt the impact! 🔁” |
-| **On‑screen hook text** | **“Luffy’s ultimate punch!”** |
-| **Hashtags** | `#OnePiece` `#Gear5` `#AnimeEdit` `#KingFist` `#EpicMoment` |
-| **YouTube Shorts title** | **“One Piece Gear 5 – King’s Fist in 30 seconds”** |
-| **Best posting time (NY)** | **13:00 – 13:30 EST** – Early‑afternoon catches the global anime fanwave (US lunch break, EU afternoon) and aligns with the Reddit/TikTok buzz window for the episode teaser.  
+### Hashtags (5–6)
+#ApothecaryDiaries #薬屋のひとりごと #Maomao #Jinshi #animeedit #Crunchyroll
 
+### YouTube Shorts Title (<60 chars)
+**The Secret Letter Changes Everything 💌 | Apothecary Diaries S3 Ep 8 Teaser #1**
 
+### Best Post Times (New York)
+- **TikTok:** Thu Nov 19, 8:00 PM EST — hits US anime crowd right after Ep 8 airs in Japan (Fri 11 AM JST)  
+- **Shorts:** Fri Nov 20, 11:00 AM EST — catches morning scroll + algorithm push before weekend binge
 
-## 🎬 Clip 3 – **The Laid‑Off Cheat‑Granting Mage – Episode 8 “Unlimited Mana”**  
+---
 
-| Item | Details |
-|------|---------|
-| **TikTok captions** | 1. “⚡️ Unlimited Mana activated – spell overload! ✨” <br>2. “What would you do with infinite magic? Comment! 🪄👇” *(question for comments)* <br>3. “That moment when the mage goes *BAM* 💥 #CheatMage” <br>4. “If you’re not re‑watching this, you missed the Easter egg 👀” |
-| **On‑screen hook text** | **“Unlimited Mana – UNLEASHED!”** |
-| **Hashtags** | `#CheatMage` `#AnimeMagic` `#LevelUp` `#AnimeEdit` `#SpoilerAlert` |
-| **YouTube Shorts title** | **“Cheat‑Mage Episode 8 – Unlimited Mana preview”** |
-| **Best posting time (NY)** | **22:00 – 22:30 EST** – Late‑night is when anime fans binge‑watch and check spoilers; the 10 PM slot maximises reach for both US night‑owls and Asian viewers who are still active.  
+## 2. Steel Ball Run — “They Thought Johnny Was Broken” (Manga-Panel + OP Sync)
 
+### TikTok Captions
+1. They thought he was broken. He became a legend. 🗿💥 #SteelBallRun #JoJoPart7 #JohnnyJoestar #GyroZeppeli #mangaedit  
+2. Zero anime footage. 100% manga panels. This is how you hype SBR. 🔥  
+3. **Which panel hit hardest: nail bullets, steel balls, or the stand?** 👇  
+4. Johnny Joestar's glow-up is the greatest in JoJo history. Fight me. 🗿
 
+### On-Screen Hook (6 words max)
+**THEY THOUGHT JOHNNY WAS BROKEN**
 
-### Quick reminder for the owner (iPhone‑friendly)
+### Hashtags (5–6)
+#SteelBallRun #JoJoPart7 #JohnnyJoestar #GyroZeppeli #mangaedit #Araki
 
-1. **Record** each source clip with iPhone screen‑record.  
-2. **Trim** in‑app to the exact timestamps above (keep each source < 5 s).  
-3. **Add** the on‑screen hook text (6 words max) and the lower‑third title.  
-4. **Sync** the beat‑points:  
-   * GTA VI – use **“Neon Pulse”** cut on the boom‑snap at 0:01.8.  
-   * One Piece – keep the original roar; add a subtle “boom” at the impact.  
-   * Cheat‑Mage – add a sparkle synth at the spell’s peak.  
-5. **Export** 1080×1920, 30 fps, 30‑35 s.  
-6. **Upload** at the times listed, copy the captions/hashtags, and cross‑post to YouTube Shorts.  
+### YouTube Shorts Title (<60 chars)
+**They Thought Johnny Was Broken 🗿 | Steel Ball Run Manga-Panel Sync**
 
-Good luck – those first seconds are the key to looping! 🚀
+### Best Post Times (New York)
+- **TikTok:** Fri Nov 20, 7:00 PM EST — Friday night anime crowd, JoJo fans active pre-weekend  
+- **Shorts:** Sat Nov 21, 10:00 AM EST — Saturday morning "long-form Shorts" browse window, evergreen pickup
+
+---
+
+## 3. Jujutsu Kaisen — “Neon Maki / Red Hikaru” Match-Cut Velocity Edit
+
+### TikTok Captions
+1. New visuals just dropped. Maki & Hikaru in neon. ⚡️🔴 #JujutsuKaisen #MakiZenin #Hikaru #NeonCollection #animeedit  
+2. That match-cut from Domain Expansion to Red… my brain melted. 🤯  
+3. **Maki in a suit or Hikaru casual — who wore neon better?** 👇  
+4. CHAXZER phonk + JJK velocity = the edit formula this week. 🎧
+
+### On-Screen Hook (6 words max)
+**NEON COLLECTION DROP**
+
+### Hashtags (5–6)
+#JujutsuKaisen #呪術廻戦 #MakiZenin #Hikaru #NeonCollection #animeedit
+
+### YouTube Shorts Title (<60 chars)
+**NEON COLLECTION DROP ⚡️🔴 | JJK Maki & Hikaru Match-Cut Velocity Edit**
+
+### Best Post Times (New York)
+- **TikTok:** Wed Nov 18, 9:00 PM EST — **tonight**, rides the 48-h key-visual wave while Japanese fan art peaks  
+- **Shorts:** Thu Nov 19, 12:00 PM EST — lunch-scroll slot, catches secondary wave as edits spread to US
+
+---
+
+## Quick Reference Table
+
+| Clip | TikTok Time (EST) | Shorts Time (EST) | Hook Text |
+|------|-------------------|-------------------|-----------|
+| Apothecary P1 | Thu 19, 8 PM | Fri 20, 11 AM | THE SECRET LETTER #1 |
+| Steel Ball Run | Fri 20, 7 PM | Sat 21, 10 AM | THEY THOUGHT JOHNNY WAS BROKEN |
+| JJK Neon | **Wed 18, 9 PM** | Thu 19, 12 PM | NEON COLLECTION DROP |
+
+> **Note:** JJK posts **tonight** (Wed 18) to catch the 48-h visual drop window. Apothecary posts Thu night after Ep 8 airs in Japan. SBR posts Fri night for weekend evergreen.

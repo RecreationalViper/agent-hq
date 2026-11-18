@@ -1,33 +1,82 @@
-# TikTok Format Watcher (updated 2026-11-17)
+# TikTok Format Watcher (updated 2026-11-18)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-## 5‑7 TikTok / Shorts Edit Formats that Are Working **Right Now**  
-*(All ideas are phone‑friendly, 30‑40 s vertical montages.  Use short, transformative clips, title‑card credit, and a strong hook in the first 1‑2 s.)*  
+# Edit Formats Working Right Now (2026-11-18)
 
-| # | Format & Why It Pops | How to Use It – Specific Title (movie / game / anime) | Sample Source (public) |
-|---|----------------------|------------------------------------------------------|------------------------|
-| 1 | **“The Moment When” (​“That ONE second”)** – Quick‑cut countdown to a single iconic beat (e.g., a surprise reveal, a perfect dodge, a plot twist). Works because viewers love the “anticipation → payoff” loop and will re‑watch to catch the exact timing. | **Movie:** *“The Moment When *Godzilla Minus Zero* finally turns the tide”* – start with a 1‑sec hook of the city‑wide roar, then 2‑3 rapid cuts of the monster’s first hit, the hero’s reaction, and end on the decisive “laser blast” beat. | Clip from the official trailer / theatrical preview (YouTube) – <https://youtu.be/…> |
-| 2 | **Velocity / “Speed‑Ramp” Edit** – Slow‑mo → hyper‑fast cut sync’d to a beat drop. The visual contrast grabs the algorithm and the music‑driven pacing keeps the audience glued. | **Game:** *“Call of Duty Modern Warfare 4 – The fastest 3‑kill streak”* – open with a 1‑sec freeze‑frame of the gun, then slow‑mo the first bullet, cut to a 0.2× speed‑ramp of the next two kills timed to the bass drop, finish with a bold “3‑KILL!” text overlay. | Gameplay capture from the Steam “Modern Warfare 4” launch clip (official press footage). |
-| 3 | **Side‑by‑Side “Before vs After”** – Two vertical panes showing a scene before a major change (e.g., character upgrade, plot reveal) and after. The visual comparison is instantly satisfying and encourages the “which is better?” comment thread. | **Anime:** *“One Piece Ep 1181 – Luffy’s Gear 5 vs. Gear 4”* – left pane: Gear 4 “Boundman” attack (slow‑mo), right pane: Gear 5 “King” punch (full‑speed). Add a quick “Which is stronger? 🤔” text bubble. | Streamed episode clip (legal fair‑use – <https://www.crunchyroll.com/…>) |
-| 4 | **Ranking / “Top 3 X”** – Quick countdown with bold numeric overlays. Rankings are evergreen and spark debate in the comments. Keep each item to ~8 s, ending on a cliff‑hanger “#1 will blow your mind”. | **Movie:** *“Top 3 most mind‑bending twists in 2026 releases”* – 1️⃣ *“The Odyssey (2026) – The AI narrator reveal”*; 2️⃣ *“Ebenezer (2026) – The time‑loop ending”*; 3️⃣ *“Godzilla Minus Zero – The nuclear‑pulse twist”*. Use a rapid‑cut montage of each twist with a 1‑sec caption. | Trailer clips from each film’s official YouTube channel. |
-| 5 | **POV Text Overlay** – First‑person “I’m **X** and this just happened” caption that reads like a meme while the footage shows the action. The text acts as a hook and is easily readable on mobile. | **Game:** *“POV: You’re the last survivor in *Bodycam* (Steam top‑seller)* – overlay “I just heard *that* noise… 👀” as the player turns a corner, then a jump‑scare cut. End with “Did you see that?!” | Gameplay clip from the *Bodycam* Steam page (public demo video). |
-| 6 | **Meme‑Template Remix** – Take a currently‑trending meme format (e.g., “*No one: …*” or “*How it started / How it’s going*”) and insert a relevant film / anime clip. The meme’s built‑in virality lifts the clip. | **Anime:** *“How *The Laid‑Off Cheat‑Granting Mage* started vs. how it’s going”* – left pane: first episode’s timid mage, right pane: episode 8’s over‑powered explosion. Add “No one: *the mage*” text on top. | Screenshots from the AniList‑linked episodes (fair‑use). |
-| 7 | **“What If…?” Alternate Cut** – Pose a quick “What if this character made a different choice?” and splice two short scenes to illustrate. The speculative hook sparks comments and duets. | **Movie:** *“What if *Robert Pattinson*’s Batman never took the Batarang?”* – show the iconic Batarang throw, then cut to a “no‑batarang” version (use a different fight clip from the same film) and end with “Your theory?” | Clip from *The Batman* (2022) trailer – public domain footage. |
+Based on live scanner data from the last 24–48 hours, here are **7 formats** pulling views for movie/game/anime clips. Each includes a concrete studio example you can hand to Claude.
 
-### Formats That Are **Fading**  
-| Format | Why It’s Losing Steam | Quick Note |
-|--------|----------------------|------------|
-| **“Reaction‑Only” face‑cam** | Audiences now prefer the action itself; face‑cam takes up vertical space and reduces the amount of footage you can show. | Keep reactions as tiny picture‑in‑picture overlays only if they add humor. |
-| **Long “Story‑Explainer” (≥45 s)** | Shorts algorithm favors sub‑45 s; lengthy narration loses re‑watch value. | Stick to 30‑40 s with visual storytelling. |
-| **Static “Slide‑Show” countdown** | Moving visuals (cuts, speed‑ramps) outperform static text slides in the feed. | Replace static lists with kinetic text animations. |
+---
 
-### How to Deploy These Formats on MotionVault  
+## 1. Multi-Part Emotional Story Arc (Anime)
+**What makes it work:** 30–40 s “chapters” that tell one character’s emotional beat in release order, ending on a cliffhanger line or visual that forces a rewatch. The Thorfinn (Vinland Saga) edits on YouTube Shorts are doing 3–4 M views per part because each ends mid-sentence or mid-tear.  
+**Studio example:** *The Apothecary Diaries S3* (ep 8 airs 2026-11-20) — cut Maomao’s “wall of logic” monologue (ep 5–6) into **Part 1: The Poison Test**, **Part 2: The Emperor’s Smile**, **Part 3: The Hidden Ledger**. Title card each part “MAOMAO’S LOGIC #1/2/3”.  
+**Source:** YouTube “anime edit” top 10 — Thorfinn 4-part series 3.2–4.1 M views each (2026-11-13/14)  
 
-1. **Pick a trending hook** – Use the live‑data list (e.g., “Robert Pattinson” spikes 1.3 M views, “Godzilla Minus Zero” trending).  
-2. **Script the 30‑40 s beat** – 1‑2 s hook → 3‑4 quick cuts → climax → call‑to‑action (question or “re‑watch”).  
-3. **Capture only 2‑3 s from any single source** – Keep it transformative.  
-4. **Add on‑screen title credit** (e.g., “Godzilla Minus Zero – 2026”) at the start or end.  
-5. **Export vertical 1080×1920, 30 fps** – Directly upload from iPhone to TikTok/YouTube Shorts.  
+---
 
-Feel free to ask for a full storyboard for any one of the above combos!
+## 2. “They Thought X Was Y” Character Reveal (Anime / Game)
+**What makes it work:** 2–3 s of underestimation footage → hard cut to the flex moment, synced to a phonk drop. The Zoro edit (“They Thought Zoro Was A Newbie”) hit 2.08 M views in 4 days.  
+**Studio example:** *Black Clover S2* (ep 8 airs 2026-11-21) — Asta’s “no magic” taunt (ep 1) → first anti-magic slash (ep 3) → devil union form (ep 6). Sound: current Funk Mandala trend (see #4).  
+**Source:** YouTube “anime edit” #5 — “They Thought Zoro Was A Newbie” 2.08 M views (2026-11-14)  
+
+---
+
+## 3. Funk Mandala / Phonk Beat-Sync Velocity (Anime & Game)
+**What makes it work:** 15–20 clips cut **exactly on the kick**, with velocity ramps (0.5× → 2× → 0.5×) every 2 beats. CapCut tutorials for this style dropped 2026-11-13 & 2026-11-17 — creators are copying the template same week.  
+**Studio example:** *Overgeared* (ep 9 airs 2026-11-22) — Grid’s hammer-forge montage: each strike = kick drum. Export 9:16, 30 s, zero dialogue.  
+**Sources:**  
+- CapCut “Funk Mandala anime edit” tutorial 2026-11-17 [3]  
+- CapCut “anime zoom/velocity edit” tutorial 2026-11-13 [2]  
+
+---
+
+## 4. Slowed + Reverb Character Focus (Anime / Movie)
+**What makes it work:** Single character, 3–4 lingering shots, audio slowed 0.8× with heavy reverb. Tokyo Ghoul Uruka Minami edit on IG used “feel - slowed” and blew up 2026-11-13. The melancholic mood drives saves/shares.  
+**Studio example:** *Cyberpunk: Edgerunners 2* (finished, high trending) — Lucy’s rooftop gaze (ep 4) + David’s jacket flutter (ep 10) + “I really want to stay” line. Track: Olivia Rodrigo “the cure (slowed)” — rising on Last.fm US/Global.  
+**Sources:**  
+- Tokyo Ghoul slowed edit coverage 2026-11-13 [4]  
+- Last.fm rising: “the cure - Olivia Rodrigo” #2 worldwide (927 k listeners)  
+
+---
+
+## 5. GTA VI “First Hour” POV Reaction (Game)
+**What makes it work:** GTA VI launched this week — Twitch top 12 streams are all GTA VI (276 k peak). Short-form audiences want **uncut first-reaction beats**: “first carjack”, “first police chase”, “first Vice City sunset”. No commentary, just game audio + creator’s face cam corner.  
+**Studio example:** Owner records iPhone screen + face cam for **first 15 min** → Claude cuts 3× 30 s Shorts: “First Wanted Level”, “First Bike Jump”, “First Radio Song”. Caption each “GTA VI FIRST HOUR #1/2/3”.  
+**Sources:**  
+- Twitch live: 11 GTA VI streams > 50 k concurrent (2026-11-18)  
+- Google Trends: “gta 6 ps5”, “gta 6 map”, “gta6 price” spiking in US, MX, PH, IN, CA  
+
+---
+
+## 6. Pixar-Style AI Transformation Shorts (Movie / Original)
+**What makes it work:** 15 s “toy comes alive” micro-narrative generated with AI (Midjourney/Runway) → edited to real movie clip payoff. Atlas Cloud blog says these templates hit **10 M+ TikTok views** (2026-11-11).  
+**Studio example:** *The Odyssey (2026 film)* — AI generate Odysseus’s ship as a living wooden toy battling storm → hard cut to actual film’s VFX shot (trailer). Tag #PixarStyle #OdysseyMovie.  
+**Source:** Pixar Style AI trend breakdown 2026-11-11 [1]  
+
+---
+
+## 7. POV Text Overlay “The Moment When…” (Movie / Show)
+**What makes it work:** Relatable micro-situation (2 s) + perfect reaction clip (3 s) + white-text-on-black caption “POV: You when…”. YouTube “movie edit” top 10 shows 3 of 10 use this exact structure (Spider-Man prison, Mr. D teacher, Sonic transform).  
+**Studio example:** *Ramayana: Part 1* (Wiki 452 k views yesterday) — Sita’s “fire test” clip → text “POV: You proving you’re innocent but nobody believes you”. Universal relatable hook.  
+**Source:** YouTube “movie edit” top 10 — 3/10 use POV text overlay format (2026-11-12/13/14)  
+
+---
+
+## ⚠️ Fading / Low-Leverage Formats
+| Format | Why it’s fading |
+|--------|----------------|
+| Pure “best kills” / “funny moments” compilations (no narrative hook) | YouTube Shorts top 10 shows **zero** pure compilations — every hit has a story beat or POV frame. |
+| Static “ranking” slides (Tier lists) | No ranking edits in any top-10 list; retention drops after slide 3. |
+| Long (> 5 s) unedited gameplay / scene dumps | Velocity / beat-sync is now baseline expectation; raw clips get swiped. |
+
+---
+
+## Quick Action List for This Week
+1. **Mon** — Cut *Apothecary Diaries* 3-part story arc (ep 8 drops Fri).  
+2. **Tue** — Record GTA VI first-hour face-cam + screen (launch week heat).  
+3. **Wed** — Build Funk Mandala *Overgeared* velocity edit (ep 9 drops Sat).  
+4. **Thu** — Generate Pixar-style *Odyssey* toy-ship AI clips (Runway free tier).  
+5. **Fri** — Assemble *Ramayana* POV text overlay + *Cyberpunk* slowed Lucy edit.  
+
+All clips ≤ 40 s, 9:16, title card + credit on screen. Hand the list to Claude with timecodes.

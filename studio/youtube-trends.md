@@ -3,56 +3,55 @@
 Live from the YouTube Data API. Views/hr = views since upload ÷ hours since upload.
 
 ## Film & Animation: fastest-rising
-- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 32,798,923 views · 372,523/hr · 184,846 likes · 573 comments · 0:10
-- [#naofloppa](https://youtu.be/hEcdqXV1EmU) · qrk9 · 9,509,906 views · 268,792/hr · 307,616 likes · 1,620 comments · 0:24
-- [OMG he actually wore it 🤣 #funny #comedy #humor #prank](https://youtu.be/_1_OO5Wm5Dg) · WearTheGag · 28,271,549 views · 230,130/hr · 137,988 likes · 1,399 comments · 0:10
-- [#funny #comedy #movie #memes](https://youtu.be/0L2RdAVUbLk) · Eryihjy outrfj · 21,417,695 views · 174,292/hr · 121,511 likes · 107 comments · 0:31
-- [I just wanted to watch a movie](https://youtu.be/_duZzXRVLFE) · Verzen · 4,677,377 views · 146,820/hr · 100,580 likes · 1,880 comments · 0:14
-- [‎"They Underestimated the Beggar" 🗿🔥](https://youtu.be/zD5NWTkvdj8) · Ukhnooq_Ae · 25,071,498 views · 138,531/hr · 776,346 likes · 6,706 comments · 1:00
-- [When A Random Vehicle Pulls Up Mid-Game! 😂](https://youtu.be/f6Jx2A8Qr4Y) · Foeko · 18,384,883 views · 137,094/hr · 457,407 likes · 1,253 comments · 0:23
-- [The Most Confused Rookie Ever 🤣😭](https://youtu.be/X8h3XPxnfzU) · Sunday Football Shorts · 20,383,402 views · 128,725/hr · 305,929 likes · 645 comments · 0:12
+- [A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)](https://youtu.be/QSPoFd7tYwg) · ManNoirFacts · 13,823,723 views · 474,556/hr · 0 likes · 1,467 comments · 0:11
+- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 34,523,157 views · 326,330/hr · 192,735 likes · 586 comments · 0:10
+- [OMG he actually wore it 🤣 #funny #comedy #humor #prank](https://youtu.be/_1_OO5Wm5Dg) · WearTheGag · 32,080,502 views · 228,173/hr · 156,525 likes · 1,597 comments · 0:10
+- [#naofloppa](https://youtu.be/hEcdqXV1EmU) · qrk9 · 11,745,771 views · 221,089/hr · 347,079 likes · 1,809 comments · 0:24
+- [When A Random Vehicle Pulls Up Mid-Game! 😂](https://youtu.be/f6Jx2A8Qr4Y) · Foeko · 20,861,025 views · 137,379/hr · 501,409 likes · 1,329 comments · 0:23
+- [‎"They Underestimated the Beggar" 🗿🔥](https://youtu.be/zD5NWTkvdj8) · Ukhnooq_Ae · 25,094,764 views · 126,277/hr · 776,776 likes · 6,714 comments · 1:00
+- [The Most Confused Rookie Ever 🤣😭](https://youtu.be/X8h3XPxnfzU) · Sunday Football Shorts · 21,126,646 views · 119,973/hr · 315,604 likes · 672 comments · 0:12
+- [I just wanted to watch a movie](https://youtu.be/_duZzXRVLFE) · Verzen · 5,753,414 views · 115,985/hr · 119,710 likes · 2,182 comments · 0:14
 
 ## Film & Animation: short videos (3 min or less)
-- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 32,798,923 views · 372,523/hr · 184,846 likes · 573 comments · 0:10
-- [#naofloppa](https://youtu.be/hEcdqXV1EmU) · qrk9 · 9,509,906 views · 268,792/hr · 307,616 likes · 1,620 comments · 0:24
-- [OMG he actually wore it 🤣 #funny #comedy #humor #prank](https://youtu.be/_1_OO5Wm5Dg) · WearTheGag · 28,271,549 views · 230,130/hr · 137,988 likes · 1,399 comments · 0:10
-- [#funny #comedy #movie #memes](https://youtu.be/0L2RdAVUbLk) · Eryihjy outrfj · 21,417,695 views · 174,292/hr · 121,511 likes · 107 comments · 0:31
-- [I just wanted to watch a movie](https://youtu.be/_duZzXRVLFE) · Verzen · 4,677,377 views · 146,820/hr · 100,580 likes · 1,880 comments · 0:14
-- [‎"They Underestimated the Beggar" 🗿🔥](https://youtu.be/zD5NWTkvdj8) · Ukhnooq_Ae · 25,071,498 views · 138,531/hr · 776,346 likes · 6,706 comments · 1:00
-- [When A Random Vehicle Pulls Up Mid-Game! 😂](https://youtu.be/f6Jx2A8Qr4Y) · Foeko · 18,384,883 views · 137,094/hr · 457,407 likes · 1,253 comments · 0:23
-- [The Most Confused Rookie Ever 🤣😭](https://youtu.be/X8h3XPxnfzU) · Sunday Football Shorts · 20,383,402 views · 128,725/hr · 305,929 likes · 645 comments · 0:12
+- [A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)](https://youtu.be/QSPoFd7tYwg) · ManNoirFacts · 13,823,723 views · 474,556/hr · 0 likes · 1,467 comments · 0:11
+- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 34,523,157 views · 326,330/hr · 192,735 likes · 586 comments · 0:10
+- [OMG he actually wore it 🤣 #funny #comedy #humor #prank](https://youtu.be/_1_OO5Wm5Dg) · WearTheGag · 32,080,502 views · 228,173/hr · 156,525 likes · 1,597 comments · 0:10
+- [#naofloppa](https://youtu.be/hEcdqXV1EmU) · qrk9 · 11,745,771 views · 221,089/hr · 347,079 likes · 1,809 comments · 0:24
+- [When A Random Vehicle Pulls Up Mid-Game! 😂](https://youtu.be/f6Jx2A8Qr4Y) · Foeko · 20,861,025 views · 137,379/hr · 501,409 likes · 1,329 comments · 0:23
+- [‎"They Underestimated the Beggar" 🗿🔥](https://youtu.be/zD5NWTkvdj8) · Ukhnooq_Ae · 25,094,764 views · 126,277/hr · 776,776 likes · 6,714 comments · 1:00
+- [The Most Confused Rookie Ever 🤣😭](https://youtu.be/X8h3XPxnfzU) · Sunday Football Shorts · 21,126,646 views · 119,973/hr · 315,604 likes · 672 comments · 0:12
+- [I just wanted to watch a movie](https://youtu.be/_duZzXRVLFE) · Verzen · 5,753,414 views · 115,985/hr · 119,710 likes · 2,182 comments · 0:14
 
 ## Gaming: fastest-rising
-- [🔴IF I LAUGH = STREAM ENDS🔴](https://youtu.be/_Rwlqh04eR0) · Ninjagaming · 1,081,068 views · 465,165/hr · 2,425 likes · 4 comments · 107:45
-- [Grand Theft Auto IV (dunkview)](https://youtu.be/OhkId-PF268) · videogamedunkey · 748,199 views · 117,239/hr · 27,158 likes · 1,740 comments · 6:02
-- [THE GAME AWARDS: 2026 Nominee Reveal! (Game of the Year)](https://youtu.be/_e0oJSfmIFU) · thegameawards · 1,119,972 views · 116,265/hr · 31,960 likes · 5,256 comments · 11:23
-- [The Last Modded GTA 5 Free Roam Video...](https://youtu.be/wt_W2w_N_Jk) · SMii7Y · 3,539,456 views · 115,421/hr · 100,456 likes · 3,116 comments · 20:35
-- [🔴LIVE | AOE 2 | GETTING DRUNK ON MONDAY | ME AND JOHN VS HARD BOTS | FART IN MY MOUTH | #BUNGULATE](https://youtu.be/CW_rULxbDs0) · TheBurntPeanut · 1,522,762 views · 88,820/hr · 12,545 likes · 209 comments · 549:12
-- [iSHOWSPEED x GTA 6 | OFFICIAL TRAILER](https://youtu.be/2BRL4ALMCyA) · IShowSpeed · 2,460,663 views · 87,447/hr · 73,811 likes · 3,114 comments · 1:07
-- [MONOCHROME](https://youtu.be/2azaT1HxJHI) · Markiplier · 677,746 views · 78,959/hr · 25,340 likes · 1,963 comments · 35:47
-- [Less Than 24 Hours to GTA 6... NEW INFO - 6 Screenshots + My Content Plans For Launch](https://youtu.be/-AFSP8PJzKs) · TGG · 1,446,461 views · 71,706/hr · 38,234 likes · 3,579 comments · 11:32
+- [GTA 6 Review](https://youtu.be/agBEh5aZ_Go) · IGN · 5,388,832 views · 560,164/hr · 80,494 likes · 10,015 comments · 27:38
+- [PLAYING GTA 6 For The FIRST Time...](https://youtu.be/FELgzW09PWI) · Jelly · 1,166,000 views · 354,427/hr · 18,625 likes · 169 comments · 413:23
+- [[4K HDR] Grand Theft Auto 6: Digital Foundry Tech Review - The Game Of The Generation?](https://youtu.be/qsBU0bcpONA) · Digital Foundry · 1,258,553 views · 130,705/hr · 33,755 likes · 6,631 comments · 57:21
+- [GTA 6 Situation Is a Joke](https://youtu.be/yHT4--yT3yE) · Dolan Darkest · 602,258 views · 91,547/hr · 13,461 likes · 2,542 comments · 2:15
+- [The Last Modded GTA 5 Free Roam Video...](https://youtu.be/wt_W2w_N_Jk) · SMii7Y · 4,214,623 views · 87,056/hr · 110,740 likes · 3,247 comments · 20:35
+- [I've finished GTA 6 - A 100% Spoiler Free Review-in-Progress](https://youtu.be/RFhRJaWtbYc) · Skill Up · 716,553 views · 74,868/hr · 23,857 likes · 3,745 comments · 26:03
+- [Grand Theft Auto IV (dunkview)](https://youtu.be/OhkId-PF268) · videogamedunkey · 1,705,660 views · 70,690/hr · 45,850 likes · 2,465 comments · 6:02
+- [The internet exploded over this..](https://youtu.be/iMJz5X9lgqA) · Asmongold TV   · 1,058,476 views · 70,654/hr · 33,543 likes · 6,150 comments · 58:04
 
 ## Gaming: short videos (3 min or less)
-- [iSHOWSPEED x GTA 6 | OFFICIAL TRAILER](https://youtu.be/2BRL4ALMCyA) · IShowSpeed · 2,460,663 views · 87,447/hr · 73,811 likes · 3,114 comments · 1:07
-- [GTA 6 MARATHON | Official Trailer](https://youtu.be/_AY5krZErfg) · Kai Cenat Live · 2,103,074 views · 69,331/hr · 69,012 likes · 3,731 comments · 2:59
-- [GTA6 Livestream - Nov 18](https://youtu.be/4jzYed83Zpc) · VanossGaming · 872,520 views · 36,534/hr · 40,123 likes · 1,532 comments · 1:12
+- [GTA 6 Situation Is a Joke](https://youtu.be/yHT4--yT3yE) · Dolan Darkest · 602,258 views · 91,547/hr · 13,461 likes · 2,542 comments · 2:15
+- [Game of the Year Already...](https://youtu.be/_XJ0ATrZFC8) · Muaxh03 · 213,283 views · 25,304/hr · 2,915 likes · 587 comments · 0:57
 
 ## Entertainment: fastest-rising
-- [$250,000 Hunger Games In Real Life](https://youtu.be/q6fgVVmdpgY) · MrBeast · 73,316,504 views · 895,385/hr · 1,199,895 likes · 60,495 comments · 33:58
-- [Phillies land All-Star closer Jhoan Duran ahead of MLB trade deadline 👀🔥 #jhoanduran](https://youtu.be/ZcuyPDNeqXY) · Paul Bor · 12,228,337 views · 741,177/hr · 85,199 likes · 57 comments · 0:29
-- [She found the loophole in dad’s rules 💀](https://youtu.be/CpR5Qm5_H5k) · Marcus Kell · 13,728,294 views · 475,431/hr · 120,170 likes · 544 comments · 0:10
-- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 32,798,923 views · 372,523/hr · 184,846 likes · 573 comments · 0:10
-- [My Bed Was A Secret Bunker 🛌](https://youtu.be/FU4n2Mhz-HI) · His Story · 6,583,043 views · 312,632/hr · 128,680 likes · 706 comments · 2:12
-- [#naofloppa](https://youtu.be/hEcdqXV1EmU) · qrk9 · 9,509,906 views · 268,792/hr · 307,616 likes · 1,620 comments · 0:24
-- [Security Stops Woman Over Her Service Dog! 😳 #usa](https://youtu.be/XV4tDwBtNIY) · Thinkerz Edits · 50,390,531 views · 210,700/hr · 1,436,164 likes · 6,335 comments · 0:32
-- [At least he said good night 💔](https://youtu.be/SyWpa2mHolI) · staring bacon · 10,053,224 views · 186,546/hr · 93,798 likes · 761 comments · 0:13
+- [Phillies land All-Star closer Jhoan Duran ahead of MLB trade deadline 👀🔥 #jhoanduran](https://youtu.be/ZcuyPDNeqXY) · Paul Bor · 44,985,709 views · 1,313,627/hr · 241,217 likes · 141 comments · 0:29
+- [$250,000 Hunger Games In Real Life](https://youtu.be/q6fgVVmdpgY) · MrBeast · 78,550,691 views · 788,427/hr · 1,246,030 likes · 62,281 comments · 33:58
+- [A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)](https://youtu.be/QSPoFd7tYwg) · ManNoirFacts · 13,823,723 views · 474,555/hr · 0 likes · 1,467 comments · 0:11
+- [She found the loophole in dad’s rules 💀](https://youtu.be/CpR5Qm5_H5k) · Marcus Kell · 15,258,148 views · 327,271/hr · 131,117 likes · 587 comments · 0:10
+- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 34,523,157 views · 326,329/hr · 192,735 likes · 586 comments · 0:10
+- [#naofloppa](https://youtu.be/hEcdqXV1EmU) · qrk9 · 11,745,771 views · 221,088/hr · 347,079 likes · 1,809 comments · 0:24
+- [My Bed Was A Secret Bunker 🛌](https://youtu.be/FU4n2Mhz-HI) · His Story · 8,494,194 views · 218,901/hr · 158,602 likes · 788 comments · 2:12
+- [Security Stops Woman Over Her Service Dog! 😳 #usa](https://youtu.be/XV4tDwBtNIY) · Thinkerz Edits · 51,415,923 views · 200,136/hr · 1,465,648 likes · 6,499 comments · 0:32
 
 ## Entertainment: short videos (3 min or less)
-- [Phillies land All-Star closer Jhoan Duran ahead of MLB trade deadline 👀🔥 #jhoanduran](https://youtu.be/ZcuyPDNeqXY) · Paul Bor · 12,228,337 views · 741,177/hr · 85,199 likes · 57 comments · 0:29
-- [She found the loophole in dad’s rules 💀](https://youtu.be/CpR5Qm5_H5k) · Marcus Kell · 13,728,294 views · 475,431/hr · 120,170 likes · 544 comments · 0:10
-- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 32,798,923 views · 372,523/hr · 184,846 likes · 573 comments · 0:10
-- [My Bed Was A Secret Bunker 🛌](https://youtu.be/FU4n2Mhz-HI) · His Story · 6,583,043 views · 312,632/hr · 128,680 likes · 706 comments · 2:12
-- [#naofloppa](https://youtu.be/hEcdqXV1EmU) · qrk9 · 9,509,906 views · 268,792/hr · 307,616 likes · 1,620 comments · 0:24
-- [Security Stops Woman Over Her Service Dog! 😳 #usa](https://youtu.be/XV4tDwBtNIY) · Thinkerz Edits · 50,390,531 views · 210,700/hr · 1,436,164 likes · 6,335 comments · 0:32
-- [At least he said good night 💔](https://youtu.be/SyWpa2mHolI) · staring bacon · 10,053,224 views · 186,546/hr · 93,798 likes · 761 comments · 0:13
-- [Cutting A Watermelon With Dental Floss 😮](https://youtu.be/VOI9-Gx2EaY) · Zack D. Films · 15,358,264 views · 184,196/hr · 607,559 likes · 17,524 comments · 0:36
+- [Phillies land All-Star closer Jhoan Duran ahead of MLB trade deadline 👀🔥 #jhoanduran](https://youtu.be/ZcuyPDNeqXY) · Paul Bor · 44,985,709 views · 1,313,627/hr · 241,217 likes · 141 comments · 0:29
+- [A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)](https://youtu.be/QSPoFd7tYwg) · ManNoirFacts · 13,823,723 views · 474,555/hr · 0 likes · 1,467 comments · 0:11
+- [She found the loophole in dad’s rules 💀](https://youtu.be/CpR5Qm5_H5k) · Marcus Kell · 15,258,148 views · 327,271/hr · 131,117 likes · 587 comments · 0:10
+- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts](https://youtu.be/U1uiggmb2jo) · Cadel and Mia · 34,523,157 views · 326,329/hr · 192,735 likes · 586 comments · 0:10
+- [#naofloppa](https://youtu.be/hEcdqXV1EmU) · qrk9 · 11,745,771 views · 221,088/hr · 347,079 likes · 1,809 comments · 0:24
+- [My Bed Was A Secret Bunker 🛌](https://youtu.be/FU4n2Mhz-HI) · His Story · 8,494,194 views · 218,901/hr · 158,602 likes · 788 comments · 2:12
+- [Security Stops Woman Over Her Service Dog! 😳 #usa](https://youtu.be/XV4tDwBtNIY) · Thinkerz Edits · 51,415,923 views · 200,136/hr · 1,465,648 likes · 6,499 comments · 0:32
+- [PIZZERIA OWNER CALLED POLICE AGAIN 😱 #phonerepair #brokenfix #smartphone #retro #phone #phone](https://youtu.be/z3noi-rn2vk) · Digital Doctor  · 2,753,359 views · 181,279/hr · 170,175 likes · 4,931 comments · 3:00

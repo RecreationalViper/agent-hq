@@ -1,5 +1,83 @@
 [
   {
+    "file": "2026-11-18-growth-coach.md",
+    "agent": "growth-coach",
+    "name": "Growth Coach",
+    "date": "2026-11-18"
+  },
+  {
+    "file": "2026-11-18-studio-critic.md",
+    "agent": "studio-critic",
+    "name": "Studio Critic",
+    "date": "2026-11-18"
+  },
+  {
+    "file": "2026-11-18-studio-writer.md",
+    "agent": "studio-writer",
+    "name": "Social Strategist",
+    "date": "2026-11-18"
+  },
+  {
+    "file": "2026-11-18-studio-director.md",
+    "agent": "studio-director",
+    "name": "Director",
+    "date": "2026-11-18"
+  },
+  {
+    "file": "2026-11-18-youtube-watcher.md",
+    "agent": "youtube-watcher",
+    "name": "YouTube Shorts Watcher",
+    "date": "2026-11-18"
+  },
+  {
+    "file": "2026-11-18-tiktok-fandoms.md",
+    "agent": "tiktok-fandoms",
+    "name": "TikTok Fandom Watcher",
+    "date": "2026-11-18"
+  },
+  {
+    "file": "2026-11-18-tiktok-formats.md",
+    "agent": "tiktok-formats",
+    "name": "TikTok Format Watcher",
+    "date": "2026-11-18"
+  },
+  {
+    "file": "2026-11-18-tiktok-sounds.md",
+    "agent": "tiktok-sounds",
+    "name": "TikTok Sound Watcher",
+    "date": "2026-11-18"
+  },
+  {
+    "file": "2026-11-18-studio-scout.md",
+    "agent": "studio-scout",
+    "name": "Trend Scout",
+    "date": "2026-11-18"
+  },
+  {
+    "file": "2026-11-18-partner-finder.md",
+    "agent": "partner-finder",
+    "name": "Partner Finder",
+    "date": "2026-11-18"
+  },
+  {
+    "file": "2026-11-18-github-radar.md",
+    "agent": "github-radar",
+    "name": "GitHub Radar",
+    "date": "2026-11-18"
+  },
+  {
+    "file": "2026-11-18-ideas.md",
+    "agent": "ideas",
+    "name": "Product Ideas",
+    "date": "2026-11-18"
+  },
+  {
+    "file": "2026-11-18-daily-task.md",
+    "agent": "daily-task",
+    "name": "Daily Focus",
+    "date": "2026-11-18"
+  },
+  {
     "file": "2026-11-18-researcher.md",
     "agent": "researcher",
     "name": "Deep Researcher",
