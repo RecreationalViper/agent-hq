@@ -14,6 +14,7 @@
 import fs from "node:fs/promises";
 import { trackResponse, flushUsage } from "./usage-log.mjs";
 import { addPins } from "./pins.mjs";
+import { addIgPosts, igCaption } from "./ig.mjs";
 import path from "node:path";
 import { createRequire } from "node:module";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -419,7 +420,16 @@ async function main() {
       await fs.writeFile(path.join(dir, name), data);
       await fs.unlink(html);
       await page.close();
-      made.push({ post, name, data });
+      // Instagram feed posts must be 4:5 or wider: the 2:3 pin sits on a soft blurred copy of itself
+      let ig = null;
+      if (!story) {
+        const p2 = await browser.newPage({ viewport: { width: 1080, height: 1350 } });
+        const src = `data:image/jpeg;base64,${data.toString("base64")}`;
+        await p2.setContent(`<html><body style="margin:0;width:1080px;height:1350px;overflow:hidden;position:relative;background:#111"><img src="${src}" style="position:absolute;inset:-60px;width:1200px;height:1470px;object-fit:cover;filter:blur(38px) brightness(.72)"><img src="${src}" style="position:absolute;left:90px;top:0;width:900px;height:1350px;box-shadow:0 0 60px rgba(0,0,0,.35)"></body></html>`, { waitUntil: "load" });
+        ig = await p2.screenshot({ type: "jpeg", quality: 90 });
+        await p2.close();
+      }
+      made.push({ post, name, data, ig });
       console.log(`  designed ${name}`);
     }
   } finally { await browser.close(); }
@@ -431,6 +441,10 @@ async function main() {
       link: products.find((p) => p.id === m.post.product)?.page || `${SITE}/` }));
     const total = await addPins(pinItems);
     console.log(`  Pinterest: ${pinItems.length} pins added to the feed and upload file (${total} total)`);
+    const igItems = made.filter((m) => m.ig).map((m) => ({ id: m.name.replace(/-pin\.jpg$/, "-ig"), data: m.ig, title: m.post.headline,
+      caption: igCaption(m.post.caption, [...(m.post.hashtags || []), "griefsupport", "celebrationoflife", "memorialideas"]) }));
+    const igTotal = await addIgPosts(igItems);
+    console.log(`  Instagram: ${igItems.length} posts added to the Instagram feed (${igTotal} total)`);
   }
 
   // Report (the Weekly Review and the site read this)

@@ -64,7 +64,7 @@ jobs:
         run: |
           # Other agents push all day: save.sh rebases and retries so a race never loses the pins.
           SAVE_STRATEGY="-X theirs" SAVE_RETRIES=5 bash tools/save.sh "Content Creator update" \
-            reports content pinterest exa-usage.json claude-usage.json store/landing store/pins ploy/shift
+            reports content pinterest exa-usage.json claude-usage.json store/landing store/pins store/ig ploy/shift
   publish:
     needs: create
     if: always()
