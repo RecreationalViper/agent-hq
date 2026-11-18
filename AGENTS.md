@@ -61,3 +61,4 @@ collaborate without stepping on each other. Read it before your first change.
 - AI calls: use `ai-ask.mjs` / `ai-fallback.mjs` (free providers with automatic fallback; usage is logged by `usage-log.mjs`).
 - Discord posting: `discord.mjs`. Google Docs: `gdocs.mjs`. Website media list: `store/media.json`.
 - Provider health: `tools/provider-check.mjs` (Provider Check workflow).
+- Social posting (Pinterest, Facebook, Instagram): feeds on the site + Make.com scenarios. Read `skills/automation/SKILL.md` first; current state in `skills/automation/status.md`.
