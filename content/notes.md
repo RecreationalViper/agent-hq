@@ -1,10 +1,10 @@
-# Content Creator notes - 2026-11-17
+# Content Creator notes - 2026-11-18
 
 Theme: Practical holiday remembrance rituals and gentle service planning
-Headlines made: Ways to honor them at Thanksgiving | A gentle welcome for your guests | Keepsakes for the Christmas tree | Planning a Blue Christmas service | Gentle wording for the program
+Headlines made: Set a Place for Their Memory | Hang Their Name on the Tree | Plan a Gentle Longest Night Service | Gather Stories in a Memory Box | Help a Friend Print the Program
 
 ## For the Content Planner
-Created 5 posts covering all live products. Used the 'Empty Chair' angle for Harvest Table, 'Church Planning' for Longest Night, and 'Tree Rituals' for Evergreen. Included 2 'tips' pins to drive saves. Skipped the free checklist lead magnet this time to prioritize the live product sales as requested by the holiday mix.
+Created 5 posts: 3 pins (Harvest Table, Evergreen, Longest Night) and 2 stories (Soft Botanical x2).,Used planner angles: Harvest Table 'empty chair place cards', Evergreen 'tree memory ornaments', Longest Night 'service planning', Soft Botanical 'memory card keepsakes' and 'friend helping with printing'.,Skipped the free checklist lead magnet to prioritize live product sales per holiday mix.,Two pins use 'tips' background for save-worthy lists; one pin uses scene-table for Evergreen's pine/candlelight vibe.,Stories use scene-venue (linen/eucalyptus) and scene-table (laptop/tea) to show real-life editing context.
 
 ## For the SEO Scout
-Can we find the most common 'order of service' phrases for non-denominational Blue Christmas services to help with the Longest Night copy?
+What are the top 'order of service' phrases for non-denominational Blue Christmas/Longest Night services?,Search volume for 'fold over place cards memorial' vs 'thanksgiving place cards in loving memory'?,Autocomplete phrases for 'share a memory card ideas' after the service.
