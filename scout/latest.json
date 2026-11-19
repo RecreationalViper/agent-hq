@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-18T21:21:16.493Z",
-  "date": "2026-11-18",
+  "generatedAt": "2026-11-19T02:43:43.772Z",
+  "date": "2026-11-19",
   "token": true,
   "searches": {
     "ran": 12,
@@ -9,108 +9,29 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 29,
-  "rateRemaining": 7,
-  "newItems": 10,
+  "apiCalls": 20,
+  "rateRemaining": 10,
+  "newItems": 1,
   "blockedToday": 0,
-  "shortlist": [
-    {
-      "name": "elementalsouls/Claude-BugHunter",
-      "url": "https://github.com/elementalsouls/Claude-BugHunter",
-      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
-      "stars": 11200,
-      "forks": 1500,
-      "language": "Python",
-      "license": "MIT",
-      "pushedAt": "2026-11-18T13:09:42Z",
-      "category": "skills",
-      "score": 74,
-      "tier": "adopt",
-      "reasons": [
-        "11,200 stars",
-        "updated this week",
-        "MIT license",
-        "well established"
-      ],
-      "flags": [],
-      "skillFiles": null,
-      "source": "search",
-      "newborn": false,
-      "skillPath": null,
-      "commitUrl": null
-    },
-    {
-      "name": "apify/apify-mcp-server",
-      "url": "https://github.com/apify/apify-mcp-server",
-      "description": "The Apify MCP server enables your AI agents to extract data from social media, search engines, maps, e-commerce sites, or any other website using thousands of ready-made scrapers, crawlers, and automation tools available on the Apify Store.",
-      "stars": 16890,
-      "forks": 468,
-      "language": "TypeScript",
-      "license": "MIT",
-      "pushedAt": "2026-11-18T14:08:23Z",
-      "category": "skills",
-      "score": 74,
-      "tier": "adopt",
-      "reasons": [
-        "16,890 stars",
-        "updated this week",
-        "MIT license",
-        "well established"
-      ],
-      "flags": [],
-      "skillFiles": null,
-      "source": "search",
-      "newborn": false,
-      "skillPath": null,
-      "commitUrl": null
-    }
-  ],
+  "shortlist": [],
   "watched": [
     {
-      "name": "google/skills",
-      "url": "https://github.com/google/skills",
-      "description": "Agent Skills for Google products and technologies",
-      "stars": 24430,
-      "forks": 2023,
-      "language": "Python",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-18T18:50:02Z",
+      "name": "github/awesome-copilot",
+      "url": "https://github.com/github/awesome-copilot",
+      "description": "Community-contributed instructions, agents, skills, and configurations to help you make the most of GitHub Copilot.",
+      "stars": 41334,
+      "forks": 5388,
+      "language": "JavaScript",
+      "license": "MIT",
+      "pushedAt": "2026-11-19T01:21:10Z",
       "category": "skills",
-      "score": 100,
+      "score": 94,
       "tier": "adopt",
       "reasons": [
-        "new skill file: skills/ads/data-manager-api-troubleshooting/SKILL.md",
-        "24,430 stars",
+        "new skill file: skills/polytype-middleware/SKILL.md",
+        "41,334 stars",
         "updated this week",
-        "Apache-2.0 license",
-        "first-party / well-known maintainer",
-        "well established",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [],
-      "skillFiles": true,
-      "source": "watched",
-      "newborn": false,
-      "skillPath": "skills/ads/data-manager-api-troubleshooting/SKILL.md",
-      "commitUrl": "https://github.com/google/skills/commits/d2b18e85f79e98cc932fff9e72a0f488a4bf8c63"
-    },
-    {
-      "name": "google/skills",
-      "url": "https://github.com/google/skills",
-      "description": "Agent Skills for Google products and technologies",
-      "stars": 24430,
-      "forks": 2023,
-      "language": "Python",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-18T18:50:02Z",
-      "category": "skills",
-      "score": 92,
-      "tier": "adopt",
-      "reasons": [
-        "new skill file: skills/cloud/compute-resource-availability-troubleshooting/SKILL.md",
-        "24,430 stars",
-        "updated this week",
-        "Apache-2.0 license",
+        "MIT license",
         "first-party / well-known maintainer",
         "well established"
       ],
@@ -118,203 +39,13 @@
       "skillFiles": null,
       "source": "watched",
       "newborn": false,
-      "skillPath": "skills/cloud/compute-resource-availability-troubleshooting/SKILL.md",
-      "commitUrl": "https://github.com/google/skills/commits/d2b18e85f79e98cc932fff9e72a0f488a4bf8c63"
-    },
-    {
-      "name": "google/skills",
-      "url": "https://github.com/google/skills",
-      "description": "Agent Skills for Google products and technologies",
-      "stars": 24430,
-      "forks": 2023,
-      "language": "Python",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-18T18:50:02Z",
-      "category": "skills",
-      "score": 100,
-      "tier": "adopt",
-      "reasons": [
-        "new skill file: skills/cloud/gke-kueue-troubleshooting/SKILL.md",
-        "24,430 stars",
-        "updated this week",
-        "Apache-2.0 license",
-        "first-party / well-known maintainer",
-        "well established",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [],
-      "skillFiles": true,
-      "source": "watched",
-      "newborn": false,
-      "skillPath": "skills/cloud/gke-kueue-troubleshooting/SKILL.md",
-      "commitUrl": "https://github.com/google/skills/commits/d2b18e85f79e98cc932fff9e72a0f488a4bf8c63"
-    },
-    {
-      "name": "google/skills",
-      "url": "https://github.com/google/skills",
-      "description": "Agent Skills for Google products and technologies",
-      "stars": 24430,
-      "forks": 2023,
-      "language": "Python",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-18T18:50:02Z",
-      "category": "skills",
-      "score": 84,
-      "tier": "adopt",
-      "reasons": [
-        "2 more new skill file(s) in this repo",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [],
-      "skillFiles": true,
-      "source": "watched",
-      "newborn": false,
-      "skillPath": null,
-      "commitUrl": "https://github.com/google/skills/commits/d2b18e85f79e98cc932fff9e72a0f488a4bf8c63"
+      "skillPath": "skills/polytype-middleware/SKILL.md",
+      "commitUrl": "https://github.com/github/awesome-copilot/commits/1a8e8f1302a31ddb60089e2db15b21bbd148e8ff"
     }
   ],
-  "newborn": [
-    {
-      "name": "erkamyaman/rust-anything",
-      "url": "https://github.com/erkamyaman/rust-anything",
-      "description": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavior at every step. CLIs, HTTP servers and libraries in TypeScript, Python, C, Go, Ruby and Java.",
-      "stars": 3179,
-      "forks": 252,
-      "language": "Rust",
-      "license": "MIT",
-      "pushedAt": "2026-11-18T21:09:57Z",
-      "category": "skills",
-      "score": 90,
-      "tier": "watch",
-      "reasons": [
-        "filed under skills",
-        "3,179 stars",
-        "updated this week",
-        "MIT license",
-        "new repo, 2 days old",
-        "early traction",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [
-        "newborn"
-      ],
-      "skillFiles": true,
-      "source": "search",
-      "newborn": true,
-      "skillPath": null,
-      "commitUrl": null
-    },
-    {
-      "name": "Gabriel-Operator/domain-specific-agent-harness-spec",
-      "url": "https://github.com/Gabriel-Operator/domain-specific-agent-harness-spec",
-      "description": "An open format for packaging a complete AI persona as a portable, version-controlled folder. Built on Agent Skills.",
-      "stars": 59,
-      "forks": 57,
-      "language": "MDX",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-14T22:54:47Z",
-      "category": "skills",
-      "score": 67,
-      "tier": "watch",
-      "reasons": [
-        "filed under skills",
-        "updated this week",
-        "Apache-2.0 license",
-        "new repo, 7 days old",
-        "early traction"
-      ],
-      "flags": [
-        "newborn"
-      ],
-      "skillFiles": null,
-      "source": "search",
-      "newborn": true,
-      "skillPath": null,
-      "commitUrl": null
-    },
-    {
-      "name": "kunchenguid/headless",
-      "url": "https://github.com/kunchenguid/headless",
-      "description": "Agent skill that sets up a headless Mac, Linux or Windows machine over SSH, step by step, without ever seeing the admin password.",
-      "stars": 208,
-      "forks": 13,
-      "language": "Shell",
-      "license": "MIT",
-      "pushedAt": "2026-11-13T06:07:25Z",
-      "category": "skills",
-      "score": 66,
-      "tier": "watch",
-      "reasons": [
-        "filed under skills",
-        "208 stars",
-        "updated this week",
-        "MIT license",
-        "new repo, 12 days old",
-        "early traction"
-      ],
-      "flags": [
-        "newborn"
-      ],
-      "skillFiles": null,
-      "source": "search",
-      "newborn": true,
-      "skillPath": null,
-      "commitUrl": null
-    }
-  ],
+  "newborn": [],
   "byCategory": {
-    "skills": [
-      {
-        "name": "elementalsouls/Claude-BugHunter",
-        "url": "https://github.com/elementalsouls/Claude-BugHunter",
-        "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
-        "stars": 11200,
-        "forks": 1500,
-        "language": "Python",
-        "license": "MIT",
-        "pushedAt": "2026-11-18T13:09:42Z",
-        "category": "skills",
-        "score": 74,
-        "tier": "adopt",
-        "reasons": [
-          "11,200 stars",
-          "updated this week",
-          "MIT license",
-          "well established"
-        ],
-        "flags": [],
-        "skillFiles": null,
-        "source": "search",
-        "newborn": false,
-        "skillPath": null,
-        "commitUrl": null
-      },
-      {
-        "name": "apify/apify-mcp-server",
-        "url": "https://github.com/apify/apify-mcp-server",
-        "description": "The Apify MCP server enables your AI agents to extract data from social media, search engines, maps, e-commerce sites, or any other website using thousands of ready-made scrapers, crawlers, and automation tools available on the Apify Store.",
-        "stars": 16890,
-        "forks": 468,
-        "language": "TypeScript",
-        "license": "MIT",
-        "pushedAt": "2026-11-18T14:08:23Z",
-        "category": "skills",
-        "score": 74,
-        "tier": "adopt",
-        "reasons": [
-          "16,890 stars",
-          "updated this week",
-          "MIT license",
-          "well established"
-        ],
-        "flags": [],
-        "skillFiles": null,
-        "source": "search",
-        "newborn": false,
-        "skillPath": null,
-        "commitUrl": null
-      }
-    ],
+    "skills": [],
     "enhancement": [],
     "free-tokens": [],
     "efficiency": []
@@ -343,6 +74,13 @@
       "first": "2026-11-06"
     },
     {
+      "name": "google/skills",
+      "score": 94,
+      "tier": "adopt",
+      "category": "skills",
+      "first": "2026-11-06"
+    },
+    {
       "name": "agentes-chat/agentes-chat",
       "score": 90,
       "tier": "watch",
@@ -350,22 +88,15 @@
       "first": "2026-11-17"
     },
     {
-      "name": "DIYgod/pinky",
-      "score": 88,
+      "name": "erkamyaman/rust-anything",
+      "score": 90,
       "tier": "watch",
       "category": "skills",
-      "first": "2026-11-17"
-    },
-    {
-      "name": "github/awesome-copilot",
-      "score": 84,
-      "tier": "adopt",
-      "category": "enhancement",
-      "first": "2026-11-06"
+      "first": "2026-11-18"
     }
   ],
   "watchedRepos": {
     "ran": 3,
-    "newSkillFiles": 5
+    "newSkillFiles": 1
   }
 }
