@@ -372,6 +372,8 @@ Rules:
 - You are an automated assistant, not a person. If asked, say so plainly, and that a real person answers through the contact page.
 - Don't name the company or model behind you. Don't give medical, legal or financial advice beyond general information.
 - If someone says they want to die or hurt themselves, respond with care and give the 988 Suicide & Crisis Lifeline (call or text 988 in the US) and emergency services (911).
+- Photos: the program and welcome sign each have ONE photo spot (the circle). It's added on a computer in the free Adobe Acrobat Reader by clicking the circle; phones can type text but can't add photos. The free Reader can't add extra images, so never give steps for adding more photos; suggest a print shop or a photo board instead.
+- Reply with the answer only: never show your planning or notes to yourself.
 - Write plain text. Short paragraphs; "- " for lists; full https links. No markdown headings, tables or bold.`;
 
 async function chat(req, env, ctx) {
@@ -401,10 +403,20 @@ async function chat(req, env, ctx) {
   for (const ask of [groqChat, geminiChat, workersChat, openRouterChat]) {
     try {
       const text = (await ask(env, system, history))?.trim();
-      if (text) return reply({ ok: true, text: text.replace(/\*\*(.+?)\*\*/g, "$1").replace(/^#+\s*/gm, "").slice(0, 6000) });
+      const clean = text && stripPlanning(text);
+      if (clean) return reply({ ok: true, text: clean.replace(/\*\*(.+?)\*\*/g, "$1").replace(/^#+\s*/gm, "").replace(new RegExp(`${SITE}/(https?://)`, "g"), "$1").slice(0, 6000) });
     } catch (e) { console.log(`chat: ${ask.name} failed: ${String(e.message || e).slice(0, 200)}`); }
   }
   return reply({ ok: false, error: "unavailable", text: `Sorry, I can't answer right now. Please try again in a minute, or message us at ${SITE}/contact.html and a real person will help.` }, 503);
+}
+
+// Reasoning models sometimes put their private plan in front of the answer ("Need to answer size options. Use store
+// facts...A funeral welcome sign..."). Drop that plan: it starts with a planning verb and runs into the answer with no space.
+function stripPlanning(t) {
+  t = t.replace(/^\s*(analysis|thinking)[:\s][\s\S]*?(assistantfinal|final answer:?)\s*/i, "");
+  if (!/^\s*(we (need|must|should|answer|have to)|need to|must |answer[: ]|explain|provide|let'?s |the user|user asks|okay,? so|so the user)/i.test(t)) return t.trim();
+  const m = t.match(/^[\s\S]{0,1200}?[.!?:)](?=[A-Z“"*])/) || t.match(/^[\s\S]{0,1200}?\n\s*\n/);
+  return (m ? t.slice(m[0].length) : t).trim();
 }
 
 async function bump(key, ttl, ctx) {
@@ -426,7 +438,7 @@ async function storeFacts(q, ctx) {
   const score = (it) => { const t = `${it.title} ${it.title} ${it.desc || ""} ${it.text || ""}`.toLowerCase(); return words.reduce((s, w) => s + (t.includes(w) ? (it.title.toLowerCase().includes(w) ? 3 : 1) : 0), 0); };
   const products = idx.filter((it) => it.group === "Products");
   const rest = idx.filter((it) => it.group !== "Products").map((it) => [score(it), it]).filter(([s]) => s > 0).sort((a, b) => b[0] - a[0]).slice(0, 4).map(([, it]) => it);
-  const fmt = (it, n) => `- ${it.title} (${SITE}/${it.url}): ${(it.text || it.desc || "").replace(/\s+/g, " ").slice(0, n)}`;
+  const fmt = (it, n) => `- ${it.title} (${/^https?:/.test(it.url) ? it.url : `${SITE}/${it.url}`}): ${(it.text || it.desc || "").replace(/\s+/g, " ").slice(0, n)}`;
   return `Products:\n${products.map((it) => fmt(it, 900)).join("\n")}\n\nRelevant pages:\n${rest.map((it) => fmt(it, 1600)).join("\n") || "(none matched)"}\n\nOther pages: ${idx.filter((it) => it.group !== "Products").map((it) => `${it.title} ${SITE}/${it.url}`).slice(0, 25).join("; ")}`;
 }
 const STOP = new Set("the and for you your are can how what with this that have does from about when where which will would should could there their them they our out any all get got just like want need into was were been its it's than then also more most some such very".split(" "));
