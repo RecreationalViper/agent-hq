@@ -175,11 +175,15 @@ function angles(products) {
 function writePrompt(team, data, history, products) {
   const cat = products.map((p) => `- id "${p.id}": ${p.name}, ${p.price}, ${p.season}. Page: ${p.page}. Pieces: ${p.pieces.join("; ")}. Pictures you can use: ${THEMES[p.id].images.join(", ")}${p.audience ? `. For: ${p.audience}` : ""}`).join("\n");
   const holidays = products.filter((p) => p.id !== "soft-botanical");
+  // Final stretch: a holiday set whose window ends within 8 days gets most of the day's posts, with last-minute wording
+  const until = (p) => (p.season.match(/to (\d{4}-\d{2}-\d{2})\)/) || [])[1];
+  const rush = holidays.filter((p) => until(p) && (Date.parse(until(p)) - Date.parse(DATE)) / 864e5 <= 8);
   return `Today is ${DATE}. Create ${COUNT} finished social posts, built on the team's work below (start from the Content Planner's ideas; use the SEO Scout's keywords and pin titles; avoid what competitors overdo).
 
 # Live products (promote only these; each post is about exactly one)
 ${cat}
 ${holidays.length ? `\nIt's holiday season: make at least ${Math.min(holidays.length, Math.max(COUNT - 2, 1))} posts about the holiday sets (every set above gets at least one), the rest about Soft Botanical. Families plan these weeks ahead, so speak to that (the first Thanksgiving or Christmas without them, a remembrance table, a church's Blue Christmas service).` : ""}
+${rush.length ? `\nFINAL STRETCH: ${rush.map((p) => p.name).join(" and ")} ${rush.length > 1 ? "are" : "is"} days away. Make at least ${Math.ceil(COUNT / 2)} of the ${COUNT} posts about ${rush.length > 1 ? "them" : "it"}, written for last-minute planners: instant download, type the names on your phone in the free Adobe Acrobat Reader app, print at home tonight or at any print shop tomorrow. True facts only: no fake deadlines, countdowns, "only X left" or discounts that don't exist.` : ""}
 
 Backgrounds: most pins should be photo scenes, which do best on Pinterest. Each product has its own photo look (Harvest Table = autumn farmhouse table, Evergreen = pine and candlelight at night, Longest Night = candles in a quiet church at dusk, Soft Botanical = linen and greenery): "scene-table" (the printable lying on that product's table, seen from above) or "scene-venue" (that product's sign standing on a wooden easel). Use "botanical" or "painted" for at most one pin and for stories.
 Mix: ${Math.max(COUNT - 2, 1)} Pinterest pins (format "pin") and 2 vertical TikTok/Reels/Instagram story posts (format "story"). Every post must be different in angle.
