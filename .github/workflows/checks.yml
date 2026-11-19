@@ -1,0 +1,35 @@
+name: Repo Checks
+# Runs on every pull request and on every push to main.
+# Nothing here needs a secret, a network call, or an AI: it is the cheap gate that
+# stops a broken script, a renamed input file or a dead store link from reaching main.
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Scripts parse, JSON is valid, agents and workflows are consistent
+        run: node tools/check-repo.mjs
+
+      - name: Radar scam filter still catches scams
+        run: node scout/scan.mjs --selftest
+
+      # A red pull request is visible on the pull request; only announce main breaking.
+      - name: Tell Discord if main is broken
+        if: failure() && github.event_name == 'push'
+        run: node tools/discord-alert.mjs "Repo checks failed on main"
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
