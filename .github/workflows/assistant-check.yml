@@ -1,0 +1,20 @@
+name: Assistant Check
+# Asks the live site assistant 20 real customer questions and saves the answers (reports/assistant-check.md).
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Ask the assistant
+        run: node tools/assistant-check.mjs
+      - name: Save report
+        if: always()
+        run: bash tools/save.sh "Assistant check report" reports
