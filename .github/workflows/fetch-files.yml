@@ -33,3 +33,8 @@ jobs:
       - name: Save
         run: |
           bash tools/save.sh "Fetch files"
+      - name: Tell Discord if this run failed
+        if: failure()
+        run: node tools/discord-alert.mjs "Fetch Files run failed"
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}

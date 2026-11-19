@@ -36,3 +36,8 @@ jobs:
       - name: Save the film to the website
         run: |
           bash tools/save.sh "Product film update" store/video
+      - name: Tell Discord if this run failed
+        if: failure()
+        run: node tools/discord-alert.mjs "Make Product Film run failed"
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}

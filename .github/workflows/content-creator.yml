@@ -65,6 +65,11 @@ jobs:
           # Other agents push all day: save.sh rebases and retries so a race never loses the pins.
           SAVE_STRATEGY="-X theirs" SAVE_RETRIES=5 bash tools/save.sh "Content Creator update" \
             reports content pinterest exa-usage.json claude-usage.json store/landing store/pins store/ig ploy/shift
+      - name: Tell Discord if this run failed
+        if: failure()
+        run: node tools/discord-alert.mjs "Content Creator run failed"
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
   publish:
     needs: create
     if: always()

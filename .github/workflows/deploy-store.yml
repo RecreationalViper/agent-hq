@@ -50,3 +50,8 @@ jobs:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
         run: |
           node -e 'import("./discord.mjs").then(({alert}) => alert(process.argv[1]))' "${{ steps.deploy.outcome == 'success' && '🌐 Store published: https://foreverheld.pages.dev' || '⚠️ Store publish to Cloudflare Pages failed: check the Deploy Store workflow log' }}"
+      - name: Tell Discord if this run failed
+        if: failure()
+        run: node tools/discord-alert.mjs "Deploy Store (Cloudflare Pages) run failed"
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}

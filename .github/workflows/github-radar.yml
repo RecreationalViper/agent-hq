@@ -52,3 +52,8 @@ jobs:
         if: always()
         run: |
           bash tools/save.sh "GitHub radar update" scout reports
+      - name: Tell Discord if this run failed
+        if: failure()
+        run: node tools/discord-alert.mjs "GitHub Radar run failed"
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}

@@ -20,3 +20,8 @@ jobs:
         if: always()
         run: |
           bash tools/save.sh "Claude Check result" reports/claude-check.md claude-usage.json
+      - name: Tell Discord if this run failed
+        if: failure()
+        run: node tools/discord-alert.mjs "Claude Check run failed"
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
