@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T02:43:43.772Z",
+  "generatedAt": "2026-11-19T11:54:31.394Z",
   "date": "2026-11-19",
   "token": true,
   "searches": {
@@ -9,46 +9,70 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 20,
-  "rateRemaining": 10,
+  "apiCalls": 17,
+  "rateRemaining": 4995,
   "newItems": 1,
   "blockedToday": 0,
-  "shortlist": [],
-  "watched": [
+  "shortlist": [
     {
-      "name": "github/awesome-copilot",
-      "url": "https://github.com/github/awesome-copilot",
-      "description": "Community-contributed instructions, agents, skills, and configurations to help you make the most of GitHub Copilot.",
-      "stars": 41334,
-      "forks": 5388,
-      "language": "JavaScript",
-      "license": "MIT",
-      "pushedAt": "2026-11-19T01:21:10Z",
-      "category": "skills",
-      "score": 94,
-      "tier": "adopt",
+      "name": "PBJ-2/clauderipple",
+      "url": "https://github.com/PBJ-2/clauderipple",
+      "description": "Use GPT, DeepSeek, GLM, Gemini, Kimi and 400+ models in Claude Desktop's own model picker and in Claude Code, while staying signed in to your Claude subscription (1P, no gateway mode). Auto reasoning effort per prompt, subagents routed by difficulty, cache and limit warnings. Claude inside Codex too.",
+      "stars": 113,
+      "forks": 23,
+      "language": "TypeScript",
+      "license": "GPL-3.0",
+      "pushedAt": "2026-11-19T06:58:06Z",
+      "category": "efficiency",
+      "score": 55,
+      "tier": "watch",
       "reasons": [
-        "new skill file: skills/polytype-middleware/SKILL.md",
-        "41,334 stars",
+        "113 stars",
         "updated this week",
-        "MIT license",
-        "first-party / well-known maintainer",
-        "well established"
+        "GPL-3.0 license",
+        "directly cuts AI spend"
       ],
       "flags": [],
       "skillFiles": null,
-      "source": "watched",
+      "source": "search",
       "newborn": false,
-      "skillPath": "skills/polytype-middleware/SKILL.md",
-      "commitUrl": "https://github.com/github/awesome-copilot/commits/1a8e8f1302a31ddb60089e2db15b21bbd148e8ff"
+      "skillPath": null,
+      "commitUrl": null
     }
   ],
+  "watched": [],
   "newborn": [],
   "byCategory": {
     "skills": [],
     "enhancement": [],
     "free-tokens": [],
-    "efficiency": []
+    "efficiency": [
+      {
+        "name": "PBJ-2/clauderipple",
+        "url": "https://github.com/PBJ-2/clauderipple",
+        "description": "Use GPT, DeepSeek, GLM, Gemini, Kimi and 400+ models in Claude Desktop's own model picker and in Claude Code, while staying signed in to your Claude subscription (1P, no gateway mode). Auto reasoning effort per prompt, subagents routed by difficulty, cache and limit warnings. Claude inside Codex too.",
+        "stars": 113,
+        "forks": 23,
+        "language": "TypeScript",
+        "license": "GPL-3.0",
+        "pushedAt": "2026-11-19T06:58:06Z",
+        "category": "efficiency",
+        "score": 55,
+        "tier": "watch",
+        "reasons": [
+          "113 stars",
+          "updated this week",
+          "GPL-3.0 license",
+          "directly cuts AI spend"
+        ],
+        "flags": [],
+        "skillFiles": null,
+        "source": "search",
+        "newborn": false,
+        "skillPath": null,
+        "commitUrl": null
+      }
+    ]
   },
   "blocked": [],
   "watching": [
@@ -97,6 +121,6 @@
   ],
   "watchedRepos": {
     "ran": 3,
-    "newSkillFiles": 1
+    "newSkillFiles": 0
   }
 }

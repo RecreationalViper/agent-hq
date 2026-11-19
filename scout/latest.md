@@ -1,15 +1,12 @@
 # GitHub Radar — 2026-11-19
 
-> Scanned 12 of 33 saved searches (12 returned data, 0 unchanged, 0 failed). 20 GitHub API calls, authenticated. Zero AI tokens used.
+> Scanned 12 of 33 saved searches (12 returned data, 0 unchanged, 0 failed). 17 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (0)
+## Start here (1)
 
-_Nothing new cleared the quality bar this scan. That is a normal, healthy result — the radar is rotating through its searches and will cover the rest next time._
-
-## New inside repos you watch (1)
-
-- **[github/awesome-copilot](https://github.com/github/awesome-copilot)** 🟢 ADOPT · ⭐ 41,334 · MIT
-  - Added: [skills/polytype-middleware/SKILL.md](https://github.com/github/awesome-copilot/blob/HEAD/skills/polytype-middleware/SKILL.md)
+- **[PBJ-2/clauderipple](https://github.com/PBJ-2/clauderipple)** 🟡 WATCH · score 55/100 · ⭐ 113 · GPL-3.0 · updated 0d ago
+  - Use GPT, DeepSeek, GLM, Gemini, Kimi and 400+ models in Claude Desktop's own model picker and in Claude Code, while staying signed in to your Claud…
+  - Why: 113 stars; updated this week; GPL-3.0 license; directly cuts AI spend
 
 ## Agent skills you could install (0)
 
