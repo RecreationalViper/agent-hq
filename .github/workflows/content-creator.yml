@@ -48,7 +48,7 @@ jobs:
           EXA_API_KEY_2: ${{ secrets.EXA_API_KEY_2 || secrets.EXA_KEY_2 || secrets.EXA_API_KEY2 }}
           ART_API_KEY: ${{ secrets.ART_API_KEY }}
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
-          CREATOR_POSTS: ${{ github.event.inputs.posts || '5' }}
+          CREATOR_POSTS: ${{ github.event.inputs.posts || '8' }}
       - name: Keep the images for 30 days
         if: always()
         uses: actions/upload-artifact@v4
