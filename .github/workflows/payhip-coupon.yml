@@ -1,28 +1,23 @@
 name: Payhip Coupon
+# Owner-approved promotions only: creates one Payhip coupon.
 on:
   workflow_dispatch:
     inputs:
       code: { description: "Coupon code", required: true }
-      percent: { description: "Percent off", default: "25" }
-      product_key: { description: "Product key (blank = all products)", default: "" }
-      usage_limit: { description: "Max uses (blank = unlimited)", default: "" }
+      percent: { description: "Percent off", required: true }
+      until: { description: "Last day (YYYY-MM-DD, New York)", required: true }
+      product: { description: "Payhip product id (blank = whole store)", required: false }
+permissions:
+  contents: read
 jobs:
   coupon:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 24 }
-      - run: node tools/payhip-coupon.mjs
+        with:
+          node-version: 24
+      - run: node tools/payhip-coupon.mjs "${{ inputs.code }}" "${{ inputs.percent }}" "${{ inputs.until }}" "${{ inputs.product }}"
         env:
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
-          CODE: ${{ github.event.inputs.code }}
-          PERCENT: ${{ github.event.inputs.percent }}
-          PRODUCT_KEY: ${{ github.event.inputs.product_key }}
-          USAGE_LIMIT: ${{ github.event.inputs.usage_limit }}
-          NOTES: Launch coupon (Agent HQ)
-      - name: Tell Discord if this run failed
-        if: failure()
-        run: node tools/discord-alert.mjs "Payhip Coupon run failed"
-        env:
-          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
