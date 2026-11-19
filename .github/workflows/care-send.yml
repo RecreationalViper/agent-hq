@@ -41,3 +41,8 @@ jobs:
           GMAIL_REFRESH_TOKEN_4: ${{ secrets.GMAIL_REFRESH_TOKEN_4 }}
           GMAIL_REFRESH_TOKEN_5: ${{ secrets.GMAIL_REFRESH_TOKEN_5 }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+      - name: Tell Discord if this run failed
+        if: failure()
+        run: node tools/discord-alert.mjs "Customer Care Send run failed"
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}

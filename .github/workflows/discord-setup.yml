@@ -20,3 +20,8 @@ jobs:
       - name: Save channel list
         run: |
           bash tools/save.sh "Discord channels" discord.json
+      - name: Tell Discord if this run failed
+        if: failure()
+        run: node tools/discord-alert.mjs "Discord Setup run failed"
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}

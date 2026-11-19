@@ -14,3 +14,8 @@ jobs:
       - run: node tools/email-list.mjs && cat email/stats.md
         env:
           EMAILOCTOPUS_API_KEY: ${{ secrets.EMAILOCTOPUS_API_KEY }}
+      - name: Tell Discord if this run failed
+        if: failure()
+        run: node tools/discord-alert.mjs "Email List Check run failed"
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}

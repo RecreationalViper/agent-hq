@@ -18,3 +18,8 @@ jobs:
       - name: Save
         run: |
           SAVE_STRATEGY="-X theirs" bash tools/save.sh "Pinterest stats" pinterest
+      - name: Tell Discord if this run failed
+        if: failure()
+        run: node tools/discord-alert.mjs "Pinterest Stats run failed"
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}

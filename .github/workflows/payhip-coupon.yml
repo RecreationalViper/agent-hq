@@ -21,3 +21,8 @@ jobs:
           PRODUCT_KEY: ${{ github.event.inputs.product_key }}
           USAGE_LIMIT: ${{ github.event.inputs.usage_limit }}
           NOTES: Launch coupon (Agent HQ)
+      - name: Tell Discord if this run failed
+        if: failure()
+        run: node tools/discord-alert.mjs "Payhip Coupon run failed"
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}

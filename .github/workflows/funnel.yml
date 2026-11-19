@@ -44,3 +44,8 @@ jobs:
         if: github.event.inputs.dry_run != 'true' && github.event_name != 'push'
         run: |
           SAVE_STRATEGY="-X theirs" bash tools/save.sh "Email funnel progress" email/funnel-state.json
+      - name: Tell Discord if this run failed
+        if: failure()
+        run: node tools/discord-alert.mjs "Email Funnel run failed"
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}

@@ -43,6 +43,11 @@ jobs:
         if: github.event.inputs.dry_run != 'true'
         run: |
           SAVE_STRATEGY="-X theirs" SAVE_OUTPUT_VAR=published bash tools/save.sh "Web Developer: new planning guide" store reports
+      - name: Tell Discord if this run failed
+        if: failure()
+        run: node tools/discord-alert.mjs "Web Developer run failed"
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
   deploy:
     needs: build
     if: needs.build.outputs.published == 'true'

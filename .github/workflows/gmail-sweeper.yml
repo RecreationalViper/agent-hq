@@ -78,3 +78,8 @@ jobs:
           GMAIL_SHOP_REFRESH_TOKEN: ${{ secrets.GMAIL_SHOP_REFRESH_TOKEN }}
           GMAIL_SHOP_CLIENT_ID: ${{ secrets.GMAIL_SHOP_CLIENT_ID }}
           GMAIL_SHOP_CLIENT_SECRET: ${{ secrets.GMAIL_SHOP_CLIENT_SECRET }}
+      - name: Tell Discord if this run failed
+        if: failure()
+        run: node tools/discord-alert.mjs "Gmail Junk Sweeper + Customer Care run failed"
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}

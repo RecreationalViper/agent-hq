@@ -1,0 +1,46 @@
+name: HQ Audit
+# The nightly doctor. Answers "is the business actually working?", not "is this
+# commit valid?" — dead checkout links, missing product files, agents that stopped
+# reporting, collections advertised outside their selling window.
+#
+# Writes reports/health.md and only alerts when something is genuinely wrong.
+# Deliberately scheduled before the daily agent run so a broken input gets caught
+# before it feeds a dozen agents.
+on:
+  schedule:
+    - cron: "41 10 * * *" # 10:41 UTC, about 6:41am New York
+      timezone: "America/New_York"
+  workflow_dispatch:
+    inputs:
+      offline:
+        description: "Skip the network link checks"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency: agent-hq
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Audit agents, products and links
+        env:
+          AUDIT_NO_NETWORK: ${{ inputs.offline && '1' || '0' }}
+        run: node tools/audit.mjs
+
+      # Keep the report even when the audit found problems — that is the point of it.
+      - name: Save the health report
+        if: always()
+        run: bash tools/save.sh "HQ audit" reports/health.md
+
+      - name: Tell Discord if this run failed
+        if: failure()
+        run: node tools/discord-alert.mjs "HQ audit found problems — see reports/health.md"
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
