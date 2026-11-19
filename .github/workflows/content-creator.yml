@@ -11,7 +11,7 @@ on:
         default: posts
       posts:
         description: "How many posts to make"
-        default: "5"
+        default: "8"
 permissions:
   contents: write
 concurrency: agent-hq
