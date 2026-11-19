@@ -1,77 +1,51 @@
-# Site assistant check (2026-11-19 19:19 UTC)
+# Site assistant check (2026-11-19 19:27 UTC)
 
-9/20 passed the automatic checks. Read the flagged ones first.
+4/20 passed the automatic checks. Read the flagged ones first.
 
 ## ✅ How much is the funeral program set and what comes in it?
-The Soft Botanical Celebration of Life Suite is $12.99 and is an instant‑download PDF you fill in with the free Adobe Acrobat Reader and print at home or at a print shop.
+The Soft Botanical Celebration of Life Suite is $12.99. It includes:
 
-It includes:
-- A folded funeral program (four panels: cover, order of service, life story, thank‑you/reception) that prints on US Letter paper and folds to 5.5 × 8.5 in.
-- A welcome sign (24 × 36 in printable; the same file can also be printed at 16 × 24 in or 12 × 18 in).
-- Share‑a‑memory cards (4.25 × 5.5 in) for guests to write a favorite memory.
+- A four‑panel folded funeral program (cover, order of service, life story, thank‑you/reception) that prints on US Letter and folds to 5.5 × 8.5 in.
+- A 24 × 36 in welcome sign (also printable in 16 × 24 or 12 × 18 in).
+- Share‑a‑memory cards (4.25 × 5.5 in) for guests to write favorite memories.
 
-You can view and purchase it here: https://foreverheld.pages.dev/index.html#collections.
+All are instant PDF downloads that you fill in with the free Adobe Acrobat Reader app and print at home or a local shop. Buy it here: https://payhip.com/b/vqNSA.
 
 ## ✅ Can I edit the program on my iPhone?
-Yes. All of our fill‑in PDFs work in the free Adobe Acrobat Reader app, which is available for iPhone, iPad and Android. Open the program file in the app, tap any text box and type your changes. When you’re done, use the app’s Save or Share button to store the edited PDF and then print it at home or send it to a print shop.
+Yes. Open the PDF in the free Adobe Acrobat Reader app on your iPhone. Tap any text box, type the new information, and tap Save. The file stays on your phone and can be printed at home or sent to a print shop. If you want to add a photo, that can only be done on a computer. For more details, see the “Do I need any special software?” and “Can I add a photo?” sections on our site.
 
-You can add a photo only from a computer (desktop or laptop). On the phone you can edit all the wording and any dates, names, or messages.
+## ⚠️ What size is the welcome sign?
+**Flags:** HTTP 503; missing /24\s*[x×]\s*36/i
 
-If you’re looking for a ready‑made program template, the Soft Botanical Celebration of Life Suite works perfectly and follows the same editing steps. You can view it here: https://foreverheld.pages.dev/index.html#collections.
+Sorry, I can't answer right now. Please try again in a minute, or message us at https://foreverheld.pages.dev/contact.html and a real person will help.
 
-## ✅ What size is the welcome sign?
-The welcome‑sign template can be printed at three standard sizes:
+## ⚠️ Do you ship printed copies?
+**Flags:** HTTP 503; missing /print|download/i
 
-- 24 × 36 in  
-- 16 × 24 in  
-- 12 × 18 in  
+Sorry, I can't answer right now. Please try again in a minute, or message us at https://foreverheld.pages.dev/contact.html and a real person will help.
 
-You fill in the PDF with the free Adobe Acrobat Reader, save the file and give it to any print shop (or print at home) at one of those dimensions.  The sign stays at the venue, while the folded program goes home with guests.  For more details on wording and printing, see the guide here: https://foreverheld.pages.dev/funeral-welcome-sign-template-guide.html.
+## ⚠️ I bought it but never got the download email
+**Flags:** HTTP 503
 
-## ✅ Do you ship printed copies?
-No. All Forever Held items are digital PDF files you fill in with the free Adobe Acrobat Reader app and then print yourself or at a local print shop. There’s no physical product to ship. For more details, see our FAQ: https://foreverheld.pages.dev/index.html#faq-title. If you need help getting a print shop to print the welcome sign or other pieces, they can do it at 24 × 36 in, 16 × 24 in, or 12 × 18 in.
-
-## ✅ I bought it but never got the download email
-I’m sorry you didn’t receive the download email. Please use our contact form and select “Order issue” so we can resend the file or help you further: https://foreverheld.pages.dev/contact.html
+Sorry, I can't answer right now. Please try again in a minute, or message us at https://foreverheld.pages.dev/contact.html and a real person will help.
 
 ## ✅ Can I get a refund?
-We can’t offer a refund once the digital files have been downloaded, but if you haven’t downloaded yet you have 7 days from purchase to request a full refund. If the file won’t open, edit, or print correctly, let us know within 30 days and we’ll fix it or issue a refund if we can’t.
+Our products are instant digital downloads, so we don’t take them back. If a file isn’t working, you can contact us within 30 days of purchase and we’ll fix it or send a corrected file. If we can’t solve the problem, we’ll give you a full refund. If you bought the same item twice or haven’t downloaded yet, you can get a refund within 7 days. Once files have been downloaded, we can’t offer refunds for a change of mind. For a refund request, use our contact form and choose “Refund request” with the email you used and your order number. See our full refund policy at https://foreverheld.pages.dev/refunds.html.
 
-Please submit your request through our contact form — choose “Refund request,” include the email you used for the order and the order number if you have it. You’ll find the form here: https://foreverheld.pages.dev/contact.html. A real person will reply quickly.
+## ⚠️ Do you have anything for our first Thanksgiving without my dad?
+**Flags:** HTTP 503; missing /harvest table/i
 
-## ✅ Do you have anything for our first Thanksgiving without my dad?
-I’m sorry for your loss. For a first Thanksgiving with an empty seat, our Harvest Table Thanksgiving set is designed just for that moment. It includes an “Empty‑Chair” sign, “I’m Thankful For” memory cards and place cards that can be filled in with each guest’s name, plus a short “Start Here” guide. The PDFs are filled out in the free Adobe Acrobat Reader and printed at home or at a local print shop. You can see the details and purchase it here: https://foreverheld.pages.dev/harvest-table.html  
+Sorry, I can't answer right now. Please try again in a minute, or message us at https://foreverheld.pages.dev/contact.html and a real person will help.
 
-If you’d like a simple checklist to help organize the service and any other details, we also offer a free printable planning checklist at https://payhip.com/b/eYJqS.  
+## ⚠️ Our church is planning a Blue Christmas service. What do you have?
+**Flags:** HTTP 503; missing /longest night/i
 
-Feel free to let me know if you have any other questions about the service or what to include.
+Sorry, I can't answer right now. Please try again in a minute, or message us at https://foreverheld.pages.dev/contact.html and a real person will help.
 
-## ✅ Our church is planning a Blue Christmas service. What do you have?
-For a gentle “Blue Christmas” or Longest Night service we offer the Longest Night · Blue Christmas service set.  
+## ⚠️ Is there a Christmas ornament or memory card set?
+**Flags:** HTTP 503; missing /evergreen/i
 
-- Table sign (8 × 10 in) reads “On the longest night we remember”.  
-- Folding service program (11 × 8.5 in, folds to 5.5 × 8.5 in) includes space for names remembered, the order of service and candle‑lighting words.  
-- Candle‑lighting cards (4.25 × 5.5 in, 4 per sheet) for guests to write prayers or thoughts.  
-- Start‑Here guide to fill in the PDFs with the free Adobe Acrobat Reader app, then print at home or at any print shop.  
-
-Price: $9.99 USD, instant download.  
-Buy here: https://foreverheld.pages.dev/longest-night.html  
-
-You may also find our free printable planning checklist useful for organizing the service: https://payhip.com/b/eYJqS.  
-
-If you need help customizing the text or have any other questions, you can reach a real person through our contact page: https://foreverheld.pages.dev/contact.html.
-
-## ✅ Is there a Christmas ornament or memory card set?
-Yes. Our Evergreen & Candlelight Christmas set includes both holiday memory cards and ornament‑keepsake cards that can be turned into a simple ornament (they have a punched hole for a ribbon). The set comes with:
-
-- Table sign (8×10 in) “This candle burns in loving memory of…”
-- Holiday memory cards 4.25×5.5 in (4 per sheet) – light‑ink‑saver version also available  
-- Ornament‑keepsake cards 3.125×4.375 in (4 per sheet) with a punch‑out hole for a ribbon  
-- Start‑Here guide
-
-All pieces are fill‑in PDFs you type into with the free Adobe Acrobat Reader, then print at home or at a local print shop.  
-
-You can view details and purchase it here: https://foreverheld.pages.dev/evergreen-candlelight.html.
+Sorry, I can't answer right now. Please try again in a minute, or message us at https://foreverheld.pages.dev/contact.html and a real person will help.
 
 ## ⚠️ Do you have a discount code?
 **Flags:** HTTP 503
@@ -88,10 +62,10 @@ Sorry, I can't answer right now. Please try again in a minute, or message us at 
 
 Sorry, I can't answer right now. Please try again in a minute, or message us at https://foreverheld.pages.dev/contact.html and a real person will help.
 
-## ⚠️ How much does cremation usually cost?
-**Flags:** HTTP 503; missing /\$|cost|price|vary/i
+## ✅ How much does cremation usually cost?
+Cremation costs vary widely. In the U.S. you’ll typically see a range of about $2,000 to $4,500 for a basic cremation package that includes the body, transportation, the cremation itself, a simple urn, and a basic paperwork bundle. Prices can be lower—around $1,500 to $2,500—if you choose a very basic service, skip a casket, or use a “direct cremation” option. They can be higher—$5,000 to $7,000 or more—if you add a more elaborate casket, a memorial service, a premium urn, or additional handling and storage.
 
-Sorry, I can't answer right now. Please try again in a minute, or message us at https://foreverheld.pages.dev/contact.html and a real person will help.
+Costs differ by region, the funeral home’s fees, and whether you opt for a “green” or “natural” cremation. It’s a good idea to ask the funeral director for an itemized price list and compare a few local providers. The FTC Funeral Rule requires that the list be clear and itemized so you can see what you’re paying for.
 
 ## ⚠️ What does a pastor usually say at a graveside service?
 **Flags:** HTTP 503; missing /.{200,}/s
