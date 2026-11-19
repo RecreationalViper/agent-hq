@@ -1,7 +1,7 @@
 name: Content Creator
 on:
   schedule:
-    - cron: "23 15 * * *" # every day, about 10:23am New York time (holiday season: keep pins flowing)
+    - cron: "7 11 * * *" # 6:07am New York; GitHub starts scheduled runs hours late at busy times, so this lands late morning
   workflow_dispatch:
     inputs:
       make:
