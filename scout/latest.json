@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T11:54:31.394Z",
+  "generatedAt": "2026-11-19T21:08:05.174Z",
   "date": "2026-11-19",
   "token": true,
   "searches": {
@@ -9,70 +9,105 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 17,
-  "rateRemaining": 4995,
-  "newItems": 1,
+  "apiCalls": 25,
+  "rateRemaining": 10,
+  "newItems": 3,
   "blockedToday": 0,
-  "shortlist": [
+  "shortlist": [],
+  "watched": [
     {
-      "name": "PBJ-2/clauderipple",
-      "url": "https://github.com/PBJ-2/clauderipple",
-      "description": "Use GPT, DeepSeek, GLM, Gemini, Kimi and 400+ models in Claude Desktop's own model picker and in Claude Code, while staying signed in to your Claude subscription (1P, no gateway mode). Auto reasoning effort per prompt, subagents routed by difficulty, cache and limit warnings. Claude inside Codex too.",
-      "stars": 113,
-      "forks": 23,
+      "name": "vercel/ai",
+      "url": "https://github.com/vercel/ai",
+      "description": "The AI Toolkit for TypeScript. From the creators of Next.js, the AI SDK is a free open-source library for building AI-powered applications and agents",
+      "stars": 28091,
+      "forks": 5663,
       "language": "TypeScript",
-      "license": "GPL-3.0",
-      "pushedAt": "2026-11-19T06:58:06Z",
-      "category": "efficiency",
-      "score": 55,
+      "license": null,
+      "pushedAt": "2026-11-19T21:01:59Z",
+      "category": "skills",
+      "score": 78,
       "tier": "watch",
       "reasons": [
-        "113 stars",
+        "new skill file: skills/ai-sdk/SKILL.md",
+        "28,091 stars",
         "updated this week",
-        "GPL-3.0 license",
-        "directly cuts AI spend"
+        "first-party / well-known maintainer"
       ],
-      "flags": [],
+      "flags": [
+        "no-license"
+      ],
+      "skillFiles": null,
+      "source": "watched",
+      "newborn": false,
+      "skillPath": "skills/ai-sdk/SKILL.md",
+      "commitUrl": "https://github.com/vercel/ai/commits/4b02148c83eb73e7c68b72a6e27f2744b9e5a267"
+    }
+  ],
+  "newborn": [
+    {
+      "name": "Duoasa/Duoasa-skill",
+      "url": "https://github.com/Duoasa/Duoasa-skill",
+      "description": "蒸馏历代大师的内核。全模型通用，核心参数见 README。Distilling the essence of generations of masters. Works with any AI model. See the README for the core parameter.",
+      "stars": 179,
+      "forks": 25,
+      "language": "",
+      "license": "MIT",
+      "pushedAt": "2026-11-15T08:47:20Z",
+      "category": "skills",
+      "score": 69,
+      "tier": "watch",
+      "reasons": [
+        "filed under skills",
+        "179 stars",
+        "updated this week",
+        "MIT license",
+        "new repo, 5 days old",
+        "early traction"
+      ],
+      "flags": [
+        "newborn"
+      ],
       "skillFiles": null,
       "source": "search",
-      "newborn": false,
+      "newborn": true,
+      "skillPath": null,
+      "commitUrl": null
+    },
+    {
+      "name": "NULL200OK/null200ok-bug-bounty-skill",
+      "url": "https://github.com/NULL200OK/null200ok-bug-bounty-skill",
+      "description": "One word — NULL200OK — turns any AI agent (Claude Code, Cursor, Codex) into a disciplined bug-bounty hunter. A single SKILL.md condensing 6 offensive-security repos: recon, 12+ vuln playbooks, exploit chains, Web3/Immunefi, WAF bypass, triage & HackerOne/Bugcrowd reporting.",
+      "stars": 36,
+      "forks": 10,
+      "language": "",
+      "license": "MIT",
+      "pushedAt": "2026-11-08T14:17:52Z",
+      "category": "skills",
+      "score": 56,
+      "tier": "watch",
+      "reasons": [
+        "filed under skills",
+        "updated this month",
+        "MIT license",
+        "new repo, 14 days old",
+        "early traction"
+      ],
+      "flags": [
+        "newborn",
+        "tos-risk"
+      ],
+      "skillFiles": null,
+      "source": "search",
+      "newborn": true,
       "skillPath": null,
       "commitUrl": null
     }
   ],
-  "watched": [],
-  "newborn": [],
   "byCategory": {
     "skills": [],
     "enhancement": [],
     "free-tokens": [],
-    "efficiency": [
-      {
-        "name": "PBJ-2/clauderipple",
-        "url": "https://github.com/PBJ-2/clauderipple",
-        "description": "Use GPT, DeepSeek, GLM, Gemini, Kimi and 400+ models in Claude Desktop's own model picker and in Claude Code, while staying signed in to your Claude subscription (1P, no gateway mode). Auto reasoning effort per prompt, subagents routed by difficulty, cache and limit warnings. Claude inside Codex too.",
-        "stars": 113,
-        "forks": 23,
-        "language": "TypeScript",
-        "license": "GPL-3.0",
-        "pushedAt": "2026-11-19T06:58:06Z",
-        "category": "efficiency",
-        "score": 55,
-        "tier": "watch",
-        "reasons": [
-          "113 stars",
-          "updated this week",
-          "GPL-3.0 license",
-          "directly cuts AI spend"
-        ],
-        "flags": [],
-        "skillFiles": null,
-        "source": "search",
-        "newborn": false,
-        "skillPath": null,
-        "commitUrl": null
-      }
-    ]
+    "efficiency": []
   },
   "blocked": [],
   "watching": [
@@ -121,6 +156,6 @@
   ],
   "watchedRepos": {
     "ran": 3,
-    "newSkillFiles": 0
+    "newSkillFiles": 1
   }
 }

@@ -1,12 +1,29 @@
 # GitHub Radar — 2026-11-19
 
-> Scanned 12 of 33 saved searches (12 returned data, 0 unchanged, 0 failed). 17 GitHub API calls, authenticated. Zero AI tokens used.
+> Scanned 12 of 33 saved searches (12 returned data, 0 unchanged, 0 failed). 25 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (1)
+## Start here (0)
 
-- **[PBJ-2/clauderipple](https://github.com/PBJ-2/clauderipple)** 🟡 WATCH · score 55/100 · ⭐ 113 · GPL-3.0 · updated 0d ago
-  - Use GPT, DeepSeek, GLM, Gemini, Kimi and 400+ models in Claude Desktop's own model picker and in Claude Code, while staying signed in to your Claud…
-  - Why: 113 stars; updated this week; GPL-3.0 license; directly cuts AI spend
+_Nothing new cleared the quality bar this scan. That is a normal, healthy result — the radar is rotating through its searches and will cover the rest next time._
+
+## New inside repos you watch (1)
+
+- **[vercel/ai](https://github.com/vercel/ai)** 🟡 WATCH · ⭐ 28,091 · no license
+  - Added: [skills/ai-sdk/SKILL.md](https://github.com/vercel/ai/blob/HEAD/skills/ai-sdk/SKILL.md)
+  - Watch out: no license — check before reusing
+
+## Just launched — new repos (2)
+
+_Created in the last few weeks. Surfaced early on purpose, so they stay WATCH until they have a track record._
+
+- **[Duoasa/Duoasa-skill](https://github.com/Duoasa/Duoasa-skill)** 🟡 WATCH · score 69/100 · ⭐ 179 · MIT · updated 5d ago
+  - 蒸馏历代大师的内核。全模型通用，核心参数见 README。Distilling the essence of generations of masters. Works with any AI model. See the README for the core parameter.
+  - Why: filed under skills; 179 stars; updated this week; MIT license; new repo, 5 days old; early traction
+  - Watch out: brand-new repo — unproven, watch before adopting
+- **[NULL200OK/null200ok-bug-bounty-skill](https://github.com/NULL200OK/null200ok-bug-bounty-skill)** 🟡 WATCH · score 56/100 · ⭐ 36 · MIT · updated 11d ago
+  - One word — NULL200OK — turns any AI agent (Claude Code, Cursor, Codex) into a disciplined bug-bounty hunter. A single SKILL.md condensing 6 offensi…
+  - Why: filed under skills; updated this month; MIT license; new repo, 14 days old; early traction
+  - Watch out: brand-new repo — unproven, watch before adopting; unofficial/scraping based — may break or breach terms
 
 ## Agent skills you could install (0)
 
