@@ -1,5 +1,19 @@
 {
   "covered": [
+    "https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot",
+    "https://deepmind.google/blog/genie-4-is-now-available/",
+    "https://aiearlyedition.com/tools/openai-gpt-6-2-astra-sol/",
+    "https://www.zhidx.com/p/612273.html",
+    "https://github.blog/changelog/2026-11-18-wait-for-pull-request-events-with-github-cli",
+    "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot",
+    "https://github.blog/changelog/2026-11-18-customize-github-copilot-for-your-team",
+    "https://github.blog/changelog/2026-11-19-red-hat-enterprise-linux-runner-images-now-generally-available",
+    "https://aws.amazon.com/blogs/machine-learning/how-airbnb-uses-cost-per-task-to-operate-coding-agents-on-amazon-bedrock/",
+    "https://arxiv.org/abs/2611.24845v1",
+    "https://arxiv.org/abs/2611.24891v1",
+    "https://openai.com/index/research-acceleration-jagged-frontier",
+    "https://huggingface.co/blog/RadixArk/daisyrose-27b-pushing-the-frontier-of-post-trainin",
+    "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
     "https://openai.com/index/introducing-gpt-6-2-astra-sol",
     "https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot",
     "https://ai123.com/newshub/18564",
@@ -114,6 +128,6 @@
     "https://hunch.net/?p=13764006",
     "https://www.kadoa.com/companies/insights/ai-selloff-perspective"
   ],
-  "lastRun": "2026-11-18",
-  "lastNotion": "2026-11-18"
+  "lastRun": "2026-11-19",
+  "lastNotion": "2026-11-19"
 }
