@@ -14,7 +14,7 @@ const Q = [
   ["Do you have anything for our first Thanksgiving without my dad?", { must: [/harvest table/i] }],
   ["Our church is planning a Blue Christmas service. What do you have?", { must: [/longest night/i] }],
   ["Is there a Christmas ornament or memory card set?", { must: [/evergreen/i] }],
-  ["Do you have a discount code?", { not: [/\b\d{1,2}%\s*off\b|use code [A-Z0-9]{3,}/i] }],
+  ["Do you have a discount code?", { not: [/code (?!THANKFUL15)[A-Z0-9]{4,}/] }], // only owner-approved codes (products/collections.json promos)
   ["What should I write in an obituary for my grandmother?", { must: [/.{200,}/s] }],
   ["What's the difference between a funeral and a celebration of life?", { must: [/celebration/i] }],
   ["How much does cremation usually cost?", { must: [/\$|cost|price|vary/i] }],
