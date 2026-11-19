@@ -6,7 +6,7 @@ import { hasExa, search } from "../exa.mjs";
 
 const FILE = "outreach/churches.csv";
 const parse = (t) => { const [head, ...rows] = t.trim().split("\n"); const k = head.split(","); return rows.map((r) => { const v = r.match(/("([^"]|"")*"|[^,]*)(,|$)/g).map((x) => x.replace(/,$/, "").replace(/^"|"$/g, "").replace(/""/g, '"')); return Object.fromEntries(k.map((x, i) => [x, v[i] || ""])); }); };
-const csv = (rows) => { const k = Object.keys(rows[0]); return [k.join(","), ...rows.map((r) => k.map((x) => /[",]/.test(r[x]) ? `"${r[x].replace(/"/g, '""')}"` : r[x]).join(","))].join("\n") + "\n"; };
+const csv = (rows) => { const k = [...new Set(rows.flatMap((r) => Object.keys(r)))]; return [k.join(","), ...rows.map((r) => k.map((x) => /[",]/.test(r[x] || "") ? `"${r[x].replace(/"/g, '""')}"` : (r[x] || "")).join(","))].join("\n") + "\n"; };
 const SKIP = /directory|faithstreet|churchfinder|facebook|yelp|mapquest|guidestar|naicslist|churcheslist|learnofchrist|christianity\.com|patch\.com|wikipedia|youtube|instagram|linkedin|cvcc\.org|pewsearch|devout\.org|tripadvisor|findagrave/i;
 
 async function get(url) {
@@ -25,6 +25,30 @@ function emails(html, host) {
 
 const rows = parse(await fs.readFile(FILE, "utf8"));
 let filled = 0;
+
+// --discover (weekly): add Northeast Ohio churches whose own pages mention a Blue Christmas / Longest Night service.
+if (process.argv.includes("--discover") && hasExa()) {
+  const have = new Set(rows.map((r) => r.website && new URL(r.website).host.replace(/^www\./, "")).filter(Boolean));
+  const names = new Set(rows.map((r) => r.name.toLowerCase()));
+  const places = ["Cleveland", "Akron", "Lakewood", "Westlake", "Strongsville", "Parma", "Mentor", "Willoughby", "Medina", "Hudson", "Kent", "Canton", "Elyria", "Painesville", "Shaker Heights", "Lyndhurst", "Brecksville", "North Olmsted", "Avon Lake", "Stow"];
+  const week = Math.floor(Date.now() / 6048e5);
+  let added = 0;
+  for (const place of [0, 1, 2, 3].map((i) => places[(week * 4 + i) % places.length])) {
+    for (const kind of ["Blue Christmas", "Longest Night"]) {
+      const res = await search(`"${kind}" service church ${place} Ohio`, { num: 8, chars: 400, who: "outreach" }).catch(() => []);
+      for (const x of res) {
+        if (SKIP.test(x.url) || !new RegExp(kind, "i").test(x.title + " " + x.text)) continue;
+        const host = new URL(x.url).host.replace(/^www\./, "");
+        if (have.has(host)) continue;
+        const name = x.title.split(/\s[|–—-]\s/).map((t) => t.trim()).find((t) => /church|parish|chapel|cathedral|congregation|lutheran|presbyterian|episcopal|methodist/i.test(t) && !/blue christmas|longest night|service/i.test(t));
+        if (!name || names.has(name.toLowerCase())) continue;
+        rows.push({ name, city: place, website: `https://${new URL(x.url).host}`, email: "", why: `held a ${kind} service last December`, status: "new" });
+        have.add(host); names.add(name.toLowerCase()); added++;
+      }
+    }
+  }
+  console.log(`  discovered ${added} new churches`);
+}
 for (const r of rows) {
   if (r.email || r.status !== "new") continue;
   if (!r.website && hasExa()) {

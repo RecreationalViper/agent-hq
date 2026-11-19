@@ -11,7 +11,7 @@ const PREVIEW = process.argv.includes("--preview");
 const ADDRESS = process.env.FUNNEL_MAILING_ADDRESS?.trim();
 const TODAY = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date());
 const parse = (t) => { const [head, ...rows] = t.trim().split("\n"); const k = head.split(","); return rows.map((r) => { const v = r.match(/("([^"]|"")*"|[^,]*)(,|$)/g).map((x) => x.replace(/,$/, "").replace(/^"|"$/g, "").replace(/""/g, '"')); return Object.fromEntries(k.map((x, i) => [x, v[i] || ""])); }); };
-const csv = (rows) => { const k = Object.keys(rows[0]); return [k.join(","), ...rows.map((r) => k.map((x) => /[",]/.test(r[x]) ? `"${r[x].replace(/"/g, '""')}"` : r[x]).join(","))].join("\n") + "\n"; };
+const csv = (rows) => { const k = [...new Set(rows.flatMap((r) => Object.keys(r)))]; return [k.join(","), ...rows.map((r) => k.map((x) => /[",]/.test(r[x] || "") ? `"${r[x].replace(/"/g, '""')}"` : (r[x] || "")).join(","))].join("\n") + "\n"; };
 const b64url = (s) => Buffer.from(s, "utf8").toString("base64").replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 const encSubj = (s) => `=?UTF-8?B?${Buffer.from(s, "utf8").toString("base64")}?=`;
 
