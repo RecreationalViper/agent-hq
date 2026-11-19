@@ -450,9 +450,15 @@ async function openAiStyle(url, key, model, system, history, extra = {}) {
   if (!r.ok) throw new Error(`${model} HTTP ${r.status} ${(await r.text()).slice(0, 120)}`);
   return (await r.json()).choices?.[0]?.message?.content || "";
 }
+// Each Groq model has its own free per-minute limits, so a busy minute on one falls through to the next.
 async function groqChat(env, system, history) {
   if (!env.GROQ_API_KEY) throw new Error("no key");
-  return openAiStyle("https://api.groq.com/openai/v1/chat/completions", env.GROQ_API_KEY, "openai/gpt-oss-120b", system, history, { reasoning_effort: "low" });
+  let last;
+  for (const [model, extra] of [["openai/gpt-oss-120b", { reasoning_effort: "low" }], ["llama-3.3-70b-versatile", {}], ["openai/gpt-oss-20b", { reasoning_effort: "low" }], ["meta-llama/llama-4-scout-17b-16e-instruct", {}], ["llama-3.1-8b-instant", {}]]) {
+    try { const t = await openAiStyle("https://api.groq.com/openai/v1/chat/completions", env.GROQ_API_KEY, model, system, history, extra); if (t) return t; }
+    catch (e) { last = e; if (!/HTTP (429|413|404|5\d\d)/.test(e.message)) throw e; }
+  }
+  throw last || new Error("groq: no model answered");
 }
 async function geminiChat(env, system, history) {
   if (!env.GEMINI_API_KEY) throw new Error("no key");
@@ -470,6 +476,14 @@ async function geminiChat(env, system, history) {
 }
 async function workersChat(env, system, history) {
   if (!env.AI) throw new Error("no binding");
+  try { return await workersBig(env, system, history); }
+  catch (e) {
+    console.log(`chat: workers gpt-oss failed: ${String(e.message || e).slice(0, 120)}`);
+    const out = await env.AI.run("@cf/meta/llama-3.1-8b-instruct-fast", { messages: [{ role: "system", content: system }, ...history], max_tokens: 900 });
+    return out?.response || "";
+  }
+}
+async function workersBig(env, system, history) {
   const out = await env.AI.run("@cf/openai/gpt-oss-120b", { instructions: system, input: history.map((m) => `${m.role === "assistant" ? "Assistant" : "Visitor"}: ${m.content}`).join("\n\n") + "\n\nAssistant:", reasoning: { effort: "low" } });
   return typeof out === "string" ? out : out?.output_text || out?.response || (out?.output || []).flatMap((o) => o.content || []).map((c) => c.text || "").join("") || "";
 }
