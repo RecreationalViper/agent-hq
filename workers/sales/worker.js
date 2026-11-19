@@ -401,7 +401,7 @@ async function chat(req, env, ctx) {
   const facts = await storeFacts(history.filter((m) => m.role === "user").slice(-3).map((m) => m.content).join(" "), ctx);
   const system = `${CHAT_RULES}\n\nSTORE FACTS (today is ${day}):\n${facts}`;
   const why = [];
-  for (const ask of [groqChat, geminiChat, workersChat, openRouterChat]) {
+  for (const ask of [groqChat, geminiChat, openRouterChat, workersChat]) {
     try {
       const text = (await ask(env, system, history))?.trim();
       const clean = text && stripPlanning(text);
@@ -454,26 +454,33 @@ async function openAiStyle(url, key, model, system, history, extra = {}) {
 // Each Groq model has its own free per-minute limits, so a busy minute on one falls through to the next.
 async function groqChat(env, system, history) {
   if (!env.GROQ_API_KEY) throw new Error("no key");
-  let last;
-  for (const [model, extra] of [["openai/gpt-oss-120b", { reasoning_effort: "low" }], ["llama-3.3-70b-versatile", {}], ["openai/gpt-oss-20b", { reasoning_effort: "low" }], ["meta-llama/llama-4-scout-17b-16e-instruct", {}], ["llama-3.1-8b-instant", {}]]) {
+  const errs = [];
+  for (const [model, extra] of [["openai/gpt-oss-120b", { reasoning_effort: "low" }], ["llama-3.3-70b-versatile", {}], ["openai/gpt-oss-20b", { reasoning_effort: "low" }], ["meta-llama/llama-4-scout-17b-16e-instruct", {}], ["qwen/qwen3-32b", { reasoning_effort: "none" }]]) {
     try { const t = await openAiStyle("https://api.groq.com/openai/v1/chat/completions", env.GROQ_API_KEY, model, system, history, extra); if (t) return t; }
-    catch (e) { last = e; if (!/HTTP (429|413|404|5\d\d)/.test(e.message)) throw e; }
+    catch (e) { errs.push(e.message.slice(0, 60)); if (!/HTTP (429|413|404|5\d\d)/.test(e.message)) throw e; }
   }
-  throw last || new Error("groq: no model answered");
+  throw new Error(errs.join(" / ") || "groq: no model answered");
 }
 async function geminiChat(env, system, history) {
   if (!env.GEMINI_API_KEY) throw new Error("no key");
+  const contents = history.map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] }));
+  let last = "gemini: no model answered";
   for (const model of ["gemini-flash-latest", "gemini-2.5-flash", "gemini-flash-lite-latest"]) {
-    const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", signal: timeout(),
-      headers: { "x-goog-api-key": env.GEMINI_API_KEY, "content-type": "application/json" },
-      body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents: history.map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] })), generationConfig: { maxOutputTokens: 1400, temperature: 0.5, thinkingConfig: { thinkingBudget: 0 } } }) });
-    if (r.status === 404 || r.status === 429) continue;
-    if (!r.ok) throw new Error(`gemini HTTP ${r.status}`);
-    const j = await r.json();
-    const t = (j.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("");
-    if (t) return t;
+    // newer flash models reject thinkingBudget (HTTP 400): ask once with it, once without
+    for (const thinking of [{ thinkingBudget: 0 }, null]) {
+      const generationConfig = { maxOutputTokens: 1400, temperature: 0.5, ...(thinking ? { thinkingConfig: thinking } : {}) };
+      const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", signal: timeout(),
+        headers: { "x-goog-api-key": env.GEMINI_API_KEY, "content-type": "application/json" },
+        body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents, generationConfig }) });
+      if (r.status === 400 && thinking) continue;
+      if (!r.ok) { last = `gemini ${model} HTTP ${r.status}`; break; }
+      const j = await r.json();
+      const t = (j.candidates?.[0]?.content?.parts || []).filter((p) => !p.thought).map((p) => p.text || "").join("");
+      if (t) return t;
+      break;
+    }
   }
-  throw new Error("gemini: no model answered");
+  throw new Error(last);
 }
 async function workersChat(env, system, history) {
   if (!env.AI) throw new Error("no binding");
@@ -488,7 +495,19 @@ async function workersBig(env, system, history) {
   const out = await env.AI.run("@cf/openai/gpt-oss-120b", { instructions: system, input: history.map((m) => `${m.role === "assistant" ? "Assistant" : "Visitor"}: ${m.content}`).join("\n\n") + "\n\nAssistant:", reasoning: { effort: "low" } });
   return typeof out === "string" ? out : out?.output_text || out?.response || (out?.output || []).flatMap((o) => o.content || []).map((c) => c.text || "").join("") || "";
 }
+let orFree; // current free OpenRouter models, best first (the free list changes often)
 async function openRouterChat(env, system, history) {
   if (!env.OPENROUTER_API_KEY) throw new Error("no key");
-  return openAiStyle("https://openrouter.ai/api/v1/chat/completions", env.OPENROUTER_API_KEY, "openai/gpt-oss-120b:free", system, history);
+  if (!orFree) {
+    const d = await (await fetch("https://openrouter.ai/api/v1/models", { signal: timeout() })).json();
+    const pref = [/gpt-oss-120b/i, /llama-3\.3-70b/i, /deepseek.*(v3|chat)/i, /qwen3/i, /llama-4/i, /mistral-small/i, /gemma-3-27b/i];
+    const rank = (i) => { const k = pref.findIndex((r) => r.test(i)); return k < 0 ? 99 : k; };
+    orFree = (d.data || []).filter((m) => /:free$/.test(m.id) && Number(m.pricing?.prompt || 0) === 0 && Number(m.pricing?.completion || 0) === 0 && !/vision|image|embed|guard/i.test(m.id)).map((m) => m.id).sort((a, b) => rank(a) - rank(b));
+  }
+  let last;
+  for (const model of orFree.slice(0, 3)) {
+    try { const t = await openAiStyle("https://openrouter.ai/api/v1/chat/completions", env.OPENROUTER_API_KEY, model, system, history); if (t) return t; }
+    catch (e) { last = e; }
+  }
+  throw last || new Error("openrouter: no free model answered");
 }
