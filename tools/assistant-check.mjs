@@ -33,7 +33,7 @@ for (const [q, rule] of Q) {
   let text = "", status = 0;
   try {
     const r = await fetch(API, { method: "POST", headers: { "content-type": "application/json", origin: "https://foreverheld.pages.dev" }, body: JSON.stringify({ messages: [{ role: "user", content: q }], page: "/" }) });
-    status = r.status; text = (await r.json()).text || "";
+    status = r.status; const j = await r.json(); text = (j.text || "") + (j.why ? `\n\n(providers: ${j.why.join(" | ")})` : "");
   } catch (e) { text = `ERROR ${e.message}`; }
   const bad = [];
   if (status !== 200) bad.push(`HTTP ${status}`);

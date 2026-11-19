@@ -400,14 +400,15 @@ async function chat(req, env, ctx) {
 
   const facts = await storeFacts(history.filter((m) => m.role === "user").slice(-3).map((m) => m.content).join(" "), ctx);
   const system = `${CHAT_RULES}\n\nSTORE FACTS (today is ${day}):\n${facts}`;
+  const why = [];
   for (const ask of [groqChat, geminiChat, workersChat, openRouterChat]) {
     try {
       const text = (await ask(env, system, history))?.trim();
       const clean = text && stripPlanning(text);
       if (clean) return reply({ ok: true, text: clean.replace(/\*\*(.+?)\*\*/g, "$1").replace(/^#+\s*/gm, "").replace(new RegExp(`${SITE}/(https?://)`, "g"), "$1").slice(0, 6000) });
-    } catch (e) { console.log(`chat: ${ask.name} failed: ${String(e.message || e).slice(0, 200)}`); }
+    } catch (e) { why.push(`${ask.name}: ${String(e.message || e).replace(/Bearer\s+\S+/g, "").slice(0, 160)}`); console.log(`chat: ${why.at(-1)}`); }
   }
-  return reply({ ok: false, error: "unavailable", text: `Sorry, I can't answer right now. Please try again in a minute, or message us at ${SITE}/contact.html and a real person will help.` }, 503);
+  return reply({ ok: false, error: "unavailable", why, text: `Sorry, I can't answer right now. Please try again in a minute, or message us at ${SITE}/contact.html and a real person will help.` }, 503);
 }
 
 // Reasoning models sometimes put their private plan in front of the answer ("Need to answer size options. Use store
