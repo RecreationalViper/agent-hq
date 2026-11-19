@@ -2,59 +2,58 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-## Studio Critic Review — 2026-11-18
-
-### Clip 1: Apothecary Diaries S3 — “The Secret Letter” Teaser Arc (Part 1/3)
-
-| Metric | Score | Notes |
-|--------|-------|-------|
-| Hook Strength | **4/10** | Sealed envelope + wax break is passive. No stakes, no character, no motion. Cold open on a prop doesn’t stop scroll. |
-| Rewatch Value | **6/10** | “PART 2 TOMORROW” text loop works, but the gasp→silhouette payoff is generic. Thorfinn edits earn rewatches with *performance* beats; this has one gasp. |
-| Comment Bait | **6/10** | “What does the decree say?” is functional. Wall-slam deadpan (“You’re heavy”) is a known meme but you bury it at 1.5–5 s. |
-| Copyright Risk | **5/10** | Three episode sources (Ep 7, Ep 8 preview, **unaired Ep 8 raw**). Ep 8 hasn’t aired — owner watches live tomorrow. If Crunchyroll flags the preview + raw combo, the whole 3-part series dies. |
-
-**One change that matters most:**  
-**Lead with the wall-slam (Ep 7, 18:30–18:38).** Jinshi pinning Maomao → her deadpan “You’re heavy” is a *character beat* with tension, humor, and ship fuel. Cut the envelope hook entirely; reveal the letter *after* the slam as the escalation.
-
-**Drop or keep?**  
-**Drop.** Multi-part commitment on a 0-sub channel with unaired footage is a structural gamble. If Part 1 flops, Parts 2/3 are dead assets. The fandom is high-engagement but small — not enough to carry algorithm pickup without a stronger hook.
-
-**Make instead:** **GTA VI “First Hour” POV Reaction (Format #5).** Owner records iPhone screen + face cam for first 15 min tonight. Claude cuts 3× 30 s Shorts: “First Wanted Level,” “First Bike Jump,” “First Radio Song.” Caption each “GTA VI FIRST HOUR #1/2/3.” Launch week search volume is 150k+ globally; Twitch 276k peak concurrent. This is the only clip this week with *mass* reach potential.
+# Studio Critic Review — 2026-11-18
 
 ---
 
-### Clip 2: Steel Ball Run — “They Thought Johnny Was Broken” (Manga-Panel + OP Sync)
+## 1️⃣ The Apothecary Diaries S3 Ep 8 — “Poison-Lab Reveal”
 
-| Metric | Score | Notes |
-|--------|-------|-------|
-| Hook Strength | **7/10** | Proven format (Zoro 2.08M). Text + wheelchair + rain = instant underdog read. Static panel costs you 0.5 s of motion — acceptable. |
-| Rewatch Value | **8/10** | “GO! GO! GO!” panel synced to Panchiko distortion drop (1:30) is a *moment*. Logo→wheelchair loop is clean. Manga-panel edits get pause-rewatches for detail. |
-| Comment Bait | **8/10** | “Which panel hit hardest?” + “Johnny’s glow-up is greatest in JoJo history. Fight me.” Both provoke tribal debate. |
-| Copyright Risk | **9/10** | Official colored panels (static), transformative velocity/beat-sync, no anime footage exists. Credit card correct. Safest clip in the plan. |
+| Metric | Score | Why |
+|--------|-------|-----|
+| **Hook strength** | 7/10 | “POISON ⚗️?!” + piano chord is solid, but the vial glow alone isn't visually *distinct* enough to stop a scroll cold. No face, no motion, just a glowing bottle. |
+| **Rewatch value** | 6/10 | The 12-second unbroken pan is the right idea, but it's a *slow* pan (vial → fingers → eyes → smirk). No visual payoff until the “DEADLY!” graphic at 22s. Viewers bail on slow pans without motion or escalation. |
+| **Comment bait** | 7/10 | “What does it do? 👀” + Jinshi smirk theory is good fodder. Caption 4 (“is the ink alive or cursed?”) is the strongest. |
+| **Copyright risk** | 9/10 | Official Netflix preview, short stretches, transformative montage, on-screen credit. Safe. |
 
-**One change that matters most:**  
-**Add subtle parallax/ken-burns motion to every panel.** First 6 s are three static panels in a row — on TikTok, that’s a swipe trigger. Even 5% scale drift per panel keeps the eye moving without breaking the “manga aesthetic.”
+**One change that would most improve it:**  
+**Cut the pan at 6s, not 12s.** Insert a **hard cut to Maomao's eyes snapping open** at the piano swell peak (source 2:11), then resume the pan. The current 12s unbroken move is a momentum killer — Shorts audiences need a visual "hit" every 3-5s. The freeze-frame whisper at 22s works *only if* you earned the tension with pacing, not duration.
 
-**Verdict:** **Keep. Priority 1.** Evergreen, first-mover, format-proven, copyright-safe.
-
----
-
-### Clip 3: Jujutsu Kaisen — “Neon Maki / Red Hikaru” Match-Cut Velocity Edit
-
-| Metric | Score | Notes |
-|--------|-------|-------|
-| Hook Strength | **7/10** | Fresh key visual dropped today = 48h window. Neon rim-light + glitch zoom pops. But static art → glitch is still “image then effect,” not “action then beat.” |
-| Rewatch Value | **8/10** | Velocity ramp on every kick, match-cut Maki→Hikaru, three bass drops mapped to Domain Expansion / Red / logo. High technical rewatch. |
-| Comment Bait | **7/10** | “Maki in a suit or Hikaru casual — who wore neon better?” Binary choice works. “Brain melted” caption is fluff. |
-| Copyright Risk | **6/10** | Two anime episode stretches (S2 Ep 18, S2 Ep 23) totalling ~16 s of source, chopped into 3–4 s pieces. Plus official key visuals (promo, safer). MAPPA/Crunchyroll can still strike velocity edits — they have before. |
-
-**One change that matters most:**  
-**Hook on the first bass drop (0:15), not the key visual.** Open on Maki’s Domain Expansion *first slash* hitting exactly on the CHAXZER drop. Cut the 1 s static art opener — it wastes the phonk template’s strongest asset: immediate audio-visual sync.
-
-**Verdict:** **Keep. Priority 2.** Ride the 48h visual wave, but fix the hook or you lose the template’s core advantage.
+**Verdict:** Keep. Fix the pan pacing tonight.
 
 ---
 
-## One-Line Verdict
+## 2️⃣ Reincarnated as a Sword S2 Ep 9 — “Sword‑Soul Fusion”
 
-**Cut Apothecary Diaries Part 1 first — replace it with a GTA VI “First Hour” POV reaction triptych tonight.**
+| Metric | Score | Why |
+|--------|-------|-----|
+| **Hook strength** | 8/10 | “What? A SWORD‑HUMAN?!” + synth stab on the glow start is instant curiosity. The concept (sword with human soul) is visually weird in a good way. |
+| **Rewatch value** | 9/10 | **The 20s unbroken 360° spin *is* the loop.** Speed ramp 1×→2×→4× creates a natural replay point (last frame matches first glow frame). This is the strongest loop mechanic in the batch. |
+| **Comment bait** | 6/10 | “Which form is stronger — old Fran or new Fran? Vote 🗳️” is fine but generic. No specific visual detail to argue over (unlike One Piece's "did Kaido flinch?"). |
+| **Copyright risk** | 8/10 | Crunchyroll official preview, single continuous shot (transformative), credit on screen. Slightly riskier than Netflix because Crunchyroll previews are shorter/more guarded, but still safe. |
+
+**One change that would most improve it:**  
+**Add a 1-frame "glitch" flash at the 4× speed ramp point (source 1:28) synced to the chiptune drop.** The spin is hypnotic but *too* smooth — a single digital artifact (scanline, RGB split, frame hold) gives the eye an anchor to re-find on replay. Also: change the caption vote to **“Fran's new form: sword-body or human-body? 🗳️”** — specific visual debate > generic power scaling.
+
+**Verdict:** Keep. This is the most "Shorts-native" clip in the plan.
+
+---
+
+## 3️⃣ One Piece Episode 1181 — Luffy Gear 5 “King's Roar” vs. Kaido
+
+| Metric | Score | Why |
+|--------|-------|-----|
+| **Hook strength** | 9/10 | “Luffy's NEW ultimate move?!” + brass hit on Gear 5 burst = instant recognition + promise. One Piece fans *will* stop. |
+| **Rewatch value** | 8/10 | The 10s unbroken roar + pull-back is the money shot. Double-dipping the pull-back at 2× speed with “YES” shout is smart. But: the Kaido line stretch (11.5-19s) is 7.5s of *dialogue* — rewatch drops hard on subtitle reads. |
+| **Comment bait** | 9/10 | “Did you catch the frame where Kaido *actually* flinches? 👇” is elite — specific, verifiable, argues in pauses. Caption 4 nails it. |
+| **Copyright risk** | 4/10 | **Major red flag.** Source is a "5-minute teaser on official channel" for an episode that **airs 2027-01-03** — the plan says "leaked on official streaming platforms for premium users." That is **not a legal preview**. Toei is notoriously aggressive; even official teasers get claimed. Using 10s unbroken + 10s dialogue from a *leaked* episode = high strike risk. The plan's "⚠️ Copyright: Use ≤5s per stretch" contradicts its own 10s unbroken stretch. |
+
+**One change that would most improve it:**  
+**Drop this clip entirely.** The copyright risk is real and the source is not legally usable for transformative editing. Replace with **GTA VI "Mandy" teaser** (trend #1, official Rockstar YouTube, 2M views in 24h, UK search spikes for "auto save" and "first person" — 500+ each). Cut the 0:12-0:34 first-person chase + auto-save pop-up, hook “AUTO‑SAVE??!” jump-cut, end “What's next? 🤯”. Uses trending sound “Mandy – GTA 6 Theme” (sound #1, business-account safe). Formats: “The Moment When…” or Velocity Edit — both hot.
+
+**Verdict:** **Drop. Replace with GTA VI Mandy teaser.**
+
+---
+
+## 🏁 One-Line Verdict
+
+**Cut One Piece Ep 1181 first — leaked source = strike bait; swap in GTA VI Mandy teaser (official, trending, same hype energy).**
