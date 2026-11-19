@@ -103,5 +103,16 @@
         "products/fillable/previews/listing/harvest-table-4.jpg"
       ]
     }
+  ],
+  "promos": [
+    {
+      "code": "THANKFUL15",
+      "percent": 15,
+      "appliesTo": "every product in the store",
+      "until": "2026-11-27",
+      "payhipId": 1495974346,
+      "approvedBy": "owner, 2026-11-19",
+      "note": "Thanksgiving coupon. Agents may mention it in captions and the assistant may share it until the end of the 'until' day (New York). Never invent other codes."
+    }
   ]
 }

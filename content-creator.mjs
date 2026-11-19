@@ -80,9 +80,10 @@ const THEMES = {
 };
 
 // Live products the team can promote: approved with a checkout link; holiday sets only from 45 days before their window until it ends.
+let PROMOS = []; // owner-approved coupons still running
 async function catalog() {
   let list = [];
-  try { list = JSON.parse(await read("products/collections.json", "{}")).collections || []; } catch {}
+  try { const all = JSON.parse(await read("products/collections.json", "{}")); list = all.collections || []; PROMOS = (all.promos || []).filter((p) => (p.until || "") >= DATE); } catch {}
   const soon = new Date(Date.now() + 45 * 864e5).toISOString().slice(0, 10);
   const out = [{ id: "soft-botanical", name: "Soft Botanical Celebration of Life Suite", season: "any time", price: "$12.99", link: `https://${STORE}`, page: `${SITE}/`, pieces: ["funeral program (folds to 5.5 x 8.5 in)", "welcome sign 24 x 36 in", "share-a-memory cards"] }];
   for (const c of list) {
@@ -183,6 +184,7 @@ function writePrompt(team, data, history, products) {
 # Live products (promote only these; each post is about exactly one)
 ${cat}
 ${holidays.length ? `\nIt's holiday season: make at least ${Math.min(holidays.length, Math.max(COUNT - 2, 1))} posts about the holiday sets (every set above gets at least one), the rest about Soft Botanical. Families plan these weeks ahead, so speak to that (the first Thanksgiving or Christmas without them, a remembrance table, a church's Blue Christmas service).` : ""}
+${PROMOS.length ? `\nOWNER-APPROVED COUPON: ${PROMOS.map((p) => `code ${p.code} = ${p.percent}% off ${p.appliesTo}, through ${p.until}`).join("; ")}. Mention it in the caption of up to 2 posts (e.g. "Use code ${PROMOS[0].code} for ${PROMOS[0].percent}% off through ${PROMOS[0].until.slice(5).replace("-", "/")}"). Never put it on the image, never invent other codes or percentages.` : ""}
 ${rush.length ? `\nFINAL STRETCH: ${rush.map((p) => p.name).join(" and ")} ${rush.length > 1 ? "are" : "is"} days away. Make at least ${Math.ceil(COUNT / 2)} of the ${COUNT} posts about ${rush.length > 1 ? "them" : "it"}, written for last-minute planners: instant download, type the names on your phone in the free Adobe Acrobat Reader app, print at home tonight or at any print shop tomorrow. True facts only: no fake deadlines, countdowns, "only X left" or discounts that don't exist.` : ""}
 
 Backgrounds: most pins should be photo scenes, which do best on Pinterest. Each product has its own photo look (Harvest Table = autumn farmhouse table, Evergreen = pine and candlelight at night, Longest Night = candles in a quiet church at dusk, Soft Botanical = linen and greenery): "scene-table" (the printable lying on that product's table, seen from above) or "scene-venue" (that product's sign standing on a wooden easel). Use "botanical" or "painted" for at most one pin and for stories.

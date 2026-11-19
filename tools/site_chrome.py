@@ -136,6 +136,14 @@ def build_index():
                   "text": "Soft Botanical Celebration of Life Suite, $12.99, instant download, buy: https://payhip.com/b/vqNSA. " + (_text(suite.group(0)) if suite else "")})
     items.append({"group": "Products", "title": "Free planning checklist", "url": CHECKLIST, "desc": "Free printable checklist, sent to your email", "img": "",
                   "text": "A free printable funeral and celebration of life planning checklist. Get it at https://payhip.com/b/eYJqS; it also signs you up for gentle seasonal updates."})
+    # owner-approved coupons that are still running (the assistant may share these, and only these)
+    try:
+        promos = json.loads((ROOT / "products/collections.json").read_text()).get("promos", [])
+    except Exception:
+        promos = []
+    for pr in [x for x in promos if x.get("until", "") >= TODAY]:
+        items.append({"group": "Products", "title": f'Coupon {pr["code"]}', "url": "index.html#collections", "desc": f'{pr["percent"]}% off until {pr["until"]}',
+                      "text": f'Current coupon: code {pr["code"]} takes {pr["percent"]}% off {pr["appliesTo"]} at Payhip checkout, through {pr["until"]} (New York time). Enter it in the coupon box at checkout. This is the only discount code.'})
     # FAQ on the home page
     for q, a in re.findall(r'<details class="glass"><summary>([^<]*)</summary><p>(.*?)</p></details>', idx, re.S):
         items.append({"group": "Questions", "title": H.unescape(re.sub(r"<[^>]+>", "", q)), "url": "index.html#faq-title", "desc": H.unescape(re.sub(r"<[^>]+>", "", a))[:140], "text": H.unescape(re.sub(r"<[^>]+>", "", a))})
