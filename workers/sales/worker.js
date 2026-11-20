@@ -580,7 +580,7 @@ Use only the LIVE FACTS below for anything about his businesses' numbers or stat
 You can act. Return ONLY JSON: {"say": "what you speak", "run": null or one of [${Object.keys(FRIDAY_RUNS).join(", ")}], "remember": null or "a short fact to keep about him", "phone": null or a phone action, "google": null or a Google action, "lookup": null or a lookup}.
 "lookup" is your second brain. Use it whenever the answer needs fresh or outside info instead of guessing:
   {"tool":"web","query":"..."}  current news, prices, facts, anything on the internet
-  {"tool":"think","query":"the hard question","context":"what you know"}  big decisions, strategy, money, tricky reasoning or code: asks Claude
+  {"tool":"think","query":"the hard question","context":"what you know"}  big decisions, strategy, money, tricky reasoning or code: asks Claude. ALWAYS use it when he says "think hard", "think about it" or "ask Claude"
   {"tool":"notion","query":"..."}  search his Notion   {"tool":"note","title":"...","text":"..."}  save notes, ideas or plans to his Notion
   {"tool":"discord","channel":"content|sales|inbox|alerts|research|growth|trading-desk|..."}  read what his agents posted (church replies are in content)
   {"tool":"report","query":"agent name like growth coach or researcher"}  read an agent's latest report
@@ -951,13 +951,13 @@ async function fridayLookup(env, a = {}) {
   const q = String(a.query || "").slice(0, 400);
   try {
     if (a.tool === "web") {
-      if (env.TAVILY_API_KEY) {
-        const r = await fetch("https://api.tavily.com/search", { method: "POST", signal: timeout(), headers: { Authorization: `Bearer ${env.TAVILY_API_KEY}`, "content-type": "application/json" }, body: JSON.stringify({ query: q, search_depth: "basic", max_results: 5, include_answer: true }) });
+      if (env.TAVILY_API_KEY) try {
+        const r = await fetch("https://api.tavily.com/search", { method: "POST", signal: AbortSignal.timeout(9000), headers: { Authorization: `Bearer ${env.TAVILY_API_KEY}`, "content-type": "application/json" }, body: JSON.stringify({ query: q, search_depth: "basic", max_results: 5, include_answer: true }) });
         const j = await r.json().catch(() => ({}));
         if (r.ok) return `${j.answer ? `Summary: ${j.answer}\n` : ""}${(j.results || []).map((x) => `- ${x.title} (${new URL(x.url).hostname}): ${String(x.content || "").replace(/\s+/g, " ").slice(0, 300)}`).join("\n")}`;
-      }
+      } catch {}
       if (env.EXA_API_KEY) {
-        const r = await fetch("https://api.exa.ai/search", { method: "POST", signal: timeout(), headers: { "x-api-key": env.EXA_API_KEY, "content-type": "application/json" }, body: JSON.stringify({ query: q, numResults: 5, type: "auto", contents: { text: { maxCharacters: 600 } } }) });
+        const r = await fetch("https://api.exa.ai/search", { method: "POST", signal: AbortSignal.timeout(12000), headers: { "x-api-key": env.EXA_API_KEY, "content-type": "application/json" }, body: JSON.stringify({ query: q, numResults: 5, type: "auto", contents: { text: { maxCharacters: 600 } } }) });
         const j = await r.json().catch(() => ({}));
         if (r.ok) return (j.results || []).map((x) => `- ${x.title} (${new URL(x.url).hostname}): ${String(x.text || "").replace(/\s+/g, " ").slice(0, 400)}`).join("\n") || "No results.";
       }
