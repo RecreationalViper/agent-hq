@@ -5,9 +5,10 @@ const URL_ = "https://foreverheld-sales.foreverheld.workers.dev/friday";
 const bad = await fetch(URL_, { method: "POST", headers: { "x-friday-key": "wrong" }, body: "{}" });
 console.log(`wrong key -> HTTP ${bad.status} (should be 401)`);
 for (const q of (process.env.QUESTIONS || "Good morning Friday, what's going on with my business?|How many churches have we emailed and did anyone reply?|What's 15 percent of 9.99?").split("|")) {
+  const t0 = Date.now();
   const r = await fetch(URL_, { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: JSON.stringify({ q }) });
   const j = await r.json().catch(() => ({}));
-  console.log(`\nQ: ${q}\nA (${r.status}): ${j.say}${j.phone ? `\n[phone ${JSON.stringify(j.phone)}]` : ""}${j.ran ? `\n[ran ${j.ran}]` : ""}${j.why ? `\n[why ${j.why.join(" | ")}]` : ""}`);
+  console.log(`\nQ: ${q}  [${((Date.now() - t0) / 1000).toFixed(1)}s]\nA (${r.status}): ${j.say}${j.phone ? `\n[phone ${JSON.stringify(j.phone)}]` : ""}${j.ran ? `\n[ran ${j.ran}]` : ""}${j.why ? `\n[why ${j.why.join(" | ")}]` : ""}`);
 }
 
 // voice: send a short public speech sample (JFK, from the Whisper repo) as audio, like the app does
