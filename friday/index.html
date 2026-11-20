@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="robots" content="noindex,nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Friday">
+<meta name="theme-color" content="#080a12">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-180.png">
+<title>Friday</title>
+<style>
+  :root { --bg:#080a12; --ink:#e8f1ff; --dim:#7f8fb0; --blue:#4aa3ff; --glow:#8fd0ff; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html,body { margin:0; height:100%; background:var(--bg); color:var(--ink); font:16px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif; overflow:hidden; }
+  body { display:flex; flex-direction:column; padding:env(safe-area-inset-top) 18px env(safe-area-inset-bottom); }
+  header { display:flex; justify-content:space-between; align-items:center; padding:14px 2px 6px; }
+  header b { letter-spacing:.32em; font-size:13px; color:var(--dim); font-weight:600; }
+  header button { background:none; border:0; color:var(--dim); font-size:13px; padding:6px; }
+  #log { flex:1; overflow-y:auto; padding:8px 0 12px; display:flex; flex-direction:column; gap:10px; mask-image:linear-gradient(transparent,#000 24px); }
+  .m { max-width:86%; padding:10px 14px; border-radius:18px; animation:in .35s cubic-bezier(.34,1.45,.55,1); white-space:pre-wrap; }
+  .you { align-self:flex-end; background:#16203a; color:#cfe0ff; border-bottom-right-radius:6px; }
+  .fri { align-self:flex-start; background:rgba(74,163,255,.10); border:1px solid rgba(143,208,255,.18); border-bottom-left-radius:6px; }
+  .note { align-self:center; color:var(--dim); font-size:12px; }
+  @keyframes in { from { opacity:0; transform:translateY(8px) scale(.97); } }
+  #core { position:relative; height:210px; display:grid; place-items:center; }
+  #orb { width:120px; height:120px; border-radius:50%; border:0; cursor:pointer; position:relative;
+    background:radial-gradient(circle at 50% 50%, #cfeaff 0 18%, #6cb8ff 30%, #1d5fd1 55%, rgba(20,60,160,.0) 72%);
+    box-shadow:0 0 60px 10px rgba(74,163,255,.35), inset 0 0 30px rgba(255,255,255,.25); transition:transform .4s cubic-bezier(.34,1.45,.55,1); }
+  #orb::after { content:""; position:absolute; inset:-18px; border-radius:50%; border:2px solid rgba(143,208,255,.35); animation:ring 3.2s ease-in-out infinite; }
+  @keyframes ring { 50% { transform:scale(1.08); opacity:.4; } }
+  body.listening #orb { transform:scale(1.12); box-shadow:0 0 90px 24px rgba(74,163,255,.6), inset 0 0 30px rgba(255,255,255,.35); }
+  body.listening #orb::after { animation-duration:.9s; border-color:rgba(143,208,255,.8); }
+  body.thinking #orb { animation:think 1.1s linear infinite; }
+  @keyframes think { to { filter:hue-rotate(60deg); } }
+  body.speaking #orb { animation:talk .5s ease-in-out infinite alternate; }
+  @keyframes talk { to { transform:scale(1.07); } }
+  #hint { position:absolute; bottom:6px; color:var(--dim); font-size:13px; }
+  form { display:flex; gap:8px; padding-bottom:12px; }
+  input { flex:1; background:#0f1424; color:var(--ink); border:1px solid #223055; border-radius:22px; padding:12px 16px; font-size:16px; outline:none; }
+  form button { background:var(--blue); color:#041022; border:0; border-radius:22px; padding:0 18px; font-weight:600; font-size:15px; }
+  #setup { position:fixed; inset:0; background:var(--bg); display:none; flex-direction:column; justify-content:center; padding:30px; gap:14px; }
+  #setup.on { display:flex; }
+  #setup p { color:var(--dim); margin:0; }
+  label.t { display:flex; align-items:center; gap:8px; color:var(--dim); font-size:13px; justify-content:center; padding-bottom:6px; }
+</style>
+</head>
+<body>
+<header><b>FRIDAY</b><button id="forget" type="button">Settings</button></header>
+<div id="log"></div>
+<div id="core"><button id="orb" aria-label="Talk to Friday"></button><div id="hint">Tap to talk</div></div>
+<label class="t"><input type="checkbox" id="hands" style="flex:0"> Keep listening after she answers</label>
+<form id="f"><input id="q" placeholder="Or type to Friday…" autocomplete="off"><button>Send</button></form>
+<div id="setup">
+  <h2 style="margin:0">Hi, I'm Friday.</h2>
+  <p>Paste your private key once. It stays on this phone only.</p>
+  <input id="k" placeholder="fri-…" autocomplete="off" autocapitalize="off" spellcheck="false">
+  <form id="kf" style="padding:0"><button style="flex:1;padding:14px">Start</button></form>
+</div>
+<script>
+const API = "https://foreverheld-sales.foreverheld.workers.dev/friday";
+const $ = (s) => document.querySelector(s);
+const log = $("#log"), hint = $("#hint"), body = document.body;
+let key = "";
+try { key = localStorage.getItem("friday-key") || ""; } catch {}
+let history = [];
+try { history = JSON.parse(sessionStorage.getItem("friday-hist") || "[]"); } catch {}
+let hands = false; try { hands = localStorage.getItem("friday-hands") === "1"; } catch {}
+$("#hands").checked = hands;
+$("#hands").onchange = (e) => { hands = e.target.checked; try { localStorage.setItem("friday-hands", hands ? "1" : "0"); } catch {} };
+if (!key) $("#setup").classList.add("on");
+$("#kf").onsubmit = (e) => { e.preventDefault(); const v = $("#k").value.trim(); if (!v) return; key = v; try { localStorage.setItem("friday-key", v); } catch {} $("#setup").classList.remove("on"); greet(); };
+$("#forget").onclick = () => { if (confirm("Forget the key on this phone?")) { try { localStorage.removeItem("friday-key"); } catch {} location.reload(); } };
+
+function add(text, who) { const d = document.createElement("div"); d.className = "m " + who; d.textContent = text; log.appendChild(d); log.scrollTop = log.scrollHeight; return d; }
+function state(s, h) { body.classList.remove("listening", "thinking", "speaking"); if (s) body.classList.add(s); hint.textContent = h || "Tap to talk"; }
+
+// voice out
+let voice = null;
+function pickVoice() { const v = speechSynthesis.getVoices(); voice = v.find((x) => /Ava|Samantha|Allison|Zoe|Serena/i.test(x.name) && /^en/i.test(x.lang)) || v.find((x) => /^en-US/i.test(x.lang)) || null; }
+if ("speechSynthesis" in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+function speak(text) {
+  return new Promise((res) => {
+    if (!("speechSynthesis" in window)) return res();
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text); if (voice) u.voice = voice; u.rate = 1.03; u.pitch = 1.02;
+    u.onend = u.onerror = () => res(); state("speaking", "Speaking… tap to interrupt"); speechSynthesis.speak(u);
+  });
+}
+
+// voice in
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+let rec = null, listening = false;
+function listen() {
+  if (!SR) { $("#q").focus(); hint.textContent = "Use the keyboard mic to talk"; return; }
+  if (listening) { rec.stop(); return; }
+  rec = new SR(); rec.lang = "en-US"; rec.interimResults = true; rec.continuous = false;
+  let final = "", bubble = null;
+  rec.onresult = (e) => { let t = ""; for (const r of e.results) t += r[0].transcript; final = t; if (!bubble) bubble = add("", "you"); bubble.textContent = t; };
+  rec.onend = () => { listening = false; state(); if (final.trim()) ask(final.trim(), bubble); else if (bubble) bubble.remove(); };
+  rec.onerror = (e) => { listening = false; state(null, e.error === "not-allowed" ? "Allow the microphone in Settings, or type" : "Didn't catch that. Tap to try again"); };
+  listening = true; state("listening", "Listening…"); rec.start();
+}
+$("#orb").onclick = () => { if (body.classList.contains("speaking")) { speechSynthesis.cancel(); state(); return; } listen(); };
+
+async function ask(q, bubble) {
+  if (!bubble) add(q, "you");
+  history.push({ role: "user", content: q });
+  state("thinking", "Thinking…");
+  let say = "";
+  try {
+    const r = await fetch(API, { method: "POST", headers: { "content-type": "application/json", "x-friday-key": key }, body: JSON.stringify({ q }) });
+    const j = await r.json();
+    if (r.status === 401) { say = "That key isn't right. Tap Settings to enter it again."; }
+    else say = j.say || "Hmm, I didn't get an answer back.";
+    if (j.ran) add(`Started: ${j.ran.replace(/-/g, " ")}`, "note");
+    if (j.remembered) add(`Remembered: ${j.remembered}`, "note");
+  } catch { say = "I can't reach my brain right now. Check your connection."; }
+  add(say, "fri"); history.push({ role: "assistant", content: say });
+  try { sessionStorage.setItem("friday-hist", JSON.stringify(history.slice(-20))); } catch {}
+  await speak(say); state();
+  if (hands && SR) setTimeout(listen, 350);
+}
+$("#f").onsubmit = (e) => { e.preventDefault(); const q = $("#q").value.trim(); if (!q) return; $("#q").value = ""; $("#q").blur(); ask(q); };
+
+for (const m of history) add(m.content, m.role === "user" ? "you" : "fri");
+function greet() { if (!history.length) add("I'm here. Tap the orb and talk, or type below.", "fri"); }
+if (key) greet();
+</script>
+</body>
+</html>

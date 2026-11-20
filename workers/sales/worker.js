@@ -522,7 +522,10 @@ const FRIDAY_RAW = `https://raw.githubusercontent.com/${REPO}/main`;
 const FRIDAY_RUNS = { ...RUNS, "outreach-replies": ["outreach.yml", { mode: "replies" }], "assistant-check": ["assistant-check.yml", {}], "publish-store": ["deploy-store.yml", {}], "pinterest-stats": ["pinterest-stats.yml", {}] };
 
 async function friday(req, env, ctx) {
-  const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
+  const origin = req.headers.get("origin") || "";
+  const cors = /^https:\/\/recreationalviper\.github\.io$/i.test(origin) ? { "access-control-allow-origin": origin, "access-control-allow-methods": "POST, OPTIONS", "access-control-allow-headers": "content-type, x-friday-key", vary: "origin" } : {};
+  const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store", ...cors } });
+  if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
   if (req.method !== "POST") return out({ ok: false, error: "method" }, 405);
   const key = req.headers.get("x-friday-key") || "";
   // the owner's key, or the agents' test key (derived from the Payhip secret, so it never appears anywhere public)
