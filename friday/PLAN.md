@@ -33,3 +33,11 @@ and can act for him. Built on free or near-free services; grows one capability a
 - Never invent business numbers; facts come from the Worker (sales KV, repo files, GitHub runs).
 - The owner's key lives only on his phone; only its SHA-256 is in the code.
 - Phone actions always go through his own Shortcuts (iPhone may ask to confirm texts).
+
+## Connections (Nov 20)
+Settings › Connections in the app lists everything (green dot = live). Worker routes: /friday/connect (Google OAuth), /friday/connections (status, set_key, disconnect).
+- Google: Gmail, Calendar, Drive, Docs, Sheets (refresh token in KV friday:google). Emails: draft first, send only on a later "send it" (enforced in runGoogle).
+- Shop: fridayShop: sales/orders/refunds from Payhip webhook records in KV, coupons list/create (Payhip API only covers coupons). Stripe via pasted key (friday:key:stripe).
+- Second brain: fridayLookup: web (Tavily, Exa), think (Claude, $2/month cap in KV), notion/note, discord, report.
+- Owner key only for private data; the agents' test key gets web/think/report only (its output lands in public logs).
+- Next: PayPal, Etsy, Shopify, Spotify, bank accounts (read-only), Friday Hands Shortcut.
