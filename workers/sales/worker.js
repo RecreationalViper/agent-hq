@@ -579,8 +579,15 @@ His world:
 - Other projects may come up (lead generation for roofers, TikTok edits, trading agents). Help with anything: questions, ideas, planning, general knowledge.
 Use only the LIVE FACTS below for anything about his businesses' numbers or status; if something isn't there, say you don't have it yet. Never invent sales, replies or results.
 
-You can act. Return ONLY JSON: {"say": "what you speak", "run": null or one of [${Object.keys(FRIDAY_RUNS).join(", ")}], "remember": null or "a short fact to keep about him"}.
-Use "run" only when he clearly asks to start something. Use "remember" when he tells you something worth keeping (a preference, a plan, a person) or says "remember".
+You can act. Return ONLY JSON: {"say": "what you speak", "run": null or one of [${Object.keys(FRIDAY_RUNS).join(", ")}], "remember": null or "a short fact to keep about him", "phone": null or a phone action}.
+Use "run" only when he clearly asks to start an agent job. Use "remember" when he tells you something worth keeping (a preference, a plan, a person) or says "remember".
+"phone" makes HIS iPhone do something (his Shortcuts app carries it out). Use it only when he asks for it. Shapes:
+  {"do":"text","to":"contact name or number","message":"..."}   {"do":"call","to":"contact name or number"}
+  {"do":"reminder","title":"...","when":"natural time like tomorrow 5pm, or empty"}   {"do":"event","title":"...","when":"natural start time","minutes":60}
+  {"do":"timer","minutes":20}   {"do":"alarm","when":"6:30 AM"}   {"do":"directions","to":"place or address"}   {"do":"note","title":"...","text":"..."}
+  {"do":"music","query":"artist, song or playlist"}   {"do":"health","metric":"steps|sleep|heart rate|active energy|weight","days":1}   {"do":"open","url":"https://... or app URL"}
+For texts, write the message in his voice, short. Your "say" should confirm what you're doing ("Texting Mom that you'll be late."). For "health", say you're checking; his phone will send the numbers back to you.
+If his message starts with "PHONE DATA:", it's numbers his phone just sent for a question he asked: answer from them.
 
 THINGS HE ASKED YOU TO REMEMBER:
 ${memory.map((m) => `- ${m}`).join("\n") || "- (nothing yet)"}
@@ -603,5 +610,7 @@ ${facts.join("\n")}`;
   }
   if (r.remember && typeof r.remember === "string") { memory.push(`${r.remember.slice(0, 200)} (${now.toISOString().slice(0, 10)})`); await env.SALES.put("friday:memory", JSON.stringify(memory.slice(-200))); }
   await env.SALES.put("friday:history", JSON.stringify([...convo, { role: "assistant", content: say }].slice(-12)), { expirationTtl: 6 * 3600 });
-  return out({ ok: true, say, ran: r.run || null, remembered: r.remember || null });
+  const PHONE = ["text", "call", "reminder", "event", "timer", "alarm", "directions", "note", "music", "health", "open"];
+  const phone = r.phone && typeof r.phone === "object" && PHONE.includes(r.phone.do) ? r.phone : null;
+  return out({ ok: true, say, ran: r.run || null, remembered: r.remember || null, phone, phone_json: phone ? JSON.stringify(phone) : "" });
 }
