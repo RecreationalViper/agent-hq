@@ -1,10 +1,10 @@
-# Content Creator notes - 2026-11-19
+# Content Creator notes - 2026-11-20
 
-Theme: Last-minute Thanksgiving remembrance rituals and gentle holiday service planning
-Headlines made: Reserve Their Chair at Thanksgiving | Pass Memory Cards After Dinner | Fold Place Cards in Minutes | Create a Christmas Memory Corner | Candle Cards for Longest Night
+Theme: Last-minute Thanksgiving remembrance table setups and gentle holiday planning
+Headlines made: Personalized place cards for your table | Simple ways guests can share memories | Setting an empty seat with care | Last minute Thanksgiving memory table setup | Crafting tree ornaments holding precious names | Order of service programs for solstice | Editing your memorial program on phone | Collecting cherished stories at the reception
 
 ## For the Content Planner
-Created 5 posts: 3 Harvest Table (2 pins with tips background, 1 story), 1 Evergreen & Candlelight pin, 1 Longest Night story — meeting the 3+ Harvest Table requirement and covering all 3 holiday sets.,Used planner angles: Harvest Table 'gratitude card table activity' and 'small rituals for first Thanksgiving'; Evergreen 'remembrance corner by the tree'; Longest Night 'candle-lighting moment ideas for church service'.,Skipped Soft Botanical this week per Final Stretch priority; will return to it after Thanksgiving.,Avoided all 34 banned headlines; crafted new headlines focused on actionable rituals.,Two pins use tips background with 4 practical tips each; one pin uses scene-venue; both stories use scene backgrounds matching product aesthetics.
+Created 8 posts adhering to all strict holiday constraints: 4 posts spotlighting Harvest Table (Thanksgiving is 6 days away), 1 for Evergreen & Candlelight, 1 for Longest Night, and 2 for Soft Botanical suite. Featured exact piece images across all sets (h-place, h-card, h-sign, h-cards, e-orn, l-prog1, program-inside, memory-card). Included owner-approved coupon code THANKFUL15 in captions of exactly 2 posts. Used two 'tips' background pins with practical numbered ideas under 8 words each, and exactly one 'painted' story background. Avoided all prohibited keywords, software names, and banned headlines.
 
 ## For the SEO Scout
-Search volume for 'thanksgiving empty chair tradition' vs 'thanksgiving memorial place setting' — which phrasing do planners use more?,Autocomplete phrases for 'blue christmas service program template' — are people searching for specific denominations or 'faith neutral'?,People Also Ask questions for 'first christmas without loved one traditions' to inform Evergreen & Candlelight FAQ content.
+What are top search terms for last-minute printable place cards for Thanksgiving?,Do church planners search more for 'Blue Christmas program template' or 'Longest Night order of service'?
