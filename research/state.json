@@ -1,5 +1,18 @@
 {
   "covered": [
+    "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+    "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-adds-strands-harness-defaults-built-in-tools-and-lifecycle-hooks/",
+    "https://aws.amazon.com/blogs/machine-learning/use-kimi-code-cli-with-models-on-amazon-bedrock/",
+    "https://www.anthropic.com/news/ipo-close",
+    "https://thedecoded.media/gemini-carbon-api-pricing-hike/",
+    "https://ai123.com/newshub/18748",
+    "https://github.blog/changelog/2026-11-19-github-desktop-now-supports-multiple-accounts-per-host",
+    "https://github.blog/changelog/2026-11-19-improvements-on-the-pull-request-overview-in-public-preview",
+    "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+    "https://www.anthropic.com/research/claude-black-hole-physics",
+    "https://arxiv.org/abs/2611.21885",
+    "https://architectlabs.com/blog/frostbite",
+    "https://arxiv.org/abs/2611.26553v1",
     "https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot",
     "https://deepmind.google/blog/genie-4-is-now-available/",
     "https://aiearlyedition.com/tools/openai-gpt-6-2-astra-sol/",
@@ -128,6 +141,6 @@
     "https://hunch.net/?p=13764006",
     "https://www.kadoa.com/companies/insights/ai-selloff-perspective"
   ],
-  "lastRun": "2026-11-19",
-  "lastNotion": "2026-11-19"
+  "lastRun": "2026-11-20",
+  "lastNotion": "2026-11-20"
 }
