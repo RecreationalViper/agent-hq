@@ -524,7 +524,9 @@ const FRIDAY_RUNS = { ...RUNS, "outreach-replies": ["outreach.yml", { mode: "rep
 async function friday(req, env, ctx) {
   const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
   if (req.method !== "POST") return out({ ok: false, error: "method" }, 405);
-  if ((await sha256(req.headers.get("x-friday-key") || "")) !== FRIDAY_KEY_SHA) return out({ ok: false, say: "Sorry, I don't know you." }, 401);
+  const key = req.headers.get("x-friday-key") || "";
+  // the owner's key, or the agents' test key (derived from the Payhip secret, so it never appears anywhere public)
+  if ((await sha256(key)) !== FRIDAY_KEY_SHA && !(env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)))) return out({ ok: false, say: "Sorry, I don't know you." }, 401);
   let d; try { d = await req.json(); } catch { d = {}; }
   const q = String(d.q || d.text || "").trim().slice(0, 2000);
   if (!q) return out({ ok: true, say: "I'm here. What do you need?" });
