@@ -52,6 +52,7 @@
 <header><b>FRIDAY</b><button id="forget" type="button">Settings</button></header>
 <div id="log"></div>
 <div id="core"><button id="orb" aria-label="Talk to Friday"></button><div id="hint">Tap to talk</div></div>
+<label class="t"><input type="checkbox" id="livebox" style="flex:0"> <b style="color:#8fd0ff">Live mode</b>&nbsp;(talk naturally, interrupt anytime)</label>
 <label class="t"><input type="checkbox" id="hands" style="flex:0"> Keep listening after she answers</label>
 <label class="t">Voice <select id="voice" style="background:#0f1424;color:#e8f1ff;border:1px solid #223055;border-radius:10px;padding:6px;max-width:60%"></select></label>
 <form id="f"><input id="q" placeholder="Or type to Friday…" autocomplete="off"><button>Send</button></form>
@@ -131,7 +132,81 @@ async function listen() {
   };
   listening = true; state("listening", "Listening… (tap to stop)"); rec.start(); tick();
 }
-$("#orb").onclick = () => { if (body.classList.contains("speaking")) { speechSynthesis.cancel(); state(); return; } listen(); };
+
+// ───────── Live mode: real-time voice with Gemini Live (she listens and talks at the same time) ─────────
+let liveOn = false; try { liveOn = localStorage.getItem("friday-live") !== "0"; } catch {}
+$("#livebox").checked = liveOn;
+$("#livebox").onchange = (e) => { liveOn = e.target.checked; try { localStorage.setItem("friday-live", liveOn ? "1" : "0"); } catch {} if (!liveOn) stopLive(); state(null, liveOn ? "Tap to start talking" : "Tap to talk"); };
+let L = null; // { ws, ctx, mic, proc, playAt, sources, youBubble, herBubble }
+const b64 = (u8) => { let s = ""; for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode(...u8.subarray(i, i + 0x8000)); return btoa(s); };
+async function startLive() {
+  state("thinking", "Connecting…");
+  let cfg;
+  try { const r = await fetch(API + "/live", { method: "POST", headers: { "content-type": "application/json", "x-friday-key": key }, body: JSON.stringify({ voice: localStorage.getItem("friday-live-voice") || "Kore" }) }); cfg = await r.json(); if (r.status === 401) throw new Error("key"); }
+  catch (e) { state(null, e.message === "key" ? "That key isn't right. Tap Settings." : "Couldn't connect. Tap to try again"); return; }
+  if (!cfg.ok) { state(null, "Live mode is busy. Switching to normal mode for now."); add("Live mode isn't available right now, so I'm using normal mode.", "note"); return; }
+  let stream; try { stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true } }); }
+  catch { state(null, "Allow the microphone for Friday, then tap again"); return; }
+  const ctx = new (window.AudioContext || window.webkitAudioContext)(); await ctx.resume();
+  const ws = new WebSocket(`wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContentConstrained?access_token=${cfg.token}`);
+  L = { ws, ctx, stream, playAt: 0, sources: [], youBubble: null, herBubble: null, ready: false };
+  ws.onopen = () => ws.send(JSON.stringify({ setup: { model: cfg.model, generationConfig: { responseModalities: ["AUDIO"], speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: cfg.voice } } } }, systemInstruction: { parts: [{ text: cfg.system }] }, tools: cfg.tools, inputAudioTranscription: {}, outputAudioTranscription: {} } }));
+  ws.onmessage = async (e) => {
+    const m = JSON.parse(typeof e.data === "string" ? e.data : await e.data.text());
+    if (m.setupComplete) { L.ready = true; startMic(); state("listening", "Live — just talk (tap to end)"); }
+    const sc = m.serverContent;
+    if (sc?.interrupted) { for (const s of L.sources) try { s.stop(); } catch {} L.sources = []; L.playAt = 0; }
+    for (const p of sc?.modelTurn?.parts || []) if (p.inlineData?.data) playPcm(p.inlineData.data);
+    if (sc?.inputTranscription?.text) { if (!L.youBubble) L.youBubble = add("", "you"); L.youBubble.textContent += sc.inputTranscription.text; log.scrollTop = log.scrollHeight; }
+    if (sc?.outputTranscription?.text) { L.youBubble = null; if (!L.herBubble) L.herBubble = add("", "fri"); L.herBubble.textContent += sc.outputTranscription.text; log.scrollTop = log.scrollHeight; }
+    if (sc?.turnComplete) { L.herBubble = null; L.youBubble = null; }
+    if (m.toolCall) {
+      const functionResponses = [];
+      for (const f of m.toolCall.functionCalls || []) {
+        let result = "Done.";
+        if (f.name === "phone_action") { pendingPhone = f.args; add(`On your phone next: ${f.args.do}`, "note"); result = "Queued on his phone; it runs when he ends the call."; }
+        else { try { result = (await (await fetch(API + "/tool", { method: "POST", headers: { "content-type": "application/json", "x-friday-key": key }, body: JSON.stringify({ name: f.name, args: f.args }) })).json()).result; } catch { result = "That tool isn't reachable right now."; } if (f.name !== "get_status") add(result, "note"); }
+        functionResponses.push({ id: f.id, name: f.name, response: { result } });
+      }
+      ws.send(JSON.stringify({ toolResponse: { functionResponses } }));
+    }
+  };
+  ws.onclose = () => { if (L?.ws === ws) stopLive(true); };
+  ws.onerror = () => add("Live connection dropped.", "note");
+}
+function startMic() {
+  const src = L.ctx.createMediaStreamSource(L.stream);
+  const proc = L.ctx.createScriptProcessor(4096, 1, 1);
+  const ratio = L.ctx.sampleRate / 16000;
+  proc.onaudioprocess = (ev) => {
+    if (!L?.ready || L.ws.readyState !== 1) return;
+    const inp = ev.inputBuffer.getChannelData(0), n = Math.floor(inp.length / ratio), out = new Int16Array(n);
+    let peak = 0;
+    for (let i = 0; i < n; i++) { const v = Math.max(-1, Math.min(1, inp[Math.floor(i * ratio)])); out[i] = v * 0x7fff; peak = Math.max(peak, Math.abs(v)); }
+    if (!L.sources.length) document.getElementById("orb").style.transform = `scale(${1.08 + Math.min(peak, .5) / 2.5})`;
+    L.ws.send(JSON.stringify({ realtimeInput: { audio: { data: b64(new Uint8Array(out.buffer)), mimeType: "audio/pcm;rate=16000" } } }));
+  };
+  const mute = L.ctx.createGain(); mute.gain.value = 0;
+  src.connect(proc); proc.connect(mute); mute.connect(L.ctx.destination);
+  L.proc = proc; L.src = src;
+}
+function playPcm(data) {
+  const bin = atob(data), n = bin.length >> 1, buf = L.ctx.createBuffer(1, n, 24000), ch = buf.getChannelData(0);
+  for (let i = 0; i < n; i++) { let v = bin.charCodeAt(2 * i) | (bin.charCodeAt(2 * i + 1) << 8); if (v >= 32768) v -= 65536; ch[i] = v / 32768; }
+  const s = L.ctx.createBufferSource(); s.buffer = buf; s.connect(L.ctx.destination);
+  const at = Math.max(L.ctx.currentTime + 0.02, L.playAt); s.start(at); L.playAt = at + buf.duration;
+  L.sources.push(s); body.classList.add("speaking");
+  s.onended = () => { L && (L.sources = L.sources.filter((x) => x !== s)); if (L && !L.sources.length) body.classList.remove("speaking"); };
+}
+function stopLive(remote) {
+  if (!L) return; const x = L; L = null;
+  try { x.ws.close(); } catch {} try { x.proc?.disconnect(); x.src?.disconnect(); } catch {} x.stream?.getTracks().forEach((t) => t.stop()); x.ctx?.close().catch(() => {});
+  document.getElementById("orb").style.transform = ""; state(null, liveOn ? "Tap to start talking" : "Tap to talk");
+  if (remote) add("Call ended.", "note");
+  if (pendingPhone) { const p = pendingPhone; pendingPhone = null; location.href = "shortcuts://run-shortcut?name=" + encodeURIComponent("Friday Hands") + "&input=text&text=" + encodeURIComponent(JSON.stringify(p)); }
+}
+
+$("#orb").onclick = () => { if (liveOn) { L ? stopLive() : startLive(); return; } if (body.classList.contains("speaking")) { speechSynthesis.cancel(); state(); return; } listen(); };
 
 async function ask(q, bubble, audio) {
   if (!bubble) add(q, "you");
@@ -160,6 +235,7 @@ $("#f").onsubmit = (e) => { e.preventDefault(); const q = $("#q").value.trim(); 
 for (const m of history) add(m.content, m.role === "user" ? "you" : "fri");
 function greet() { if (!history.length) add("I'm here. Tap the orb and talk, or type below.", "fri"); }
 if (key) greet();
+if (liveOn) state(null, "Tap to start talking");
 </script>
 </body>
 </html>
