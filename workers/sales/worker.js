@@ -687,7 +687,7 @@ FACTS AT THE START OF THIS CALL:\n${facts.join("\n")}`;
       body: JSON.stringify({ uses: 1, expireTime: exp, newSessionExpireTime: start, liveConnectConstraints: { model, config: { responseModalities: ["AUDIO"] } } }) });
     const t = await r.text();
     if (r.ok) { const j = JSON.parse(t); return out({ ok: true, token: j.name, model, voice: d.voice || "Kore", system, tools }); }
-    last = `${model}: HTTP ${r.status} ${t.slice(0, 160)}`;
+    last += ` | ${model}: HTTP ${r.status} ${t.replace(/\s+/g, " ").slice(0, 260)}`;
   }
   return out({ ok: false, error: last });
 }
