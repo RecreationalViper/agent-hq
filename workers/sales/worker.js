@@ -842,7 +842,7 @@ async function resolveEmail(env, to) {
   for (const m of items) for (const h of [m.from, ...m.to.split(",")]) if (h.toLowerCase().includes(name)) { const a = h.match(/[^<\s"]+@[^>\s"]+/); if (a) return a[0]; }
   return null;
 }
-const b64url = (s) => btoa(unescape(encodeURIComponent(s))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+const b64urlText = (s) => btoa(unescape(encodeURIComponent(s))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 const addMinutes = (local, min) => new Date(Date.parse(local + "Z") + min * 60e3).toISOString().slice(0, 16);
 
 // One entry point for every Google action (text mode and Live mode). Returns a plain result for Friday to speak from.
@@ -868,7 +868,7 @@ async function runGoogle(env, a = {}) {
       if (!addr) return `I couldn't find an email address for ${a.to}. Ask him for it.`;
       const subject = String(a.subject || "Quick note").replace(/[\r\n]+/g, " ");
       const raw = `To: ${addr}\r\nSubject: =?UTF-8?B?${btoa(unescape(encodeURIComponent(subject)))}?=\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\n${a.body}`;
-      const dr = await gApi(env, `${G_MAIL}/drafts`, { method: "POST", body: JSON.stringify({ message: { raw: b64url(raw) } }) });
+      const dr = await gApi(env, `${G_MAIL}/drafts`, { method: "POST", body: JSON.stringify({ message: { raw: b64urlText(raw) } }) });
       await env.SALES.put("friday:pending_email", JSON.stringify({ id: dr.id, to: addr, subject, at: Date.now() }), { expirationTtl: 1800 });
       return `DRAFT SAVED (not sent) to ${addr}, subject "${subject}". Read him the gist and ask: send it?`;
     }
