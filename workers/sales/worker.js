@@ -518,7 +518,7 @@ async function openRouterChat(env, system, history) {
 // Knows the businesses (sales from KV, agent reports, posting status, church outreach), remembers what it's told,
 // and can start agent workflows. Answers are short and speakable (Siri reads them aloud).
 const FRIDAY_KEY_SHA = "24e6f6d78ba5f775d60efcb6ff8939a5f19d5ae7f22f2e0a79aba608f66fa1d5";
-const RAW = `https://raw.githubusercontent.com/${REPO}/main`;
+const FRIDAY_RAW = `https://raw.githubusercontent.com/${REPO}/main`;
 const FRIDAY_RUNS = { ...RUNS, "outreach-replies": ["outreach.yml", { mode: "replies" }], "assistant-check": ["assistant-check.yml", {}], "publish-store": ["deploy-store.yml", {}], "pinterest-stats": ["pinterest-stats.yml", {}] };
 
 async function friday(req, env, ctx) {
@@ -544,7 +544,7 @@ async function friday(req, env, ctx) {
     const total = sales.reduce((s, x) => s + (Number(x.amount) || 0), 0);
     facts.push(`SALES (last 30 days): ${sales.length} order(s), about $${total.toFixed(2)}.${sales.slice(-5).map((x) => ` ${x.date.slice(0, 10)}: ${(x.items || []).map((i) => i.product).join(" + ") || "order"} $${x.amount}${x.coupon ? ` (code ${x.coupon})` : ""}`).join(";")}`);
   } catch (e) { facts.push("SALES: couldn't read."); }
-  const get = (p) => fetch(`${RAW}/${p}`, { signal: timeout() }).then((r) => (r.ok ? r.text() : "")).catch(() => "");
+  const get = (p) => fetch(`${FRIDAY_RAW}/${p}`, { signal: timeout() }).then((r) => (r.ok ? r.text() : "")).catch(() => "");
   const [status, churches, reportsIdx, history] = await Promise.all([get("skills/automation/status.md"), get("outreach/churches.csv"), get("reports/index.json"), get("content/history.json")]);
   if (status) facts.push(`POSTING STATUS:\n${status.replace(/\|/g, " ").replace(/-{3,}/g, "").slice(0, 1400)}`);
   if (churches) {
