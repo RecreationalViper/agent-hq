@@ -61,6 +61,7 @@ export default {
     if (url.pathname.startsWith("/canva/")) return canva(req, url, env);
     if (url.pathname === "/contact") return contact(req, env);
     if (url.pathname === "/chat") return chat(req, env, ctx);
+    if (url.pathname === "/friday") return friday(req, env, ctx);
     if (url.pathname === "/contacts") return contactsInbox(req, url, env);
     if (url.pathname === "/unsubscribe") return unsubscribe(req, url, env);
     if (url.pathname === "/privacy") return new Response(PRIVACY, { headers: { "content-type": "text/html; charset=utf-8" } });
@@ -510,4 +511,92 @@ async function openRouterChat(env, system, history) {
     catch (e) { last = e; }
   }
   throw last || new Error("openrouter: no free model answered");
+}
+
+// ───────────────────────── Friday: the owner's private voice assistant ─────────────────────────
+// POST /friday { q, history? } with header x-friday-key. Only the owner has the key (its SHA-256 is below).
+// Knows the businesses (sales from KV, agent reports, posting status, church outreach), remembers what it's told,
+// and can start agent workflows. Answers are short and speakable (Siri reads them aloud).
+const FRIDAY_KEY_SHA = "24e6f6d78ba5f775d60efcb6ff8939a5f19d5ae7f22f2e0a79aba608f66fa1d5";
+const RAW = `https://raw.githubusercontent.com/${REPO}/main`;
+const FRIDAY_RUNS = { ...RUNS, "outreach-replies": ["outreach.yml", { mode: "replies" }], "assistant-check": ["assistant-check.yml", {}], "publish-store": ["deploy-store.yml", {}], "pinterest-stats": ["pinterest-stats.yml", {}] };
+
+async function friday(req, env, ctx) {
+  const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
+  if (req.method !== "POST") return out({ ok: false, error: "method" }, 405);
+  if ((await sha256(req.headers.get("x-friday-key") || "")) !== FRIDAY_KEY_SHA) return out({ ok: false, say: "Sorry, I don't know you." }, 401);
+  let d; try { d = await req.json(); } catch { d = {}; }
+  const q = String(d.q || d.text || "").trim().slice(0, 2000);
+  if (!q) return out({ ok: true, say: "I'm here. What do you need?" });
+
+  const memory = JSON.parse(await env.SALES.get("friday:memory") || "[]");
+  const past = JSON.parse(await env.SALES.get("friday:history") || "[]");
+  const now = new Date();
+  const ny = now.toLocaleString("en-US", { timeZone: "America/New_York", weekday: "long", month: "long", day: "numeric", hour: "numeric", minute: "2-digit" });
+
+  // what's going on, gathered fresh each time (each piece is optional)
+  const facts = [];
+  const sales = [];
+  try {
+    const since = new Date(now - 30 * 864e5).toISOString().slice(0, 10);
+    let cursor;
+    do { const page = await env.SALES.list({ prefix: "paid:", cursor }); for (const k of page.keys) if (k.name.slice(5) >= since) { const v = await env.SALES.get(k.name); if (v) sales.push(JSON.parse(v)); } cursor = page.list_complete ? null : page.cursor; } while (cursor);
+    const total = sales.reduce((s, x) => s + (Number(x.amount) || 0), 0);
+    facts.push(`SALES (last 30 days): ${sales.length} order(s), about $${total.toFixed(2)}.${sales.slice(-5).map((x) => ` ${x.date.slice(0, 10)}: ${(x.items || []).map((i) => i.product).join(" + ") || "order"} $${x.amount}${x.coupon ? ` (code ${x.coupon})` : ""}`).join(";")}`);
+  } catch (e) { facts.push("SALES: couldn't read."); }
+  const get = (p) => fetch(`${RAW}/${p}`, { signal: timeout() }).then((r) => (r.ok ? r.text() : "")).catch(() => "");
+  const [status, churches, reportsIdx, history] = await Promise.all([get("skills/automation/status.md"), get("outreach/churches.csv"), get("reports/index.json"), get("content/history.json")]);
+  if (status) facts.push(`POSTING STATUS:\n${status.replace(/\|/g, " ").replace(/-{3,}/g, "").slice(0, 1400)}`);
+  if (churches) {
+    const rows = churches.trim().split("\n").slice(1);
+    const st = (s) => rows.filter((r) => r.includes(`,${s}`)).length;
+    const replied = rows.filter((r) => /,replied/.test(r)).map((r) => r.split(",")[0]);
+    facts.push(`CHURCH OUTREACH (Longest Night set): ${rows.length} churches on the list, ${st("sent")} emailed, ${replied.length} replied${replied.length ? ` (${replied.join(", ")})` : ""}, ${st("new")} waiting. Full replies are posted in Discord.`);
+  }
+  try { const idx = JSON.parse(reportsIdx || "[]").slice(0, 12); facts.push(`LATEST AGENT REPORTS: ${idx.map((r) => `${r.date} ${r.name}`).join("; ")}`); } catch {}
+  try { const h = JSON.parse(history || "[]"); const last = (Array.isArray(h) ? h : h.posts || []).slice(-8).map((p) => p.headline || p.title || p).filter((x) => typeof x === "string"); if (last.length) facts.push(`RECENT POSTS: ${last.join(" | ")}`); } catch {}
+  if (env.GH_TOKEN) {
+    try {
+      const r = await fetch(`https://api.github.com/repos/${REPO}/actions/runs?per_page=40`, { signal: timeout(), headers: { Authorization: `Bearer ${env.GH_TOKEN}`, Accept: "application/vnd.github+json", "User-Agent": "Friday" } });
+      const runs = (await r.json()).workflow_runs || [];
+      const fails = runs.filter((x) => x.conclusion === "failure" && now - new Date(x.created_at) < 864e5).map((x) => x.name);
+      facts.push(`AGENTS (last 24 h): ${runs.filter((x) => now - new Date(x.created_at) < 864e5).length} runs, ${fails.length ? `failed: ${[...new Set(fails)].join(", ")}` : "no failures"}.`);
+    } catch {}
+  }
+
+  const system = `You are Friday, Josiah Cottingham's personal AI assistant (like Tony Stark's FRIDAY): warm, sharp, a little witty, always on his side. He talks to you by voice through Siri, so:
+- Answer in plain spoken sentences, usually under 70 words. No markdown, lists, links, emojis or URLs unless he asks.
+- Lead with the answer. Numbers rounded and spoken naturally.
+It's ${ny} (New York).
+
+His world:
+- Forever Held: his printable memorial keepsake shop (store https://foreverheld.pages.dev, checkout on Payhip). A team of AI agents on GitHub makes daily pins and posts (Pinterest via site feed, Facebook Page via Make.com), runs a church email outreach for the Longest Night set, sweeps email, and writes reports. Claude (in the Claude app) is his head of development for bigger builds.
+- Other projects may come up (lead generation for roofers, TikTok edits, trading agents). Help with anything: questions, ideas, planning, general knowledge.
+Use only the LIVE FACTS below for anything about his businesses' numbers or status; if something isn't there, say you don't have it yet. Never invent sales, replies or results.
+
+You can act. Return ONLY JSON: {"say": "what you speak", "run": null or one of [${Object.keys(FRIDAY_RUNS).join(", ")}], "remember": null or "a short fact to keep about him"}.
+Use "run" only when he clearly asks to start something. Use "remember" when he tells you something worth keeping (a preference, a plan, a person) or says "remember".
+
+THINGS HE ASKED YOU TO REMEMBER:
+${memory.map((m) => `- ${m}`).join("\n") || "- (nothing yet)"}
+
+LIVE FACTS:
+${facts.join("\n")}`;
+  const convo = [...past.slice(-8), { role: "user", content: q }];
+  let raw = "", why = [];
+  for (const ask of [groqChat, geminiChat, openRouterChat, workersChat]) {
+    try { raw = stripPlanning(await ask(env, system, convo) || ""); if (raw) break; } catch (e) { why.push(`${ask.name}: ${String(e.message || e).slice(0, 80)}`); }
+  }
+  if (!raw) return out({ ok: false, say: "My brain's offline for a minute. All my AI services are busy. Try me again shortly.", why });
+  let r = {};
+  try { const m = raw.match(/\{[\s\S]*\}/); r = JSON.parse((m ? m[0] : raw).replace(/,\s*([}\]])/g, "$1")); } catch { r = { say: raw }; }
+  let say = String(r.say || raw).replace(/\*\*?/g, "").replace(/^#+\s*/gm, "").trim().slice(0, 1500);
+  if (r.run && FRIDAY_RUNS[r.run]) {
+    const [wf, inputs] = FRIDAY_RUNS[r.run];
+    const res = env.GH_TOKEN ? await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/${wf}/dispatches`, { method: "POST", headers: { Authorization: `Bearer ${env.GH_TOKEN}`, Accept: "application/vnd.github+json", "User-Agent": "Friday", "content-type": "application/json" }, body: JSON.stringify({ ref: "main", inputs }) }).catch(() => null) : null;
+    if (res?.status !== 204) say += ` Heads up: I couldn't start ${r.run.replace(/-/g, " ")} just now.`;
+  }
+  if (r.remember && typeof r.remember === "string") { memory.push(`${r.remember.slice(0, 200)} (${now.toISOString().slice(0, 10)})`); await env.SALES.put("friday:memory", JSON.stringify(memory.slice(-200))); }
+  await env.SALES.put("friday:history", JSON.stringify([...convo, { role: "assistant", content: say }].slice(-12)), { expirationTtl: 6 * 3600 });
+  return out({ ok: true, say, ran: r.run || null, remembered: r.remember || null });
 }
