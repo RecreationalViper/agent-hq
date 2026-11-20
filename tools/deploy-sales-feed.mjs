@@ -73,6 +73,9 @@ if (CANVA_ID && CANVA_SECRET) {
 // Friday's Google connector (Gmail + Calendar): reuses the owner's Google OAuth client; he connects once with a private link
 const G_ID = (process.env.GMAIL_CLIENT_ID || "").trim(), G_SECRET = (process.env.GMAIL_CLIENT_SECRET || "").trim();
 if (G_ID && G_SECRET) { bindings.push({ type: "plain_text", name: "GOOGLE_CLIENT_ID", text: G_ID }, { type: "secret_text", name: "GOOGLE_CLIENT_SECRET", text: G_SECRET }); console.log("Friday: Google client saved on the Worker"); }
+// Friday's second brain: web search, Claude for hard questions, Notion (all keys the agents already use)
+for (const [name, v] of [["TAVILY_API_KEY", process.env.TAVILY_API_KEY], ["EXA_API_KEY", process.env.EXA_API_KEY], ["CLAUDE_API_KEY", process.env.CLAUDE_API_KEY], ["NOTION_TOKEN", process.env.NOTION_TOKEN]]) if (v?.trim()) bindings.push({ type: "secret_text", name, text: v.trim() });
+console.log(`Friday lookups: ${["TAVILY_API_KEY", "EXA_API_KEY", "CLAUDE_API_KEY", "NOTION_TOKEN"].filter((n) => process.env[n]?.trim()).join(", ") || "none"}`);
 const form = new FormData();
 form.append("metadata", new Blob([JSON.stringify({ main_module: "worker.js", compatibility_date: "2026-01-01", bindings })], { type: "application/json" }));
 form.append("worker.js", new Blob([await fs.readFile("workers/sales/worker.js", "utf8")], { type: "application/javascript+module" }), "worker.js");

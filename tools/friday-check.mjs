@@ -4,7 +4,7 @@ const key = crypto.createHash("sha256").update("friday-check:" + (process.env.PA
 const URL_ = "https://foreverheld-sales.foreverheld.workers.dev/friday";
 const bad = await fetch(URL_, { method: "POST", headers: { "x-friday-key": "wrong" }, body: "{}" });
 console.log(`wrong key -> HTTP ${bad.status} (should be 401)`);
-for (const q of (process.env.QUESTIONS || "Good morning Friday, what's going on with my business?|How many churches have we emailed and did anyone reply?|What's 15 percent of 9.99?").split("|")) {
+for (const q of (process.env.QUESTIONS || "Good morning Friday, what's going on with my business?|How many churches have we emailed and did anyone reply?|What's 15 percent of 9.99?|What's in the news about Pinterest today?|Think hard: should a tiny printable memorial shop focus on Pinterest or Facebook groups this December? One line.|What did the growth coach say in its latest report?").split("|")) {
   const t0 = Date.now();
   const r = await fetch(URL_, { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: JSON.stringify({ q }) });
   const j = await r.json().catch(() => ({}));

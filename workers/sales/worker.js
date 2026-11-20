@@ -577,7 +577,14 @@ His world:
 - Other projects may come up (lead generation for roofers, TikTok edits, trading agents). Help with anything: questions, ideas, planning, general knowledge.
 Use only the LIVE FACTS below for anything about his businesses' numbers or status; if something isn't there, say you don't have it yet. Never invent sales, replies or results.
 
-You can act. Return ONLY JSON: {"say": "what you speak", "run": null or one of [${Object.keys(FRIDAY_RUNS).join(", ")}], "remember": null or "a short fact to keep about him", "phone": null or a phone action, "google": null or a Google action}.
+You can act. Return ONLY JSON: {"say": "what you speak", "run": null or one of [${Object.keys(FRIDAY_RUNS).join(", ")}], "remember": null or "a short fact to keep about him", "phone": null or a phone action, "google": null or a Google action, "lookup": null or a lookup}.
+"lookup" is your second brain. Use it whenever the answer needs fresh or outside info instead of guessing:
+  {"tool":"web","query":"..."}  current news, prices, facts, anything on the internet
+  {"tool":"think","query":"the hard question","context":"what you know"}  big decisions, strategy, money, tricky reasoning or code: asks Claude
+  {"tool":"notion","query":"..."}  search his Notion   {"tool":"note","title":"...","text":"..."}  save notes, ideas or plans to his Notion
+  {"tool":"discord","channel":"content|sales|inbox|alerts|research|growth|trading-desk|..."}  read what his agents posted (church replies are in content)
+  {"tool":"report","query":"agent name like growth coach or researcher"}  read an agent's latest report
+When you use a lookup, "say" can be a short "One sec." because you'll answer again with the result.
 "google" works in HIS Gmail and Google Calendar (only if the facts show Google is connected). Shapes:
   {"do":"calendar","days":14}  look further ahead than the facts show   {"do":"email_search","query":"Gmail search like from:mom newer_than:7d or invoice"}  find or read emails
   {"do":"event_add","title":"...","start":"YYYY-MM-DDTHH:MM in New York time, or YYYY-MM-DD for all day","minutes":60,"location":""}
@@ -612,16 +619,30 @@ ${facts.join("\n")}`;
     const res = env.GH_TOKEN ? await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/${wf}/dispatches`, { method: "POST", headers: { Authorization: `Bearer ${env.GH_TOKEN}`, Accept: "application/vnd.github+json", "User-Agent": "Friday", "content-type": "application/json" }, body: JSON.stringify({ ref: "main", inputs }) }).catch(() => null) : null;
     if (res?.status !== 204) say += ` Heads up: I couldn't start ${r.run.replace(/-/g, " ")} just now.`;
   }
-  let gResult = null;
+  // ask the model again with a tool's result, so she answers from it
+  const secondPass = async (label, act, result) => {
+    for (const ask of [groqChat, geminiChat, openRouterChat, workersChat]) {
+      try {
+        const t = stripPlanning(await ask(env, system, [...convo, { role: "assistant", content: JSON.stringify({ say: "(looking it up)", act }) }, { role: "user", content: `${label} (not from him; answer his question from this, as JSON with "say" only, spoken and short):\n${String(result).slice(0, 5000)}` }]) || "");
+        if (!t) continue;
+        const m2 = t.match(/\{[\s\S]*\}/); let j2; try { j2 = m2 ? JSON.parse(m2[0].replace(/,\s*([}\]])/g, "$1")) : { say: t }; } catch { j2 = { say: t }; }
+        if (j2.say) return String(j2.say).replace(/\*\*?/g, "").trim().slice(0, 1500);
+      } catch {}
+    }
+    return "";
+  };
+  let gResult = null, lResult = null;
+  if (r.lookup && typeof r.lookup === "object" && (owner || ["web", "think", "report"].includes(r.lookup.tool))) {
+    lResult = await fridayLookup(env, r.lookup);
+    if (r.lookup.tool === "note" || /^Couldn't|isn't connected|Unknown lookup/.test(lResult)) say = r.lookup.tool === "note" && lResult === "Saved to Notion." ? say : lResult;
+    else { const a2 = await secondPass(`${r.lookup.tool.toUpperCase()} RESULT`, r.lookup, lResult); if (a2) say = a2; }
+  }
   if (owner && r.google && typeof r.google === "object" && r.google.do) {
     gResult = await runGoogle(env, r.google);
     if (["calendar", "email_search"].includes(r.google.do) && !/^Couldn't/.test(gResult)) {
       // second pass: answer from what Google returned
       try {
-        const again = stripPlanning(await (async () => { for (const ask of [groqChat, geminiChat, openRouterChat, workersChat]) { try { const t = await ask(env, system, [...convo, { role: "assistant", content: JSON.stringify({ say: "(looking it up)", google: r.google }) }, { role: "user", content: `GOOGLE RESULT (not from him, answer his question from this, JSON with "say" only):\n${gResult.slice(0, 4000)}` }]); if (t) return t; } catch {} } return ""; })());
-        const m2 = again.match(/\{[\s\S]*\}/); const j2 = m2 ? JSON.parse(m2[0].replace(/,\s*([}\]])/g, "$1")) : { say: again };
-        if (j2.say) say = String(j2.say).replace(/\*\*?/g, "").trim().slice(0, 1500);
-      } catch {}
+        const a2 = await secondPass("GOOGLE RESULT", r.google, gResult); if (a2) say = a2;      } catch {}
     } else if (/^(Couldn't|I couldn't|Need |Not sent|There's no|Unknown)/.test(gResult)) say = gResult.replace(/^Couldn't do that: /, "I couldn't do that, boss: ");
     else if (r.google.do === "email_send") say = /^SENT/.test(gResult) ? `Sent to ${gResult.match(/to (\S+)/)?.[1] || "them"}.` : say;
   } else if (!owner && r.google) say += " (Google tools are owner-only.)";
@@ -629,7 +650,7 @@ ${facts.join("\n")}`;
   await env.SALES.put("friday:history", JSON.stringify([...convo, { role: "assistant", content: say }].slice(-12)), { expirationTtl: 6 * 3600 });
   const PHONE = ["text", "call", "reminder", "event", "timer", "alarm", "directions", "note", "music", "health", "open"];
   const phone = r.phone && typeof r.phone === "object" && PHONE.includes(r.phone.do) ? r.phone : null;
-  return out({ ok: true, heard, say, ran: r.run || null, remembered: r.remember || null, google: gResult, phone, phone_json: phone ? JSON.stringify(phone) : "" });
+  return out({ ok: true, heard, say, ran: r.run || null, remembered: r.remember || null, google: gResult, lookup: lResult ? String(lResult).slice(0, 600) : null, phone, phone_json: phone ? JSON.stringify(phone) : "" });
 }
 
 
@@ -687,6 +708,7 @@ async function fridayLive(req, env, isTool) {
     const a = d.args || {};
     if (d.name === "get_status") return out({ ok: true, result: (await fridayFacts(env, new Date(), owner)).join("\n") });
     if (d.name === "google") return out({ ok: true, result: owner ? await runGoogle(env, a) : "Google tools are owner-only." });
+    if (d.name === "lookup") return out({ ok: true, result: owner || ["web", "think", "report"].includes(a.tool) ? await fridayLookup(env, a) : "That lookup is owner-only." });
     if (d.name === "remember" && a.fact) { memory.push(`${String(a.fact).slice(0, 200)} (${new Date().toISOString().slice(0, 10)})`); await env.SALES.put("friday:memory", JSON.stringify(memory.slice(-200))); return out({ ok: true, result: "Saved." }); }
     if (d.name === "run_agent" && FRIDAY_RUNS[a.job]) {
       const [wf, inputs] = FRIDAY_RUNS[a.job];
@@ -703,12 +725,14 @@ async function fridayLive(req, env, isTool) {
 This is a live voice conversation: keep turns short and natural, let him interrupt, and don't read lists aloud.
 It's ${ny} (New York). His world: Forever Held, his printable memorial keepsake shop (foreverheld.pages.dev, checkout on Payhip), run day to day by AI agents on GitHub (daily pins and posts, church email outreach, email care, reports). Claude is his head of development for bigger builds. Help with anything else too.
 Business questions: answer from the FACTS below (call get_status if he wants the very latest); never say things are fine without facts, never invent sales or results. Use phone_action to make his iPhone do things (text, call, reminder, event, timer, alarm, directions, note, music, health, open). Use remember for things worth keeping. Use run_agent only when he asks to start an agent job.
+Use lookup when you need outside or fresh info (web), deep thinking (think, asks Claude), his Notion, his Discord channels or agent reports. Say "one sec" while it runs.
 Use google for his Gmail and Google Calendar: calendar (look ahead), email_search (Gmail query), event_add (start as YYYY-MM-DDTHH:MM New York time), email_draft, email_send. Email rule: never send on the first ask. Draft, tell him who and the gist, ask "Send it?", and only call email_send after he says yes.
 THINGS HE ASKED YOU TO REMEMBER:\n${memory.map((m) => `- ${m}`).join("\n") || "- (nothing yet)"}
 FACTS AT THE START OF THIS CALL:\n${facts.join("\n")}`;
   const tools = [{ functionDeclarations: [
     { name: "get_status", description: "Fresh facts about his businesses: sales, posting, church outreach, agent health." },
     { name: "run_agent", description: "Start one of his agent jobs.", parameters: { type: "OBJECT", properties: { job: { type: "STRING", enum: Object.keys(FRIDAY_RUNS) } }, required: ["job"] } },
+    { name: "lookup", description: "Your second brain. tool = web (search the internet) | think (ask Claude a hard question) | notion (search his Notion) | note (save to his Notion) | discord (read one of his channels: content, sales, inbox, alerts, research, growth, trading-desk) | report (an agent's latest report).", parameters: { type: "OBJECT", properties: { tool: { type: "STRING", enum: ["web", "think", "notion", "note", "discord", "report"] }, query: { type: "STRING" }, context: { type: "STRING" }, title: { type: "STRING" }, text: { type: "STRING" }, channel: { type: "STRING" } }, required: ["tool"] } },
     { name: "google", description: "His Gmail and Google Calendar. do = calendar|email_search|event_add|email_draft|email_send.", parameters: { type: "OBJECT", properties: { do: { type: "STRING", enum: ["calendar", "email_search", "event_add", "email_draft", "email_send"] }, days: { type: "NUMBER" }, query: { type: "STRING" }, title: { type: "STRING" }, start: { type: "STRING" }, minutes: { type: "NUMBER" }, location: { type: "STRING" }, to: { type: "STRING" }, subject: { type: "STRING" }, body: { type: "STRING" } }, required: ["do"] } },
     { name: "remember", description: "Save a short fact about him for later.", parameters: { type: "OBJECT", properties: { fact: { type: "STRING" } }, required: ["fact"] } },
     { name: "phone_action", description: "Make his iPhone do something. do = text|call|reminder|event|timer|alarm|directions|note|music|health|open.", parameters: { type: "OBJECT", properties: { do: { type: "STRING" }, to: { type: "STRING" }, message: { type: "STRING" }, title: { type: "STRING" }, when: { type: "STRING" }, minutes: { type: "NUMBER" }, text: { type: "STRING" }, query: { type: "STRING" }, metric: { type: "STRING" }, url: { type: "STRING" } }, required: ["do"] } }
@@ -912,4 +936,88 @@ async function fridayConnections(req, env) {
     { id: "phone", icon: "📱", name: "iPhone (Friday Hands Shortcut)", detail: "Texts, calls, reminders, alarms, music, directions, Health" },
     { id: "money", icon: "💳", name: "Money (read-only)", soon: true, detail: "Balances and spending, never moves money" }
   ] });
+}
+
+// ───────────────────────── Friday's second brain: lookups across his tools ─────────────────────────
+// One entry point for text and Live mode. Owner key only (results can hold private data).
+//   web      live web search (Tavily, Exa backup)
+//   think    hand a hard question to Claude (capped at $2/month, tracked in KV)
+//   notion   search his Notion · note: save a note to his Notion research page
+//   discord  read recent messages in one of his Discord channels (agent reports, church replies, sales)
+//   report   read an agent's latest report from the repo
+const NOTION_PARENT = "41204f0345cd81cd8121eca748974d48";
+const CLAUDE_FRIDAY_CAP = 2; // dollars per month
+async function fridayLookup(env, a = {}) {
+  const q = String(a.query || "").slice(0, 400);
+  try {
+    if (a.tool === "web") {
+      if (env.TAVILY_API_KEY) {
+        const r = await fetch("https://api.tavily.com/search", { method: "POST", signal: timeout(), headers: { Authorization: `Bearer ${env.TAVILY_API_KEY}`, "content-type": "application/json" }, body: JSON.stringify({ query: q, search_depth: "basic", max_results: 5, include_answer: true }) });
+        const j = await r.json().catch(() => ({}));
+        if (r.ok) return `${j.answer ? `Summary: ${j.answer}\n` : ""}${(j.results || []).map((x) => `- ${x.title} (${new URL(x.url).hostname}): ${String(x.content || "").replace(/\s+/g, " ").slice(0, 300)}`).join("\n")}`;
+      }
+      if (env.EXA_API_KEY) {
+        const r = await fetch("https://api.exa.ai/search", { method: "POST", signal: timeout(), headers: { "x-api-key": env.EXA_API_KEY, "content-type": "application/json" }, body: JSON.stringify({ query: q, numResults: 5, type: "auto", contents: { text: { maxCharacters: 600 } } }) });
+        const j = await r.json().catch(() => ({}));
+        if (r.ok) return (j.results || []).map((x) => `- ${x.title} (${new URL(x.url).hostname}): ${String(x.text || "").replace(/\s+/g, " ").slice(0, 400)}`).join("\n") || "No results.";
+      }
+      return "Couldn't search the web right now.";
+    }
+    if (a.tool === "think") {
+      if (!env.CLAUDE_API_KEY) return "Claude isn't connected to me yet.";
+      const month = new Date().toISOString().slice(0, 7);
+      const spent = Number(await env.SALES.get("friday:claude:" + month) || 0);
+      if (spent >= CLAUDE_FRIDAY_CAP) return `I've used this month's $${CLAUDE_FRIDAY_CAP} Claude budget. Answer it yourself as best you can, and say so.`;
+      const ms = ((await (await fetch("https://api.anthropic.com/v1/models?limit=100", { signal: timeout(), headers: { "x-api-key": env.CLAUDE_API_KEY, "anthropic-version": "2023-06-01" } })).json()).data || []).map((m) => m.id);
+      const model = ms.find((m) => /sonnet/i.test(m)) || ms.find((m) => /haiku/i.test(m));
+      if (!model) return "Claude isn't available on that key.";
+      const r = await fetch("https://api.anthropic.com/v1/messages", { method: "POST", signal: AbortSignal.timeout(90000), headers: { "x-api-key": env.CLAUDE_API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" },
+        body: JSON.stringify({ model, max_tokens: 900, system: "You're helping FRIDAY, Josiah's personal voice assistant, think through a hard question for him. Be accurate, practical and specific. Say what you're unsure of. Under 250 words, plain text.", messages: [{ role: "user", content: `${q}${a.context ? `\n\nContext: ${String(a.context).slice(0, 3000)}` : ""}` }] }) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) return `Claude didn't answer (${j.error?.message || r.status}).`;
+      const cost = ((j.usage?.input_tokens || 0) * (/haiku/i.test(model) ? 1 : 3) + (j.usage?.output_tokens || 0) * (/haiku/i.test(model) ? 5 : 15)) / 1e6;
+      await env.SALES.put("friday:claude:" + month, String(spent + cost), { expirationTtl: 40 * 864e5 });
+      return (j.content || []).map((c) => c.text || "").join("").trim() || "Claude had nothing to add.";
+    }
+    if (a.tool === "notion" || a.tool === "note") {
+      if (!env.NOTION_TOKEN) return "Notion isn't connected to me yet.";
+      const n = (path, body) => fetch("https://api.notion.com/v1" + path, { method: "POST", signal: timeout(), headers: { Authorization: `Bearer ${env.NOTION_TOKEN}`, "Notion-Version": "2022-06-28", "content-type": "application/json" }, body: JSON.stringify(body) }).then(async (r) => { const j = await r.json().catch(() => ({})); if (!r.ok) throw new Error(j.message || r.status); return j; });
+      if (a.tool === "note") {
+        const text = String(a.text || q).slice(0, 1900);
+        await n("/pages", { parent: { page_id: NOTION_PARENT }, properties: { title: { title: [{ text: { content: String(a.title || text.slice(0, 60)) } }] } }, children: [{ object: "block", type: "paragraph", paragraph: { rich_text: [{ text: { content: text } }] } }] });
+        return "Saved to Notion.";
+      }
+      const j = await n("/search", { query: q, page_size: 5 });
+      const pages = (j.results || []).filter((p) => p.object === "page");
+      if (!pages.length) return "Nothing in his Notion matches that (or those pages aren't shared with the agents' Notion connection).";
+      const out = [];
+      for (const p of pages.slice(0, 3)) {
+        const title = Object.values(p.properties || {}).find((x) => x.type === "title")?.title?.map((t) => t.plain_text).join("") || "Untitled";
+        const kids = await fetch(`https://api.notion.com/v1/blocks/${p.id}/children?page_size=30`, { signal: timeout(), headers: { Authorization: `Bearer ${env.NOTION_TOKEN}`, "Notion-Version": "2022-06-28" } }).then((r) => r.json()).catch(() => ({}));
+        const text = (kids.results || []).map((b) => (b[b.type]?.rich_text || []).map((t) => t.plain_text).join("")).filter(Boolean).join(" ").slice(0, 900);
+        out.push(`"${title}" (edited ${String(p.last_edited_time).slice(0, 10)}): ${text || "(no text)"}`);
+      }
+      return out.join("\n");
+    }
+    if (a.tool === "discord") {
+      if (!env.DISCORD_BOT_TOKEN) return "Discord isn't connected to me.";
+      const chans = JSON.parse(await fetch(`${FRIDAY_RAW}/discord.json`, { signal: timeout() }).then((r) => r.text()).catch(() => "{}")).channels || {};
+      const name = String(a.channel || q || "content").replace(/^#/, "").toLowerCase();
+      const id = chans[name] || chans[Object.keys(chans).find((k) => k.includes(name) || name.includes(k))];
+      if (!id) return `No channel like that. Channels: ${Object.keys(chans).join(", ")}.`;
+      const msgs = await fetch(`https://discord.com/api/v10/channels/${id}/messages?limit=12`, { signal: timeout(), headers: { Authorization: `Bot ${env.DISCORD_BOT_TOKEN}` } }).then((r) => r.json());
+      if (!Array.isArray(msgs)) return "Couldn't read that channel.";
+      return msgs.reverse().map((m) => `${nyTime(m.timestamp)}: ${[m.content, ...(m.embeds || []).map((e) => `${e.title || ""} ${e.description || ""}`)].join(" ").replace(/\s+/g, " ").trim().slice(0, 500)}`).join("\n") || "That channel is empty.";
+    }
+    if (a.tool === "report") {
+      const idx = JSON.parse(await fetch(`${FRIDAY_RAW}/reports/index.json`, { signal: timeout() }).then((r) => r.text()).catch(() => "[]"));
+      const want = String(q || a.agent || "").toLowerCase();
+      const hit = idx.find((r) => `${r.name} ${r.agent || ""} ${r.file || ""}`.toLowerCase().includes(want)) || idx[0];
+      if (!hit) return "No reports yet.";
+      const file = hit.file || hit.path || `reports/${hit.date}-${hit.agent || hit.name}.md`;
+      const text = await fetch(`${FRIDAY_RAW}/${file.startsWith("reports/") ? file : "reports/" + file}`, { signal: timeout() }).then((r) => (r.ok ? r.text() : "")).catch(() => "");
+      return text ? `${hit.date} ${hit.name}:\n${text.slice(0, 3500)}` : `Found "${hit.name}" but couldn't open it.`;
+    }
+    return "Unknown lookup.";
+  } catch (e) { return `Couldn't look that up: ${String(e.message || e).slice(0, 160)}`; }
 }
