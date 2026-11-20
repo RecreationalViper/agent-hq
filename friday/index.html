@@ -45,6 +45,17 @@
   #setup { position:fixed; inset:0; background:var(--bg); display:none; flex-direction:column; justify-content:center; padding:30px; gap:14px; }
   #setup.on { display:flex; }
   #setup p { color:var(--dim); margin:0; }
+  #sheet { position:fixed; inset:0; background:var(--bg); display:none; flex-direction:column; padding:calc(env(safe-area-inset-top) + 14px) 20px calc(env(safe-area-inset-bottom) + 20px); overflow-y:auto; gap:10px; z-index:5; }
+  #sheet.on { display:flex; }
+  #sheet h3 { margin:18px 0 4px; font-size:12px; letter-spacing:.2em; color:var(--dim); font-weight:600; }
+  .app { display:flex; align-items:center; gap:12px; background:#0f1424; border:1px solid #1c2747; border-radius:16px; padding:14px; }
+  .app .ic { font-size:24px; width:32px; text-align:center; }
+  .app .tx { flex:1; min-width:0; } .app .tx b { display:block; } .app .tx small { color:var(--dim); display:block; overflow:hidden; text-overflow:ellipsis; }
+  .app button, .row button { background:var(--blue); color:#041022; border:0; border-radius:14px; padding:9px 14px; font-weight:600; font-size:14px; }
+  .app button.ghost, .row button.ghost { background:none; color:var(--dim); border:1px solid #223055; }
+  .dot { width:9px; height:9px; border-radius:50%; background:#3a4566; display:inline-block; margin-right:6px; } .dot.on { background:#38d39f; box-shadow:0 0 8px #38d39f; }
+  .row { display:flex; gap:8px; } .row button { flex:1; padding:13px; }
+  #sheet ol { margin:0; padding-left:20px; color:#c6d3ee; font-size:15px; } #sheet ol li { margin:4px 0; }
   label.t { display:flex; align-items:center; gap:8px; color:var(--dim); font-size:13px; justify-content:center; padding-bottom:6px; }
 </style>
 </head>
@@ -56,6 +67,17 @@
 <label class="t"><input type="checkbox" id="hands" style="flex:0"> Keep listening after she answers</label>
 <label class="t">Voice <select id="voice" style="background:#0f1424;color:#e8f1ff;border:1px solid #223055;border-radius:10px;padding:6px;max-width:60%"></select></label>
 <form id="f"><input id="q" placeholder="Or type to Friday…" autocomplete="off"><button>Send</button></form>
+<div id="sheet">
+  <div style="display:flex;justify-content:space-between;align-items:center"><b style="letter-spacing:.32em;font-size:13px;color:var(--dim)">SETTINGS</b><button id="close" class="ghost" style="background:none;border:0;color:var(--blue);font-size:16px;font-weight:600">Done</button></div>
+  <h3>CONNECTIONS</h3>
+  <div id="apps"><div class="note">Checking…</div></div>
+  <h3>ON YOUR IPHONE</h3>
+  <div class="app"><div class="ic">📱</div><div class="tx"><b>Double-tap the back of your phone</b><small>Settings › Accessibility › Touch › Back Tap › Double Tap › Friday</small></div></div>
+  <div class="app"><div class="ic">🗣️</div><div class="tx"><b>"Hey Siri, Friday"</b><small>Works hands-free once the Friday Shortcut exists</small></div></div>
+  <div class="row"><button id="copykey" class="ghost">Copy my key (for Shortcuts)</button></div>
+  <h3>THIS PHONE</h3>
+  <div class="row"><button id="forget2" class="ghost">Forget key on this phone</button></div>
+</div>
 <div id="setup">
   <h2 style="margin:0">Hi, I'm Friday.</h2>
   <p>Paste your private key once. It stays on this phone only.</p>
@@ -75,7 +97,32 @@ $("#hands").checked = hands;
 $("#hands").onchange = (e) => { hands = e.target.checked; try { localStorage.setItem("friday-hands", hands ? "1" : "0"); } catch {} };
 if (!key) $("#setup").classList.add("on");
 $("#kf").onsubmit = (e) => { e.preventDefault(); const v = $("#k").value.trim(); if (!v) return; key = v; try { localStorage.setItem("friday-key", v); } catch {} $("#setup").classList.remove("on"); greet(); };
-$("#forget").onclick = () => { if (confirm("Forget the key on this phone?")) { try { localStorage.removeItem("friday-key"); } catch {} location.reload(); } };
+$("#forget").onclick = () => { $("#sheet").classList.add("on"); loadApps(); };
+$("#close").onclick = () => $("#sheet").classList.remove("on");
+$("#forget2").onclick = () => { if (confirm("Forget the key on this phone?")) { try { localStorage.removeItem("friday-key"); } catch {} location.reload(); } };
+$("#copykey").onclick = async () => { try { await navigator.clipboard.writeText(key); $("#copykey").textContent = "Copied ✓"; } catch { prompt("Copy your key:", key); } };
+async function loadApps() {
+  const box = $("#apps");
+  let d;
+  try { const r = await fetch(API + "/connections", { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: JSON.stringify({ action: "status" }) }); d = await r.json(); if (!r.ok) throw 0; }
+  catch { box.innerHTML = '<div class="note">Couldn\'t reach Friday. Check your key or connection.</div>'; return; }
+  box.innerHTML = "";
+  for (const a of d.apps || []) {
+    const el = document.createElement("div"); el.className = "app"; el.style.marginBottom = "8px";
+    el.innerHTML = `<div class="ic">${a.icon}</div><div class="tx"><b><span class="dot ${a.connected ? "on" : ""}"></span>${a.name}</b><small></small></div>`;
+    el.querySelector("small").textContent = a.detail || "";
+    if (a.connect) {
+      const b = document.createElement("button"); b.textContent = a.connected ? "Reconnect" : "Connect"; if (a.connected) b.className = "ghost";
+      b.onclick = () => { location.href = `${API}/connect?app=${a.id}&k=${encodeURIComponent(key)}`; };
+      el.appendChild(b);
+      if (a.connected) { const x = document.createElement("button"); x.textContent = "✕"; x.className = "ghost"; x.title = "Disconnect";
+        x.onclick = async () => { if (!confirm(`Disconnect ${a.name}? Friday will lose access right away.`)) return; await fetch(API + "/connections", { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: JSON.stringify({ action: "disconnect", app: a.id }) }); loadApps(); };
+        el.appendChild(x); }
+    } else if (a.soon) { const t = document.createElement("small"); t.textContent = "Soon"; t.style.color = "var(--dim)"; el.appendChild(t); }
+    box.appendChild(el);
+  }
+}
+document.addEventListener("visibilitychange", () => { if (!document.hidden && $("#sheet").classList.contains("on")) loadApps(); });
 
 function add(text, who) { const d = document.createElement("div"); d.className = "m " + who; d.textContent = text; log.appendChild(d); log.scrollTop = log.scrollHeight; return d; }
 function state(s, h) { body.classList.remove("listening", "thinking", "speaking"); if (s) body.classList.add(s); hint.textContent = h || "Tap to talk"; }

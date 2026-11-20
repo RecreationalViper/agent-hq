@@ -62,6 +62,7 @@ export default {
     if (url.pathname === "/contact") return contact(req, env);
     if (url.pathname === "/chat") return chat(req, env, ctx);
     if (url.pathname === "/friday/connect" || url.pathname === "/friday/google/callback") return fridayGoogleRoute(req, url, env);
+    if (url.pathname === "/friday/connections") return fridayConnections(req, env);
     if (url.pathname === "/friday") return friday(req, env, ctx);
     if (url.pathname === "/friday/live" || url.pathname === "/friday/tool") return fridayLive(req, env, url.pathname.endsWith("tool"));
     if (url.pathname === "/contacts") return contactsInbox(req, url, env);
@@ -787,7 +788,7 @@ async function fridayGoogleRoute(req, url, env) {
     await env.SALES.put("friday:google", JSON.stringify({ refresh: j.refresh_token, scope, email, at: new Date().toISOString() }));
     await env.SALES.put("friday:gaccess", j.access_token, { expirationTtl: 3000 });
     const has = (s) => scope.includes(s);
-    return page(`<h2>Friday is connected ✓</h2><p>${esc(email || "Your Google account")}</p><p>Gmail: ${has("gmail") ? "yes" : "<b>no</b> (box wasn't ticked)"}<br>Calendar: ${has("calendar") ? "yes" : "<b>no</b> (box wasn't ticked)"}</p><p>You can close this page and ask her about your day.</p>`);
+    return page(`<h2>Friday is connected ✓</h2><p>${esc(email || "Your Google account")}</p><p>Gmail: ${has("gmail") ? "yes" : "<b>no</b> (box wasn't ticked)"}<br>Calendar: ${has("calendar") ? "yes" : "<b>no</b> (box wasn't ticked)"}</p><p><a href="https://recreationalviper.github.io/agent-hq/friday/" style="display:inline-block;background:#4aa3ff;color:#041022;padding:12px 18px;border-radius:14px;text-decoration:none;font-weight:600">Back to Friday</a></p>`);
   }
   return page("Not found.", 404);
 }
@@ -882,4 +883,28 @@ async function runGoogle(env, a = {}) {
     }
     return "Unknown Google action.";
   } catch (e) { return `Couldn't do that: ${String(e.message || e).slice(0, 160)}`; }
+}
+
+// Settings › Connections in the Friday app: what's connected, plus disconnect. Owner key only.
+async function fridayConnections(req, env) {
+  const origin = req.headers.get("origin") || "";
+  const cors = /^https:\/\/recreationalviper\.github\.io$/i.test(origin) ? { "access-control-allow-origin": origin, "access-control-allow-methods": "POST, OPTIONS", "access-control-allow-headers": "content-type, x-friday-key", vary: "origin" } : {};
+  const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store", ...cors } });
+  if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
+  if (req.method !== "POST" || (await sha256(req.headers.get("x-friday-key") || "")) !== FRIDAY_KEY_SHA) return out({ ok: false }, 401);
+  let d = {}; try { d = await req.json(); } catch {}
+  if (d.action === "disconnect" && d.app === "google") {
+    const g = JSON.parse(await env.SALES.get("friday:google") || "null");
+    if (g?.refresh) await fetch("https://oauth2.googleapis.com/revoke?token=" + encodeURIComponent(g.refresh), { method: "POST" }).catch(() => {});
+    await env.SALES.delete("friday:google"); await env.SALES.delete("friday:gaccess"); await env.SALES.delete("friday:pending_email");
+    return out({ ok: true });
+  }
+  const g = JSON.parse(await env.SALES.get("friday:google") || "null");
+  const parts = g ? [g.scope?.includes("gmail") && "Gmail", g.scope?.includes("calendar") && "Calendar"].filter(Boolean).join(" + ") : "";
+  return out({ ok: true, apps: [
+    { id: "google", icon: "✉️", name: "Google: Gmail + Calendar", connect: !!env.GOOGLE_CLIENT_ID, connected: !!g, detail: g ? `${g.email || "connected"} · ${parts || "limited"}` : "Read your inbox and calendar, add events, draft emails (sends only when you say)" },
+    { id: "business", icon: "🕊️", name: "Forever Held + agents", connected: true, detail: "Sales, posts, church outreach, agent health" },
+    { id: "phone", icon: "📱", name: "iPhone (Friday Hands Shortcut)", detail: "Texts, calls, reminders, alarms, music, directions, Health" },
+    { id: "money", icon: "💳", name: "Money (read-only)", soon: true, detail: "Balances and spending, never moves money" }
+  ] });
 }
