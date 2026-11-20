@@ -70,6 +70,9 @@ if (CANVA_ID && CANVA_SECRET) {
   bindings.push({ type: "plain_text", name: "CANVA_CLIENT_ID", text: CANVA_ID }, { type: "secret_text", name: "CANVA_CLIENT_SECRET", text: CANVA_SECRET }, { type: "secret_text", name: "CANVA_CONNECT_KEY", text: canvaKey });
   console.log("Canva: client saved on the Worker");
 }
+// Friday's Google connector (Gmail + Calendar): reuses the owner's Google OAuth client; he connects once with a private link
+const G_ID = (process.env.GMAIL_CLIENT_ID || "").trim(), G_SECRET = (process.env.GMAIL_CLIENT_SECRET || "").trim();
+if (G_ID && G_SECRET) { bindings.push({ type: "plain_text", name: "GOOGLE_CLIENT_ID", text: G_ID }, { type: "secret_text", name: "GOOGLE_CLIENT_SECRET", text: G_SECRET }); console.log("Friday: Google client saved on the Worker"); }
 const form = new FormData();
 form.append("metadata", new Blob([JSON.stringify({ main_module: "worker.js", compatibility_date: "2026-01-01", bindings })], { type: "application/json" }));
 form.append("worker.js", new Blob([await fs.readFile("workers/sales/worker.js", "utf8")], { type: "application/javascript+module" }), "worker.js");

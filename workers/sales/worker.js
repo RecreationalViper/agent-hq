@@ -61,6 +61,7 @@ export default {
     if (url.pathname.startsWith("/canva/")) return canva(req, url, env);
     if (url.pathname === "/contact") return contact(req, env);
     if (url.pathname === "/chat") return chat(req, env, ctx);
+    if (url.pathname === "/friday/connect" || url.pathname === "/friday/google/callback") return fridayGoogleRoute(req, url, env);
     if (url.pathname === "/friday") return friday(req, env, ctx);
     if (url.pathname === "/friday/live" || url.pathname === "/friday/tool") return fridayLive(req, env, url.pathname.endsWith("tool"));
     if (url.pathname === "/contacts") return contactsInbox(req, url, env);
@@ -540,7 +541,8 @@ async function friday(req, env, ctx) {
   if (req.method !== "POST") return out({ ok: false, error: "method" }, 405);
   const key = req.headers.get("x-friday-key") || "";
   // the owner's key, or the agents' test key (derived from the Payhip secret, so it never appears anywhere public)
-  if ((await sha256(key)) !== FRIDAY_KEY_SHA && !(env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)))) return out({ ok: false, say: "Sorry, I don't know you." }, 401);
+  const owner = (await sha256(key)) === FRIDAY_KEY_SHA;
+  if (!owner && !(env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)))) return out({ ok: false, say: "Sorry, I don't know you." }, 401);
   // voice: the app sends recorded audio; Groq Whisper turns it into text (free tier: 2,000 clips a day)
   let d = {}, heard = "";
   const type = req.headers.get("content-type") || "";
@@ -559,7 +561,7 @@ async function friday(req, env, ctx) {
   const now = new Date();
   const ny = now.toLocaleString("en-US", { timeZone: "America/New_York", weekday: "long", month: "long", day: "numeric", hour: "numeric", minute: "2-digit" });
 
-  const facts = await fridayFacts(env, now);
+  const facts = await fridayFacts(env, now, owner);
 
   const system = `You are FRIDAY, Josiah Cottingham's personal AI, modeled on Tony Stark's FRIDAY (and JARVIS before her). ${FRIDAY_PERSONA}
 It's ${ny} (New York).
@@ -569,7 +571,13 @@ His world:
 - Other projects may come up (lead generation for roofers, TikTok edits, trading agents). Help with anything: questions, ideas, planning, general knowledge.
 Use only the LIVE FACTS below for anything about his businesses' numbers or status; if something isn't there, say you don't have it yet. Never invent sales, replies or results.
 
-You can act. Return ONLY JSON: {"say": "what you speak", "run": null or one of [${Object.keys(FRIDAY_RUNS).join(", ")}], "remember": null or "a short fact to keep about him", "phone": null or a phone action}.
+You can act. Return ONLY JSON: {"say": "what you speak", "run": null or one of [${Object.keys(FRIDAY_RUNS).join(", ")}], "remember": null or "a short fact to keep about him", "phone": null or a phone action, "google": null or a Google action}.
+"google" works in HIS Gmail and Google Calendar (only if the facts show Google is connected). Shapes:
+  {"do":"calendar","days":14}  look further ahead than the facts show   {"do":"email_search","query":"Gmail search like from:mom newer_than:7d or invoice"}  find or read emails
+  {"do":"event_add","title":"...","start":"YYYY-MM-DDTHH:MM in New York time, or YYYY-MM-DD for all day","minutes":60,"location":""}
+  {"do":"email_draft","to":"email address or a name he's emailed before","subject":"...","body":"the full email, in his voice, signed Josiah"}   {"do":"email_send"}
+Email rule: NEVER send on the first ask. Draft first, tell him who it's to and the gist, and ask "Send it?". Use email_send only when his NEXT message clearly says to send it. Write emails like a real person, short and professional for business.
+For calendar events prefer google event_add when Google is connected; otherwise use the phone "event".
 Use "run" only when he clearly asks to start an agent job. Use "remember" when he tells you something worth keeping (a preference, a plan, a person) or says "remember".
 "phone" makes HIS iPhone do something (his Shortcuts app carries it out). Use it only when he asks for it. Shapes:
   {"do":"text","to":"contact name or number","message":"..."}   {"do":"call","to":"contact name or number"}
@@ -598,17 +606,31 @@ ${facts.join("\n")}`;
     const res = env.GH_TOKEN ? await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/${wf}/dispatches`, { method: "POST", headers: { Authorization: `Bearer ${env.GH_TOKEN}`, Accept: "application/vnd.github+json", "User-Agent": "Friday", "content-type": "application/json" }, body: JSON.stringify({ ref: "main", inputs }) }).catch(() => null) : null;
     if (res?.status !== 204) say += ` Heads up: I couldn't start ${r.run.replace(/-/g, " ")} just now.`;
   }
+  let gResult = null;
+  if (owner && r.google && typeof r.google === "object" && r.google.do) {
+    gResult = await runGoogle(env, r.google);
+    if (["calendar", "email_search"].includes(r.google.do) && !/^Couldn't/.test(gResult)) {
+      // second pass: answer from what Google returned
+      try {
+        const again = stripPlanning(await (async () => { for (const ask of [groqChat, geminiChat, openRouterChat, workersChat]) { try { const t = await ask(env, system, [...convo, { role: "assistant", content: JSON.stringify({ say: "(looking it up)", google: r.google }) }, { role: "user", content: `GOOGLE RESULT (not from him, answer his question from this, JSON with "say" only):\n${gResult.slice(0, 4000)}` }]); if (t) return t; } catch {} } return ""; })());
+        const m2 = again.match(/\{[\s\S]*\}/); const j2 = m2 ? JSON.parse(m2[0].replace(/,\s*([}\]])/g, "$1")) : { say: again };
+        if (j2.say) say = String(j2.say).replace(/\*\*?/g, "").trim().slice(0, 1500);
+      } catch {}
+    } else if (/^(Couldn't|I couldn't|Need |Not sent|There's no|Unknown)/.test(gResult)) say = gResult.replace(/^Couldn't do that: /, "I couldn't do that, boss: ");
+    else if (r.google.do === "email_send") say = /^SENT/.test(gResult) ? `Sent to ${gResult.match(/to (\S+)/)?.[1] || "them"}.` : say;
+  } else if (!owner && r.google) say += " (Google tools are owner-only.)";
   if (r.remember && typeof r.remember === "string") { memory.push(`${r.remember.slice(0, 200)} (${now.toISOString().slice(0, 10)})`); await env.SALES.put("friday:memory", JSON.stringify(memory.slice(-200))); }
   await env.SALES.put("friday:history", JSON.stringify([...convo, { role: "assistant", content: say }].slice(-12)), { expirationTtl: 6 * 3600 });
   const PHONE = ["text", "call", "reminder", "event", "timer", "alarm", "directions", "note", "music", "health", "open"];
   const phone = r.phone && typeof r.phone === "object" && PHONE.includes(r.phone.do) ? r.phone : null;
-  return out({ ok: true, heard, say, ran: r.run || null, remembered: r.remember || null, phone, phone_json: phone ? JSON.stringify(phone) : "" });
+  return out({ ok: true, heard, say, ran: r.run || null, remembered: r.remember || null, google: gResult, phone, phone_json: phone ? JSON.stringify(phone) : "" });
 }
 
 
 // Live facts about his businesses for Friday (each piece optional, gathered fresh)
-async function fridayFacts(env, now = new Date()) {
+async function fridayFacts(env, now = new Date(), owner = false) {
   const facts = [];
+  const gP = owner ? googleFacts(env).catch((e) => [`GOOGLE: error ${String(e.message || e).slice(0, 120)}`]) : null;
   const sales = [];
   try {
     const since = new Date(now - 30 * 864e5).toISOString().slice(0, 10);
@@ -636,6 +658,7 @@ async function fridayFacts(env, now = new Date()) {
       facts.push(`AGENTS (last 24 h): ${runs.filter((x) => now - new Date(x.created_at) < 864e5).length} runs, ${fails.length ? `failed: ${[...new Set(fails)].join(", ")}` : "no failures"}.`);
     } catch {}
   }
+  if (gP) facts.push(...(await gP));
 
   return facts;
 }
@@ -650,12 +673,14 @@ async function fridayLive(req, env, isTool) {
   const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store", ...cors } });
   if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
   const key = req.headers.get("x-friday-key") || "";
-  if ((await sha256(key)) !== FRIDAY_KEY_SHA && !(env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)))) return out({ ok: false }, 401);
+  const owner = (await sha256(key)) === FRIDAY_KEY_SHA;
+  if (!owner && !(env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)))) return out({ ok: false }, 401);
   let d = {}; try { d = await req.json(); } catch {}
   const memory = JSON.parse(await env.SALES.get("friday:memory") || "[]");
   if (isTool) {
     const a = d.args || {};
-    if (d.name === "get_status") return out({ ok: true, result: (await fridayFacts(env)).join("\n") });
+    if (d.name === "get_status") return out({ ok: true, result: (await fridayFacts(env, new Date(), owner)).join("\n") });
+    if (d.name === "google") return out({ ok: true, result: owner ? await runGoogle(env, a) : "Google tools are owner-only." });
     if (d.name === "remember" && a.fact) { memory.push(`${String(a.fact).slice(0, 200)} (${new Date().toISOString().slice(0, 10)})`); await env.SALES.put("friday:memory", JSON.stringify(memory.slice(-200))); return out({ ok: true, result: "Saved." }); }
     if (d.name === "run_agent" && FRIDAY_RUNS[a.job]) {
       const [wf, inputs] = FRIDAY_RUNS[a.job];
@@ -667,16 +692,18 @@ async function fridayLive(req, env, isTool) {
   if (!env.GEMINI_API_KEY) return out({ ok: false, error: "no Gemini key" });
   const now = new Date();
   const ny = now.toLocaleString("en-US", { timeZone: "America/New_York", weekday: "long", month: "long", day: "numeric", hour: "numeric", minute: "2-digit" });
-  const facts = await fridayFacts(env, now);
+  const facts = await fridayFacts(env, now, owner);
   const system = `You are FRIDAY, Josiah Cottingham's personal AI, modeled on Tony Stark's FRIDAY (and JARVIS before her). ${FRIDAY_PERSONA}
 This is a live voice conversation: keep turns short and natural, let him interrupt, and don't read lists aloud.
 It's ${ny} (New York). His world: Forever Held, his printable memorial keepsake shop (foreverheld.pages.dev, checkout on Payhip), run day to day by AI agents on GitHub (daily pins and posts, church email outreach, email care, reports). Claude is his head of development for bigger builds. Help with anything else too.
 Business questions: answer from the FACTS below (call get_status if he wants the very latest); never say things are fine without facts, never invent sales or results. Use phone_action to make his iPhone do things (text, call, reminder, event, timer, alarm, directions, note, music, health, open). Use remember for things worth keeping. Use run_agent only when he asks to start an agent job.
+Use google for his Gmail and Google Calendar: calendar (look ahead), email_search (Gmail query), event_add (start as YYYY-MM-DDTHH:MM New York time), email_draft, email_send. Email rule: never send on the first ask. Draft, tell him who and the gist, ask "Send it?", and only call email_send after he says yes.
 THINGS HE ASKED YOU TO REMEMBER:\n${memory.map((m) => `- ${m}`).join("\n") || "- (nothing yet)"}
 FACTS AT THE START OF THIS CALL:\n${facts.join("\n")}`;
   const tools = [{ functionDeclarations: [
     { name: "get_status", description: "Fresh facts about his businesses: sales, posting, church outreach, agent health." },
     { name: "run_agent", description: "Start one of his agent jobs.", parameters: { type: "OBJECT", properties: { job: { type: "STRING", enum: Object.keys(FRIDAY_RUNS) } }, required: ["job"] } },
+    { name: "google", description: "His Gmail and Google Calendar. do = calendar|email_search|event_add|email_draft|email_send.", parameters: { type: "OBJECT", properties: { do: { type: "STRING", enum: ["calendar", "email_search", "event_add", "email_draft", "email_send"] }, days: { type: "NUMBER" }, query: { type: "STRING" }, title: { type: "STRING" }, start: { type: "STRING" }, minutes: { type: "NUMBER" }, location: { type: "STRING" }, to: { type: "STRING" }, subject: { type: "STRING" }, body: { type: "STRING" } }, required: ["do"] } },
     { name: "remember", description: "Save a short fact about him for later.", parameters: { type: "OBJECT", properties: { fact: { type: "STRING" } }, required: ["fact"] } },
     { name: "phone_action", description: "Make his iPhone do something. do = text|call|reminder|event|timer|alarm|directions|note|music|health|open.", parameters: { type: "OBJECT", properties: { do: { type: "STRING" }, to: { type: "STRING" }, message: { type: "STRING" }, title: { type: "STRING" }, when: { type: "STRING" }, minutes: { type: "NUMBER" }, text: { type: "STRING" }, query: { type: "STRING" }, metric: { type: "STRING" }, url: { type: "STRING" } }, required: ["do"] } }
   ] }];
@@ -720,4 +747,139 @@ async function transcribe(env, audio, type) {
     const o = await env.AI.run("@cf/openai/whisper-large-v3-turbo", { audio: btoa(bin) }); return o?.text || "";
   }
   throw new Error("no speech-to-text available");
+}
+
+// ───────────────────────── Friday's Google connector (Gmail + Calendar) ─────────────────────────
+// The owner connects once: GET /friday/connect?k=<his Friday key> → Google sign-in → /friday/google/callback.
+// The refresh token lives only in this Worker's private KV (never in the public repo or logs).
+// Only the owner's key gets Google data (the agents' test key never does, since its output lands in public logs).
+// Email rule, enforced in code: Friday only DRAFTS. Sending needs a separate "send it" after he's heard the draft.
+const G_SCOPES = "openid email https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/calendar";
+const G_REDIRECT = "https://foreverheld-sales.foreverheld.workers.dev/friday/google/callback";
+const G_MAIL = "https://gmail.googleapis.com/gmail/v1/users/me";
+const G_CAL = "https://www.googleapis.com/calendar/v3/calendars/primary";
+const nyTime = (d) => new Date(d).toLocaleString("en-US", { timeZone: "America/New_York", weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+
+async function fridayGoogleRoute(req, url, env) {
+  const esc = (s) => String(s).replace(/[<>&"]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;" })[c]);
+  const page = (body, status = 200) => new Response(`<!doctype html><meta name=viewport content="width=device-width,initial-scale=1"><title>Friday</title><body style="font:19px/1.5 -apple-system,system-ui,sans-serif;background:#07080d;color:#e8ecf5;padding:32px;max-width:560px;margin:auto"><div style="font-size:42px">◉</div>${body}</body>`, { status, headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" } });
+  if (!env.GOOGLE_CLIENT_ID || !env.GOOGLE_CLIENT_SECRET) return page("Google isn't set up on Friday yet.", 500);
+  if (url.pathname === "/friday/connect") {
+    if ((await sha256(url.searchParams.get("k") || "")) !== FRIDAY_KEY_SHA) return page("That link isn't right. Ask Claude for your Connect link.", 401);
+    const state = crypto.randomUUID();
+    await env.SALES.put("friday:gstate:" + state, "1", { expirationTtl: 900 });
+    const u = new URL("https://accounts.google.com/o/oauth2/v2/auth");
+    for (const [k, v] of Object.entries({ client_id: env.GOOGLE_CLIENT_ID, redirect_uri: G_REDIRECT, response_type: "code", scope: G_SCOPES, access_type: "offline", prompt: "consent", state })) u.searchParams.set(k, v);
+    return Response.redirect(u.toString(), 302);
+  }
+  if (url.pathname === "/friday/google/callback") {
+    const state = url.searchParams.get("state") || "";
+    if (!state || !(await env.SALES.get("friday:gstate:" + state))) return page("That sign-in link expired. Open your Connect link again.", 400);
+    await env.SALES.delete("friday:gstate:" + state);
+    if (url.searchParams.get("error")) return page(`Google stopped the connection: ${esc(url.searchParams.get("error"))}. Nothing was changed.`, 400);
+    const r = await fetch("https://oauth2.googleapis.com/token", { method: "POST", headers: { "content-type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({ code: url.searchParams.get("code") || "", client_id: env.GOOGLE_CLIENT_ID, client_secret: env.GOOGLE_CLIENT_SECRET, redirect_uri: G_REDIRECT, grant_type: "authorization_code" }) });
+    const j = await r.json().catch(() => ({}));
+    if (!j.refresh_token) return page(`Google didn't hand over access (${esc(j.error_description || j.error || r.status)}). Send Claude a screenshot.`, 400);
+    let email = "";
+    try { email = (await (await fetch(`${G_MAIL}/profile`, { headers: { Authorization: "Bearer " + j.access_token } })).json()).emailAddress || ""; } catch {}
+    const scope = j.scope || "";
+    await env.SALES.put("friday:google", JSON.stringify({ refresh: j.refresh_token, scope, email, at: new Date().toISOString() }));
+    await env.SALES.put("friday:gaccess", j.access_token, { expirationTtl: 3000 });
+    const has = (s) => scope.includes(s);
+    return page(`<h2>Friday is connected ✓</h2><p>${esc(email || "Your Google account")}</p><p>Gmail: ${has("gmail") ? "yes" : "<b>no</b> (box wasn't ticked)"}<br>Calendar: ${has("calendar") ? "yes" : "<b>no</b> (box wasn't ticked)"}</p><p>You can close this page and ask her about your day.</p>`);
+  }
+  return page("Not found.", 404);
+}
+
+async function gToken(env) {
+  const cached = await env.SALES.get("friday:gaccess");
+  if (cached) return cached;
+  const g = JSON.parse(await env.SALES.get("friday:google") || "null");
+  if (!g?.refresh) return null;
+  const r = await fetch("https://oauth2.googleapis.com/token", { method: "POST", signal: timeout(), headers: { "content-type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({ refresh_token: g.refresh, client_id: env.GOOGLE_CLIENT_ID, client_secret: env.GOOGLE_CLIENT_SECRET, grant_type: "refresh_token" }) });
+  const j = await r.json().catch(() => ({}));
+  if (!j.access_token) throw new Error(`Google sign-in expired (${j.error || r.status}); reconnect with the Connect link`);
+  await env.SALES.put("friday:gaccess", j.access_token, { expirationTtl: Math.max(60, (j.expires_in || 3600) - 300) });
+  return j.access_token;
+}
+async function gApi(env, url, opt = {}) {
+  const t = await gToken(env);
+  if (!t) throw new Error("Google isn't connected yet");
+  const r = await fetch(url, { ...opt, signal: timeout(), headers: { Authorization: "Bearer " + t, "content-type": "application/json", ...(opt.headers || {}) } });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(`Google ${r.status}: ${(j.error?.message || "").slice(0, 160)}`);
+  return j;
+}
+async function gmailFind(env, q, n = 6) {
+  const l = await gApi(env, `${G_MAIL}/messages?maxResults=${n}&q=${encodeURIComponent(q)}`);
+  const msgs = await Promise.all((l.messages || []).map((m) => gApi(env, `${G_MAIL}/messages/${m.id}?format=metadata&metadataHeaders=From&metadataHeaders=To&metadataHeaders=Subject&metadataHeaders=Date`).catch(() => null)));
+  return { total: l.resultSizeEstimate || 0, items: msgs.filter(Boolean).map((m) => {
+    const h = Object.fromEntries((m.payload?.headers || []).map((x) => [x.name.toLowerCase(), x.value]));
+    return { from: h.from || "", to: h.to || "", subject: h.subject || "(no subject)", when: m.internalDate ? nyTime(Number(m.internalDate)) : "", snippet: (m.snippet || "").replace(/\s+/g, " ").slice(0, 180), unread: (m.labelIds || []).includes("UNREAD") };
+  }) };
+}
+const who = (f) => (f.replace(/<[^>]*>/, "").replace(/"/g, "").trim() || f);
+async function calendarAhead(env, days = 7) {
+  const now = new Date();
+  const j = await gApi(env, `${G_CAL}/events?singleEvents=true&orderBy=startTime&maxResults=15&timeMin=${now.toISOString()}&timeMax=${new Date(+now + days * 864e5).toISOString()}`);
+  return (j.items || []).map((e) => `${e.start?.dateTime ? nyTime(e.start.dateTime) : new Date(e.start?.date + "T12:00:00Z").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }) + " (all day)"}: ${e.summary || "(busy)"}${e.location ? ` at ${e.location}` : ""}`);
+}
+async function googleFacts(env) {
+  const g = JSON.parse(await env.SALES.get("friday:google") || "null");
+  if (!g) return ["GOOGLE: not connected yet. If he asks about email or calendar, tell him to open his Connect Google link (Claude has it)."];
+  const out = [];
+  const [cal, inbox] = await Promise.all([calendarAhead(env, 7).catch((e) => `ERR ${e.message}`), gmailFind(env, "in:inbox is:unread category:primary newer_than:3d", 6).catch((e) => `ERR ${e.message}`)]);
+  out.push(typeof cal === "string" ? `CALENDAR: couldn't read (${cal.slice(4, 140)}).` : `CALENDAR (next 7 days, ${g.email}): ${cal.length ? cal.join("; ") : "nothing scheduled"}.`);
+  out.push(typeof inbox === "string" ? `INBOX: couldn't read (${inbox.slice(4, 140)}).` : `INBOX (${g.email}, unread in Primary, last 3 days: about ${inbox.total}): ${inbox.items.map((m) => `${who(m.from)}: "${m.subject}" (${m.when})`).join("; ") || "nothing unread"}.`);
+  return out;
+}
+async function resolveEmail(env, to) {
+  if (/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(to.trim())) return to.trim();
+  const { items } = await gmailFind(env, `"${to.replace(/"/g, "")}"`, 10);
+  const name = to.toLowerCase();
+  for (const m of items) for (const h of [m.from, ...m.to.split(",")]) if (h.toLowerCase().includes(name)) { const a = h.match(/[^<\s"]+@[^>\s"]+/); if (a) return a[0]; }
+  return null;
+}
+const b64url = (s) => btoa(unescape(encodeURIComponent(s))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+const addMinutes = (local, min) => new Date(Date.parse(local + "Z") + min * 60e3).toISOString().slice(0, 16);
+
+// One entry point for every Google action (text mode and Live mode). Returns a plain result for Friday to speak from.
+async function runGoogle(env, a = {}) {
+  try {
+    if (a.do === "calendar") { const ev = await calendarAhead(env, Math.min(Number(a.days) || 7, 60)); return ev.length ? ev.join("\n") : "Nothing on the calendar in that window."; }
+    if (a.do === "email_search") {
+      const { total, items } = await gmailFind(env, a.query || "in:inbox newer_than:2d", 6);
+      return items.length ? `${total} match(es). ` + items.map((m) => `${m.unread ? "[unread] " : ""}${who(m.from)} (${m.when}) "${m.subject}": ${m.snippet}`).join("\n") : "No emails match that.";
+    }
+    if (a.do === "event_add") {
+      if (!a.title || !a.start) return "Need a title and a start time.";
+      const allDay = /^\d{4}-\d{2}-\d{2}$/.test(a.start);
+      const start = String(a.start).slice(0, 16);
+      const body = allDay ? { summary: a.title, start: { date: a.start }, end: { date: new Date(Date.parse(a.start) + 864e5).toISOString().slice(0, 10) } }
+        : { summary: a.title, location: a.location || undefined, start: { dateTime: start + ":00", timeZone: "America/New_York" }, end: { dateTime: addMinutes(start, Number(a.minutes) || 60) + ":00", timeZone: "America/New_York" } };
+      const e = await gApi(env, `${G_CAL}/events`, { method: "POST", body: JSON.stringify(body) });
+      return `Added "${e.summary}" for ${e.start?.dateTime ? nyTime(e.start.dateTime) : a.start}.`;
+    }
+    if (a.do === "email_draft") {
+      if (!a.to || !a.body) return "Need who it's to and what to say.";
+      const addr = await resolveEmail(env, String(a.to));
+      if (!addr) return `I couldn't find an email address for ${a.to}. Ask him for it.`;
+      const subject = String(a.subject || "Quick note").replace(/[\r\n]+/g, " ");
+      const raw = `To: ${addr}\r\nSubject: =?UTF-8?B?${btoa(unescape(encodeURIComponent(subject)))}?=\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\n${a.body}`;
+      const dr = await gApi(env, `${G_MAIL}/drafts`, { method: "POST", body: JSON.stringify({ message: { raw: b64url(raw) } }) });
+      await env.SALES.put("friday:pending_email", JSON.stringify({ id: dr.id, to: addr, subject, at: Date.now() }), { expirationTtl: 1800 });
+      return `DRAFT SAVED (not sent) to ${addr}, subject "${subject}". Read him the gist and ask: send it?`;
+    }
+    if (a.do === "email_send") {
+      const p = JSON.parse(await env.SALES.get("friday:pending_email") || "null");
+      if (!p) return "There's no draft waiting. Nothing was sent.";
+      if (Date.now() - p.at < 4000) return "Not sent: he has to hear the draft and say send it first.";
+      await gApi(env, `${G_MAIL}/drafts/send`, { method: "POST", body: JSON.stringify({ id: p.id }) });
+      await env.SALES.delete("friday:pending_email");
+      return `SENT to ${p.to} ("${p.subject}").`;
+    }
+    return "Unknown Google action.";
+  } catch (e) { return `Couldn't do that: ${String(e.message || e).slice(0, 160)}`; }
 }
