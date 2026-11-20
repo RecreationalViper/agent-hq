@@ -671,7 +671,7 @@ async function fridayLive(req, env, isTool) {
   const system = `You are FRIDAY, Josiah Cottingham's personal AI, modeled on Tony Stark's FRIDAY (and JARVIS before her). ${FRIDAY_PERSONA}
 This is a live voice conversation: keep turns short and natural, let him interrupt, and don't read lists aloud.
 It's ${ny} (New York). His world: Forever Held, his printable memorial keepsake shop (foreverheld.pages.dev, checkout on Payhip), run day to day by AI agents on GitHub (daily pins and posts, church email outreach, email care, reports). Claude is his head of development for bigger builds. Help with anything else too.
-Use get_status for fresh numbers before answering business questions; never invent sales or results. Use phone_action to make his iPhone do things (text, call, reminder, event, timer, alarm, directions, note, music, health, open). Use remember for things worth keeping. Use run_agent only when he asks to start an agent job.
+Business questions: answer from the FACTS below (call get_status if he wants the very latest); never say things are fine without facts, never invent sales or results. Use phone_action to make his iPhone do things (text, call, reminder, event, timer, alarm, directions, note, music, health, open). Use remember for things worth keeping. Use run_agent only when he asks to start an agent job.
 THINGS HE ASKED YOU TO REMEMBER:\n${memory.map((m) => `- ${m}`).join("\n") || "- (nothing yet)"}
 FACTS AT THE START OF THIS CALL:\n${facts.join("\n")}`;
   const tools = [{ functionDeclarations: [
@@ -684,11 +684,15 @@ FACTS AT THE START OF THIS CALL:\n${facts.join("\n")}`;
   let last = "";
   for (const model of (d.model ? [d.model] : FRIDAY_LIVE_MODELS)) {
     // REST name for the lock is bidiGenerateContentSetup (the SDKs call it liveConnectConstraints); fall back to an unlocked single-use token
-    for (const lock of [{ bidiGenerateContentSetup: { model, generationConfig: { responseModalities: ["AUDIO"] } } }, {}]) {
+    // the lock carries the whole setup (persona, facts, tools, voice): on the constrained endpoint it overrides what the app sends
+    const voice = d.voice || "Kore";
+    const setup = { model, generationConfig: { responseModalities: ["AUDIO"], speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voice } } } },
+      systemInstruction: { parts: [{ text: system }] }, tools, inputAudioTranscription: {}, outputAudioTranscription: {} };
+    for (const lock of [{ bidiGenerateContentSetup: setup }, {}]) {
       const r = await fetch("https://generativelanguage.googleapis.com/v1beta/auth_tokens", { method: "POST", signal: timeout(), headers: { "x-goog-api-key": env.GEMINI_API_KEY, "content-type": "application/json" },
         body: JSON.stringify({ uses: 1, expireTime: exp, newSessionExpireTime: start, ...lock }) });
       const t = await r.text();
-      if (r.ok) { const j = JSON.parse(t); return out({ ok: true, token: j.name, model, locked: !!lock.bidiGenerateContentSetup, voice: d.voice || "Kore", system, tools }); }
+      if (r.ok) { const j = JSON.parse(t); return out({ ok: true, token: j.name, model, locked: !!lock.bidiGenerateContentSetup, voice, system, tools }); }
       last += ` | ${model}${lock.bidiGenerateContentSetup ? "" : " (unlocked)"}: HTTP ${r.status} ${t.replace(/\s+/g, " ").slice(0, 200)}`;
       if (r.status !== 400) break;
     }

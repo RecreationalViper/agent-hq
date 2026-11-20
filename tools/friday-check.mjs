@@ -29,7 +29,7 @@ if (live.ok) {
     ws.onopen = () => ws.send(JSON.stringify({ setup: { model: live.model, generationConfig: { responseModalities: ["AUDIO"], speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: live.voice } } } }, systemInstruction: { parts: [{ text: live.system }] }, tools: live.tools, outputAudioTranscription: {} } }));
     ws.onmessage = async (e) => {
       const m = JSON.parse(typeof e.data === "string" ? e.data : await e.data.text());
-      if (m.setupComplete) { events.push("setup"); ws.send(JSON.stringify({ realtimeInput: { text: "Hey Friday, how's the shop doing?" } })); }
+      if (m.setupComplete) { events.push("setup"); ws.send(JSON.stringify({ realtimeInput: { text: "Hey Friday, how is the shop doing? Any sales, and did the church emails go out?" } })); }
       if (m.toolCall) {
         events.push("tool:" + m.toolCall.functionCalls.map((f) => f.name).join(","));
         const functionResponses = [];
