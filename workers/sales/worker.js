@@ -577,7 +577,12 @@ His world:
 - Other projects may come up (lead generation for roofers, TikTok edits, trading agents). Help with anything: questions, ideas, planning, general knowledge.
 Use only the LIVE FACTS below for anything about his businesses' numbers or status; if something isn't there, say you don't have it yet. Never invent sales, replies or results.
 
-You can act. Return ONLY JSON: {"say": "what you speak", "run": null or one of [${Object.keys(FRIDAY_RUNS).join(", ")}], "remember": null or "a short fact to keep about him", "phone": null or a phone action, "google": null or a Google action, "lookup": null or a lookup}.
+You can act. Return ONLY JSON: {"say": "what you speak", "run": null or one of [${Object.keys(FRIDAY_RUNS).join(", ")}], "remember": null or "a short fact to keep about him", "phone": null or a phone action, "google": null or a Google action, "lookup": null or a lookup, "shop": null or a shop action}.
+"shop" runs his Payhip store and money (he's the owner and lets you act on the business):
+  {"do":"sales","days":30}  orders, gross, fees, refunds, net   {"do":"orders","limit":10}   {"do":"refunds","days":90}
+  {"do":"coupons"}  list coupons   {"do":"coupon_create","code":"WORD","percent":15,"until":"YYYY-MM-DD"}  only when he asks for one; real promos only, never fake urgency
+  {"do":"balance"} {"do":"payments"} {"do":"payouts"}  Stripe money (if connected)
+Google also has: {"do":"drive_search","query":"..."} {"do":"doc_read","query":"file name"} {"do":"doc_create","title":"...","text":"..."} {"do":"sheet_append","query":"sheet name","row":["a","b"]}
 "lookup" is your second brain. Use it whenever the answer needs fresh or outside info instead of guessing:
   {"tool":"web","query":"..."}  current news, prices, facts, anything on the internet
   {"tool":"think","query":"the hard question","context":"what you know"}  big decisions, strategy, money, tricky reasoning or code: asks Claude. ALWAYS use it when he says "think hard", "think about it" or "ask Claude"
@@ -638,9 +643,15 @@ ${facts.join("\n")}`;
     if (r.lookup.tool === "note" || /^Couldn't|isn't connected|Unknown lookup/.test(lResult)) say = r.lookup.tool === "note" && lResult === "Saved to Notion." ? say : lResult;
     else { const a2 = await secondPass(`${r.lookup.tool.toUpperCase()} RESULT`, r.lookup, lResult); if (a2) say = a2; }
   }
+  let sResult = null;
+  if (owner && r.shop && typeof r.shop === "object" && r.shop.do) {
+    sResult = await fridayShop(env, r.shop);
+    if (/^(Couldn't|Need |Unknown|Payhip didn't|Stripe isn't)/.test(sResult)) say = sResult;
+    else { const a2 = await secondPass("SHOP RESULT", r.shop, sResult); if (a2) say = a2; }
+  }
   if (owner && r.google && typeof r.google === "object" && r.google.do) {
     gResult = await runGoogle(env, r.google);
-    if (["calendar", "email_search"].includes(r.google.do) && !/^Couldn't/.test(gResult)) {
+    if (["calendar", "email_search", "drive_search", "doc_read"].includes(r.google.do) && !/^Couldn't/.test(gResult)) {
       // second pass: answer from what Google returned
       try {
         const a2 = await secondPass("GOOGLE RESULT", r.google, gResult); if (a2) say = a2;      } catch {}
@@ -651,7 +662,7 @@ ${facts.join("\n")}`;
   await env.SALES.put("friday:history", JSON.stringify([...convo, { role: "assistant", content: say }].slice(-12)), { expirationTtl: 6 * 3600 });
   const PHONE = ["text", "call", "reminder", "event", "timer", "alarm", "directions", "note", "music", "health", "open"];
   const phone = r.phone && typeof r.phone === "object" && PHONE.includes(r.phone.do) ? r.phone : null;
-  return out({ ok: true, heard, say, ran: r.run || null, remembered: r.remember || null, google: gResult, lookup: lResult ? String(lResult).slice(0, 600) : null, phone, phone_json: phone ? JSON.stringify(phone) : "" });
+  return out({ ok: true, heard, say, ran: r.run || null, remembered: r.remember || null, google: gResult, shop: sResult ? String(sResult).slice(0, 600) : null, lookup: lResult ? String(lResult).slice(0, 600) : null, phone, phone_json: phone ? JSON.stringify(phone) : "" });
 }
 
 
@@ -709,6 +720,7 @@ async function fridayLive(req, env, isTool) {
     const a = d.args || {};
     if (d.name === "get_status") return out({ ok: true, result: (await fridayFacts(env, new Date(), owner)).join("\n") });
     if (d.name === "google") return out({ ok: true, result: owner ? await runGoogle(env, a) : "Google tools are owner-only." });
+    if (d.name === "shop") return out({ ok: true, result: owner ? await fridayShop(env, a) : "Shop tools are owner-only." });
     if (d.name === "lookup") return out({ ok: true, result: owner || ["web", "think", "report"].includes(a.tool) ? await fridayLookup(env, a) : "That lookup is owner-only." });
     if (d.name === "remember" && a.fact) { memory.push(`${String(a.fact).slice(0, 200)} (${new Date().toISOString().slice(0, 10)})`); await env.SALES.put("friday:memory", JSON.stringify(memory.slice(-200))); return out({ ok: true, result: "Saved." }); }
     if (d.name === "run_agent" && FRIDAY_RUNS[a.job]) {
@@ -727,14 +739,16 @@ This is a live voice conversation: keep turns short and natural, let him interru
 It's ${ny} (New York). His world: Forever Held, his printable memorial keepsake shop (foreverheld.pages.dev, checkout on Payhip), run day to day by AI agents on GitHub (daily pins and posts, church email outreach, email care, reports). Claude is his head of development for bigger builds. Help with anything else too.
 Business questions: answer from the FACTS below (call get_status if he wants the very latest); never say things are fine without facts, never invent sales or results. Use phone_action to make his iPhone do things (text, call, reminder, event, timer, alarm, directions, note, music, health, open). Use remember for things worth keeping. Use run_agent only when he asks to start an agent job.
 Use lookup when you need outside or fresh info (web), deep thinking (think, asks Claude), his Notion, his Discord channels or agent reports. Say "one sec" while it runs.
+Use shop for his Payhip sales, orders, refunds, coupons and Stripe money.
 Use google for his Gmail and Google Calendar: calendar (look ahead), email_search (Gmail query), event_add (start as YYYY-MM-DDTHH:MM New York time), email_draft, email_send. Email rule: never send on the first ask. Draft, tell him who and the gist, ask "Send it?", and only call email_send after he says yes.
 THINGS HE ASKED YOU TO REMEMBER:\n${memory.map((m) => `- ${m}`).join("\n") || "- (nothing yet)"}
 FACTS AT THE START OF THIS CALL:\n${facts.join("\n")}`;
   const tools = [{ functionDeclarations: [
     { name: "get_status", description: "Fresh facts about his businesses: sales, posting, church outreach, agent health." },
     { name: "run_agent", description: "Start one of his agent jobs.", parameters: { type: "OBJECT", properties: { job: { type: "STRING", enum: Object.keys(FRIDAY_RUNS) } }, required: ["job"] } },
+    { name: "shop", description: "Run his Payhip shop and money. do = sales|orders|refunds (days, limit) | coupons | coupon_create (code, percent, until YYYY-MM-DD; only when he asks) | balance|payments|payouts (Stripe).", parameters: { type: "OBJECT", properties: { do: { type: "STRING", enum: ["sales", "orders", "refunds", "coupons", "coupon_create", "balance", "payments", "payouts"] }, days: { type: "NUMBER" }, limit: { type: "NUMBER" }, code: { type: "STRING" }, percent: { type: "NUMBER" }, until: { type: "STRING" } }, required: ["do"] } },
     { name: "lookup", description: "Your second brain. tool = web (search the internet) | think (ask Claude a hard question) | notion (search his Notion) | note (save to his Notion) | discord (read one of his channels: content, sales, inbox, alerts, research, growth, trading-desk) | report (an agent's latest report).", parameters: { type: "OBJECT", properties: { tool: { type: "STRING", enum: ["web", "think", "notion", "note", "discord", "report"] }, query: { type: "STRING" }, context: { type: "STRING" }, title: { type: "STRING" }, text: { type: "STRING" }, channel: { type: "STRING" } }, required: ["tool"] } },
-    { name: "google", description: "His Gmail and Google Calendar. do = calendar|email_search|event_add|email_draft|email_send.", parameters: { type: "OBJECT", properties: { do: { type: "STRING", enum: ["calendar", "email_search", "event_add", "email_draft", "email_send"] }, days: { type: "NUMBER" }, query: { type: "STRING" }, title: { type: "STRING" }, start: { type: "STRING" }, minutes: { type: "NUMBER" }, location: { type: "STRING" }, to: { type: "STRING" }, subject: { type: "STRING" }, body: { type: "STRING" } }, required: ["do"] } },
+    { name: "google", description: "His Gmail, Google Calendar and Drive. do = calendar|email_search|event_add|email_draft|email_send|drive_search|doc_read|doc_create|sheet_append.", parameters: { type: "OBJECT", properties: { do: { type: "STRING", enum: ["calendar", "email_search", "event_add", "email_draft", "email_send", "drive_search", "doc_read", "doc_create", "sheet_append"] }, id: { type: "STRING" }, text: { type: "STRING" }, row: { type: "ARRAY", items: { type: "STRING" } }, days: { type: "NUMBER" }, query: { type: "STRING" }, title: { type: "STRING" }, start: { type: "STRING" }, minutes: { type: "NUMBER" }, location: { type: "STRING" }, to: { type: "STRING" }, subject: { type: "STRING" }, body: { type: "STRING" } }, required: ["do"] } },
     { name: "remember", description: "Save a short fact about him for later.", parameters: { type: "OBJECT", properties: { fact: { type: "STRING" } }, required: ["fact"] } },
     { name: "phone_action", description: "Make his iPhone do something. do = text|call|reminder|event|timer|alarm|directions|note|music|health|open.", parameters: { type: "OBJECT", properties: { do: { type: "STRING" }, to: { type: "STRING" }, message: { type: "STRING" }, title: { type: "STRING" }, when: { type: "STRING" }, minutes: { type: "NUMBER" }, text: { type: "STRING" }, query: { type: "STRING" }, metric: { type: "STRING" }, url: { type: "STRING" } }, required: ["do"] } }
   ] }];
@@ -785,7 +799,7 @@ async function transcribe(env, audio, type) {
 // The refresh token lives only in this Worker's private KV (never in the public repo or logs).
 // Only the owner's key gets Google data (the agents' test key never does, since its output lands in public logs).
 // Email rule, enforced in code: Friday only DRAFTS. Sending needs a separate "send it" after he's heard the draft.
-const G_SCOPES = "openid email https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/calendar";
+const G_SCOPES = "openid email https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/documents https://www.googleapis.com/auth/spreadsheets";
 const G_REDIRECT = "https://foreverheld-sales.foreverheld.workers.dev/friday/google/callback";
 const G_MAIL = "https://gmail.googleapis.com/gmail/v1/users/me";
 const G_CAL = "https://www.googleapis.com/calendar/v3/calendars/primary";
@@ -911,6 +925,37 @@ async function runGoogle(env, a = {}) {
       await env.SALES.delete("friday:pending_email");
       return `SENT to ${p.to} ("${p.subject}").`;
     }
+    if (a.do === "drive_search") {
+      const q = String(a.query || "").replace(/'/g, "\\'");
+      const j = await gApi(env, `https://www.googleapis.com/drive/v3/files?pageSize=8&orderBy=modifiedTime desc&fields=files(id,name,mimeType,modifiedTime)&q=${encodeURIComponent(`trashed=false and (name contains '${q}' or fullText contains '${q}')`)}`);
+      return (j.files || []).map((f) => `${f.name} [${f.mimeType.split(".").pop()}] id=${f.id} (edited ${nyTime(f.modifiedTime)})`).join("\n") || "Nothing in Drive matches that.";
+    }
+    if (a.do === "doc_read") {
+      let id = a.id;
+      if (!id) { const q = String(a.query || "").replace(/'/g, "\\'"); id = (await gApi(env, `https://www.googleapis.com/drive/v3/files?pageSize=1&orderBy=modifiedTime desc&fields=files(id,name,mimeType)&q=${encodeURIComponent(`trashed=false and name contains '${q}'`)}`)).files?.[0]?.id; }
+      if (!id) return "Couldn't find that file.";
+      const meta = await gApi(env, `https://www.googleapis.com/drive/v3/files/${id}?fields=name,mimeType`);
+      const exp = /spreadsheet/.test(meta.mimeType) ? "text/csv" : /document|presentation/.test(meta.mimeType) ? "text/plain" : null;
+      const t = await gToken(env);
+      const r = await fetch(exp ? `https://www.googleapis.com/drive/v3/files/${id}/export?mimeType=${encodeURIComponent(exp)}` : `https://www.googleapis.com/drive/v3/files/${id}?alt=media`, { signal: timeout(), headers: { Authorization: "Bearer " + t } });
+      return `${meta.name}:\n${(await r.text()).slice(0, 5000)}`;
+    }
+    if (a.do === "doc_create") {
+      const t = await gToken(env);
+      const boundary = "fri" + Date.now();
+      const body = `--${boundary}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n${JSON.stringify({ name: a.title || "Note from Friday", mimeType: "application/vnd.google-apps.document" })}\r\n--${boundary}\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\n${a.text || a.body || ""}\r\n--${boundary}--`;
+      const r = await fetch("https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id,name", { method: "POST", signal: timeout(), headers: { Authorization: "Bearer " + t, "content-type": `multipart/related; boundary=${boundary}` }, body });
+      const j = await r.json().catch(() => ({}));
+      return r.ok ? `Created the Google Doc "${j.name}".` : `Couldn't do that: ${j.error?.message || r.status}`;
+    }
+    if (a.do === "sheet_append") {
+      let id = a.id;
+      if (!id) { const q = String(a.query || a.title || "").replace(/'/g, "\\'"); id = (await gApi(env, `https://www.googleapis.com/drive/v3/files?pageSize=1&orderBy=modifiedTime desc&fields=files(id)&q=${encodeURIComponent(`trashed=false and mimeType='application/vnd.google-apps.spreadsheet' and name contains '${q}'`)}`)).files?.[0]?.id; }
+      if (!id) return "Couldn't find that spreadsheet.";
+      const row = Array.isArray(a.row) ? a.row : String(a.row || a.text || "").split("|").map((x) => x.trim());
+      await gApi(env, `https://sheets.googleapis.com/v4/spreadsheets/${id}/values/A1:append?valueInputOption=USER_ENTERED`, { method: "POST", body: JSON.stringify({ values: [row] }) });
+      return `Added a row: ${row.join(", ")}.`;
+    }
     return "Unknown Google action.";
   } catch (e) { return `Couldn't do that: ${String(e.message || e).slice(0, 160)}`; }
 }
@@ -929,13 +974,33 @@ async function fridayConnections(req, env) {
     await env.SALES.delete("friday:google"); await env.SALES.delete("friday:gaccess"); await env.SALES.delete("friday:pending_email");
     return out({ ok: true });
   }
+  const KEYS = { stripe: { test: (k) => fetch("https://api.stripe.com/v1/balance", { headers: { Authorization: "Bearer " + k } }).then((r) => r.ok) } };
+  if (d.action === "set_key" && KEYS[d.app]) {
+    const k = String(d.key || "").trim();
+    if (!k || !(await KEYS[d.app].test(k).catch(() => false))) return out({ ok: false, error: "That key didn't work. Check you copied all of it." });
+    await env.SALES.put("friday:key:" + d.app, k);
+    return out({ ok: true });
+  }
+  if (d.action === "disconnect" && KEYS[d.app]) { await env.SALES.delete("friday:key:" + d.app); return out({ ok: true }); }
   const g = JSON.parse(await env.SALES.get("friday:google") || "null");
-  const parts = g ? [g.scope?.includes("gmail") && "Gmail", g.scope?.includes("calendar") && "Calendar"].filter(Boolean).join(" + ") : "";
+  const stripe = !!(await env.SALES.get("friday:key:stripe"));
+  const parts = g ? [g.scope?.includes("gmail") && "Gmail", g.scope?.includes("calendar") && "Calendar", g.scope?.includes("drive") && "Drive, Docs, Sheets"].filter(Boolean).join(" + ") : "";
+  const on = (k) => !!env[k];
   return out({ ok: true, apps: [
-    { id: "google", icon: "✉️", name: "Google: Gmail + Calendar", connect: !!env.GOOGLE_CLIENT_ID, connected: !!g, detail: g ? `${g.email || "connected"} · ${parts || "limited"}` : "Read your inbox and calendar, add events, draft emails (sends only when you say)" },
-    { id: "business", icon: "🕊️", name: "Forever Held + agents", connected: true, detail: "Sales, posts, church outreach, agent health" },
-    { id: "phone", icon: "📱", name: "iPhone (Friday Hands Shortcut)", detail: "Texts, calls, reminders, alarms, music, directions, Health" },
-    { id: "money", icon: "💳", name: "Money (read-only)", soon: true, detail: "Balances and spending, never moves money" }
+    { id: "google", icon: "✉️", name: "Google: Gmail, Calendar, Drive", connect: !!env.GOOGLE_CLIENT_ID, connected: !!g, detail: g ? `${g.email || "connected"} · ${parts || "limited"}${g.scope?.includes("drive") ? "" : " · tap Reconnect to add Drive, Docs, Sheets"}` : "Inbox, calendar, Drive, Docs, Sheets. Sends email only when you say" },
+    { id: "payhip", icon: "🛒", name: "Payhip shop", connected: on("PAYHIP_API_KEY"), detail: "Orders, refunds, net sales, create coupons" },
+    { id: "stripe", icon: "💳", name: "Stripe", key: true, connected: stripe, detail: stripe ? "Balance, payments, payouts" : "If Payhip pays you through Stripe: Stripe › Developers › API keys › Create restricted key (Read access), paste it here" },
+    { id: "business", icon: "🕊️", name: "Forever Held agents", connected: true, detail: "Posts, church outreach, agent health, start agent jobs" },
+    { id: "brain", icon: "🧠", name: "Claude (think hard)", connected: on("CLAUDE_API_KEY"), detail: "Say \"think hard\" or \"ask Claude\". $2/month cap" },
+    { id: "web", icon: "🌐", name: "Web search", connected: on("TAVILY_API_KEY") || on("EXA_API_KEY"), detail: "News, prices, facts (Tavily + Exa)" },
+    { id: "notion", icon: "📓", name: "Notion", connected: on("NOTION_TOKEN"), detail: "Search and save notes. Share a page with the agents' Notion connection for her to see it" },
+    { id: "discord", icon: "💬", name: "Discord", connected: on("DISCORD_BOT_TOKEN"), detail: "Reads your agents' channels (church replies, sales, alerts)" },
+    { id: "phone", icon: "📱", name: "iPhone (Friday Hands Shortcut)", detail: "Texts, calls, reminders, alarms, music, directions, Health. Ask Claude to walk you through it" },
+    { id: "paypal", icon: "🅿️", name: "PayPal", soon: true, detail: "Balance and payouts, if Payhip pays you through PayPal" },
+    { id: "etsy", icon: "🧶", name: "Etsy", soon: true, detail: "Orders, listings, messages, when the Etsy shop opens" },
+    { id: "shopify", icon: "🛍️", name: "Shopify", soon: true, detail: "When/if you move to Shopify" },
+    { id: "spotify", icon: "🎵", name: "Spotify", soon: true, detail: "Play, queue and pick music" },
+    { id: "money", icon: "🏦", name: "Bank accounts", soon: true, detail: "Balances and spending across your banks" }
   ] });
 }
 
@@ -1021,4 +1086,50 @@ async function fridayLookup(env, a = {}) {
     }
     return "Unknown lookup.";
   } catch (e) { return `Couldn't look that up: ${String(e.message || e).slice(0, 160)}`; }
+}
+
+// ───────────────────────── Friday runs the shop: Payhip orders, coupons, money ─────────────────────────
+// Payhip's API only covers coupons (orders arrive by webhook into KV), so orders/refunds come from KV.
+// Stripe (optional): he pastes a key in Friday's Settings; balance, payments and payouts.
+async function fridayShop(env, a = {}) {
+  try {
+    if (["sales", "orders", "refunds"].includes(a.do)) {
+      const days = Math.min(Number(a.days) || 30, 365), since = new Date(Date.now() - days * 864e5).toISOString().slice(0, 10);
+      const rows = [];
+      for (const type of a.do === "refunds" ? ["refunded"] : ["paid", "refunded"]) {
+        let cursor;
+        do { const page = await env.SALES.list({ prefix: type + ":", cursor }); for (const k of page.keys) if (k.name.slice(type.length + 1) >= since) { const v = await env.SALES.get(k.name); if (v) rows.push({ type, ...JSON.parse(v) }); } cursor = page.list_complete ? null : page.cursor; } while (cursor);
+      }
+      rows.sort((x, y) => String(y.date).localeCompare(String(x.date)));
+      const paid = rows.filter((x) => x.type === "paid"), gross = paid.reduce((t, x) => t + (Number(x.amount) || 0), 0), fees = paid.reduce((t, x) => t + (Number(x.fees) || 0), 0), refunds = rows.reduce((t, x) => t + (Number(x.refunded) || 0), 0);
+      const list = rows.slice(0, Number(a.limit) || 12).map((x) => `${String(x.date).slice(0, 10)} ${x.type === "paid" ? "sale" : "REFUND"}: ${(x.items || []).map((i) => i.product).join(" + ") || "order"} $${x.type === "paid" ? x.amount : x.refunded}${x.coupon ? ` (code ${x.coupon})` : ""}${x.email ? ` ${x.email}` : ""}`);
+      return `Last ${days} days: ${paid.length} order(s), $${gross.toFixed(2)} gross, $${fees.toFixed(2)} fees, $${refunds.toFixed(2)} refunded, about $${(gross - fees - refunds).toFixed(2)} net.\n${list.join("\n") || "No orders."}`;
+    }
+    if (a.do === "coupons") {
+      const r = await fetch("https://payhip.com/api/v2/coupons?limit=20", { signal: timeout(), headers: { "payhip-api-key": env.PAYHIP_API_KEY, accept: "application/json" } });
+      const j = await r.json().catch(() => ({}));
+      const list = j.data?.coupons || j.data || [];
+      return Array.isArray(list) && list.length ? list.map((c) => `${c.code}: ${c.percentage || c.percent_off ? `${c.percentage || c.percent_off}% off` : c.amount_off ? `$${c.amount_off} off` : ""}${c.expiry || c.end_date ? `, ends ${c.expiry ? new Date(c.expiry * 1000).toISOString().slice(0, 10) : c.end_date}` : ""}${c.times_used != null ? `, used ${c.times_used}x` : ""}`).join("\n") : `No coupons found (${r.status}).`;
+    }
+    if (a.do === "coupon_create") {
+      const code = String(a.code || "").toUpperCase().replace(/[^A-Z0-9]/g, ""), pct = Number(a.percent);
+      if (!code || !(pct > 0 && pct <= 90) || !/^\d{4}-\d{2}-\d{2}$/.test(a.until || "")) return "Need a code, a percent (1 to 90) and an end date.";
+      const expiry = Math.floor(Date.parse(`${a.until}T23:59:59-05:00`) / 1000);
+      for (const [kind, body] of [["json", JSON.stringify({ code, percentage: pct, expiry })], ["form", new URLSearchParams({ code, percentage: String(pct), expiry: String(expiry) }).toString()]]) {
+        const r = await fetch("https://payhip.com/api/v1/coupons", { method: "POST", signal: timeout(), headers: { accept: "application/json", "content-type": kind === "json" ? "application/json" : "application/x-www-form-urlencoded", "payhip-api-key": env.PAYHIP_API_KEY }, body });
+        if (r.ok) return `Created coupon ${code}: ${pct}% off every product until ${a.until}. Heads up: the website banner only shows coupons listed in the repo, so tell Claude or an agent if it should be advertised.`;
+      }
+      return "Payhip didn't accept that coupon.";
+    }
+    if (["balance", "payments", "payouts"].includes(a.do)) {
+      const sk = await env.SALES.get("friday:key:stripe");
+      if (!sk) return "Stripe isn't connected. He can add a key in Friday's Settings.";
+      const st = (p) => fetch("https://api.stripe.com/v1" + p, { signal: timeout(), headers: { Authorization: "Bearer " + sk } }).then(async (r) => { const j = await r.json(); if (!r.ok) throw new Error(j.error?.message || r.status); return j; });
+      const $ = (c, cur) => `${(c / 100).toFixed(2)} ${String(cur || "usd").toUpperCase()}`;
+      if (a.do === "balance") { const b = await st("/balance"); return `Available: ${b.available.map((x) => $(x.amount, x.currency)).join(", ")}. Pending: ${b.pending.map((x) => $(x.amount, x.currency)).join(", ")}.`; }
+      if (a.do === "payments") { const c = await st("/charges?limit=10"); return c.data.map((x) => `${nyTime(x.created * 1000)}: ${$(x.amount, x.currency)} ${x.status}${x.refunded ? " (refunded)" : ""} ${x.description || ""}`).join("\n") || "No payments."; }
+      const p = await st("/payouts?limit=8"); return p.data.map((x) => `${nyTime(x.arrival_date * 1000)}: ${$(x.amount, x.currency)} ${x.status}`).join("\n") || "No payouts.";
+    }
+    return "Unknown shop action.";
+  } catch (e) { return `Couldn't do that: ${String(e.message || e).slice(0, 160)}`; }
 }
