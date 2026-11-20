@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-19T21:08:05.174Z",
-  "date": "2026-11-19",
+  "generatedAt": "2026-11-20T12:07:06.549Z",
+  "date": "2026-11-20",
   "token": true,
   "searches": {
     "ran": 12,
@@ -9,102 +9,230 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 25,
+  "apiCalls": 35,
   "rateRemaining": 10,
-  "newItems": 3,
+  "newItems": 6,
   "blockedToday": 0,
-  "shortlist": [],
-  "watched": [
+  "shortlist": [
     {
-      "name": "vercel/ai",
-      "url": "https://github.com/vercel/ai",
-      "description": "The AI Toolkit for TypeScript. From the creators of Next.js, the AI SDK is a free open-source library for building AI-powered applications and agents",
-      "stars": 28091,
-      "forks": 5663,
-      "language": "TypeScript",
-      "license": null,
-      "pushedAt": "2026-11-19T21:01:59Z",
-      "category": "skills",
-      "score": 78,
-      "tier": "watch",
-      "reasons": [
-        "new skill file: skills/ai-sdk/SKILL.md",
-        "28,091 stars",
-        "updated this week",
-        "first-party / well-known maintainer"
-      ],
-      "flags": [
-        "no-license"
-      ],
-      "skillFiles": null,
-      "source": "watched",
-      "newborn": false,
-      "skillPath": "skills/ai-sdk/SKILL.md",
-      "commitUrl": "https://github.com/vercel/ai/commits/4b02148c83eb73e7c68b72a6e27f2744b9e5a267"
-    }
-  ],
-  "newborn": [
-    {
-      "name": "Duoasa/Duoasa-skill",
-      "url": "https://github.com/Duoasa/Duoasa-skill",
-      "description": "蒸馏历代大师的内核。全模型通用，核心参数见 README。Distilling the essence of generations of masters. Works with any AI model. See the README for the core parameter.",
-      "stars": 179,
-      "forks": 25,
-      "language": "",
+      "name": "darkzOGx/youtube-automation-agent",
+      "url": "https://github.com/darkzOGx/youtube-automation-agent",
+      "description": "🎬 Open-source, self-hosted AI agent that runs a YouTube channel end to end: researches topics, writes scripts, generates narration, visuals and video, optimizes SEO, and publishes after your approval, then learns from analytics. Works with Gemini, OpenAI, OpenRouter, DeepSeek and more.",
+      "stars": 5292,
+      "forks": 1682,
+      "language": "JavaScript",
       "license": "MIT",
-      "pushedAt": "2026-11-15T08:47:20Z",
+      "pushedAt": "2026-11-20T02:09:03Z",
       "category": "skills",
-      "score": 69,
+      "score": 70,
       "tier": "watch",
       "reasons": [
         "filed under skills",
-        "179 stars",
+        "5,292 stars",
         "updated this week",
         "MIT license",
-        "new repo, 5 days old",
-        "early traction"
+        "well established"
       ],
       "flags": [
-        "newborn"
+        "self-host-required"
       ],
       "skillFiles": null,
       "source": "search",
-      "newborn": true,
+      "newborn": false,
       "skillPath": null,
       "commitUrl": null
     },
     {
-      "name": "NULL200OK/null200ok-bug-bounty-skill",
-      "url": "https://github.com/NULL200OK/null200ok-bug-bounty-skill",
-      "description": "One word — NULL200OK — turns any AI agent (Claude Code, Cursor, Codex) into a disciplined bug-bounty hunter. A single SKILL.md condensing 6 offensive-security repos: recon, 12+ vuln playbooks, exploit chains, Web3/Immunefi, WAF bypass, triage & HackerOne/Bugcrowd reporting.",
-      "stars": 36,
-      "forks": 10,
-      "language": "",
-      "license": "MIT",
-      "pushedAt": "2026-11-08T14:17:52Z",
+      "name": "ikaijua/Awesome-AITools",
+      "url": "https://github.com/ikaijua/Awesome-AITools",
+      "description": "This repo collects awesome AI tools. Welcome everyone to recommend more awesome AI tools together!",
+      "stars": 6362,
+      "forks": 1054,
+      "language": "Python",
+      "license": "CC-BY-4.0",
+      "pushedAt": "2026-11-20T07:46:12Z",
       "category": "skills",
-      "score": 56,
+      "score": 70,
       "tier": "watch",
       "reasons": [
         "filed under skills",
-        "updated this month",
-        "MIT license",
-        "new repo, 14 days old",
-        "early traction"
+        "6,362 stars",
+        "updated this week",
+        "CC-BY-4.0 license",
+        "well established"
       ],
-      "flags": [
-        "newborn",
-        "tos-risk"
-      ],
+      "flags": [],
       "skillFiles": null,
       "source": "search",
-      "newborn": true,
+      "newborn": false,
       "skillPath": null,
       "commitUrl": null
     }
   ],
+  "watched": [
+    {
+      "name": "google/skills",
+      "url": "https://github.com/google/skills",
+      "description": "Agent Skills for Google products and technologies",
+      "stars": 24469,
+      "forks": 2028,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-19T23:06:09Z",
+      "category": "skills",
+      "score": 100,
+      "tier": "adopt",
+      "reasons": [
+        "new skill file: skills/cloud/agent-platform-agent-registry/SKILL.md",
+        "24,469 stars",
+        "updated this week",
+        "Apache-2.0 license",
+        "first-party / well-known maintainer",
+        "well established",
+        "contains SKILL.md skill files"
+      ],
+      "flags": [],
+      "skillFiles": true,
+      "source": "watched",
+      "newborn": false,
+      "skillPath": "skills/cloud/agent-platform-agent-registry/SKILL.md",
+      "commitUrl": "https://github.com/google/skills/commits/5fb62c2cf7bc7eda841109c3470d132e87055e23"
+    },
+    {
+      "name": "google/skills",
+      "url": "https://github.com/google/skills",
+      "description": "Agent Skills for Google products and technologies",
+      "stars": 24469,
+      "forks": 2028,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-19T23:06:09Z",
+      "category": "skills",
+      "score": 92,
+      "tier": "adopt",
+      "reasons": [
+        "new skill file: skills/cloud/bigquery-migration-data-exporter/SKILL.md",
+        "24,469 stars",
+        "updated this week",
+        "Apache-2.0 license",
+        "first-party / well-known maintainer",
+        "well established"
+      ],
+      "flags": [],
+      "skillFiles": null,
+      "source": "watched",
+      "newborn": false,
+      "skillPath": "skills/cloud/bigquery-migration-data-exporter/SKILL.md",
+      "commitUrl": "https://github.com/google/skills/commits/5fb62c2cf7bc7eda841109c3470d132e87055e23"
+    },
+    {
+      "name": "google/skills",
+      "url": "https://github.com/google/skills",
+      "description": "Agent Skills for Google products and technologies",
+      "stars": 24469,
+      "forks": 2028,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-19T23:06:09Z",
+      "category": "skills",
+      "score": 92,
+      "tier": "adopt",
+      "reasons": [
+        "new skill file: skills/cloud/google-cicd-deploy/SKILL.md",
+        "24,469 stars",
+        "updated this week",
+        "Apache-2.0 license",
+        "first-party / well-known maintainer",
+        "well established"
+      ],
+      "flags": [],
+      "skillFiles": null,
+      "source": "watched",
+      "newborn": false,
+      "skillPath": "skills/cloud/google-cicd-deploy/SKILL.md",
+      "commitUrl": "https://github.com/google/skills/commits/5fb62c2cf7bc7eda841109c3470d132e87055e23"
+    },
+    {
+      "name": "google/skills",
+      "url": "https://github.com/google/skills",
+      "description": "Agent Skills for Google products and technologies",
+      "stars": 24469,
+      "forks": 2028,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-19T23:06:09Z",
+      "category": "skills",
+      "score": 76,
+      "tier": "watch",
+      "reasons": [
+        "6 more new skill file(s) in this repo"
+      ],
+      "flags": [],
+      "skillFiles": null,
+      "source": "watched",
+      "newborn": false,
+      "skillPath": null,
+      "commitUrl": "https://github.com/google/skills/commits/5fb62c2cf7bc7eda841109c3470d132e87055e23"
+    }
+  ],
+  "newborn": [],
   "byCategory": {
-    "skills": [],
+    "skills": [
+      {
+        "name": "darkzOGx/youtube-automation-agent",
+        "url": "https://github.com/darkzOGx/youtube-automation-agent",
+        "description": "🎬 Open-source, self-hosted AI agent that runs a YouTube channel end to end: researches topics, writes scripts, generates narration, visuals and video, optimizes SEO, and publishes after your approval, then learns from analytics. Works with Gemini, OpenAI, OpenRouter, DeepSeek and more.",
+        "stars": 5292,
+        "forks": 1682,
+        "language": "JavaScript",
+        "license": "MIT",
+        "pushedAt": "2026-11-20T02:09:03Z",
+        "category": "skills",
+        "score": 70,
+        "tier": "watch",
+        "reasons": [
+          "filed under skills",
+          "5,292 stars",
+          "updated this week",
+          "MIT license",
+          "well established"
+        ],
+        "flags": [
+          "self-host-required"
+        ],
+        "skillFiles": null,
+        "source": "search",
+        "newborn": false,
+        "skillPath": null,
+        "commitUrl": null
+      },
+      {
+        "name": "ikaijua/Awesome-AITools",
+        "url": "https://github.com/ikaijua/Awesome-AITools",
+        "description": "This repo collects awesome AI tools. Welcome everyone to recommend more awesome AI tools together!",
+        "stars": 6362,
+        "forks": 1054,
+        "language": "Python",
+        "license": "CC-BY-4.0",
+        "pushedAt": "2026-11-20T07:46:12Z",
+        "category": "skills",
+        "score": 70,
+        "tier": "watch",
+        "reasons": [
+          "filed under skills",
+          "6,362 stars",
+          "updated this week",
+          "CC-BY-4.0 license",
+          "well established"
+        ],
+        "flags": [],
+        "skillFiles": null,
+        "source": "search",
+        "newborn": false,
+        "skillPath": null,
+        "commitUrl": null
+      }
+    ],
     "enhancement": [],
     "free-tokens": [],
     "efficiency": []
@@ -133,13 +261,6 @@
       "first": "2026-11-06"
     },
     {
-      "name": "google/skills",
-      "score": 94,
-      "tier": "adopt",
-      "category": "skills",
-      "first": "2026-11-06"
-    },
-    {
       "name": "agentes-chat/agentes-chat",
       "score": 90,
       "tier": "watch",
@@ -152,10 +273,17 @@
       "tier": "watch",
       "category": "skills",
       "first": "2026-11-18"
+    },
+    {
+      "name": "DIYgod/pinky",
+      "score": 88,
+      "tier": "watch",
+      "category": "skills",
+      "first": "2026-11-17"
     }
   ],
   "watchedRepos": {
     "ran": 3,
-    "newSkillFiles": 1
+    "newSkillFiles": 9
   }
 }
