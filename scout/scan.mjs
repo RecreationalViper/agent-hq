@@ -258,6 +258,11 @@ function judge(repo, category, cfg, today, opts = {}) {
     if (toRe(r.pattern)?.test(hay) && !flags.includes(r.name)) flags.push(r.name);
   }
 
+  // Hard skip: tools built to strip an AI's safety rules (jailbreaks, "fewer refusals", guardrail removal).
+  // They're a security risk on a machine with the owner's accounts, and nothing the team should run or teach Friday.
+  if (/jailbreak|破甲|越狱|fewer refusals|reduce[ds]? refusal|uncensor|bypass (the )?(safety|guardrail|filter)|remove (the )?(safety|guardrail)/i.test(hay)) {
+    flags.push("jailbreak"); reasons.push("built to strip AI safety rules: never adopt"); score = Math.min(score, 10);
+  }
   score = Math.max(0, Math.min(100, Math.round(score)));
   let tier = score >= 72 && !flags.includes("no-license") ? "adopt" : score >= 55 ? "watch" : "skip";
   // A phone-only owner can't run a server, so anything needing a host is never a
