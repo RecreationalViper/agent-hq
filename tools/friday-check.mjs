@@ -17,3 +17,36 @@ if (clip) {
   const j = await r.json().catch(() => ({}));
   console.log(`\nVOICE (${r.status}) heard: ${j.heard}\nA: ${j.say}${j.why ? `\n[why ${j.why.join(" | ")}]` : ""}`);
 }
+
+// Live mode: mint a token, open the Gemini Live WebSocket, ask by text, report what comes back
+const lr = await fetch(URL_ + "/live", { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: "{}" });
+const live = await lr.json().catch(() => ({}));
+console.log(`\nLIVE token: ${lr.status} ${live.ok ? `ok (${live.model})` : live.error}`);
+if (live.ok) {
+  const ws = new WebSocket(`wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContentConstrained?access_token=${live.token}`);
+  let audioBytes = 0, said = "", events = [];
+  const done = new Promise((res) => {
+    ws.onopen = () => ws.send(JSON.stringify({ setup: { model: live.model, generationConfig: { responseModalities: ["AUDIO"], speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: live.voice } } } }, systemInstruction: { parts: [{ text: live.system }] }, tools: live.tools, outputAudioTranscription: {} } }));
+    ws.onmessage = async (e) => {
+      const m = JSON.parse(typeof e.data === "string" ? e.data : await e.data.text());
+      if (m.setupComplete) { events.push("setup"); ws.send(JSON.stringify({ realtimeInput: { text: "Hey Friday, how's the shop doing?" } })); }
+      if (m.toolCall) {
+        events.push("tool:" + m.toolCall.functionCalls.map((f) => f.name).join(","));
+        const functionResponses = [];
+        for (const f of m.toolCall.functionCalls) {
+          const t = await fetch(URL_ + "/tool", { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: JSON.stringify({ name: f.name, args: f.args }) }).then((r) => r.json());
+          functionResponses.push({ id: f.id, name: f.name, response: { result: t.result } });
+        }
+        ws.send(JSON.stringify({ toolResponse: { functionResponses } }));
+      }
+      for (const p of m.serverContent?.modelTurn?.parts || []) if (p.inlineData?.data) audioBytes += p.inlineData.data.length * 0.75;
+      if (m.serverContent?.outputTranscription?.text) said += m.serverContent.outputTranscription.text;
+      if (m.serverContent?.turnComplete) { events.push("turnComplete"); res(); }
+    };
+    ws.onerror = (e) => { events.push("error " + (e.message || "")); res(); };
+    ws.onclose = (e) => { events.push(`close ${e.code} ${e.reason}`); res(); };
+    setTimeout(res, 40000);
+  });
+  await done; try { ws.close(); } catch {}
+  console.log(`LIVE events: ${events.join(" > ")}\nLIVE audio: ${Math.round(audioBytes / 1024)} KB\nLIVE said: ${said}`);
+}

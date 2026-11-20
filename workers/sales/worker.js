@@ -62,6 +62,7 @@ export default {
     if (url.pathname === "/contact") return contact(req, env);
     if (url.pathname === "/chat") return chat(req, env, ctx);
     if (url.pathname === "/friday") return friday(req, env, ctx);
+    if (url.pathname === "/friday/live" || url.pathname === "/friday/tool") return fridayLive(req, env, url.pathname.endsWith("tool"));
     if (url.pathname === "/contacts") return contactsInbox(req, url, env);
     if (url.pathname === "/unsubscribe") return unsubscribe(req, url, env);
     if (url.pathname === "/privacy") return new Response(PRIVACY, { headers: { "content-type": "text/html; charset=utf-8" } });
@@ -517,6 +518,16 @@ async function openRouterChat(env, system, history) {
 // POST /friday { q, history? } with header x-friday-key. Only the owner has the key (its SHA-256 is below).
 // Knows the businesses (sales from KV, agent reports, posting status, church outreach), remembers what it's told,
 // and can start agent workflows. Answers are short and speakable (Siri reads them aloud).
+const FRIDAY_PERSONA = `Who you are:
+- Calm, quick and capable: the steady voice that makes chaos feel manageable. Warm, loyal, always on his side, with a dry, light wit (one quip at most, never at the cost of the answer).
+- You call him "boss" now and then (not every line), like FRIDAY does with Tony.
+- Proactive like JARVIS: if the facts show something he'd want to know (a failure, a reply, a sale, a deadline), mention it briefly even if he didn't ask. Offer the obvious next step.
+- Honest: say plainly when you don't know or can't do something, and never fake a result. Push back, kindly, if a plan looks like a bad idea.
+How you talk (he hears you out loud):
+- Plain spoken sentences, usually under 60 words. No markdown, lists, links, emojis or URLs unless he asks.
+- Lead with the answer. Round numbers and say them naturally ("about twelve dollars").
+- Short confirmations for actions ("On it, boss. Texting Mom now.").
+- If he's stressed or it's late, be gentle and brief.`;
 const FRIDAY_KEY_SHA = "24e6f6d78ba5f775d60efcb6ff8939a5f19d5ae7f22f2e0a79aba608f66fa1d5";
 const FRIDAY_RAW = `https://raw.githubusercontent.com/${REPO}/main`;
 const FRIDAY_RUNS = { ...RUNS, "outreach-replies": ["outreach.yml", { mode: "replies" }], "assistant-check": ["assistant-check.yml", {}], "publish-store": ["deploy-store.yml", {}], "pinterest-stats": ["pinterest-stats.yml", {}] };
@@ -548,39 +559,9 @@ async function friday(req, env, ctx) {
   const now = new Date();
   const ny = now.toLocaleString("en-US", { timeZone: "America/New_York", weekday: "long", month: "long", day: "numeric", hour: "numeric", minute: "2-digit" });
 
-  // what's going on, gathered fresh each time (each piece is optional)
-  const facts = [];
-  const sales = [];
-  try {
-    const since = new Date(now - 30 * 864e5).toISOString().slice(0, 10);
-    let cursor;
-    do { const page = await env.SALES.list({ prefix: "paid:", cursor }); for (const k of page.keys) if (k.name.slice(5) >= since) { const v = await env.SALES.get(k.name); if (v) sales.push(JSON.parse(v)); } cursor = page.list_complete ? null : page.cursor; } while (cursor);
-    const total = sales.reduce((s, x) => s + (Number(x.amount) || 0), 0);
-    facts.push(`SALES (last 30 days): ${sales.length} order(s), about $${total.toFixed(2)}.${sales.slice(-5).map((x) => ` ${x.date.slice(0, 10)}: ${(x.items || []).map((i) => i.product).join(" + ") || "order"} $${x.amount}${x.coupon ? ` (code ${x.coupon})` : ""}`).join(";")}`);
-  } catch (e) { facts.push("SALES: couldn't read."); }
-  const get = (p) => fetch(`${FRIDAY_RAW}/${p}`, { signal: timeout() }).then((r) => (r.ok ? r.text() : "")).catch(() => "");
-  const [status, churches, reportsIdx, history] = await Promise.all([get("skills/automation/status.md"), get("outreach/churches.csv"), get("reports/index.json"), get("content/history.json")]);
-  if (status) facts.push(`POSTING STATUS:\n${status.replace(/\|/g, " ").replace(/-{3,}/g, "").slice(0, 1400)}`);
-  if (churches) {
-    const rows = churches.trim().split("\n").slice(1);
-    const st = (s) => rows.filter((r) => r.includes(`,${s}`)).length;
-    const replied = rows.filter((r) => /,replied/.test(r)).map((r) => r.split(",")[0]);
-    facts.push(`CHURCH OUTREACH (Longest Night set): ${rows.length} churches on the list, ${st("sent")} emailed, ${replied.length} replied${replied.length ? ` (${replied.join(", ")})` : ""}, ${st("new")} waiting. Full replies are posted in Discord.`);
-  }
-  try { const idx = JSON.parse(reportsIdx || "[]").slice(0, 12); facts.push(`LATEST AGENT REPORTS: ${idx.map((r) => `${r.date} ${r.name}`).join("; ")}`); } catch {}
-  try { const h = JSON.parse(history || "[]"); const last = (Array.isArray(h) ? h : h.posts || []).slice(-8).map((p) => p.headline || p.title || p).filter((x) => typeof x === "string"); if (last.length) facts.push(`RECENT POSTS: ${last.join(" | ")}`); } catch {}
-  if (env.GH_TOKEN) {
-    try {
-      const r = await fetch(`https://api.github.com/repos/${REPO}/actions/runs?per_page=40`, { signal: timeout(), headers: { Authorization: `Bearer ${env.GH_TOKEN}`, Accept: "application/vnd.github+json", "User-Agent": "Friday" } });
-      const runs = (await r.json()).workflow_runs || [];
-      const fails = runs.filter((x) => x.conclusion === "failure" && now - new Date(x.created_at) < 864e5).map((x) => x.name);
-      facts.push(`AGENTS (last 24 h): ${runs.filter((x) => now - new Date(x.created_at) < 864e5).length} runs, ${fails.length ? `failed: ${[...new Set(fails)].join(", ")}` : "no failures"}.`);
-    } catch {}
-  }
+  const facts = await fridayFacts(env, now);
 
-  const system = `You are Friday, Josiah Cottingham's personal AI assistant (like Tony Stark's FRIDAY): warm, sharp, a little witty, always on his side. He talks to you by voice through Siri, so:
-- Answer in plain spoken sentences, usually under 70 words. No markdown, lists, links, emojis or URLs unless he asks.
-- Lead with the answer. Numbers rounded and spoken naturally.
+  const system = `You are FRIDAY, Josiah Cottingham's personal AI, modeled on Tony Stark's FRIDAY (and JARVIS before her). ${FRIDAY_PERSONA}
 It's ${ny} (New York).
 
 His world:
@@ -622,6 +603,93 @@ ${facts.join("\n")}`;
   const PHONE = ["text", "call", "reminder", "event", "timer", "alarm", "directions", "note", "music", "health", "open"];
   const phone = r.phone && typeof r.phone === "object" && PHONE.includes(r.phone.do) ? r.phone : null;
   return out({ ok: true, heard, say, ran: r.run || null, remembered: r.remember || null, phone, phone_json: phone ? JSON.stringify(phone) : "" });
+}
+
+
+// Live facts about his businesses for Friday (each piece optional, gathered fresh)
+async function fridayFacts(env, now = new Date()) {
+  const facts = [];
+  const sales = [];
+  try {
+    const since = new Date(now - 30 * 864e5).toISOString().slice(0, 10);
+    let cursor;
+    do { const page = await env.SALES.list({ prefix: "paid:", cursor }); for (const k of page.keys) if (k.name.slice(5) >= since) { const v = await env.SALES.get(k.name); if (v) sales.push(JSON.parse(v)); } cursor = page.list_complete ? null : page.cursor; } while (cursor);
+    const total = sales.reduce((s, x) => s + (Number(x.amount) || 0), 0);
+    facts.push(`SALES (last 30 days): ${sales.length} order(s), about $${total.toFixed(2)}.${sales.slice(-5).map((x) => ` ${x.date.slice(0, 10)}: ${(x.items || []).map((i) => i.product).join(" + ") || "order"} $${x.amount}${x.coupon ? ` (code ${x.coupon})` : ""}`).join(";")}`);
+  } catch (e) { facts.push("SALES: couldn't read."); }
+  const get = (p) => fetch(`${FRIDAY_RAW}/${p}`, { signal: timeout() }).then((r) => (r.ok ? r.text() : "")).catch(() => "");
+  const [status, churches, reportsIdx, history] = await Promise.all([get("skills/automation/status.md"), get("outreach/churches.csv"), get("reports/index.json"), get("content/history.json")]);
+  if (status) facts.push(`POSTING STATUS:\n${status.replace(/\|/g, " ").replace(/-{3,}/g, "").slice(0, 1400)}`);
+  if (churches) {
+    const rows = churches.trim().split("\n").slice(1);
+    const st = (s) => rows.filter((r) => r.includes(`,${s}`)).length;
+    const replied = rows.filter((r) => /,replied/.test(r)).map((r) => r.split(",")[0]);
+    facts.push(`CHURCH OUTREACH (Longest Night set): ${rows.length} churches on the list, ${st("sent")} emailed, ${replied.length} replied${replied.length ? ` (${replied.join(", ")})` : ""}, ${st("new")} waiting. Full replies are posted in Discord.`);
+  }
+  try { const idx = JSON.parse(reportsIdx || "[]").slice(0, 12); facts.push(`LATEST AGENT REPORTS: ${idx.map((r) => `${r.date} ${r.name}`).join("; ")}`); } catch {}
+  try { const h = JSON.parse(history || "[]"); const last = (Array.isArray(h) ? h : h.posts || []).slice(-8).map((p) => p.headline || p.title || p).filter((x) => typeof x === "string"); if (last.length) facts.push(`RECENT POSTS: ${last.join(" | ")}`); } catch {}
+  if (env.GH_TOKEN) {
+    try {
+      const r = await fetch(`https://api.github.com/repos/${REPO}/actions/runs?per_page=40`, { signal: timeout(), headers: { Authorization: `Bearer ${env.GH_TOKEN}`, Accept: "application/vnd.github+json", "User-Agent": "Friday" } });
+      const runs = (await r.json()).workflow_runs || [];
+      const fails = runs.filter((x) => x.conclusion === "failure" && now - new Date(x.created_at) < 864e5).map((x) => x.name);
+      facts.push(`AGENTS (last 24 h): ${runs.filter((x) => now - new Date(x.created_at) < 864e5).length} runs, ${fails.length ? `failed: ${[...new Set(fails)].join(", ")}` : "no failures"}.`);
+    } catch {}
+  }
+
+  return facts;
+}
+
+// Live mode: real-time voice-to-voice with Gemini Live (interruptible, like talking to JARVIS).
+// /friday/live mints a single-use, 30-minute Gemini token locked to the Live model and hands the app its setup.
+// /friday/tool runs Friday's tools for the live session (status, agent runs, memory). Phone actions run on the phone.
+const FRIDAY_LIVE_MODELS = ["models/gemini-3.8-live", "models/gemini-3.1-flash-live-preview", "models/gemini-2.5-flash-native-audio-preview-12-2025"];
+async function fridayLive(req, env, isTool) {
+  const origin = req.headers.get("origin") || "";
+  const cors = /^https:\/\/recreationalviper\.github\.io$/i.test(origin) ? { "access-control-allow-origin": origin, "access-control-allow-methods": "POST, OPTIONS", "access-control-allow-headers": "content-type, x-friday-key", vary: "origin" } : {};
+  const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store", ...cors } });
+  if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
+  const key = req.headers.get("x-friday-key") || "";
+  if ((await sha256(key)) !== FRIDAY_KEY_SHA && !(env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)))) return out({ ok: false }, 401);
+  let d = {}; try { d = await req.json(); } catch {}
+  const memory = JSON.parse(await env.SALES.get("friday:memory") || "[]");
+  if (isTool) {
+    const a = d.args || {};
+    if (d.name === "get_status") return out({ ok: true, result: (await fridayFacts(env)).join("\n") });
+    if (d.name === "remember" && a.fact) { memory.push(`${String(a.fact).slice(0, 200)} (${new Date().toISOString().slice(0, 10)})`); await env.SALES.put("friday:memory", JSON.stringify(memory.slice(-200))); return out({ ok: true, result: "Saved." }); }
+    if (d.name === "run_agent" && FRIDAY_RUNS[a.job]) {
+      const [wf, inputs] = FRIDAY_RUNS[a.job];
+      const r = env.GH_TOKEN ? await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/${wf}/dispatches`, { method: "POST", headers: { Authorization: `Bearer ${env.GH_TOKEN}`, Accept: "application/vnd.github+json", "User-Agent": "Friday", "content-type": "application/json" }, body: JSON.stringify({ ref: "main", inputs }) }).catch(() => null) : null;
+      return out({ ok: true, result: r?.status === 204 ? `Started ${a.job}.` : `Couldn't start ${a.job}.` });
+    }
+    return out({ ok: false, result: "Unknown tool." });
+  }
+  if (!env.GEMINI_API_KEY) return out({ ok: false, error: "no Gemini key" });
+  const now = new Date();
+  const ny = now.toLocaleString("en-US", { timeZone: "America/New_York", weekday: "long", month: "long", day: "numeric", hour: "numeric", minute: "2-digit" });
+  const facts = await fridayFacts(env, now);
+  const system = `You are FRIDAY, Josiah Cottingham's personal AI, modeled on Tony Stark's FRIDAY (and JARVIS before her). ${FRIDAY_PERSONA}
+This is a live voice conversation: keep turns short and natural, let him interrupt, and don't read lists aloud.
+It's ${ny} (New York). His world: Forever Held, his printable memorial keepsake shop (foreverheld.pages.dev, checkout on Payhip), run day to day by AI agents on GitHub (daily pins and posts, church email outreach, email care, reports). Claude is his head of development for bigger builds. Help with anything else too.
+Use get_status for fresh numbers before answering business questions; never invent sales or results. Use phone_action to make his iPhone do things (text, call, reminder, event, timer, alarm, directions, note, music, health, open). Use remember for things worth keeping. Use run_agent only when he asks to start an agent job.
+THINGS HE ASKED YOU TO REMEMBER:\n${memory.map((m) => `- ${m}`).join("\n") || "- (nothing yet)"}
+FACTS AT THE START OF THIS CALL:\n${facts.join("\n")}`;
+  const tools = [{ functionDeclarations: [
+    { name: "get_status", description: "Fresh facts about his businesses: sales, posting, church outreach, agent health." },
+    { name: "run_agent", description: "Start one of his agent jobs.", parameters: { type: "OBJECT", properties: { job: { type: "STRING", enum: Object.keys(FRIDAY_RUNS) } }, required: ["job"] } },
+    { name: "remember", description: "Save a short fact about him for later.", parameters: { type: "OBJECT", properties: { fact: { type: "STRING" } }, required: ["fact"] } },
+    { name: "phone_action", description: "Make his iPhone do something. do = text|call|reminder|event|timer|alarm|directions|note|music|health|open.", parameters: { type: "OBJECT", properties: { do: { type: "STRING" }, to: { type: "STRING" }, message: { type: "STRING" }, title: { type: "STRING" }, when: { type: "STRING" }, minutes: { type: "NUMBER" }, text: { type: "STRING" }, query: { type: "STRING" }, metric: { type: "STRING" }, url: { type: "STRING" } }, required: ["do"] } }
+  ] }];
+  const exp = new Date(Date.now() + 30 * 60e3).toISOString(), start = new Date(Date.now() + 2 * 60e3).toISOString();
+  let last = "";
+  for (const model of (d.model ? [d.model] : FRIDAY_LIVE_MODELS)) {
+    const r = await fetch("https://generativelanguage.googleapis.com/v1beta/auth_tokens", { method: "POST", signal: timeout(), headers: { "x-goog-api-key": env.GEMINI_API_KEY, "content-type": "application/json" },
+      body: JSON.stringify({ uses: 1, expireTime: exp, newSessionExpireTime: start, liveConnectConstraints: { model, config: { responseModalities: ["AUDIO"] } } }) });
+    const t = await r.text();
+    if (r.ok) { const j = JSON.parse(t); return out({ ok: true, token: j.name, model, voice: d.voice || "Kore", system, tools }); }
+    last = `${model}: HTTP ${r.status} ${t.slice(0, 160)}`;
+  }
+  return out({ ok: false, error: last });
 }
 
 async function transcribe(env, audio, type) {
