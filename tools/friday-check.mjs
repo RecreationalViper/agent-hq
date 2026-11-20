@@ -21,7 +21,7 @@ if (clip) {
 // Live mode: mint a token, open the Gemini Live WebSocket, ask by text, report what comes back
 const lr = await fetch(URL_ + "/live", { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: "{}" });
 const live = await lr.json().catch(() => ({}));
-console.log(`\nLIVE token: ${lr.status} ${live.ok ? `ok (${live.model})` : live.error}`);
+console.log(`\nLIVE token: ${lr.status} ${live.ok ? `ok (${live.model}, locked ${live.locked})` : live.error}`);
 if (live.ok) {
   const ws = new WebSocket(`wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContentConstrained?access_token=${live.token}`);
   let audioBytes = 0, said = "", events = [];

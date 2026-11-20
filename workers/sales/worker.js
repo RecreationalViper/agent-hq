@@ -683,11 +683,16 @@ FACTS AT THE START OF THIS CALL:\n${facts.join("\n")}`;
   const exp = new Date(Date.now() + 30 * 60e3).toISOString(), start = new Date(Date.now() + 2 * 60e3).toISOString();
   let last = "";
   for (const model of (d.model ? [d.model] : FRIDAY_LIVE_MODELS)) {
-    const r = await fetch("https://generativelanguage.googleapis.com/v1beta/auth_tokens", { method: "POST", signal: timeout(), headers: { "x-goog-api-key": env.GEMINI_API_KEY, "content-type": "application/json" },
-      body: JSON.stringify({ uses: 1, expireTime: exp, newSessionExpireTime: start, liveConnectConstraints: { model, config: { responseModalities: ["AUDIO"] } } }) });
-    const t = await r.text();
-    if (r.ok) { const j = JSON.parse(t); return out({ ok: true, token: j.name, model, voice: d.voice || "Kore", system, tools }); }
-    last += ` | ${model}: HTTP ${r.status} ${t.replace(/\s+/g, " ").slice(0, 260)}`;
+    // REST name for the lock is bidiGenerateContentSetup (the SDKs call it liveConnectConstraints); fall back to an unlocked single-use token
+    for (const lock of [{ bidiGenerateContentSetup: { model, generationConfig: { responseModalities: ["AUDIO"] } } }, {}]) {
+      const r = await fetch("https://generativelanguage.googleapis.com/v1beta/auth_tokens", { method: "POST", signal: timeout(), headers: { "x-goog-api-key": env.GEMINI_API_KEY, "content-type": "application/json" },
+        body: JSON.stringify({ uses: 1, expireTime: exp, newSessionExpireTime: start, ...lock }) });
+      const t = await r.text();
+      if (r.ok) { const j = JSON.parse(t); return out({ ok: true, token: j.name, model, locked: !!lock.bidiGenerateContentSetup, voice: d.voice || "Kore", system, tools }); }
+      last += ` | ${model}${lock.bidiGenerateContentSetup ? "" : " (unlocked)"}: HTTP ${r.status} ${t.replace(/\s+/g, " ").slice(0, 200)}`;
+      if (r.status !== 400) break;
+    }
+    continue;
   }
   return out({ ok: false, error: last });
 }
