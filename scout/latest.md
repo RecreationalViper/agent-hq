@@ -1,27 +1,31 @@
 # GitHub Radar — 2026-11-20
 
-> Scanned 12 of 33 saved searches (12 returned data, 0 unchanged, 0 failed). 35 GitHub API calls, authenticated. Zero AI tokens used.
+> Scanned 12 of 33 saved searches (12 returned data, 0 unchanged, 0 failed). 26 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (2)
+## Start here (1)
 
-- **[darkzOGx/youtube-automation-agent](https://github.com/darkzOGx/youtube-automation-agent)** 🟡 WATCH · score 70/100 · ⭐ 5,292 · MIT · updated 0d ago
-  - 🎬 Open-source, self-hosted AI agent that runs a YouTube channel end to end: researches topics, writes scripts, generates narration, visuals and vi…
-  - Why: filed under skills; 5,292 stars; updated this week; MIT license; well established
-  - Watch out: needs a machine running, not phone-only
-- **[ikaijua/Awesome-AITools](https://github.com/ikaijua/Awesome-AITools)** 🟡 WATCH · score 70/100 · ⭐ 6,362 · CC-BY-4.0 · updated 0d ago
-  - This repo collects awesome AI tools. Welcome everyone to recommend more awesome AI tools together!
-  - Why: filed under skills; 6,362 stars; updated this week; CC-BY-4.0 license; well established
+- **[Portkey-AI/gateway](https://github.com/Portkey-AI/gateway)** 🟢 ADOPT · score 76/100 · ⭐ 13,424 · MIT · updated 1d ago
+  - A blazing fast AI Gateway with integrated guardrails. Route to 1,600+ LLMs, 50+ AI Guardrails with 1 fast & friendly API.
+  - Why: 13,424 stars; updated this week; MIT license; well established; directly cuts AI spend
 
-## New inside repos you watch (4)
+## Just launched — new repos (3)
 
-- **[google/skills](https://github.com/google/skills)** 🟢 ADOPT · ⭐ 24,469 · Apache-2.0
-  - Added: [skills/cloud/agent-platform-agent-registry/SKILL.md](https://github.com/google/skills/blob/HEAD/skills/cloud/agent-platform-agent-registry/SKILL.md)
-- **[google/skills](https://github.com/google/skills)** 🟢 ADOPT · ⭐ 24,469 · Apache-2.0
-  - Added: [skills/cloud/bigquery-migration-data-exporter/SKILL.md](https://github.com/google/skills/blob/HEAD/skills/cloud/bigquery-migration-data-exporter/SKILL.md)
-- **[google/skills](https://github.com/google/skills)** 🟢 ADOPT · ⭐ 24,469 · Apache-2.0
-  - Added: [skills/cloud/google-cicd-deploy/SKILL.md](https://github.com/google/skills/blob/HEAD/skills/cloud/google-cicd-deploy/SKILL.md)
-- **[google/skills](https://github.com/google/skills)** 🟡 WATCH · ⭐ 24,469 · Apache-2.0
-  - Added: [see the commit](https://github.com/google/skills/commits/5fb62c2cf7bc7eda841109c3470d132e87055e23)
+_Created in the last few weeks. Surfaced early on purpose, so they stay WATCH until they have a track record._
+
+- **[mankidev/antialgorithm](https://github.com/mankidev/antialgorithm)** 🟡 WATCH · score 82/100 · ⭐ 565 · MIT · updated 0d ago
+  - Agent skill that steers the model away from its first, most average pick in creative work: names, ideas, logo, posters, UI.
+  - Why: filed under skills; 565 stars; updated this week; MIT license; new repo, 6 days old; early traction; contains SKILL.md skill files
+  - Watch out: brand-new repo — unproven, watch before adopting
+  - Confirmed: contains `SKILL.md` skill files
+- **[staryone/motlab](https://github.com/staryone/motlab)** 🟡 WATCH · score 77/100 · ⭐ 275 · MIT · updated 0d ago
+  - Video as code: canvas scenes rendered with WebCodecs in headless Chrome, a review viewer, and agent skills that build the video from your references.
+  - Why: filed under skills; 275 stars; updated this week; MIT license; new repo, 4 days old; early traction; contains SKILL.md skill files
+  - Watch out: brand-new repo — unproven, watch before adopting
+  - Confirmed: contains `SKILL.md` skill files
+- **[CallMeGuLab/dsh-purge-safe](https://github.com/CallMeGuLab/dsh-purge-safe)** 🟡 WATCH · score 74/100 · ⭐ 662 · Apache-2.0 · updated 0d ago
+  - 正版dsh-purge DeepSeek Harness 破甲 ：默认提示词面向国模，原小码酱，完整开放版，无付费墙，技能库与知识库全含，免费公开。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐
+  - Why: filed under skills; 662 stars; updated this week; Apache-2.0 license; new repo, 13 days old; early traction
+  - Watch out: brand-new repo — unproven, watch before adopting
 
 ## Agent skills you could install (0)
 
@@ -44,9 +48,9 @@ _Nothing else new here this scan._
 - [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) — score 96, first seen 2026-11-06, adopt
 - [modelcontextprotocol/python-sdk](https://github.com/modelcontextprotocol/python-sdk) — score 96, first seen 2026-11-06, adopt
 - [obra/superpowers](https://github.com/obra/superpowers) — score 94, first seen 2026-11-06, adopt
+- [google/skills](https://github.com/google/skills) — score 94, first seen 2026-11-06, adopt
 - [agentes-chat/agentes-chat](https://github.com/agentes-chat/agentes-chat) — score 90, first seen 2026-11-17, watch
 - [erkamyaman/rust-anything](https://github.com/erkamyaman/rust-anything) — score 90, first seen 2026-11-18, watch
-- [DIYgod/pinky](https://github.com/DIYgod/pinky) — score 88, first seen 2026-11-17, watch
 
 ## How to read this
 
