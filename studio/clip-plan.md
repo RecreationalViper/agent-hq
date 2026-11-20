@@ -1,61 +1,63 @@
-# Director (updated 2026-11-19)
+# Director (updated 2026-11-20)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# Today's Production Plan: MotionVault (2026-11-19)
+# MotionVault Daily Cut List — 2026-11-20
 
-Here are the 3 short-form clips MotionVault should produce today based on current trend spikes across Twitch, Wikipedia, Last.fm, and YouTube Shorts metrics.
-
----
-
-### Priority Order: What to Make First & Why
-**Make Clip #1 (GTA VI) FIRST.**
-* **Why:** *Grand Theft Auto VI* is currently the #1 trend globally across search and streaming (519,632 Wikipedia page views yesterday; 82,000+ live viewers on CaseOh's Twitch stream alone). Catching this launch-week momentum today gives our zero-budget account the highest probability of hitting FYP / Shorts feeds while search volume is at its peak.
+Here are today’s **3 clip choices** planned for Claude to edit, built directly from our trend scout data, TikTok sound charts, and YouTube Shorts view velocity reports.
 
 ---
 
-### Clip 1: Grand Theft Auto VI – Vice City Night Pursuit
-* **Platforms:** Both (TikTok & YouTube Shorts)
-* **Source Title & Location:** *Grand Theft Auto VI* official trailers & gameplay footage (Vice City Ocean Drive night drive into convenience store heist and getaway).
-* **Target Length:** 32 seconds
-* **Mood:** High-Octane / Hype / Stylized
-* **Hook (0–2s):** First-person hood camera angle of a hypercar screaming down Ocean Drive at night, pulling a near-miss weave past an oncoming bus with sharp tire-screech audio.
-* **Story Stretches (Unbroken):**
-  1. *Stretch 1 (3–12s):* Vice City PD cruiser swerving into frame, sirens flashing against rain-slicked neon pavement.
-  2. *Stretch 2 (13–22s):* Seamless jump-cut to Lucia and Jason storming out of a convenience store under gunfire, laying down cover fire toward responding units.
-  3. *Stretch 3 (23–28s):* High-speed drawbridge jump as a police helicopter spotlight turns the screen stark white.
-* **Biggest Moment (25–28s):** The airborne vehicle leap directly through the chopper spotlight while engine roars peak.
-* **Final Beat (29–32s):** Hard cut to total blackout on the heavy phonk bass drop, displaying centered text: *"Welcome back to Vice City"* followed by the title logo.
-* **Audio Note:** Track: *"MONTAGEM ROYAL (Ultra Slowed)"* by Brazilian Phonk (or *505* by Arctic Monkeys). Place engine rev sound in the 1-second hook before hitting the phonk drop at 0:02.
+### Clip 1: Grand Theft Auto VI — Beach Bar & Vice City Getaway
+* **Target Platform:** Both (TikTok & YouTube Shorts)
+* **Source Title & Location:** *Grand Theft Auto VI* (Vice City Beach Bar into Highway Chase; early story missions / walkthrough gameplay).
+* **Hook (0:00–0:02):** Extreme close-up of Jason grabbing a glass at the beach bar as smooth liquid pouring physics fill the frame.
+* **Unbroken Stretches (Story Order):**
+  1. *Beach Bar (0:02–0:12):* Continuous 10-second shot of Jason drinking at sunset while Lucia starts the sports car outside.
+  2. *The Pursuit (0:12–0:24):* Unbroken 12-second high-speed getaway down the neon Vice City strip with police lights flashing in the backdrop.
+  3. *The Ramp Jump (0:24–0:32):* Continuous 8-second shot as the car hits a construction ramp and launches over the canal.
+* **Biggest Moment:** The vehicle launching mid-air with Vice City neon lights reflecting off the chassis.
+* **Final Beat:** Mid-air freeze-frame cut right before landing, looping seamlessly back to the beach bar glass hook.
+* **Target Length:** 32 seconds.
+* **Mood:** High-octane, glamorous, fast-paced flex.
+* **Audio Note:** **"Suzuki" by Fuerza Regida**. Sync the engine rev to the opening drink glass hook at 0:01, then drop the heavy synth bass drop on the getaway cut at 0:12.
 
 ---
 
-### Clip 2: The Hunger Games: Sunrise on the Reaping – Haymitch’s Parallel Arc
-* **Platforms:** Both (TikTok & YouTube Shorts)
-* **Source Title & Location:** Match-cut between *The Hunger Games: Catching Fire* (Woody Harrelson as Haymitch drinking/watching the Reaping) and *Sunrise on the Reaping* footage / 50th Hunger Games arena cutscenes.
-* **Target Length:** 35 seconds
-* **Mood:** Melancholic / High Stakes / Character Arc
-* **Hook (0–2s):** Extreme close-up of young Haymitch Abernathy’s eyes as the 50th Hunger Games reaping chime echoes softly.
-* **Story Stretches (Unbroken):**
-  1. *Stretch 1 (3–14s):* Young Haymitch stepping onto the pedestal in the 50th Arena as the forcefield dome powers up around him.
-  2. *Stretch 2 (15–26s):* Match-cut transition to older Haymitch (Woody Harrelson) in *Catching Fire* staring blankly into his drink as mentor, hands shaking.
-  3. *Stretch 3 (27–32s):* Flashback cut back to young Haymitch raising his axe in combat against the forcefield edge.
-* **Biggest Moment (27–30s):** Young Haymitch striking the forcefield with his weapon, creating a violent electrical flash cut against older Haymitch flinching in the present.
-* **Final Beat (33–35s):** Cut to dark grey screen with clean text: *"Before Katniss, there was Haymitch."* Hold for 2 seconds to trigger rewatches.
-* **Audio Note:** Track: *"Creep"* by Radiohead (slowed acoustic intro). Sync the heavy distortion guitar thud right on the axe forcefield impact at 0:27.
+### Clip 2: Steel Ball Run: JoJo's Bizarre Adventure — Gyro's Spin Technique
+* **Target Platform:** Both (TikTok & YouTube Shorts)
+* **Source Title & Location:** *Steel Ball Run: JoJo's Bizarre Adventure* (Stage 1 Race / Gyro vs rival rider duel; Season 1 early episodes).
+* **Hook (0:00–0:02):** Close-up shot of Gyro Zeppeli’s Steel Ball vibrating rapidly with a kinetic green aura.
+* **Unbroken Stretches (Story Order):**
+  1. *The Chase (0:02–0:14):* Unbroken 12-second horse sprint across desert terrain as Gyro pulls parallel to his opponent.
+  2. *The Windup & Throw (0:14–0:24):* Continuous 10-second sequence of Gyro charging and launching the Spin ball.
+  3. *The Impact (0:24–0:32):* Slow-motion sakuga stretch showing the Golden Ratio Spin distortion warping the enemy rider's frame.
+* **Biggest Moment:** The kinetic Spin impact distortion frame in full impact-frame animation.
+* **Final Beat:** Gyro catching the returning steel ball as his horse charges past camera, snapping instantly to black.
+* **Target Length:** 34 seconds.
+* **Mood:** Aggressive, high-energy sakuga flex.
+* **Audio Note:** **"FUNK - MONTAGEM ROYAL (ULTRA SLOWED)"**. Build during the horse sprint, then hit the massive slowed sub-bass drop right on the 0:24 impact frame.
 
 ---
 
-### Clip 3: Vinland Saga – Thorfinn's "I Have No Enemies" Arc
-* **Platforms:** Both (TikTok & YouTube Shorts)
-* **Source Title & Location:** *Vinland Saga* Season 1 (violent revenge scenes) matched with Season 2, Episode 9 / Episode 24 (Thorfinn's confrontation with Canute).
-* **Target Length:** 38 seconds
-* **Mood:** Bittersweet / Emotional / Growth
-* **Hook (0–2s):** Fast 1-second flash of young blood-soaked Thorfinn screaming in battle, snapping instantly into peaceful adult Thorfinn standing quietly in the wind.
-* **Story Stretches (Unbroken):**
-  1. *Stretch 1 (3–15s):* Young Thorfinn dual-wielding daggers in brutal, fast-paced combat (Season 1).
-  2. *Stretch 2 (16–28s):* Unbroken sequence of adult Thorfinn dropping his hands, taking blows without striking back or showing anger.
-  3. *Stretch 3 (29–35s):* Thorfinn looking calm under the open sky facing the crowd.
-* **Biggest Moment (29–34s):** Thorfinn delivering his iconic line: *"I have no enemies. Nobody in this world deserves to be hurt."* (Include clean subtitle overlay).
-* **Final Beat (35–38s):** Wind blowing through the wheat field with Thorfinn walking away, fading slowly to black as the acoustic guitar swell resolves.
-* **Audio Note:** Track: *"Duvet"* by bôa (currently spiking on Last.fm & TikTok). Sync the vocal entry *"And you don't seem to understand..."* exactly at 0:15 when shifting from young Thorfinn's violence to adult Thorfinn's calm.
+### Clip 3: Lupin: Part 4 — "Escape the Glass Cage" Blackout
+* **Target Platform:** TikTok (Primary) & YouTube Shorts
+* **Source Title & Location:** *Lupin: Part 4* (High-security glass cell escape sequence; exact episode timestamp varies by release).
+* **Hook (0:00–0:02):** Rapid whip-zoom onto Assane Diop bound in a straitjacket inside a reinforced glass cell.
+* **Unbroken Stretches (Story Order):**
+  1. *The Lockup (0:02–0:12):* Continuous 10-second shot of armed guards pacing outside as room lights begin flickering violently.
+  2. *The Blackout & Reveal (0:12–0:22):* Unbroken sequence where lights cut to total black for 2 seconds with echoing footsteps, then snap back on showing the empty straitjacket slumped on the cell floor.
+  3. *The Reaction (0:22–0:31):* Continuous 9-second shot of the lead guard stepping into the cell, shining his flashlight in disbelief.
+* **Biggest Moment:** The lights snapping back on to reveal the cell completely empty.
+* **Final Beat:** Guard dropping his walkie-talkie in shock; cut to black the exact frame it hits the floor.
+* **Target Length:** 33 seconds.
+* **Mood:** Suspenseful, clever mind-game, high tension.
+* **Audio Note:** Start with high-tension atmospheric drone and guard dialogue. Cut all audio to dead silence during the 2-second blackout, then hit a sharp sub-bass thump when the lights return.
+
+---
+
+## Which Clip to Make FIRST and Why
+
+Make **Clip 1 (Grand Theft Auto VI)** first today.
+
+* **Why:** *GTA VI* is currently the single largest entertainment phenomenon on the internet right now ($2.3B+ launch, 95k+ live Twitch viewers on top streams, millions of views/hr on YouTube Shorts). Sound track **"Suzuki"** is exploding on TikTok with 3.5M+ creations. Getting this out early in the day gives us the best shot at capturing active search traffic on both platforms.

@@ -1,74 +1,52 @@
-# Social Strategist (updated 2026-11-19)
+# Social Strategist (updated 2026-11-20)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-Here is the social posting strategy for today’s 3 planned clips.
+# MotionVault Social Strategy — 2026-11-20
+
+Social distribution plan for today's 3 daily cuts.
 
 ---
 
-### Clip 1: Grand Theft Auto VI – Vice City Night Pursuit
-
-* **On-Screen Hook Text (6 words max):**
-  `Vice City hits different at night 🚘⚡️`
+### Clip 1: Grand Theft Auto VI — Beach Bar & Vice City Getaway
 
 * **TikTok Captions:**
-  1. The detail on Ocean Drive is actually insane 🚘🔥
-  2. Vice City night drives are about to take over my life.
-  3. Is GTA VI going to be the greatest game of all time? 🎮
-  4. 2026 is officially saved.
-
-* **Hashtags (5-6):**
-  `#gta6` `#gtavi` `#vicecity` `#gtaedits` `#gaming` `#motionvault`
-
-* **YouTube Shorts Title (<60 chars):**
-  `Vice City Night Pursuit Hits Different 🚘⚡️ #GTA6` *(47 chars)*
-
-* **Best Post Times (EST / New York):**
-  * **TikTok:** **3:00 PM EST** — *Captures peak after-school and early afternoon scroll during peak GTA VI release-week search volume.*
-  * **YouTube Shorts:** **6:00 PM EST** — *Hits the US evening gaming rush when Twitch stream highlight searches spike.*
+  1. Vice City neon hits different at 100 MPH 🚗💨
+  2. First mission beat goes way too hard 🔥
+  3. Is GTA 6 already the cleanest open world gaming edit of all time? *(Comment driver)*
+  4. Beach bar chill to 6-star escape in seconds 🌴🚨
+* **On-Screen Hook Text (6 words max):** Vice City hits different at 100MPH
+* **Hashtags:** `#GTA6` `#GTAVI` `#ViceCity` `#GTAEdit` `#GamingClips` `#MotionVault`
+* **YouTube Shorts Title:** Vice City Getaway Is Insane 🚗💨 #GTA6 #Shorts *(44 chars)*
+* **Best Time to Post (NY Time / EST):** **12:30 PM EST** (TikTok) & **5:30 PM EST** (Shorts)
+  * *Reason:* Captures mid-day gaming news scrolls and early evening peak Twitch/gaming traffic.
 
 ---
 
-### Clip 2: The Hunger Games: Sunrise on the Reaping – Haymitch’s Parallel Arc
-
-* **On-Screen Hook Text (6 words max):**
-  `Before Katniss, there was Haymitch 🏹`
+### Clip 2: Steel Ball Run: JoJo's Bizarre Adventure — Gyro's Spin Technique
 
 * **TikTok Captions:**
-  1. Knowing how Haymitch's story started makes *Catching Fire* hurt so much worse 💔
-  2. The 50th Hunger Games arena was pure nightmare fuel.
-  3. Did Haymitch suffer more than Katniss in the arena? 🏹
-  4. That forcefield thud beat drop hits right in the chest.
-
-* **Hashtags (5-6):**
-  `#hungergames` `#sunriseonthereaping` `#haymitch` `#hungergamesedit` `#booktok` `#movieclips`
-
-* **YouTube Shorts Title (<60 chars):**
-  `Before Katniss, There Was Haymitch 🏹 #HungerGames` *(50 chars)*
-
-* **Best Post Times (EST / New York):**
-  * **TikTok:** **7:00 PM EST** — *High BookTok and movie fandom engagement during evening wind-down hours.*
-  * **YouTube Shorts:** **8:30 PM EST** — *Primetime cinematic short-form viewing window for US audiences.*
+  1. Gyro’s Golden Ratio Spin is peak sakuga 🟢⚡️
+  2. The bass drop hit right on impact 🗿💥
+  3. Who has the cleanest fight animation in anime right now? *(Comment driver)*
+  4. Part 7 animation isn't real 😭🔥
+* **On-Screen Hook Text (6 words max):** Gyro's Spin animation is pure sakuga
+* **Hashtags:** `#SteelBallRun` `#JoJoPart7` `#GyroZeppeli` `#AnimeEdit` `#Sakuga` `#MotionVault`
+* **YouTube Shorts Title:** Gyro’s Spin Impact Is Peak Sakuga 🟢💥 #SBR #Shorts *(50 chars)*
+* **Best Time to Post (NY Time / EST):** **4:00 PM EST** (TikTok) & **7:30 PM EST** (Shorts)
+  * *Reason:* Anime edit engagement surges as school ends and transitions into peak evening leisure hours.
 
 ---
 
-### Clip 3: Vinland Saga – Thorfinn's "I Have No Enemies" Arc
-
-* **On-Screen Hook Text (6 words max):**
-  `From monster to peaceful warrior 🗡️`
+### Clip 3: Lupin: Part 4 — "Escape the Glass Cage" Blackout
 
 * **TikTok Captions:**
-  1. Thorfinn’s growth is easily one of the best character arcs in anime history 🌾
-  2. "I have no enemies." This line will never fail to give me chills.
-  3. Which version of Thorfinn was harder for you to watch? ⚔️
-  4. Hearing *Duvet* over this transition hits different.
-
-* **Hashtags (5-6):**
-  `#vinlandsaga` `#thorfinn` `#animeedit` `#ihavenoenemies` `#animetiktok` `#seinen`
-
-* **YouTube Shorts Title (<60 chars):**
-  `Thorfinn’s Character Arc Hits Harder 🌾 #VinlandSaga` *(51 chars)*
-
-* **Best Post Times (EST / New York):**
-  * **TikTok:** **9:00 PM EST** — *Aligns with late-night peak anime FYP activity and dialogue-heavy edit trends.*
-  * **YouTube Shorts:** **10:00 PM EST** — *Surges during late-night lo-fi and emotional anime edit browsing.*
+  1. 2 seconds of dark and he was GONE 💀
+  2. Never leave Assane Diop in a glass cell 🚪⚡️
+  3. How did he get out of that straitjacket so fast? *(Comment driver)*
+  4. Guard dropped his radio in pure shock 😭📻
+* **On-Screen Hook Text (6 words max):** 2 seconds in dark... GONE 💀
+* **Hashtags:** `#Lupin` `#AssaneDiop` `#MovieEdit` `#MindGames` `#Clips` `#MotionVault`
+* **YouTube Shorts Title:** 2 Seconds In The Dark... Gone 💀 #Lupin #Shorts *(45 chars)*
+* **Best Time to Post (NY Time / EST):** **8:15 PM EST** (TikTok & Shorts)
+  * *Reason:* High-suspense twist clips perform best during prime late-night scrolling hours when watch completion is highest.
