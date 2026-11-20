@@ -1,77 +1,74 @@
-# Social Strategist (updated 2026-11-18)
+# Social Strategist (updated 2026-11-19)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# Social Pack — 2026-11-18 (3 Clips)
+Here is the social posting strategy for today’s 3 planned clips.
 
 ---
 
-## 1️⃣ The Apothecary Diaries S3 Ep 8 — “Poison-Lab Reveal”  
-**Post tonight (Thu 18 Nov) — pre-air spike**
+### Clip 1: Grand Theft Auto VI – Vice City Night Pursuit
 
-### TikTok Captions
-1. Maomao just found the deadliest ink in the palace… 😱 #ApothecaryDiaries  
-2. That vial glow wasn’t poison — it was a message. What does it do? 👀  
-3. Jinshi’s smirk in the background says he *knew*. #Maomao #Jinshi  
-4. **Wait — is the ink alive or just cursed? Drop your theory 👇**
+* **On-Screen Hook Text (6 words max):**
+  `Vice City hits different at night 🚘⚡️`
 
-### On-Screen Hook (≤6 words)
-**POISON ⚗️?!**
+* **TikTok Captions:**
+  1. The detail on Ocean Drive is actually insane 🚘🔥
+  2. Vice City night drives are about to take over my life.
+  3. Is GTA VI going to be the greatest game of all time? 🎮
+  4. 2026 is officially saved.
 
-### Hashtags (5–6)
-#ApothecaryDiaries #KusuriyaNoHitorigoto #Maomao #Jinshi #AnimeEdit #Shorts
+* **Hashtags (5-6):**
+  `#gta6` `#gtavi` `#vicecity` `#gtaedits` `#gaming` `#motionvault`
 
-### YouTube Shorts Title (<60 chars)
-**Maomao’s Deadliest Deduction Yet 🖋️ Apothecary Diaries S3 Ep 8**
+* **YouTube Shorts Title (<60 chars):**
+  `Vice City Night Pursuit Hits Different 🚘⚡️ #GTA6` *(47 chars)*
 
-### Best Post Time (NY)
-- **TikTok: 8:00 PM EST** — Thursday night anime crowd scrolling before Friday drop.  
-- **Shorts: 7:30 PM EST** — same audience, slightly earlier for “Up Next” shelf.
-
----
-
-## 2️⃣ Reincarnated as a Sword S2 Ep 9 — “Sword‑Soul Fusion”  
-**Post tomorrow (Fri 19 Nov) — 7-day lead on ep drop**
-
-### TikTok Captions
-1. A sword… with a human soul?! The glow-up is unreal ✨ #TenKen  
-2. 20 seconds. One unbroken spin. Fran’s evolution hits different. #Fran #Teacher  
-3. That 4× speed ramp at 1:28 🤯 #ReincarnatedAsASword  
-4. **Which form is stronger — old Fran or new Fran? Vote 🗳️**
-
-### On-Screen Hook (≤6 words)
-**What? A SWORD‑HUMAN?!**
-
-### Hashtags (5–6)
-#TenKen #ReincarnatedAsASword #Fran #Teacher #AnimeEdit #Shorts
-
-### YouTube Shorts Title (<60 chars)
-**Fran’s Sword‑Soul Fusion — 20s One‑Take Spin 🌟 TenKen S2 Ep 9**
-
-### Best Post Time (NY)
-- **TikTok: 12:00 PM EST** — Friday lunch scroll; algorithm pushes fresh anime edits to “For You.”  
-- **Shorts: 11:30 AM EST** — catches the pre-lunch notification wave.
+* **Best Post Times (EST / New York):**
+  * **TikTok:** **3:00 PM EST** — *Captures peak after-school and early afternoon scroll during peak GTA VI release-week search volume.*
+  * **YouTube Shorts:** **6:00 PM EST** — *Hits the US evening gaming rush when Twitch stream highlight searches spike.*
 
 ---
 
-## 3️⃣ One Piece Ep 1181 — Luffy Gear 5 “King’s Roar” vs. Kaido  
-**Post Sat 20 Nov — teaser hype window**
+### Clip 2: The Hunger Games: Sunrise on the Reaping – Haymitch’s Parallel Arc
 
-### TikTok Captions
-1. Luffy’s NEW ultimate move just broke Kaido’s face 💀 #OnePiece #Gear5  
-2. That pull-back slow-mo… the roar, the grin, Kaido’s eyes 😱 #Luffy  
-3. Replayed the “YES” shout 10×. Still get chills. #OnePiece1181  
-4. **Did you catch the frame where Kaido *actually* flinches? 👇**
+* **On-Screen Hook Text (6 words max):**
+  `Before Katniss, there was Haymitch 🏹`
 
-### On-Screen Hook (≤6 words)
-**Luffy’s NEW ultimate move?!**
+* **TikTok Captions:**
+  1. Knowing how Haymitch's story started makes *Catching Fire* hurt so much worse 💔
+  2. The 50th Hunger Games arena was pure nightmare fuel.
+  3. Did Haymitch suffer more than Katniss in the arena? 🏹
+  4. That forcefield thud beat drop hits right in the chest.
 
-### Hashtags (5–6)
-#OnePiece #Luffy #Gear5 #Kaido #AnimeEdit #Shorts
+* **Hashtags (5-6):**
+  `#hungergames` `#sunriseonthereaping` `#haymitch` `#hungergamesedit` `#booktok` `#movieclips`
 
-### YouTube Shorts Title (<60 chars)
-**Luffy Gear 5 “King’s Roar” DESTROYS Kaido 😱 One Piece 1181**
+* **YouTube Shorts Title (<60 chars):**
+  `Before Katniss, There Was Haymitch 🏹 #HungerGames` *(50 chars)*
 
-### Best Post Time (NY)
-- **TikTok: 10:00 AM EST** — Saturday morning binge-scroll; One Piece fans hunt teaser clips.  
-- **Shorts: 9:30 AM EST** — early enough for “Shorts Feed” refresh before noon competition.
+* **Best Post Times (EST / New York):**
+  * **TikTok:** **7:00 PM EST** — *High BookTok and movie fandom engagement during evening wind-down hours.*
+  * **YouTube Shorts:** **8:30 PM EST** — *Primetime cinematic short-form viewing window for US audiences.*
+
+---
+
+### Clip 3: Vinland Saga – Thorfinn's "I Have No Enemies" Arc
+
+* **On-Screen Hook Text (6 words max):**
+  `From monster to peaceful warrior 🗡️`
+
+* **TikTok Captions:**
+  1. Thorfinn’s growth is easily one of the best character arcs in anime history 🌾
+  2. "I have no enemies." This line will never fail to give me chills.
+  3. Which version of Thorfinn was harder for you to watch? ⚔️
+  4. Hearing *Duvet* over this transition hits different.
+
+* **Hashtags (5-6):**
+  `#vinlandsaga` `#thorfinn` `#animeedit` `#ihavenoenemies` `#animetiktok` `#seinen`
+
+* **YouTube Shorts Title (<60 chars):**
+  `Thorfinn’s Character Arc Hits Harder 🌾 #VinlandSaga` *(51 chars)*
+
+* **Best Post Times (EST / New York):**
+  * **TikTok:** **9:00 PM EST** — *Aligns with late-night peak anime FYP activity and dialogue-heavy edit trends.*
+  * **YouTube Shorts:** **10:00 PM EST** — *Surges during late-night lo-fi and emotional anime edit browsing.*

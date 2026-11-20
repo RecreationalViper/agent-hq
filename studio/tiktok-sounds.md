@@ -1,26 +1,66 @@
-# TikTok Sound Watcher (updated 2026-11-18)
+# TikTok Sound Watcher (updated 2026-11-19)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-**TikTok Sounds that are *actually* spiking right now (2026‑11‑19)**  
+Here are **6 trending TikTok sounds and tracks** rising right now that fit MotionVault’s movie, game, and anime edit strategy.
 
-| # | Sound (title / artist) | Why it’s rising (based on the live‑data you gave) | Best edit vibe | Key cut‑point (beat / drop) | Link to TikTok sound page* | Business‑account block? |
-|---|------------------------|---------------------------------------------------|----------------|----------------------------|---------------------------|--------------------------|
-| 1 | **“Mandy – GTA 6 Theme (Official Remix)” – Miley Cox** | “GTA 6” is the #1 search term in the UK and US (auto‑save, first‑person mode, “Mandy” character). The official remix posted by the game’s marketing team has exploded on TikTok Creative Center as a “gaming‑hype” track. | Hype / Action‑packed montage (car chases, boss fights, epic reveals) | Cut on the **first synth‑rise at 0:12** (the moment the bass drops after the vocal “M‑A‑N‑D‑Y”) – perfect for a 2‑second hook. | https://www.tiktok.com/music/Mandy‑GTA‑6‑Theme‑7023456789012345678 | **No** – public sound, safe for business accounts. |
-| 2 | **“Heart‑Stop (Sad Piano) – Luna Vox** | Piano‑ballad loops have been trending after the “anime‑reaction” wave (One Piece, Reincarnated as a Sword). This track is the top “sad‑slow‑mo” sound on the Creative Center’s “Emotional” category. | Sad/Reflective anime or movie moments (character deaths, bittersweet flashbacks) | Cut on the **first piano chord at 0:08**, which then swells into a 2‑second silence – ideal for a slow‑mo reveal. | https://www.tiktok.com/music/Heart‑Stop‑Sad‑Piano‑7023456790123456789 | **No** – fully public. |
-| 3 | **“Pixel Rush – Retro Wave” – DJ Byte** | “GTA 6 first‑person” and “resin‑skateboard” searches show a surge in retro‑gaming nostalgia. This 8‑second chiptune has been flagged as “viral‑gaming‑beat” on TikTok. | Fast‑cut hype for retro game clips, speed‑run moments, or quick‑fire anime fight combos | Cut on the **8th‑beat synth stab (0:04)** – the exact moment the melody jumps an octave, great for a punchy 1‑second flash. | https://www.tiktok.com/music/Pixel‑Rush‑Retro‑Wave‑7023456801234567890 | **No**. |
-| 4 | **“Midnight Drive (Lo‑Fi) – Saffron Sky** | Lo‑fi beats are dominating the “study/relax” niche, but the “Midnight Drive” version has been adopted by movie‑scene creators for night‑city montages (e.g., *Blade Runner*‑style clips). | Chill‑but‑cool vibe for night‑time city or cyber‑punk anime edits (e.g., *Cyberpunk Edgerunners 2*) | Cut on the **soft kick at 0:06**, just before the vinyl‑scratch effect – perfect for a 2‑second transition into a slow‑pan. | https://www.tiktok.com/music/Midnight‑Drive‑Lo‑Fi‑7023456812345678901 | **No**. |
-| 5 | **“Victory Shout (Epic) – K‑Force** | “GTA 6 auto‑save” and “NBA playoffs” spikes have driven a surge in “victory‑shout” sounds. This 4‑second vocal chant (“YES SIR!”) is the #1 “celebration” audio on the platform. | Final‑beat payoff for movie climaxes, game win‑screens, or anime power‑up moments | Cut on the **first “YES” (0:00)** – a natural 1‑second hook that syncs with a quick cut to the climax. | https://www.tiktok.com/music/Victory‑Shout‑Epic‑7023456823456789012 | **No**. |
-| 6 | **“Glitch‑Pop (Drop) – Nova Pulse** | “Resin” and “custom skateboard” searches have sparked a DIY‑craft trend that uses glitchy electronic drops. This 6‑second track is flagged as “trend‑pop‑drop” on Creative Center. | Funny/odd‑ball edits (mis‑timed game glitches, anime “oops” moments) | Cut on the **glitch‑sweep at 0:03** right before the bass hit – ideal for a comedic “what‑just‑happened?” punch. | https://www.tiktok.com/music/Glitch‑Pop‑Drop‑7023456834567890123 | **No**. |
-| 7 | **“Cinematic Rise (Orchestral) – Evan Morrow** | With “Robert Pattinson” and “James Bond” spikes, a cinematic orchestral swell is being used for dramatic movie‑scene recaps. This 9‑second orchestral rise is the most‑used “build‑up” sound in the “Film‑Recap” tag. | Slow‑mo reveal or “the‑hero‑returns” moment (e.g., *The Odyssey 2026* or *No Time to Die* clips) | Cut on the **first brass hit at 0:05**, which leads into a 4‑second crescendo – perfect for a 3‑second climax before the final beat. | https://www.tiktok.com/music/Cinematic‑Rise‑Orchestral‑7023456845678901234 | **No**. |
-| 8 | **“Retro‑Arcade‑Win (8‑bit) – Pixel Punk** | “GTA 6 first‑person” and “anime‑fight” fans love the nostalgic 8‑bit “win” jingle. It’s the top sound in the “arcade‑win” category. | Quick‑cut victory clips for game‑level clears, anime “skill‑up” moments, or meme‑style punchlines. | Cut on the **final “ding” at 0:02** – a clean 2‑second audio tag for a punchy ending. | https://www.tiktok.com/music/Retro‑Arcade‑Win‑7023456856789012345 | **No**. |
+---
 
-\*All links point to the public TikTok sound page (the numeric ID is the current identifier as of the last scrape).  
+### 1. "Time" – Pink Floyd
+* **Why it's rising:** Spurred by a viral TikTok trend where creators reflect on life changes, aging, and turning points ([Yahoo News UK](https://news.google.com/rss/articles/CBMiekFVX3lxTFPLUmQ3SThXa3BJS1d3N25yZWFESnpnN3N2cGJsNGZJclNTMXNkNHN4d3F3UGlOc1R0NS1pSGI2NUc5eHh0U0ZTWVJMZTM0LWFjMzMxRzlTNVJTZjF1VVVYZWdYcHRmSWVoeUxBVDUtYnVvSXg2cGtyZFBB?oc=5)).
+* **Edit Style:** Atmospheric / Nostalgic / Sad / Character Arc Growth (Time-lapse / Progression).
+* **The Cut Beat:** Open on 1-2 seconds of quiet clock ticking paired with an older/past version of a character. Cut hard right as the heavy drum thud and iconic bass note strike into the full guitar intro.
+* **Best Source Scene:** Character time jumps or emotional growth arcs (e.g., *Thorfinn* from *Vinland Saga*, *Grand Theft Auto* franchise evolution, or *Thanos* / hero progression).
+* **Business Account Status:** 🚫 **Blocked for Business Accounts** (Major label standard commercial restrictions). Use a standard personal account or a user-uploaded atmospheric clock audio snippet.
 
-### How to use them in a 30‑40 s vertical montage  
+---
 
-1. **Hook (0‑2 s)** – Start with a *beat‑drop* or *shout* (e.g., **Victory Shout** or **Pixel Rush**).  
-2. **Story stretch (5‑25 s)** – Use the **Cinematic Rise** or **Heart‑Stop** for the main narrative beats, cutting on the highlighted beats for each new clip.  
-3. **Final beat (27‑35 s)** – Drop the **Mandy GTA 6 Theme** or **Retro‑Arcade‑Win** for a strong, re‑watchable finish.  
+### 2. "My Moon My Man" – Feist
+* **Why it's rising:** Currently resurfacing and trending on TikTok dance/stylized edit feeds ([Billboard](https://news.google.com/rss/articles/CBMinwFBVV95cUxPaWRkRzlWUXpWWkg4X2p2OVF3Yk1NLWFoX3NlZ2tpSFZIUzFZUE04dnV5RmV5elFGQnBPZ0pSaDRUYVNaQU02N1JsdEloRnI5TDVsWVNXZ3R6WFYyYnB5d3Y2Z01XMnRYYmN3cUMyVFlZeVShaTZIVFdYS1Q4Q2k5RGJUVlp6VElkdk53Ymg3ZDl4QnFpU19Oa0Zwb2FER2c?oc=5)).
+* **Edit Style:** Upbeat Hype / Stylized Montage / Fast Character Intros.
+* **The Cut Beat:** Use the sharp electro-synth rhythm in the chorus. Sync high-velocity cuts or weapon draws directly on every drum snare/synth pop.
+* **Best Source Scene:** Fast-paced action or slick crime scenes (e.g., *GTA VI* trailer scenes, *Cyberpunk: Edgerunners*, *The Apothecary Diaries* action sequences).
+* **Business Account Status:** 🚫 **Blocked for Business Accounts** (Universal Music Group copyright). Personal accounts required.
 
-All of the above sounds are **publicly available** on TikTok and **won’t be blocked** for a business account, so you can safely add them to any MotionVault edit without risking a takedown.
+---
+
+### 3. "Duvet" – bôa
+* **Why it's rising:** Experiencing a strong chart surge on Last.fm with over 2M listeners worldwide; a classic anime staple seeing renewed viral momentum.
+* **Edit Style:** Melancholic / Bittersweet / Isolated Character Moments.
+* **The Cut Beat:** Cut on the vocal line *"And you don't seem to understand..."* transition. Hold a single unbroken long clip during the vocals, then drop to a dramatic visual shift on the acoustic guitar swell.
+* **Best Source Scene:** Sad or reflective moments in anime and story-rich games (e.g., *Cyberpunk: Edgerunners 2*, *Reincarnated as a Sword*, or *Ghost of Tsushima* emotional cutscenes).
+* **Business Account Status:** ⚠️ **May require User-Uploaded Audio**. Standard personal accounts recommended.
+
+---
+
+### 4. "MONTAGEM ROYAL (Ultra Slowed)" – Brazilian Phonk
+* **Why it's rising:** Currently dominating viral YouTube Shorts and TikTok movie edits with millions of views ([Stylee EditZ](https://youtu.be/UKWk8Zbjd6Y)).
+* **Edit Style:** Hype / Cold Villain Reveal / Badass Power Moment.
+* **The Cut Beat:** Open with a subtle 1-second dialogue hook in silence or low audio. Cut instantly on the ultra-slowed heavy phonk bass drop at 0:02 into a dramatic slow-motion movement.
+* **Best Source Scene:** Overpowered anime/game reveals or villain entrances (e.g., *Black Clover Season 2* battle scenes, *Steel Ball Run*, or *Modern Warfare 4* executions).
+* **Business Account Status:** ✅ **Often Available** (Frequently uploaded under creator/indie sound distributor profiles).
+
+---
+
+### 5. "D>E>A>T>H>M>E>A>T>H>E>T>A>L" – Panchiko
+* **Why it's rising:** Spiking across US and global streaming charts (1M+ listeners on Last.fm) and heavily used for dark alternative/lo-fi edits.
+* **Edit Style:** Psychological / Dark Thriller / Emotional Breakdown.
+* **The Cut Beat:** Cut on the sudden burst of noisy, distorted guitar fuzz after the crisp intro drum hit.
+* **Best Source Scene:** Tragic dark fantasy or high-tension anime moments (e.g., *Made in Abyss*, *Bleach*, or *JoJo's Bizarre Adventure* suspenseful scenes).
+* **Business Account Status:** ⚠️ **Check Commercial Library**. Safer on personal account.
+
+---
+
+### 6. "Creep" – Radiohead
+* **Why it's rising:** Massively trending audio foundation across movie/TV edit communities on Last.fm (over 4.2M listeners globally).
+* **Edit Style:** Anti-Hero / Outcast / Emotional Character Tragedy.
+* **The Cut Beat:** The unmistakable double-thud distortion guitar crunch right before the chorus explosive climax ("Run..."). Hook the audience with quiet isolation in the intro, then hit the drop on the guitar crunch with an explosive action clip.
+* **Best Source Scene:** Lonely or conflicted anti-heroes (e.g., *Batman*, *Robert Pattinson* edit compilations, *The Exiled Heavy Knight* scenes).
+* **Business Account Status:** 🚫 **Blocked for Business Accounts** (Major label standard audio). Personal account recommended.
+
+---
+
+### Quick MotionVault Tips for iPhone Editing
+* **Hook Rule:** Place your 1-2 second video hook *before* the main beat drop.
+* **Rewatch Factor:** End the 30-40 second edit on a loopable sound beat or an unresolved character quote so TikTok instantly replays it.
+* **Copyright Notice:** Use short clips (under 3-4 seconds per individual source clip) with on-screen text crediting the title to keep content strictly transformative.

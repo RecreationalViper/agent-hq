@@ -1,99 +1,91 @@
-# TikTok Fandom Watcher (updated 2026-11-18)
+# TikTok Fandom Watcher (updated 2026-11-19)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# TikTok Fandom Watch — Week of 2026-11-18
+# Active TikTok Fandoms & Clipping Opportunities (Week of Nov 19, 2026)
 
-**Strongest first. Oversaturated = 🟥**
-
----
-
-## 1. Grand Theft Auto VI 🟥
-**Why now:** Game is in early access / NZ launch window — Twitch top 12 streams are all GTA 6 (IlloJuan 299K, auronplay 113K, KaiCenat 71K) [Twitch data]. Google Trends shows “GTA 6 first person”, “where is GTA 6 located”, “does GTA 6 auto save” spiking in UK/CA/MX/US. Wikipedia 153K views yesterday.  
-**Hashtags:** #GTA6 #GTAVI #ViceCity #GTA6FirstLook  
-**Moment to clip:** First 30 seconds stepping onto Vice City beach at dawn (neon reflection on wet sand) → first mission phone call → “13 years waiting” reaction face. Keep each stretch <3 s.  
-**Source:** Twitch live-viewer counts; Google Trends UK/CA/MX/US; Wikipedia 153K views.  
-**Note:** 🟥 Heavily oversaturated — every creator posting first-hour footage. Only post if you have a unique angle (e.g., “NPC logic test”, “physics glitch montage”, “sound-design ASMR”).
+Here are the 7 most active movie, game, and anime fandoms on TikTok right now, ranked by current buzz, search spikes, and editing potential for MotionVault.
 
 ---
 
-## 2. Robert Pattinson confirmed as James Bond 🟥
-**Why now:** Official confirmation broke 2026-11-16 → split fandom (THR, Cinemablend, Mashable, BBC, TheWrap all 2026-11-16). Wikipedia: Robert Pattinson 840K, filmography 127K, James Bond 75K, *No Time to Die* 58K yesterday.  
-**Hashtags:** #JamesBond #RobertPattinson #Bond26 #007  
-**Moment to clip:** Montage of Pattinson’s “cold stare” beats across *The Batman*, *Tenet*, *Good Time*, *The Lighthouse* → cut to classic Bond gun-barrel timing. No leaked footage — only released films.  
-**Source:** Wikipedia top-read 2026-11-17; news headlines 2026-11-16 (THR, Cinemablend, BBC, etc.).  
-**Note:** 🟥 Reaction edits flood the feed. Differentiate with “Why he fits *Fleming’s* Bond” commentary or “Villain wish-list” bracket.
+### 1. Grand Theft Auto VI (Gaming)
+* **Why fans care now:** Day 2 of release/launch week. Over 500,000 Wikipedia views yesterday and dominating Twitch streams with 80k+ concurrent viewers on single channels (CaseOh, KaiCenat, xQc).
+* **Hashtags:** `#gta6` `#gtavi` `#vicecity` `#gtaedits`
+* **The moment to clip:** Vice City supercar night cruise into high-speed escape.
+  * *Hook (0-2s):* Engine rev sound effect paired with neon reflections on windshield glass.
+  * *Story stretch (15-20s):* Smooth unbroken footage of hypercar drifting around palm-lined coastal turns.
+  * *Final beat (3s):* Sudden cinematic crash into water or cut to title card right before impact.
+* **Source:** [GTA 6 Release & Remote Play Info](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMmdQaVptT1VITnVLS2J5YWhfNWMyRzNsZDVHeGF1bVZSWXR2VEhBYmlOWFpyVzJrTkVSYXFkNllkS0FCbTItN2FIWG1aRm9xcW1MenEtWElDR0h0TnRYT3RXZ0NVeWJLXzZ5T0pOME11WTg3NllOZkkxamx6TG9UdmdQcWdFTkNp?oc=5)
+* **Saturation:** **Extremely High / Oversaturated.** Everyone is editing GTA VI. Requires distinct sound design or high-effort synced edits to stand out.
 
 ---
 
-## 3. The Apothecary Diaries Season 3
-**Why now:** Ep 8 airs **2026-11-20** (2 days away). MyAnimeList 8.61 / 232K members; AniList trending 72 / 114K fans. High-stakes palace arc ramping up.  
-**Hashtags:** #ApothecaryDiaries #KusuriyaNoHitorigoto #Maomao #Jinshi  
-**Moment to clip:** Maomao’s deduction speed-run (ep 6-7): poison-taste test → shelf-scan → “it’s the ink” — 3-beat rhythm, end on Jinshi’s masked smirk. Credit “The Apothecary Diaries S3” on screen.  
-**Source:** MyAnimeList airing schedule; AniList trending.
+### 2. James Bond 007 / Robert Pattinson (Movie Casting Debate)
+* **Why fans care now:** Internet explosion following news reports casting Robert Pattinson as the new James Bond. Pattinson spiked to 337,000+ views on Wikipedia yesterday alongside fan debates across major outlets.
+* **Hashtags:** `#robertpattinson` `#jamesbond` `#007` `#batman`
+* **The moment to clip:** "Suit & Swagger" transition edit comparing Pattinson in *The Batman* / *The Odyssey* to classic Bond aesthetics.
+  * *Hook (0-2s):* Slow-motion jacket adjustment in silhouette set to the iconic Bond brass riff.
+  * *Story stretch (15s):* Unbroken sequence of smooth, smoldering close-ups from past films in story/vibe order.
+  * *Final beat (3s):* Audio clip of "Bond. James Bond." landing on a black screen.
+* **Source:** [007 Fans React to Pattinson Casting - IGN](https://news.google.com/rss/articles/CBMimgFBVV95cUxNa19vdFZldXJiR2xsaExGRlphTjI2eExEYWJuMTdJRXF1akd1Nkg3VTNneUxDM242ZUhBZ09BNkd1THYyMm55NWttTXV5Nmg3bHgxdDlOeGYzYldqUGZaTlo2VUtfM25TejlLandsQ1ZOcy1YRHZqRjh2UzZwZmpiOUZCSVRHNUxQTXhjY1RFWklyX1JRVG9Cd2R3?oc=5)
+* **Saturation:** **High.** Viral debate edits are everywhere, but aesthetic edits hit strong watch-through metrics.
 
 ---
 
-## 4. Solo Leveling — Shadow Army visual drop
-**Why now:** Official X posted “Shadow Visual” (Igris, Beru, Iron, Kaisel, Tank, Fang) 2026-11-17 → fans decoding for movie/season 3 hints [animeoteca.com].  
-**Hashtags:** #SoloLeveling #ShadowMonarch #SungJinwoo #SoloLevelingMovie  
-**Moment to clip:** Silent 6-second grid: each shadow steps forward → eyes glow → cut to Jinwoo’s “Arise” hand sign. Use official key art (transformative, <2 s per character).  
-**Source:** animeoteca.com 2026-11-17 article.
+### 3. BLEACH: Thousand-Year Blood War - The Calamity (Anime)
+* **Why fans care now:** Official TikTok campaign launched on Nov 19 across 16 countries offering exclusive profile frames for fan edits over 60 seconds long.
+* **Hashtags:** `#bleach` `#bleachtybw` `#ichigokurosaki` `#animeedit`
+* **The moment to clip:** Ichigo vs. Uryu battle intensity build-up.
+  * *Hook (0-2s):* Getsuga Tensho aura igniting close-up on Ichigo's eye.
+  * *Story stretch (18s):* Fast sword clash clips synced to heavy phonk or bass-boosted audio.
+  * *Final beat (3s):* Slow-mo blade sheath click landing right on the audio beat drop.
+* **Source:** [BLEACH TYBW TikTok Campaign - AniHeat](https://aniheat.com/en/news/news-204274)
+* **Saturation:** **High (Campaign Driven).** Flood of entries on TikTok right now, but fan engagement on clips is extremely high.
 
 ---
 
-## 5. Chiikawa
-**Why now:** Japan Google Trends “くら寿司 ちいかわ” 500+ searches; ORICON 2026-11-17 “new info shocks net” (postcard bonus flood); MyAnimeList top-airing 8.63.  
-**Hashtags:** #Chiikawa #ちいかわ #ChiikawaEdit #KuraSushiChiikawa  
-**Moment to clip:** “Yada!” face → Hachiware humming → sudden dark lore flash (labyrinth, mimic) → back to cute. 3-beat: cute / song / dread.  
-**Source:** Google Trends Japan; ORICON 2026-11-17; MyAnimeList.
+### 4. Witch on the Holy Night / Mahoutsukai no Yoru (Anime Movie)
+* **Why fans care now:** ufotable’s new theatrical film released today (Nov 20). Early midnight screeners in Japan are praising its "breathtaking visual beauty" ("言葉を失う映像美").
+* **Hashtags:** `#mahoutsukainoyoru` `#mahoyo` `#ufotable` `#animeedit`
+* **The moment to clip:** Aoko Aozaki casting magic sequence.
+  * *Hook (0-2s):* Giant glowing magic circle expanding across screen.
+  * *Story stretch (15s):* ufotable's signature fluid particle effects and high-budget spell animation.
+  * *Final beat (2s):* Sudden lens-flare dissolve into Aoko’s cold stare.
+* **Source:** [Mahoutsukai no Yoru Premiere News - Bazupapiko](https://www.bazupapiko.workers.dev/articles/2026-11-20-mahoyo-movie-release-app/)
+* **Saturation:** **Low in Western TikTok / High Trend Potential.** Great window to clip early before Western feeds catch up.
 
 ---
 
-## 6. Steel Ball Run: JoJo’s Bizarre Adventure
-**Why now:** New anime adaptation announced; MyAnimeList **9.03** (highest rated) / 258K members — massive pent-up demand.  
-**Hashtags:** #SteelBallRun #JoJo #JohnnyJoestar #GyroZeppeli  
-**Moment to clip:** Johnny’s first Spin (finger gun → nail rotation) → Gyro’s steel ball trajectory lines → “Shortest path” caption. Manga panels allowed if animated transformatively (pan/zoom/sound design).  
-**Source:** MyAnimeList top-airing 2026-11-17.
+### 5. Steel Ball Run: JoJo's Bizarre Adventure (Anime)
+* **Why fans care now:** Currently sitting as the #1 Top Airing Anime on MyAnimeList with a 9.03 rating, driving heavy fan art and hype edits.
+* **Hashtags:** `#steelballrun` `#jojosbizarreadventure` `#sbr` `#gyrozeppeli`
+* **The moment to clip:** Gyro Zeppeli & Johnny Joestar horseback racing tension.
+  * *Hook (0-2s):* Steel ball spinning visual with metallic audio cue.
+  * *Story stretch (16s):* Dynamic camera cuts of horse galloping and Stand energy aura charging.
+  * *Final beat (3s):* Gyro’s iconic gold-tooth smirk framed cleanly.
+* **Source:** [Steel Ball Run - MyAnimeList](https://myanimelist.net/anime/61469)
+* **Saturation:** **Moderate.** Strong community engagement guaranteed on JoJo edits.
 
 ---
 
-## 7. Reincarnated as a Sword Season 2
-**Why now:** AniList **#1 trending 229** / 56K fans; ep 9 airs 2026-11-25. Father-daughter dynamic peaks mid-season.  
-**Hashtags:** #ReincarnatedAsASword #TenKen #Fran #Teacher  
-**Moment to clip:** Fran’s evolution flash (silhouette → new form) → Teacher’s internal monologue “My wielder grows” → head-pat. 4 seconds, emotional payoff.  
-**Source:** AniList trending 2026-11-19.
+### 6. The Apothecary Diaries Season 3 (Anime)
+* **Why fans care now:** Season 3 active weekly run; Episode 8 airs Nov 20. Holds an 8.60 MAL score with 233,000+ tracking members.
+* **Hashtags:** `#theapothecarydiaries` `#maomao` `#jinshi` `#kusuriyanohitorigoto`
+* **The moment to clip:** Maomao’s transition from cold detective to excited poison enthusiast.
+  * *Hook (0-2s):* Maomao tasting poison with a totally unbothered expression.
+  * *Story stretch (14s):* Montage of Jinshi flustered while Maomao solves palace mysteries.
+  * *Final beat (3s):* Micro-smile freeze-frame that loops smoothly.
+* **Source:** [The Apothecary Diaries S3 - AniList](https://anilist.co/anime/195516)
+* **Saturation:** **Moderate.** Consistently performs well on anime FYPs due to humor and ship edits.
 
 ---
 
-## 8. The Hunger Games: Sunrise on the Reaping
-**Why now:** Film hits Colombia theatres (Mexico Trends “los juegos del hambre amanecer en la cosecha” 1000+); Wikipedia 92K views yesterday. Young Haymitch buzz.  
-**Hashtags:** #SunriseOnTheReaping #HungerGames #Haymitch #QuarterQuell  
-**Moment to clip:** Trailer beat: 50th Quarter Quell arena reveal → “Pretty little bird” whistle → Haymitch’s axe throw freeze-frame. No full trailer — use 1-2 s clips max.  
-**Source:** Google Trends Mexico; Wikipedia 2026-11-17.
-
----
-
-### Quick oversaturation check
-| Title | Saturation | Advice |
-|-------|------------|--------|
-| GTA 6 | 🟥 Extreme | Unique angle only |
-| Pattinson/Bond | 🟥 High | Analytical > reaction |
-| One Piece / Naruto / Black Clover | 🟡 Perennial | Clip specific *new* ep beats only |
-| Apothecary / Solo Leveling / Chiikawa / SBR / TenKen / Hunger Games | 🟢 Fresh | Prime window this week |
-
----
-
-### Posting order suggestion
-1. **Apothecary Diaries** (ep 8 drops Friday — clip Thursday night)  
-2. **Solo Leveling** (visual dropped Monday — 48 h decode window)  
-3. **Chiikawa** (Kura Sushi collab art flooding JP TL)  
-4. **Steel Ball Run** (announcement hype, no ep yet — manga-panel AMV style)  
-5. **Reincarnated as a Sword** (mid-season peak)  
-6. **Hunger Games** (theatrical rollout starting LatAm)  
-7. **GTA 6** *only if* you have a non-first-playthrough angle  
-8. **Bond** *only if* you script a “Fleming vs. films” video essay short
-
----
-
-*All data from live scanners 2026-11-19 (studio/live-data.md) + cited web sources. No invented numbers.*
+### 7. Avengers: Doomsday (Movie)
+* **Why fans care now:** Over 50,000 Wikipedia views yesterday and fan headlines popping up over intense demand for the first official teaser trailer drop.
+* **Hashtags:** `#avengersdoomsday` `#mcu` `#drdoom` `#marveledits`
+* **The moment to clip:** Ominous Doctor Doom build-up montage.
+  * *Hook (0-2s):* Metal mask clanking sound effect over a black screen.
+  * *Story stretch (16s):* Recap edit showing previous Marvel heroes falling, establishing threat level.
+  * *Final beat (3s):* Deep villain line or mask glint cut to black.
+* **Source:** [Avengers Doomsday Fan Hype - SuperHeroHype](https://news.google.com/rss/articles/CBMikgFBVV95cUxPXzQwWjZMYWFiNDgwVFdfV1FWUFJ4LUczb1pxbnAycFc5UGp2eTlfZnFlNUZDSVBKVVpqZXVMNndWb1NsWVBxQjFiUS0zeTY4U1AtR1UxWjdXekI1RDFXQXlqQm5hWWRZOUliU0FNazNSd1NRZGZrM1dCZFZlcWRqbHkxOG5wX1ZNU2ctYkQ1YjRKZ9IBlwFBVV95cUxPWFZ0eGVfQTd2U2xJcVJvSGtIczctR29BVGg0SXY2LWRjS3gxWG8wTHVqdmtTUm9iOEwyMjUwTzZ0WTFjREczdkJzRk1Ka1JnYVdPSUREa1VKbFNCeHFJMzRHS3NRZlczancwd2tMelZicnFlZkQ1bmZHRjFIam9kcDVrb1Fjd19tdUVVSjNRU2Y3aVRJMUZR?oc=5)
+* **Saturation:** **Moderate.** High appetite while fans wait for official teaser footage.
