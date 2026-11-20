@@ -53,6 +53,7 @@
 <div id="log"></div>
 <div id="core"><button id="orb" aria-label="Talk to Friday"></button><div id="hint">Tap to talk</div></div>
 <label class="t"><input type="checkbox" id="hands" style="flex:0"> Keep listening after she answers</label>
+<label class="t">Voice <select id="voice" style="background:#0f1424;color:#e8f1ff;border:1px solid #223055;border-radius:10px;padding:6px;max-width:60%"></select></label>
 <form id="f"><input id="q" placeholder="Or type to Friday…" autocomplete="off"><button>Send</button></form>
 <div id="setup">
   <h2 style="margin:0">Hi, I'm Friday.</h2>
@@ -80,8 +81,16 @@ function state(s, h) { body.classList.remove("listening", "thinking", "speaking"
 
 // voice out
 let voice = null;
-function pickVoice() { const v = speechSynthesis.getVoices(); voice = v.find((x) => /Ava|Samantha|Allison|Zoe|Serena/i.test(x.name) && /^en/i.test(x.lang)) || v.find((x) => /^en-US/i.test(x.lang)) || null; }
-if ("speechSynthesis" in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+function pickVoice() {
+  const v = speechSynthesis.getVoices().filter((x) => /^en/i.test(x.lang));
+  let saved = ""; try { saved = localStorage.getItem("friday-voice") || ""; } catch {}
+  const score = (x) => (/premium/i.test(x.name) ? 0 : /enhanced/i.test(x.name) ? 1 : 2) * 10 + (/Ava/i.test(x.name) ? 0 : /Zoe|Samantha|Allison|Serena|Evan/i.test(x.name) ? 1 : 5);
+  voice = v.find((x) => x.voiceURI === saved) || v.sort((a, b) => score(a) - score(b))[0] || null;
+  const sel = document.getElementById("voice");
+  if (sel && v.length) { sel.innerHTML = v.map((x) => `<option value="${x.voiceURI}">${x.name}</option>`).join(""); if (voice) sel.value = voice.voiceURI; }
+}
+if ("speechSynthesis" in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; setTimeout(pickVoice, 600); }
+document.getElementById("voice").onchange = (e) => { try { localStorage.setItem("friday-voice", e.target.value); } catch {} pickVoice(); speak("Hi Josiah, this is my voice now."); };
 function speak(text) {
   return new Promise((res) => {
     if (!("speechSynthesis" in window)) return res();
