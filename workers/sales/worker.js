@@ -530,7 +530,16 @@ async function friday(req, env, ctx) {
   const key = req.headers.get("x-friday-key") || "";
   // the owner's key, or the agents' test key (derived from the Payhip secret, so it never appears anywhere public)
   if ((await sha256(key)) !== FRIDAY_KEY_SHA && !(env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)))) return out({ ok: false, say: "Sorry, I don't know you." }, 401);
-  let d; try { d = await req.json(); } catch { d = {}; }
+  // voice: the app sends recorded audio; Groq Whisper turns it into text (free tier: 2,000 clips a day)
+  let d = {}, heard = "";
+  const type = req.headers.get("content-type") || "";
+  if (/^audio\//.test(type)) {
+    const audio = await req.arrayBuffer();
+    if (audio.byteLength < 2000) return out({ ok: true, heard: "", say: "I didn't catch anything. Try again?" });
+    try { heard = await transcribe(env, audio, type); } catch (e) { return out({ ok: false, heard: "", say: "My ears aren't working right now. Try typing to me.", why: [String(e.message || e).slice(0, 120)] }); }
+    if (!heard.trim() || /^(you|thank you\.?|thanks for watching!?|\.+)$/i.test(heard.trim())) return out({ ok: true, heard: "", say: "I didn't catch that. Say it again?" });
+    d = { q: heard };
+  } else { try { d = await req.json(); } catch { d = {}; } }
   const q = String(d.q || d.text || "").trim().slice(0, 2000);
   if (!q) return out({ ok: true, say: "I'm here. What do you need?" });
 
@@ -612,5 +621,26 @@ ${facts.join("\n")}`;
   await env.SALES.put("friday:history", JSON.stringify([...convo, { role: "assistant", content: say }].slice(-12)), { expirationTtl: 6 * 3600 });
   const PHONE = ["text", "call", "reminder", "event", "timer", "alarm", "directions", "note", "music", "health", "open"];
   const phone = r.phone && typeof r.phone === "object" && PHONE.includes(r.phone.do) ? r.phone : null;
-  return out({ ok: true, say, ran: r.run || null, remembered: r.remember || null, phone, phone_json: phone ? JSON.stringify(phone) : "" });
+  return out({ ok: true, heard, say, ran: r.run || null, remembered: r.remember || null, phone, phone_json: phone ? JSON.stringify(phone) : "" });
+}
+
+async function transcribe(env, audio, type) {
+  const ext = /flac/.test(type) ? "flac" : /mp4|m4a|aac/.test(type) ? "m4a" : /webm/.test(type) ? "webm" : /ogg/.test(type) ? "ogg" : /wav/.test(type) ? "wav" : "mp3";
+  if (env.GROQ_API_KEY) {
+    for (const model of ["whisper-large-v3-turbo", "whisper-large-v3"]) {
+      const form = new FormData();
+      form.append("file", new Blob([audio], { type }), `voice.${ext}`);
+      form.append("model", model); form.append("language", "en"); form.append("response_format", "json");
+      form.append("prompt", "Josiah talking to Friday, his assistant, about Forever Held, Payhip, Pinterest, churches, agents.");
+      const r = await fetch("https://api.groq.com/openai/v1/audio/transcriptions", { method: "POST", signal: timeout(), headers: { Authorization: `Bearer ${env.GROQ_API_KEY}` }, body: form });
+      if (r.ok) return (await r.json()).text || "";
+      if (r.status !== 429 && r.status < 500) throw new Error(`groq whisper HTTP ${r.status}: ${(await r.text()).slice(0, 80)}`);
+    }
+  }
+  if (env.AI) {
+    const u8 = new Uint8Array(audio); let bin = "";
+    for (let i = 0; i < u8.length; i += 0x8000) bin += String.fromCharCode(...u8.subarray(i, i + 0x8000));
+    const o = await env.AI.run("@cf/openai/whisper-large-v3-turbo", { audio: btoa(bin) }); return o?.text || "";
+  }
+  throw new Error("no speech-to-text available");
 }

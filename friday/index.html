@@ -100,29 +100,49 @@ function speak(text) {
   });
 }
 
-// voice in
-const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-let rec = null, listening = false;
-function listen() {
-  if (!SR) { $("#q").focus(); hint.textContent = "Use the keyboard mic to talk"; return; }
-  if (listening) { rec.stop(); return; }
-  rec = new SR(); rec.lang = "en-US"; rec.interimResults = true; rec.continuous = false;
-  let final = "", bubble = null;
-  rec.onresult = (e) => { let t = ""; for (const r of e.results) t += r[0].transcript; final = t; if (!bubble) bubble = add("", "you"); bubble.textContent = t; };
-  rec.onend = () => { listening = false; state(); if (final.trim()) ask(final.trim(), bubble); else if (bubble) bubble.remove(); };
-  rec.onerror = (e) => { listening = false; state(null, e.error === "not-allowed" ? "Allow the microphone in Settings, or type" : "Didn't catch that. Tap to try again"); };
-  listening = true; state("listening", "Listening…"); rec.start();
+// voice in: record with the microphone, stop on a pause, send the audio to Friday (she transcribes it)
+let rec = null, stream = null, listening = false;
+async function listen() {
+  if (listening) { rec?.stop(); return; }
+  try { stream = stream && stream.active ? stream : await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true } }); }
+  catch { state(null, "Allow the microphone for Friday (Settings › Safari › Microphone), or type"); return; }
+  const mime = ["audio/mp4", "audio/webm;codecs=opus", "audio/webm", "audio/ogg"].find((t) => window.MediaRecorder && MediaRecorder.isTypeSupported(t)) || "";
+  rec = new MediaRecorder(stream, mime ? { mimeType: mime } : undefined);
+  const chunks = [];
+  rec.ondataavailable = (e) => e.data.size && chunks.push(e.data);
+  // stop after ~1.4 s of quiet once you've started talking (or 7 s of nothing, or 45 s max)
+  const ctx = new (window.AudioContext || window.webkitAudioContext)();
+  const src = ctx.createMediaStreamSource(stream), an = ctx.createAnalyser(); an.fftSize = 1024; src.connect(an);
+  const buf = new Uint8Array(an.fftSize); let spoke = false, quietSince = performance.now(); const t0 = performance.now();
+  const tick = () => {
+    if (!listening) return;
+    an.getByteTimeDomainData(buf); let peak = 0; for (const v of buf) peak = Math.max(peak, Math.abs(v - 128));
+    const now = performance.now();
+    document.getElementById("orb").style.transform = `scale(${1.1 + Math.min(peak, 60) / 300})`;
+    if (peak > 12) { spoke = true; quietSince = now; }
+    if ((spoke && now - quietSince > 1400) || (!spoke && now - t0 > 7000) || now - t0 > 45000) rec.stop(); else requestAnimationFrame(tick);
+  };
+  rec.onstop = async () => {
+    listening = false; document.getElementById("orb").style.transform = ""; ctx.close().catch(() => {});
+    if (!spoke) { state(null, "I didn't hear anything. Tap to try again"); return; }
+    const blob = new Blob(chunks, { type: (rec.mimeType || mime || "audio/mp4").split(";")[0] });
+    const bubble = add("…", "you");
+    await ask(null, bubble, blob);
+  };
+  listening = true; state("listening", "Listening… (tap to stop)"); rec.start(); tick();
 }
 $("#orb").onclick = () => { if (body.classList.contains("speaking")) { speechSynthesis.cancel(); state(); return; } listen(); };
 
-async function ask(q, bubble) {
+async function ask(q, bubble, audio) {
   if (!bubble) add(q, "you");
-  history.push({ role: "user", content: q });
-  state("thinking", "Thinking…");
+  state("thinking", audio ? "Hearing you…" : "Thinking…");
   let say = "";
   try {
-    const r = await fetch(API, { method: "POST", headers: { "content-type": "application/json", "x-friday-key": key }, body: JSON.stringify({ q }) });
+    const r = await fetch(API, audio ? { method: "POST", headers: { "content-type": audio.type || "audio/mp4", "x-friday-key": key }, body: audio }
+      : { method: "POST", headers: { "content-type": "application/json", "x-friday-key": key }, body: JSON.stringify({ q }) });
     const j = await r.json();
+    if (audio) { q = j.heard || ""; if (q) bubble.textContent = q; else bubble.remove(); }
+    if (q) history.push({ role: "user", content: q });
     if (r.status === 401) { say = "That key isn't right. Tap Settings to enter it again."; }
     else say = j.say || "Hmm, I didn't get an answer back.";
     if (j.ran) add(`Started: ${j.ran.replace(/-/g, " ")}`, "note");
@@ -133,7 +153,7 @@ async function ask(q, bubble) {
   try { sessionStorage.setItem("friday-hist", JSON.stringify(history.slice(-20))); } catch {}
   await speak(say); state();
   if (pendingPhone) { const p = pendingPhone; pendingPhone = null; add(`On your phone: ${p.do}`, "note"); location.href = "shortcuts://run-shortcut?name=" + encodeURIComponent("Friday Hands") + "&input=text&text=" + encodeURIComponent(JSON.stringify(p)); return; }
-  if (hands && SR) setTimeout(listen, 350);
+  if (hands) setTimeout(listen, 350);
 }
 $("#f").onsubmit = (e) => { e.preventDefault(); const q = $("#q").value.trim(); if (!q) return; $("#q").value = ""; $("#q").blur(); ask(q); };
 
