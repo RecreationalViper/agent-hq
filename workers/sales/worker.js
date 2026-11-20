@@ -632,6 +632,7 @@ ${facts.join("\n")}`;
     return "";
   };
   let gResult = null, lResult = null;
+  if (!r.lookup && /\b(think (hard|deep|it through|about it)|ask claude)\b/i.test(q)) r.lookup = { tool: "think", query: q, context: facts.join("\n").slice(0, 2500) };
   if (r.lookup && typeof r.lookup === "object" && (owner || ["web", "think", "report"].includes(r.lookup.tool))) {
     lResult = await fridayLookup(env, r.lookup);
     if (r.lookup.tool === "note" || /^Couldn't|isn't connected|Unknown lookup/.test(lResult)) say = r.lookup.tool === "note" && lResult === "Saved to Notion." ? say : lResult;
