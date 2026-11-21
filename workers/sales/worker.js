@@ -63,6 +63,7 @@ export default {
     if (url.pathname === "/chat") return chat(req, env, ctx);
     if (url.pathname === "/friday/connect" || url.pathname === "/friday/google/callback") return fridayGoogleRoute(req, url, env);
     if (url.pathname === "/friday/connections") return fridayConnections(req, env);
+    if (url.pathname === "/friday/spend") return fridaySpend(req, env);
     if (url.pathname === "/friday") return friday(req, env, ctx);
     if (url.pathname === "/friday/live" || url.pathname === "/friday/tool") return fridayLive(req, env, url.pathname.endsWith("tool"));
     if (url.pathname === "/contacts") return contactsInbox(req, url, env);
@@ -582,6 +583,7 @@ You can act. Return ONLY JSON: {"say": "what you speak", "run": null or one of [
   {"do":"sales","days":30}  orders, gross, fees, refunds, net   {"do":"orders","limit":10}   {"do":"refunds","days":90}
   {"do":"coupons"}  list coupons   {"do":"coupon_create","code":"WORD","percent":15,"until":"YYYY-MM-DD"}  only when he asks for one; real promos only, never fake urgency
   {"do":"balance"} {"do":"payments"} {"do":"payouts"}  Stripe money (if connected)   {"do":"xmoney"}  his X Money activity (from its emails)
+  {"do":"accounts"}  his bank balances   {"do":"spending","days":30}  bank transactions + Apple Pay purchases (personal money: read-only, never judge, help him budget if he asks)
 Google also has: {"do":"drive_search","query":"..."} {"do":"doc_read","query":"file name"} {"do":"doc_create","title":"...","text":"..."} {"do":"sheet_append","query":"sheet name","row":["a","b"]}
 "lookup" is your second brain. Use it whenever the answer needs fresh or outside info instead of guessing:
   {"tool":"web","query":"..."}  current news, prices, facts, anything on the internet
@@ -746,7 +748,7 @@ FACTS AT THE START OF THIS CALL:\n${facts.join("\n")}`;
   const tools = [{ functionDeclarations: [
     { name: "get_status", description: "Fresh facts about his businesses: sales, posting, church outreach, agent health." },
     { name: "run_agent", description: "Start one of his agent jobs.", parameters: { type: "OBJECT", properties: { job: { type: "STRING", enum: Object.keys(FRIDAY_RUNS) } }, required: ["job"] } },
-    { name: "shop", description: "Run his Payhip shop and money. do = sales|orders|refunds (days, limit) | coupons | coupon_create (code, percent, until YYYY-MM-DD; only when he asks) | balance|payments|payouts (Stripe) | xmoney (X Money, from its emails).", parameters: { type: "OBJECT", properties: { do: { type: "STRING", enum: ["sales", "orders", "refunds", "coupons", "coupon_create", "balance", "payments", "payouts", "xmoney"] }, days: { type: "NUMBER" }, limit: { type: "NUMBER" }, code: { type: "STRING" }, percent: { type: "NUMBER" }, until: { type: "STRING" } }, required: ["do"] } },
+    { name: "shop", description: "Run his Payhip shop and money. do = sales|orders|refunds (days, limit) | coupons | coupon_create (code, percent, until YYYY-MM-DD; only when he asks) | balance|payments|payouts (Stripe) | xmoney (X Money, from its emails) | accounts (bank balances) | spending (bank + Apple Pay transactions).", parameters: { type: "OBJECT", properties: { do: { type: "STRING", enum: ["sales", "orders", "refunds", "coupons", "coupon_create", "balance", "payments", "payouts", "xmoney", "accounts", "spending"] }, days: { type: "NUMBER" }, limit: { type: "NUMBER" }, code: { type: "STRING" }, percent: { type: "NUMBER" }, until: { type: "STRING" } }, required: ["do"] } },
     { name: "lookup", description: "Your second brain. tool = web (search the internet) | think (ask Claude a hard question) | notion (search his Notion) | note (save to his Notion) | discord (read one of his channels: content, sales, inbox, alerts, research, growth, trading-desk) | report (an agent's latest report).", parameters: { type: "OBJECT", properties: { tool: { type: "STRING", enum: ["web", "think", "notion", "note", "discord", "report"] }, query: { type: "STRING" }, context: { type: "STRING" }, title: { type: "STRING" }, text: { type: "STRING" }, channel: { type: "STRING" } }, required: ["tool"] } },
     { name: "google", description: "His Gmail, Google Calendar and Drive. do = calendar|email_search|event_add|email_draft|email_send|drive_search|doc_read|doc_create|sheet_append.", parameters: { type: "OBJECT", properties: { do: { type: "STRING", enum: ["calendar", "email_search", "event_add", "email_draft", "email_send", "drive_search", "doc_read", "doc_create", "sheet_append"] }, id: { type: "STRING" }, text: { type: "STRING" }, row: { type: "ARRAY", items: { type: "STRING" } }, days: { type: "NUMBER" }, query: { type: "STRING" }, title: { type: "STRING" }, start: { type: "STRING" }, minutes: { type: "NUMBER" }, location: { type: "STRING" }, to: { type: "STRING" }, subject: { type: "STRING" }, body: { type: "STRING" } }, required: ["do"] } },
     { name: "remember", description: "Save a short fact about him for later.", parameters: { type: "OBJECT", properties: { fact: { type: "STRING" } }, required: ["fact"] } },
@@ -974,6 +976,21 @@ async function fridayConnections(req, env) {
     await env.SALES.delete("friday:google"); await env.SALES.delete("friday:gaccess"); await env.SALES.delete("friday:pending_email");
     return out({ ok: true });
   }
+  if (d.action === "set_key" && d.app === "simplefin") {
+    try {
+      let tok = String(d.key || "").trim(), access = tok;
+      if (!/^https:\/\//.test(tok)) {
+        const claim = atob(tok.replace(/\s+/g, ""));
+        if (!/^https:\/\//.test(claim)) throw 0;
+        const r = await fetch(claim, { method: "POST", headers: { "content-length": "0" } });
+        access = (await r.text()).trim();
+        if (!r.ok || !/^https:\/\//.test(access)) return out({ ok: false, error: "SimpleFIN didn't accept that token. Make a new Setup Token and paste it right away (each one works once)." });
+      }
+      await env.SALES.put("friday:key:simplefin", access);
+      return out({ ok: true });
+    } catch { return out({ ok: false, error: "That doesn't look like a SimpleFIN Setup Token." }); }
+  }
+  if (d.action === "disconnect" && d.app === "simplefin") { await env.SALES.delete("friday:key:simplefin"); return out({ ok: true }); }
   const KEYS = { stripe: { test: (k) => fetch("https://api.stripe.com/v1/balance", { headers: { Authorization: "Bearer " + k } }).then((r) => r.ok) } };
   if (d.action === "set_key" && KEYS[d.app]) {
     const k = String(d.key || "").trim();
@@ -984,6 +1001,8 @@ async function fridayConnections(req, env) {
   if (d.action === "disconnect" && KEYS[d.app]) { await env.SALES.delete("friday:key:" + d.app); return out({ ok: true }); }
   const g = JSON.parse(await env.SALES.get("friday:google") || "null");
   const stripe = !!(await env.SALES.get("friday:key:stripe"));
+  const bank = !!(await env.SALES.get("friday:key:simplefin"));
+  let spends = 0; try { spends = (await env.SALES.list({ prefix: "spend:", limit: 1 })).keys.length; } catch {}
   const parts = g ? [g.scope?.includes("gmail") && "Gmail", g.scope?.includes("calendar") && "Calendar", g.scope?.includes("drive") && "Drive, Docs, Sheets"].filter(Boolean).join(" + ") : "";
   const on = (k) => !!env[k];
   return out({ ok: true, apps: [
@@ -1001,7 +1020,8 @@ async function fridayConnections(req, env) {
     { id: "etsy", icon: "🧶", name: "Etsy", soon: true, detail: "Orders, listings, messages, when the Etsy shop opens" },
     { id: "shopify", icon: "🛍️", name: "Shopify", soon: true, detail: "When/if you move to Shopify" },
     { id: "spotify", icon: "🎵", name: "Spotify", soon: true, detail: "Play, queue and pick music" },
-    { id: "money", icon: "🏦", name: "Bank accounts", soon: true, detail: "Balances and spending across your banks" }
+    { id: "simplefin", icon: "🏦", name: "Banks (SimpleFIN)", key: true, connected: bank, detail: bank ? "Balances and transactions, read-only" : "bridge.simplefin.org ($15/yr) › connect your banks › Apps › New connection › copy the Setup Token › paste here" },
+    { id: "wallet", icon: "", name: "Apple Pay purchases", connected: spends > 0, detail: spends ? "Logging your Apple Pay purchases" : "Set up the Shortcuts automation (ask Claude). Logs each Apple Pay purchase" }
   ] });
 }
 
@@ -1122,6 +1142,32 @@ async function fridayShop(env, a = {}) {
       }
       return "Payhip didn't accept that coupon.";
     }
+    if (a.do === "accounts" || a.do === "spending") {
+      const acc = await env.SALES.get("friday:key:simplefin");
+      const days = Math.min(Number(a.days) || 30, 90);
+      const lines = [];
+      if (acc) {
+        const u = new URL(acc);
+        const auth = "Basic " + btoa(decodeURIComponent(u.username) + ":" + decodeURIComponent(u.password));
+        u.username = ""; u.password = "";
+        const qs = a.do === "accounts" ? "balances-only=1" : `start-date=${Math.floor(Date.now() / 1000) - days * 86400}`;
+        const r = await fetch(`${u.toString().replace(/\/$/, "")}/accounts?${qs}`, { signal: AbortSignal.timeout(25000), headers: { Authorization: auth } });
+        const j = await r.json().catch(() => ({}));
+        if (!r.ok) lines.push(`Bank link error (${r.status}). He may need to reconnect SimpleFIN.`);
+        for (const x of j.accounts || []) {
+          lines.push(`${x.org?.name || "Bank"} · ${x.name}: balance ${x.balance} ${x.currency || "USD"}${x["available-balance"] ? ` (available ${x["available-balance"]})` : ""}`);
+          if (a.do === "spending") for (const t of (x.transactions || []).sort((p, q) => q.posted - p.posted).slice(0, 25)) lines.push(`   ${new Date(t.posted * 1000).toISOString().slice(0, 10)} ${t.amount} ${t.payee || t.description || ""}`);
+        }
+        if ((j.errors || []).length) lines.push(`Notes from the bank link: ${j.errors.join("; ").slice(0, 300)}`);
+      }
+      if (a.do === "spending") {
+        const since = new Date(Date.now() - days * 864e5).toISOString();
+        const w = []; let cursor;
+        do { const page = await env.SALES.list({ prefix: "spend:", cursor }); for (const k of page.keys) if (k.name.slice(6) >= since) { const v = await env.SALES.get(k.name); if (v) w.push(JSON.parse(v)); } cursor = page.list_complete ? null : page.cursor; } while (cursor);
+        if (w.length) { const total = w.reduce((t, x) => t + (Number(x.amount) || 0), 0); lines.push(`Apple Pay (last ${days} days): ${w.length} purchases, $${total.toFixed(2)}`); for (const x of w.slice(-20).reverse()) lines.push(`   ${x.at.slice(0, 10)} $${x.amount} ${x.merchant}${x.card ? ` (${x.card})` : ""}`); }
+      }
+      return lines.length ? lines.join("\n") : "No bank accounts are linked yet. He can add SimpleFIN in Friday's Settings, and turn on the Apple Pay automation.";
+    }
     if (a.do === "xmoney") {
       // X Money has no public API yet; read its emails (receipts, transfers, deposits) from his Gmail
       const mail = await runGoogle(env, { do: "email_search", query: '("X Money" OR from:xmoney) (sent OR received OR payment OR deposit OR transfer OR balance) newer_than:90d' });
@@ -1142,4 +1188,16 @@ async function fridayShop(env, a = {}) {
     }
     return "Unknown shop action.";
   } catch (e) { return `Couldn't do that: ${String(e.message || e).slice(0, 160)}`; }
+}
+
+// Apple Pay purchases, sent by his iPhone's "Transaction" automation (Shortcuts). Owner key only.
+async function fridaySpend(req, env) {
+  const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
+  if (req.method !== "POST" || (await sha256(req.headers.get("x-friday-key") || "")) !== FRIDAY_KEY_SHA) return out({ ok: false }, 401);
+  let d = {}; try { d = await req.json(); } catch {}
+  const amount = Number(String(d.amount || "").replace(/[^0-9.\-]/g, ""));
+  if (!amount) return out({ ok: false, error: "no amount" }, 400);
+  const at = new Date().toISOString();
+  await env.SALES.put(`spend:${at}`, JSON.stringify({ at, amount, merchant: String(d.merchant || "").slice(0, 80), card: String(d.card || "").slice(0, 40) }), { expirationTtl: 400 * 864e5 });
+  return out({ ok: true });
 }

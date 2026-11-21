@@ -122,7 +122,7 @@ async function loadApps() {
       const b = document.createElement("button"); b.textContent = a.connected ? "✕" : "Add key"; if (a.connected) b.className = "ghost";
       b.onclick = async () => {
         if (a.connected) { if (!confirm(`Remove ${a.name}?`)) return; await fetch(API + "/connections", { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: JSON.stringify({ action: "disconnect", app: a.id }) }); return loadApps(); }
-        const k = prompt(`Paste your ${a.name} key:`); if (!k) return;
+        const k = prompt(a.id === "simplefin" ? "Paste your SimpleFIN Setup Token:" : `Paste your ${a.name} key:`); if (!k) return;
         const r = await fetch(API + "/connections", { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: JSON.stringify({ action: "set_key", app: a.id, key: k.trim() }) });
         const j = await r.json().catch(() => ({})); if (!j.ok) alert(j.error || "That didn't work."); loadApps();
       };
