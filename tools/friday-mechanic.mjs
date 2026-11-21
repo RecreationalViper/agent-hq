@@ -83,7 +83,17 @@ const html = fs.readFileSync("friday/index.html", "utf8").match(/<script>([\s\S]
 if (html) { fs.writeFileSync("/tmp/fm-app.mjs", html[1]); sh("node --check /tmp/fm-app.mjs"); }
 sh("node --check tools/friday-check.mjs");
 console.log(`Change compiles. ${plan.title}\n${sh("git diff --stat")}`);
-if (DRY) { console.log(sh("git diff").slice(0, 6000)); process.exit(0); }
+// second opinion: a separate review pass must approve the diff
+const diff = sh("git diff");
+let verdict = null;
+try {
+  verdict = await ask(`You review code changes to FRIDAY (a Cloudflare Worker voice assistant). Be strict. Reject a change if it could break existing behavior, slow or weaken other features, change timeouts or limits globally, touch security/owner checks, or doesn't clearly fix the stated item. Return ONLY JSON {"ok":true|false,"reason":"one sentence"}.`,
+    `ITEM: ${plan.title}\nSUMMARY: ${plan.summary}\n\nDIFF:\n${diff.slice(0, 20000)}`, { json: true, strong: true, temperature: 0, who: "friday-mechanic-review" });
+  if (typeof verdict === "string") verdict = JSON.parse(verdict.match(/\{[\s\S]*\}/)[0]);
+} catch (e) { console.log(`review failed: ${e.message}`); }
+console.log(`Review: ${verdict?.ok ? "approved" : "rejected"} (${verdict?.reason || "no review"})`);
+if (DRY) { console.log(diff.slice(0, 6000)); process.exit(0); }
+if (!verdict?.ok) { await alert(`🔧 Friday Mechanic drafted "${plan.title}" but its reviewer rejected it (${String(verdict?.reason || "no review").slice(0, 200)}). It'll try a better fix next run.`).catch(() => {}); process.exit(0); }
 
 // 5) branch + pull request
 const branch = `friday-mechanic/${new Date().toISOString().slice(0, 16).replace(/[:T]/g, "-")}`;

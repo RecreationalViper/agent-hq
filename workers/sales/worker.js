@@ -1014,7 +1014,7 @@ async function fridayConnections(req, env) {
     { id: "payhip", icon: "🛒", name: "Payhip shop", connected: on("PAYHIP_API_KEY"), detail: "Orders, refunds, net sales, create coupons" },
     { id: "stripe", icon: "💳", name: "Stripe", key: true, connected: stripe, detail: stripe ? "Balance, payments, payouts" : "Until then she reads Stripe's payout emails in your Gmail. For live balance: Stripe › Developers › API keys, paste it here" },
     { id: "business", icon: "🕊️", name: "Forever Held agents", connected: true, detail: "Posts, church outreach, agent health, start agent jobs" },
-    { id: "brain", icon: "🧠", name: "Claude (think hard)", connected: on("CLAUDE_API_KEY"), detail: "Say \"think hard\" or \"ask Claude\". $2/month cap" },
+    { id: "brain", icon: "🧠", name: "Deep thinking", connected: on("CLAUDE_API_KEY") || on("GEMINI_API_KEY"), detail: "Say \"think hard\". Uses Claude when the API key has credit, otherwise Gemini Pro (free)" },
     { id: "web", icon: "🌐", name: "Web search", connected: on("TAVILY_API_KEY") || on("EXA_API_KEY"), detail: "News, prices, facts (Tavily + Exa)" },
     { id: "notion", icon: "📓", name: "Notion", connected: on("NOTION_TOKEN"), detail: "Search and save notes. Share a page with the agents' Notion connection for her to see it" },
     { id: "discord", icon: "💬", name: "Discord", connected: on("DISCORD_BOT_TOKEN"), detail: "Reads your agents' channels (church replies, sales, alerts)" },
@@ -1055,17 +1055,29 @@ async function fridayLookup(env, a = {}) {
       return "Couldn't search the web right now.";
     }
     if (a.tool === "think") {
-      if (!env.CLAUDE_API_KEY) return "Claude isn't connected to me yet.";
+      // Claude first (if it has credit), then Gemini's strongest free model
+      const deep = async () => {
+        if (!env.GEMINI_API_KEY) return "No deep-thinking model is available right now.";
+        for (const m of ["gemini-pro-latest", "gemini-2.5-pro", "gemini-flash-latest"]) {
+          const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent?key=${env.GEMINI_API_KEY}`, { method: "POST", signal: AbortSignal.timeout(45000), headers: { "content-type": "application/json" },
+            body: JSON.stringify({ systemInstruction: { parts: [{ text: "You're helping FRIDAY, Josiah's personal voice assistant, think through a hard question for him. Be accurate, practical and specific. Say what you're unsure of. Under 250 words, plain text." }] }, contents: [{ role: "user", parts: [{ text: `${q}${a.context ? `\n\nContext: ${String(a.context).slice(0, 3000)}` : ""}` }] }] }) }).catch(() => null);
+          const j = r ? await r.json().catch(() => ({})) : {};
+          const t = (j.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").trim();
+          if (t) return t;
+        }
+        return "Deep thinking isn't available right now.";
+      };
+      if (!env.CLAUDE_API_KEY || (await env.SALES.get("friday:claude:out"))) return deep();
       const month = new Date().toISOString().slice(0, 7);
       const spent = Number(await env.SALES.get("friday:claude:" + month) || 0);
       if (spent >= CLAUDE_FRIDAY_CAP) return `I've used this month's $${CLAUDE_FRIDAY_CAP} Claude budget. Answer it yourself as best you can, and say so.`;
       const ms = ((await (await fetch("https://api.anthropic.com/v1/models?limit=100", { signal: timeout(), headers: { "x-api-key": env.CLAUDE_API_KEY, "anthropic-version": "2023-06-01" } })).json()).data || []).map((m) => m.id);
       const model = ms.find((m) => /sonnet/i.test(m)) || ms.find((m) => /haiku/i.test(m));
-      if (!model) return "Claude isn't available on that key.";
+      if (!model) return deep();
       const r = await fetch("https://api.anthropic.com/v1/messages", { method: "POST", signal: AbortSignal.timeout(90000), headers: { "x-api-key": env.CLAUDE_API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" },
         body: JSON.stringify({ model, max_tokens: 900, system: "You're helping FRIDAY, Josiah's personal voice assistant, think through a hard question for him. Be accurate, practical and specific. Say what you're unsure of. Under 250 words, plain text.", messages: [{ role: "user", content: `${q}${a.context ? `\n\nContext: ${String(a.context).slice(0, 3000)}` : ""}` }] }) });
       const j = await r.json().catch(() => ({}));
-      if (!r.ok) return `Claude didn't answer (${j.error?.message || r.status}).`;
+      if (!r.ok) { if (/credit|billing|balance/i.test(j.error?.message || "")) await env.SALES.put("friday:claude:out", "1", { expirationTtl: 86400 }); return deep(); }
       const cost = ((j.usage?.input_tokens || 0) * (/haiku/i.test(model) ? 1 : 3) + (j.usage?.output_tokens || 0) * (/haiku/i.test(model) ? 5 : 15)) / 1e6;
       await env.SALES.put("friday:claude:" + month, String(spent + cost), { expirationTtl: 40 * 864e5 });
       return (j.content || []).map((c) => c.text || "").join("").trim() || "Claude had nothing to add.";
