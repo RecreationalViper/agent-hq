@@ -43,7 +43,7 @@ jobs:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
       - name: Save Claude spending
         if: always() && github.event.inputs.dry_run != 'true'
-        run: bash tools/save.sh "Friday Mechanic: usage" claude-usage.json || true
+        run: bash tools/save.sh "Friday Mechanic usage" claude-usage.json || true
       - name: Tell Discord if this run failed
         if: failure()
         run: node tools/discord-alert.mjs "Friday Mechanic run failed"
