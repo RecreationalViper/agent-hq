@@ -581,7 +581,7 @@ You can act. Return ONLY JSON: {"say": "what you speak", "run": null or one of [
 "shop" runs his Payhip store and money (he's the owner and lets you act on the business):
   {"do":"sales","days":30}  orders, gross, fees, refunds, net   {"do":"orders","limit":10}   {"do":"refunds","days":90}
   {"do":"coupons"}  list coupons   {"do":"coupon_create","code":"WORD","percent":15,"until":"YYYY-MM-DD"}  only when he asks for one; real promos only, never fake urgency
-  {"do":"balance"} {"do":"payments"} {"do":"payouts"}  Stripe money (if connected)
+  {"do":"balance"} {"do":"payments"} {"do":"payouts"}  Stripe money (if connected)   {"do":"xmoney"}  his X Money activity (from its emails)
 Google also has: {"do":"drive_search","query":"..."} {"do":"doc_read","query":"file name"} {"do":"doc_create","title":"...","text":"..."} {"do":"sheet_append","query":"sheet name","row":["a","b"]}
 "lookup" is your second brain. Use it whenever the answer needs fresh or outside info instead of guessing:
   {"tool":"web","query":"..."}  current news, prices, facts, anything on the internet
@@ -746,7 +746,7 @@ FACTS AT THE START OF THIS CALL:\n${facts.join("\n")}`;
   const tools = [{ functionDeclarations: [
     { name: "get_status", description: "Fresh facts about his businesses: sales, posting, church outreach, agent health." },
     { name: "run_agent", description: "Start one of his agent jobs.", parameters: { type: "OBJECT", properties: { job: { type: "STRING", enum: Object.keys(FRIDAY_RUNS) } }, required: ["job"] } },
-    { name: "shop", description: "Run his Payhip shop and money. do = sales|orders|refunds (days, limit) | coupons | coupon_create (code, percent, until YYYY-MM-DD; only when he asks) | balance|payments|payouts (Stripe).", parameters: { type: "OBJECT", properties: { do: { type: "STRING", enum: ["sales", "orders", "refunds", "coupons", "coupon_create", "balance", "payments", "payouts"] }, days: { type: "NUMBER" }, limit: { type: "NUMBER" }, code: { type: "STRING" }, percent: { type: "NUMBER" }, until: { type: "STRING" } }, required: ["do"] } },
+    { name: "shop", description: "Run his Payhip shop and money. do = sales|orders|refunds (days, limit) | coupons | coupon_create (code, percent, until YYYY-MM-DD; only when he asks) | balance|payments|payouts (Stripe) | xmoney (X Money, from its emails).", parameters: { type: "OBJECT", properties: { do: { type: "STRING", enum: ["sales", "orders", "refunds", "coupons", "coupon_create", "balance", "payments", "payouts", "xmoney"] }, days: { type: "NUMBER" }, limit: { type: "NUMBER" }, code: { type: "STRING" }, percent: { type: "NUMBER" }, until: { type: "STRING" } }, required: ["do"] } },
     { name: "lookup", description: "Your second brain. tool = web (search the internet) | think (ask Claude a hard question) | notion (search his Notion) | note (save to his Notion) | discord (read one of his channels: content, sales, inbox, alerts, research, growth, trading-desk) | report (an agent's latest report).", parameters: { type: "OBJECT", properties: { tool: { type: "STRING", enum: ["web", "think", "notion", "note", "discord", "report"] }, query: { type: "STRING" }, context: { type: "STRING" }, title: { type: "STRING" }, text: { type: "STRING" }, channel: { type: "STRING" } }, required: ["tool"] } },
     { name: "google", description: "His Gmail, Google Calendar and Drive. do = calendar|email_search|event_add|email_draft|email_send|drive_search|doc_read|doc_create|sheet_append.", parameters: { type: "OBJECT", properties: { do: { type: "STRING", enum: ["calendar", "email_search", "event_add", "email_draft", "email_send", "drive_search", "doc_read", "doc_create", "sheet_append"] }, id: { type: "STRING" }, text: { type: "STRING" }, row: { type: "ARRAY", items: { type: "STRING" } }, days: { type: "NUMBER" }, query: { type: "STRING" }, title: { type: "STRING" }, start: { type: "STRING" }, minutes: { type: "NUMBER" }, location: { type: "STRING" }, to: { type: "STRING" }, subject: { type: "STRING" }, body: { type: "STRING" } }, required: ["do"] } },
     { name: "remember", description: "Save a short fact about him for later.", parameters: { type: "OBJECT", properties: { fact: { type: "STRING" } }, required: ["fact"] } },
@@ -996,6 +996,7 @@ async function fridayConnections(req, env) {
     { id: "notion", icon: "📓", name: "Notion", connected: on("NOTION_TOKEN"), detail: "Search and save notes. Share a page with the agents' Notion connection for her to see it" },
     { id: "discord", icon: "💬", name: "Discord", connected: on("DISCORD_BOT_TOKEN"), detail: "Reads your agents' channels (church replies, sales, alerts)" },
     { id: "phone", icon: "📱", name: "iPhone (Friday Hands Shortcut)", detail: "Texts, calls, reminders, alarms, music, directions, Health. Ask Claude to walk you through it" },
+    { id: "xmoney", icon: "𝕏", name: "X Money", connected: !!g, detail: g ? "Reads X Money's emails in your Gmail (X has no app connection yet)" : "Connect Google so she can read X Money's emails" },
     { id: "paypal", icon: "🅿️", name: "PayPal", soon: true, detail: "Balance and payouts, if Payhip pays you through PayPal" },
     { id: "etsy", icon: "🧶", name: "Etsy", soon: true, detail: "Orders, listings, messages, when the Etsy shop opens" },
     { id: "shopify", icon: "🛍️", name: "Shopify", soon: true, detail: "When/if you move to Shopify" },
@@ -1120,6 +1121,11 @@ async function fridayShop(env, a = {}) {
         if (r.ok) return `Created coupon ${code}: ${pct}% off every product until ${a.until}. Heads up: the website banner only shows coupons listed in the repo, so tell Claude or an agent if it should be advertised.`;
       }
       return "Payhip didn't accept that coupon.";
+    }
+    if (a.do === "xmoney") {
+      // X Money has no public API yet; read its emails (receipts, transfers, deposits) from his Gmail
+      const mail = await runGoogle(env, { do: "email_search", query: '("X Money" OR from:xmoney) (sent OR received OR payment OR deposit OR transfer OR balance) newer_than:90d' });
+      return /^No emails|^Couldn't/.test(mail) ? "X Money has no public connection yet, and I didn't find X Money emails in the connected Gmail. He can check the X app." : `From X Money's emails (no direct connection exists yet):\n${mail}`;
     }
     if (["balance", "payments", "payouts"].includes(a.do)) {
       const sk = await env.SALES.get("friday:key:stripe");
