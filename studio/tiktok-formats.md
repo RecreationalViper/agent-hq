@@ -2,60 +2,44 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-### Active Edit Formats Working Right Now
+### Active Short-Form Edit Formats
 
-Here are the top performing edit formats on TikTok and YouTube Shorts based on real-time data, complete with exact studio use-cases using currently trending titles.
+Here are 6 edit formats driving high retention, comments, and rewatches on TikTok and YouTube Shorts right now for movies, games, and anime:
 
----
+#### 1. Brazilian Funk / Montagem Lag-Spin Velocity
+* **What makes it work:** Fast frame-stuttering, fake internet lag glitches, and smooth 360-degree rotation transitions synced precisely to heavy Funk/Montagem bass drops. Captures attention in under 2 seconds and drives loop rewatches to catch the sync.
+* **Studio Example:** **Steel Ball Run: JoJo's Bizarre Adventure** (MAL score 9.03). Hook on Gyro Zeppeli’s grin, drop into a high-speed horse race montage on the Montagem beat drop, using CapCut lag-spin cuts on spin slashes.
+* **Proof / Source:** *Stylee EditZ* YouTube edit `"Bro Hidden Crazy Skills" ☠️🔥 | Movie - Radhe Shyam Edit | FUNK` (4.7M views) and [CapCut Funk Mandala Tutorial](https://howtos.video/how-to/make-a-funk-mandala-anime-edit-in-capcut) [1].
 
-#### 1. "Escape the Cage" / Blackout Vanishing Edit
-* **What makes it work:** Opens with a trapped or low-power character situation, cuts to black, and suddenly drops into a high-octane flex sequence. The sudden lighting shift and sharp audio transition trigger high retention.
-* **Studio Example (*GTA VI* or *JoJo: Steel Ball Run*):**
-  * *Setup:* Frame opening with Johnny Joestar struggling or Lucia in handcuffs.
-  * *Cut:* Glass box / blackout transition.
-  * *Payoff:* Unbroken 20-second sequence of high-speed pursuit or Stand activation.
-* **Source:** [Lupin Escape Scene Meme](https://meme.com/memes/lupin-escape-scene-escape-the-cage) [3]
+#### 2. "Escape the Cage" Instant Blackout Cut
+* **What makes it work:** Uses a viral scene template (blackout vanish cut) paired with a relatable text hook ("POV: You escape the cage when..."). Turns standard suspense/action scenes into highly shareable meme edits.
+* **Studio Example:** **Grand Theft Auto VI** (Twitch #1 game with 94k+ peak viewers). Open with Lucia in a police custody glass room, black out the frame at 2 seconds, and instantly cut to high-speed Vice City chaos gameplay.
+* **Proof / Source:** Viral TikTok format breakdown [Lupin Escape Scene: TikTok's Escape the Cage Meme](https://meme.com/memes/lupin-escape-scene-escape-the-cage) [2].
 
-#### 2. Ultra-Slowed Montagem / "Aura" Beat Drop
-* **What makes it work:** Heavy slowed Brazilian funk or aggressive phonk beat drop paired with high-definition slow-motion shots highlighting character dominance ("aura"). Dominating YouTube Shorts edit charts right now.
-* **Studio Example (*One Piece* / Zoro or *Black Clover S2*):**
-  * *Setup:* Opponent talking down to Zoro or Asta.
-  * *Beat Drop:* Heavy bass drop right as Zoro draws his blade or Asta transforms. Keep the clip unbroken for 15 seconds to let the scene breathe.
-* **Source:** Recent YouTube Shorts trend data (*"They Thought Zoro Was A Newbie 💀"*, *"Radhe Shyam Edit | FUNK - MONTAGEM"*).
+#### 3. "From X's Perspective" Narrative Re-frame
+* **What makes it work:** On-screen text forces viewers to re-examine a familiar scene through an unexpected side character's eyes. It creates an intriguing narrative arc that holds watch time through the final reveal.
+* **Studio Example:** **The Hunger Games: Sunrise on the Reaping** (Wikipedia top trending movie). Cut Haymitch Abernathy’s 50th Hunger Games arena fight entirely framed from the perspective of the Capitol Gamemakers watching their monitors.
+* **Proof / Source:** *Crotst Oqu* YouTube Short `Tell the story of “I Have a Secret” from Jack’s perspective..#movie #edit` (4.6M views).
 
-#### 3. Emotional Storyline Cut ("This Story Broke My Heart")
-* **What makes it work:** Simple top-screen narrative hook text overlay set against melancholic/ambient tracks (e.g., Radiohead's *Let Down* or bôa's *Duvet*, both trending on Last.fm). Viewers stay to experience the emotional arc.
-* **Studio Example (*Vinland Saga* / Thorfinn or *The Apothecary Diaries S3*):**
-  * *Setup:* Text overlay: *"The moment he realized revenge wasn't the answer..."*
-  * *Audio:* Slowed ambient track.
-  * *Payoff:* Continuous 25-second emotional dialogue scene ending on a quiet final facial shot.
-* **Source:** [Blossom Editing Trends - November 2026](https://blossai.com/blog/rising-tactics-november-2026) [2] & YouTube Shorts live data (*Thorfinn edits*).
+#### 4. "They Thought He Was a Newbie" Underestimation Arc
+* **What makes it work:** Classic tension-and-payoff storytelling. Starts with disrespect/underestimation from enemies (0-2s hook), holds an unbroken 15-second suspense stretch in story order, and ends with an explosive power flex.
+* **Studio Example:** **One Piece** (AniList top 5 trending). Scene where opponents mock Zoro, holding the dialogue stretch, then dropping into his 1-second clean sword slash finish at the end beat.
+* **Proof / Source:** *zsy* YouTube Short `They Thought Zoro Was A Newbie 💀` (2.7M views) and *LearnVerse BD* `The hardest test in KingsMan ☠️🔥` (4.2M views).
 
-#### 4. Lag-Spin Glitch Transition ("GUT GENUG" Style)
-* **What makes it work:** Simulates a fake network lag/freeze frame that suddenly spins out into a frame-perfect beat-synced transformation clip. High visual novelty.
-* **Studio Example (*Cyberpunk: Edgerunners 2*):**
-  * *Setup:* Action scene pauses mid-air with a loading icon graphic.
-  * *Transition:* Spin transition synced to the beat.
-  * *Payoff:* High-speed cyberware combat clip.
-* **Source:** [TikTok Edit Trends](https://www.tiktok.com/discover/edit-trends)
+#### 5. Melancholic Character Tragic Arc ("This Story Broke My Heart")
+* **What makes it work:** Emotional character trauma edits paired with rising alternative audio (e.g., bôa - *Duvet*, Radiohead - *Let Down*). High comment section engagement from fans debating character decisions and lore.
+* **Studio Example:** **The Apothecary Diaries Season 3** (AniList #1 trending anime). Cut Maomao’s quiet isolated moments against bôa’s *Duvet* (Last.fm trend, 2.1M+ listeners), building to a dramatic court revelation.
+* **Proof / Source:** *SOHAIL* YouTube Short `THIS STORY BROKE MY HEART💔| PART 5, THORFINN EDIT` (4.4M views).
 
-#### 5. Dual-Frame Mirror / Side-by-Side Comparison
-* **What makes it work:** Plays two mirrored clips or character perspectives side-by-side, forcing the viewer to watch twice to observe both sides.
-* **Studio Example (*Grand Theft Auto VI*):**
-  * *Setup:* Side-by-side split screen showing Jason's perspective vs. Lucia's perspective during the same heist beat.
-  * *Audio:* Upbeat remix cut.
-* **Source:** [Talk To Me Doja Anime Dance Trend](https://meme.com/memes/talk-to-me-doja) [1]
-
-#### 6. "POV: The Moment You Realize..." Setup
-* **What makes it work:** Establishes a relatable or extreme gameplay/movie situation in text. Uses an unbroken 25-second clip and abruptly cuts off audio at the punchline beat to force seamless looping.
-* **Studio Example (*Grand Theft Auto VI* Gameplay):**
-  * *Text:* *"POV: You tried entering Vice City airport with a 5-star wanted level..."*
-  * *Payoff:* Stunt ramp jump ending right before impact.
-* **Source:** Twitch live trends (*GTA VI launch gameplay broadcasts*).
+#### 6. "POV: You're In an Edit" Aesthetic Vibe Cut
+* **What makes it work:** Prioritizes mood, cinematic lighting, and alternative soundscapes over pure action. Creates an immersive, cozy, or dark atmospheric vibe that viewers leave on loop.
+* **Studio Example:** **Cyberpunk: Edgerunners 2** (MAL 224k members). Neon night-drive shots of Night City cut cleanly to Panchiko’s *D>E>A>T>H>M>E>T>A>L* (Last.fm top US search).
+* **Proof / Source:** Apple Music / TikTok playlist trend `you're in an edit (tiktok edits 2026)` by Indiemono.
 
 ---
 
-### ⚠️ Fading Formats to Avoid
+### Formats That Are Fading
 
-1. **Over-edited 3D Zoom / Hyper-CapCut Distortion:** Excessive 3D camera pan effects and dizzying screen tilts are dropping in retention. Viewers prefer clean 9:16 framing with natural scene lighting and strong story flow.
-2. **Generic Phonk "Sigma" Loops without Context:** Standard 5-second split-screen character clips over repetitive phonk loops are oversaturated. Audiences are engaging far more with narrative context and unbroken scene stretches.
+* **Generic 2022–2023 Drift Phonk Velocity:** Straight velocity speed ramps set to standard phonk without a POV narrative hook or Brazilian Montagem rhythm flip are suffering from viewer fatigue and quick swipes.
+* **Unedited Screen Clips with Default Captions:** Simple raw screen recordings with basic CapCut autogenerated subtitles are receiving lower algorithmic reach compared to edited vertical montages.
+* **Static Frame Ranking Lists:** Slide-by-slide ranking shorts using still images or brief un-synced clips without active audio drops or controversial hooks are losing completion rates.

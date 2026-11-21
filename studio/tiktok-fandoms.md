@@ -2,88 +2,88 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-Here is this week’s breakdown of the most active movie, game, and anime fandoms on TikTok, ranked by current buzz and viral potential.
+Here is this week’s **TikTok & Shorts Fandom Watch Report** (Nov 20, 2026), ranked by active community buzz, engagement opportunities, and clipping potential.
 
 ---
 
-### 1. Grand Theft Auto VI (Game)
-* **Why fans care now:** GTA 6 is dominating Twitch with hundreds of thousands of live viewers across top creators (KaiCenat, Rubius, IlloJuan) following its release news [[Parade Magazine](https://news.google.com/rss/articles/CBMifEFVX3lxTE9UekpUUHR4OC1QSXJsdlhsS0VvdVNwckh1blN0THdXYzYwQjJOS1puOGp0WFVtSE5LRmpObGo5WW1CWGZUT29ILVlqZ3VDYlRnZnBaRFBVRlQwQmQyd09WenNGM0JtMEZ6eVpCWDgtM2lrUFFKWVoyc3ZXVzY?oc=5)].
-* **Hashtags:** `#GTA6` `#GTAVI` `#ViceCity` `#GrandTheftAuto`
-* **Moment to clip:** Lucia & Jason high-speed getaway clip. 
-  * *Hook (0-2s):* Sudden crash/gunfire transition.
-  * *Story stretch (2-22s):* Unbroken chase sequence driving into the Vice City neon sunset.
-  * *Final beat:* Sharp cut on a witty dialogue line or police siren cut to black.
-* **Source:** [GTA VI Category on Twitch](https://www.twitch.tv/directory/category/grand-theft-auto-vi)
-* **Saturation:** **Extremely Oversaturated** — Needs an unusual audio sync or tight narrative cutting to stand out.
+### 1. Grand Theft Auto VI (Gaming)
+* **Why fans care now:** Pre-load is sweeping 98 countries [6] and dominates Twitch live streaming with over 90k+ viewers on top streams like IlloJuan and CaseOh. It is currently #1 on Wikipedia (750k+ daily views).
+* **Hashtags:** `#gta6` `#gta6gameplay` `#grandtheftauto6` `#gamingedit`
+* **Moment to Clip:** 
+  * *Hook (0-2s):* Sudden, high-speed car crash or police standoff punchline.
+  * *Story Stretch:* Unbroken 8-second cinematic clip of Lucia or Vice City highway driving.
+  * *Final Beat:* Unexpected stunt fail or hilarious ragdoll glitch cut to force loop rewatches.
+* **Source:** [TrendTube GTA VI Pre-Load Report](https://trendtube.world/blog/state-of-youtube-2026-w46) [6] / Twitch Live Data
+* **Saturation:** **EXTREMELY OVERSATURATED**. *Strategy:* Avoid basic trailers; focus on unique gameplay moments or character edits.
 
 ---
 
-### 2. BLEACH: Thousand-Year Blood War (Anime)
-* **Why fans care now:** Official TikTok campaign running across 16 countries offering exclusive profile frames for creators posting edits over 60 seconds [[AniHeat](https://aniheat.com/en/news/news-204274)].
-* **Hashtags:** `#BLEACH_TYBW` `#BleachAnime` `#IchigoKurosaki` `#TYBW`
-* **Moment to clip:** Ichigo’s Bankai reveal or Uryu’s battle entrance.
-  * *Hook (0-2s):* High-pitch blade unsheathing sound.
-  * *Story stretch (2-25s):* Continuous sakuga fight animation sequence.
-  * *Final beat:* Heavy silence frame right after the Bankai name release.
-* **Source:** [BLEACH TikTok Event Campaign](https://aniheat.com/en/news/news-204274)
-* **Saturation:** **Moderate-High** — High volume, but the official campaign hashtag is currently getting algorithmic preference.
+### 2. The Hunger Games: Sunrise on the Reaping (Movies)
+* **Why fans care now:** The film opened with over $110M+ in the US box office, with cast buzz (Ralph Fiennes, Jesse Plemons) and massive search spikes across the US, Mexico, and Brazil.
+* **Hashtags:** `#sunriseonthereaping` `#hungergames` `#hungergamesedit` `#haymitch`
+* **Moment to Clip:**
+  * *Hook (0-2s):* Heavy Capitol arena countdown sound combined with a sharp close-up turn.
+  * *Story Stretch:* 6–8 seconds of tense tribute dialogue or arena prep.
+  * *Final Beat:* Sudden cannon shot audio cue cut right before an action drop.
+* **Source:** studio/live-data.md (Google Trends & Wikipedia #11)
+* **Saturation:** **HIGH**. Trending fast across movie edit communities.
 
 ---
 
-### 3. JoJo’s Bizarre Adventure: Steel Ball Run (Anime)
-* **Why fans care now:** Currently the #1 highest-rated airing anime on MyAnimeList (9.03 rating) with Episode 10 airing next week.
-* **Hashtags:** `#SteelBallRun` `#JoJoPart7` `#SBR` `#GyroZeppeli`
-* **Moment to clip:** Gyro Zeppeli’s Spin technique setup or Johnny's Tusk awakening.
-  * *Hook (0-2s):* Close-up audio beat of the steel ball rotation.
-  * *Story stretch (2-20s):* High-speed horse race sequence into attack delivery.
-  * *Final beat:* Freeze frame beat pause before impact.
-* **Source:** [Steel Ball Run on MyAnimeList](https://myanimelist.net/anime/61469)
-* **Saturation:** **Moderate** — Community engagement and rewatch loops are extremely strong.
+### 3. BLEACH: Thousand-Year Blood War - The Calamity (Anime)
+* **Why fans care now:** Official **Bleach TikTok Campaign** active across 16 countries [3], rewarding creators who post 60s+ videos with exclusive avatar frames (Ichigo, Uryu, Rukia).
+* **Hashtags:** `#bleach` `#bleachtybw` `#ichigokurosaki` `#animeedit`
+* **Moment to Clip:**
+  * *Hook (0-2s):* Flash-step / sword unsheathing audio with high-contrast frame jump.
+  * *Story Stretch:* Clean 7-second unbroken sword fight montage in chronological sequence.
+  * *Final Beat:* Cold character stare with glowing eyes cut on beat.
+* **Source:** [AniHeat TikTok Campaign Announcement](https://aniheat.com/en/news/news-204274) [3]
+* **Saturation:** **MEDIUM-HIGH** (high creator participation due to frame rewards).
 
 ---
 
-### 4. James Bond / 007 (Movie)
-* **Why fans care now:** Massive global discourse and fan reaction across TikTok and social media following Robert Pattinson 007 casting reports [[Forbes](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQMTVXalBEVFhfdUlsNE9rRVJ5RnZFMEZpY29zdE5mRlFjT3pianUyQktZZUZQX1pSUmhFNl9zLURSX0J0NWYtSHpKYVpIV0ltaC1URG5WNUxZZzlHSlFYR2FSQ2pyY091bFZTZUtyLVhGQ2M1WF80MEYtM2kwNFlOM1g4aVlLOTdFTUg5WVF4bkZvWWw2X0dHOFhNcWZuMkN3T1pPekM3TVF3bG94SlRONjA5V2lWV0t6?oc=5)].
-* **Hashtags:** `#JamesBond` `#RobertPattinson` `#007` `#MovieNews`
-* **Moment to clip:** A "Pattinson as Bond" concept edit matching his suited walks in *Tenet* or *The Batman* with classic Bond gun-barrel transitions.
-  * *Hook (0-2s):* Bold onscreen text: "Pattinson as 007?" over gun-trigger sound.
-  * *Story stretch (2-22s):* Rhythmic walking/action montage synced to heavy bass sound.
-  * *Final beat:* Turn to camera & direct glance frame cut.
-* **Source:** [Forbes - Pattinson Bond Backlash](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQMTVXalBEVFhfdUlsNE9rRVJ5RnZFMEZpY29zdE5mRlFjT3pianUyQktZZUZQX1pSUmhFNl9zLURSX0J0NWYtSHpKYVpIV0ltaC1URG5WNUxZZzlHSlFYR2FSQ2pyY091bFZTZUtyLVhGQ2M1WF80MEYtM2kwNFlOM1g4aVlLOTdFTUg5WVF4bkZvWWw2X0dHOFhNcWZuMkN3T1pPekM3TVF3bG94SlRONjA5V2lWV0t6?oc=5)
-* **Saturation:** **Low-Moderate** — Fresh trending topic; great window for reaction/commentary edits.
+### 4. JoJo’s Bizarre Adventure: Steel Ball Run (Anime)
+* **Why fans care now:** Currently #1 top-airing anime on MyAnimeList (9.03 score) and #2 trending on AniList ahead of Episode 10.
+* **Hashtags:** `#sbr` `#steelballrun` `#jojosbizarreadventure` `#jojoedit`
+* **Moment to Clip:**
+  * *Hook (0-2s):* Horse race start sprint or aura explosion.
+  * *Story Stretch:* Spin technique visual effects sequence running unbroken for 6 seconds.
+  * *Final Beat:* Dramatic manga-style freeze frame cut on a loud bass hit.
+* **Source:** [AniList SBR Page](https://anilist.co/anime/210482) / [MyAnimeList](https://myanimelist.net/anime/61469)
+* **Saturation:** **MEDIUM**. Highly engaged aesthetic edit audience; strong like-to-view ratios.
 
 ---
 
-### 5. The Apothecary Diaries Season 3 (Anime)
-* **Why fans care now:** Top trending score (699 score on AniList, 8.60 MAL) as Episode 9 approaches.
-* **Hashtags:** `#ApothecaryDiaries` `#Maomao` `#Jinshi` `#KusuriyaNoHitorigoto`
-* **Moment to clip:** Maomao’s cold deduction moments or poison-tasting sequence.
-  * *Hook (0-2s):* Shock reaction of court officials.
-  * *Story stretch (2-20s):* Maomao’s calm, unbroken internal monologue & reveal.
-  * *Final beat:* Jinshi’s stunned facial expression frame.
-* **Source:** [The Apothecary Diaries S3 on AniList](https://anilist.co/anime/195516)
-* **Saturation:** **Moderate** — Strong performance for character-focused and emotional edits.
+### 5. James Bond 007 / Robert Pattinson Casting Rumors (Movies)
+* **Why fans care now:** Viral fan debate and online backlash following news and reports of Robert Pattinson being linked to the 007 role (spiking on UK Google Trends and covered by Forbes / Mashable).
+* **Hashtags:** `#jamesbond` `#robertpattinson` `#007` `#movieedit`
+* **Moment to Clip:**
+  * *Hook (0-2s):* Pattinson’s tuxedo walk from *Tenet* or suit reveal from *The Batman* matched to the iconic 007 gun-barrel sound.
+  * *Story Stretch:* 6-second slick action montage of Pattinson's past suave/gritty roles.
+  * *Final Beat:* Martini glass clink or classic Bond theme drop fading to black.
+* **Source:** [Mashable James Bond Article](https://news.google.com/rss/articles/CBMidkFVX3lxTE1FalhxTlhHaHpYTTRTTm1RMWsxOVYySVM0OGE3UHh5b3VpSjJKQkdZblZFU01KWWZDcW9nZ1dscmFXWDB4V3NMc2UyRkFfaUZ5aTc3OGRJQnh6dzAzTzFWVkMtUzFnNmt5ODRXNDdKUUpYaUNBbHc?oc=5)
+* **Saturation:** **LOW-MEDIUM**. High comment-section debate potential.
 
 ---
 
-### 6. Vinland Saga (Anime)
-* **Why fans care now:** Thorfinn character edits are pulling multi-million view spikes on vertical platforms this week (multiple YouTube edits pulling 4M+ views) [[YouTube Edits Data]].
-* **Hashtags:** `#Thorfinn` `#VinlandSaga` `#AnimeEdit` `#IHaveNoEnemies`
-* **Moment to clip:** Thorfinn’s transition from enraged young warrior to peaceful farmer ("I have no enemies").
-  * *Hook (0-2s):* Sword clash slash sound effect.
-  * *Story stretch (2-25s):* Match-cut transition comparing young raging Thorfinn to older calm Thorfinn.
-  * *Final beat:* Slow breath out looking into the horizon.
-* **Source:** [Thorfinn Edit Reference](https://youtu.be/Ad-g_r8_OiY)
-* **Saturation:** **High** — High supply; best paired with trending atmospheric tracks like *Duvet* by bôa or *505* by Arctic Monkeys.
+### 6. The Apothecary Diaries Season 3 (Anime)
+* **Why fans care now:** #1 trending anime on AniList (score 454) and holding an 8.60 score on MAL with Episode 9 approaching.
+* **Hashtags:** `#theapothecarydiaries` `#maomao` `#jinshi` `#kusuriyanohitorigoto`
+* **Moment to Clip:**
+  * *Hook (0-2s):* Maomao’s iconic unbothered/disgusted facial reaction.
+  * *Story Stretch:* Tense or romantic courtyard interaction with Jinshi.
+  * *Final Beat:* Sudden chibi-style animation pop cut on a comedic sound effect.
+* **Source:** [AniList Apothecary Diaries](https://anilist.co/anime/195516) / [MyAnimeList](https://myanimelist.net/anime/61987)
+* **Saturation:** **MEDIUM**. Strong appeal with romance and anime drama clippers.
 
 ---
 
-### 7. Naruto (Anime Classic)
-* **Why fans care now:** "Naruto character recreations & edits" trend drew 6.3M views across TikTok in Europe over the last two weeks [[Convosight Moments](https://www.convosight.com/tools/moments/europe/2026-11-15/naruto-character-recreations)].
-* **Hashtags:** `#Naruto` `#NarutoEdit` `#Sasuke` `#AnimeCosplay`
-* **Moment to clip:** Naruto vs. Sasuke final valley hand-seal fight sequence.
-  * *Hook (0-2s):* Chidori/Rasengan audio charge.
-  * *Story stretch (2-22s):* High-speed hand-to-hand fight stretch in original story order.
-  * *Final beat:* Fist clash impact frame cut.
-* **Source:** [Naruto Trend Report](https://www.convosight.com/tools/moments/europe/2026-11-15/naruto-character-recreations)
-* **Saturation:** **High** — Classic evergreen topic; edit pacing must feel fresh to trigger high rewatches.
+### 7. Madden (Nicolas Cage NFL Biopic) (Movies)
+* **Why fans care now:** Spiking on Google Trends (US & Canada) following critical discussions and Raiders owner Mark Davis reacting to Al Davis’s film portrayal, with Nicolas Cage starring as John Madden.
+* **Hashtags:** `#maddenmovie` `#nicolascage` `#johnmadden` `#filmtok`
+* **Moment to Clip:**
+  * *Hook (0-2s):* High-energy Nicolas Cage shouting on the football sideline.
+  * *Story Stretch:* Tense locker room speech clip (5–7 seconds).
+  * *Final Beat:* Sudden cut to a classic Madden quote screen or loud clip freeze.
+* **Source:** studio/live-data.md (Google Trends Canada & Wikipedia #17 / #42)
+* **Saturation:** **LOW**. Low competition for MotionVault to capitalize early.

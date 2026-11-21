@@ -2,59 +2,53 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# Growth & Monetization Coaching Report — 2026-11-20
-
----
-
-### 1. Monetization Standings vs Goals
-
-*Note: Program requirements update frequently; always verify current rules inside the YouTube Studio and TikTok apps.*
+### 1. Progress vs. Monetization Goals
 
 #### YouTube Partner Program (Shorts Route)
-* **Requirements:** 
-  * *Fan Funding Tier:* 500 subscribers + 3M public Shorts views in 90 days.
-  * *Full Revenue Share:* 1,000 subscribers + 10M public Shorts views in 90 days.
-* **Our Current Standing:** 0 Subscribers | 24 Total Views across 10 Shorts (0% of target).
+* **Requirements:** 1,000 subscribers + 10 million valid public Shorts views within 90 days (or 500 subs + 3 million views for early Fan Funding access). *(Note: Re-confirm exact thresholds in your YouTube Studio app).*
+* **Where We Stand:** **0 Subscribers | 25 Total Views** (10 videos posted). We are at the very beginning of channel seeding. A single viral clip can hit the algorithm seed test and bridge this gap fast.
 
 #### TikTok Creator Rewards Program
-* **Requirements:** 10,000 followers + 100,000 views in the last 30 days + **videos must be 60+ seconds long**.
-* **Our Current Standing:** Early startup stage. Most videos are 25–56 seconds, meaning even with views, short clips do not qualify for TikTok RPM payouts.
+* **Requirements:** 10,000 followers + 100,000 video views in the last 30 days + **videos MUST be at least 1 minute long (60s+)**. *(Note: Confirm regional eligibility in the TikTok Creator Tools app).*
+* **Where We Stand:** Handle set up (`@motionvault36`). We need to log performance metrics as uploads begin.
 
 ---
 
-### 2. 3 Highest-Impact Actions for Today
+### 2. Top 3 Highest-Impact Actions for Today
 
-#### Action 1: Capitalize on GTA VI Search Spike (Clip 1)
-* **What to Post:** *Grand Theft Auto VI* Beach Bar & Vice City Getaway montage.
-* **Hook (0:00–0:02):** Extreme close-up of Jason grabbing a drink at the beach bar with fluid physics filling the frame.
-* **Sound / Sync:** **"Suzuki" by Fuerza Regida** (sync engine rev to opening drink glass, drop heavy bass at 0:12 getaway).
-* **When to Post:** Afternoon peak (3:00 PM – 5:00 PM local time).
-* **What to Test:** Test dynamic onscreen title text (*"Vice City Physics 🚗"*) to capture instant search traffic.
+#### Action 1: Capitalize on GTA VI Launch Traffic (Clip 1)
+* **What to Post:** Grand Theft Auto VI – "Unstoppable NPC / Hulk Lucia Encounter" (32s).
+* **When to Post:** Peak afternoon/evening window (**5:00 PM – 7:00 PM EST**).
+* **Hook (0:00–0:02):** On-screen text: *"NPCs in GTA 6 are built completely different 💀"* opening on Lucia sprinting to carjack the vehicle.
+* **What to Test:** Fast-paced sound sync using Trending Sound #5 (*"Montagem Royal - Ultra Slowed"*) or Sound #2 (*"Suzuki"*). Drop the heaviest bass beat directly on the pavement impact frame (0:18) to test jump-cut engagement.
 
-#### Action 2: Target Sakuga Anime Fans with Steel Ball Run (Clip 2)
-* **What to Post:** *Steel Ball Run: JoJo's Bizarre Adventure* Gyro's Spin Technique cut.
-* **Hook (0:00–0:02):** Extreme close-up of Gyro’s Steel Ball vibrating with kinetic green aura.
-* **Sound / Sync:** **"FUNK - MONTAGEM ROYAL (ULTRA SLOWED)"** (build through horse sprint, drop bass on 0:24 impact frame).
-* **When to Post:** Evening peak (7:00 PM – 9:00 PM local time).
-* **What to Test:** Compare retention when using continuous 10+ second unbroken scene stretches vs fast cuts.
+#### Action 2: Post Hunger Games Box Office Hype (Clip 2)
+* **What to Post:** *The Hunger Games: Sunrise on the Reaping* – Haymitch 50th Reaping Sequence (35s).
+* **When to Post:** Mid-day (**12:00 PM – 1:30 PM EST**).
+* **Hook (0:00–0:02):** On-screen text: *"He had no idea what was waiting for him in the arena..."* over a dramatic zoom on 16-year-old Haymitch in District 12.
+* **What to Test:** Comment section trigger on the final beat (0:32–0:35 fade to Woody Harrelson’s thousand-yard stare) with text: *"Who else remembers how the 50th Quell ended? 😭"*.
 
-#### Action 3: Test a 61-Second Format for TikTok Rewards Eligibility
-* **What to Post:** Extend a high-performing anime or game montage (like JoJo or GTA VI) to **61 seconds**.
-* **Hook (0:00–0:02):** Direct character question or visual shock moment in frame 1.
-* **When to Post:** Late evening (8:30 PM – 10:00 PM local time).
-* **What to Test:** Compare audience retention past the 30-second mark on 60+ second uploads vs shorter 30-second clips.
-
----
-
-### 3. One Risk to Fix Today
-
-* **Risk:** **Reused Content Flag & TikTok $0 Payout Eligibility**
-  * *The Issue:* 6 out of 10 recent uploads on YouTube have 0 views, and clips under 60 seconds are ineligible for TikTok Creator Rewards revenue. Raw unedited clips risk getting flagged as generic reused content by automated systems.
-  * *The Fix:* Always include transformative value: add clean onscreen text titles/credits (e.g., *"Title: Steel Ball Run"*), custom sound sync, and distinct visual hooks. Ensure future TikTok uploads intended for monetization hit at least **61 seconds**.
+#### Action 3: Test a 60s+ TikTok Format with JoJo Steel Ball Run (Clip 3)
+* **What to Post:** *Steel Ball Run* – Gyro's Spin & Desert Race.
+* **Dual Cut Strategy:**
+  * **YouTube Shorts:** 34-second high-intensity cut.
+  * **TikTok:** Extend to **61 seconds** (add a 25s prologue stretch of Dio's dinosaur transformation from previous uploads) to make the video eligible for the TikTok Creator Rewards Program.
+* **Hook (0:00–0:02):** Text overlay: *"Anime of the year and it's not even close 🔥"*.
+* **What to Test:** Testing if a 60s+ extended edit on TikTok maintains completion rate while qualifying for revenue.
 
 ---
 
-### 4. One Metric to Watch This Week
+### 3. Risk to Fix: The "Under 60s" TikTok Monetization Trap & Reused Content
 
-* **Metric:** **Viewed vs. Swiped Away Percentage** (Target: **>60% Viewed**)
-  * Check this metric in YouTube Studio and TikTok Analytics 24 hours after uploading. If more than 40% of viewers swipe away in the first 2 seconds, refine the opening visual hook frame and audio cue.
+* **The Problem:** Current MotionVault cuts average 25–47 seconds. While ideal for YouTube Shorts loops, **TikTok's Creator Rewards Program pays $0 for videos under 60 seconds**. Furthermore, un-edited raw clips risk YouTube's "Reused Content" monetization rejections.
+* **The Fix:**
+  1. **Split-Cut Workflow:** Claude/Editor should produce two versions for key edits: a 30–45s rapid loop cut for Shorts, and a 61–65s story-driven cut for TikTok.
+  2. **Transformative Value:** Ensure every edit includes distinct color grading, custom text overlays, synced audio transitions, and transformative cuts so platforms categorize them as original commentary/edits.
+
+---
+
+### 4. Metric to Watch This Week
+
+* **3-Second View Retention (Shown in Feed vs. Swiped Away):**
+  * With 25 views across 10 uploads, early videos are being swiped away before the algorithm can seed them to broader feeds. 
+  * **Target Goal:** Aim for **>70% of viewers staying past the 3-second mark** on new GTA VI and Hunger Games posts. If drop-off occurs under 2 seconds, we must tweak text hooks to be bolder and visually clearer.

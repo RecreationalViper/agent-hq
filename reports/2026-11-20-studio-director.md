@@ -2,62 +2,57 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# MotionVault Daily Cut List — 2026-11-20
-
-Here are today’s **3 clip choices** planned for Claude to edit, built directly from our trend scout data, TikTok sound charts, and YouTube Shorts view velocity reports.
+Here are the 3 clips for MotionVault to make today, built from today's real trend data, sound charts, and watcher reports.
 
 ---
 
-### Clip 1: Grand Theft Auto VI — Beach Bar & Vice City Getaway
-* **Target Platform:** Both (TikTok & YouTube Shorts)
-* **Source Title & Location:** *Grand Theft Auto VI* (Vice City Beach Bar into Highway Chase; early story missions / walkthrough gameplay).
-* **Hook (0:00–0:02):** Extreme close-up of Jason grabbing a glass at the beach bar as smooth liquid pouring physics fill the frame.
+### Priority Order: Make Clip 1 First
+**Make Clip 1 (GTA VI NPC Encounter) FIRST.** *GTA VI* launched yesterday and is driving unprecedented traffic ($3.8B single-day sales, 750k+ daily Wikipedia views, Twitch #1 with 90k+ concurrent viewers). NPC interaction clips are pulling 8M–12M views on TikTok right now. Publishing in the first 48-hour window gives MotionVault the maximum algorithmic push across both platforms.
+
+---
+
+### Clip 1: Grand Theft Auto VI – "Unstoppable NPC / Hulk Lucia Encounter"
+* **Target Platforms:** Both (TikTok & YouTube Shorts)
+* **Source & Location:** *Grand Theft Auto VI* (2026) – Open-world Vice City gameplay / Carjacking sequence (Viral launch gameplay clip).
+* **Target Length:** 32 seconds
+* **Mood:** Chaotic / Unintentional Comedy / Shock Value
+* **Hook (0:00–0:02):** Text overlay: *"NPCs in GTA 6 are built completely different 💀"*. Opens on Lucia sprinting up to a luxury car and yanking the door open.
 * **Unbroken Stretches (Story Order):**
-  1. *Beach Bar (0:02–0:12):* Continuous 10-second shot of Jason drinking at sunset while Lucia starts the sports car outside.
-  2. *The Pursuit (0:12–0:24):* Unbroken 12-second high-speed getaway down the neon Vice City strip with police lights flashing in the backdrop.
-  3. *The Ramp Jump (0:24–0:32):* Continuous 8-second shot as the car hits a construction ramp and launches over the canal.
-* **Biggest Moment:** The vehicle launching mid-air with Vice City neon lights reflecting off the chassis.
-* **Final Beat:** Mid-air freeze-frame cut right before landing, looping seamlessly back to the beach bar glass hook.
-* **Target Length:** 32 seconds.
-* **Mood:** High-octane, glamorous, fast-paced flex.
-* **Audio Note:** **"Suzuki" by Fuerza Regida**. Sync the engine rev to the opening drink glass hook at 0:01, then drop the heavy synth bass drop on the getaway cut at 0:12.
+  1. *0:02–0:12:* Unbroken capture of Lucia pulling open the driver's side door and attempting to yank the male NPC out.
+  2. *0:12–0:22:* Unbroken capture of the NPC overpowering Lucia, counter-grappling her, and slamming her onto the asphalt while shouting *"My car now!"*
+  3. *0:22–0:28:* Unbroken shot of the NPC getting back in the driver seat and speeding away over the sidewalk.
+* **Biggest Moment (0:18–0:22):** The exact frame where the NPC flips Lucia and slams her onto the pavement.
+* **Final Beat (0:28–0:32):** Slow-mo zoom on Lucia lying flat on the asphalt with the grey "WASTED" screen transition. On-screen prompt text: *"Who else got folded by this guy? 😭"* (drives comment section debates and rewatch loops).
+* **Audio Note:** Use Trending Sound #2 (*"Suzuki"* – GTA VI Soundtrack) or Trending Sound #5 (*"Montagem Royal - Ultra Slowed"*), syncing the heavy bass drop directly to the pavement impact frame.
 
 ---
 
-### Clip 2: Steel Ball Run: JoJo's Bizarre Adventure — Gyro's Spin Technique
-* **Target Platform:** Both (TikTok & YouTube Shorts)
-* **Source Title & Location:** *Steel Ball Run: JoJo's Bizarre Adventure* (Stage 1 Race / Gyro vs rival rider duel; Season 1 early episodes).
-* **Hook (0:00–0:02):** Close-up shot of Gyro Zeppeli’s Steel Ball vibrating rapidly with a kinetic green aura.
+### Clip 2: The Hunger Games: Sunrise on the Reaping – Haymitch 50th Reaping Sequence
+* **Target Platforms:** Both (TikTok & YouTube Shorts)
+* **Source & Location:** *The Hunger Games: Sunrise on the Reaping* (2026) – Official Trailer / District 12 Reaping sequence (~0:45–1:20 in official trailer footage).
+* **Target Length:** 35 seconds
+* **Mood:** Suspenseful / Melancholic / Chilling Realization
+* **Hook (0:00–0:02):** Text overlay: *"He had no idea what was waiting for him in the arena..."* Visual: Dramatic zoom on 16-year-old Haymitch Abernathy standing in the District 12 crowd as the escort reaches into the glass bowl.
 * **Unbroken Stretches (Story Order):**
-  1. *The Chase (0:02–0:14):* Unbroken 12-second horse sprint across desert terrain as Gyro pulls parallel to his opponent.
-  2. *The Windup & Throw (0:14–0:24):* Continuous 10-second sequence of Gyro charging and launching the Spin ball.
-  3. *The Impact (0:24–0:32):* Slow-motion sakuga stretch showing the Golden Ratio Spin distortion warping the enemy rider's frame.
-* **Biggest Moment:** The kinetic Spin impact distortion frame in full impact-frame animation.
-* **Final Beat:** Gyro catching the returning steel ball as his horse charges past camera, snapping instantly to black.
-* **Target Length:** 34 seconds.
-* **Mood:** Aggressive, high-energy sakuga flex.
-* **Audio Note:** **"FUNK - MONTAGEM ROYAL (ULTRA SLOWED)"**. Build during the horse sprint, then hit the massive slowed sub-bass drop right on the 0:24 impact frame.
+  1. *0:02–0:14:* Unbroken trailer stretch of the silent crowd in District 12 as the name is drawn and read: *"Haymitch Abernathy."*
+  2. *0:14–0:26:* Unbroken stretch of Haymitch making eye contact with his family and stepping forward into the aisle toward the stage.
+  3. *0:26–0:35:* Quick transition cut: young Haymitch walking up the stage steps, flash-cutting directly to classic older Haymitch (Woody Harrelson in *Catching Fire*) staring into space.
+* **Biggest Moment (0:12–0:14):** The heavy echo of his name called across the dead-silent square.
+* **Final Beat (0:32–0:35):** Fade to black on Woody Harrelson’s thousand-yard stare as a distant Capitol cannon sound echoes, creating an eerie loop transition.
+* **Audio Note:** Start with a clock-ticking sound effect (Pink Floyd - *"Time"* style intro), swelling into a melancholic synth drop (Trending Sound #4: bôa - *"Duvet"* style vibe).
 
 ---
 
-### Clip 3: Lupin: Part 4 — "Escape the Glass Cage" Blackout
-* **Target Platform:** TikTok (Primary) & YouTube Shorts
-* **Source Title & Location:** *Lupin: Part 4* (High-security glass cell escape sequence; exact episode timestamp varies by release).
-* **Hook (0:00–0:02):** Rapid whip-zoom onto Assane Diop bound in a straitjacket inside a reinforced glass cell.
+### Clip 3: Steel Ball Run: JoJo's Bizarre Adventure – Gyro's Spin & Desert Race
+* **Target Platforms:** Both (TikTok & YouTube Shorts)
+* **Source & Location:** *Steel Ball Run: JoJo's Bizarre Adventure* – Stage 2–3 Desert Race Clash (Episode 9/10; rough timestamp ~14:20–15:00).
+* **Target Length:** 34 seconds
+* **Mood:** High-Octane / Badass Flex / Hype
+* **Hook (0:00–0:02):** Text overlay: *"Anime of the year and it's not even close 🔥"*. Visual: Frame-stutter on Gyro Zeppeli’s gold-tooth grin.
 * **Unbroken Stretches (Story Order):**
-  1. *The Lockup (0:02–0:12):* Continuous 10-second shot of armed guards pacing outside as room lights begin flickering violently.
-  2. *The Blackout & Reveal (0:12–0:22):* Unbroken sequence where lights cut to total black for 2 seconds with echoing footsteps, then snap back on showing the empty straitjacket slumped on the cell floor.
-  3. *The Reaction (0:22–0:31):* Continuous 9-second shot of the lead guard stepping into the cell, shining his flashlight in disbelief.
-* **Biggest Moment:** The lights snapping back on to reveal the cell completely empty.
-* **Final Beat:** Guard dropping his walkie-talkie in shock; cut to black the exact frame it hits the floor.
-* **Target Length:** 33 seconds.
-* **Mood:** Suspenseful, clever mind-game, high tension.
-* **Audio Note:** Start with high-tension atmospheric drone and guard dialogue. Cut all audio to dead silence during the 2-second blackout, then hit a sharp sub-bass thump when the lights return.
-
----
-
-## Which Clip to Make FIRST and Why
-
-Make **Clip 1 (Grand Theft Auto VI)** first today.
-
-* **Why:** *GTA VI* is currently the single largest entertainment phenomenon on the internet right now ($2.3B+ launch, 95k+ live Twitch viewers on top streams, millions of views/hr on YouTube Shorts). Sound track **"Suzuki"** is exploding on TikTok with 3.5M+ creations. Getting this out early in the day gives us the best shot at capturing active search traffic on both platforms.
+  1. *0:02–0:12:* Unbroken animation sequence of Gyro and Johnny riding horses side-by-side through the kicking desert sand against rival racers.
+  2. *0:12–0:22:* Unbroken close-up shot of Gyro rotating the Steel Ball in his palm, green spin aura revving up.
+  3. *0:22–0:30:* Gyro hurls the Steel Ball; unbroken shot of the Spin distorting the desert air as it travels toward the target.
+* **Biggest Moment (0:26–0:30):** The environmental air-distortion impact as the Spin technique hits.
+* **Final Beat (0:30–0:34):** Sudden flash-cut to Johnny Joestar’s wide-eyed reaction frame with a high-contrast manga filter, cutting abruptly on the heavy bass hit to force an instant loop rewatch.
+* **Audio Note:** Use Trending Sound #5 (*"Montagem Royal - Ultra Slowed"* Brazilian Funk Remix). Apply TikTok Format #1 (Brazilian Funk / Lag-Spin Velocity cuts) on Gyro’s spin activation beats.
