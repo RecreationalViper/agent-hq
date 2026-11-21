@@ -65,6 +65,7 @@ export default {
     if (url.pathname === "/friday/connections") return fridayConnections(req, env);
     if (url.pathname === "/friday/spend") return fridaySpend(req, env);
     if (url.pathname === "/friday/mechanic") return fridayMechanic(req, env);
+    if (url.pathname === "/friday/briefing") return fridayBriefing(req, env);
     if (url.pathname === "/friday") return friday(req, env, ctx);
     if (url.pathname === "/friday/live" || url.pathname === "/friday/tool") return fridayLive(req, env, url.pathname.endsWith("tool"));
     if (url.pathname === "/contacts") return contactsInbox(req, url, env);
@@ -669,7 +670,7 @@ ${facts.join("\n")}`;
   const PHONE = ["text", "call", "reminder", "event", "timer", "alarm", "directions", "note", "music", "health", "open"];
   const phone = r.phone && typeof r.phone === "object" && PHONE.includes(r.phone.do) ? r.phone : null;
   for (const [k, v] of [["google", gResult], ["lookup", lResult], ["shop", sResult]]) if (v && /^(Couldn't|Unknown)/.test(String(v))) await fridayLog(env, k, `${JSON.stringify(r[k]).slice(0, 200)} -> ${String(v).slice(0, 200)}`);
-  return out({ ok: true, heard, say, ran: r.run || null, remembered: r.remember || null, google: gResult, shop: sResult ? String(sResult).slice(0, 600) : null, lookup: lResult ? String(lResult).slice(0, 600) : null, phone, phone_json: phone ? JSON.stringify(phone) : "" });
+  return out({ ok: true, heard, say, ran: r.run || null, remembered: r.remember || null, google: gResult, shop: sResult ? String(sResult).slice(0, 600) : null, lookup: lResult ? String(lResult).slice(0, 600) : null, phone, phone_json: phone ? JSON.stringify(phone) : "", phone_url: phone ? phoneUrl(phone) : "" });
 }
 
 
@@ -705,6 +706,7 @@ async function fridayFacts(env, now = new Date(), owner = false) {
     } catch {}
   }
   if (gP) facts.push(...(await gP));
+  if (owner) { try { const b = JSON.parse(await env.SALES.get("friday:briefing") || "null"); if (b) facts.push(`THIS MORNING'S BRIEFING (${b.at.slice(0, 10)}), read it back if he asks for his briefing: ${b.text}`); } catch {} }
 
   return facts;
 }
@@ -1251,4 +1253,48 @@ async function fridayMechanic(req, env) {
     return out({ ok: true });
   }
   return out({ ok: true, log: JSON.parse(await env.SALES.get("friday:log") || "[]"), wishes: JSON.parse(await env.SALES.get("friday:wishes") || "[]") });
+}
+
+// One link the Friday Shortcut opens to carry out a phone action ("Open URLs").
+// Simple things use Apple's own links (Messages, Phone, Maps, Music). Reminders, timers, alarms and notes
+// go to the small "Friday Hands" Shortcut on his phone.
+function phoneUrl(p) {
+  const e = encodeURIComponent, digits = String(p.to || "").replace(/[^\d+]/g, "");
+  const hands = () => `shortcuts://run-shortcut?name=${e("Friday Hands")}&input=text&text=${e(JSON.stringify(p))}`;
+  switch (p.do) {
+    case "text": return digits.length >= 7 ? `sms:${digits}&body=${e(p.message || "")}` : `sms:&body=${e(p.message || "")}`;
+    case "call": return digits.length >= 7 ? `tel:${digits}` : hands();
+    case "directions": return `maps://?daddr=${e(p.to || p.query || "")}`;
+    case "music": return `music://music.apple.com/us/search?term=${e(p.query || "")}`;
+    case "open": return /^[a-z][\w+.-]*:/i.test(p.url || "") ? p.url : "";
+    case "health": return "";
+    default: return hands(); // reminder, timer, alarm, note, event
+  }
+}
+
+// ───────────────────────── Morning briefing ─────────────────────────
+// Called each morning by the "Friday Briefing" workflow (agents' test key; nothing private is returned to it).
+// Friday builds the briefing from HIS live facts, adds one concrete move toward the next sale,
+// posts it to his private Discord (#daily-focus) and keeps it so "Friday, what's my briefing?" reads it back.
+async function fridayBriefing(req, env) {
+  const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
+  const key = req.headers.get("x-friday-key") || "";
+  const ok = (await sha256(key)) === FRIDAY_KEY_SHA || (env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)));
+  if (req.method !== "POST" || !ok) return out({ ok: false }, 401);
+  const facts = await fridayFacts(env, new Date(), true);
+  const sales = await fridayShop(env, { do: "sales", days: 30 }).catch(() => "");
+  const move = await fridayLookup(env, { tool: "think", query: "Give Josiah ONE concrete, free action he can do today (under 30 minutes) most likely to get Forever Held's next sale. Be specific to his real situation below: name the exact place, post or person. No fake urgency or discounts. Two sentences max.", context: `${facts.join("\n")}\n${sales}` });
+  const system = `${FRIDAY_PERSONA}\nWrite his morning briefing, as you'd say it out loud: warm one-line greeting, then short lines for: money (sales, net), today's calendar, important unread emails (who and what, no addresses), what the agents did and anything broken, church outreach replies. End with "Today's move:" and the move below. Under 170 words. Plain text, no markdown headers. Never invent anything not in the facts.`;
+  let text = "";
+  for (const askAi of [groqChat, geminiChat, openRouterChat, workersChat]) { try { text = stripPlanning(await askAi(env, system, [{ role: "user", content: `FACTS:\n${facts.join("\n")}\n\nSALES:\n${sales}\n\nTODAY'S MOVE:\n${move}` }]) || ""); if (text) break; } catch {} }
+  if (!text) return out({ ok: false, error: "no AI answered" }, 503);
+  text = text.replace(/^\{[\s\S]*"say"\s*:\s*"|"\s*\}\s*$/g, "").replace(/\\n/g, "\n").replace(/\*\*?/g, "").trim();
+  await env.SALES.put("friday:briefing", JSON.stringify({ at: new Date().toISOString(), text }), { expirationTtl: 3 * 864e5 });
+  let posted = false;
+  if (env.DISCORD_BOT_TOKEN) {
+    const chans = JSON.parse(await fetch(`${FRIDAY_RAW}/discord.json`).then((r) => r.text()).catch(() => "{}")).channels || {};
+    const id = chans["daily-focus"] || chans.inbox;
+    if (id) posted = (await fetch(`https://discord.com/api/v10/channels/${id}/messages`, { method: "POST", headers: { Authorization: `Bot ${env.DISCORD_BOT_TOKEN}`, "content-type": "application/json" }, body: JSON.stringify({ embeds: [{ title: "◉ Friday · Morning briefing", description: text.slice(0, 3900), color: 0x4aa3ff }] }) }).catch(() => ({ ok: false }))).ok;
+  }
+  return out({ ok: true, posted, words: text.split(/\s+/).length });
 }

@@ -1,0 +1,21 @@
+name: Friday Briefing
+# Every morning Friday writes Josiah's briefing (money, calendar, email, agents, church replies)
+# plus one concrete move toward the next sale, and posts it to his private Discord (#daily-focus).
+on:
+  schedule:
+    - cron: "37 12 * * *" # ~7:37 AM Eastern
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Ask Friday for the morning briefing
+        env:
+          PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
+        run: |
+          KEY=$(printf "friday-check:%s" "$(echo -n "$PAYHIP_API_KEY" | tr -d '[:space:]')" | sha256sum | cut -d' ' -f1)
+          curl -sS -m 120 -X POST https://foreverheld-sales.foreverheld.workers.dev/friday/briefing -H "x-friday-key: $KEY" -H "content-type: application/json" -d '{}' | tee /tmp/r.json
+          grep -q '"ok":true' /tmp/r.json
