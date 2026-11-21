@@ -1195,7 +1195,11 @@ async function fridaySpend(req, env) {
   const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
   if (req.method !== "POST" || (await sha256(req.headers.get("x-friday-key") || "")) !== FRIDAY_KEY_SHA) return out({ ok: false }, 401);
   let d = {}; try { d = await req.json(); } catch {}
-  const amount = Number(String(d.amount || "").replace(/[^0-9.\-]/g, ""));
+  // Works whether Shortcuts sends just the Amount or the whole transaction as text ("$12.34 at Store")
+  const raw = String(d.amount || "");
+  const m = raw.match(/-?\$\s?(\d[\d,]*(?:\.\d{1,2})?)/) || raw.match(/(\d[\d,]*\.\d{2})/) || raw.match(/(\d[\d,]*(?:\.\d+)?)/);
+  const amount = m ? Number(m[1].replace(/,/g, "")) : 0;
+  if (d.merchant && d.merchant === d.amount) d.merchant = (raw.match(/\bat\s+(.+?)(?:\s+with|\s+on|$)/i) || [, raw])[1];
   if (!amount) return out({ ok: false, error: "no amount" }, 400);
   const at = new Date().toISOString();
   await env.SALES.put(`spend:${at}`, JSON.stringify({ at, amount, merchant: String(d.merchant || "").slice(0, 80), card: String(d.card || "").slice(0, 40) }), { expirationTtl: 400 * 864e5 });
