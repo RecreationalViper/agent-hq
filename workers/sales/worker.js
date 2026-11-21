@@ -624,6 +624,7 @@ ${facts.join("\n")}`;
   let r = {};
   try { const m = raw.match(/\{[\s\S]*\}/); r = JSON.parse((m ? m[0] : raw).replace(/,\s*([}\]])/g, "$1")); } catch { r = { say: raw }; }
   let say = String(r.say || raw).replace(/\*\*?/g, "").replace(/^#+\s*/gm, "").trim().slice(0, 1500);
+  if (r.run === "mechanic" && !/\b(fix|broke|broken|bug|repair|upgrade|improve|mechanic|update) (your|her|my)?self|\bmechanic\b|you('re| are) (broken|buggy)/i.test(q)) r.run = null; // only when he asks
   if (r.run && FRIDAY_RUNS[r.run]) {
     const [wf, inputs] = FRIDAY_RUNS[r.run];
     const res = env.GH_TOKEN ? await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/${wf}/dispatches`, { method: "POST", headers: { Authorization: `Bearer ${env.GH_TOKEN}`, Accept: "application/vnd.github+json", "User-Agent": "Friday", "content-type": "application/json" }, body: JSON.stringify({ ref: "main", inputs }) }).catch(() => null) : null;
