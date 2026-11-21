@@ -1,31 +1,26 @@
-# GitHub Radar — 2026-11-20
+# GitHub Radar — 2026-11-21
 
-> Scanned 12 of 33 saved searches (12 returned data, 0 unchanged, 0 failed). 26 GitHub API calls, authenticated. Zero AI tokens used.
+> Scanned 12 of 33 saved searches (12 returned data, 0 unchanged, 0 failed). 20 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (1)
+## Start here (3)
 
-- **[Portkey-AI/gateway](https://github.com/Portkey-AI/gateway)** 🟢 ADOPT · score 76/100 · ⭐ 13,424 · MIT · updated 1d ago
-  - A blazing fast AI Gateway with integrated guardrails. Route to 1,600+ LLMs, 50+ AI Guardrails with 1 fast & friendly API.
-  - Why: 13,424 stars; updated this week; MIT license; well established; directly cuts AI spend
-
-## Just launched — new repos (3)
-
-_Created in the last few weeks. Surfaced early on purpose, so they stay WATCH until they have a track record._
-
-- **[mankidev/antialgorithm](https://github.com/mankidev/antialgorithm)** 🟡 WATCH · score 82/100 · ⭐ 565 · MIT · updated 0d ago
-  - Agent skill that steers the model away from its first, most average pick in creative work: names, ideas, logo, posters, UI.
-  - Why: filed under skills; 565 stars; updated this week; MIT license; new repo, 6 days old; early traction; contains SKILL.md skill files
-  - Watch out: brand-new repo — unproven, watch before adopting
+- **[rocketride-org/rocketride-server](https://github.com/rocketride-org/rocketride-server)** 🟢 ADOPT · score 86/100 · ⭐ 20,008 · MIT · updated 0d ago
+  - RocketRide is an open source AI meta-harness with the only enterprise-grade runtime built on C++. Build, test and publish durable agents that scale…
+  - Why: 20,008 stars; updated this week; MIT license; well established; contains SKILL.md skill files
+  - Watch out: needs a machine running, not phone-only
   - Confirmed: contains `SKILL.md` skill files
-- **[staryone/motlab](https://github.com/staryone/motlab)** 🟡 WATCH · score 77/100 · ⭐ 275 · MIT · updated 0d ago
-  - Video as code: canvas scenes rendered with WebCodecs in headless Chrome, a review viewer, and agent skills that build the video from your references.
-  - Why: filed under skills; 275 stars; updated this week; MIT license; new repo, 4 days old; early traction; contains SKILL.md skill files
-  - Watch out: brand-new repo — unproven, watch before adopting
-  - Confirmed: contains `SKILL.md` skill files
-- **[CallMeGuLab/dsh-purge-safe](https://github.com/CallMeGuLab/dsh-purge-safe)** 🟡 WATCH · score 74/100 · ⭐ 662 · Apache-2.0 · updated 0d ago
-  - 正版dsh-purge DeepSeek Harness 破甲 ：默认提示词面向国模，原小码酱，完整开放版，无付费墙，技能库与知识库全含，免费公开。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐
-  - Why: filed under skills; 662 stars; updated this week; Apache-2.0 license; new repo, 13 days old; early traction
-  - Watch out: brand-new repo — unproven, watch before adopting
+- **[JuneYaooo/rea-video](https://github.com/JuneYaooo/rea-video)** 🟡 WATCH · score 70/100 · ⭐ 11,447 · Apache-2.0 · updated 0d ago
+  - Reverse-engineer any video, shot by shot: filmed, AI-generated or coded, and how to remake it. Breakdowns in the open VIDEO.md format. 逆向一切视频，逐个镜头看…
+  - Why: 11,447 stars; updated this week; Apache-2.0 license; well established
+  - Watch out: unofficial/scraping based — may break or breach terms
+- **[revfactory/harness](https://github.com/revfactory/harness)** 🟡 WATCH · score 61/100 · ⭐ 9,386 · Apache-2.0 · updated 54d ago
+  - A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.
+  - Why: 9,386 stars; Apache-2.0 license; well established
+
+## New inside repos you watch (1)
+
+- **[google/adk-recipes](https://github.com/google/adk-recipes)** 🟢 ADOPT · ⭐ 10,655 · Apache-2.0
+  - Added: [.agents/skills/triage-recipe-proposal/SKILL.md](https://github.com/google/adk-recipes/blob/HEAD/.agents/skills/triage-recipe-proposal/SKILL.md)
 
 ## Agent skills you could install (0)
 
