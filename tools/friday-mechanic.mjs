@@ -28,6 +28,7 @@ for (const line of health.split("\n")) {
 // 2) her own log + wishes
 const mech = await fetch(API + "/mechanic", { headers: { "x-friday-key": key } }).then((r) => r.json()).catch(() => ({}));
 const log = mech.log || [], wishes = mech.wishes || [];
+if (process.env.EXTRA_WISH?.trim()) wishes.push({ id: "manual", at: new Date().toISOString(), text: process.env.EXTRA_WISH.trim() });
 console.log(`health problems: ${problems.length}, logged errors: ${log.length}, wishes: ${wishes.length}`);
 if (!problems.length && !log.length && !wishes.length) { console.log("Friday is healthy and has no wishes. Nothing to do."); process.exit(0); }
 

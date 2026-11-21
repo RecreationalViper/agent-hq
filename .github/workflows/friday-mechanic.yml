@@ -10,6 +10,10 @@ on:
         description: "Plan only (no pull request)"
         type: boolean
         default: false
+      wish:
+        description: "Something Friday should learn (optional)"
+        type: string
+        default: ""
 permissions:
   contents: write
   pull-requests: write
@@ -27,6 +31,7 @@ jobs:
         run: node tools/friday-mechanic.mjs ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EXTRA_WISH: ${{ github.event.inputs.wish }}
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
           CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
