@@ -1,74 +1,64 @@
-# Social Strategist (updated 2026-11-20)
+# Social Strategist (updated 2026-11-21)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-Here is today's social publishing strategy for MotionVault, formatted for mobile review.
+# Social Strategy Plan — November 21, 2026
+
+Here is today's posting strategy, captions, hook text, titles, and timing schedule for MotionVault's 3 cuts.
 
 ---
 
-### Clip 1: Grand Theft Auto VI – "Unstoppable NPC / Hulk Lucia Encounter"
-
-* **On-Screen Hook Text (max 6 words):**
-  `GTA 6 NPCs hit different 💀`
+### Clip 1: GTA VI — Vice City Beach Chase & Ramp Jump
 
 * **TikTok Captions:**
-  1. Bro wasn't giving up his car without a fight 💀
-  2. GTA 6 physics and NPC AI are completely out of control.
-  3. Who else got folded by an NPC on day one? 😭
-  4. Vice City NPCs did NOT come to play around 😭🔥
-
-* **Hashtags:**
-  `#gta6` `#gta6gameplay` `#grandtheftauto6` `#gamingedit` `#gta6clips` `#lucia`
-
+  * Option 1: Vice City on Day 1 is pure chaos 😭🔥
+  * Option 2: Would you attempt this drawbridge jump or pull over immediately? *(Comment Driver)*
+  * Option 3: Lucia leaning out the passenger window is instant cinematic heat 🚗💨
+  * Option 4: Launch weekend energy hits completely different in Vice City 🌴⚡️
+* **On-Screen Hook Text (max 6 words):**
+  * `Vice City on Day 1 💀`
+* **Hashtags (mix of big & niche):**
+  * `#GTA6` `#GTAVI` `#GrandTheftAuto6` `#GTAEdit` `#ViceCity` `#GamingEdit`
 * **YouTube Shorts Title (under 60 chars):**
-  `When GTA 6 NPCs Fight Back 💀`
-
-* **Best Time to Post (New York Time / EST):**
-  * **TikTok (3:00 PM EST):** Hits the afternoon exit-from-school/work window while day-two GTA 6 launch traffic is peaking.
-  * **YouTube Shorts (6:00 PM EST):** Aligns with evening gaming live-stream peaks and prime US Shorts scrolling hours.
+  * `The Hardest Jump In GTA 6 ☠️🔥` *(32 chars)*
+* **Best Posting Times (New York / EST):**
+  * **TikTok:** 3:00 PM EST — *Captures peak weekend gaming engagement as global Twitch marathons hit afternoon activity.*
+  * **YouTube Shorts:** 5:00 PM EST — *Rides the early evening surge for gaming search queries after main streams finish.*
 
 ---
 
-### Clip 2: The Hunger Games: Sunrise on the Reaping – Haymitch 50th Reaping
-
-* **On-Screen Hook Text (max 6 words):**
-  `He had no idea what's coming...`
+### Clip 2: JoJo’s Bizarre Adventure: Steel Ball Run — Gyro & Johnny Stage 2 Sprint
 
 * **TikTok Captions:**
-  1. The moment Haymitch Abernathy’s entire life changed forever 🏹
-  2. The silence in District 12 right when his name got called...
-  3. Which Hunger Games arena moment broke you the most? 💔
-  4. From 16-year-old tribute to thousand-yard stare.
-
-* **Hashtags:**
-  `#sunriseonthereaping` `#hungergames` `#haymitch` `#movieedit` `#hungergamesedit` `#filmtok`
-
+  * Option 1: Steel Ball Run animation quality is peak anime right now 🟢⚡️
+  * Option 2: Who had the cleaner aura activation: Gyro or Johnny? *(Comment Driver)*
+  * Option 3: That Steel Ball pressure wave cut goes so hard 🔥
+  * Option 4: Johnny activating Tusk gives me chills every single time 👁️🔥
+* **On-Screen Hook Text (max 6 words):**
+  * `Gyro's aura is unmatched 🟢`
+* **Hashtags (mix of big & niche):**
+  * `#SteelBallRun` `#JJBA` `#AnimeEdit` `#GyroZeppeli` `#JoJoEdit` `#JohnnyJoestar`
 * **YouTube Shorts Title (under 60 chars):**
-  `The 50th Reaping Changed Him Forever 🏹`
-
-* **Best Time to Post (New York Time / EST):**
-  * **TikTok (7:00 PM EST):** Capitalizes on prime evening leisure time for film and book fandom communities.
-  * **YouTube Shorts (8:30 PM EST):** Catches high night-time engagement for dramatic movie montages.
+  * `They Thought Gyro Was Out Of Options 💀` *(40 chars)*
+* **Best Posting Times (New York / EST):**
+  * **TikTok:** 7:00 PM EST — *Prime evening window for anime edit algorithm discovery and Phonk sound loops.*
+  * **YouTube Shorts:** 8:30 PM EST — *Target late-night anime Shorts viewers looking for high-energy fight edits.*
 
 ---
 
-### Clip 3: Steel Ball Run: JoJo's Bizarre Adventure – Gyro's Spin & Desert Race
-
-* **On-Screen Hook Text (max 6 words):**
-  `Anime of the year already 🔥`
+### Clip 3: Kingsman: The Secret Service — "Manners Maketh Man" Bar Fight
 
 * **TikTok Captions:**
-  1. Gyro Zeppeli’s Spin technique in motion is absolute peak 🌪️
-  2. Steel Ball Run animation quality is actually insane.
-  3. Is Gyro the best JoJo partner in history? 👇
-  4. That sound design when the Spin hits is unreal 🔥
-
-* **Hashtags:**
-  `#steelballrun` `#sbr` `#jojoedit` `#gyrozeppeli` `#animeedit` `#anime`
-
+  * Option 1: Harry Hart locked that door and chose absolute violence 💀
+  * Option 2: Is this the cleanest bar fight scene in movie history? *(Comment Driver)*
+  * Option 3: "Manners maketh man." The umbrella combo never gets old ☂️⚡️
+  * Option 4: Calmly drinking a pint after clearing the room is legendary 🍺🔥
+* **On-Screen Hook Text (max 6 words):**
+  * `They Thought He Was Old 💀`
+* **Hashtags (mix of big & niche):**
+  * `#Kingsman` `#MovieEdit` `#MovieClips` `#HarryHart` `#ActionMovies` `#FightScene`
 * **YouTube Shorts Title (under 60 chars):**
-  `Gyro's Spin Technique Is Too Clean 🔥`
-
-* **Best Time to Post (New York Time / EST):**
-  * **TikTok (9:00 PM EST):** Matches peak late-night activity for anime edit creators and viewers.
-  * **YouTube Shorts (10:00 PM EST):** Late-night US scroll slot where high-energy anime edits score high watch completion rates.
+  * `The Hardest Pub Fight Scene In Movie History ☠️🔥` *(48 chars)*
+* **Best Posting Times (New York / EST):**
+  * **TikTok:** 12:00 PM EST — *Midday lunch break boost for high-retention movie dialogue setups.*
+  * **YouTube Shorts:** 2:00 PM EST — *Early afternoon window capitalizing on rising Kingsman short-form search trends.*

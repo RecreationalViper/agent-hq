@@ -1,58 +1,63 @@
-# Director (updated 2026-11-20)
+# Director (updated 2026-11-21)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-Here are the 3 clips for MotionVault to make today, built from today's real trend data, sound charts, and watcher reports.
+Here are the 3 clip plans for Claude to cut today (2026-11-21), based on today's search trends, Twitch viewer numbers, YouTube Shorts performance data, and TikTok audio/format spikes.
 
 ---
 
-### Priority Order: Make Clip 1 First
-**Make Clip 1 (GTA VI NPC Encounter) FIRST.** *GTA VI* launched yesterday and is driving unprecedented traffic ($3.8B single-day sales, 750k+ daily Wikipedia views, Twitch #1 with 90k+ concurrent viewers). NPC interaction clips are pulling 8M–12M views on TikTok right now. Publishing in the first 48-hour window gives MotionVault the maximum algorithmic push across both platforms.
+### Priority Order: Which Clip to Make First & Why
+
+**Make Clip 1 (GTA VI) FIRST.**
+* **Why:** *Grand Theft Auto VI* is experiencing a massive global viral peak (540k+ Wikipedia pageviews yesterday, dominating Twitch streams with over 500k active live viewers). Posting during launch weekend gives us our strongest chance for algorithm discovery across both TikTok and YouTube Shorts.
 
 ---
 
-### Clip 1: Grand Theft Auto VI – "Unstoppable NPC / Hulk Lucia Encounter"
-* **Target Platforms:** Both (TikTok & YouTube Shorts)
-* **Source & Location:** *Grand Theft Auto VI* (2026) – Open-world Vice City gameplay / Carjacking sequence (Viral launch gameplay clip).
-* **Target Length:** 32 seconds
-* **Mood:** Chaotic / Unintentional Comedy / Shock Value
-* **Hook (0:00–0:02):** Text overlay: *"NPCs in GTA 6 are built completely different 💀"*. Opens on Lucia sprinting up to a luxury car and yanking the door open.
-* **Unbroken Stretches (Story Order):**
-  1. *0:02–0:12:* Unbroken capture of Lucia pulling open the driver's side door and attempting to yank the male NPC out.
-  2. *0:12–0:22:* Unbroken capture of the NPC overpowering Lucia, counter-grappling her, and slamming her onto the asphalt while shouting *"My car now!"*
-  3. *0:22–0:28:* Unbroken shot of the NPC getting back in the driver seat and speeding away over the sidewalk.
-* **Biggest Moment (0:18–0:22):** The exact frame where the NPC flips Lucia and slams her onto the pavement.
-* **Final Beat (0:28–0:32):** Slow-mo zoom on Lucia lying flat on the asphalt with the grey "WASTED" screen transition. On-screen prompt text: *"Who else got folded by this guy? 😭"* (drives comment section debates and rewatch loops).
-* **Audio Note:** Use Trending Sound #2 (*"Suzuki"* – GTA VI Soundtrack) or Trending Sound #5 (*"Montagem Royal - Ultra Slowed"*), syncing the heavy bass drop directly to the pavement impact frame.
+### Clip 1: GTA VI — Vice City Beach Chase & Ramp Jump
+* **Target Platforms:** Both TikTok & YouTube Shorts
+* **Source & Location:** *Grand Theft Auto VI* (Official Trailer / Gameplay reveal footage; Vice City beach promenade and coastal highway chase; rough timestamp 0:45–1:15 in official reveal material).
+* **Hook (0–2s):** Interior driver POV as a muscle car engine revs aggressively, red-and-blue police lights flashing against the windshield. Text overlay: *"Vice City on Day 1..."*
+* **Unbroken Stretches (in story order):**
+  1. *Stretch 1 (2–14s):* 12-second unbroken shot of Jason driving down the beach promenade at high speed, plowing past beach umbrellas and fleeing NPCs.
+  2. *Stretch 2 (14–25s):* 11-second unbroken stretch of Lucia leaning out the passenger window opening fire on pursuing patrol cars along the coastal highway.
+  3. *Stretch 3 (25–33s):* 8-second unbroken stretch lining up a high-speed launch off a drawbridge ramp into the sunset sky.
+* **Biggest Moment:** The vehicle airborne over the Vice City drawbridge with the neon skyline in full view (28–32s mark).
+* **Final Beat:** Freeze-frame on the mid-air car jump right before collision, cutting abruptly to black (33–35s).
+* **Target Length:** 35 seconds.
+* **Mood:** High-octane, chaotic, adrenaline flex.
+* **Audio Note:** Use trending track **Suzuki — GTA VI Soundtrack**. Sync the opening engine rev to the 0–2s hook, dropping the main synth/bass hit right as Stretch 1 hits the beach.
+* **On-Screen Credit:** `Source: Grand Theft Auto VI (Rockstar Games)`
 
 ---
 
-### Clip 2: The Hunger Games: Sunrise on the Reaping – Haymitch 50th Reaping Sequence
-* **Target Platforms:** Both (TikTok & YouTube Shorts)
-* **Source & Location:** *The Hunger Games: Sunrise on the Reaping* (2026) – Official Trailer / District 12 Reaping sequence (~0:45–1:20 in official trailer footage).
-* **Target Length:** 35 seconds
-* **Mood:** Suspenseful / Melancholic / Chilling Realization
-* **Hook (0:00–0:02):** Text overlay: *"He had no idea what was waiting for him in the arena..."* Visual: Dramatic zoom on 16-year-old Haymitch Abernathy standing in the District 12 crowd as the escort reaches into the glass bowl.
-* **Unbroken Stretches (Story Order):**
-  1. *0:02–0:14:* Unbroken trailer stretch of the silent crowd in District 12 as the name is drawn and read: *"Haymitch Abernathy."*
-  2. *0:14–0:26:* Unbroken stretch of Haymitch making eye contact with his family and stepping forward into the aisle toward the stage.
-  3. *0:26–0:35:* Quick transition cut: young Haymitch walking up the stage steps, flash-cutting directly to classic older Haymitch (Woody Harrelson in *Catching Fire*) staring into space.
-* **Biggest Moment (0:12–0:14):** The heavy echo of his name called across the dead-silent square.
-* **Final Beat (0:32–0:35):** Fade to black on Woody Harrelson’s thousand-yard stare as a distant Capitol cannon sound echoes, creating an eerie loop transition.
-* **Audio Note:** Start with a clock-ticking sound effect (Pink Floyd - *"Time"* style intro), swelling into a melancholic synth drop (Trending Sound #4: bôa - *"Duvet"* style vibe).
+### Clip 2: JoJo’s Bizarre Adventure: Steel Ball Run — Gyro & Johnny Stage 2 Sprint
+* **Target Platforms:** Both TikTok & YouTube Shorts
+* **Source & Location:** *JoJo’s Bizarre Adventure: Steel Ball Run* (Anime Season 1 / Ep 8–10 race sequence; exact anime timestamp rough mid-episode stage race).
+* **Hook (0–2s):** Heavy sound effect of Gyro Zeppeli drawing and spinning a Steel Ball with glowing green aura sparks.
+* **Unbroken Stretches (in story order):**
+  1. *Stretch 1 (2–12s):* 10-second unbroken shot of Gyro and Johnny galloping side-by-side through a dusty canyon course.
+  2. *Stretch 2 (12–22s):* 10-second unbroken stretch of Gyro launching the Steel Ball, creating a spinning pressure wave that warps the air around rival riders.
+  3. *Stretch 3 (22–30s):* 8-second unbroken shot of Johnny activating his Tusk Stand aura, eyes burning with dark determination as he accelerates.
+* **Biggest Moment:** The Steel Ball impact wave tearing through the canyon path to clear the lead (20–25s).
+* **Final Beat:** Extreme close-up cut on Johnny's glowing eyes in dark silhouette, terminating abruptly on the sub-bass hit (30–32s).
+* **Target Length:** 32 seconds.
+* **Mood:** Hyper-energetic, intense aura flex.
+* **Audio Note:** **MONTAGEM ROYAL (ULTRA SLOWED)**. Edit using the *Funk Mandala / Velocity Speed-Ramping* style (slow-mo on ball spin, fast-forward speed ramps on sprint pushes).
+* **On-Screen Credit:** `Source: JoJo's Bizarre Adventure: Steel Ball Run`
 
 ---
 
-### Clip 3: Steel Ball Run: JoJo's Bizarre Adventure – Gyro's Spin & Desert Race
-* **Target Platforms:** Both (TikTok & YouTube Shorts)
-* **Source & Location:** *Steel Ball Run: JoJo's Bizarre Adventure* – Stage 2–3 Desert Race Clash (Episode 9/10; rough timestamp ~14:20–15:00).
-* **Target Length:** 34 seconds
-* **Mood:** High-Octane / Badass Flex / Hype
-* **Hook (0:00–0:02):** Text overlay: *"Anime of the year and it's not even close 🔥"*. Visual: Frame-stutter on Gyro Zeppeli’s gold-tooth grin.
-* **Unbroken Stretches (Story Order):**
-  1. *0:02–0:12:* Unbroken animation sequence of Gyro and Johnny riding horses side-by-side through the kicking desert sand against rival racers.
-  2. *0:12–0:22:* Unbroken close-up shot of Gyro rotating the Steel Ball in his palm, green spin aura revving up.
-  3. *0:22–0:30:* Gyro hurls the Steel Ball; unbroken shot of the Spin distorting the desert air as it travels toward the target.
-* **Biggest Moment (0:26–0:30):** The environmental air-distortion impact as the Spin technique hits.
-* **Final Beat (0:30–0:34):** Sudden flash-cut to Johnny Joestar’s wide-eyed reaction frame with a high-contrast manga filter, cutting abruptly on the heavy bass hit to force an instant loop rewatch.
-* **Audio Note:** Use Trending Sound #5 (*"Montagem Royal - Ultra Slowed"* Brazilian Funk Remix). Apply TikTok Format #1 (Brazilian Funk / Lag-Spin Velocity cuts) on Gyro’s spin activation beats.
+### Clip 3: Kingsman: The Secret Service — "Manners Maketh Man" Bar Fight
+* **Target Platforms:** YouTube Shorts (also suitable for TikTok)
+* **Source & Location:** *Kingsman: The Secret Service* (2014 film; pub confrontation scene around 0:42:00–0:44:30 timestamp).
+* **Hook (0–2s):** Close-up shot of Harry Hart (Colin Firth) clicking the deadbolt lock on the pub door, turning back calmly. Bold text overlay: *"They Thought He Was Just An Old Man 💀"*
+* **Unbroken Stretches (in story order):**
+  1. *Stretch 1 (2–12s):* 10-second unbroken stretch of Harry delivering his famous line ("Manners maketh man") and swinging his umbrella handle to take out the lead thug.
+  2. *Stretch 2 (12–24s):* 12-second unbroken fight stretch showing Harry using gadgets (taser watch, shock glass) to fluently disarm three thugs in rapid succession.
+  3. *Stretch 3 (24–34s):* 10-second unbroken finish stretch as Harry calmly finishes his Guinness pint while the last thug stumbles to the floor.
+* **Biggest Moment:** The fluid umbrella hook-and-flip taser strike combo taking down the gang leader (18–24s).
+* **Final Beat:** Harry placing his pint glass back on the table with a quiet nod, cutting to black (34–36s).
+* **Target Length:** 36 seconds.
+* **Mood:** Stylish, smooth, understated badass payoff.
+* **Audio Note:** Keep original high-quality film dialogue audio for the "Manners maketh man" hook and impact sound effects, layering a subtle slowed bass tension track beneath the action.
+* **On-Screen Credit:** `Source: Kingsman: The Secret Service (2014)`
