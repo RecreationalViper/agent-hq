@@ -64,6 +64,7 @@ export default {
     if (url.pathname === "/friday/connect" || url.pathname === "/friday/google/callback") return fridayGoogleRoute(req, url, env);
     if (url.pathname === "/friday/connections") return fridayConnections(req, env);
     if (url.pathname === "/friday/spend") return fridaySpend(req, env);
+    if (url.pathname === "/friday/mechanic") return fridayMechanic(req, env);
     if (url.pathname === "/friday") return friday(req, env, ctx);
     if (url.pathname === "/friday/live" || url.pathname === "/friday/tool") return fridayLive(req, env, url.pathname.endsWith("tool"));
     if (url.pathname === "/contacts") return contactsInbox(req, url, env);
@@ -538,7 +539,7 @@ Creative work (names, ideas, slogans, posts, designs, plans), from the antialgor
 Writing as him (emails, texts, posts): write what a real person in his spot would write, shorter, built on real facts. No hype questions, no exclamation-mark cheers, no things in threes by habit, no summing-up last line, no "let me know if you'd like changes". Just stop when it's said.`;
 const FRIDAY_KEY_SHA = "24e6f6d78ba5f775d60efcb6ff8939a5f19d5ae7f22f2e0a79aba608f66fa1d5";
 const FRIDAY_RAW = `https://raw.githubusercontent.com/${REPO}/main`;
-const FRIDAY_RUNS = { ...RUNS, "outreach-replies": ["outreach.yml", { mode: "replies" }], "assistant-check": ["assistant-check.yml", {}], "publish-store": ["deploy-store.yml", {}], "pinterest-stats": ["pinterest-stats.yml", {}] };
+const FRIDAY_RUNS = { ...RUNS, "mechanic": ["friday-mechanic.yml", {}], "outreach-replies": ["outreach.yml", { mode: "replies" }], "assistant-check": ["assistant-check.yml", {}], "publish-store": ["deploy-store.yml", {}], "pinterest-stats": ["pinterest-stats.yml", {}] };
 
 async function friday(req, env, ctx) {
   const origin = req.headers.get("origin") || "";
@@ -591,6 +592,8 @@ Google also has: {"do":"drive_search","query":"..."} {"do":"doc_read","query":"f
   {"tool":"notion","query":"..."}  search his Notion   {"tool":"note","title":"...","text":"..."}  save notes, ideas or plans to his Notion
   {"tool":"discord","channel":"content|sales|inbox|alerts|research|growth|trading-desk|..."}  read what his agents posted (church replies are in content)
   {"tool":"report","query":"agent name like growth coach or researcher"}  read an agent's latest report
+  {"tool":"wish","text":"what you can't do yet and should learn, or a bug you noticed"}  your self-improvement list. Use it whenever he asks for something you can't do, or something of yours broke. Your mechanic writes the code overnight and he approves it.
+To fix yourself right away (he says "fix yourself", "you're broken", "upgrade yourself"), use "run": "mechanic".
 When you use a lookup, "say" can be a short "One sec." because you'll answer again with the result.
 "google" works in HIS Gmail and Google Calendar (only if the facts show Google is connected). Shapes:
   {"do":"calendar","days":14}  look further ahead than the facts show   {"do":"email_search","query":"Gmail search like from:mom newer_than:7d or invoice"}  find or read emails
@@ -617,7 +620,7 @@ ${facts.join("\n")}`;
   for (const ask of [groqChat, geminiChat, openRouterChat, workersChat]) {
     try { raw = stripPlanning(await ask(env, system, convo) || ""); if (raw) break; } catch (e) { why.push(`${ask.name}: ${String(e.message || e).slice(0, 80)}`); }
   }
-  if (!raw) return out({ ok: false, say: "My brain's offline for a minute. All my AI services are busy. Try me again shortly.", why });
+  if (!raw) { await fridayLog(env, "brain", `No AI answered: ${why.join(" | ")}`); return out({ ok: false, say: "My brain's offline for a minute. All my AI services are busy. Try me again shortly.", why }); }
   let r = {};
   try { const m = raw.match(/\{[\s\S]*\}/); r = JSON.parse((m ? m[0] : raw).replace(/,\s*([}\]])/g, "$1")); } catch { r = { say: raw }; }
   let say = String(r.say || raw).replace(/\*\*?/g, "").replace(/^#+\s*/gm, "").trim().slice(0, 1500);
@@ -664,6 +667,7 @@ ${facts.join("\n")}`;
   await env.SALES.put("friday:history", JSON.stringify([...convo, { role: "assistant", content: say }].slice(-12)), { expirationTtl: 6 * 3600 });
   const PHONE = ["text", "call", "reminder", "event", "timer", "alarm", "directions", "note", "music", "health", "open"];
   const phone = r.phone && typeof r.phone === "object" && PHONE.includes(r.phone.do) ? r.phone : null;
+  for (const [k, v] of [["google", gResult], ["lookup", lResult], ["shop", sResult]]) if (v && /^(Couldn't|Unknown)/.test(String(v))) await fridayLog(env, k, `${JSON.stringify(r[k]).slice(0, 200)} -> ${String(v).slice(0, 200)}`);
   return out({ ok: true, heard, say, ran: r.run || null, remembered: r.remember || null, google: gResult, shop: sResult ? String(sResult).slice(0, 600) : null, lookup: lResult ? String(lResult).slice(0, 600) : null, phone, phone_json: phone ? JSON.stringify(phone) : "" });
 }
 
@@ -1096,6 +1100,12 @@ async function fridayLookup(env, a = {}) {
       if (!Array.isArray(msgs)) return "Couldn't read that channel.";
       return msgs.reverse().map((m) => `${nyTime(m.timestamp)}: ${[m.content, ...(m.embeds || []).map((e) => `${e.title || ""} ${e.description || ""}`)].join(" ").replace(/\s+/g, " ").trim().slice(0, 500)}`).join("\n") || "That channel is empty.";
     }
+    if (a.tool === "wish") {
+      const w = JSON.parse(await env.SALES.get("friday:wishes") || "[]");
+      w.push({ id: crypto.randomUUID().slice(0, 8), at: new Date().toISOString(), text: String(a.text || q).slice(0, 400) });
+      await env.SALES.put("friday:wishes", JSON.stringify(w.slice(-30)));
+      return "Noted for my mechanic. It reads my wish list every night and proposes code for it.";
+    }
     if (a.tool === "report") {
       const idx = JSON.parse(await fetch(`${FRIDAY_RAW}/reports/index.json`, { signal: timeout() }).then((r) => r.text()).catch(() => "[]"));
       const want = String(q || a.agent || "").toLowerCase();
@@ -1204,4 +1214,28 @@ async function fridaySpend(req, env) {
   const at = new Date().toISOString();
   await env.SALES.put(`spend:${at}`, JSON.stringify({ at, amount, merchant: String(d.merchant || "").slice(0, 80), card: String(d.card || "").slice(0, 40) }), { expirationTtl: 400 * 864e5 });
   return out({ ok: true });
+}
+
+// ───────────────────────── Friday's self-repair loop ─────────────────────────
+// She logs her own failures (friday:log) and wishes (friday:wishes). The Friday Mechanic workflow reads them
+// nightly, writes a fix with AI, checks it, and opens a pull request. Nothing ships until the owner merges it.
+async function fridayLog(env, kind, text) {
+  try {
+    const l = JSON.parse(await env.SALES.get("friday:log") || "[]");
+    l.push({ id: crypto.randomUUID().slice(0, 8), at: new Date().toISOString(), kind, text: String(text).replace(/Bearer\s+\S+|[\w.+-]+@[\w-]+\.[\w.]+/g, "[x]").slice(0, 400) });
+    await env.SALES.put("friday:log", JSON.stringify(l.slice(-40)));
+  } catch {}
+}
+async function fridayMechanic(req, env) {
+  const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
+  const key = req.headers.get("x-friday-key") || "";
+  const ok = (await sha256(key)) === FRIDAY_KEY_SHA || (env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)));
+  if (!ok) return out({ ok: false }, 401);
+  if (req.method === "POST") {
+    let d = {}; try { d = await req.json(); } catch {}
+    const ids = new Set(d.clear || []);
+    for (const k of ["friday:log", "friday:wishes"]) { const l = JSON.parse(await env.SALES.get(k) || "[]"); await env.SALES.put(k, JSON.stringify(l.filter((x) => !ids.has(x.id)))); }
+    return out({ ok: true });
+  }
+  return out({ ok: true, log: JSON.parse(await env.SALES.get("friday:log") || "[]"), wishes: JSON.parse(await env.SALES.get("friday:wishes") || "[]") });
 }
