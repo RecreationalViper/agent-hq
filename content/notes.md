@@ -1,10 +1,10 @@
-# Content Creator notes - 2026-11-20
+# Content Creator notes - 2026-11-21
 
-Theme: Last-minute Thanksgiving remembrance table setups and gentle holiday planning
-Headlines made: Personalized place cards for your table | Simple ways guests can share memories | Setting an empty seat with care | Last minute Thanksgiving memory table setup | Crafting tree ornaments holding precious names | Order of service programs for solstice | Editing your memorial program on phone | Collecting cherished stories at the reception
+Theme: Last-minute Thanksgiving remembrance setups, early holiday candlelight traditions, and peaceful memorial service templates.
+Headlines made: Honoring a missing seat at dinner | Meaningful wording for an empty seat | Sharing stories around the Thanksgiving table | Quick last minute Thanksgiving table memorial | Personalized tree ornaments for sacred memories | Order of service for quiet solstice gatherings | Warm welcome signs for celebration of life | Creating a peaceful program in minutes
 
 ## For the Content Planner
-Created 8 posts adhering to all strict holiday constraints: 4 posts spotlighting Harvest Table (Thanksgiving is 6 days away), 1 for Evergreen & Candlelight, 1 for Longest Night, and 2 for Soft Botanical suite. Featured exact piece images across all sets (h-place, h-card, h-sign, h-cards, e-orn, l-prog1, program-inside, memory-card). Included owner-approved coupon code THANKFUL15 in captions of exactly 2 posts. Used two 'tips' background pins with practical numbered ideas under 8 words each, and exactly one 'painted' story background. Avoided all prohibited keywords, software names, and banned headlines.
+Created 8 distinct posts matching all constraints: 4 posts for Harvest Table (Thanksgiving is 5 days away), 1 for Evergreen & Candlelight, 1 for Longest Night, and 2 for Soft Botanical. Used exact product images for spotlighted pieces. Included coupon THANKFUL15 in captions for 2 posts (posts 1 and 2). Utilized 2 'tips' background pins and exactly 2 story posts (1 painted, 1 botanical background). Avoided all prohibited keywords, software names, and banned headlines.
 
 ## For the SEO Scout
-What are top search terms for last-minute printable place cards for Thanksgiving?,Do church planners search more for 'Blue Christmas program template' or 'Longest Night order of service'?
+Are shoppers searching more for 'last minute Thanksgiving table decor' or 'thanksgiving empty seat sign'?,What search phrases do churches use most for solstice services: 'Blue Christmas service order' or 'Longest Night prayer program'?
