@@ -1,26 +1,36 @@
 # GitHub Radar — 2026-11-21
 
-> Scanned 12 of 33 saved searches (12 returned data, 0 unchanged, 0 failed). 20 GitHub API calls, authenticated. Zero AI tokens used.
+> Scanned 12 of 33 saved searches (12 returned data, 0 unchanged, 0 failed). 28 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (3)
+## Start here (1)
 
-- **[rocketride-org/rocketride-server](https://github.com/rocketride-org/rocketride-server)** 🟢 ADOPT · score 86/100 · ⭐ 20,008 · MIT · updated 0d ago
-  - RocketRide is an open source AI meta-harness with the only enterprise-grade runtime built on C++. Build, test and publish durable agents that scale…
-  - Why: 20,008 stars; updated this week; MIT license; well established; contains SKILL.md skill files
-  - Watch out: needs a machine running, not phone-only
-  - Confirmed: contains `SKILL.md` skill files
-- **[JuneYaooo/rea-video](https://github.com/JuneYaooo/rea-video)** 🟡 WATCH · score 70/100 · ⭐ 11,447 · Apache-2.0 · updated 0d ago
-  - Reverse-engineer any video, shot by shot: filmed, AI-generated or coded, and how to remake it. Breakdowns in the open VIDEO.md format. 逆向一切视频，逐个镜头看…
-  - Why: 11,447 stars; updated this week; Apache-2.0 license; well established
-  - Watch out: unofficial/scraping based — may break or breach terms
-- **[revfactory/harness](https://github.com/revfactory/harness)** 🟡 WATCH · score 61/100 · ⭐ 9,386 · Apache-2.0 · updated 54d ago
-  - A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.
-  - Why: 9,386 stars; Apache-2.0 license; well established
+- **[iamajmeena/neonclipping](https://github.com/iamajmeena/neonclipping)** 🟡 WATCH · score 58/100 · ⭐ 1,705 · MIT · updated 0d ago
+  - Paste a link, get captioned 9:16 clips in ~2 min. Free, local, open-source clipping engine (audio-first, YouTube captions, local LLM).
+  - Why: 1,705 stars; updated this week; MIT license
 
-## New inside repos you watch (1)
+## New inside repos you watch (2)
 
-- **[google/adk-recipes](https://github.com/google/adk-recipes)** 🟢 ADOPT · ⭐ 10,655 · Apache-2.0
-  - Added: [.agents/skills/triage-recipe-proposal/SKILL.md](https://github.com/google/adk-recipes/blob/HEAD/.agents/skills/triage-recipe-proposal/SKILL.md)
+- **[google/skills](https://github.com/google/skills)** 🟢 ADOPT · ⭐ 24,516 · Apache-2.0
+  - Added: [plugins/health/google-health-developer/skills/finding-google-skills/SKILL.md](https://github.com/google/skills/blob/HEAD/plugins/health/google-health-developer/skills/finding-google-skills/SKILL.md)
+- **[google/skills](https://github.com/google/skills)** 🟢 ADOPT · ⭐ 24,516 · Apache-2.0
+  - Added: [skills/cloud/google-cloud-solution-event-driven-decoupling/SKILL.md](https://github.com/google/skills/blob/HEAD/skills/cloud/google-cloud-solution-event-driven-decoupling/SKILL.md)
+
+## Just launched — new repos (3)
+
+_Created in the last few weeks. Surfaced early on purpose, so they stay WATCH until they have a track record._
+
+- **[danielwh2/sprite-stacking](https://github.com/danielwh2/sprite-stacking)** 🟡 WATCH · score 74/100 · ⭐ 349 · MIT · updated 1d ago
+  - Agent skill: turn four pixel art views into fake-3D sprites you can spin. Works with Claude Code, Codex, Cursor, OpenCode, Gemini CLI, Pi.
+  - Why: filed under skills; 349 stars; updated this week; MIT license; new repo, 1 day old; early traction
+  - Watch out: brand-new repo — unproven, watch before adopting
+- **[sybil-solutions/skill-distill](https://github.com/sybil-solutions/skill-distill)** 🟡 WATCH · score 66/100 · ⭐ 284 · MIT · updated 1d ago
+  - Distill a good Claude Code / Codex session into a skill an open-weight model can follow to reproduce the task
+  - Why: filed under skills; 284 stars; updated this week; MIT license; new repo, 1 day old; early traction
+  - Watch out: brand-new repo — unproven, watch before adopting
+- **[diego3g/craft](https://github.com/diego3g/craft)** 🟡 WATCH · score 58/100 · ⭐ 381 · no license · updated 4d ago
+  - Design skills for AI agents: /craft-setup writes your design brief, /craft designs screens with every state from your design system and reviews the…
+  - Why: filed under skills; 381 stars; updated this week; new repo, 6 days old; early traction
+  - Watch out: no license — check before reusing; brand-new repo — unproven, watch before adopting
 
 ## Agent skills you could install (0)
 
@@ -43,9 +53,9 @@ _Nothing else new here this scan._
 - [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) — score 96, first seen 2026-11-06, adopt
 - [modelcontextprotocol/python-sdk](https://github.com/modelcontextprotocol/python-sdk) — score 96, first seen 2026-11-06, adopt
 - [obra/superpowers](https://github.com/obra/superpowers) — score 94, first seen 2026-11-06, adopt
-- [google/skills](https://github.com/google/skills) — score 94, first seen 2026-11-06, adopt
 - [agentes-chat/agentes-chat](https://github.com/agentes-chat/agentes-chat) — score 90, first seen 2026-11-17, watch
 - [erkamyaman/rust-anything](https://github.com/erkamyaman/rust-anything) — score 90, first seen 2026-11-18, watch
+- [DIYgod/pinky](https://github.com/DIYgod/pinky) — score 88, first seen 2026-11-17, watch
 
 ## How to read this
 
