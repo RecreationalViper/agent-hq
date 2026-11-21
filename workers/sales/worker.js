@@ -646,7 +646,7 @@ ${facts.join("\n")}`;
   let sResult = null;
   if (owner && r.shop && typeof r.shop === "object" && r.shop.do) {
     sResult = await fridayShop(env, r.shop);
-    if (/^(Couldn't|Need |Unknown|Payhip didn't|Stripe isn't)/.test(sResult)) say = sResult;
+    if (/^(Couldn't|Need |Unknown|Payhip didn't|Stripe isn't)/.test(sResult)) say = sResult.replace(/^Stripe isn't connected, and/, "Stripe isn't hooked up yet, and");
     else { const a2 = await secondPass("SHOP RESULT", r.shop, sResult); if (a2) say = a2; }
   }
   if (owner && r.google && typeof r.google === "object" && r.google.do) {
@@ -989,7 +989,7 @@ async function fridayConnections(req, env) {
   return out({ ok: true, apps: [
     { id: "google", icon: "✉️", name: "Google: Gmail, Calendar, Drive", connect: !!env.GOOGLE_CLIENT_ID, connected: !!g, detail: g ? `${g.email || "connected"} · ${parts || "limited"}${g.scope?.includes("drive") ? "" : " · tap Reconnect to add Drive, Docs, Sheets"}` : "Inbox, calendar, Drive, Docs, Sheets. Sends email only when you say" },
     { id: "payhip", icon: "🛒", name: "Payhip shop", connected: on("PAYHIP_API_KEY"), detail: "Orders, refunds, net sales, create coupons" },
-    { id: "stripe", icon: "💳", name: "Stripe", key: true, connected: stripe, detail: stripe ? "Balance, payments, payouts" : "If Payhip pays you through Stripe: Stripe › Developers › API keys › Create restricted key (Read access), paste it here" },
+    { id: "stripe", icon: "💳", name: "Stripe", key: true, connected: stripe, detail: stripe ? "Balance, payments, payouts" : "Until then she reads Stripe's payout emails in your Gmail. For live balance: Stripe › Developers › API keys, paste it here" },
     { id: "business", icon: "🕊️", name: "Forever Held agents", connected: true, detail: "Posts, church outreach, agent health, start agent jobs" },
     { id: "brain", icon: "🧠", name: "Claude (think hard)", connected: on("CLAUDE_API_KEY"), detail: "Say \"think hard\" or \"ask Claude\". $2/month cap" },
     { id: "web", icon: "🌐", name: "Web search", connected: on("TAVILY_API_KEY") || on("EXA_API_KEY"), detail: "News, prices, facts (Tavily + Exa)" },
@@ -1123,7 +1123,11 @@ async function fridayShop(env, a = {}) {
     }
     if (["balance", "payments", "payouts"].includes(a.do)) {
       const sk = await env.SALES.get("friday:key:stripe");
-      if (!sk) return "Stripe isn't connected. He can add a key in Friday's Settings.";
+      if (!sk) {
+        // No key (Stripe wouldn't let him make one): fall back to Stripe's own emails in his Gmail
+        const mail = await runGoogle(env, { do: "email_search", query: a.do === "payments" ? "from:stripe.com (payment OR charge OR receipt) newer_than:60d" : "from:stripe.com (payout OR deposit OR balance OR transfer) newer_than:90d" });
+        return /^No emails|^Couldn't/.test(mail) ? "Stripe isn't connected, and I couldn't find Stripe emails in the connected Gmail. He can check the Stripe app, or add a key in Friday's Settings later." : `From Stripe's emails (no API key yet, so this is what Stripe emailed him):\n${mail}`;
+      }
       const st = (p) => fetch("https://api.stripe.com/v1" + p, { signal: timeout(), headers: { Authorization: "Bearer " + sk } }).then(async (r) => { const j = await r.json(); if (!r.ok) throw new Error(j.error?.message || r.status); return j; });
       const $ = (c, cur) => `${(c / 100).toFixed(2)} ${String(cur || "usd").toUpperCase()}`;
       if (a.do === "balance") { const b = await st("/balance"); return `Available: ${b.available.map((x) => $(x.amount, x.currency)).join(", ")}. Pending: ${b.pending.map((x) => $(x.amount, x.currency)).join(", ")}.`; }
