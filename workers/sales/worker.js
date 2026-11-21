@@ -542,7 +542,19 @@ const FRIDAY_KEY_SHA = "24e6f6d78ba5f775d60efcb6ff8939a5f19d5ae7f22f2e0a79aba608
 const FRIDAY_RAW = `https://raw.githubusercontent.com/${REPO}/main`;
 const FRIDAY_RUNS = { ...RUNS, "mechanic": ["friday-mechanic.yml", {}], "outreach-replies": ["outreach.yml", { mode: "replies" }], "assistant-check": ["assistant-check.yml", {}], "publish-store": ["deploy-store.yml", {}], "pinterest-stats": ["pinterest-stats.yml", {}] };
 
+// Timing wrapper: every Friday request leaves a content-free trace (steps and milliseconds) so problems
+// like "network connection lost" on his phone can be diagnosed without his key or his words.
 async function friday(req, env, ctx) {
+  const t0 = Date.now(), trace = { at: new Date().toISOString(), ua: (req.headers.get("user-agent") || "").slice(0, 40), type: (req.headers.get("content-type") || "").slice(0, 30) };
+  let res;
+  try { res = await fridayInner(req, env, ctx, trace); }
+  catch (e) { trace.crash = String(e.message || e).slice(0, 160); res = new Response(JSON.stringify({ ok: false, say: "Something in me just broke. I've logged it for my mechanic.", error: "crash" }), { status: 500, headers: { "content-type": "application/json" } }); await fridayLog(env, "crash", trace.crash); }
+  trace.ms = Date.now() - t0; trace.status = res.status;
+  const save = (async () => { try { const l = JSON.parse(await env.SALES.get("friday:trace") || "[]"); l.push(trace); await env.SALES.put("friday:trace", JSON.stringify(l.slice(-25))); } catch {} })();
+  if (ctx?.waitUntil) ctx.waitUntil(save); else await save;
+  return res;
+}
+async function fridayInner(req, env, ctx, trace = {}) {
   const origin = req.headers.get("origin") || "";
   const cors = /^https:\/\/recreationalviper\.github\.io$/i.test(origin) ? { "access-control-allow-origin": origin, "access-control-allow-methods": "POST, OPTIONS", "access-control-allow-headers": "content-type, x-friday-key", vary: "origin" } : {};
   const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store", ...cors } });
@@ -551,7 +563,8 @@ async function friday(req, env, ctx) {
   const key = req.headers.get("x-friday-key") || "";
   // the owner's key, or the agents' test key (derived from the Payhip secret, so it never appears anywhere public)
   const owner = (await sha256(key)) === FRIDAY_KEY_SHA;
-  if (!owner && !(env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)))) return out({ ok: false, say: "Sorry, I don't know you." }, 401);
+  trace.who = owner ? "owner" : "test";
+  if (!owner && !(env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)))) { trace.who = "unknown"; return out({ ok: false, say: "Sorry, I don't know you." }, 401); }
   // voice: the app sends recorded audio; Groq Whisper turns it into text (free tier: 2,000 clips a day)
   let d = {}, heard = "";
   const type = req.headers.get("content-type") || "";
@@ -570,7 +583,13 @@ async function friday(req, env, ctx) {
   const now = new Date();
   const ny = now.toLocaleString("en-US", { timeZone: "America/New_York", weekday: "long", month: "long", day: "numeric", hour: "numeric", minute: "2-digit" });
 
-  const facts = await fridayFacts(env, now, owner);
+  let tf = Date.now();
+  // facts are cached for 2 minutes so back-to-back questions answer fast
+  const fkey = `friday:factcache:${owner ? "o" : "t"}`;
+  let facts = null;
+  try { const c = JSON.parse(await env.SALES.get(fkey) || "null"); if (c && Date.now() - c.t < 120000) facts = c.f; } catch {}
+  if (!facts) { facts = await fridayFacts(env, now, owner); const w = env.SALES.put(fkey, JSON.stringify({ t: Date.now(), f: facts }), { expirationTtl: 300 }).catch(() => {}); if (ctx?.waitUntil) ctx.waitUntil(w); trace.facts = "fresh"; } else trace.facts = "cached";
+  trace.facts_ms = Date.now() - tf; tf = Date.now();
 
   const system = `You are FRIDAY, Josiah Cottingham's personal AI, modeled on Tony Stark's FRIDAY (and JARVIS before her). ${FRIDAY_PERSONA}
 It's ${ny} (New York).
@@ -621,6 +640,7 @@ ${facts.join("\n")}`;
   for (const ask of [groqChat, geminiChat, openRouterChat, workersChat]) {
     try { raw = stripPlanning(await ask(env, system, convo) || ""); if (raw) break; } catch (e) { why.push(`${ask.name}: ${String(e.message || e).slice(0, 80)}`); }
   }
+  trace.ai_ms = Date.now() - tf; trace.ai = why.length; tf = Date.now();
   if (!raw) { await fridayLog(env, "brain", `No AI answered: ${why.join(" | ")}`); return out({ ok: false, say: "My brain's offline for a minute. All my AI services are busy. Try me again shortly.", why }); }
   let r = {};
   try { const m = raw.match(/\{[\s\S]*\}/); r = JSON.parse((m ? m[0] : raw).replace(/,\s*([}\]])/g, "$1")); } catch { r = { say: raw }; }
@@ -670,6 +690,7 @@ ${facts.join("\n")}`;
   const PHONE = ["text", "call", "reminder", "event", "timer", "alarm", "directions", "note", "music", "health", "open"];
   const phone = r.phone && typeof r.phone === "object" && PHONE.includes(r.phone.do) ? r.phone : null;
   for (const [k, v] of [["google", gResult], ["lookup", lResult], ["shop", sResult]]) if (v && /^(Couldn't|Unknown)/.test(String(v))) await fridayLog(env, k, `${JSON.stringify(r[k]).slice(0, 200)} -> ${String(v).slice(0, 200)}`);
+  trace.tools_ms = Date.now() - tf; trace.tools = [r.google && "google", r.lookup && "lookup", r.shop && "shop", r.phone && "phone", r.run && "run"].filter(Boolean).join(",");
   return out({ ok: true, heard, say, ran: r.run || null, remembered: r.remember || null, google: gResult, shop: sResult ? String(sResult).slice(0, 600) : null, lookup: lResult ? String(lResult).slice(0, 600) : null, phone, phone_json: phone ? JSON.stringify(phone) : "", phone_url: phone ? phoneUrl(phone) : "" });
 }
 
@@ -1252,7 +1273,7 @@ async function fridayMechanic(req, env) {
     for (const k of ["friday:log", "friday:wishes"]) { const l = JSON.parse(await env.SALES.get(k) || "[]"); await env.SALES.put(k, JSON.stringify(l.filter((x) => !ids.has(x.id)))); }
     return out({ ok: true });
   }
-  return out({ ok: true, log: JSON.parse(await env.SALES.get("friday:log") || "[]"), wishes: JSON.parse(await env.SALES.get("friday:wishes") || "[]") });
+  return out({ ok: true, log: JSON.parse(await env.SALES.get("friday:log") || "[]"), wishes: JSON.parse(await env.SALES.get("friday:wishes") || "[]"), trace: JSON.parse(await env.SALES.get("friday:trace") || "[]") });
 }
 
 // One link the Friday Shortcut opens to carry out a phone action ("Open URLs").

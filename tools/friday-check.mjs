@@ -51,3 +51,8 @@ if (live.ok) {
   await done; try { ws.close(); } catch {}
   console.log(`LIVE events: ${events.join(" > ")}\nLIVE audio: ${Math.round(audioBytes / 1024)} KB\nLIVE said: ${said}`);
 }
+
+// Recent request traces (steps + milliseconds only, no words), to diagnose phone problems
+const tr = await fetch(URL_ + "/mechanic", { headers: { "x-friday-key": key } }).then((r) => r.json()).catch(() => ({}));
+console.log("\nRECENT TRACES:");
+for (const t of (tr.trace || []).slice(-12)) console.log(`  ${t.at} ${t.who} ${t.status} ${t.ms}ms facts=${t.facts}/${t.facts_ms}ms ai=${t.ai_ms}ms tools=${t.tools || "-"}/${t.tools_ms ?? "-"}ms ${t.type || ""} ${t.ua || ""}${t.crash ? " CRASH " + t.crash : ""}`);
