@@ -631,6 +631,7 @@ Use "run" only when he clearly asks to start an agent job. Use "remember" when h
   {"do":"text","to":"contact name or number","message":"..."}   {"do":"call","to":"contact name or number"}
   {"do":"reminder","title":"...","when":"YYYY-MM-DD HH:MM in New York time, or empty"}   {"do":"event","title":"...","when":"natural start time","minutes":60}
   {"do":"timer","minutes":20}   {"do":"alarm","when":"6:30 AM","label":"..."}   {"do":"directions","to":"place or address"}   {"do":"note","title":"...","text":"..."}
+  {"do":"pay","app":"cashapp|venmo","to":"$cashtag or venmo username","amount":20,"note":"..."}  opens Cash App or Venmo with the payment filled in; HE taps Pay (you never send money yourself)
   {"do":"music","query":"artist, song or playlist"}   {"do":"health","metric":"steps|sleep|heart rate|active energy|weight","days":1}   {"do":"open","url":"https://... or app URL"}
 For texts, write the message in his voice, short. Your "say" should confirm what you're doing ("Texting Mom that you'll be late."). Any question about his own health numbers (steps, sleep, heart rate, workouts, weight) ALWAYS gets {"do":"health",...}: you can't see them until his phone sends them, so say you're checking.
 If his message starts with "PHONE DATA:", it's numbers his phone just sent for a question he asked: answer from them.
@@ -693,7 +694,7 @@ ${facts.join("\n")}`;
   } else if (!owner && r.google) say += " (Google tools are owner-only.)";
   if (r.remember && typeof r.remember === "string") { memory.push(`${r.remember.slice(0, 200)} (${now.toISOString().slice(0, 10)})`); await env.SALES.put("friday:memory", JSON.stringify(memory.slice(-200))); }
   await env.SALES.put("friday:history", JSON.stringify([...convo, { role: "assistant", content: say }].slice(-12)), { expirationTtl: 6 * 3600 });
-  const PHONE = ["text", "call", "reminder", "event", "timer", "alarm", "directions", "note", "music", "health", "open"];
+  const PHONE = ["text", "call", "reminder", "event", "timer", "alarm", "directions", "note", "music", "health", "open", "pay"];
   const phone = r.phone && typeof r.phone === "object" && PHONE.includes(r.phone.do) ? r.phone : null;
   for (const [k, v] of [["google", gResult], ["lookup", lResult], ["shop", sResult]]) if (v && /^(Couldn't|Unknown)/.test(String(v))) await fridayLog(env, k, `${JSON.stringify(r[k]).slice(0, 200)} -> ${String(v).slice(0, 200)}`);
   trace.tools_ms = Date.now() - tf; trace.tools = [r.google && "google", r.lookup && "lookup", r.shop && "shop", r.phone && "phone", r.run && "run"].filter(Boolean).join(",");
@@ -1307,6 +1308,11 @@ function phoneUrl(p) {
     case "call": return digits.length >= 7 ? `tel:${digits}` : hands();
     case "directions": return `maps://?daddr=${e(p.to || p.query || "")}`;
     case "music": return `music://music.apple.com/us/search?term=${e(p.query || "")}`;
+    case "pay": {
+      const amt = Number(p.amount) > 0 ? Number(p.amount).toFixed(2) : "";
+      if (/venmo/i.test(p.app || "")) return `venmo://paycharge?txn=pay&recipients=${e(String(p.to || "").replace(/^@/, ""))}${amt ? `&amount=${amt}` : ""}&note=${e(p.note || "")}`;
+      return `https://cash.app/${e(String(p.to || "").startsWith("$") ? p.to : "$" + (p.to || ""))}${amt ? `/${amt}` : ""}`;
+    }
     case "open": return /^[a-z][\w+.-]*:/i.test(p.url || "") ? p.url : "";
     case "health": return "";
     default: return hands(); // reminder, timer, alarm, note, event
@@ -1455,6 +1461,8 @@ async function plaidCall(env, path, body) {
 async function fridayPlaid(req, env, url) {
   const html = (b) => new Response(b, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" } });
   const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
+  if (url.pathname === "/friday/plaid" && req.method === "GET") { await fridayLog(env, "plaid", "connect page opened"); }
+  if (url.pathname === "/friday/plaid/log" && req.method === "POST") { let d = {}; try { d = await req.json(); } catch {} await fridayLog(env, "plaid", `page: ${String(d.msg || "").slice(0, 200)}`); return out({ ok: true }); }
   if (url.pathname === "/friday/plaid" && req.method === "GET") return html(`<!doctype html><meta name=viewport content="width=device-width,initial-scale=1"><title>Connect a bank</title>
 <body style="font:18px/1.5 -apple-system,system-ui,sans-serif;background:#07080d;color:#e8ecf5;padding:28px;max-width:560px;margin:auto"><div style="font-size:40px">◉</div><h2>Connect an account to Friday</h2>
 <p id=s>Opening Plaid's secure login…</p><p style="color:#8a94ad;font-size:15px">You sign in on Plaid's page, not Friday's. Friday only gets read access to balances and transactions; she can't move money.</p>
@@ -1462,10 +1470,14 @@ async function fridayPlaid(req, env, url) {
 <script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script><script>
 const k = decodeURIComponent(location.hash.slice(1)), s = document.getElementById("s");
 const post = (p, b) => fetch(p, { method: "POST", headers: { "x-friday-key": k, "content-type": "application/json" }, body: JSON.stringify(b || {}) }).then(r => r.json());
+const log = (msg) => fetch("/friday/plaid/log", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ msg }) }).catch(() => {});
+if (!k) { s.textContent = "Open this from Friday's Settings (Connect button), not directly."; log("no key in link"); }
+window.onerror = (m) => log("js error: " + m);
+if (!window.Plaid) { s.textContent = "Plaid's login couldn't load. Turn off content blockers for this page and try again."; log("Plaid script missing"); }
 post("/friday/plaid/token").then(j => {
-  if (!j.link_token) { s.textContent = "Plaid didn't start: " + (j.error || "unknown") + ". Send Claude a screenshot."; return; }
+  if (!j.link_token) { log("no link token: " + (j.error || "unknown")); s.textContent = "Plaid didn't start: " + (j.error || "unknown") + ". Send Claude a screenshot."; return; }
   Plaid.create({ token: j.link_token, onSuccess: (pt, meta) => { s.textContent = "Saving…"; post("/friday/plaid/exchange", { public_token: pt, institution: meta.institution && meta.institution.name }).then(r => { s.textContent = r.ok ? "Connected ✓ " + (r.institution || "") + ". Connect another, or go back to Friday." : "Couldn't save: " + r.error; }); },
-    onExit: (e) => { s.innerHTML = e ? "Stopped: " + (e.display_message || e.error_message || "closed") : "Closed. <a href='' style='color:#4aa3ff'>Connect another</a>"; } }).open();
+    onExit: (e) => { if (e) log("exit: " + (e.error_code || "") + " " + (e.display_message || e.error_message || "")); s.innerHTML = e ? "Stopped: " + (e.display_message || e.error_message || "closed") : "Closed. <a href='' style='color:#4aa3ff'>Connect another</a>"; } }).open();
 });
 </script>`);
   if ((await sha256(req.headers.get("x-friday-key") || "")) !== FRIDAY_KEY_SHA) return out({ ok: false, error: "not owner" }, 401);
@@ -1483,7 +1495,7 @@ post("/friday/plaid/token").then(j => {
       await env.SALES.put("friday:plaid", JSON.stringify(items));
       return out({ ok: true, institution: d.institution });
     }
-  } catch (e) { return out({ ok: false, error: String(e.message || e).slice(0, 200) }, 400); }
+  } catch (e) { await fridayLog(env, "plaid", `${url.pathname}: ${String(e.message || e).slice(0, 200)}`); return out({ ok: false, error: String(e.message || e).slice(0, 200) }, 400); }
   return out({ ok: false }, 404);
 }
 async function plaidMoney(env, kind, days = 30) {
