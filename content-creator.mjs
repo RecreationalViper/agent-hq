@@ -81,6 +81,13 @@ const THEMES = {
 
 // Live products the team can promote: approved with a checkout link; holiday sets only from 45 days before their window until it ends.
 let PROMOS = []; // owner-approved coupons still running
+// notes Josiah gave Friday for this agent ("Friday, tell the content creator to...")
+let OWNER_NOTES = [];
+try {
+  const k = (await import("node:crypto")).createHash("sha256").update("friday-check:" + (process.env.PAYHIP_API_KEY || "").trim()).digest("hex");
+  OWNER_NOTES = (await fetch("https://foreverheld-sales.foreverheld.workers.dev/friday/directives?agent=content-creator", { headers: { "x-friday-key": k }, signal: AbortSignal.timeout(10000) }).then((r) => r.json())).notes || [];
+  if (OWNER_NOTES.length) console.log(`Friday passed on ${OWNER_NOTES.length} instruction(s) from Josiah.`);
+} catch {}
 async function catalog() {
   let list = [];
   try { const all = JSON.parse(await read("products/collections.json", "{}")); list = all.collections || []; PROMOS = (all.promos || []).filter((p) => (p.until || "") >= DATE); } catch {}
@@ -192,7 +199,7 @@ Mix: ${Math.max(COUNT - 2, 1)} Pinterest pins (format "pin") and 2 vertical TikT
 
 # Make it useful, not an ad
 Pinterest rewards pins people SAVE: ideas, how-tos and lists. Headlines must not just name the product ("Welcome sign printable" is weak; "What to write on a welcome sign" is strong). Today's angles to draw from (use at least 3 different ones):
-${angles(products).map((a) => `- ${a}`).join("\n")}
+${angles(products).map((a) => `- ${a}`).join("\n")}${OWNER_NOTES.length ? `\n# Josiah's instructions (passed on by Friday): follow these first, within the brand rules\n${OWNER_NOTES.map((n) => `- ${n}`).join("\n")}` : ""}
 # Show the forms we sell
 Each set has several different forms (signs, cards, place cards, programs, ornament cards). Market them one at a time: every post spotlights ONE specific piece, names it plainly (what it is, its size or use), and uses that piece's picture as product_image. Today's featured pieces (cover these first, one post each where you can):
 ${featured(products).map((f) => `- ${f}`).join("\n")}

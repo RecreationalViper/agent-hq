@@ -41,6 +41,7 @@ for (const { id } of messages.reverse()) {
   const body = bounce ? `The email to ${row?.email || "a church"} didn't go through (address no longer works). It's marked bounced; no action needed.`
     : `**From:** ${from}\n**Church:** ${row ? `${row.name} (${row.city})` : "unknown"}\n**When:** ${new Date(Number(m.internalDate)).toLocaleString("en-US", { timeZone: "America/New_York" })}\n**Subject:** ${h.subject || ""}\n\n${text}\n\n_Reply from the shop Gmail (foreverheld.shop@gmail.com)._`;
   await report("email-marketer", title, body).catch(() => {});
+  if (!bounce) await fetch("https://foreverheld-sales.foreverheld.workers.dev/friday/notify", { method: "POST", headers: { "x-friday-key": (await import("node:crypto")).createHash("sha256").update("friday-check:" + (process.env.PAYHIP_API_KEY || "").trim()).digest("hex"), "content-type": "application/json" }, body: JSON.stringify({ title: "Church reply", message: `${row?.name || "A church"} replied. Ask Friday or check Discord #content.`, priority: "high" }) }).catch(() => {});
   console.log(`  ${title}`);
   seen.push(id); n++;
 }

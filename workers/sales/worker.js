@@ -33,6 +33,7 @@ export default {
         coupon: (e.items || []).map((i) => i.used_coupon || i.coupon_code).filter(Boolean)[0] || null
       };
       await env.SALES.put(`${record.type}:${record.date}:${record.id}`, JSON.stringify(record), { expirationTtl: 60 * 60 * 24 * 400 });
+      await fridayNotify(env, record.type === "paid" ? "🕊️ New sale!" : "↩️ Refund", `${record.items.map((i) => i.product).join(", ") || "An item"}: $${(record.type === "paid" ? record.amount : record.refunded).toFixed(2)}`, record.type === "paid" ? "high" : "default").catch(() => {});
       if (env.DISCORD_BOT_TOKEN && env.DISCORD_SALES_CHANNEL) {
         const what = record.items.map((i) => i.product).join(", ") || "an item";
         const content = record.type === "paid"
@@ -66,6 +67,7 @@ export default {
     if (url.pathname === "/friday/spend") return fridaySpend(req, env);
     if (url.pathname === "/friday/mechanic") return fridayMechanic(req, env);
     if (url.pathname === "/friday/briefing") return fridayBriefing(req, env);
+    if (url.pathname === "/friday/directives" || url.pathname === "/friday/notify") return fridayAgentBridge(req, env, url);
     if (url.pathname === "/friday") return friday(req, env, ctx);
     if (url.pathname === "/friday/live" || url.pathname === "/friday/tool") return fridayLive(req, env, url.pathname.endsWith("tool"));
     if (url.pathname === "/contacts") return contactsInbox(req, url, env);
@@ -599,7 +601,7 @@ His world:
 - Other projects may come up (lead generation for roofers, TikTok edits, trading agents). Help with anything: questions, ideas, planning, general knowledge.
 Use only the LIVE FACTS below for anything about his businesses' numbers or status; if something isn't there, say you don't have it yet. Never invent sales, replies or results.
 
-You can act. Return ONLY JSON: {"say": "what you speak", "run": null or one of [${Object.keys(FRIDAY_RUNS).join(", ")}], "remember": null or "a short fact to keep about him", "phone": null or a phone action, "google": null or a Google action, "lookup": null or a lookup, "shop": null or a shop action}.
+You can act. Return ONLY JSON: {"say": "what you speak", "listen": true if you asked him something or the conversation is clearly continuing, false when it's wrapped up (thanks, bye, that's all, or a finished task), "run": null or one of [${Object.keys(FRIDAY_RUNS).join(", ")}], "remember": null or "a short fact to keep about him", "phone": null or a phone action, "google": null or a Google action, "lookup": null or a lookup, "shop": null or a shop action}.
 "shop" runs his Payhip store and money (he's the owner and lets you act on the business):
   {"do":"sales","days":30}  orders, gross, fees, refunds, net   {"do":"orders","limit":10}   {"do":"refunds","days":90}
   {"do":"coupons"}  list coupons   {"do":"coupon_create","code":"WORD","percent":15,"until":"YYYY-MM-DD"}  only when he asks for one; real promos only, never fake urgency
@@ -612,6 +614,7 @@ Google also has: {"do":"drive_search","query":"..."} {"do":"doc_read","query":"f
   {"tool":"notion","query":"..."}  search his Notion   {"tool":"note","title":"...","text":"..."}  save notes, ideas or plans to his Notion
   {"tool":"discord","channel":"content|sales|inbox|alerts|research|growth|trading-desk|..."}  read what his agents posted (church replies are in content)
   {"tool":"report","query":"agent name like growth coach or researcher"}  read an agent's latest report
+  {"tool":"direct","agent":"content-creator|email-marketer|growth-coach|researcher|webdev","text":"his instruction"}  pass his instruction to an agent (it follows it on its next runs for 3 days). Also start that agent with "run" if he wants it now.
   {"tool":"wish","text":"what you can't do yet and should learn, or a bug you noticed"}  your self-improvement list. Use it whenever he asks for something you can't do, or something of yours broke. Your mechanic writes the code overnight and he approves it.
 To fix yourself right away (he says "fix yourself", "you're broken", "upgrade yourself"), use "run": "mechanic".
 When you use a lookup, "say" can be a short "One sec." because you'll answer again with the result.
@@ -624,8 +627,8 @@ For calendar events prefer google event_add when Google is connected; otherwise 
 Use "run" only when he clearly asks to start an agent job. Use "remember" when he tells you something worth keeping (a preference, a plan, a person) or says "remember".
 "phone" makes HIS iPhone do something (his Shortcuts app carries it out). Use it only when he asks for it. Shapes:
   {"do":"text","to":"contact name or number","message":"..."}   {"do":"call","to":"contact name or number"}
-  {"do":"reminder","title":"...","when":"natural time like tomorrow 5pm, or empty"}   {"do":"event","title":"...","when":"natural start time","minutes":60}
-  {"do":"timer","minutes":20}   {"do":"alarm","when":"6:30 AM"}   {"do":"directions","to":"place or address"}   {"do":"note","title":"...","text":"..."}
+  {"do":"reminder","title":"...","when":"YYYY-MM-DD HH:MM in New York time, or empty"}   {"do":"event","title":"...","when":"natural start time","minutes":60}
+  {"do":"timer","minutes":20}   {"do":"alarm","when":"6:30 AM","label":"..."}   {"do":"directions","to":"place or address"}   {"do":"note","title":"...","text":"..."}
   {"do":"music","query":"artist, song or playlist"}   {"do":"health","metric":"steps|sleep|heart rate|active energy|weight","days":1}   {"do":"open","url":"https://... or app URL"}
 For texts, write the message in his voice, short. Your "say" should confirm what you're doing ("Texting Mom that you'll be late."). Any question about his own health numbers (steps, sleep, heart rate, workouts, weight) ALWAYS gets {"do":"health",...}: you can't see them until his phone sends them, so say you're checking.
 If his message starts with "PHONE DATA:", it's numbers his phone just sent for a question he asked: answer from them.
@@ -667,7 +670,7 @@ ${facts.join("\n")}`;
   if (!r.lookup && /\b(think (hard|deep|it through|about it)|ask claude)\b/i.test(q)) r.lookup = { tool: "think", query: q, context: facts.join("\n").slice(0, 2500) };
   if (r.lookup && typeof r.lookup === "object" && (owner || ["web", "think", "report"].includes(r.lookup.tool))) {
     lResult = await fridayLookup(env, r.lookup);
-    if (r.lookup.tool === "note" || /^Couldn't|isn't connected|Unknown lookup/.test(lResult)) say = r.lookup.tool === "note" && lResult === "Saved to Notion." ? say : lResult;
+    if (["note", "direct", "wish"].includes(r.lookup.tool) || /^Couldn't|isn't connected|Unknown lookup/.test(lResult)) say = r.lookup.tool === "note" && lResult === "Saved to Notion." ? say : lResult;
     else { const a2 = await secondPass(`${r.lookup.tool.toUpperCase()} RESULT`, r.lookup, lResult); if (a2) say = a2; }
   }
   let sResult = null;
@@ -691,7 +694,8 @@ ${facts.join("\n")}`;
   const phone = r.phone && typeof r.phone === "object" && PHONE.includes(r.phone.do) ? r.phone : null;
   for (const [k, v] of [["google", gResult], ["lookup", lResult], ["shop", sResult]]) if (v && /^(Couldn't|Unknown)/.test(String(v))) await fridayLog(env, k, `${JSON.stringify(r[k]).slice(0, 200)} -> ${String(v).slice(0, 200)}`);
   trace.tools_ms = Date.now() - tf; trace.tools = [r.google && "google", r.lookup && "lookup", r.shop && "shop", r.phone && "phone", r.run && "run"].filter(Boolean).join(",");
-  return out({ ok: true, heard, say, ran: r.run || null, remembered: r.remember || null, google: gResult, shop: sResult ? String(sResult).slice(0, 600) : null, lookup: lResult ? String(lResult).slice(0, 600) : null, phone, phone_json: phone ? JSON.stringify(phone) : "", phone_url: phone ? phoneUrl(phone) : "" });
+  const listen = r.listen === true || (r.listen !== false && /\?\s*$/.test(say));
+  return out({ ok: true, heard, say, listen: listen ? "yes" : "", ran: r.run || null, remembered: r.remember || null, google: gResult, shop: sResult ? String(sResult).slice(0, 600) : null, lookup: lResult ? String(lResult).slice(0, 600) : null, phone, phone_json: phone ? JSON.stringify(phone) : "", phone_url: phone ? phoneUrl(phone) : "" });
 }
 
 
@@ -1042,6 +1046,7 @@ async function fridayConnections(req, env) {
     { id: "web", icon: "🌐", name: "Web search", connected: on("TAVILY_API_KEY") || on("EXA_API_KEY"), detail: "News, prices, facts (Tavily + Exa)" },
     { id: "notion", icon: "📓", name: "Notion", connected: on("NOTION_TOKEN"), detail: "Search and save notes. Share a page with the agents' Notion connection for her to see it" },
     { id: "discord", icon: "💬", name: "Discord", connected: on("DISCORD_BOT_TOKEN"), detail: "Reads your agents' channels (church replies, sales, alerts)" },
+    { id: "ntfy", icon: "🔔", name: "Phone notifications (ntfy)", connected: true, detail: `Free ntfy app › + › subscribe to: ${await ntfyTopic(env)}`, copy: await ntfyTopic(env) },
     { id: "phone", icon: "📱", name: "iPhone (Friday Hands Shortcut)", detail: "Texts, calls, reminders, alarms, music, directions, Health. Ask Claude to walk you through it" },
     { id: "xmoney", icon: "𝕏", name: "X Money", connected: !!g, detail: g ? "Reads X Money's emails in your Gmail (X has no app connection yet)" : "Connect Google so she can read X Money's emails" },
     { id: "paypal", icon: "🅿️", name: "PayPal", soon: true, detail: "Balance and payouts, if Payhip pays you through PayPal" },
@@ -1135,6 +1140,13 @@ async function fridayLookup(env, a = {}) {
       const msgs = await fetch(`https://discord.com/api/v10/channels/${id}/messages?limit=12`, { signal: timeout(), headers: { Authorization: `Bot ${env.DISCORD_BOT_TOKEN}` } }).then((r) => r.json());
       if (!Array.isArray(msgs)) return "Couldn't read that channel.";
       return msgs.reverse().map((m) => `${nyTime(m.timestamp)}: ${[m.content, ...(m.embeds || []).map((e) => `${e.title || ""} ${e.description || ""}`)].join(" ").replace(/\s+/g, " ").trim().slice(0, 500)}`).join("\n") || "That channel is empty.";
+    }
+    if (a.tool === "direct") {
+      const agent = String(a.agent || "content-creator").toLowerCase().replace(/[^a-z-]/g, "");
+      const d = JSON.parse(await env.SALES.get("friday:directives") || "{}");
+      d[agent] = [...(d[agent] || []).filter((x) => Date.now() - Date.parse(x.at) < 3 * 864e5), { at: new Date().toISOString(), text: String(a.text || q).slice(0, 500) }].slice(-5);
+      await env.SALES.put("friday:directives", JSON.stringify(d));
+      return `Passed to ${agent}. It follows that on its next runs for the next 3 days.`;
     }
     if (a.tool === "wish") {
       const w = JSON.parse(await env.SALES.get("friday:wishes") || "[]");
@@ -1317,5 +1329,36 @@ async function fridayBriefing(req, env) {
     const id = chans["daily-focus"] || chans.inbox;
     if (id) posted = (await fetch(`https://discord.com/api/v10/channels/${id}/messages`, { method: "POST", headers: { Authorization: `Bot ${env.DISCORD_BOT_TOKEN}`, "content-type": "application/json" }, body: JSON.stringify({ embeds: [{ title: "◉ Friday · Morning briefing", description: text.slice(0, 3900), color: 0x4aa3ff }] }) }).catch(() => ({ ok: false }))).ok;
   }
+  await fridayNotify(env, "Good morning, Josiah", text.slice(0, 900)).catch(() => {});
   return out({ ok: true, posted, words: text.split(/\s+/).length });
+}
+
+// Push notifications to his phone through the free ntfy app. The topic is a long random name kept in KV,
+// so only he (subscribed in the app) gets them. Settings shows the topic and a one-tap subscribe link.
+async function ntfyTopic(env) {
+  let t = await env.SALES.get("friday:ntfy");
+  if (!t) { t = "friday-" + crypto.randomUUID().replace(/-/g, ""); await env.SALES.put("friday:ntfy", t); }
+  return t;
+}
+async function fridayNotify(env, title, message, priority = "default") {
+  const t = await ntfyTopic(env);
+  return fetch(`https://ntfy.sh/${t}`, { method: "POST", signal: timeout(), headers: { Title: title.replace(/[^\x20-\x7E]/g, "").trim() || "Friday", Priority: priority, Tags: "speech_balloon" }, body: message.slice(0, 1000) });
+}
+// Agents (with the test key) ask for Friday's notes to them, or ask her to ping his phone.
+async function fridayAgentBridge(req, env, url) {
+  const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
+  const key = req.headers.get("x-friday-key") || "";
+  const ok = (await sha256(key)) === FRIDAY_KEY_SHA || (env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)));
+  if (!ok) return out({ ok: false }, 401);
+  if (url.pathname === "/friday/directives") {
+    const d = JSON.parse(await env.SALES.get("friday:directives") || "{}");
+    const agent = url.searchParams.get("agent") || "";
+    return out({ ok: true, notes: (d[agent] || []).filter((x) => Date.now() - Date.parse(x.at) < 3 * 864e5).map((x) => x.text) });
+  }
+  if (url.pathname === "/friday/notify" && req.method === "POST") {
+    let d = {}; try { d = await req.json(); } catch {}
+    const r = await fridayNotify(env, String(d.title || "Friday"), String(d.message || ""), d.priority || "default").catch(() => null);
+    return out({ ok: !!r?.ok });
+  }
+  return out({ ok: false }, 404);
 }

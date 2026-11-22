@@ -118,6 +118,10 @@ async function loadApps() {
       if (a.connected) { const x = document.createElement("button"); x.textContent = "✕"; x.className = "ghost"; x.title = "Disconnect";
         x.onclick = async () => { if (!confirm(`Disconnect ${a.name}? Friday will lose access right away.`)) return; await fetch(API + "/connections", { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: JSON.stringify({ action: "disconnect", app: a.id }) }); loadApps(); };
         el.appendChild(x); }
+    } else if (a.copy) {
+      const b = document.createElement("button"); b.textContent = "Copy"; b.className = "ghost";
+      b.onclick = async () => { try { await navigator.clipboard.writeText(a.copy); b.textContent = "Copied ✓"; } catch { prompt("Copy this:", a.copy); } };
+      el.appendChild(b);
     } else if (a.key) {
       const b = document.createElement("button"); b.textContent = a.connected ? "✕" : "Add key"; if (a.connected) b.className = "ghost";
       b.onclick = async () => {

@@ -39,6 +39,7 @@ jobs:
         if: github.event_name == 'schedule' || inputs.mode == 'replies'
         run: node tools/outreach-replies.mjs
         env:
+          PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
           GMAIL_SHOP_REFRESH_TOKEN: ${{ secrets.GMAIL_SHOP_REFRESH_TOKEN }}
           GMAIL_SHOP_CLIENT_ID: ${{ secrets.GMAIL_SHOP_CLIENT_ID }}
           GMAIL_SHOP_CLIENT_SECRET: ${{ secrets.GMAIL_SHOP_CLIENT_SECRET }}
