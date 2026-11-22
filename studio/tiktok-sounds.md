@@ -1,59 +1,66 @@
-# TikTok Sound Watcher (updated 2026-11-21)
+# TikTok Sound Watcher (updated 2026-11-22)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-Here are 6 rising TikTok sounds and songs trending right now, tailored specifically for movie, game, and anime edits.
+# Trending TikTok Sounds for MotionVault Edits (Nov 22, 2026)
+
+Here is the current breakdown of trending TikTok sounds and songs suitable for movie, game, and anime short-form edits. 
 
 ---
 
-### 1. "Suzuki" – GTA VI Soundtrack
-* **Why it's rising:** Viral craze exploding across TikTok following the massive launch of GTA VI ([Contactmusic News](https://news.google.com/rss/articles/CBMitgFBVV95cUxNRW1YT1FKQmtnb044bXk1elRqTlhjbVR4YVZvQXpmRUtSREZVTXBIRkJPSm5LVkZTVG53UUQ1MjdmODBYMGlfS2Y0eUNxelFkbUdkRkRrT3Q3cVpYem9jMnZhVnJCakJncG1fVmNjNmRXR2VKa21uVW9yak5XMVR5aENFMHhvU1NFT2FsUWJZSGUxZTB5RjRkdHM2bDdHUGh0RTN3bjREWW1sRmZueklwZnRvQndJQQ?oc=5)).
-* **Edit Suitability:** High-energy hype, high-speed driving montages, vehicle flexes, action reveals (*GTA VI*, *Cyberpunk: Edgerunners*, *Need for Speed*).
-* **Beat / Drop to Cut On:** Heavy bass drop immediately following the electronic intro synth. Sync the drop with a hard clip transition (e.g., engine rev, gun cock, or dynamic action cut).
-* **Source Link:** [Contactmusic Coverage](https://news.google.com/rss/articles/CBMitgFBVV95cUxNRW1YT1FKQmtnb044bXk1elRqTlhjbVR4YVZvQXpmRUtSREZVTXBIRkJPSm5LVkZTVG53UUQ1MjdmODBYMGlfS2Y0eUNxelFkbUdkRkRrT3Q3cVpYem9jMnZhVnJCakJncG1fVmNjNmRXR2VKa21uVW9yak5XMVR5aENFMHhvU1NFT2FsUWJZSGUxZTB5RjRkdHM2bDdHUGh0RTN3bjREWW1sRmZueklwZnRvQndJQQ?oc=5)
-* **Business Account Status:** **Likely Blocked** (Major video game / commercial release; use standard personal account or pitched user audio).
+### 1. "Suzuki" — GTA VI Official Soundtrack
+* **Why it's rising:** Spiking heavily on TikTok following the massive interest around *Grand Theft Auto VI* (currently the #1 watched category on Twitch and #1 trending topic on Wikipedia with 393k+ daily views).
+* **Edit fit:** High-octane action, car chases, antihero flexes, and intense gameplay montages (*GTA VI*, *Cyberpunk 2077*, *Call of Duty*, *Black Clover*).
+* **Beat / Drop to cut on:** Let the engine rev / low bass intro play for 1.5 seconds under a strong visual hook, then cut hard on the main heavy synth drop at 0:03.
+* **Business account status:** ⚠️ **Blocked for Business Accounts** (major commercial gaming soundtrack). Use standard Creator account or UGC sound mix.
+* **Source:** [TikTok users spark viral craze around GTA VI soundtrack track Suzuki - Contactmusic.com](https://news.google.com/rss/articles/CBMitgFBVV95cUxNRW1YT1FKQmtnb044bXk1elRqTlhjbVR4YVZvQXpmRUtSREZVTXBIRkJPSm5LVkZTVG53UUQ1MjdmODBYMGlfS2Y0eUNxelFkbUdkRkRrT3Q3cVpYem9jMnZhVnJCakJncG1fVmNjNmRXR2VKa21uVW9yak5XMVR5aENFMHhvU1NFT2FsUWJZSGUxZTB5RjRkdHM2bDdHUGh0RTN3bjREWW1sRmZueklwZnRvQndJQQ?oc=5)
 
 ---
 
-### 2. "My Moon My Man" – FINNEAS (Feist Cover)
-* **Why it's rising:** Hit #1 on viral sound charts following its official streaming release and widespread TikTok adoption ([FLOOD Magazine](https://news.google.com/rss/articles/CBMigAFBVV95cUxPc0pKSlNnZ0M0dVBoeDd1dWgzZHpaRU5UUEJUajJtc0luaXBCb3RrdlRvdm8zOEVnUzZfaDVNZl80cElXNkJIa0h1bEp6NFBpUFBsZGZtQmQyR21sb0xjNzE2bjdvUUZpOE5VVlc2cktxdm5aaEhERTVCaTN5b2hacw?oc=5) / [Billboard](https://news.google.com/rss/articles/CBMiqgJBVV95cUxNNkE1czNBbjFxeTgwZ2M4V0NXRkwzdnFYNXhoVVNzMTY1SmdZSGllVDZyRW0wTkdubGU4b3R6aVVSZUg4OUJrbjFLQnk4OE9QZTFsNF90dzJERlprYWZLUnJKUnNRMmZXTzFzY0poSDJfZ2FzY3V5bHdOelF5TENkcGVJdGFrcGdJREk4Qk0wTEQ2VFBNOHZOWlZiNG11YmtnTjN1ckZtUGo3aFdYNmdJLXlMNTR1RWJhd2U1YkhHWnRJUHdINmRjU19kT3FmMUZ0RDdtMVN3N190TkgxMFZ6TDU0RlV3YjFUaXdGUWdKbzM1ZFpXaEMzMU1MNVpDNVFEQVpERVZBV1FicjhaM2czN1VMZ0xBMzIwOVRrQzFONGdyZ3Nkdl9Sc2dn?oc=5)).
-* **Edit Suitability:** Dark moody, atmospheric character portrait, smooth slow-mo transition (*The Apothecary Diaries*, *Batman*, *The Hunger Games: Sunrise on the Reaping*).
-* **Beat / Drop to Cut On:** Electro-pop pulse beat where quiet vocals pivot into driving rhythmic percussion.
-* **Source Link:** [Billboard Trend Report](https://news.google.com/rss/articles/CBMiqgJBVV95cUxNNkE1czNBbjFxeTgwZ2M4V0NXRkwzdnFYNXhoVVNzMTY1SmdZSGllVDZyRW0wTkdubGU4b3R6aVVSZUg4OUJrbjFLQnk4OE9QZTFsNF90dzJERlprYWZLUnJKUnNRMmZXTzFzY0poSDJfZ2FzY3V5bHdOelF5TENkcGVJdGFrcGdJREk4Qk0wTEQ2VFBNOHZOWlZiNG11YmtnTjN1ckZtUGo3aFdYNmdJLXlMNTR1RWJhd2U1YkhHWnRJUHdINmRjU19kT3FmMUZ0RDdtMVN3N190TkgxMFZ6TDU0RlV3YjFUaXdGUWdKbzM1ZFpXaEMzMU1MNVpDNVFEQVpERVZBV1FicjhaM2czN1VMZ0xBMzIwOVRrQzFONGdyZ3Nkdl9Sc2dn?oc=5)
-* **Business Account Status:** **Blocked** (Commercial record label release).
+### 2. "Time Back" — Sinny & 7vvch
+* **Why it's rising:** Currently sitting in TikTok’s Top 10 trending songs, driven by creators using its atmospheric electronic progression for cinematic visuals.
+* **Edit fit:** Slow-mo reveals, atmospheric world-building, high-budget cinematic shots (*Dune*, *Spider-Man*, *JoJo: Steel Ball Run*, *Overgeared*).
+* **Beat / Drop to cut on:** Slow build-up over an unbroken 3-second scenic shot, cutting sharply on the ambient electronic beat drop at ~0:08.
+* **Business account status:** 🟢 **Likely Available / Partial** (check TikTok Commercial Music Library; independent synth release).
+* **Source:** [Trending Songs on TikTok - Top 10 Viral Songs](https://metricool.com/trending-tiktok-songs)
 
 ---
 
-### 3. "MONTAGEM ROYAL (ULTRA SLOWED)" – Brazilian Funk / Phonk
-* **Why it's rising:** Driving massive view counts on edit shorts right now, topping 5M+ views on action montages ([YouTube Short Reference](https://youtu.be/UKWk8Zbjd6Y)).
-* **Edit Suitability:** Superpower flex, extreme hype, heavy combat slow-mo (*Black Clover Season 2*, *Steel Ball Run*, Marvel/DC cinematic edits).
-* **Beat / Drop to Cut On:** Heavy distorted phonk kick/clap drop. Cut precisely on character power power-up, eye glow, or weapon impact.
-* **Source Link:** [Stylee EditZ YouTube Short](https://youtu.be/UKWk8Zbjd6Y)
-* **Business Account Status:** **Usually Allowed** if using user-generated audio variants; official track may trigger commercial mute.
+### 3. "My Moon My Man" — FINNEAS (Feist Cover)
+* **Why it's rising:** FINNEAS's dark indie cover went viral across TikTok and shot to #1 on streaming charts this week.
+* **Edit fit:** Moody character studies, villain backstories, psychological drama, and slow-burn edit styles (*The Batman*, *The Apothecary Diaries*, *Tokyo Revengers*).
+* **Beat / Drop to cut on:** Match a low vocal whisper line to a character close-up voiceover hook in the first 2 seconds, then transition to fast cuts when the rhythm kicks in.
+* **Business account status:** ⚠️ **Blocked for Business Accounts** (major label release under Interscope/Finneas).
+* **Source:** [FINNEAS Takes Feist’s “My Moon My Man” To No. 1 With Viral Cover - That Eric Alper](https://news.google.com/rss/articles/CBMipAFBVV95cUxPeHk1SFY1RGZRWmlPUnQ0X3RpZDBDZWlUMTQ2X1BqaTF2MXNBSDlhb1B3S3lSSlQ0QmRIOUFMRC0zSHl3VHNCakVDYW9MMW1ISDdDNC0zRS1IUmpNX242RW1XdkJHTVNLRXNsVmdSSFBLT2dlcEhwclMySlM0WUh6MVBTZmJhMFQweGhTeGhqZ3lXdi1DZUFWY1BobHdNNzF3NTR1Sw?oc=5)
 
 ---
 
-### 4. "Duvet" – bôa
-* **Why it's rising:** Strong global resurgence on Last.fm (2.1M+ listeners) as nostalgic 90s/2000s anime aesthetic audio trends across TikTok.
-* **Edit Suitability:** Sad, reflective, nostalgic story arc, melancholic character background (*One Piece*, *Vinland Saga*, *Cyberpunk*).
-* **Beat / Drop to Cut On:** Acoustic strum building into the iconic line *"And you don't seem to understand..."* Cut from present sadness to a emotional flashback moment on the vocal hit.
-* **Source Link:** [Last.fm Global Charts](https://www.last.fm)
-* **Business Account Status:** **Blocked** (Major label track).
+### 4. "Super Funk x My Type Funk" (Phonk Remix)
+* **Why it's rising:** Heavy trending edit sound on TikTok discover (generating hundreds of thousands of edit tags like Invincible variant edits).
+* **Edit fit:** Ultra-fast hype, power scaling, transformation scenes, intense anime/comic battles (*Dragon Ball Super: Beerus*, *Invincible*, *One Piece*, *Black Clover S2*).
+* **Beat / Drop to cut on:** Rapid flash-cuts synced to the high-bpm cowbell pattern, dropping into a black frame or slow-motion impact shot on the heavy bass kick.
+* **Business account status:** ⚠️ **Potentially Blocked / UGC Only** (user-generated Phonk mashup; unofficial copyright flag risk on business pages).
+* **Source:** [TikTok - Make Your Day](https://www.tiktok.com/discover/viral-edit-songs)
 
 ---
 
-### 5. "D>E>A>T>H>M>E>T>A>L" – Panchiko
-* **Why it's rising:** Trending heavily on streaming/Last.fm (1M+ listeners) driven by indie edit creators doing dark cinematic cuts.
-* **Edit Suitability:** Psychological tension, dark anime reveal, gritty edit aesthetic (*Jujutsu Kaisen*, *Chainsaw Man*, dark thrillers).
-* **Beat / Drop to Cut On:** Sudden explosion of fuzzy shoegaze distortion after the quiet lo-fi intro. Match with a glitch or fast flash-cut effect.
-* **Source Link:** [Last.fm Global Charts](https://www.last.fm)
-* **Business Account Status:** **Blocked** (Commercial release).
+### 5. "D>E>A>T>H>M>E>T>A>L" — Panchiko
+* **Why it's rising:** High streaming surge on Last.fm globally (1M+ listeners) and US charts, fueled by ongoing anime nostalgia edits.
+* **Edit fit:** Melancholic, grainy 90s/00s aesthetic, tragic character arcs (*Vinland Saga/Thorfinn*, *Cyberpunk: Edgerunners*, *Berserk*).
+* **Beat / Drop to cut on:** Muffled lo-fi intro during dialogue audio at seconds 0-3, snapping to full distorted guitar distortion on the main emotional scene cut.
+* **Business account status:** 🟢 **May be available** (indie distribution, but test in TikTok editor studio prior to posting).
+* **Source:** Last.fm Trending Charts (2026-11-22)
 
 ---
 
-### 6. "For The Weekend (Slowed)"
-* **Why it's rising:** Spiking across short-form platforms for romance and devotion edits, generating over 1.3M views on recent top shorts ([YouTube Short Reference](https://youtu.be/CUrvqnQNYrM)).
-* **Edit Suitability:** Dark romance, romantic tension, protective protagonist edit (*Firefly Wedding*, *Blue Box*, *The Apothecary Diaries*).
-* **Beat / Drop to Cut On:** Slowed vocal echo drop. Match cut on slow-mo eye contact, hand hold, or hero saving partner beat.
-* **Source Link:** [RYUKAZE YouTube Short](https://youtu.be/CUrvqnQNYrM)
-* **Business Account Status:** **May Work via User Audio** (Modified/slowed user-uploaded sound, though official song claims apply if flagged).
+### 6. "Duvet" — bôa
+* **Why it's rising:** Sustained viral resurgence across TikTok anime edit trends (over 2.1 million Last.fm listeners logged this week).
+* **Edit fit:** Chill aesthetic, emotional anime romance, reflective character moments (*Blue Box S2*, *The Ramparts of Ice*, *Apothecary Diaries*).
+* **Beat / Drop to cut on:** Start cut right on the opening line *"And you don't seem to understand..."* after a 1.5-second dialogue quote from the episode.
+* **Business account status:** ⚠️ **Blocked for Business Accounts** (commercial licensing required).
+* **Source:** Last.fm Trending Charts (2026-11-22)
+
+---
+
+### Note for Claude (Editor Workflow)
+For **MotionVault**, prioritize using **"Suzuki"** for GTA/Gaming clips and **"Super Funk x My Type Funk"** for anime fight montages this week—these match current high-volume search trends. Keep source clip stretches under 3 seconds per cut to stay compliant with transformative edit guidelines.

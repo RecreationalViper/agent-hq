@@ -1,74 +1,76 @@
-# Social Strategist (updated 2026-11-21)
+# Social Strategist (updated 2026-11-22)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-Here is the social packaging plan for today's 3 clips, optimized for maximum viewer retention and comment section interaction.
+# Social Strategy & Distribution Plan (2026-11-22)
+
+Here is the posting strategy for today’s 3 planned clips across TikTok and YouTube Shorts, optimized for peak engagement and algorithmic push based on current platform trends.
 
 ---
 
-### 🎬 Clip 1 — GTA VI: Vice City Escalation
+## 🎮 Clip 1: GTA VI — The Vice City Night Encounter ("Red Hulk" Mystery)
 
-* **On-Screen Hook Text (6 words max):**
-  > Vice City is completely unhinged 💀
+### 📲 TikTok Captions
+* Bro ran into the Vice City urban legend at 3 AM 💀
+* Who else tried driving up to this figure in Vice City? 😭
+* Rockstar really put a horror game inside Vice City night fog 🚗💨
+* That impact cut hit way too hard ☠️
 
-* **TikTok Captions:**
-  1. What’s the FIRST thing you’re doing when you load into Vice City? 👇
-  2. Vice City physics hit different at 100mph 🚗💨
-  3. Never let the Everglades python near a flying car... 💀
-  4. Launch weekend vibes in Vice City 🌴🔥
+### 📺 On-Screen Hook Text (6 words max)
+`Do NOT stop in Vice City 💀`
 
-* **Hashtags (5–6):**
-  `#gta6` `#vicecity` `#gta6gameplay` `#grandtheftautovi` `#gamingedit` `#gta6launch`
+### 🏷️ Hashtags (Mix of Big & Niche)
+`#gta6` `#gtavi` `#gta6gameplay` `#vicecity` `#gta6easteregg` `#gamingclips`
 
-* **YouTube Shorts Title (under 60 chars):**
-  `Vice City Physics Are Completely Unhinged 💀 #gta6`
+### 🔴 YouTube Shorts Title (Under 60 chars)
+`Bro really stopped for the Vice City night monster 😭☠️`
 
-* **Best Posting Times (EST / New York Time):**
-  * **TikTok (3:00 PM EST):** Peak weekend afternoon scrolling window when gamers finish day sessions and check feeds.
-  * **Shorts (5:00 PM EST):** Pre-evening prime time catch window for global gaming traffic on YouTube.
-
----
-
-### 🎬 Clip 2 — Black Clover Season 2: Asta’s Anti-Magic Cleave
-
-* **On-Screen Hook Text (6 words max):**
-  > When Anti-Magic takes over 💀🔥
-
-* **TikTok Captions:**
-  1. Is Asta’s Anti-Magic the most broken power in anime right now? 🤔 👇
-  2. Studio Pierrot went ALL IN on this camera spin 🗣️⚡️
-  3. That sudden audio mute right when the blade hits... 🔊🔇
-  4. Devil Union Asta is built completely different 🖤
-
-* **Hashtags (5–6):**
-  `#blackclover` `#astablackclover` `#blackcloverseason2` `#animeedit` `#anti-magic` `#animemontage`
-
-* **YouTube Shorts Title (under 60 chars):**
-  `When Asta Unleashes Pure Anti-Magic ☠️🔥 #blackclover`
-
-* **Best Posting Times (EST / New York Time):**
-  * **TikTok (8:00 PM EST):** Anime edit engagement peaks during late-evening personal time when comment activity is highest.
-  * **Shorts (7:00 PM EST):** Aligns with evening dark-mode scrolling hours for high-retention anime Shorts.
+### ⏰ Best Posting Times (EST / New York Time)
+* **TikTok:** **5:00 PM EST** — Aligns with peak Twitch streaming traffic as students and workers get off for the evening.
+* **YouTube Shorts:** **7:00 PM EST** — Prime evening gaming scroll window on YouTube when global feeds spike.
 
 ---
 
-### 🎬 Clip 3 — The Hunger Games: Snow’s Reaping Legacy
+## 🏹 Clip 2: The Hunger Games: Sunrise on the Reaping — Haymitch's Quarter Quell Entrance
 
-* **On-Screen Hook Text (6 words max):**
-  > He built the game. They broke it.
+### 📲 TikTok Captions
+* The 50th Quarter Quell hits different from the start 🏹
+* Would you survive the 60-second Cornucopia countdown? ☠️
+* Haymitch Abernathy’s arena entrance was cold 🥶
+* That cannon blast right at 00:00 gave me chills 💀
 
-* **TikTok Captions:**
-  1. Was President Snow right about human nature, or just purely evil? 👇
-  2. Coriolanus Snow watching his legacy unfold in District 12... 🌹
-  3. That match-cut transition from young Snow hits so hard 🎬🔥
-  4. *Sunrise on the Reaping* changes how you rewatch *Catching Fire* 🐍
+### 📺 On-Screen Hook Text (6 words max)
+`The coldest Quarter Quell entrance 🏹`
 
-* **Hashtags (5–6):**
-  `#hungergames` `#sunriseonthereaping` `#presidentsnow` `#catchingfire` `#hungergamesedit` `#cinematicedit`
+### 🏷️ Hashtags (Mix of Big & Niche)
+`#hungergames` `#sunriseonthereaping` `#haymitch` `#maysileedonner` `#movieclips` `#cinematic`
 
-* **YouTube Shorts Title (under 60 chars):**
-  `The Cold Truth About President Snow 🌹 #hungergames`
+### 🔴 YouTube Shorts Title (Under 60 chars)
+`The hardest test in Panem history ☠️🔥`
 
-* **Best Posting Times (EST / New York Time):**
-  * **TikTok (6:00 PM EST):** Prime movie-fandom debate hours as post-work/school movie discussion traffic peaks.
-  * **Shorts (4:00 PM EST):** Captures the early evening YouTube Shorts wave right before dinner time.
+### ⏰ Best Posting Times (EST / New York Time)
+* **TikTok:** **4:00 PM EST** — Catches early evening scroll traffic while box office opening weekend chatter peaks.
+* **YouTube Shorts:** **6:30 PM EST** — Highest retention window for movie recap and lore-focused Shorts viewers.
+
+---
+
+## 🐴 Clip 3: Steel Ball Run: JoJo's Bizarre Adventure — San Diego Beach Race Start
+
+### 📲 TikTok Captions
+* Gyro’s spin before the starter cannon goes crazy ⚡️
+* Who is winning the San Diego beach sprint, Gyro or Diego? 🐴
+* Steel Ball Run animation quality is peak cinema 🗿
+* The bass drop when Johnny’s eyes glow 🥶🔥
+
+### 📺 On-Screen Hook Text (6 words max)
+`The hardest race start in anime 🐴⚡️`
+
+### 🏷️ Hashtags (Mix of Big & Niche)
+`#steelballrun` `#jojosbizarreadventure` `#gyrozeppeli` `#johnnyjoestar` `#animeedit` `#phonk`
+
+### 🔴 YouTube Shorts Title (Under 60 chars)
+`Bro really brought a Steel Ball to a horse race 💀`
+
+### ⏰ Best Posting Times (EST / New York Time)
+* **TikTok:** **8:00 PM EST** — Late-night peak window for anime fandoms and phonk edit enthusiasts.
+* **YouTube Shorts:** **9:00 PM EST** — Late-evening algorithm boost for high-velocity anime battle edits.

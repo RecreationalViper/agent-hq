@@ -1,61 +1,73 @@
-# Director (updated 2026-11-21)
+# Director (updated 2026-11-22)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# Today's Production Schedule (2026-11-21)
-
-Here are the **3 clips** MotionVault should produce today based on fresh data from the scanners (GTA VI breaking $3.8B launch records, *Sunrise on the Reaping* driving 174k+ Wikipedia views, and *Black Clover Season 2* holding the #1 trending spot on AniList).
+# MotionVault Production Plan (2026-11-22)
 
 ---
 
-## 🎬 Make First: Clip 1 — GTA VI: Vice City Escalation
-* **Why first:** *GTA 6* is at peak worldwide launch hype (#1 on Wikipedia with 540,793 views, dominating Twitch with 200k+ concurrent viewers across streams like TheBurntPeanut and KaiCenat). Striking during launch weekend gives us the highest immediate view velocity on both TikTok and YouTube Shorts.
-* **Target Platforms:** Both (TikTok & YouTube Shorts)
+## 🚀 Priority Order & Strategy
+
+**Make Clip #1 (GTA VI) FIRST.**  
+*GTA VI* is currently the #1 media event globally (393k+ daily Wikipedia views, 300k+ concurrent Twitch viewers, and $3.8B day-one sales). Clipping the viral "Red Hulk" night encounter captures immediate search traffic on both platforms before trend saturation spikes further.
+
+---
+
+## 🎬 Clip 1: GTA VI — The Vice City Night Encounter ("Red Hulk" Mystery)
+* **Platforms:** TikTok & YouTube Shorts (Both)
+* **Source Title & Location:** *Grand Theft Auto VI* gameplay stream / trailer footage (Vice City night encounter; timestamps variable by stream).
 * **Target Length:** 32 seconds
-* **Mood:** High-octane, chaotic, fast-paced comedy-action
-* **Audio Note:** Trending sound **"Suzuki" (GTA VI Soundtrack)** or **"MONTAGEM ROYAL (ULTRA SLOWED)"**. Sync a heavy bass drop directly onto the 2-second vehicle impact.
+* **Mood:** Tense, uncanny, chaotic
+* **Audio Note:** Original creator reaction audio ("WHAT IS THAT?!") mixed with GTA VI soundtrack track **"Suzuki"** dropping heavy bass at 0:03.
 
-### Shot Plan for Claude
-* **Source:** Official *Grand Theft Auto VI* trailers & gameplay captures (Ocean Drive to Everglades sequence).
-* **Hook (0–2s):** Casual 1-second walking shot on neon Ocean Drive sidewalk, abruptly interrupted by a rogue vehicle flying through a palm tree into a swamp python.
-* **Stretch 1 (2–12s):** Unbroken high-speed drag race down Ocean Drive as Vice City police sirens kick in and headlights reflect on the wet pavement.
-* **Stretch 2 (12–22s):** Seamless story transition to an Everglades hoverboat chase cutting through marshland while a 5-star police helicopter locks searchlights onto the vehicle.
-* **Stretch 3 (22–28s):** High-speed drawbridge ramp jump framing the full Vice City skyline at sunset.
-* **Biggest Moment (28–30s):** Mid-air vehicle collision with a police chopper cut in speed-ramped slow motion right as the audio peaks.
-* **Final Beat (30–32s):** Hard abrupt cut to black with the "VICE CITY" neon logo slamming down over a lingering siren echo to trigger instant rewatches.
-
----
-
-## 🎬 Clip 2 — Black Clover Season 2: Asta’s Anti-Magic Cleave
-* **Why this clip:** *Black Clover Season 2* is currently the #1 trending anime on AniList (603 score, 112k+ fans) and #2 top airing on MyAnimeList (8.89 score). Action edits using heavy phonk beat-sync are hitting 5M+ views on Shorts this week.
-* **Target Platforms:** Both (TikTok & YouTube Shorts)
-* **Target Length:** 34 seconds
-* **Mood:** Dark anime hype, raw energy, overwhelming power
-* **Audio Note:** **"MONTAGEM ROYAL (ULTRA SLOWED)"** (Brazilian Funk / Phonk). Cut all audio to complete dead silence the exact microsecond the sword cleaves through.
-
-### Shot Plan for Claude
-* **Source:** *Black Clover Season 2* (Episode 1–8 fight sequence; rough timestamp ~16:30 during the Anti-Magic barrier clash).
-* **Hook (0–2s):** Close-up eye freeze frame with red/black Anti-Magic aura flaring instantly as Asta’s voice echoes.
-* **Stretch 1 (2–14s):** Unbroken shot of Asta surging forward in Devil Union form, ground shattering beneath his boots as high-tier enemy magic barriers manifest.
-* **Stretch 2 (14–26s):** Continuous 12-second Studio Pierrot dynamic camera rotation showing the Demon-Slasher blade grinding against the glowing barrier, sending black Anti-Magic sparks flying across the screen.
-* **Stretch 3 (26–30s):** The magic barrier fracturing and shattering into dark energy particles as Asta completes the arc swing.
-* **Biggest Moment (28–30s):** Full-screen explosion of dark Anti-Magic as the barrier ruptures.
-* **Final Beat (30–34s):** Complete audio drop to dead silence as Asta rests the heavy blade on his shoulder in slow-mo, glaring straight at the viewer before snapping to black.
+### Shot Plan for Claude:
+* **Hook (0-2s):** IShowSpeed screaming *"WHAT IS THAT?!"* as headlights illuminate a massive, shadowy red figure standing under a Vice City streetlight.
+* **Stretch 1 (2-10s):** Unbroken driving approach down a foggy, rain-slicked Vice City coastal street as engine revs echo.
+* **Stretch 2 (10-20s):** Car comes to a dead stop 15 feet away; lights flicker while the red figure slowly turns around toward the driver.
+* **Stretch 3 (20-28s):** Continuous sprint toward the character model right as it raises an arm and launches a vehicle into the air.
+* **Biggest Moment (28-30s):** Sudden screen-shaking impact hit as the red figure punches directly toward the camera lens.
+* **Final Beat (30-32s):** Hard cut to dark fog with the iconic red "WASTED" text overlay and low death-chime sound.
+* **On-Screen Text/Credit:** *Grand Theft Auto VI (2026)*
 
 ---
 
-## 🎬 Clip 3 — The Hunger Games: Snow’s Reaping Legacy
-* **Why this clip:** *The Hunger Games: Sunrise on the Reaping* is opening at $120M+ while Haymitch/Snow searches are up +456% worldwide. Using HD official footage avoids theater bootlegs while capitalizing on the massive box office buzz.
-* **Target Platforms:** Both (TikTok & YouTube Shorts)
+## 🏹 Clip 2: The Hunger Games: Sunrise on the Reaping — Haymitch's Quarter Quell Entrance
+* **Platforms:** TikTok & YouTube Shorts (Both)
+* **Source Title & Location:** *The Hunger Games: Sunrise on the Reaping* (Official Teaser / Trailer footage; rough timestamp ~0:20-1:10).
 * **Target Length:** 35 seconds
-* **Mood:** Dark cinematic dread, cold authority, atmospheric tension
-* **Audio Note:** **"My Moon My Man" – FINNEAS** (currently #1 rising on viral sound charts) or Radiohead's *Let Down*. Heavy sub-bass pulse right on the match-cut transition at 0:12.
+* **Mood:** High-stakes, dark cinematic, survival tension
+* **Audio Note:** Trending atmospheric synth track **"Time Back" (Sinny & 7vvch)**. Level cannon blast SFX in intro over music.
 
-### Shot Plan for Claude
-* **Source:** *The Hunger Games: The Ballad of Songbirds & Snakes* (~1h 40m mark; young Snow watching arena feeds) match-cut into *The Hunger Games: Catching Fire* (~22m mark; President Snow Quarter Quell speech).
-* **Hook (0–2s):** On-screen text: *"He built the game. They broke it."* Close-up on young Coriolanus Snow’s icy blue eyes staring into a Capitol monitor screen.
-* **Stretch 1 (2–12s):** Young Snow standing in the Capitol control room watching early arena chaos unfold in *Songbirds & Snakes*, adjusting his uniform with a cold glare.
-* **Stretch 2 (12–24s):** Match-cut transition on a match flame / monitor glow straight to older President Snow stepping up to the Capitol balcony podium in *Catching Fire*.
-* **Stretch 3 (24–31s):** Unbroken sequence of Effie Trinket drawing Katniss Everdeen's name from the glass bowl as the District 12 crowd falls completely silent.
-* **Biggest Moment (28–31s):** Katniss’s stunned reaction processing her name being drawn again while President Snow watches silently from above.
-* **Final Beat (31–35s):** Low synth rumble as President Snow slowly sips white rose tea, holding an unblinking gaze before the video snaps shut.
+### Shot Plan for Claude:
+* **Hook (0-2s):** Loud Capitol arena cannon blast echoing over a tight close-up of a tribute's eyes snapping open in terror.
+* **Stretch 1 (2-12s):** Continuous story stretch of Effie/Reaping official calling *"Haymitch Abernathy"* as young Haymitch steps up to the stage under guard watch.
+* **Stretch 2 (12-22s):** Unbroken sequence of the glass pedestal rising out of the tube into the glowing 50th Quarter Quell arena landscape.
+* **Stretch 3 (22-29s):** 60-second countdown clock ticking down on screen as tributes lock eyes across the Cornucopia circle.
+* **Biggest Moment (29-32s):** The countdown hits `00:00`; loud horn sounds as Haymitch lunges forward and grabs a prop axe off the pedestal.
+* **Final Beat (32-35s):** Fast cut to a black frame right before weapon impact, leaving the arena cannon echoing.
+* **On-Screen Text/Credit:** *The Hunger Games: Sunrise on the Reaping (2026)*
+
+---
+
+## 🐴 Clip 3: Steel Ball Run: JoJo's Bizarre Adventure — San Diego Beach Race Start
+* **Platforms:** TikTok & YouTube Shorts (Both)
+* **Source Title & Location:** *Steel Ball Run: JoJo's Bizarre Adventure* (Episode 1; Beach Race Start scene, rough timestamp ~04:15-05:30).
+* **Target Length:** 30 seconds
+* **Mood:** Aesthetic flex, high-velocity hype, dark anime energy
+* **Audio Note:** **"Super Funk x My Type Funk"** (Phonk Remix). Sync Gyro's ball spin and the starter cannon blast directly to the cowbell drop.
+
+### Shot Plan for Claude:
+* **Hook (0-2s):** Gyro Zeppeli smirking while spinning his green Steel Ball between his fingers with a metallic resonance SFX.
+* **Stretch 1 (2-10s):** Unbroken wide shot of hundreds of horses lined up at the San Diego beach starting line under bright sunlight.
+* **Stretch 2 (10-22s):** Starter cannon fires; continuous action stretch of horse hooves pounding into wet sand and ocean spray in story order.
+* **Stretch 3 (22-26s):** Gyro and Diego Brando accelerating neck-and-neck through the surf, sand flying across the camera frame.
+* **Biggest Moment (26-28s):** Low-angle close-up of Johnny Joestar looking up from his wheelchair with glowing blue aura eyes as Gyro surges ahead.
+* **Final Beat (28-30s):** Freeze frame flash on Johnny's glare right as the heavy phonk bass drops out.
+* **On-Screen Text/Credit:** *JoJo's Bizarre Adventure: Steel Ball Run*
+
+---
+
+## 📋 Quick Summary for Claude Workflow
+1. **Clip 1 (GTA VI):** Prioritize immediate turnaround; post to TikTok & YouTube Shorts today while Twitch streams are live.
+2. **Clip 2 (Hunger Games):** Capitalize on $120M box office opening weekend traffic (#4 Wikipedia).
+3. **Clip 3 (Steel Ball Run):** Ride #1 MAL rating momentum with high-velocity anime edit styling.

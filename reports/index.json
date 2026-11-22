@@ -1,5 +1,77 @@
 [
   {
+    "file": "2026-11-22-review.md",
+    "agent": "review",
+    "name": "Weekly Review (Manager)",
+    "date": "2026-11-22"
+  },
+  {
+    "file": "2026-11-22-growth-coach.md",
+    "agent": "growth-coach",
+    "name": "Growth Coach",
+    "date": "2026-11-22"
+  },
+  {
+    "file": "2026-11-22-studio-critic.md",
+    "agent": "studio-critic",
+    "name": "Studio Critic",
+    "date": "2026-11-22"
+  },
+  {
+    "file": "2026-11-22-studio-writer.md",
+    "agent": "studio-writer",
+    "name": "Social Strategist",
+    "date": "2026-11-22"
+  },
+  {
+    "file": "2026-11-22-studio-director.md",
+    "agent": "studio-director",
+    "name": "Director",
+    "date": "2026-11-22"
+  },
+  {
+    "file": "2026-11-22-youtube-watcher.md",
+    "agent": "youtube-watcher",
+    "name": "YouTube Shorts Watcher",
+    "date": "2026-11-22"
+  },
+  {
+    "file": "2026-11-22-tiktok-fandoms.md",
+    "agent": "tiktok-fandoms",
+    "name": "TikTok Fandom Watcher",
+    "date": "2026-11-22"
+  },
+  {
+    "file": "2026-11-22-tiktok-formats.md",
+    "agent": "tiktok-formats",
+    "name": "TikTok Format Watcher",
+    "date": "2026-11-22"
+  },
+  {
+    "file": "2026-11-22-tiktok-sounds.md",
+    "agent": "tiktok-sounds",
+    "name": "TikTok Sound Watcher",
+    "date": "2026-11-22"
+  },
+  {
+    "file": "2026-11-22-studio-scout.md",
+    "agent": "studio-scout",
+    "name": "Trend Scout",
+    "date": "2026-11-22"
+  },
+  {
+    "file": "2026-11-22-github-radar.md",
+    "agent": "github-radar",
+    "name": "GitHub Radar",
+    "date": "2026-11-22"
+  },
+  {
+    "file": "2026-11-22-daily-task.md",
+    "agent": "daily-task",
+    "name": "Daily Focus",
+    "date": "2026-11-22"
+  },
+  {
     "file": "2026-11-22-researcher.md",
     "agent": "researcher",
     "name": "Deep Researcher",

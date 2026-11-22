@@ -1,78 +1,73 @@
-# YouTube Shorts Watcher (updated 2026-11-21)
+# YouTube Shorts Watcher (updated 2026-11-22)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-### What’s Working on YouTube Shorts Right Now
-
-Here is the breakdown of the top-performing film, game, and anime clip formats based on today's live trend data.
-
----
-
-### Top 6 Fastest-Rising Relevant Shorts & Edits
-
-1. **`A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)`**
-   * **Views:** 33,911,637 (320,627/hr) · **Length:** 0:11
-   * **Why it works:** Movie trivia hook highlighting real-life danger/insane physical stunts.
-
-2. **`You Won't Believe What He Writes On The Board Next! 😭`**
-   * **Views:** 14,295,083 (265,878/hr) · **Length:** 0:34
-   * **Why it works:** Pure curiosity gap hook with a delayed payoff right before the end to boost watch time.
-
-3. **`Deciding which game to delete for GTA 6…`**
-   * **Views:** 9,376,045 · **Length:** ~0:30
-   * **Why it works:** Capitalizes on massive GTA 6 hype (currently #1 on Twitch and Wikipedia search trends with 540k+ daily views).
-
-4. **`The hardest test in KingsMan ☠️🔥`**
-   * **Views:** 6,075,440 · **Length:** ~0:30
-   * **Why it works:** "High stakes / survival test" cinematic scene cut with fast pacing and high emotion.
-
-5. **`IN THIS WORLD EVERYONE IS CRAYONS 💀, THORFINN EDIT🥀`**
-   * **Views:** 5,900,611 · **Length:** ~0:25
-   * **Why it works:** Dark, intense anime protagonist focus (*Vinland Saga*) paired with trending audio and heavy atmosphere.
-
-6. **`Patrick Trolls The Suspects | The Mentalist S3.E4`**
-   * **Views:** 5,845,205 (204,097/hr) · **Length:** 0:16
-   * **Why it works:** "Genius character outsmarting someone" dialogue snippet—short, funny, high rewatchability.
+# MotionVault YouTube Shorts Trend & Strategy Report
+**Date:** November 22, 2026
 
 ---
 
-### Common Trends & Winning Formulas
+## 1. Top 6 Fastest-Rising Short Clips & Common Trends
 
-* **Length:** Sweet spot is **15 to 35 seconds**. Longer cuts only succeed if there’s a strong curiosity mystery that resolves in the final 3 seconds.
-* **Hooks:** First 1–2 seconds feature text stating extreme stakes (*"The hardest test..."*, *"He actually did this..."*, *"When you realize..."*).
-* **Emojis:** Heavy rely on `☠️`, `🔥`, `💀`, `😭` in titles to signal tone instantly.
-* **Hot Topics:** GTA 6 gameplay/reactions, high-IQ mind-game movies, dark anime character arcs (*Vinland Saga*, *JoJo: Steel Ball Run*).
+Here are the highest-performing short-form clips currently dominating the charts:
 
----
+* **"Why they move so human 🥀"** (MoVeak)  
+  *Views:* **29,115,493** (557,032/hr) | *Length:* 0:16
+* **"A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)"** (ManNoirFacts)  
+  *Views:* **33,915,301** (272,920/hr) | *Length:* 0:11
+* **"This is best short film l’ve watched this year"** (DSP WCNM)  
+  *Views:* **26,647,154** (1,086,774 likes) | *Length:* ~0:20
+* **"The hardest test in KingsMan ☠️🔥"** (LearnVerse BD)  
+  *Views:* **7,061,184** (296,663 likes) | *Length:* ~0:30
+* **"Bro really harmonized a gun sound 😭🥀"** (Warren's Feel)  
+  *Views:* **7,865,755** (245,727/hr) | *Length:* 0:16
+* **"She Is Only 16 But She's A Great Doctor"** (Peak-Edits)  
+  *Views:* **11,742,735** | *Length:* ~0:30
 
-### 3 Specific Scene Packages for MotionVault
-
-#### 1. "The Ultimate Test" High-Stakes Cut (*Kingsman* style)
-* **Clip Idea:** *Kingsman: The Secret Service* — The flooded room drowning test sequence.
-* **Structure (30s):**
-  * **0-2s (Hook):** Text overlay: *"The hardest test in spy movie history ☠️🔥"*
-  * **2-25s (Stretch):** Unbroken clip of water rising, recruits sleeping, using toilet pipe to breathe.
-  * **25-30s (Rewatch Beat):** Eggsy smashing the glass mirror revealing the instructors watching. Cut abruptly on glass shatter.
-
-#### 2. "Genius Outsmarting Everyone" (*The Mentalist / Death Note* style)
-* **Clip Idea:** *Death Note* — L testing Light with the fake Lind L. Tailor television broadcast.
-* **Structure (35s):**
-  * **0-2s (Hook):** Text overlay: *"He baited him in 5 seconds 💀🧠"*
-  * **2-28s (Stretch):** Light killing "L" on TV, followed immediately by the real L revealing it was a broadcast isolate in Kanto.
-  * **28-35s (Rewatch Beat):** L's quiet monologue: *"I'm right here, come kill me."*
-
-#### 3. "No Enemies / Peak Determination" Anime Montage
-* **Clip Idea:** *JoJo’s Bizarre Adventure: Steel Ball Run* (Currently #1 on MyAnimeList, 9.03 score) or *Vinland Saga* (Thorfinn).
-* **Structure (25s):**
-  * **0-2s (Hook):** Text overlay: *"When the main character stops holding back 🥀🔥"*
-  * **2-20s (Stretch):** Fast-paced montage of Johnny Joestar / Gyro Zeppeli horse race charge or Thorfinn fight sequence set to atmospheric drift phonk / slowed audio.
-  * **20-25s (Rewatch Beat):** Sudden silence beat on extreme character eyes close-up.
+### What They Have In Common
+* **Hyper-Focused Runtime (11s–35s):** Edits under 20 seconds rely on rapid rewatches/loops. Edits around 30 seconds structure a tight 2-second hook, a 20-second unbroken story beat, and a sudden high-impact ending.
+* **Informal POV Titles:** Headers use conversational internet phrasing (`"Bro really..."`, `"Why they..."`, `"ALWAYS listen to..."`) paired with 1–2 high-emotion emojis (`😭`, `🥀`, `☠️`, `🚗`).
+* **Visual Instant Hooks:** No intro bumpers. The first frame shows high kinetic motion, an absurd scene setting, or prominent text overlay at the top of the 9:16 frame.
 
 ---
 
-### Title Patterns to Copy
+## 2. Recommended Clipping Titles & Specific Moments
 
-1. `The hardest [test/scene] in [Movie Name] history ☠️🔥`
-2. `When [Character] shows who's actually in charge 💀`
-3. `[Character Name] completely broke the system | [Show/Anime]`
-4. `A Real Stuntman Did THIS for 1 Scene 🚗 | [Movie (Year)]`
+*(Note: The Gaming short-form chart returned no direct short clips today, but gaming interest—especially GTA VI at **393,338** Wikipedia pageviews and massive Twitch live counts—is peaking).*
+
+### Movies & Cinema
+* **Kingsman: The Secret Service — Underwater Barracks Test**
+  * *Beat:* Start right as water cracks the glass. Run 25 seconds of unbroken panic in story order, ending on Eggsy using the door mirror to breathe.
+  * *On-Screen Credit:* *Kingsman: The Secret Service (2014)*
+* **The Hunger Games — The 60-Second Arena Countdown**
+  * *Context:* *The Hunger Games: Sunrise on the Reaping* is spiking (**204,097** Wikipedia views).
+  * *Beat:* Clip Katniss stepping onto the pedestal, the tense eye contact with Peeta, and the immediate bloodbath sprint when the horn blows.
+  * *On-Screen Credit:* *The Hunger Games (2012)*
+* **Classic Action / Stunt Cinema — Practical Stunt Breakdown**
+  * *Beat:* Focus on classic 80s/90s non-CGI car flips or window breaches (following the *Looker* 33.9M view trend).
+
+### Anime
+* **Steel Ball Run: JoJo's Bizarre Adventure**
+  * *Context:* Currently top-rated on MAL (score **9.03**).
+  * *Beat:* Gyro Zeppeli’s Steel Ball curve technique or Diego Brando’s horse sprint sequence. High-contrast sync edit to heavy bass.
+  * *On-Screen Credit:* *JoJo's Bizarre Adventure: Steel Ball Run*
+* **Black Clover (Season 2 Airing Now)**
+  * *Context:* Black Clover S2 trending on AniList (score **8.89** MAL).
+  * *Beat:* Asta and Yuno's dual spell execution against high-tier demons. 30-second continuous push with audio leveling on spell impact.
+  * *On-Screen Credit:* *Black Clover*
+* **Vinland Saga / Thorfinn Edits**
+  * *Context:* Thorfinn edits pulled **3,820,581** views this week.
+  * *Beat:* The "I have no enemies" farmland confrontation. Cut directly from brutal violence to calm resolution beat.
+
+---
+
+## 3. Title Patterns to Copy
+
+* **Informal Action Reaction:**  
+  `Bro really [did absurd action] 😭🥀`
+* **High-Stakes Superlative:**  
+  `The coldest [test / scene / combat] in movie history ☠️🔥`
+* **Behind-The-Scenes / Stunt Fact:**  
+  `A Real Stuntman Did THIS for This Scene 🚗 | [Movie Name] ([Year])`
+* **Character POV Framing:**  
+  `Why he reacted like that 💀 | [Character Name]`

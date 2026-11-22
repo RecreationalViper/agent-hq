@@ -1,53 +1,57 @@
-# Trend Scout (updated 2026-11-21)
+# Trend Scout (updated 2026-11-22)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-Here are the 5 strongest clip opportunities for MotionVault today, ordered from highest viral potential down.
+# Trend Scout Report: Top 5 Clip Opportunities (2026-11-22)
+
+Here are the 5 strongest clip opportunities for MotionVault today across gaming, movies, and anime based on fresh search, streaming, box office, and TikTok trend data.
 
 ---
 
-### 1. Grand Theft Auto VI: Vice City Open-World Absurdity
-* **Why it will get views now:** *GTA 6* just launched on Nov 19, generating over $3B on day one [Extra Points](https://news.google.com/rss/articles/CBMiwwFBVV95cUxOR01fb1B4UEpqYkE3N0d1UzdTMXJWQzVhMllDNmFsMGxVQVFWRkVxVlY5T1ZmLWlzeFNjUXRnNl9iOXpUNm9VMTZaN0FPRWlrSjJpdVRkX2hURUJMREtXSHpmbTRUM1RqQWRHVjFKeFFGWWFzUHZWbmZ4TFBtRnZGcVV2c1VpbWxUOHJGVG80bldFNGpFWW9aa2oxZGFSWnVNcU53NmRJdW5Td3ZRVVNGdzZHN3MybldYdEtTaVR2U2kxOTg?oc=5). Launch-week TikToks generated nearly 100M views in 48 hours [2], and it holds the #1 spot on Wikipedia (540k+ views) and Twitch.
-* **Exact moment to clip:** A 30-second comedic escalation montage: start with the player walking casually down a neon Ocean Drive sidewalk (0–2s hook), suddenly interrupted by a rogue swamp python or runaway mobility scooter [2], cutting straight into a 5-star police boat pursuit through the Everglades, ending on a mid-air vehicle collision.
-* **Sound/Format:** Fast-paced beat sync using trending audio like Olivia Rodrigo’s rising track *maggots for brains* or Panchiko’s *D>E>A>T>H>M>E>T>A>L*.
-* **Source:** [The 10 Most-Viewed GTA 6 TikToks of Launch Week (TikFuel)](https://tikfuel.com/most-viewed-gta-6-tiktoks/) · [GTA 6 LIVE: Viral clips & gameplay (indy100)](https://www.indy100.com/gaming/gta-6-viral-clips-moments-reactions-2678480907)
+### 1. Grand Theft Auto VI — The "Red Hulk" Encounter / Reaction Cut
+* **Why it will get views now:** *GTA VI* is the single biggest media event on Earth today. It smashed records with **$3.8 billion in day-one sales** (BBC), pulled **393,338 views on Wikipedia yesterday** (#1 overall), and dominates Twitch with over 300k+ live viewers across streams like IlloJuan (97k viewers) and Rubius (60k viewers). Specifically, the "Red Hulk" mystery encounter is going viral across social media right now (Mashable).
+* **Exact Scene to Clip:** 
+  * **Hook (0-2s):** IShowSpeed yelling *"WHAT IS THAT?!"* as a shadowy red figure emerges under streetlights.
+  * **Body (2-25s):** Unbroken story-order clip of the night encounter in Vice City—driving closer as fog clears, revealing the massive character model walking into frame.
+  * **Finish (25-30s):** Sudden punch/car toss cut right as the screen flashes the "WASTED" death sound.
+* **Source Link:** [Mashable — Is 'Red Hulk' in GTA 6? IShowSpeed's shocking reaction goes viral](https://me.mashable.com/gaming/78558/is-red-hulk-in-gta-6-ishowspeeds-shocking-reaction-goes-viral)
 
 ---
 
-### 2. The Hunger Games: Snow vs. The Reaping Legacy
-* **Why it will get views now:** *The Hunger Games: Sunrise on the Reaping* is dominating the box office with a $120M+ opening weekend [Deadline](https://news.google.com/rss/articles/CBMikAFBVV95cUxNaldkSEQ3azBLUl9CSnBWYTVJb0VKTGtFYk9BV3RJS0Y3NjVrVmZpSGdZRUVYUHRpYnB1NHhEdFV5eFMxZlJFUG5OWmNGN3hncFlubURnYlptQmt1ZGRkRlVYUmdXV2Zvd3ptOHJ6dlVRbVhvT1J6TG5wMGhvQzdQYnBSbnFvZDdrZ2NNSEhyTFU?oc=5), while searches for characters like Maysilee Donner and Josh Hutcherson are surging worldwide.
-* **Exact moment to clip:** To avoid bootleg theater footage, build a high-tension comparative edit using HD official footage: Hook (0–2s) on young Coriolanus Snow watching the early arena screens in *The Ballad of Songbirds & Snakes*, match-cutting to an unbroken stretch of older President Snow announcing the 75th Quarter Quell in *Catching Fire*. Final beat: Katniss and Peeta's names being drawn as the crowd goes silent.
-* **Sound/Format:** Ambient dread / heavy bass drop transition (e.g., Radiohead's *Let Down* or a slowed synth sweep).
-* **Source:** [‘Hunger Games: Sunrise on the Reaping’ $120M+ Comeback (The Hollywood Reporter)](https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRXNPN1Q2d2RqLVpiQUlhNC11V0VpS3ZnNm8yYWJrTzZreEsyWmlSV2ZUNTJ4dnM2dWpBVTBxZkMxTi1RQ3JrRXdZQ1g5d2NOVVNpOTZDdDlhbGhmOWxTZVRhV0N5RzVQelRveFNyVVpsZl9aMExKNkF2bm45OHlRdlhQWFVvb29qR2R2WVVPeFgtdm5jUnJVckM4cW1ZOHlBN2k3U0U5SktScnFtZEpGWDI5RWdUN3EyYzNPZlN1QW1TZw?oc=5)
+### 2. The Hunger Games: Sunrise on the Reaping — Haymitch Quarter Quell Teaser Edit
+* **Why it will get views now:** The movie just exploded at the box office with a **$120M debut weekend** (Variety / Deadline), ranking #4 on Wikipedia with **204,097 views yesterday**. Mckenna Grace and Maysilee Donner are both spiking in search worldwide.
+* **Exact Scene to Clip:**
+  * **Hook (0-2s):** The loud Capitol cannon blast echoing over the Reaping stage as Haymitch Abernathy’s name is drawn.
+  * **Body (2-28s):** Unbroken sequence from official trailer/teaser footage showing Haymitch walking into the 50th Quarter Quell arena, the glass pedestal rising, and the lethal arena landscape opening up.
+  * **Finish (28-32s):** Haymitch grabbing the prop axe from the Cornucopia just as the countdown clock hits `00:00`.
+* **Source Link:** [Deadline — Box Office: 'Hunger Games: Sunrise on Reaping' Opening to $120M](https://news.google.com/rss/articles/CBMikAFBVV95cUxNaldkSEQ3azBLUl_CSnBWYTVJb0VKTGtFYk9BV3RJS0Y3NjVrVmZpSGdZRUVYUHRpYnB1NHhEdFV5eFMxZlJFUG5OWmNGN3hncFlubURnYlptQmt1ZGRkRlVYUmdXV2Zvd3ptOHJ6dlVRbVhvT1J6TG5wMGhvQzdQYnBSbnFvZDdrZ2NNSEhyTFU?oc=5)
 
 ---
 
-### 3. Lupin: Part 4 – "Escape the Cage" Blackout
-* **Why it will get views now:** The "Escape the Cage" clip from *Lupin: Part 4* is currently an explosive meme template on TikTok (with single edits surpassing 3.6M views within days) [6].
-* **Exact moment to clip:** 
-  * 0–2s: Assane Diop strapped into a straitjacket inside a secure, transparent glass holding cell.
-  * 2–5s: Heavy fluorescent hum, then total darkness as the power cuts out completely.
-  * 5–15s: Red emergency lights flicker back on: the cell is wide open, straitjacket pooled on the floor, Assane gone.
-  * Payoff: Keep it clean and suspenseful, or finish with on-screen text matching the viral POV format ("When the team says one more game").
-* **Source:** [Lupin Escape Scene: TikTok's Escape the Cage Meme](https://meme.com/memes/lupin-escape-scene-escape-the-cage)
+### 3. Steel Ball Run: JoJo's Bizarre Adventure — San Diego Beach Race Start
+* **Why it will get views now:** *Steel Ball Run* is currently the **#1 rated airing anime on MyAnimeList** with a massive **9.03 score** across 259,915 members. Anime edits on YouTube Shorts are pulling millions of views right now.
+* **Exact Scene to Clip:**
+  * **Hook (0-2s):** Gyro Zeppeli spinning his Steel Ball between his fingers with a heavy bass-boosted sound effect.
+  * **Body (2-26s):** Unbroken action stretch of the starting cannon firing on San Diego beach, showing dozens of horses charging into the surf in crisp story order.
+  * **Finish (26-30s):** Close-up shot of Johnny Joestar looking up from his wheelchair with glowing eyes as horse hooves kick up sand.
+* **Source Link:** [MyAnimeList — Steel Ball Run: JoJo's Bizarre Adventure Page](https://myanimelist.net/anime/61469)
 
 ---
 
-### 4. Black Clover Season 2: Asta’s Anti-Magic Clash
-* **Why it will get views now:** *Black Clover Season 2* is currently holding the #1 trending score (603) on AniList and an 8.89 rating on MyAnimeList, making it the most active shonen community topic right now.
-* **Exact moment to clip:**
-  * 0–2s: Close-up eye flare as Asta taps into full Devil Union / Anti-Magic resonance.
-  * 2–25s: An unbroken 15–20 second stretch of the sword strike connecting against high-tier magic barriers, showcasing Studio Pierrot's dynamic camera rotation and sound design.
-  * 25–32s: Heavy silence as the blade cleaves through, ending on Asta resting the Demon-Slasher on his shoulder.
-* **Sound/Format:** Phonk or high-tempo phonk montage style (similar to the viral 5M+ view Brazilian phonk edits currently trending on YouTube Shorts).
-* **Source:** [Black Clover Season 2 on AniList](https://anilist.co/anime/195604) · [MyAnimeList Airing](https://myanimelist.net/anime/61967)
+### 4. Lupin: Part 4 — The Glass Cell Blackout ("Escape the Cage" Trend)
+* **Why it will get views now:** The "Escape the Cage" clip edit from *Lupin: Part 4* was published as a viral TikTok meme trend on Nov 19 (Know Your Meme / meme.com) and has cleared **3.6M+ views** in under a week. 
+* **Exact Scene to Clip:**
+  * **Hook (0-2s):** Assane Diop locked in a straitjacket inside a lighted, high-security glass cell looking directly into the lens.
+  * **Body (2-22s):** The lights buzz and flicker out into 2 unbroken seconds of complete blackout audio.
+  * **Finish (22-26s):** Lights slam back on revealing the glass cell completely empty, with only the empty straitjacket lying on the floor while guards react.
+* **Source Link:** [Know Your Meme — Lupin Escape Scene: TikTok's Escape the Cage Meme](https://meme.com/memes/lupin-escape-scene-escape-the-cage)
 
 ---
 
-### 5. "Talk to Me Doja" Sway Dance (Yamada-kun and the Seven Witches)
-* **Why it will get views now:** A breakout TikTok audio/visual trend documented this week by TrendRundown [1], where creators sync the shy sway dance from episode 1 of *Yamada-kun and the Seven Witches* to a sped-up version of Doja Cat's *Like That*.
-* **Exact moment to clip:**
-  * 0–3s: Urara Shiraishi / Yamada's sudden shy eye contact.
-  * 3–20s: The continuous, rhythmic bashful swaying loop synced tightly on-beat to the high-tempo vocal chop.
-  * 20–30s: Quick match-cuts of other iconic anime sway scenes (e.g., *Chiikawa*, *Ranma 1/2*, or *The Apothecary Diaries*) doing the exact same side-to-side sway to finish the reel.
-* **Source:** [What is the Talk to Me Doja trend? (TrendRundown)](https://trendrundown.com/x/what-is-the-talk-to-me-doja-trend)
+### 5. Dragon Ball — "Yo My Fault Bruh" (Vegeta Trash Talk Format)
+* **Why it will get views now:** The "Yo My Fault Bruh" audio format peaked on TikTok on Nov 21 (meme.com), creating a wave of anime redraws and edits. It aligns with *Dragon Ball Super: Beerus* currently trending on AniList (380 score).
+* **Exact Scene to Clip:**
+  * **Hook (0-2s):** Vegeta smirking and trash-talking Goku (*"You've gone soft, Kakarot!"*).
+  * **Body (2-20s):** Goku slowly turning around with a dark red aura and death stare in unbroken story order.
+  * **Finish (20-25s):** Vegeta instantly shrinking back, sheepishly dropping the iconic *"Yo, my fault bruh"*, cut straight to a punch sound effect and screen shaking.
+* **Source Link:** [Know Your Meme — Yo My Fault Bruh: The Vegeta Apology TikTok](https://meme.com/memes/yo-my-fault-bruh)
