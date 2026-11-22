@@ -1,0 +1,25 @@
+name: Friday Ping
+# Sends one notification to Josiah's phone through Friday (ntfy). Used for tests and by agents.
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        default: "Friday"
+      message:
+        default: "Test from Friday"
+permissions:
+  contents: read
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - env:
+          PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
+          T: ${{ github.event.inputs.title }}
+          M: ${{ github.event.inputs.message }}
+        run: |
+          KEY=$(printf "friday-check:%s" "$(echo -n "$PAYHIP_API_KEY" | tr -d '[:space:]')" | sha256sum | cut -d' ' -f1)
+          BODY=$(jq -n --arg t "$T" --arg m "$M" '{title:$t,message:$m,priority:"high"}')
+          curl -sS -m 30 -X POST https://foreverheld-sales.foreverheld.workers.dev/friday/notify -H "x-friday-key: $KEY" -H "content-type: application/json" -d "$BODY" | tee /tmp/r.json
+          grep -q '"ok":true' /tmp/r.json
