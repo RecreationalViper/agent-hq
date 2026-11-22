@@ -1,5 +1,17 @@
 {
   "covered": [
+    "https://openai.com/index/perplexity-and-intelligence",
+    "https://tech.yahoo.com/ai/copilot/articles/microsoft-ai-coder-gunning-claude-094507756.html",
+    "https://www.akm.ru/eng/news/anthropic-has-introduced-a-more-economical-opus-5-5-model-/",
+    "https://github.com/ShinMegamiBoson/lookatmyquant",
+    "https://www.infoq.com/news/2026/11/postgresql-19-released/",
+    "https://ochtendkrant.be/en/2026-11-22/rust-parallelle-frontend-nightly-standaard",
+    "https://www.infoq.com/news/2026/11/aws-lambda-gpu-managed-instances/",
+    "https://linebender.org/blog/next-100-guis/",
+    "https://github.com/sebaandrada-cell/PcapAnalyzer",
+    "https://openai.com/index/perplexity-and-intelligence/",
+    "https://arxiv.org/abs/2606.14068",
+    "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/",
     "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
     "https://alpo.ge/remark.pdf",
     "https://openai.com/index/combatting-adversarial-distillation",
@@ -154,6 +166,6 @@
     "https://hunch.net/?p=13764006",
     "https://www.kadoa.com/companies/insights/ai-selloff-perspective"
   ],
-  "lastRun": "2026-11-21",
-  "lastNotion": "2026-11-21"
+  "lastRun": "2026-11-22",
+  "lastNotion": "2026-11-22"
 }
