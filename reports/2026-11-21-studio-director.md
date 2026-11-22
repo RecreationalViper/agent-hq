@@ -2,62 +2,60 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-Here are the 3 clip plans for Claude to cut today (2026-11-21), based on today's search trends, Twitch viewer numbers, YouTube Shorts performance data, and TikTok audio/format spikes.
+# Today's Production Schedule (2026-11-21)
+
+Here are the **3 clips** MotionVault should produce today based on fresh data from the scanners (GTA VI breaking $3.8B launch records, *Sunrise on the Reaping* driving 174k+ Wikipedia views, and *Black Clover Season 2* holding the #1 trending spot on AniList).
 
 ---
 
-### Priority Order: Which Clip to Make First & Why
+## 🎬 Make First: Clip 1 — GTA VI: Vice City Escalation
+* **Why first:** *GTA 6* is at peak worldwide launch hype (#1 on Wikipedia with 540,793 views, dominating Twitch with 200k+ concurrent viewers across streams like TheBurntPeanut and KaiCenat). Striking during launch weekend gives us the highest immediate view velocity on both TikTok and YouTube Shorts.
+* **Target Platforms:** Both (TikTok & YouTube Shorts)
+* **Target Length:** 32 seconds
+* **Mood:** High-octane, chaotic, fast-paced comedy-action
+* **Audio Note:** Trending sound **"Suzuki" (GTA VI Soundtrack)** or **"MONTAGEM ROYAL (ULTRA SLOWED)"**. Sync a heavy bass drop directly onto the 2-second vehicle impact.
 
-**Make Clip 1 (GTA VI) FIRST.**
-* **Why:** *Grand Theft Auto VI* is experiencing a massive global viral peak (540k+ Wikipedia pageviews yesterday, dominating Twitch streams with over 500k active live viewers). Posting during launch weekend gives us our strongest chance for algorithm discovery across both TikTok and YouTube Shorts.
-
----
-
-### Clip 1: GTA VI — Vice City Beach Chase & Ramp Jump
-* **Target Platforms:** Both TikTok & YouTube Shorts
-* **Source & Location:** *Grand Theft Auto VI* (Official Trailer / Gameplay reveal footage; Vice City beach promenade and coastal highway chase; rough timestamp 0:45–1:15 in official reveal material).
-* **Hook (0–2s):** Interior driver POV as a muscle car engine revs aggressively, red-and-blue police lights flashing against the windshield. Text overlay: *"Vice City on Day 1..."*
-* **Unbroken Stretches (in story order):**
-  1. *Stretch 1 (2–14s):* 12-second unbroken shot of Jason driving down the beach promenade at high speed, plowing past beach umbrellas and fleeing NPCs.
-  2. *Stretch 2 (14–25s):* 11-second unbroken stretch of Lucia leaning out the passenger window opening fire on pursuing patrol cars along the coastal highway.
-  3. *Stretch 3 (25–33s):* 8-second unbroken stretch lining up a high-speed launch off a drawbridge ramp into the sunset sky.
-* **Biggest Moment:** The vehicle airborne over the Vice City drawbridge with the neon skyline in full view (28–32s mark).
-* **Final Beat:** Freeze-frame on the mid-air car jump right before collision, cutting abruptly to black (33–35s).
-* **Target Length:** 35 seconds.
-* **Mood:** High-octane, chaotic, adrenaline flex.
-* **Audio Note:** Use trending track **Suzuki — GTA VI Soundtrack**. Sync the opening engine rev to the 0–2s hook, dropping the main synth/bass hit right as Stretch 1 hits the beach.
-* **On-Screen Credit:** `Source: Grand Theft Auto VI (Rockstar Games)`
+### Shot Plan for Claude
+* **Source:** Official *Grand Theft Auto VI* trailers & gameplay captures (Ocean Drive to Everglades sequence).
+* **Hook (0–2s):** Casual 1-second walking shot on neon Ocean Drive sidewalk, abruptly interrupted by a rogue vehicle flying through a palm tree into a swamp python.
+* **Stretch 1 (2–12s):** Unbroken high-speed drag race down Ocean Drive as Vice City police sirens kick in and headlights reflect on the wet pavement.
+* **Stretch 2 (12–22s):** Seamless story transition to an Everglades hoverboat chase cutting through marshland while a 5-star police helicopter locks searchlights onto the vehicle.
+* **Stretch 3 (22–28s):** High-speed drawbridge ramp jump framing the full Vice City skyline at sunset.
+* **Biggest Moment (28–30s):** Mid-air vehicle collision with a police chopper cut in speed-ramped slow motion right as the audio peaks.
+* **Final Beat (30–32s):** Hard abrupt cut to black with the "VICE CITY" neon logo slamming down over a lingering siren echo to trigger instant rewatches.
 
 ---
 
-### Clip 2: JoJo’s Bizarre Adventure: Steel Ball Run — Gyro & Johnny Stage 2 Sprint
-* **Target Platforms:** Both TikTok & YouTube Shorts
-* **Source & Location:** *JoJo’s Bizarre Adventure: Steel Ball Run* (Anime Season 1 / Ep 8–10 race sequence; exact anime timestamp rough mid-episode stage race).
-* **Hook (0–2s):** Heavy sound effect of Gyro Zeppeli drawing and spinning a Steel Ball with glowing green aura sparks.
-* **Unbroken Stretches (in story order):**
-  1. *Stretch 1 (2–12s):* 10-second unbroken shot of Gyro and Johnny galloping side-by-side through a dusty canyon course.
-  2. *Stretch 2 (12–22s):* 10-second unbroken stretch of Gyro launching the Steel Ball, creating a spinning pressure wave that warps the air around rival riders.
-  3. *Stretch 3 (22–30s):* 8-second unbroken shot of Johnny activating his Tusk Stand aura, eyes burning with dark determination as he accelerates.
-* **Biggest Moment:** The Steel Ball impact wave tearing through the canyon path to clear the lead (20–25s).
-* **Final Beat:** Extreme close-up cut on Johnny's glowing eyes in dark silhouette, terminating abruptly on the sub-bass hit (30–32s).
-* **Target Length:** 32 seconds.
-* **Mood:** Hyper-energetic, intense aura flex.
-* **Audio Note:** **MONTAGEM ROYAL (ULTRA SLOWED)**. Edit using the *Funk Mandala / Velocity Speed-Ramping* style (slow-mo on ball spin, fast-forward speed ramps on sprint pushes).
-* **On-Screen Credit:** `Source: JoJo's Bizarre Adventure: Steel Ball Run`
+## 🎬 Clip 2 — Black Clover Season 2: Asta’s Anti-Magic Cleave
+* **Why this clip:** *Black Clover Season 2* is currently the #1 trending anime on AniList (603 score, 112k+ fans) and #2 top airing on MyAnimeList (8.89 score). Action edits using heavy phonk beat-sync are hitting 5M+ views on Shorts this week.
+* **Target Platforms:** Both (TikTok & YouTube Shorts)
+* **Target Length:** 34 seconds
+* **Mood:** Dark anime hype, raw energy, overwhelming power
+* **Audio Note:** **"MONTAGEM ROYAL (ULTRA SLOWED)"** (Brazilian Funk / Phonk). Cut all audio to complete dead silence the exact microsecond the sword cleaves through.
+
+### Shot Plan for Claude
+* **Source:** *Black Clover Season 2* (Episode 1–8 fight sequence; rough timestamp ~16:30 during the Anti-Magic barrier clash).
+* **Hook (0–2s):** Close-up eye freeze frame with red/black Anti-Magic aura flaring instantly as Asta’s voice echoes.
+* **Stretch 1 (2–14s):** Unbroken shot of Asta surging forward in Devil Union form, ground shattering beneath his boots as high-tier enemy magic barriers manifest.
+* **Stretch 2 (14–26s):** Continuous 12-second Studio Pierrot dynamic camera rotation showing the Demon-Slasher blade grinding against the glowing barrier, sending black Anti-Magic sparks flying across the screen.
+* **Stretch 3 (26–30s):** The magic barrier fracturing and shattering into dark energy particles as Asta completes the arc swing.
+* **Biggest Moment (28–30s):** Full-screen explosion of dark Anti-Magic as the barrier ruptures.
+* **Final Beat (30–34s):** Complete audio drop to dead silence as Asta rests the heavy blade on his shoulder in slow-mo, glaring straight at the viewer before snapping to black.
 
 ---
 
-### Clip 3: Kingsman: The Secret Service — "Manners Maketh Man" Bar Fight
-* **Target Platforms:** YouTube Shorts (also suitable for TikTok)
-* **Source & Location:** *Kingsman: The Secret Service* (2014 film; pub confrontation scene around 0:42:00–0:44:30 timestamp).
-* **Hook (0–2s):** Close-up shot of Harry Hart (Colin Firth) clicking the deadbolt lock on the pub door, turning back calmly. Bold text overlay: *"They Thought He Was Just An Old Man 💀"*
-* **Unbroken Stretches (in story order):**
-  1. *Stretch 1 (2–12s):* 10-second unbroken stretch of Harry delivering his famous line ("Manners maketh man") and swinging his umbrella handle to take out the lead thug.
-  2. *Stretch 2 (12–24s):* 12-second unbroken fight stretch showing Harry using gadgets (taser watch, shock glass) to fluently disarm three thugs in rapid succession.
-  3. *Stretch 3 (24–34s):* 10-second unbroken finish stretch as Harry calmly finishes his Guinness pint while the last thug stumbles to the floor.
-* **Biggest Moment:** The fluid umbrella hook-and-flip taser strike combo taking down the gang leader (18–24s).
-* **Final Beat:** Harry placing his pint glass back on the table with a quiet nod, cutting to black (34–36s).
-* **Target Length:** 36 seconds.
-* **Mood:** Stylish, smooth, understated badass payoff.
-* **Audio Note:** Keep original high-quality film dialogue audio for the "Manners maketh man" hook and impact sound effects, layering a subtle slowed bass tension track beneath the action.
-* **On-Screen Credit:** `Source: Kingsman: The Secret Service (2014)`
+## 🎬 Clip 3 — The Hunger Games: Snow’s Reaping Legacy
+* **Why this clip:** *The Hunger Games: Sunrise on the Reaping* is opening at $120M+ while Haymitch/Snow searches are up +456% worldwide. Using HD official footage avoids theater bootlegs while capitalizing on the massive box office buzz.
+* **Target Platforms:** Both (TikTok & YouTube Shorts)
+* **Target Length:** 35 seconds
+* **Mood:** Dark cinematic dread, cold authority, atmospheric tension
+* **Audio Note:** **"My Moon My Man" – FINNEAS** (currently #1 rising on viral sound charts) or Radiohead's *Let Down*. Heavy sub-bass pulse right on the match-cut transition at 0:12.
+
+### Shot Plan for Claude
+* **Source:** *The Hunger Games: The Ballad of Songbirds & Snakes* (~1h 40m mark; young Snow watching arena feeds) match-cut into *The Hunger Games: Catching Fire* (~22m mark; President Snow Quarter Quell speech).
+* **Hook (0–2s):** On-screen text: *"He built the game. They broke it."* Close-up on young Coriolanus Snow’s icy blue eyes staring into a Capitol monitor screen.
+* **Stretch 1 (2–12s):** Young Snow standing in the Capitol control room watching early arena chaos unfold in *Songbirds & Snakes*, adjusting his uniform with a cold glare.
+* **Stretch 2 (12–24s):** Match-cut transition on a match flame / monitor glow straight to older President Snow stepping up to the Capitol balcony podium in *Catching Fire*.
+* **Stretch 3 (24–31s):** Unbroken sequence of Effie Trinket drawing Katniss Everdeen's name from the glass bowl as the District 12 crowd falls completely silent.
+* **Biggest Moment (28–31s):** Katniss’s stunned reaction processing her name being drawn again while President Snow watches silently from above.
+* **Final Beat (31–35s):** Low synth rumble as President Snow slowly sips white rose tea, holding an unblinking gaze before the video snaps shut.

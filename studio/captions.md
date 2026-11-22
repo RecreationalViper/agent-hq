@@ -2,63 +2,73 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# Social Strategy Plan — November 21, 2026
-
-Here is today's posting strategy, captions, hook text, titles, and timing schedule for MotionVault's 3 cuts.
+Here is the social packaging plan for today's 3 clips, optimized for maximum viewer retention and comment section interaction.
 
 ---
 
-### Clip 1: GTA VI — Vice City Beach Chase & Ramp Jump
+### 🎬 Clip 1 — GTA VI: Vice City Escalation
+
+* **On-Screen Hook Text (6 words max):**
+  > Vice City is completely unhinged 💀
 
 * **TikTok Captions:**
-  * Option 1: Vice City on Day 1 is pure chaos 😭🔥
-  * Option 2: Would you attempt this drawbridge jump or pull over immediately? *(Comment Driver)*
-  * Option 3: Lucia leaning out the passenger window is instant cinematic heat 🚗💨
-  * Option 4: Launch weekend energy hits completely different in Vice City 🌴⚡️
-* **On-Screen Hook Text (max 6 words):**
-  * `Vice City on Day 1 💀`
-* **Hashtags (mix of big & niche):**
-  * `#GTA6` `#GTAVI` `#GrandTheftAuto6` `#GTAEdit` `#ViceCity` `#GamingEdit`
+  1. What’s the FIRST thing you’re doing when you load into Vice City? 👇
+  2. Vice City physics hit different at 100mph 🚗💨
+  3. Never let the Everglades python near a flying car... 💀
+  4. Launch weekend vibes in Vice City 🌴🔥
+
+* **Hashtags (5–6):**
+  `#gta6` `#vicecity` `#gta6gameplay` `#grandtheftautovi` `#gamingedit` `#gta6launch`
+
 * **YouTube Shorts Title (under 60 chars):**
-  * `The Hardest Jump In GTA 6 ☠️🔥` *(32 chars)*
-* **Best Posting Times (New York / EST):**
-  * **TikTok:** 3:00 PM EST — *Captures peak weekend gaming engagement as global Twitch marathons hit afternoon activity.*
-  * **YouTube Shorts:** 5:00 PM EST — *Rides the early evening surge for gaming search queries after main streams finish.*
+  `Vice City Physics Are Completely Unhinged 💀 #gta6`
+
+* **Best Posting Times (EST / New York Time):**
+  * **TikTok (3:00 PM EST):** Peak weekend afternoon scrolling window when gamers finish day sessions and check feeds.
+  * **Shorts (5:00 PM EST):** Pre-evening prime time catch window for global gaming traffic on YouTube.
 
 ---
 
-### Clip 2: JoJo’s Bizarre Adventure: Steel Ball Run — Gyro & Johnny Stage 2 Sprint
+### 🎬 Clip 2 — Black Clover Season 2: Asta’s Anti-Magic Cleave
+
+* **On-Screen Hook Text (6 words max):**
+  > When Anti-Magic takes over 💀🔥
 
 * **TikTok Captions:**
-  * Option 1: Steel Ball Run animation quality is peak anime right now 🟢⚡️
-  * Option 2: Who had the cleaner aura activation: Gyro or Johnny? *(Comment Driver)*
-  * Option 3: That Steel Ball pressure wave cut goes so hard 🔥
-  * Option 4: Johnny activating Tusk gives me chills every single time 👁️🔥
-* **On-Screen Hook Text (max 6 words):**
-  * `Gyro's aura is unmatched 🟢`
-* **Hashtags (mix of big & niche):**
-  * `#SteelBallRun` `#JJBA` `#AnimeEdit` `#GyroZeppeli` `#JoJoEdit` `#JohnnyJoestar`
+  1. Is Asta’s Anti-Magic the most broken power in anime right now? 🤔 👇
+  2. Studio Pierrot went ALL IN on this camera spin 🗣️⚡️
+  3. That sudden audio mute right when the blade hits... 🔊🔇
+  4. Devil Union Asta is built completely different 🖤
+
+* **Hashtags (5–6):**
+  `#blackclover` `#astablackclover` `#blackcloverseason2` `#animeedit` `#anti-magic` `#animemontage`
+
 * **YouTube Shorts Title (under 60 chars):**
-  * `They Thought Gyro Was Out Of Options 💀` *(40 chars)*
-* **Best Posting Times (New York / EST):**
-  * **TikTok:** 7:00 PM EST — *Prime evening window for anime edit algorithm discovery and Phonk sound loops.*
-  * **YouTube Shorts:** 8:30 PM EST — *Target late-night anime Shorts viewers looking for high-energy fight edits.*
+  `When Asta Unleashes Pure Anti-Magic ☠️🔥 #blackclover`
+
+* **Best Posting Times (EST / New York Time):**
+  * **TikTok (8:00 PM EST):** Anime edit engagement peaks during late-evening personal time when comment activity is highest.
+  * **Shorts (7:00 PM EST):** Aligns with evening dark-mode scrolling hours for high-retention anime Shorts.
 
 ---
 
-### Clip 3: Kingsman: The Secret Service — "Manners Maketh Man" Bar Fight
+### 🎬 Clip 3 — The Hunger Games: Snow’s Reaping Legacy
+
+* **On-Screen Hook Text (6 words max):**
+  > He built the game. They broke it.
 
 * **TikTok Captions:**
-  * Option 1: Harry Hart locked that door and chose absolute violence 💀
-  * Option 2: Is this the cleanest bar fight scene in movie history? *(Comment Driver)*
-  * Option 3: "Manners maketh man." The umbrella combo never gets old ☂️⚡️
-  * Option 4: Calmly drinking a pint after clearing the room is legendary 🍺🔥
-* **On-Screen Hook Text (max 6 words):**
-  * `They Thought He Was Old 💀`
-* **Hashtags (mix of big & niche):**
-  * `#Kingsman` `#MovieEdit` `#MovieClips` `#HarryHart` `#ActionMovies` `#FightScene`
+  1. Was President Snow right about human nature, or just purely evil? 👇
+  2. Coriolanus Snow watching his legacy unfold in District 12... 🌹
+  3. That match-cut transition from young Snow hits so hard 🎬🔥
+  4. *Sunrise on the Reaping* changes how you rewatch *Catching Fire* 🐍
+
+* **Hashtags (5–6):**
+  `#hungergames` `#sunriseonthereaping` `#presidentsnow` `#catchingfire` `#hungergamesedit` `#cinematicedit`
+
 * **YouTube Shorts Title (under 60 chars):**
-  * `The Hardest Pub Fight Scene In Movie History ☠️🔥` *(48 chars)*
-* **Best Posting Times (New York / EST):**
-  * **TikTok:** 12:00 PM EST — *Midday lunch break boost for high-retention movie dialogue setups.*
-  * **YouTube Shorts:** 2:00 PM EST — *Early afternoon window capitalizing on rising Kingsman short-form search trends.*
+  `The Cold Truth About President Snow 🌹 #hungergames`
+
+* **Best Posting Times (EST / New York Time):**
+  * **TikTok (6:00 PM EST):** Prime movie-fandom debate hours as post-work/school movie discussion traffic peaks.
+  * **Shorts (4:00 PM EST):** Captures the early evening YouTube Shorts wave right before dinner time.

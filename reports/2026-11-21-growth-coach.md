@@ -2,60 +2,50 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# Growth & Monetization Plan (2026-11-21)
+### 1. Monetization Tracker (Where We Stand)
 
----
+*Note: Requirements change over time; always confirm exact criteria in your YouTube Studio and TikTok Creator Portal apps.*
 
-### 1. Progress vs. Monetization Goals
-
-#### YouTube Partner Program (Shorts Route)
-* **Requirements:** 1,000 Subscribers + 10 Million valid public Shorts views within 90 days (or 4,000 long-form watch hours; note recent news indicates YouTube watch-hour thresholds and rules continue to update, so confirm exact status in YouTube Studio).
-* **Current Status:** 0 subscribers, 26 total views (+7 this week across 11 videos).
-* **Progress:** 0% on subscribers, 26 / 10,000,000 views.
-
-#### TikTok Creator Rewards Program
-* **Requirements:** 10,000 Followers + 100,000 views in 30 days + **videos must be at least 1 minute (60s+) long** to qualify for payouts. (Check TikTok app balance/program tab for regional availability).
-* **Current Status:** Account `@motionvault36` set up; zero payout eligibility yet due to initial account stage and video lengths (most current edits are 25–56 seconds).
+*   **YouTube Partner Program (Shorts Route):**
+    *   **Target (Full Monetization):** 1,000 subscribers + 10 million public Shorts views in 90 days *(or 500 subs + 3M views for Fan Funding)*.
+    *   **Current Status:** **0 subscribers | 26 total views** (across 12 Shorts).
+    *   **Gap:** 1,000 subscribers and 9,999,974 views away.
+*   **TikTok Creator Rewards Program:**
+    *   **Target:** 10,000 followers + 100,000 video views in the last 30 days + **videos must be at least 1 minute (60 seconds) long**.
+    *   **Current Status:** Early setup stage.
+    *   **Crucial Note:** Current MotionVault cuts (25–56 seconds) build followers, but **do not qualify for TikTok Creator Rewards payouts** until duration exceeds 60 seconds.
 
 ---
 
 ### 2. 3 Highest-Impact Actions for Today
 
-#### Action 1: Post the GTA VI Vice City Beach Chase (Top Priority)
-* **What to Post:** Clip 1 from today's plan (*Grand Theft Auto VI* Vice City Beach Chase & Ramp Jump).
-* **Why Now:** *GTA VI* is at a massive viral peak (#1 on Twitch with 500k+ live viewers; #1 overall on Wikipedia with 540k+ pageviews yesterday).
-* **Hook (0–2s):** Interior muscle car POV with flashing police lights and text overlay: *"Vice City on Day 1..."*
-* **Sound & Style:** Use **Suzuki — GTA VI Soundtrack** or trending phonk audio.
-* **What to Test:** Text hook retention rate during the first 2 seconds on TikTok vs. YouTube Shorts.
-
-#### Action 2: Post JoJo’s Bizarre Adventure: Steel Ball Run (Anime Hype)
-* **What to Post:** Clip 2 from today's plan (Gyro & Johnny Stage 2 Sprint).
-* **Why Now:** *Steel Ball Run* is currently the #1 top-airing anime on MyAnimeList (9.03 rating).
-* **Hook (0–2s):** Heavy sound effect of Gyro spinning a Steel Ball with glowing aura sparks.
-* **Sound & Format:** **MONTAGEM ROYAL (ULTRA SLOWED)** paired with the **Funk Mandala / Velocity Speed-Ramping** format (slow-mo on ball spin, fast-forward speed ramp on sprint).
-* **What to Test:** Whether velocity speed-ramping increases average watch time over constant-speed cuts.
-
-#### Action 3: Test "The Underdog Flip" Format with Kingsman Bar Fight
-* **What to Post:** Clip 3 from today's plan (Kingsman "Manners Maketh Man" Pub Scene).
-* **Hook (0–2s):** Harry Hart clicking the door lock with text overlay: *"They Thought He Was Just An Old Man 💀"*
-* **Sound & Style:** Keep original dialogue in the hook ("Manners maketh man"), underlaid with a subtle slowed bass tension track.
-* **What to Test:** Using character dialogue as the primary hook audio rather than purely music track hooks.
+1.  **Capitalize on GTA VI Launch Hype (Post Clip 1 Immediately)**
+    *   **What to Post:** *GTA VI: Vice City Escalation* edit.
+    *   **Hook (0–2s):** Ocean Drive sidewalk walking shot violently interrupted by a flying vehicle crash. 
+    *   **Sound:** Trending audio **"Suzuki" (GTA VI Soundtrack)** or **"MONTAGEM ROYAL"**. Sync bass drop to the 2-second crash beat.
+    *   **When & What to Test:** Post between 12:00 PM – 3:00 PM local time. Test on-screen text hook: *"GTA 6 physics on launch day 💀"*. Pinned comment: *"What's the first thing you're doing in Vice City?"* to trigger comment velocity.
+2.  **Ride the #1 Trending Shonen Anime (Post Black Clover Clip)**
+    *   **What to Post:** *Black Clover Season 2: Asta’s Anti-Magic Cleave*. (*Black Clover S2* is currently #1 trending on AniList).
+    *   **Hook (0–2s):** Close-up eye freeze frame with red/black aura flare and Asta voice echo.
+    *   **Sound:** **"MONTAGEM ROYAL (ULTRA SLOWED)"** (drop audio to total silence exact microsecond the blade connects at 0:28).
+    *   **When & What to Test:** Post at 6:00 PM local time. Test YouTube Shorts search title: *"Asta Anti-Magic Barrier Break | Black Clover Season 2 Edit #shorts"*.
+3.  **Test a 60+ Second Extended Format for TikTok**
+    *   **What to Post/Test:** Combine the *Hunger Games* Snow/Reaping edit into a 62-second extended story arc for TikTok.
+    *   **Why:** You need 60s+ duration to qualify for TikTok Creator Rewards once you reach 10k followers. 
+    *   **Hook:** On-screen text: *"He built the games. They broke him."* (Young Snow in *Songbirds & Snakes* transitioning into *Catching Fire*).
 
 ---
 
-### 3. Critical Risk to Fix: Reused Content & Video Length Thresholds
+### 3. One Risk to Fix Today
 
-* **The Problem:** 
-  1. **TikTok Rewards Length Floor:** Most of our recent uploads are 25s–56s. TikTok Creator Rewards requires videos to be **60 seconds or longer** to collect payouts.
-  2. **Reused Content Flag Risk:** Raw clip re-uploads get flagged or demonetized for "reused content" on both YouTube and TikTok.
-* **The Fix:**
-  * **For TikTok monetization:** Have Claude edit extended 60–65 second versions (e.g., pairing two related scenes or adding an extended story-order setup) specifically for TikTok.
-  * **For Copyright Protection:** Always keep on-screen credits visible (e.g., `Source: Grand Theft Auto VI (Rockstar Games)`), cut multiple unbroken stretches in story order rather than 1-second chaotic spam, and use unique audio layering/text overlays so algorithms identify them as original transformative montages.
+*   **Risk:** **Format Length Disconnect & Reused Content Risk.**
+    *   **The Issue:** Your recent YouTube uploads average 25–47 seconds, with views sitting between 0 and 1 per video. Raw unedited clips with standard titles get flagged by platform algorithms as "Reused Content" (blocking monetization) or ignored due to weak initial hold rates.
+    *   **The Fix:** Ensure every video cut by Claude has clear **transformative value**: speed-ramping, beat sync, color grading, and a non-generic text overlay hook. On TikTok, begin testing >60s edits to prepare for monetization rules.
 
 ---
 
-### 4. Key Metric to Watch This Week
+### 4. One Metric to Watch This Week
 
-* **Primary Metric:** **Viewed vs. Swiped Away Ratio (YouTube Shorts) / 2-Second Retention Rate (TikTok).**
-* **Target:** Achieve a **>70% "Viewed" rate** (keeping swipe-aways under 30%) on YouTube Shorts, and a **>60% retention at 3 seconds** on TikTok. 
-* **Why:** If the first 2 seconds fail to hold the viewer, the algorithm immediately stops distributing the clip regardless of how good the rest of the montage is.
+*   **Metric:** **"Viewed vs. Swiped Away" Ratio (YouTube Shorts Analytics).**
+    *   **Target:** **>70% Viewed** (less than 30% swiped away in the first 2 seconds).
+    *   **Why:** Right now, recent uploads like *Spider-Man* (43s) and *TMNT* (47s) are getting 0–1 views. YouTube tests new Shorts with a small seed audience; if >50% swipe away instantly, distribution stops. If retention is below 70%, shorten the opening hook to under 1.5 seconds.

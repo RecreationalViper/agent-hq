@@ -2,63 +2,58 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-### Top 6 Viral Edit Formats Working Right Now
-
-Here are the top short-form edit formats trending across TikTok and YouTube Shorts for movie, game, and anime content, based on current viewer signals and edit templates.
+Here is the current analysis of trending short-form edit formats across TikTok and YouTube Shorts, backed by scanner and search data from today (2026-11-21).
 
 ---
 
-### 1. The Interruption / Contrast Cut ("Bike Guy" Style)
-* **What it is:** A high-intensity anime, movie, or game scene builds tension, but right at the climax, it abruptly cuts to a completely mundane, calm visual (e.g., a random cyclist or casual observer moving through the frame).
-* **Why it works:** Massive visual contrast creates an instant comedic anti-climax that drives high share rates and comment section banter.
-* **Studio Example (*GTA VI* / *Black Clover S2*):** Open with high-octane *Grand Theft Auto VI* police chase or *Black Clover Season 2* spell casting. Just as the magic hit or car jump occurs, cut to an oblivious NPC riding a bicycle past the explosion.
-* **Source:** [Funotic - Bike Guy Meme Explained](https://www.funotic.com/funny/bike-guy-meme/)
+## 6 High-Performing Edit Formats Right Now
+
+### 1. Funk Mandala / Beat-Sync Glitch Edits
+* **What makes it work:** High-energy CapCut transitions, speed-ramping, and fake loading/lag glitch effects synced perfectly to heavy beat drops (like Funk Mandala or Brazilian Phonk). Captures immediate attention in the first 1–2 seconds and keeps watch time high through visual momentum.
+* **MotionVault Implementation:** 
+  * **Title:** *Steel Ball Run: JoJo's Bizarre Adventure* (currently #1 top airing anime on MAL with a 9.03 score).
+  * **Execution:** A 30-second montage starting with a 1-second freeze frame of Gyro Zeppeli, dropping into a fast beat-synced glitch edit using raw race action clips in story sequence, ending on a high-impact ultimate move beat.
+* **Source:** [How to make a Funk Mandala anime edit in CapCut](https://howtos.video/how-to/make-a-funk-mandala-anime-edit-in-capcut) [2] / [YouTube Shorts - Radhe Shyam Funk Edit](https://youtu.be/UKWk8Zbjd6Y)
+
+### 2. "Escape the Cage" Blackout Transition
+* **What makes it work:** Based on the trending *Lupin: Part 4* blackout escape edit trend. Opens with a clip of a character trapped/confined, cuts to black on the beat drop, and transitions into a character appearing somewhere completely unexpected or performing a massive power flex.
+* **MotionVault Implementation:**
+  * **Title:** *Black Clover Season 2* (currently trending on AniList with 112k+ fans).
+  * **Execution:** Opens with Asta cornered/restrained (1–2 sec hook), cuts to a 0.5 sec black screen, then drops into an unbroken 25-second story stretch of his demon form takeover, finishing on a strong freeze-frame shot.
+* **Source:** [Lupin Escape Scene: TikTok's Escape the Cage Meme](https://meme.com/memes/lupin-escape-scene-escape-the-cage) [3]
+
+### 3. Unexpected Audio Contrast Edit (Cinematic x Odd Sound)
+* **What makes it work:** Pairs dark, serious cinematic footage with nostalgic, upbeat, or culturally contrasting audio (e.g., Bollywood tracks or indie pop over dark anti-heroes like Batman). The jarring contrast hooks viewers in 1 second and drives heavy comment section debate and shares.
+* **MotionVault Implementation:**
+  * **Title:** *The Hunger Games: Sunrise on the Reaping* / *Batman* cinematic clips.
+  * **Execution:** Overlaying an upbeat rising Last.fm track (e.g., Olivia Rodrigo’s "the cure") or unexpected classic track over intense Haymitch / cinematic arena footage, keeping the story sequence clean while the music juxtaposition drives rewatches.
+* **Source:** [Why is the internet making Batman edits to Madhuri Dixit's Sajan Sajan? - India Today](https://www.indiatoday.in/trending-news/story/why-is-the-internet-making-batman-edits-to-madhuri-dixits-iconic-sajan-sajan-song-3042996-2026-11-20) [5]
+
+### 4. Interruption Contrast Edit ("Bike Guy" Style)
+* **What makes it work:** Features a dramatic, high-stakes anime or movie confrontation that is suddenly interrupted mid-scene by a completely mundane, calm element (like a cyclist riding past or an NPC wandering through).
+* **MotionVault Implementation:**
+  * **Title:** *One Piece* or *Thorfinn / Vinland Saga* (top viewed edit short this week with 5.9M views).
+  * **Execution:** A intense 15-second build-up of a dramatic anime face-off, cut cleanly right before the clash to an out-of-place NPC walking by, before snapping back to the final blow.
+* **Source:** [Bike Guy Meme Explained: Why the Sundx AT6 Edit Went Viral](https://www.funotic.com/funny/bike-guy-meme/) [1] / [YouTube Shorts - Thorfinn Edit](https://youtu.be/Jt0APrOk6aw)
+
+### 5. Perspective Character Storytelling (POV Retelling)
+* **What makes it work:** Uses simple on-screen POV text overlay ("POV: You are watching X from [Character]'s perspective") to give instant context. It gives viewers a narrative reason to stay engaged for the full 30–40 second story montage.
+* **MotionVault Implementation:**
+  * **Title:** *The Apothecary Diaries Season 3* (trending score 246 on AniList, 8.6 MAL score).
+  * **Execution:** POV text: *"POV: You try to hide a poison plot from Maomao."* Runs a continuous, unbroken 30-second scene stretch showing her deduction steps in order, ending on her confrontational glare.
+* **Source:** [YouTube Short - Jack's Perspective Edit](https://youtu.be/n3_cfxgs02I) (6M+ views)
+
+### 6. Relatable Decision & Dilemma Edits
+* **What makes it work:** Capitalizes on massive current pop-culture events (such as the huge spike in *Grand Theft Auto VI* interest across Twitch and search trends) by framing clips around a relatable viewer choice.
+* **MotionVault Implementation:**
+  * **Title:** *Grand Theft Auto VI* / *Call of Duty: Modern Warfare 4*.
+  * **Execution:** On-screen text hook: *"Deciding which 100GB game to delete for GTA 6..."* Cut between short high-impact clips of legacy games before settling on a GTA VI trailer/gameplay beat.
+* **Source:** [YouTube Short - Deciding which game to delete for GTA 6](https://youtu.be/SIDg1TNrqTk) (9.3M views) / Twitch & Steam live metrics
 
 ---
 
-### 2. "Escape the Cage & [X]" Fill-in-the-Blank Cut
-* **What it is:** Uses the 2-second clip from *Lupin: Part 4* where Assane Diop vanishes from a glass cell during a blackout. Creators pair it with overlay text stating a funny condition: *"Escaping the cage the second..."* before cutting into the main scene.
-* **Why it works:** Works as a rapid-fire micro-hook that viewer brains recognize instantly while allowing infinite meme variations.
-* **Studio Example (*GTA VI* Hype):** 
-  * *Text:* "Escaping the cage the second GTA VI drops on stream..."
-  * *Cut:* 2-second Lupin vanish cut $\rightarrow$ 30 seconds of high-speed *GTA VI* gameplay montaged to a viral track.
-* **Source:** [Meme.com - Lupin Escape Scene](https://meme.com/memes/lupin-escape-scene-escape-the-cage)
+## 🚩 Formats That Are Fading
 
----
-
-### 3. Funk Mandala / Velocity Speed-Ramping
-* **What it is:** High-speed action scenes edited with tight velocity speed ramps (slow-mo into rapid cuts) synced exactly to heavy Brazilian Funk or phonk beat drops.
-* **Why it works:** Extreme visual energy and precise audio-sync deliver high dopamine spikes, ideal for high retention on combat and action cuts.
-* **Studio Example (*JoJo’s Bizarre Adventure: Steel Ball Run*):** Match character sprint/horse racing strikes from *Steel Ball Run* to the heavy bass drops of a Funk edit preset, ramping down to slow-motion on key impact strikes.
-* **Source:** [HowTo Video - Funk Mandala CapCut Edit](https://howtos.video/how-to/make-a-funk-mandala-anime-edit-in-capcut)
-
----
-
-### 4. POV Perspective Retelling ("From [Character]'s Perspective")
-* **What it is:** Re-framing iconic scenes through character-focused POV text overlays paired with melancholic or atmospheric soundscapes (e.g., bôa’s *Duvet* or Panchiko’s *D>E>A>T>H>M>E>T>A>L*).
-* **Why it works:** Shifts clips from generic action into deep character storytelling, driving long watch times and debates in the comments.
-* **Studio Example (*The Apothecary Diaries S3* / *Vinland Saga*):** Clip Maomao’s investigation scenes or Thorfinn’s emotional beats, adding overlay text capturing their internal monologue while letting an 8-second unbroken clip play out.
-* **Sources:** [YouTube - Jack's Perspective Edit](https://youtu.be/n3_cfxgs02I) · [Convosight - Jujutsu Kaisen Character Edits](https://www.convosight.com/tools/moments/asia/2026-11-14/jujutsu-kaisen-manga-edits)
-
----
-
-### 5. GUT GENUG / Fake Lag Glitch Transition
-* **What it is:** An action beat abruptly freezes mid-frame with a fake internet loading/buffering glitch, then spins smoothly into an explosive flex beat or boss scene.
-* **Why it works:** The fake freeze tricks viewers into thinking their phone lagged, causing them to hold back on swiping away and boosting average watch time metrics.
-* **Studio Example (*Ghost of Tsushima* / *Modern Warfare 4*):** Pause a Jin Sakai katana draw or sniper quick-scope right before the hit, trigger the fake buffer ring, then spin transition directly into the defeat animation.
-* **Source:** [TikTok - Edit Trends](https://www.tiktok.com/discover/edit-trends?lang=en)
-
----
-
-### 6. The Underdog Flip ("They Thought X Was A Newbie")
-* **What it is:** Opens with a character being underestimated, disrespected, or cornered, followed by an abrupt turnaround where an unbroken 10-15 second raw cut plays out uninterrupted.
-* **Why it works:** Taps into classic anime/gaming revenge tropes. The lack of frantic over-editing in the payoff stretch gives viewers a satisfying, readable scene.
-* **Studio Example (*One Piece* / *The Exiled Heavy Knight*):** Show an enemy mocking the hero, then cut cleanly into a single uninterrupted 12-second combat stretch.
-* **Source:** [YouTube - Zoro Newbie Edit](https://youtu.be/zBwWUtFZMpI)
-
----
-
-### 📉 Formats Flagged as Fading (Avoid)
-
-1. **Generic "Sigma" Quote Edits:** Static text overlaying quiet characters over generic bass-boosted audio. Viewers now swipe past these due to heavy oversaturation.
-2. **Hyper-Flash 5-Second Loops:** Edits with flashbang effects every half-second and zero scene context or story arc. Retention drops fast because there is no emotional or narrative beat to watch.
+* **Raw Slow-Mo Phonk Overlays without Narrative:** Plain pitch-shifted phonk over slow-motion clips without an initial text hook, meme contrast, or story arc are losing watch-time to beat-synced glitch edits (Funk Mandala) and POV formats.
+* **Generic Speed-Up Clips:** Unedited clips sped up to 1.25x with standard trending audio are suffering in algorithmic reach unless paired with perspective overlays or commentary.
+* **Static 3D Photo Zoom Dumps:** Slideshow photo edits using CapCut 3D zoom are being heavily outpaced by dynamic video clip montages with unbroken story beats.
