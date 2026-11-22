@@ -67,6 +67,7 @@ export default {
     if (url.pathname === "/friday/spend") return fridaySpend(req, env);
     if (url.pathname === "/friday/mechanic") return fridayMechanic(req, env);
     if (url.pathname === "/friday/briefing") return fridayBriefing(req, env);
+    if (url.pathname.startsWith("/friday/plaid")) return fridayPlaid(req, env, url);
     if (url.pathname === "/friday/directives" || url.pathname === "/friday/notify") return fridayAgentBridge(req, env, url);
     if (url.pathname === "/friday") return friday(req, env, ctx);
     if (url.pathname === "/friday/live" || url.pathname === "/friday/tool") return fridayLive(req, env, url.pathname.endsWith("tool"));
@@ -410,7 +411,7 @@ async function chat(req, env, ctx) {
   const facts = await storeFacts(history.filter((m) => m.role === "user").slice(-3).map((m) => m.content).join(" "), ctx);
   const system = `${CHAT_RULES}\n\nSTORE FACTS (today is ${day}):\n${facts}`;
   const why = [];
-  for (const ask of [groqChat, geminiChat, openRouterChat, workersChat]) {
+  for (const ask of [groqChat, geminiChat, extraChat, openRouterChat, workersChat]) {
     try {
       const text = (await ask(env, system, history))?.trim();
       const clean = text && stripPlanning(text);
@@ -614,6 +615,7 @@ Google also has: {"do":"drive_search","query":"..."} {"do":"doc_read","query":"f
   {"tool":"notion","query":"..."}  search his Notion   {"tool":"note","title":"...","text":"..."}  save notes, ideas or plans to his Notion
   {"tool":"discord","channel":"content|sales|inbox|alerts|research|growth|trading-desk|..."}  read what his agents posted (church replies are in content)
   {"tool":"report","query":"agent name like growth coach or researcher"}  read an agent's latest report
+  {"tool":"markets","query":"what he asked","symbols":["TSLA","NVDA"],"portfolio":false}  LIVE economy + markets: Fed rate, Treasury yields, mortgage rates, inflation, jobs, oil, gas, housing, dollar, VIX, S&P/Nasdaq/Dow, gold, crypto, any stock symbols, and (portfolio:true) the trading desk's paper account. ALWAYS use this for any money/markets/economy question instead of memory. Explain like a sharp banker friend: what it is, why it moved, what it means for him and small businesses. Never promise returns; say when something is opinion.
   {"tool":"direct","agent":"content-creator|email-marketer|growth-coach|researcher|webdev","text":"his instruction"}  pass his instruction to an agent (it follows it on its next runs for 3 days). Also start that agent with "run" if he wants it now.
   {"tool":"wish","text":"what you can't do yet and should learn, or a bug you noticed"}  your self-improvement list. Use it whenever he asks for something you can't do, or something of yours broke. Your mechanic writes the code overnight and he approves it.
 To fix yourself right away (he says "fix yourself", "you're broken", "upgrade yourself"), use "run": "mechanic".
@@ -640,7 +642,7 @@ LIVE FACTS:
 ${facts.join("\n")}`;
   const convo = [...past.slice(-8), { role: "user", content: q }];
   let raw = "", why = [];
-  for (const ask of [groqChat, geminiChat, openRouterChat, workersChat]) {
+  for (const ask of [groqChat, geminiChat, extraChat, openRouterChat, workersChat]) {
     try { raw = stripPlanning(await ask(env, system, convo) || ""); if (raw) break; } catch (e) { why.push(`${ask.name}: ${String(e.message || e).slice(0, 80)}`); }
   }
   trace.ai_ms = Date.now() - tf; trace.ai = why.length; tf = Date.now();
@@ -656,7 +658,7 @@ ${facts.join("\n")}`;
   }
   // ask the model again with a tool's result, so she answers from it
   const secondPass = async (label, act, result) => {
-    for (const ask of [groqChat, geminiChat, openRouterChat, workersChat]) {
+    for (const ask of [groqChat, geminiChat, extraChat, openRouterChat, workersChat]) {
       try {
         const t = stripPlanning(await ask(env, system, [...convo, { role: "assistant", content: JSON.stringify({ say: "(looking it up)", act }) }, { role: "user", content: `${label} (not from him; answer his question from this, as JSON with "say" only, spoken and short):\n${String(result).slice(0, 5000)}` }]) || "");
         if (!t) continue;
@@ -668,7 +670,7 @@ ${facts.join("\n")}`;
   };
   let gResult = null, lResult = null;
   if (!r.lookup && /\b(think (hard|deep|it through|about it)|ask claude)\b/i.test(q)) r.lookup = { tool: "think", query: q, context: facts.join("\n").slice(0, 2500) };
-  if (r.lookup && typeof r.lookup === "object" && (owner || ["web", "think", "report"].includes(r.lookup.tool))) {
+  if (r.lookup && typeof r.lookup === "object" && (owner || ["web", "think", "report", "markets"].includes(r.lookup.tool))) {
     lResult = await fridayLookup(env, r.lookup);
     if (["note", "direct", "wish"].includes(r.lookup.tool) || /^Couldn't|isn't connected|Unknown lookup/.test(lResult)) say = r.lookup.tool === "note" && lResult === "Saved to Notion." ? say : lResult;
     else { const a2 = await secondPass(`${r.lookup.tool.toUpperCase()} RESULT`, r.lookup, lResult); if (a2) say = a2; }
@@ -755,7 +757,7 @@ async function fridayLive(req, env, isTool) {
     if (d.name === "get_status") return out({ ok: true, result: (await fridayFacts(env, new Date(), owner)).join("\n") });
     if (d.name === "google") return out({ ok: true, result: owner ? await runGoogle(env, a) : "Google tools are owner-only." });
     if (d.name === "shop") return out({ ok: true, result: owner ? await fridayShop(env, a) : "Shop tools are owner-only." });
-    if (d.name === "lookup") return out({ ok: true, result: owner || ["web", "think", "report"].includes(a.tool) ? await fridayLookup(env, a) : "That lookup is owner-only." });
+    if (d.name === "lookup") return out({ ok: true, result: owner || ["web", "think", "report", "markets"].includes(a.tool) ? await fridayLookup(env, a) : "That lookup is owner-only." });
     if (d.name === "remember" && a.fact) { memory.push(`${String(a.fact).slice(0, 200)} (${new Date().toISOString().slice(0, 10)})`); await env.SALES.put("friday:memory", JSON.stringify(memory.slice(-200))); return out({ ok: true, result: "Saved." }); }
     if (d.name === "run_agent" && FRIDAY_RUNS[a.job]) {
       const [wf, inputs] = FRIDAY_RUNS[a.job];
@@ -1034,6 +1036,7 @@ async function fridayConnections(req, env) {
   const g = JSON.parse(await env.SALES.get("friday:google") || "null");
   const stripe = !!(await env.SALES.get("friday:key:stripe"));
   const bank = !!(await env.SALES.get("friday:key:simplefin"));
+  const plaidItems = JSON.parse(await env.SALES.get("friday:plaid") || "[]");
   let spends = 0; try { spends = (await env.SALES.list({ prefix: "spend:", limit: 1 })).keys.length; } catch {}
   const parts = g ? [g.scope?.includes("gmail") && "Gmail", g.scope?.includes("calendar") && "Calendar", g.scope?.includes("drive") && "Drive, Docs, Sheets"].filter(Boolean).join(" + ") : "";
   const on = (k) => !!env[k];
@@ -1053,6 +1056,8 @@ async function fridayConnections(req, env) {
     { id: "etsy", icon: "🧶", name: "Etsy", soon: true, detail: "Orders, listings, messages, when the Etsy shop opens" },
     { id: "shopify", icon: "🛍️", name: "Shopify", soon: true, detail: "When/if you move to Shopify" },
     { id: "spotify", icon: "🎵", name: "Spotify", soon: true, detail: "Play, queue and pick music" },
+    { id: "plaid", icon: "🏦", name: "Banks & apps (Plaid)", link: env.PLAID_CLIENT_ID ? "https://foreverheld-sales.foreverheld.workers.dev/friday/plaid#{key}" : "", connected: plaidItems.length > 0, detail: env.PLAID_CLIENT_ID ? (plaidItems.length ? `Connected: ${plaidItems.map((x) => x.institution).join(", ")}. Tap Connect to add more (10 free)` : "Chime, Cash App, Venmo, banks, cards: balances and spending, read-only") : "Free: sign up at dashboard.plaid.com (Trial plan), then ask Claude to finish setup" },
+    { id: "markets", icon: "📈", name: "Markets & economy", connected: !!env.FRED_API_KEY, detail: "Fed, rates, inflation, jobs, oil, housing, stocks, crypto, live from FRED, Alpaca, CoinGecko" },
     { id: "simplefin", icon: "🏦", name: "Banks (SimpleFIN)", key: true, connected: bank, detail: bank ? "Balances and transactions, read-only" : "bridge.simplefin.org ($15/yr) › connect your banks › Apps › New connection › copy the Setup Token › paste here" },
     { id: "wallet", icon: "", name: "Apple Pay purchases", connected: spends > 0, detail: spends ? "Logging your Apple Pay purchases" : "Set up the Shortcuts automation (ask Claude). Logs each Apple Pay purchase" }
   ] });
@@ -1141,6 +1146,7 @@ async function fridayLookup(env, a = {}) {
       if (!Array.isArray(msgs)) return "Couldn't read that channel.";
       return msgs.reverse().map((m) => `${nyTime(m.timestamp)}: ${[m.content, ...(m.embeds || []).map((e) => `${e.title || ""} ${e.description || ""}`)].join(" ").replace(/\s+/g, " ").trim().slice(0, 500)}`).join("\n") || "That channel is empty.";
     }
+    if (a.tool === "markets") return await fridayMarkets(env, a);
     if (a.tool === "direct") {
       const agent = String(a.agent || "content-creator").toLowerCase().replace(/[^a-z-]/g, "");
       const d = JSON.parse(await env.SALES.get("friday:directives") || "{}");
@@ -1218,13 +1224,14 @@ async function fridayShop(env, a = {}) {
         }
         if ((j.errors || []).length) lines.push(`Notes from the bank link: ${j.errors.join("; ").slice(0, 300)}`);
       }
+      lines.push(...(await plaidMoney(env, a.do, days)));
       if (a.do === "spending") {
         const since = new Date(Date.now() - days * 864e5).toISOString();
         const w = []; let cursor;
         do { const page = await env.SALES.list({ prefix: "spend:", cursor }); for (const k of page.keys) if (k.name.slice(6) >= since) { const v = await env.SALES.get(k.name); if (v) w.push(JSON.parse(v)); } cursor = page.list_complete ? null : page.cursor; } while (cursor);
         if (w.length) { const total = w.reduce((t, x) => t + (Number(x.amount) || 0), 0); lines.push(`Apple Pay (last ${days} days): ${w.length} purchases, $${total.toFixed(2)}`); for (const x of w.slice(-20).reverse()) lines.push(`   ${x.at.slice(0, 10)} $${x.amount} ${x.merchant}${x.card ? ` (${x.card})` : ""}`); }
       }
-      return lines.length ? lines.join("\n") : "No bank accounts are linked yet. He can add SimpleFIN in Friday's Settings, and turn on the Apple Pay automation.";
+      return lines.length ? lines.join("\n") : "No bank accounts are linked yet. He can connect them with Plaid in Friday's Settings, and the Apple Pay automation logs card taps.";
     }
     if (a.do === "xmoney") {
       // X Money has no public API yet; read its emails (receipts, transfers, deposits) from his Gmail
@@ -1319,7 +1326,7 @@ async function fridayBriefing(req, env) {
   const move = await fridayLookup(env, { tool: "think", query: "Give Josiah ONE concrete, free action he can do today (under 30 minutes) most likely to get Forever Held's next sale. Be specific to his real situation below: name the exact place, post or person. No fake urgency or discounts. Two sentences max.", context: `${facts.join("\n")}\n${sales}` });
   const system = `${FRIDAY_PERSONA}\nWrite his morning briefing, as you'd say it out loud: warm one-line greeting, then short lines for: money (sales, net), today's calendar, important unread emails (who and what, no addresses), what the agents did and anything broken, church outreach replies. End with "Today's move:" and the move below. Under 170 words. Plain text, no markdown headers. Never invent anything not in the facts.`;
   let text = "";
-  for (const askAi of [groqChat, geminiChat, openRouterChat, workersChat]) { try { text = stripPlanning(await askAi(env, system, [{ role: "user", content: `FACTS:\n${facts.join("\n")}\n\nSALES:\n${sales}\n\nTODAY'S MOVE:\n${move}` }]) || ""); if (text) break; } catch {} }
+  for (const askAi of [groqChat, geminiChat, extraChat, openRouterChat, workersChat]) { try { text = stripPlanning(await askAi(env, system, [{ role: "user", content: `FACTS:\n${facts.join("\n")}\n\nSALES:\n${sales}\n\nTODAY'S MOVE:\n${move}` }]) || ""); if (text) break; } catch {} }
   if (!text) return out({ ok: false, error: "no AI answered" }, 503);
   text = text.replace(/^\{[\s\S]*"say"\s*:\s*"|"\s*\}\s*$/g, "").replace(/\\n/g, "\n").replace(/\*\*?/g, "").trim();
   await env.SALES.put("friday:briefing", JSON.stringify({ at: new Date().toISOString(), text }), { expirationTtl: 3 * 864e5 });
@@ -1361,4 +1368,138 @@ async function fridayAgentBridge(req, env, url) {
     return out({ ok: !!r?.ok });
   }
   return out({ ok: false }, 404);
+}
+
+// ───────────────────────── More free AI capacity ─────────────────────────
+// Extra free providers between Gemini and OpenRouter. Each only runs if its key exists:
+// NVIDIA (already in the repo), Cerebras (1M tokens/day free), Mistral (free mode), SambaNova (free tier).
+async function extraChat(env, system, history) {
+  const tries = [
+    [env.NVIDIA_API_KEY, "https://integrate.api.nvidia.com/v1/chat/completions", ["meta/llama-3.3-70b-instruct", "nvidia/llama-3.3-nemotron-super-49b-v1"]],
+    [env.CEREBRAS_API_KEY, "https://api.cerebras.ai/v1/chat/completions", ["gpt-oss-120b", "llama-3.3-70b", "llama3.1-8b"]],
+    [env.MISTRAL_API_KEY, "https://api.mistral.ai/v1/chat/completions", ["mistral-small-latest", "open-mistral-nemo"]],
+    [env.SAMBANOVA_API_KEY, "https://api.sambanova.ai/v1/chat/completions", ["Meta-Llama-3.3-70B-Instruct", "Meta-Llama-3.1-8B-Instruct"]]
+  ];
+  const errs = [];
+  for (const [key, url, models] of tries) {
+    if (!key) continue;
+    for (const model of models) {
+      try { const t = await openAiStyle(url, key, model, system, history, {}); if (t) return t; }
+      catch (e) { errs.push(`${new URL(url).hostname.split(".")[1]} ${e.message.slice(0, 40)}`); if (!/HTTP (4\d\d|5\d\d)/.test(e.message)) break; }
+    }
+  }
+  throw new Error(errs.join(" / ") || "extra: no keys");
+}
+
+// ───────────────────────── Markets & economy ─────────────────────────
+// Real data, no guessing: FRED (Fed, rates, inflation, jobs, oil, gas, housing, dollar, VIX),
+// Alpaca market data (stock/ETF prices) and CoinGecko (crypto). Paper trading account from the trading desk.
+const MACRO = [["DFF", "Fed funds rate", "%"], ["DGS2", "2-yr Treasury", "%"], ["DGS10", "10-yr Treasury", "%"], ["T10Y2Y", "10y-2y spread", "pts"], ["MORTGAGE30US", "30-yr mortgage rate", "%"],
+  ["CPIAUCSL", "CPI index", ""], ["UNRATE", "Unemployment", "%"], ["ICSA", "Weekly jobless claims", ""], ["VIXCLS", "VIX fear gauge", ""], ["SP500", "S&P 500", ""], ["DTWEXBGS", "US dollar index", ""],
+  ["DCOILWTICO", "WTI crude", "$"], ["DCOILBRENTEU", "Brent crude", "$"], ["DHHNGSP", "Natural gas (Henry Hub)", "$"], ["HOUST", "Housing starts (k, annual rate)", ""], ["CSUSHPINSA", "Case-Shiller home prices", ""],
+  ["UMCSENT", "Consumer sentiment", ""], ["BAMLH0A0HYM2", "High-yield credit spread", "pts"], ["RSAFS", "Retail sales ($M)", ""], ["DRTSCILM", "Banks tightening small-business loans (% net)", "%"]];
+async function fridayMarkets(env, a = {}) {
+  const out = [];
+  const cacheKey = "friday:macro";
+  let macro = null;
+  try { const c = JSON.parse(await env.SALES.get(cacheKey) || "null"); if (c && Date.now() - c.t < 3 * 3600e3) macro = c.rows; } catch {}
+  if (!macro && env.FRED_API_KEY) {
+    macro = (await Promise.all(MACRO.map(async ([id, label, unit]) => {
+      try {
+        const j = await fetch(`https://api.stlouisfed.org/fred/series/observations?series_id=${id}&api_key=${env.FRED_API_KEY}&file_type=json&sort_order=desc&limit=14`, { signal: AbortSignal.timeout(12000) }).then((r) => r.json());
+        const obs = (j.observations || []).filter((o) => o.value !== ".");
+        if (!obs.length) return null;
+        const now = Number(obs[0].value), prev = obs.length > 1 ? Number(obs[obs.length - 1].value) : null;
+        const ch = prev != null ? ` (was ${prev} on ${obs[obs.length - 1].date})` : "";
+        return `${label}: ${unit === "$" ? "$" : ""}${now}${unit === "%" ? "%" : unit === "pts" ? " pts" : ""} on ${obs[0].date}${ch}`;
+      } catch { return null; }
+    }))).filter(Boolean);
+    await env.SALES.put(cacheKey, JSON.stringify({ t: Date.now(), rows: macro }), { expirationTtl: 6 * 3600 }).catch(() => {});
+  }
+  if (macro?.length) out.push(`ECONOMY (FRED, official data; dates show how fresh):\n${macro.join("\n")}`);
+  const syms = (Array.isArray(a.symbols) ? a.symbols : String(a.symbols || a.query || "").match(/\b[A-Z]{1,5}\b/g) || []).slice(0, 12);
+  const stocks = [...new Set(["SPY", "QQQ", "DIA", "IWM", "GLD", "USO", ...syms])].filter((x) => !/^(BTC|ETH|SOL|XRP|DOGE)$/.test(x));
+  if (env.ALPACA_KEY && env.ALPACA_SECRET) {
+    try {
+      const j = await fetch(`https://data.alpaca.markets/v2/stocks/snapshots?symbols=${stocks.join(",")}&feed=iex`, { signal: AbortSignal.timeout(12000), headers: { "APCA-API-KEY-ID": env.ALPACA_KEY, "APCA-API-SECRET-KEY": env.ALPACA_SECRET } }).then((r) => r.json());
+      const rows = Object.entries(j || {}).map(([sym, x]) => { const p = x?.latestTrade?.p ?? x?.dailyBar?.c, pc = x?.prevDailyBar?.c; return p ? `${sym} $${Number(p).toFixed(2)}${pc ? ` (${(((p - pc) / pc) * 100).toFixed(2)}% vs prior close)` : ""}` : null; }).filter(Boolean);
+      if (rows.length) out.push(`STOCKS/ETFs (Alpaca IEX, live-ish; SPY=S&P500, QQQ=Nasdaq, DIA=Dow, IWM=small caps, GLD=gold, USO=oil):\n${rows.join("\n")}`);
+    } catch {}
+  }
+  try {
+    const ids = ["bitcoin", "ethereum", "solana"];
+    const j = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${ids.join(",")}&vs_currencies=usd&include_24hr_change=true`, { signal: AbortSignal.timeout(10000) }).then((r) => r.json());
+    out.push(`CRYPTO (CoinGecko): ${ids.map((i) => j[i] ? `${i} $${j[i].usd} (${Number(j[i].usd_24h_change || 0).toFixed(1)}% 24h)` : "").filter(Boolean).join(", ")}`);
+  } catch {}
+  if (a.portfolio && env.ALPACA_KEY) {
+    try {
+      const h = { "APCA-API-KEY-ID": env.ALPACA_KEY, "APCA-API-SECRET-KEY": env.ALPACA_SECRET };
+      const [acct, pos] = await Promise.all([fetch("https://paper-api.alpaca.markets/v2/account", { headers: h }).then((r) => r.json()), fetch("https://paper-api.alpaca.markets/v2/positions", { headers: h }).then((r) => r.json())]);
+      out.push(`PAPER TRADING ACCOUNT (practice money, not real): equity $${acct.equity}, cash $${acct.cash}. Positions: ${(Array.isArray(pos) ? pos : []).map((p) => `${p.symbol} ${p.qty} sh, P/L $${Number(p.unrealized_pl).toFixed(2)}`).join("; ") || "none"}`);
+    } catch {}
+  }
+  return out.join("\n\n") || "Market data isn't available right now.";
+}
+
+// ───────────────────────── Plaid (banks, Cash App, Venmo, Chime...) ─────────────────────────
+// Free Trial plan: up to 10 connected logins. He connects from Friday's Settings (Plaid's own secure login page);
+// Friday only stores Plaid's access tokens in private KV and only READS balances and transactions.
+const PLAID = "https://production.plaid.com";
+async function plaidCall(env, path, body) {
+  const r = await fetch(PLAID + path, { method: "POST", signal: AbortSignal.timeout(20000), headers: { "content-type": "application/json" }, body: JSON.stringify({ client_id: env.PLAID_CLIENT_ID, secret: env.PLAID_SECRET, ...body }) });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(j.error_message || j.error_code || `Plaid HTTP ${r.status}`);
+  return j;
+}
+async function fridayPlaid(req, env, url) {
+  const html = (b) => new Response(b, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" } });
+  const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
+  if (url.pathname === "/friday/plaid" && req.method === "GET") return html(`<!doctype html><meta name=viewport content="width=device-width,initial-scale=1"><title>Connect a bank</title>
+<body style="font:18px/1.5 -apple-system,system-ui,sans-serif;background:#07080d;color:#e8ecf5;padding:28px;max-width:560px;margin:auto"><div style="font-size:40px">◉</div><h2>Connect an account to Friday</h2>
+<p id=s>Opening Plaid's secure login…</p><p style="color:#8a94ad;font-size:15px">You sign in on Plaid's page, not Friday's. Friday only gets read access to balances and transactions; she can't move money.</p>
+<p><a href="https://recreationalviper.github.io/agent-hq/friday/" style="color:#4aa3ff">Back to Friday</a></p>
+<script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script><script>
+const k = decodeURIComponent(location.hash.slice(1)), s = document.getElementById("s");
+const post = (p, b) => fetch(p, { method: "POST", headers: { "x-friday-key": k, "content-type": "application/json" }, body: JSON.stringify(b || {}) }).then(r => r.json());
+post("/friday/plaid/token").then(j => {
+  if (!j.link_token) { s.textContent = "Plaid didn't start: " + (j.error || "unknown") + ". Send Claude a screenshot."; return; }
+  Plaid.create({ token: j.link_token, onSuccess: (pt, meta) => { s.textContent = "Saving…"; post("/friday/plaid/exchange", { public_token: pt, institution: meta.institution && meta.institution.name }).then(r => { s.textContent = r.ok ? "Connected ✓ " + (r.institution || "") + ". Connect another, or go back to Friday." : "Couldn't save: " + r.error; }); },
+    onExit: (e) => { s.innerHTML = e ? "Stopped: " + (e.display_message || e.error_message || "closed") : "Closed. <a href='' style='color:#4aa3ff'>Connect another</a>"; } }).open();
+});
+</script>`);
+  if ((await sha256(req.headers.get("x-friday-key") || "")) !== FRIDAY_KEY_SHA) return out({ ok: false, error: "not owner" }, 401);
+  if (!env.PLAID_CLIENT_ID || !env.PLAID_SECRET) return out({ ok: false, error: "Plaid keys aren't set up yet" }, 400);
+  try {
+    if (url.pathname === "/friday/plaid/token") {
+      const j = await plaidCall(env, "/link/token/create", { client_name: "Friday", user: { client_user_id: "josiah" }, products: ["transactions"], country_codes: ["US"], language: "en" });
+      return out({ ok: true, link_token: j.link_token });
+    }
+    if (url.pathname === "/friday/plaid/exchange") {
+      const d = await req.json();
+      const j = await plaidCall(env, "/item/public_token/exchange", { public_token: d.public_token });
+      const items = JSON.parse(await env.SALES.get("friday:plaid") || "[]");
+      items.push({ item_id: j.item_id, access_token: j.access_token, institution: String(d.institution || "Account").slice(0, 60), at: new Date().toISOString() });
+      await env.SALES.put("friday:plaid", JSON.stringify(items));
+      return out({ ok: true, institution: d.institution });
+    }
+  } catch (e) { return out({ ok: false, error: String(e.message || e).slice(0, 200) }, 400); }
+  return out({ ok: false }, 404);
+}
+async function plaidMoney(env, kind, days = 30) {
+  const items = JSON.parse(await env.SALES.get("friday:plaid") || "[]");
+  if (!items.length || !env.PLAID_CLIENT_ID) return [];
+  const lines = [];
+  for (const it of items) {
+    try {
+      if (kind === "accounts") {
+        const j = await plaidCall(env, "/accounts/get", { access_token: it.access_token });
+        for (const a of j.accounts || []) lines.push(`${it.institution} · ${a.name}${a.mask ? ` ••${a.mask}` : ""}: balance $${a.balances.current ?? "?"}${a.balances.available != null ? ` (available $${a.balances.available})` : ""}${a.type === "credit" && a.balances.limit ? `, limit $${a.balances.limit}` : ""}`);
+      } else {
+        const end = new Date().toISOString().slice(0, 10), start = new Date(Date.now() - days * 864e5).toISOString().slice(0, 10);
+        const j = await plaidCall(env, "/transactions/get", { access_token: it.access_token, start_date: start, end_date: end, options: { count: 40 } });
+        for (const t of j.transactions || []) lines.push(`   ${t.date} ${it.institution}: ${t.amount > 0 ? "-" : "+"}$${Math.abs(t.amount).toFixed(2)} ${t.merchant_name || t.name}${t.personal_finance_category?.primary ? ` [${t.personal_finance_category.primary.toLowerCase().replace(/_/g, " ")}]` : ""}`);
+      }
+    } catch (e) { lines.push(`${it.institution}: couldn't read (${String(e.message).slice(0, 80)}). He may need to reconnect it.`); }
+  }
+  return lines;
 }

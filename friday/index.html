@@ -111,7 +111,11 @@ async function loadApps() {
     const el = document.createElement("div"); el.className = "app"; el.style.marginBottom = "8px";
     el.innerHTML = `<div class="ic">${a.icon}</div><div class="tx"><b><span class="dot ${a.connected ? "on" : ""}"></span>${a.name}</b><small></small></div>`;
     el.querySelector("small").textContent = a.detail || "";
-    if (a.connect) {
+    if (a.link) {
+      const b = document.createElement("button"); b.textContent = a.connected ? "Add more" : "Connect";
+      b.onclick = () => { location.href = a.link.replace("{key}", encodeURIComponent(key)); };
+      el.appendChild(b);
+    } else if (a.connect) {
       const b = document.createElement("button"); b.textContent = a.connected ? "Reconnect" : "Connect"; if (a.connected) b.className = "ghost";
       b.onclick = () => { location.href = `${API}/connect?app=${a.id}&k=${encodeURIComponent(key)}`; };
       el.appendChild(b);
