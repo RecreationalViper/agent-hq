@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-21T19:45:35.925Z",
-  "date": "2026-11-21",
+  "generatedAt": "2026-11-22T01:31:19.324Z",
+  "date": "2026-11-22",
   "token": true,
   "searches": {
     "ran": 12,
@@ -9,212 +9,18 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 28,
-  "rateRemaining": 10,
-  "newItems": 7,
+  "apiCalls": 15,
+  "rateRemaining": 4996,
+  "newItems": 0,
   "blockedToday": 0,
-  "shortlist": [
-    {
-      "name": "iamajmeena/neonclipping",
-      "url": "https://github.com/iamajmeena/neonclipping",
-      "description": "Paste a link, get captioned 9:16 clips in ~2 min. Free, local, open-source clipping engine (audio-first, YouTube captions, local LLM).",
-      "stars": 1705,
-      "forks": 84,
-      "language": "Python",
-      "license": "MIT",
-      "pushedAt": "2026-11-21T11:36:33Z",
-      "category": "efficiency",
-      "score": 58,
-      "tier": "watch",
-      "reasons": [
-        "1,705 stars",
-        "updated this week",
-        "MIT license"
-      ],
-      "flags": [],
-      "skillFiles": null,
-      "source": "search",
-      "newborn": false,
-      "skillPath": null,
-      "commitUrl": null
-    }
-  ],
-  "watched": [
-    {
-      "name": "google/skills",
-      "url": "https://github.com/google/skills",
-      "description": "Agent Skills for Google products and technologies",
-      "stars": 24516,
-      "forks": 2037,
-      "language": "Python",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-21T01:29:22Z",
-      "category": "skills",
-      "score": 92,
-      "tier": "adopt",
-      "reasons": [
-        "new skill file: plugins/health/google-health-developer/skills/finding-google-skills/SKILL.md",
-        "24,516 stars",
-        "updated this week",
-        "Apache-2.0 license",
-        "first-party / well-known maintainer",
-        "well established"
-      ],
-      "flags": [],
-      "skillFiles": null,
-      "source": "watched",
-      "newborn": false,
-      "skillPath": "plugins/health/google-health-developer/skills/finding-google-skills/SKILL.md",
-      "commitUrl": "https://github.com/google/skills/commits/4bb21ebfa085f6307d5d62bc21765e1d3433f11d"
-    },
-    {
-      "name": "google/skills",
-      "url": "https://github.com/google/skills",
-      "description": "Agent Skills for Google products and technologies",
-      "stars": 24516,
-      "forks": 2037,
-      "language": "Python",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-21T01:29:22Z",
-      "category": "skills",
-      "score": 100,
-      "tier": "adopt",
-      "reasons": [
-        "new skill file: skills/cloud/google-cloud-solution-event-driven-decoupling/SKILL.md",
-        "24,516 stars",
-        "updated this week",
-        "Apache-2.0 license",
-        "first-party / well-known maintainer",
-        "well established",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [],
-      "skillFiles": true,
-      "source": "watched",
-      "newborn": false,
-      "skillPath": "skills/cloud/google-cloud-solution-event-driven-decoupling/SKILL.md",
-      "commitUrl": "https://github.com/google/skills/commits/4bb21ebfa085f6307d5d62bc21765e1d3433f11d"
-    }
-  ],
-  "newborn": [
-    {
-      "name": "danielwh2/sprite-stacking",
-      "url": "https://github.com/danielwh2/sprite-stacking",
-      "description": "Agent skill: turn four pixel art views into fake-3D sprites you can spin. Works with Claude Code, Codex, Cursor, OpenCode, Gemini CLI, Pi.",
-      "stars": 349,
-      "forks": 25,
-      "language": "HTML",
-      "license": "MIT",
-      "pushedAt": "2026-11-21T01:28:57Z",
-      "category": "skills",
-      "score": 74,
-      "tier": "watch",
-      "reasons": [
-        "filed under skills",
-        "349 stars",
-        "updated this week",
-        "MIT license",
-        "new repo, 1 day old",
-        "early traction"
-      ],
-      "flags": [
-        "newborn"
-      ],
-      "skillFiles": null,
-      "source": "search",
-      "newborn": true,
-      "skillPath": null,
-      "commitUrl": null
-    },
-    {
-      "name": "sybil-solutions/skill-distill",
-      "url": "https://github.com/sybil-solutions/skill-distill",
-      "description": "Distill a good Claude Code / Codex session into a skill an open-weight model can follow to reproduce the task",
-      "stars": 284,
-      "forks": 23,
-      "language": "Python",
-      "license": "MIT",
-      "pushedAt": "2026-11-21T03:48:01Z",
-      "category": "skills",
-      "score": 66,
-      "tier": "watch",
-      "reasons": [
-        "filed under skills",
-        "284 stars",
-        "updated this week",
-        "MIT license",
-        "new repo, 1 day old",
-        "early traction"
-      ],
-      "flags": [
-        "newborn"
-      ],
-      "skillFiles": null,
-      "source": "search",
-      "newborn": true,
-      "skillPath": null,
-      "commitUrl": null
-    },
-    {
-      "name": "diego3g/craft",
-      "url": "https://github.com/diego3g/craft",
-      "description": "Design skills for AI agents: /craft-setup writes your design brief, /craft designs screens with every state from your design system and reviews them. Works with Paper, pen.dev, Figma or HTML.",
-      "stars": 381,
-      "forks": 21,
-      "language": "JavaScript",
-      "license": null,
-      "pushedAt": "2026-11-17T16:49:13Z",
-      "category": "skills",
-      "score": 58,
-      "tier": "watch",
-      "reasons": [
-        "filed under skills",
-        "381 stars",
-        "updated this week",
-        "new repo, 6 days old",
-        "early traction"
-      ],
-      "flags": [
-        "no-license",
-        "newborn"
-      ],
-      "skillFiles": null,
-      "source": "search",
-      "newborn": true,
-      "skillPath": null,
-      "commitUrl": null
-    }
-  ],
+  "shortlist": [],
+  "watched": [],
+  "newborn": [],
   "byCategory": {
     "skills": [],
     "enhancement": [],
     "free-tokens": [],
-    "efficiency": [
-      {
-        "name": "iamajmeena/neonclipping",
-        "url": "https://github.com/iamajmeena/neonclipping",
-        "description": "Paste a link, get captioned 9:16 clips in ~2 min. Free, local, open-source clipping engine (audio-first, YouTube captions, local LLM).",
-        "stars": 1705,
-        "forks": 84,
-        "language": "Python",
-        "license": "MIT",
-        "pushedAt": "2026-11-21T11:36:33Z",
-        "category": "efficiency",
-        "score": 58,
-        "tier": "watch",
-        "reasons": [
-          "1,705 stars",
-          "updated this week",
-          "MIT license"
-        ],
-        "flags": [],
-        "skillFiles": null,
-        "source": "search",
-        "newborn": false,
-        "skillPath": null,
-        "commitUrl": null
-      }
-    ]
+    "efficiency": []
   },
   "blocked": [],
   "watching": [
@@ -240,6 +46,13 @@
       "first": "2026-11-06"
     },
     {
+      "name": "google/skills",
+      "score": 94,
+      "tier": "adopt",
+      "category": "skills",
+      "first": "2026-11-06"
+    },
+    {
       "name": "agentes-chat/agentes-chat",
       "score": 90,
       "tier": "watch",
@@ -252,17 +65,10 @@
       "tier": "watch",
       "category": "skills",
       "first": "2026-11-18"
-    },
-    {
-      "name": "DIYgod/pinky",
-      "score": 88,
-      "tier": "watch",
-      "category": "skills",
-      "first": "2026-11-17"
     }
   ],
   "watchedRepos": {
     "ran": 3,
-    "newSkillFiles": 2
+    "newSkillFiles": 0
   }
 }
