@@ -663,7 +663,8 @@ ${facts.join("\n")}`;
         const t = stripPlanning(await ask(env, system, [...convo, { role: "assistant", content: JSON.stringify({ say: "(looking it up)", act }) }, { role: "user", content: `${label} (not from him; answer his question from this, as JSON with "say" only, spoken and short):\n${String(result).slice(0, 5000)}` }]) || "");
         if (!t) continue;
         const m2 = t.match(/\{[\s\S]*\}/); let j2; try { j2 = m2 ? JSON.parse(m2[0].replace(/,\s*([}\]])/g, "$1")) : { say: t }; } catch { j2 = { say: t }; }
-        if (j2.say) return String(j2.say).replace(/\*\*?/g, "").trim().slice(0, 1500);
+        const said = j2.say || j2.answer || j2.response || Object.values(j2).find((v) => typeof v === "string" && v.length > 20);
+        if (said) return String(said).replace(/\*\*?/g, "").trim().slice(0, 1500);
       } catch {}
     }
     return "";
@@ -673,7 +674,7 @@ ${facts.join("\n")}`;
   if (r.lookup && typeof r.lookup === "object" && (owner || ["web", "think", "report", "markets"].includes(r.lookup.tool))) {
     lResult = await fridayLookup(env, r.lookup);
     if (["note", "direct", "wish"].includes(r.lookup.tool) || /^Couldn't|isn't connected|Unknown lookup/.test(lResult)) say = r.lookup.tool === "note" && lResult === "Saved to Notion." ? say : lResult;
-    else { const a2 = await secondPass(`${r.lookup.tool.toUpperCase()} RESULT`, r.lookup, lResult); if (a2) say = a2; }
+    else { const a2 = await secondPass(`${r.lookup.tool.toUpperCase()} RESULT`, r.lookup, lResult); if (a2) say = a2; else { say = `Here's what I found: ${String(lResult).replace(/\n+/g, ". ").slice(0, 600)}`; await fridayLog(env, "lookup", `second pass gave no answer for ${r.lookup.tool}`); } }
   }
   let sResult = null;
   if (owner && r.shop && typeof r.shop === "object" && r.shop.do) {
