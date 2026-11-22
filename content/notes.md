@@ -1,10 +1,10 @@
-# Content Creator notes - 2026-11-21
+# Content Creator notes - 2026-11-22
 
-Theme: Last-minute Thanksgiving remembrance setups, early holiday candlelight traditions, and peaceful memorial service templates.
-Headlines made: Honoring a missing seat at dinner | Meaningful wording for an empty seat | Sharing stories around the Thanksgiving table | Quick last minute Thanksgiving table memorial | Personalized tree ornaments for sacred memories | Order of service for quiet solstice gatherings | Warm welcome signs for celebration of life | Creating a peaceful program in minutes
+Theme: Last-minute Thanksgiving remembrance, early Christmas and Blue Christmas traditions, and practical memorial service templates for grieving families
+Headlines made: Set a place for their memory | Pass gratitude cards after dinner | Save their seat with a sign | Start a memory card tradition | Hang memory cards on the tree | Guide the candle lighting moment | Keep their stories in a memory box | Help a friend print the program
 
 ## For the Content Planner
-Created 8 distinct posts matching all constraints: 4 posts for Harvest Table (Thanksgiving is 5 days away), 1 for Evergreen & Candlelight, 1 for Longest Night, and 2 for Soft Botanical. Used exact product images for spotlighted pieces. Included coupon THANKFUL15 in captions for 2 posts (posts 1 and 2). Utilized 2 'tips' background pins and exactly 2 story posts (1 painted, 1 botanical background). Avoided all prohibited keywords, software names, and banned headlines.
+Created 8 posts: 4 Harvest Table (final stretch), 1 Evergreen & Candlelight, 1 Longest Night, 2 Soft Botanical,Used 6 different angles from the approved list: Harvest Table small rituals (2), Harvest Table gratitude activity (2), Evergreen first Christmas traditions, Longest Night candle-lighting moments, Soft Botanical keepsake box, Soft Botanical friend helping print,Covered all 8 featured pieces exactly once across the 8 posts,Two pins use 'tips' background (place cards and memory card tradition), four use photo scenes, stories use painted/botanical backgrounds,Coupon THANKFUL15 mentioned in 2 Harvest Table posts (place cards and empty chair sign) as approved,Avoided all 35+ recent headlines from the exclusion list,Skipped Evergreen candle sign (e-sign) and Longest Night table sign (l-sign) featured pieces to prioritize Harvest Table volume; can feature them next week
 
 ## For the SEO Scout
-Are shoppers searching more for 'last minute Thanksgiving table decor' or 'thanksgiving empty seat sign'?,What search phrases do churches use most for solstice services: 'Blue Christmas service order' or 'Longest Night prayer program'?
+What are the top 'first Christmas without loved one' search phrases for early December content?,Are there specific 'Blue Christmas service' keyword variations for different denominations (Catholic, Protestant, non-denominational)?,What 'celebration of life keepsake' long-tail keywords have rising search volume for January planning?
