@@ -256,6 +256,7 @@ const EXTRA = [
   ["SambaNova", "SAMBANOVA_API_KEY", "https://api.sambanova.ai/v1", ["DeepSeek-V3.1", "gpt-oss-120b", "Meta-Llama-3.3-70B-Instruct"]],
   ["Cerebras", "CEREBRAS_API_KEY", "https://api.cerebras.ai/v1", ["gpt-oss-120b", "llama-3.3-70b"]],
   ["SiliconFlow", "SILICONFLOW_API_KEY", "https://api.siliconflow.com/v1", ["Qwen/Qwen3-8B", "THUDM/GLM-4-9B-0414", "Qwen/Qwen2.5-7B-Instruct"]],
+  ["SiliconFlow-CN", "SILICONFLOW_API_KEY", "https://api.siliconflow.cn/v1", ["Qwen/Qwen3-8B", "THUDM/GLM-4-9B-0414", "Qwen/Qwen2.5-7B-Instruct"]],
   ["DeepSeek", "DEEPSEEK_API_KEY", "https://api.deepseek.com/v1", ["deepseek-chat"]]
 ];
 function extraProvider([name, env, base, models]) {

@@ -1407,6 +1407,7 @@ async function extraChat(env, system, history) {
     [env.MISTRAL_API_KEY, "https://api.mistral.ai/v1/chat/completions", ["mistral-medium-latest", "mistral-small-latest"]],
     [env.SAMBANOVA_API_KEY, "https://api.sambanova.ai/v1/chat/completions", ["DeepSeek-V3.1", "gpt-oss-120b", "Meta-Llama-3.3-70B-Instruct"]],
     [env.SILICONFLOW_API_KEY, "https://api.siliconflow.com/v1/chat/completions", ["Qwen/Qwen3-8B", "THUDM/GLM-4-9B-0414"]],
+    [env.SILICONFLOW_API_KEY, "https://api.siliconflow.cn/v1/chat/completions", ["Qwen/Qwen3-8B", "THUDM/GLM-4-9B-0414"]], // China-site accounts
     [env.COHERE_API_KEY, "https://api.cohere.ai/compatibility/v1/chat/completions", ["command-a-03-2025"]], // trial key: Friday's personal use only
     [env.DEEPSEEK_API_KEY, "https://api.deepseek.com/v1/chat/completions", ["deepseek-chat"]]
   ];
