@@ -1,11 +1,5 @@
 [
   {
-    "file": "2026-11-22-review.md",
-    "agent": "review",
-    "name": "Weekly Review (Manager)",
-    "date": "2026-11-22"
-  },
-  {
     "file": "2026-11-22-growth-coach.md",
     "agent": "growth-coach",
     "name": "Growth Coach",
@@ -57,6 +51,12 @@
     "file": "2026-11-22-studio-scout.md",
     "agent": "studio-scout",
     "name": "Trend Scout",
+    "date": "2026-11-22"
+  },
+  {
+    "file": "2026-11-22-review.md",
+    "agent": "review",
+    "name": "Weekly Review (Manager)",
     "date": "2026-11-22"
   },
   {

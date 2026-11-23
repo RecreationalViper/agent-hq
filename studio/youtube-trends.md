@@ -1,56 +1,56 @@
-# YouTube trends, US (2026-11-22)
+# YouTube trends, US (2026-11-23)
 
 Live from the YouTube Data API. Views/hr = views since upload ÷ hours since upload.
 
 ## Film & Animation: fastest-rising
-- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 29,115,493 views · 557,032/hr · 343,857 likes · 1,545 comments · 0:16
-- [A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)](https://youtu.be/QSPoFd7tYwg) · ManNoirFacts · 33,915,301 views · 272,920/hr · 0 likes · 2,870 comments · 0:11
-- [We need more people like him ✌️](https://youtu.be/E4nT85y858s) · Smirk · 24,056,980 views · 272,607/hr · 362,164 likes · 864 comments · 0:14
-- [You Won't Believe What He Writes On The Board Next! 😭](https://youtu.be/BA4XucRzi5k) · Foeko · 17,213,144 views · 238,188/hr · 408,233 likes · 1,539 comments · 0:34
-- [CANDY  VS VEGGIE WORLD](https://youtu.be/TfTpLJQ_E3Y) · Sailor Blox · 6,527,454 views · 235,098/hr · 0 likes · 743 comments · 2:29
-- [She Pretended To Be A 9/11 Survivor 🤨](https://youtu.be/9vhvXAM6xEs) · Zack D. Films · 5,315,619 views · 210,368/hr · 196,014 likes · 1,633 comments · 0:49
-- [This is why you listen to Mom #AFV #fail](https://youtu.be/G69uJnkZu1Q) · America's Funniest Home Videos · 22,151,925 views · 194,722/hr · 324,637 likes · 4,646 comments · 0:16
-- [Bro snatched it immediately 😭](https://youtu.be/Il6KrHLWbsY) · Warren's Feel · 3,049,440 views · 169,261/hr · 67,120 likes · 154 comments · 0:30
+- [Naruto VS Luffy | DEATH BATTLE!](https://youtu.be/gAlBLoPni_A) · DEATH BATTLE! · 5,115,684 views · 666,959/hr · 241,680 likes · 74,674 comments · 30:36
+- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 30,062,205 views · 516,773/hr · 352,529 likes · 1,575 comments · 0:16
+- [The Ultimate "Armed" Plot Twist! 💀](https://youtu.be/jl1l63_8GX4) · Foeko · 29,918,650 views · 370,880/hr · 731,294 likes · 2,871 comments · 1:00
+- [Por favor comparte con tus amigos #pov #herramientas #sketch #gracioso #actuación #historia](https://youtu.be/XY_ov9X03GY) · ChaosBiteClips · 5,046,283 views · 310,230/hr · 28,767 likes · 71 comments · 0:31
+- [We need more people like him ✌️](https://youtu.be/E4nT85y858s) · Smirk · 24,575,696 views · 261,022/hr · 370,900 likes · 878 comments · 0:14
+- [A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)](https://youtu.be/QSPoFd7tYwg) · ManNoirFacts · 33,903,469 views · 260,451/hr · 0 likes · 2,871 comments · 0:11
+- [Bro snatched it immediately 😭](https://youtu.be/Il6KrHLWbsY) · Warren's Feel · 5,305,383 views · 221,795/hr · 97,675 likes · 250 comments · 0:30
+- [CANDY  VS VEGGIE WORLD](https://youtu.be/TfTpLJQ_E3Y) · Sailor Blox · 7,462,096 views · 221,633/hr · 0 likes · 802 comments · 2:29
 
 ## Film & Animation: short videos (3 min or less)
-- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 29,115,493 views · 557,032/hr · 343,857 likes · 1,545 comments · 0:16
-- [A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)](https://youtu.be/QSPoFd7tYwg) · ManNoirFacts · 33,915,301 views · 272,920/hr · 0 likes · 2,870 comments · 0:11
-- [We need more people like him ✌️](https://youtu.be/E4nT85y858s) · Smirk · 24,056,980 views · 272,607/hr · 362,164 likes · 864 comments · 0:14
-- [You Won't Believe What He Writes On The Board Next! 😭](https://youtu.be/BA4XucRzi5k) · Foeko · 17,213,144 views · 238,188/hr · 408,233 likes · 1,539 comments · 0:34
-- [CANDY  VS VEGGIE WORLD](https://youtu.be/TfTpLJQ_E3Y) · Sailor Blox · 6,527,454 views · 235,098/hr · 0 likes · 743 comments · 2:29
-- [She Pretended To Be A 9/11 Survivor 🤨](https://youtu.be/9vhvXAM6xEs) · Zack D. Films · 5,315,619 views · 210,368/hr · 196,014 likes · 1,633 comments · 0:49
-- [This is why you listen to Mom #AFV #fail](https://youtu.be/G69uJnkZu1Q) · America's Funniest Home Videos · 22,151,925 views · 194,722/hr · 324,637 likes · 4,646 comments · 0:16
-- [Bro snatched it immediately 😭](https://youtu.be/Il6KrHLWbsY) · Warren's Feel · 3,049,440 views · 169,261/hr · 67,120 likes · 154 comments · 0:30
+- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 30,062,205 views · 516,773/hr · 352,529 likes · 1,575 comments · 0:16
+- [The Ultimate "Armed" Plot Twist! 💀](https://youtu.be/jl1l63_8GX4) · Foeko · 29,918,650 views · 370,880/hr · 731,294 likes · 2,871 comments · 1:00
+- [Por favor comparte con tus amigos #pov #herramientas #sketch #gracioso #actuación #historia](https://youtu.be/XY_ov9X03GY) · ChaosBiteClips · 5,046,283 views · 310,230/hr · 28,767 likes · 71 comments · 0:31
+- [We need more people like him ✌️](https://youtu.be/E4nT85y858s) · Smirk · 24,575,696 views · 261,022/hr · 370,900 likes · 878 comments · 0:14
+- [A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)](https://youtu.be/QSPoFd7tYwg) · ManNoirFacts · 33,903,469 views · 260,451/hr · 0 likes · 2,871 comments · 0:11
+- [Bro snatched it immediately 😭](https://youtu.be/Il6KrHLWbsY) · Warren's Feel · 5,305,383 views · 221,795/hr · 97,675 likes · 250 comments · 0:30
+- [CANDY  VS VEGGIE WORLD](https://youtu.be/TfTpLJQ_E3Y) · Sailor Blox · 7,462,096 views · 221,633/hr · 0 likes · 802 comments · 2:29
+- [He is on Another Level.🔥#edit #shorts #foryou](https://youtu.be/aCqDrqDTfoQ) · JJ_EditZ · 3,074,773 views · 213,482/hr · 169,737 likes · 403 comments · 2:58
 
 ## Gaming: fastest-rising
-- [If You Steal a Car in GTA 6, I’ll Pay For It!](https://youtu.be/Ra6sNe8s2Hc) · MrBeast Gaming · 18,047,968 views · 784,188/hr · 220,797 likes · 7,059 comments · 21:13
-- [This is a nightmare for Rockstar..](https://youtu.be/yqVoKXV8DZc) · Asmongold Clips · 3,054,641 views · 350,153/hr · 114,898 likes · 10,514 comments · 3:37
-- [Brawl Stars Championship 2026 | WORLD FINALS | DAY 3](https://youtu.be/CEEFBI6bI5w) · Brawl Stars Esports · 1,452,022 views · 148,328/hr · 11,712 likes · 672 comments · 409:19
-- [The GTA 6 backlash is getting out of hand..](https://youtu.be/4RqYHJmmmuw) · Asmongold TV   · 4,538,622 views · 141,961/hr · 89,379 likes · 25,493 comments · 17:49
-- [GTA 6 Is The Worst...](https://youtu.be/ub7aZWE94Cs) · MeatCanyon · 3,203,887 views · 124,339/hr · 152,560 likes · 10,435 comments · 30:50
-- [🗺️EXPLORING GTA 6🗺️](https://youtu.be/S3NEzaumEnQ) · Kai Cenat Live · 1,422,128 views · 103,496/hr · 11,995 likes · 145 comments · 404:20
-- [SIDEMEN AMONG US GTA 6 EDITION](https://youtu.be/vunYsm7gV9s) · MoreSidemen · 2,358,444 views · 94,298/hr · 52,854 likes · 1,913 comments · 70:10
-- [🔴 LIVE! - PLAYING GTA 6 RIGHT NOW! (PS5 PRO)](https://youtu.be/Vkbdv10eFcI) · Typical Gamer · 768,244 views · 83,767/hr · 4,138 likes · 76 comments · 245:06
+- [🔴EXPLORING VICE CITY - GTA 6 STREAM (EASTER EGGS)](https://youtu.be/izXcd-bU72k) · IShowSpeed · 9,278,129 views · 2,596,343/hr · 117,296 likes · 334 comments · 345:02
+- [If You Steal a Car in GTA 6, I’ll Pay For It!](https://youtu.be/Ra6sNe8s2Hc) · MrBeast Gaming · 20,594,906 views · 712,163/hr · 236,112 likes · 7,335 comments · 21:13
+- [This is a nightmare for Rockstar..](https://youtu.be/yqVoKXV8DZc) · Asmongold Clips · 3,910,575 views · 267,340/hr · 122,416 likes · 11,581 comments · 3:37
+- [The GTA 6 backlash is getting out of hand..](https://youtu.be/4RqYHJmmmuw) · Asmongold TV   · 4,701,128 views · 124,122/hr · 90,982 likes · 25,875 comments · 17:49
+- [GTA 6 Is The Worst...](https://youtu.be/ub7aZWE94Cs) · MeatCanyon · 3,639,507 views · 114,915/hr · 167,004 likes · 11,137 comments · 30:50
+- [SIDEMEN AMONG US GTA 6 EDITION](https://youtu.be/vunYsm7gV9s) · MoreSidemen · 2,740,185 views · 88,637/hr · 56,843 likes · 2,022 comments · 70:10
+- [This is vanilla Minecraft](https://youtu.be/4q55KOKC9zk) · Mumbo Jumbo · 843,333 views · 87,282/hr · 36,291 likes · 1,687 comments · 21:47
+- [I Built a Factory of 100% Pure Madness in Moon Sweepers](https://youtu.be/HLzkcYqdIik) · Let's Game It Out · 830,547 views · 84,192/hr · 30,900 likes · 2,581 comments · 21:14
 
 ## Gaming: short videos (3 min or less)
 - none in the chart today
 
 ## Entertainment: fastest-rising
-- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts ib: @jaymondy.](https://youtu.be/qh0v4UiZvf0) · Cadel and Mia · 50,519,258 views · 1,537,844/hr · 158,757 likes · 412 comments · 0:11
-- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 29,115,493 views · 557,031/hr · 343,857 likes · 1,545 comments · 0:16
-- [Megan’s bracelet is basically her passport 😭 #katseye](https://youtu.be/GIBBqScN6cM) · Everything Eyekons · 31,517,010 views · 385,709/hr · 0 likes · 1,497 comments · 0:12
-- [I made a mosquito snapper... #shorts #shortsfeed #youtubeshorts #cringe #lifehack #comedy #funny](https://youtu.be/5VTu3NGhg7s) · LouisAyy · 7,228,040 views · 307,953/hr · 129,729 likes · 1,580 comments · 0:41
-- [A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)](https://youtu.be/QSPoFd7tYwg) · ManNoirFacts · 33,915,301 views · 272,920/hr · 0 likes · 2,870 comments · 0:11
-- [We need more people like him ✌️](https://youtu.be/E4nT85y858s) · Smirk · 24,056,980 views · 272,607/hr · 362,164 likes · 864 comments · 0:14
-- [ALWAYS Listen To Your Mom 💀😭](https://youtu.be/2lOlOlWCx9g) · Wild Cam · 17,166,207 views · 245,824/hr · 109,813 likes · 1,200 comments · 0:12
-- [Bro really harmonized a gun sound 😭🥀](https://youtu.be/AkPRQE1i_Qc) · Warren's Feel · 7,865,755 views · 245,727/hr · 82,052 likes · 1,363 comments · 0:16
+- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts ib: @jaymondy.](https://youtu.be/qh0v4UiZvf0) · Cadel and Mia · 52,256,149 views · 1,348,383/hr · 162,486 likes · 424 comments · 0:11
+- [Naruto VS Luffy | DEATH BATTLE!](https://youtu.be/gAlBLoPni_A) · DEATH BATTLE! · 5,115,684 views · 666,953/hr · 241,680 likes · 74,674 comments · 30:36
+- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 30,062,205 views · 516,772/hr · 352,529 likes · 1,575 comments · 0:16
+- [How Mouth Breathing Can Change Your Face 😬](https://youtu.be/2ll9ClpJ3x8) · Zack D. Films · 4,871,138 views · 478,816/hr · 183,011 likes · 2,488 comments · 0:33
+- [Phillies land All-Star closer Jhoan Duran ahead of MLB trade deadline 👀🔥 #JhoanDuran](https://youtu.be/44Jwe_5CTEA) · modsjgdre · 11,655,998 views · 454,175/hr · 76,672 likes · 174 comments · 0:31
+- [Megan’s bracelet is basically her passport 😭 #katseye](https://youtu.be/GIBBqScN6cM) · Everything Eyekons · 32,945,203 views · 376,019/hr · 0 likes · 1,554 comments · 0:12
+- [The Ultimate "Armed" Plot Twist! 💀](https://youtu.be/jl1l63_8GX4) · Foeko · 29,918,650 views · 370,880/hr · 731,294 likes · 2,871 comments · 1:00
+- [HIGHEST risk, zero reward💔: #memes](https://youtu.be/62cXfwYcc1g) · Hazax · 7,592,849 views · 329,174/hr · 0 likes · 551 comments · 0:11
 
 ## Entertainment: short videos (3 min or less)
-- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts ib: @jaymondy.](https://youtu.be/qh0v4UiZvf0) · Cadel and Mia · 50,519,258 views · 1,537,844/hr · 158,757 likes · 412 comments · 0:11
-- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 29,115,493 views · 557,031/hr · 343,857 likes · 1,545 comments · 0:16
-- [Megan’s bracelet is basically her passport 😭 #katseye](https://youtu.be/GIBBqScN6cM) · Everything Eyekons · 31,517,010 views · 385,709/hr · 0 likes · 1,497 comments · 0:12
-- [I made a mosquito snapper... #shorts #shortsfeed #youtubeshorts #cringe #lifehack #comedy #funny](https://youtu.be/5VTu3NGhg7s) · LouisAyy · 7,228,040 views · 307,953/hr · 129,729 likes · 1,580 comments · 0:41
-- [A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)](https://youtu.be/QSPoFd7tYwg) · ManNoirFacts · 33,915,301 views · 272,920/hr · 0 likes · 2,870 comments · 0:11
-- [We need more people like him ✌️](https://youtu.be/E4nT85y858s) · Smirk · 24,056,980 views · 272,607/hr · 362,164 likes · 864 comments · 0:14
-- [ALWAYS Listen To Your Mom 💀😭](https://youtu.be/2lOlOlWCx9g) · Wild Cam · 17,166,207 views · 245,824/hr · 109,813 likes · 1,200 comments · 0:12
-- [Bro really harmonized a gun sound 😭🥀](https://youtu.be/AkPRQE1i_Qc) · Warren's Feel · 7,865,755 views · 245,727/hr · 82,052 likes · 1,363 comments · 0:16
+- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts ib: @jaymondy.](https://youtu.be/qh0v4UiZvf0) · Cadel and Mia · 52,256,149 views · 1,348,383/hr · 162,486 likes · 424 comments · 0:11
+- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 30,062,205 views · 516,772/hr · 352,529 likes · 1,575 comments · 0:16
+- [How Mouth Breathing Can Change Your Face 😬](https://youtu.be/2ll9ClpJ3x8) · Zack D. Films · 4,871,138 views · 478,816/hr · 183,011 likes · 2,488 comments · 0:33
+- [Phillies land All-Star closer Jhoan Duran ahead of MLB trade deadline 👀🔥 #JhoanDuran](https://youtu.be/44Jwe_5CTEA) · modsjgdre · 11,655,998 views · 454,175/hr · 76,672 likes · 174 comments · 0:31
+- [Megan’s bracelet is basically her passport 😭 #katseye](https://youtu.be/GIBBqScN6cM) · Everything Eyekons · 32,945,203 views · 376,019/hr · 0 likes · 1,554 comments · 0:12
+- [The Ultimate "Armed" Plot Twist! 💀](https://youtu.be/jl1l63_8GX4) · Foeko · 29,918,650 views · 370,880/hr · 731,294 likes · 2,871 comments · 1:00
+- [HIGHEST risk, zero reward💔: #memes](https://youtu.be/62cXfwYcc1g) · Hazax · 7,592,849 views · 329,174/hr · 0 likes · 551 comments · 0:11
+- [Por favor comparte con tus amigos #pov #herramientas #sketch #gracioso #actuación #historia](https://youtu.be/XY_ov9X03GY) · ChaosBiteClips · 5,046,283 views · 310,228/hr · 28,767 likes · 71 comments · 0:31

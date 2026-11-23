@@ -2,72 +2,65 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# MotionVault YouTube Shorts Trend & Strategy Report
-**Date:** November 22, 2026
+# What’s Working on YouTube Shorts Right Now
+
+Here is the live trend report based on today’s YouTube Data API, search trends, and top short edits.
 
 ---
 
-## 1. Top 6 Fastest-Rising Short Clips & Common Trends
+### 1. Top 6 Fastest-Rising Relevant Short Videos & Edits
 
-Here are the highest-performing short-form clips currently dominating the charts:
+1. **"A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)"** · *ManNoirFacts*
+   * **Stats:** 33,903,469 views · 260,451 views/hr · 0:11
+2. **"Why they move so human 🥀"** · *MoVeak*
+   * **Stats:** 30,062,205 views · 516,773 views/hr · 0:16
+3. **"The Ultimate "Armed" Plot Twist! 💀"** · *Foeko*
+   * **Stats:** 29,918,650 views · 370,880 views/hr · 1:00
+4. **"This is best short film l’ve watched this year"** · *DSP WCNM*
+   * **Stats:** 27,082,095 views · 1,106,182 likes
+5. **"The hardest test in KingsMan ☠️🔥"** · *LearnVerse BD*
+   * **Stats:** 7,253,762 views · 305,890 likes
+6. **"Thorfinn edit"** · *LightyXD*
+   * **Stats:** 4,047,672 views · 172,706 likes
 
-* **"Why they move so human 🥀"** (MoVeak)  
-  *Views:* **29,115,493** (557,032/hr) | *Length:* 0:16
-* **"A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)"** (ManNoirFacts)  
-  *Views:* **33,915,301** (272,920/hr) | *Length:* 0:11
-* **"This is best short film l’ve watched this year"** (DSP WCNM)  
-  *Views:* **26,647,154** (1,086,774 likes) | *Length:* ~0:20
-* **"The hardest test in KingsMan ☠️🔥"** (LearnVerse BD)  
-  *Views:* **7,061,184** (296,663 likes) | *Length:* ~0:30
-* **"Bro really harmonized a gun sound 😭🥀"** (Warren's Feel)  
-  *Views:* **7,865,755** (245,727/hr) | *Length:* 0:16
-* **"She Is Only 16 But She's A Great Doctor"** (Peak-Edits)  
-  *Views:* **11,742,735** | *Length:* ~0:30
+#### What They Have in Common:
+* **Length:** Tight and fast (11 to 30 seconds). Minimal bloat.
+* **Hooks:** Immediate visual setup in seconds 1–2 using text overlays that state a high-stakes claim ("A Real Stuntwoman Hit...", "The hardest test...", "Plot Twist!").
+* **Topic Focus:** Single continuous scenes with a clear payoff (an insane stunt, a high-IQ play, or a emotional character transformation).
+* **Emojis as Mood Anchors:** Titles leverage 1–2 expressive emojis (💀, 🥀, ☠️, 🚗) to set the emotional tone before the video even plays.
 
-### What They Have In Common
-* **Hyper-Focused Runtime (11s–35s):** Edits under 20 seconds rely on rapid rewatches/loops. Edits around 30 seconds structure a tight 2-second hook, a 20-second unbroken story beat, and a sudden high-impact ending.
-* **Informal POV Titles:** Headers use conversational internet phrasing (`"Bro really..."`, `"Why they..."`, `"ALWAYS listen to..."`) paired with 1–2 high-emotion emojis (`😭`, `🥀`, `☠️`, `🚗`).
-* **Visual Instant Hooks:** No intro bumpers. The first frame shows high kinetic motion, an absurd scene setting, or prominent text overlay at the top of the 9:16 frame.
-
----
-
-## 2. Recommended Clipping Titles & Specific Moments
-
-*(Note: The Gaming short-form chart returned no direct short clips today, but gaming interest—especially GTA VI at **393,338** Wikipedia pageviews and massive Twitch live counts—is peaking).*
-
-### Movies & Cinema
-* **Kingsman: The Secret Service — Underwater Barracks Test**
-  * *Beat:* Start right as water cracks the glass. Run 25 seconds of unbroken panic in story order, ending on Eggsy using the door mirror to breathe.
-  * *On-Screen Credit:* *Kingsman: The Secret Service (2014)*
-* **The Hunger Games — The 60-Second Arena Countdown**
-  * *Context:* *The Hunger Games: Sunrise on the Reaping* is spiking (**204,097** Wikipedia views).
-  * *Beat:* Clip Katniss stepping onto the pedestal, the tense eye contact with Peeta, and the immediate bloodbath sprint when the horn blows.
-  * *On-Screen Credit:* *The Hunger Games (2012)*
-* **Classic Action / Stunt Cinema — Practical Stunt Breakdown**
-  * *Beat:* Focus on classic 80s/90s non-CGI car flips or window breaches (following the *Looker* 33.9M view trend).
-
-### Anime
-* **Steel Ball Run: JoJo's Bizarre Adventure**
-  * *Context:* Currently top-rated on MAL (score **9.03**).
-  * *Beat:* Gyro Zeppeli’s Steel Ball curve technique or Diego Brando’s horse sprint sequence. High-contrast sync edit to heavy bass.
-  * *On-Screen Credit:* *JoJo's Bizarre Adventure: Steel Ball Run*
-* **Black Clover (Season 2 Airing Now)**
-  * *Context:* Black Clover S2 trending on AniList (score **8.89** MAL).
-  * *Beat:* Asta and Yuno's dual spell execution against high-tier demons. 30-second continuous push with audio leveling on spell impact.
-  * *On-Screen Credit:* *Black Clover*
-* **Vinland Saga / Thorfinn Edits**
-  * *Context:* Thorfinn edits pulled **3,820,581** views this week.
-  * *Beat:* The "I have no enemies" farmland confrontation. Cut directly from brutal violence to calm resolution beat.
+*Note on Gaming Shorts:* The live Gaming Shorts category returned no short clips in the chart today, as long-form streams dominate gaming trends right now (led by GTA 6).
 
 ---
 
-## 3. Title Patterns to Copy
+### 2. Studio Clipping Plan for MotionVault
 
-* **Informal Action Reaction:**  
-  `Bro really [did absurd action] 😭🥀`
-* **High-Stakes Superlative:**  
-  `The coldest [test / scene / combat] in movie history ☠️🔥`
-* **Behind-The-Scenes / Stunt Fact:**  
-  `A Real Stuntman Did THIS for This Scene 🚗 | [Movie Name] ([Year])`
-* **Character POV Framing:**  
-  `Why he reacted like that 💀 | [Character Name]`
+#### A. GTA 6 Viral Moments (Gaming)
+* **Trend Context:** *Grand Theft Auto VI* is currently the #1 topic across Twitch (IShowSpeed with 9,278,129 views; MrBeast Gaming with 20,594,906 views) and Wikipedia (#1 most read article at 393,338 views).
+* **Scene Focus:** Cut a 30–35 second high-speed police chase or heist escape beat. 
+* **Edit Strategy:** Hook in second 1 with the initial collision/escape, run an unbroken 20-second sequence, and end on a close-call escape beat that seamless loops back to the start.
+
+#### B. Kingsman / High-IQ Action Scenes (Movies)
+* **Trend Context:** High-IQ action tests and single-person fight montages are pulling massive view counts (*LearnVerse BD* hit 7.25M views on Kingsman; *Realistic films* hit 5.78M views on single-handed fights).
+* **Scene Focus:** *Kingsman: The Secret Service* (e.g., underwater room drowning test or pub fight).
+* **Edit Strategy:** Title on screen at start. Let the tension build naturally through dialogue into quick action, cutting on the final punch/save.
+
+#### C. Steel Ball Run & Thorfinn / Character Shifts (Anime)
+* **Trend Context:** *Steel Ball Run: JoJo’s Bizarre Adventure* is currently the #1 top-rated airing anime on MyAnimeList (9.03 score), while Vinland Saga (Thorfinn) short edits are trending strongly (4.04M views).
+* **Scene Focus:** Thorfinn's transition from revenge to peace or key Stand reveal sequences from JoJo.
+* **Edit Strategy:** Pair visual contrast (rage vs. serenity) with currently trending background sounds (e.g., Panchiko's *D>E>A>T>H>M>E>T>A>L* or bôa's *Duvet*, both spiking on US search/Last.fm).
+
+---
+
+### 3. Title Patterns to Copy
+
+* **The High-IQ / Hardest Challenge Hook:**
+  * `The hardest test in [Movie/Game Title] ☠️🔥 #edit #shorts`
+* **The "Bro" Reaction Hook:**
+  * `Bro [action verb] immediately 😭`
+  * *Example:* `Bro snatched it immediately 😭`
+* **The Behind-The-Scenes / Fact Hook:**
+  * `A Real Stuntman Did THIS for This Scene 🚗 | [Movie Title]`
+* **The Dominance / Skill Hook:**
+  * `He is on Another Level.🔥 #edit #shorts #foryou`
+  * `He single-handedly defeated [Faction/Group] 🔥`

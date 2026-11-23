@@ -2,72 +2,69 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# MotionVault Production Plan (2026-11-22)
+# MotionVault Daily Edit Plan — Nov 22, 2026
+
+Here are the 3 clips Claude should cut today, prioritized by current platform trends, search volume, and channel fit.
 
 ---
 
-## 🚀 Priority Order & Strategy
-
-**Make Clip #1 (GTA VI) FIRST.**  
-*GTA VI* is currently the #1 media event globally (393k+ daily Wikipedia views, 300k+ concurrent Twitch viewers, and $3.8B day-one sales). Clipping the viral "Red Hulk" night encounter captures immediate search traffic on both platforms before trend saturation spikes further.
-
----
-
-## 🎬 Clip 1: GTA VI — The Vice City Night Encounter ("Red Hulk" Mystery)
-* **Platforms:** TikTok & YouTube Shorts (Both)
-* **Source Title & Location:** *Grand Theft Auto VI* gameplay stream / trailer footage (Vice City night encounter; timestamps variable by stream).
-* **Target Length:** 32 seconds
-* **Mood:** Tense, uncanny, chaotic
-* **Audio Note:** Original creator reaction audio ("WHAT IS THAT?!") mixed with GTA VI soundtrack track **"Suzuki"** dropping heavy bass at 0:03.
-
-### Shot Plan for Claude:
-* **Hook (0-2s):** IShowSpeed screaming *"WHAT IS THAT?!"* as headlights illuminate a massive, shadowy red figure standing under a Vice City streetlight.
-* **Stretch 1 (2-10s):** Unbroken driving approach down a foggy, rain-slicked Vice City coastal street as engine revs echo.
-* **Stretch 2 (10-20s):** Car comes to a dead stop 15 feet away; lights flicker while the red figure slowly turns around toward the driver.
-* **Stretch 3 (20-28s):** Continuous sprint toward the character model right as it raises an arm and launches a vehicle into the air.
-* **Biggest Moment (28-30s):** Sudden screen-shaking impact hit as the red figure punches directly toward the camera lens.
-* **Final Beat (30-32s):** Hard cut to dark fog with the iconic red "WASTED" text overlay and low death-chime sound.
-* **On-Screen Text/Credit:** *Grand Theft Auto VI (2026)*
+### Priority Order: What to Make First & Why
+**Make Clip 1 (GTA VI Vice City Chase) FIRST.** 
+* **Why:** *Grand Theft Auto VI* is at peak viral momentum following its Nov 19 launch. It is currently the #1 game on Twitch (700k+ viewers across xQc, IlloJuan, CaseOh) and #1 on Wikipedia (393k+ daily views). TikTok audio *"Suzuki"* is spiking with 3.5M+ creations. Riding this launch-week wave gives MotionVault its strongest opportunity for breakout reach.
 
 ---
 
-## 🏹 Clip 2: The Hunger Games: Sunrise on the Reaping — Haymitch's Quarter Quell Entrance
-* **Platforms:** TikTok & YouTube Shorts (Both)
-* **Source Title & Location:** *The Hunger Games: Sunrise on the Reaping* (Official Teaser / Trailer footage; rough timestamp ~0:20-1:10).
+### Clip 1: Grand Theft Auto VI — Vice City Police Chase
+* **Platforms:** Both (TikTok & YouTube Shorts)
 * **Target Length:** 35 seconds
-* **Mood:** High-stakes, dark cinematic, survival tension
-* **Audio Note:** Trending atmospheric synth track **"Time Back" (Sinny & 7vvch)**. Level cannon blast SFX in intro over music.
+* **Mood:** High-octane, adrenaline-fueled, neon-thrill
 
-### Shot Plan for Claude:
-* **Hook (0-2s):** Loud Capitol arena cannon blast echoing over a tight close-up of a tribute's eyes snapping open in terror.
-* **Stretch 1 (2-12s):** Continuous story stretch of Effie/Reaping official calling *"Haymitch Abernathy"* as young Haymitch steps up to the stage under guard watch.
-* **Stretch 2 (12-22s):** Unbroken sequence of the glass pedestal rising out of the tube into the glowing 50th Quarter Quell arena landscape.
-* **Stretch 3 (22-29s):** 60-second countdown clock ticking down on screen as tributes lock eyes across the Cornucopia circle.
-* **Biggest Moment (29-32s):** The countdown hits `00:00`; loud horn sounds as Haymitch lunges forward and grabs a prop axe off the pedestal.
-* **Final Beat (32-35s):** Fast cut to a black frame right before weapon impact, leaving the arena cannon echoing.
-* **On-Screen Text/Credit:** *The Hunger Games: Sunrise on the Reaping (2026)*
-
----
-
-## 🐴 Clip 3: Steel Ball Run: JoJo's Bizarre Adventure — San Diego Beach Race Start
-* **Platforms:** TikTok & YouTube Shorts (Both)
-* **Source Title & Location:** *Steel Ball Run: JoJo's Bizarre Adventure* (Episode 1; Beach Race Start scene, rough timestamp ~04:15-05:30).
-* **Target Length:** 30 seconds
-* **Mood:** Aesthetic flex, high-velocity hype, dark anime energy
-* **Audio Note:** **"Super Funk x My Type Funk"** (Phonk Remix). Sync Gyro's ball spin and the starter cannon blast directly to the cowbell drop.
-
-### Shot Plan for Claude:
-* **Hook (0-2s):** Gyro Zeppeli smirking while spinning his green Steel Ball between his fingers with a metallic resonance SFX.
-* **Stretch 1 (2-10s):** Unbroken wide shot of hundreds of horses lined up at the San Diego beach starting line under bright sunlight.
-* **Stretch 2 (10-22s):** Starter cannon fires; continuous action stretch of horse hooves pounding into wet sand and ocean spray in story order.
-* **Stretch 3 (22-26s):** Gyro and Diego Brando accelerating neck-and-neck through the surf, sand flying across the camera frame.
-* **Biggest Moment (26-28s):** Low-angle close-up of Johnny Joestar looking up from his wheelchair with glowing blue aura eyes as Gyro surges ahead.
-* **Final Beat (28-30s):** Freeze frame flash on Johnny's glare right as the heavy phonk bass drops out.
-* **On-Screen Text/Credit:** *JoJo's Bizarre Adventure: Steel Ball Run*
+#### Shot Plan for Claude:
+* **Source & Location:** Official GTA VI Trailers & Gameplay Reveal Clips (Vice City downtown neon strip getaway sequence; rough timestamp: mid-trailer chase segment).
+* **Hook (0–2s):** Jason and Lucia kicking open a store door with drawn weapons, staring directly into the camera as police headlights flash red and blue across their faces.
+* **Unbroken Stretches (in story order):**
+  1. *Stretch 1 (2–12s):* Jason slamming the gas in a muscle car as glass shatters, cutting to an unbroken 10-second shot of the getaway car weaving through Vice City's neon strip at sunset with police cruisers in pursuit.
+  2. *Stretch 2 (12–24s):* High-speed side-by-side drift avoiding a police roadblock, framed by a helicopter searchlight sweeping over the vehicle.
+  3. *Stretch 3 (24–30s):* Lucia leaning out the passenger window aiming back as a pursuing squad car clips a barrier and flips in mid-air.
+* **Biggest Moment (28s):** High-contrast impact of the police squad car flipping mid-air in slow motion as explosions flash behind the getaway car.
+* **Final Beat (30–35s):** Lucia jumping onto the hood of the moving getaway car looking back at the distant sirens as they speed toward the ocean highway.
+* **Audio Note:** Sync directly to Fuerza Regida’s *"Suzuki"*. Keep the engine rev and siren dialogue quiet during the 0–2s hook, then hit the hard bass drop on the gear shift at 0:02.
+* **On-Screen Text Overlay:** *"POV: You’re earning $12/hr working Vice City security and Jason walks in 💀"*
 
 ---
 
-## 📋 Quick Summary for Claude Workflow
-1. **Clip 1 (GTA VI):** Prioritize immediate turnaround; post to TikTok & YouTube Shorts today while Twitch streams are live.
-2. **Clip 2 (Hunger Games):** Capitalize on $120M box office opening weekend traffic (#4 Wikipedia).
-3. **Clip 3 (Steel Ball Run):** Ride #1 MAL rating momentum with high-velocity anime edit styling.
+### Clip 2: The Hunger Games: Sunrise on the Reaping — Haymitch’s Arena Entrance
+* **Platforms:** Both (TikTok & YouTube Shorts)
+* **Target Length:** 34 seconds
+* **Mood:** Tense, nostalgic, harrowing, dramatic
+
+#### Shot Plan for Claude:
+* **Source & Location:** Official Lionsgate *Sunrise on the Reaping* Teaser/Trailer paired with *Catching Fire* arena entrance (Rough timestamp: opening sequence of teaser).
+* **Hook (0–2s):** The violent metallic click and explosive *BOOM* of the Hunger Games tribute cannon firing over a black screen.
+* **Unbroken Stretches (in story order):**
+  1. *Stretch 1 (2–12s):* Young Haymitch Abernathy standing frozen on the glass pedestal as it slowly rises into the blinding sunlight of the 50th Quarter Quell arena.
+  2. *Stretch 2 (12–22s):* Intercut with Katniss Everdeen’s glass tube rising in *Catching Fire*, creating a seamless parallel sequence of both tributes facing the arena countdown.
+  3. *Stretch 3 (22–29s):* Haymitch sprinting toward the jagged cliff edge right after the countdown hits zero.
+* **Biggest Moment (27s):** Haymitch discovering the arena force field barrier on the cliff, tossing a rock to trigger a violent shockwave spark.
+* **Final Beat (29–34s):** Violent high-contrast electrical flash on Haymitch's face before cutting abruptly to black as the cannon booms again.
+* **Audio Note:** Combine the iconic 4-note Mockingjay whistle with the low bass build from Panchiko's *"D>E>A>T>H>M>E>T>A>L"* (currently spiking on US Last.fm charts).
+* **On-Screen Text Overlay:** *"50th Quarter Quell: The arena trick that changed everything 👑"*
+
+---
+
+### Clip 3: Steel Ball Run: JoJo’s Bizarre Adventure — Gyro Zeppeli Race Countdown
+* **Platforms:** Both (TikTok & YouTube Shorts)
+* **Target Length:** 36 seconds
+* **Mood:** Stylish, epic, fast-paced, high-hype
+
+#### Shot Plan for Claude:
+* **Source & Location:** *Steel Ball Run: JoJo's Bizarre Adventure* (Episode 1/2 San Diego Beach Race start line; rough timestamp: mid-episode race setup). *(Note: Our previous JoJo SBR clip is currently MotionVault's top-viewed YouTube Short).*
+* **Hook (0–2s):** Macro close-up frame of Gyro Zeppeli’s eye glowing green as his Steel Ball spins with a high-pitched metallic hum.
+* **Unbroken Stretches (in story order):**
+  1. *Stretch 1 (2–12s):* Starter pistol shot firing, followed by an unbroken 10-second shot of hundreds of horses stampeding off the San Diego beach line into a massive dust cloud.
+  2. *Stretch 2 (12–24s):* Continuous tracking shot of Gyro riding Valkyrie through the thick of the pack, smoothly cutting past rival racers in high-FPS motion.
+  3. *Stretch 3 (24–31s):* Johnny Joestar mounting Slow Dancer and unleashing Tusk’s fingernail spin aura for the first time.
+* **Biggest Moment (23s):** Gyro throwing the Steel Ball in slow motion, distorting the wind and air pressure around a rival horse.
+* **Final Beat (31–36s):** Quick cut to Johnny looking up with sharp determination, cutting off mid-sentence as his horse breaks out of the dust storm into full speed.
+* **Audio Note:** Fast-paced phonk sync (*"LUZ"* by HDN). Cut the sharp bass drop precisely on the starter pistol shot at 0:02.
+* **On-Screen Text Overlay:** *"The #1 rated anime sequence hits different 🐎🔥"*

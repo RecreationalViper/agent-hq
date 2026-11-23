@@ -2,37 +2,45 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-Here is my audit of today's production plan. We have **0 subscribers and 35 total views across 12 videos**—generic edits are dying on our feed. We need extreme pacing, instant narrative hooks, and zero filler.
+Here is my critique of today’s clip plan and captions.
 
 ---
 
-### 🎮 Clip 1: GTA VI — Vice City Night Encounter
-* **Hook Strength:** 8/10 (IShowSpeed’s scream + mystery silhouette creates instant visual intrigue)
-* **Rewatch Value:** 7/10 (Punch-cut ending works, but driving filler hurts completion rate)
-* **Comment Bait:** 9/10 (High debate potential: *"Is this real or a mod?"*, *"Where on the map is this?"*)
-* **Copyright Risk:** 6/10 (Mixing streamer reaction audio + game footage + commercial track "Suzuki" creates multi-flag risk; Speed's stream audio can trigger manual claims)
-* **The One Change:** **Kill the 8-second driving approach (seconds 2–10).** Short-form viewers will swipe instantly if you make them watch fog and empty pavement. Jump cut straight from Speed's scream (0:02) to the red figure turning toward the camera (0:03).
+### Clip 1: Grand Theft Auto VI — Vice City Police Chase
+* **Hook Strength:** 8/10
+* **Rewatch Value:** 8/10
+* **Comment Bait:** 7/10
+* **Copyright Risk:** 6/10 *(10 = safest; "Suzuki" track carries high mute/copyright flag risk on YouTube Shorts)*
+
+* **Critique:** Starting on GTA VI is the right priority while Twitch and Wikipedia numbers are peaking. However, the store door kick visual is too slow for a 0–1s hook.
+* **The One Change:** **Nuke the 2-second setup and start directly on the car collision at 0:00.** Start mid-action with engine revs and red/blue flashes already filling the frame. 
+* **Verdict:** **KEEP.**
 
 ---
 
-### 🏹 Clip 2: Hunger Games: Sunrise on the Reaping — Haymitch’s Entrance
-* **Hook Strength:** 8/10 (Loud Capitol cannon blast + eye snap is punchy audio design)
-* **Rewatch Value:** 8/10 (Countdown clock builds real tension; cutting right before axe impact forces rewatch)
-* **Comment Bait:** 8/10 (Lore fans love debating 50th Quarter Quell tactics)
-* **Copyright Risk:** 7/10 (Trailer footage is safe if kept short, but studio visual matching algorithms are aggressive right now)
-* **The One Change:** **Fix the visual disconnect in the setup.** Don't jump from an unnamed tribute's eyes opening straight to Effie calling Haymitch on stage. Keep the camera locked on Haymitch's face from 0:00 to 0:35 so cold viewers aren't confused by character hopping.
+### Clip 2: Hunger Games: Sunrise on the Reaping — Haymitch’s Arena Entrance
+* **Hook Strength:** 3/10
+* **Rewatch Value:** 5/10
+* **Comment Bait:** 8/10
+* **Copyright Risk:** 7/10
+
+* **Critique:** **Never start a short-form clip on a black screen.** Mobile users swipe within 0.4 seconds; they will never wait around to hear the audio cannon boom. Furthermore, intercutting Katniss with Haymitch violates our core strategy of maintaining an unbroken, story-order stretch.
+* **The One Change:** **DROP THIS CLIP.** 
+* **What to Make Instead:** Make the **A Minecraft Movie — Technoblade Crowned Pig Tribute** (from today's Trend Scout). A 20-second unbroken clip with the text overlay *"The Easter egg we all needed 👑🐷"* will generate 10x the comment bait, emotional rewatches, and completion rates on TikTok today compared to a black-screen teaser mashup.
 
 ---
 
-### 🐴 Clip 3: Steel Ball Run — San Diego Beach Race Start
-* **Hook Strength:** 5/10 (Gyro spinning a steel ball is fan-service; non-fans will swipe away immediately)
-* **Rewatch Value:** 7/10 (Phonk bass drop helps, but raw horse footage is low-retention)
-* **Comment Bait:** 4/10 (Generic hype edit captions won't drive comment section arguments)
-* **Copyright Risk:** 8/10 (Transformative anime phonk edit is standard and safe)
-* **The One Change:** **DROP THIS CLIP ENTIRELY.** Generic anime hype montages are why our Goku and TMNT uploads sit at 0-1 views. 
-* **What to make instead:** Pivot to the viral **Lupin: Part 4 "Escape the Cage" Blackout Edit** (3.6M+ views on TikTok this week) or the **Dragon Ball "Yo My Fault Bruh" Format**. Both use high-relatability meme hooks that force watch time on cold feeds.
+### Clip 3: Steel Ball Run: JoJo’s Bizarre Adventure — Gyro Zeppeli Race Countdown
+* **Hook Strength:** 8/10
+* **Rewatch Value:** 9/10
+* **Comment Bait:** 7/10
+* **Copyright Risk:** 8/10
+
+* **Critique:** The visual pacing (glowing eye into 100-horse stampede) is pristine and leverages our strongest performing past upload style. The weak link is the generic text hook.
+* **The One Change:** Change the on-screen text from `#1 rated anime sequence hits different 🐎` (which sounds like an ad) to a high-IQ narrative hook: `When the starter gun fires in SBR 💀` or remove the text overlay entirely to let the visual eye-glow land uninterrupted.
+* **Verdict:** **KEEP.**
 
 ---
 
 ### 🎯 One-Line Verdict
-**Verdict:** Cut Clip 3 (JoJo: Steel Ball Run) first—it lacks an immediate broad hook and will end up stuck at 0 views like our past anime edits.
+**Cut Clip 2 (Hunger Games) immediately due to the dead black-screen hook, and replace it with the Technoblade Crowned Pig clip.**
