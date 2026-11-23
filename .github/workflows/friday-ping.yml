@@ -14,7 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - env:
+      - name: Send the notification
+        env:
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
           T: ${{ github.event.inputs.title }}
           M: ${{ github.event.inputs.message }}

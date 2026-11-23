@@ -108,7 +108,7 @@ if (process.env.REQUESTY_API_KEY || process.env.REQUESTY_KEY) {
 // Gemini + Google Search check for each key (main and studio): which models answer with search, and why not.
 for (const [label, key] of [["gemini-main", process.env.GEMINI_API_KEY], ["gemini-studio", process.env.STUDIO_GEMINI_API_KEY]]) {
   if (!key?.trim()) { console.log(`RESULT ${label}: no key`); continue; }
-  for (const model of ["gemini-flash-latest", "gemini-2.5-flash"]) {
+  for (const model of ["gemini-flash-latest", "gemini-3.8-flash"]) {
     for (const search of [false, true]) {
       try {
         const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", headers: { "x-goog-api-key": key.trim(), "Content-Type": "application/json" }, body: JSON.stringify({ contents: [{ role: "user", parts: [{ text: search ? "What is today's top news headline? One line." : "Reply: ok" }] }], ...(search ? { tools: [{ google_search: {} }] } : {}) }), signal: AbortSignal.timeout(60000) });

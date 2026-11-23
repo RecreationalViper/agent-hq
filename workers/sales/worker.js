@@ -475,7 +475,7 @@ async function geminiChat(env, system, history) {
   if (!env.GEMINI_API_KEY) throw new Error("no key");
   const contents = history.map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] }));
   let last = "gemini: no model answered";
-  for (const model of ["gemini-flash-latest", "gemini-2.5-flash", "gemini-flash-lite-latest"]) {
+  for (const model of ["gemini-flash-latest", "gemini-3.8-flash", "gemini-flash-lite-latest"]) {
     // newer flash models reject thinkingBudget (HTTP 400): ask once with it, once without
     for (const thinking of [{ thinkingBudget: 0 }, null]) {
       const generationConfig = { maxOutputTokens: 1400, temperature: 0.5, ...(thinking ? { thinkingConfig: thinking } : {}) };
