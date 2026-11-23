@@ -681,7 +681,7 @@ ${facts.join("\n")}`;
   if (owner && r.shop && typeof r.shop === "object" && r.shop.do) {
     sResult = await fridayShop(env, r.shop);
     if (/^(Couldn't|Need |Unknown|Payhip didn't|Stripe isn't)/.test(sResult)) say = sResult.replace(/^Stripe isn't connected, and/, "Stripe isn't hooked up yet, and");
-    else { const a2 = await secondPass("SHOP RESULT", r.shop, sResult); if (a2) say = a2; }
+    else { const a2 = await secondPass("SHOP RESULT", r.shop, sResult); say = a2 || `Here's the latest: ${String(sResult).replace(/\n+/g, ". ").slice(0, 600)}`; }
   }
   if (owner && r.google && typeof r.google === "object" && r.google.do) {
     gResult = await runGoogle(env, r.google);
@@ -698,6 +698,7 @@ ${facts.join("\n")}`;
   const phone = r.phone && typeof r.phone === "object" && PHONE.includes(r.phone.do) ? r.phone : null;
   for (const [k, v] of [["google", gResult], ["lookup", lResult], ["shop", sResult]]) if (v && /^(Couldn't|Unknown)/.test(String(v))) await fridayLog(env, k, `${JSON.stringify(r[k]).slice(0, 200)} -> ${String(v).slice(0, 200)}`);
   trace.tools_ms = Date.now() - tf; trace.tools = [r.google && "google", r.lookup && "lookup", r.shop && "shop", r.phone && "phone", r.run && "run"].filter(Boolean).join(",");
+  if (/^\s*one sec\.?\s*$/i.test(say)) say = owner ? "Sorry, I couldn't pull that up just now. Try me again in a moment." : "That one needs Josiah's key.";
   const listen = r.listen === true || (r.listen !== false && /\?\s*$/.test(say));
   return out({ ok: true, heard, say, listen: listen ? "yes" : "", ran: r.run || null, remembered: r.remember || null, google: gResult, shop: sResult ? String(sResult).slice(0, 600) : null, lookup: lResult ? String(lResult).slice(0, 600) : null, phone, phone_json: phone ? JSON.stringify(phone) : "", phone_url: phone ? phoneUrl(phone) : "" });
 }
