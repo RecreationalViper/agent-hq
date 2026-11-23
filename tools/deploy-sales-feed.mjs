@@ -74,7 +74,7 @@ if (CANVA_ID && CANVA_SECRET) {
 const G_ID = (process.env.GMAIL_CLIENT_ID || "").trim(), G_SECRET = (process.env.GMAIL_CLIENT_SECRET || "").trim();
 if (G_ID && G_SECRET) { bindings.push({ type: "plain_text", name: "GOOGLE_CLIENT_ID", text: G_ID }, { type: "secret_text", name: "GOOGLE_CLIENT_SECRET", text: G_SECRET }); console.log("Friday: Google client saved on the Worker"); }
 // Friday's second brain: web search, Claude for hard questions, Notion (all keys the agents already use)
-for (const name of ["NVIDIA_API_KEY", "CEREBRAS_API_KEY", "MISTRAL_API_KEY", "SAMBANOVA_API_KEY", "FRED_API_KEY", "ALPACA_KEY", "ALPACA_SECRET", "PLAID_CLIENT_ID", "PLAID_SECRET"]) if (process.env[name]?.trim()) bindings.push({ type: "secret_text", name, text: process.env[name].trim() });
+for (const name of ["NVIDIA_API_KEY", "CEREBRAS_API_KEY", "MISTRAL_API_KEY", "SAMBANOVA_API_KEY", "SILICONFLOW_API_KEY", "COHERE_API_KEY", "DEEPSEEK_API_KEY", "FRED_API_KEY", "ALPACA_KEY", "ALPACA_SECRET", "PLAID_CLIENT_ID", "PLAID_SECRET"]) if (process.env[name]?.trim()) bindings.push({ type: "secret_text", name, text: process.env[name].trim() });
 for (const [name, v] of [["TAVILY_API_KEY", process.env.TAVILY_API_KEY], ["EXA_API_KEY", process.env.EXA_API_KEY], ["CLAUDE_API_KEY", process.env.CLAUDE_API_KEY], ["NOTION_TOKEN", process.env.NOTION_TOKEN]]) if (v?.trim()) bindings.push({ type: "secret_text", name, text: v.trim() });
 console.log(`Friday lookups: ${["TAVILY_API_KEY", "EXA_API_KEY", "CLAUDE_API_KEY", "NOTION_TOKEN"].filter((n) => process.env[n]?.trim()).join(", ") || "none"}`);
 const form = new FormData();

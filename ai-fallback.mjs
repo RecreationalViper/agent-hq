@@ -15,7 +15,7 @@ export const hasGroqKey = () => Boolean(process.env.GROQ_API_KEY);
 export const hasCloudflare = () => Boolean(process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID);
 // Any backup available? (Groq first, then Cloudflare Workers AI)
 export const hasOpenRouter = () => Boolean(process.env.OPENROUTER_API_KEY);
-export const hasGroq = () => hasGroqKey() || hasCloudflare() || hasOpenRouter() || Boolean(process.env.NVIDIA_API_KEY?.trim()) || Boolean((process.env.REQUESTY_API_KEY || process.env.REQUESTY_KEY || "").trim());
+export const hasGroq = () => ["MISTRAL_API_KEY", "SAMBANOVA_API_KEY", "CEREBRAS_API_KEY", "SILICONFLOW_API_KEY", "DEEPSEEK_API_KEY"].some((k) => process.env[k]?.trim()) || hasGroqKey() || hasCloudflare() || hasOpenRouter() || Boolean(process.env.NVIDIA_API_KEY?.trim()) || Boolean((process.env.REQUESTY_API_KEY || process.env.REQUESTY_KEY || "").trim());
 
 async function call(path, init = {}) {
   const res = await gwFetch(BASE + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${process.env.GROQ_API_KEY}`, "Content-Type": "application/json" } });
@@ -247,12 +247,48 @@ export async function nvidiaChat(system, user, { json = false, temperature = 0.7
   throw lastErr || new Error("NVIDIA could not answer");
 }
 
-// Backup chain used by every agent: Groq, then NVIDIA, then Cloudflare, then Requesty, then OpenRouter (free models only).
+
+// ---------- Extra free providers (each runs only if its key is set; all OpenAI-compatible) ----------
+// Mistral free plan, SambaNova free tier (keep no card linked), DeepSeek sign-up tokens, SiliconFlow free models,
+// Cerebras (only if a key exists). Cohere's trial key is NOT used here: its terms forbid commercial use.
+const EXTRA = [
+  ["Mistral", "MISTRAL_API_KEY", "https://api.mistral.ai/v1", ["mistral-medium-latest", "mistral-small-latest"]],
+  ["SambaNova", "SAMBANOVA_API_KEY", "https://api.sambanova.ai/v1", ["DeepSeek-V3.1", "gpt-oss-120b", "Meta-Llama-3.3-70B-Instruct"]],
+  ["Cerebras", "CEREBRAS_API_KEY", "https://api.cerebras.ai/v1", ["gpt-oss-120b", "llama-3.3-70b"]],
+  ["SiliconFlow", "SILICONFLOW_API_KEY", "https://api.siliconflow.com/v1", ["Qwen/Qwen3-8B", "THUDM/GLM-4-9B-0414", "Qwen/Qwen2.5-7B-Instruct"]],
+  ["DeepSeek", "DEEPSEEK_API_KEY", "https://api.deepseek.com/v1", ["deepseek-chat"]]
+];
+function extraProvider([name, env, base, models]) {
+  const has = () => Boolean(process.env[env]?.trim());
+  const fn = async (system, user, { json = false, temperature = 0.7, maxChars = 24000 } = {}) => {
+    const input = user.length > maxChars ? user.slice(0, maxChars) + "\n\n[Some input was trimmed to fit.]" : user;
+    let lastErr;
+    for (const model of models) {
+      try {
+        const res = await gwFetch(`${base}/chat/completions`, { method: "POST", signal: AbortSignal.timeout(120000),
+          headers: { Authorization: `Bearer ${process.env[env].trim()}`, "Content-Type": "application/json" },
+          body: JSON.stringify({ model, temperature, max_tokens: 2500, messages: [{ role: "system", content: system }, { role: "user", content: input }], ...(json ? { response_format: { type: "json_object" } } : {}) }) });
+        const text = await res.text();
+        let data; try { data = JSON.parse(text); } catch { data = {}; }
+        if (!res.ok) { const e = new Error(`${name} ${res.status}: ${(data.error?.message || data.message || text).toString().slice(0, 160)}`); e.status = res.status; throw e; }
+        const out = (data.choices?.[0]?.message?.content || "").replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+        if (!out) throw new Error(`${name} returned an empty reply`);
+        console.log(`  answered by backup AI: ${name} ${model}`);
+        return out;
+      } catch (e) { lastErr = e; if (e.status === 401 || e.status === 402 || e.status === 403) break; }
+    }
+    throw lastErr || new Error(`${name} could not answer`);
+  };
+  return [name, has, fn];
+}
+export const extraProviders = EXTRA.map(extraProvider);
+
+// Backup chain used by every agent: Groq, NVIDIA, Mistral, SambaNova, Cerebras, Cloudflare, Requesty, OpenRouter (free models), SiliconFlow, DeepSeek.
 // A provider whose daily free allowance is used up is skipped for the rest of the run (allowances reset daily).
 const usedUp = new Set();
 const DAILY = /per day|daily|RPD|TPD|requests per day|tokens per day|quota|neurons|credits|insufficient/i;
 export async function groqChat(system, user, opts = {}) {
-  let chain = [["Groq", hasGroqKey, groqOnly], ["NVIDIA", hasNvidia, nvidiaChat], ["Cloudflare", hasCloudflare, cloudflareChat], ["Requesty", hasRequesty, requestyChat], ["OpenRouter", hasOpenRouter, openRouterChat]].filter(([, has]) => has());
+  let chain = [["Groq", hasGroqKey, groqOnly], ["NVIDIA", hasNvidia, nvidiaChat], ...extraProviders.slice(0, 3), ["Cloudflare", hasCloudflare, cloudflareChat], ["Requesty", hasRequesty, requestyChat], ["OpenRouter", hasOpenRouter, openRouterChat], ...extraProviders.slice(3)].filter(([, has]) => has());
   // strong mode (Content Creator): NVIDIA's largest models before Groq's faster, smaller one
   if (opts.strong) chain = [...chain.filter(([n]) => n === "NVIDIA"), ...chain.filter(([n]) => n !== "NVIDIA")];
   chain = chain.filter(([n]) => !usedUp.has(n)).concat(chain.filter(([n]) => usedUp.has(n))); // used-up providers go last

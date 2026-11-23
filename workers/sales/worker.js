@@ -1404,8 +1404,11 @@ async function extraChat(env, system, history) {
   const tries = [
     [env.NVIDIA_API_KEY, "https://integrate.api.nvidia.com/v1/chat/completions", ["meta/llama-3.3-70b-instruct", "nvidia/llama-3.3-nemotron-super-49b-v1"]],
     [env.CEREBRAS_API_KEY, "https://api.cerebras.ai/v1/chat/completions", ["gpt-oss-120b", "llama-3.3-70b", "llama3.1-8b"]],
-    [env.MISTRAL_API_KEY, "https://api.mistral.ai/v1/chat/completions", ["mistral-small-latest", "open-mistral-nemo"]],
-    [env.SAMBANOVA_API_KEY, "https://api.sambanova.ai/v1/chat/completions", ["Meta-Llama-3.3-70B-Instruct", "Meta-Llama-3.1-8B-Instruct"]]
+    [env.MISTRAL_API_KEY, "https://api.mistral.ai/v1/chat/completions", ["mistral-medium-latest", "mistral-small-latest"]],
+    [env.SAMBANOVA_API_KEY, "https://api.sambanova.ai/v1/chat/completions", ["DeepSeek-V3.1", "gpt-oss-120b", "Meta-Llama-3.3-70B-Instruct"]],
+    [env.SILICONFLOW_API_KEY, "https://api.siliconflow.com/v1/chat/completions", ["Qwen/Qwen3-8B", "THUDM/GLM-4-9B-0414"]],
+    [env.COHERE_API_KEY, "https://api.cohere.ai/compatibility/v1/chat/completions", ["command-a-03-2025"]], // trial key: Friday's personal use only
+    [env.DEEPSEEK_API_KEY, "https://api.deepseek.com/v1/chat/completions", ["deepseek-chat"]]
   ];
   const errs = [];
   for (const [key, url, models] of tries) {

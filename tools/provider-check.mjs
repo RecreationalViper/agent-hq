@@ -212,3 +212,13 @@ if (process.env.APIFY_TOKEN) {
 // Shared "out for today" notes (ai-out.mjs)
 { const { aiOutStatus } = await import("../ai-out.mjs"); const st = await aiOutStatus();
   console.log(`RESULT ai-out notes: ${st.store ? "store OK" : "NO STORE (" + st.problem + ")"}; ${st.notes.length ? st.notes.join("; ") : "no AI noted as out"}`); }
+
+// Extra free providers (Mistral, SambaNova, Cerebras, SiliconFlow, DeepSeek): one real call each
+{
+  const { extraProviders } = await import("../ai-fallback.mjs");
+  for (const [name, has, fn] of extraProviders) {
+    if (!has()) { console.log(`RESULT ${name}: no key set`); continue; }
+    try { const t = await fn("You are a test.", "Reply with the single word: ready", { temperature: 0 }); console.log(`RESULT ${name}: WORKS, replied "${t.slice(0, 30)}"`); }
+    catch (e) { console.log(`RESULT ${name}: FAILED: ${e.message.slice(0, 160)}`); }
+  }
+}
