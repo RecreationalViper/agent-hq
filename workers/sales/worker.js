@@ -651,7 +651,14 @@ ${facts.join("\n")}`;
   if (!raw) { await fridayLog(env, "brain", `No AI answered: ${why.join(" | ")}`); return out({ ok: false, say: "My brain's offline for a minute. All my AI services are busy. Try me again shortly.", why }); }
   let r = {};
   try { const m = raw.match(/\{[\s\S]*\}/); r = JSON.parse((m ? m[0] : raw).replace(/,\s*([}\]])/g, "$1")); } catch { r = { say: raw }; }
+  // models sometimes answer with just the action object; put it where it belongs
+  if (!r.say && r.tool && !r.lookup) r = { say: "One sec.", lookup: r };
+  if (!r.say && r.do && !r.google && !r.shop && !r.phone) r = { say: "On it.", ...(["calendar", "email_search", "event_add", "email_draft", "email_send", "drive_search", "doc_read", "doc_create", "sheet_append"].includes(r.do) ? { google: r } : ["sales", "orders", "refunds", "coupons", "coupon_create", "balance", "payments", "payouts", "xmoney", "accounts", "spending"].includes(r.do) ? { shop: r } : { phone: r }) };
+  // trust the link he actually said over a model's retyping of it
+  const saidUrl = (q.match(/https?:\/\/[^\s"']+/i) || [])[0];
+  if (saidUrl && r.lookup?.tool === "read") r.lookup.url = saidUrl;
   let say = String(r.say || raw).replace(/\*\*?/g, "").replace(/^#+\s*/gm, "").trim().slice(0, 1500);
+  if (/^\s*\{[\s\S]*\}\s*$/.test(say)) say = "One sec.";
   if (r.run === "mechanic" && !/\b(fix|broke|broken|bug|repair|upgrade|improve|mechanic|update) (your|her|my)?self|\bmechanic\b|you('re| are) (broken|buggy)/i.test(q)) r.run = null; // only when he asks
   if (r.run && FRIDAY_RUNS[r.run]) {
     const [wf, inputs] = FRIDAY_RUNS[r.run];
