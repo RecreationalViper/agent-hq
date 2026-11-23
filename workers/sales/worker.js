@@ -563,7 +563,7 @@ async function fridayInner(req, env, ctx, trace = {}) {
   const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store", ...cors } });
   if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
   if (req.method !== "POST") return out({ ok: false, error: "method" }, 405);
-  const key = fkey(req);
+  const key = sentKey(req);
   // the owner's key, or the agents' test key (derived from the Payhip secret, so it never appears anywhere public)
   const owner = (await sha256(key)) === FRIDAY_KEY_SHA;
   trace.who = owner ? "owner" : "test";
@@ -749,7 +749,7 @@ async function fridayLive(req, env, isTool) {
   const cors = /^https:\/\/recreationalviper\.github\.io$/i.test(origin) ? { "access-control-allow-origin": origin, "access-control-allow-methods": "POST, OPTIONS", "access-control-allow-headers": "content-type, x-friday-key", vary: "origin" } : {};
   const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store", ...cors } });
   if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
-  const key = fkey(req);
+  const key = sentKey(req);
   const owner = (await sha256(key)) === FRIDAY_KEY_SHA;
   if (!owner && !(env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)))) return out({ ok: false }, 401);
   let d = {}; try { d = await req.json(); } catch {}
@@ -1004,7 +1004,7 @@ async function fridayConnections(req, env) {
   const cors = /^https:\/\/recreationalviper\.github\.io$/i.test(origin) ? { "access-control-allow-origin": origin, "access-control-allow-methods": "POST, OPTIONS", "access-control-allow-headers": "content-type, x-friday-key", vary: "origin" } : {};
   const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store", ...cors } });
   if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
-  if (req.method !== "POST" || (await sha256(fkey(req))) !== FRIDAY_KEY_SHA) return out({ ok: false }, 401);
+  if (req.method !== "POST" || (await sha256(sentKey(req))) !== FRIDAY_KEY_SHA) return out({ ok: false }, 401);
   let d = {}; try { d = await req.json(); } catch {}
   if (d.action === "disconnect" && d.app === "google") {
     const g = JSON.parse(await env.SALES.get("friday:google") || "null");
@@ -1260,7 +1260,7 @@ async function fridayShop(env, a = {}) {
 // Apple Pay purchases, sent by his iPhone's "Transaction" automation (Shortcuts). Owner key only.
 async function fridaySpend(req, env) {
   const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
-  if (req.method !== "POST" || (await sha256(fkey(req))) !== FRIDAY_KEY_SHA) return out({ ok: false }, 401);
+  if (req.method !== "POST" || (await sha256(sentKey(req))) !== FRIDAY_KEY_SHA) return out({ ok: false }, 401);
   let d = {}; try { d = await req.json(); } catch {}
   // Works whether Shortcuts sends just the Amount or the whole transaction as text ("$12.34 at Store")
   const raw = String(d.amount || "");
@@ -1285,7 +1285,7 @@ async function fridayLog(env, kind, text) {
 }
 async function fridayMechanic(req, env) {
   const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
-  const key = fkey(req);
+  const key = sentKey(req);
   const ok = (await sha256(key)) === FRIDAY_KEY_SHA || (env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)));
   if (!ok) return out({ ok: false }, 401);
   if (req.method === "POST") {
@@ -1325,7 +1325,7 @@ function phoneUrl(p) {
 // posts it to his private Discord (#daily-focus) and keeps it so "Friday, what's my briefing?" reads it back.
 async function fridayBriefing(req, env) {
   const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
-  const key = fkey(req);
+  const key = sentKey(req);
   const ok = (await sha256(key)) === FRIDAY_KEY_SHA || (env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)));
   if (req.method !== "POST" || !ok) return out({ ok: false }, 401);
   const facts = await fridayFacts(env, new Date(), true);
@@ -1361,7 +1361,7 @@ async function fridayNotify(env, title, message, priority = "default") {
 // Agents (with the test key) ask for Friday's notes to them, or ask her to ping his phone.
 async function fridayAgentBridge(req, env, url) {
   const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
-  const key = fkey(req);
+  const key = sentKey(req);
   const ok = (await sha256(key)) === FRIDAY_KEY_SHA || (env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)));
   if (!ok) return out({ ok: false }, 401);
   if (url.pathname === "/friday/directives") {
@@ -1480,7 +1480,7 @@ post("/friday/plaid/token").then(j => {
     onExit: (e) => { if (e) log("exit: " + (e.error_code || "") + " " + (e.display_message || e.error_message || "")); s.innerHTML = e ? "Stopped: " + (e.display_message || e.error_message || "closed") : "Closed. <a href='' style='color:#4aa3ff'>Connect another</a>"; } }).open();
 });
 </script>`);
-  if ((await sha256(fkey(req))) !== FRIDAY_KEY_SHA) return out({ ok: false, error: "not owner" }, 401);
+  if ((await sha256(sentKey(req))) !== FRIDAY_KEY_SHA) return out({ ok: false, error: "not owner" }, 401);
   if (!env.PLAID_CLIENT_ID || !env.PLAID_SECRET) return out({ ok: false, error: "Plaid keys aren't set up yet" }, 400);
   try {
     if (url.pathname === "/friday/plaid/token") {
@@ -1518,6 +1518,6 @@ async function plaidMoney(env, kind, days = 30) {
 }
 
 // The Friday key as sent, cleaned of the stray spaces, line breaks and smart characters phones add when pasting.
-function fkey(req) {
+function sentKey(req) {
   return (req.headers.get("x-friday-key") || "").normalize("NFKC").replace(/[\s\u200B-\u200D\uFEFF]+/g, "").replace(/[\u2010-\u2015\u2212]/g, "-");
 }
