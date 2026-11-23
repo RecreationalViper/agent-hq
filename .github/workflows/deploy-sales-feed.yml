@@ -45,6 +45,15 @@ jobs:
           ALPACA_SECRET: ${{ secrets.ALPACA_SECRET }}
           PLAID_CLIENT_ID: ${{ secrets.PLAID_CLIENT_ID }}
           PLAID_SECRET: ${{ secrets.PLAID_SECRET }}
+      - name: Smoke-test Friday after deploy (fails the run if she crashes)
+        env:
+          PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
+        run: |
+          sleep 10
+          KEY=$(printf "friday-check:%s" "$(echo -n "$PAYHIP_API_KEY" | tr -d '[:space:]')" | sha256sum | cut -d' ' -f1)
+          CODE=$(curl -s -o /tmp/f.json -w "%{http_code}" -m 60 -X POST https://foreverheld-sales.foreverheld.workers.dev/friday -H "x-friday-key: $KEY" -H "content-type: application/json" -d '{"q":"ping"}')
+          echo "Friday answered HTTP $CODE"; head -c 200 /tmp/f.json | grep -o '"error":"[^"]*"' || true
+          test "$CODE" = "200"
       - name: Save the feed address
         run: |
           SAVE_STRATEGY="-X theirs" bash tools/save.sh "Sales feed address" sales-feed.json
