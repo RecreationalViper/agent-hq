@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-22T01:31:19.324Z",
-  "date": "2026-11-22",
+  "generatedAt": "2026-11-23T01:52:50.286Z",
+  "date": "2026-11-23",
   "token": true,
   "searches": {
     "ran": 12,
@@ -9,15 +9,155 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 15,
-  "rateRemaining": 4996,
-  "newItems": 0,
+  "apiCalls": 30,
+  "rateRemaining": 9,
+  "newItems": 5,
   "blockedToday": 0,
-  "shortlist": [],
+  "shortlist": [
+    {
+      "name": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "stars": 72758,
+      "forks": 6426,
+      "language": "Python",
+      "license": "MIT",
+      "pushedAt": "2026-11-23T01:00:01Z",
+      "category": "skills",
+      "score": 76,
+      "tier": "adopt",
+      "reasons": [
+        "72,758 stars",
+        "updated this week",
+        "MIT license",
+        "well established"
+      ],
+      "flags": [],
+      "skillFiles": null,
+      "source": "search",
+      "newborn": false,
+      "skillPath": null,
+      "commitUrl": null
+    }
+  ],
   "watched": [],
-  "newborn": [],
+  "newborn": [
+    {
+      "name": "EL4CTEO/fast-anything",
+      "url": "https://github.com/EL4CTEO/fast-anything",
+      "description": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with your coding agent, prove they behave the same.",
+      "stars": 1957,
+      "forks": 121,
+      "language": "Rust",
+      "license": "MIT",
+      "pushedAt": "2026-11-23T01:28:18Z",
+      "category": "skills",
+      "score": 82,
+      "tier": "watch",
+      "reasons": [
+        "filed under skills",
+        "1,957 stars",
+        "updated this week",
+        "MIT license",
+        "new repo, 1 day old",
+        "early traction"
+      ],
+      "flags": [
+        "newborn"
+      ],
+      "skillFiles": null,
+      "source": "search",
+      "newborn": true,
+      "skillPath": null,
+      "commitUrl": null
+    },
+    {
+      "name": "JimLiu/open-artifact",
+      "url": "https://github.com/JimLiu/open-artifact",
+      "description": "Open, agent- and model-agnostic artifacts, all saved locally as plain files — edit, comment on, and export slides, UI designs, design systems, whiteboards, sheets, dashboards, docs, and motion.",
+      "stars": 358,
+      "forks": 49,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-22T19:13:09Z",
+      "category": "skills",
+      "score": 82,
+      "tier": "watch",
+      "reasons": [
+        "filed under skills",
+        "358 stars",
+        "updated this week",
+        "Apache-2.0 license",
+        "new repo, 6 days old",
+        "early traction",
+        "contains SKILL.md skill files"
+      ],
+      "flags": [
+        "newborn"
+      ],
+      "skillFiles": true,
+      "source": "search",
+      "newborn": true,
+      "skillPath": null,
+      "commitUrl": null
+    },
+    {
+      "name": "alesha-pro/inference-optimization-playbook",
+      "url": "https://github.com/alesha-pro/inference-optimization-playbook",
+      "description": "97 tested hypotheses on making huge MoE LLMs fast on consumer GPUs (4x RTX 3090 + experts in RAM): what worked, what failed and why. A playbook for people and a ready skill for coding agents.",
+      "stars": 79,
+      "forks": 15,
+      "language": "Python",
+      "license": "MIT",
+      "pushedAt": "2026-11-21T13:19:40Z",
+      "category": "skills",
+      "score": 65,
+      "tier": "watch",
+      "reasons": [
+        "filed under skills",
+        "updated this week",
+        "MIT license",
+        "new repo, 2 days old",
+        "early traction"
+      ],
+      "flags": [
+        "newborn"
+      ],
+      "skillFiles": null,
+      "source": "search",
+      "newborn": true,
+      "skillPath": null,
+      "commitUrl": null
+    }
+  ],
   "byCategory": {
-    "skills": [],
+    "skills": [
+      {
+        "name": "mvanhorn/last30days-skill",
+        "url": "https://github.com/mvanhorn/last30days-skill",
+        "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+        "stars": 72758,
+        "forks": 6426,
+        "language": "Python",
+        "license": "MIT",
+        "pushedAt": "2026-11-23T01:00:01Z",
+        "category": "skills",
+        "score": 76,
+        "tier": "adopt",
+        "reasons": [
+          "72,758 stars",
+          "updated this week",
+          "MIT license",
+          "well established"
+        ],
+        "flags": [],
+        "skillFiles": null,
+        "source": "search",
+        "newborn": false,
+        "skillPath": null,
+        "commitUrl": null
+      }
+    ],
     "enhancement": [],
     "free-tokens": [],
     "efficiency": []
