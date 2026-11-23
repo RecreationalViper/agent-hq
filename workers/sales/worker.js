@@ -615,6 +615,7 @@ Google also has: {"do":"drive_search","query":"..."} {"do":"doc_read","query":"f
   {"tool":"notion","query":"..."}  search his Notion   {"tool":"note","title":"...","text":"..."}  save notes, ideas or plans to his Notion
   {"tool":"discord","channel":"content|sales|inbox|alerts|research|growth|trading-desk|..."}  read what his agents posted (church replies are in content)
   {"tool":"report","query":"agent name like growth coach or researcher"}  read an agent's latest report
+  {"tool":"read","url":"https://..."}  open and read any webpage or article he names or that a search found (use after "web" when the snippets aren't enough)
   {"tool":"markets","query":"what he asked","symbols":["TSLA","NVDA"],"portfolio":false}  LIVE economy + markets: Fed rate, Treasury yields, mortgage rates, inflation, jobs, oil, gas, housing, dollar, VIX, S&P/Nasdaq/Dow, gold, crypto, any stock symbols, and (portfolio:true) the trading desk's paper account. ALWAYS use this for any money/markets/economy question instead of memory. Explain like a sharp banker friend: what it is, why it moved, what it means for him and small businesses. Never promise returns; say when something is opinion.
   {"tool":"direct","agent":"content-creator|email-marketer|growth-coach|researcher|webdev","text":"his instruction"}  pass his instruction to an agent (it follows it on its next runs for 3 days). Also start that agent with "run" if he wants it now.
   {"tool":"wish","text":"what you can't do yet and should learn, or a bug you noticed"}  your self-improvement list. Use it whenever he asks for something you can't do, or something of yours broke. Your mechanic writes the code overnight and he approves it.
@@ -623,7 +624,7 @@ When you use a lookup, "say" can be a short "One sec." because you'll answer aga
 "google" works in HIS Gmail and Google Calendar (only if the facts show Google is connected). Shapes:
   {"do":"calendar","days":14}  look further ahead than the facts show   {"do":"email_search","query":"Gmail search like from:mom newer_than:7d or invoice"}  find or read emails
   {"do":"event_add","title":"...","start":"YYYY-MM-DDTHH:MM in New York time, or YYYY-MM-DD for all day","minutes":60,"location":""}
-  {"do":"email_draft","to":"email address or a name he's emailed before","subject":"...","body":"the full email, in his voice, signed Josiah"}   {"do":"email_send"}
+  {"do":"email_draft","to":"email address or a name he's emailed before","subject":"...","body":"the full email in his voice: plain paragraphs separated by blank lines, ending with a sign-off line like Best, (no name, the design adds his signature)","business":true if it's about Forever Held or work}   {"do":"email_send"}
 Email rule: NEVER send on the first ask. Draft first, tell him who it's to and the gist, and ask "Send it?". Use email_send only when his NEXT message clearly says to send it. Write emails like a real person, short and professional for business.
 For calendar events prefer google event_add when Google is connected; otherwise use the phone "event".
 Use "run" only when he clearly asks to start an agent job. Use "remember" when he tells you something worth keeping (a preference, a plan, a person) or says "remember".
@@ -672,7 +673,7 @@ ${facts.join("\n")}`;
   };
   let gResult = null, lResult = null;
   if (!r.lookup && /\b(think (hard|deep|it through|about it)|ask claude)\b/i.test(q)) r.lookup = { tool: "think", query: q, context: facts.join("\n").slice(0, 2500) };
-  if (r.lookup && typeof r.lookup === "object" && (owner || ["web", "think", "report", "markets"].includes(r.lookup.tool))) {
+  if (r.lookup && typeof r.lookup === "object" && (owner || ["web", "think", "report", "markets", "read"].includes(r.lookup.tool))) {
     lResult = await fridayLookup(env, r.lookup);
     if (["note", "direct", "wish"].includes(r.lookup.tool) || /^Couldn't|isn't connected|Unknown lookup/.test(lResult)) say = r.lookup.tool === "note" && lResult === "Saved to Notion." ? say : lResult;
     else { const a2 = await secondPass(`${r.lookup.tool.toUpperCase()} RESULT`, r.lookup, lResult); if (a2) say = a2; else { say = `Here's what I found: ${String(lResult).replace(/\n+/g, ". ").slice(0, 600)}`; await fridayLog(env, "lookup", `second pass gave no answer for ${r.lookup.tool}`); } }
@@ -760,7 +761,7 @@ async function fridayLive(req, env, isTool) {
     if (d.name === "get_status") return out({ ok: true, result: (await fridayFacts(env, new Date(), owner)).join("\n") });
     if (d.name === "google") return out({ ok: true, result: owner ? await runGoogle(env, a) : "Google tools are owner-only." });
     if (d.name === "shop") return out({ ok: true, result: owner ? await fridayShop(env, a) : "Shop tools are owner-only." });
-    if (d.name === "lookup") return out({ ok: true, result: owner || ["web", "think", "report", "markets"].includes(a.tool) ? await fridayLookup(env, a) : "That lookup is owner-only." });
+    if (d.name === "lookup") return out({ ok: true, result: owner || ["web", "think", "report", "markets", "read"].includes(a.tool) ? await fridayLookup(env, a) : "That lookup is owner-only." });
     if (d.name === "remember" && a.fact) { memory.push(`${String(a.fact).slice(0, 200)} (${new Date().toISOString().slice(0, 10)})`); await env.SALES.put("friday:memory", JSON.stringify(memory.slice(-200))); return out({ ok: true, result: "Saved." }); }
     if (d.name === "run_agent" && FRIDAY_RUNS[a.job]) {
       const [wf, inputs] = FRIDAY_RUNS[a.job];
@@ -786,7 +787,7 @@ FACTS AT THE START OF THIS CALL:\n${facts.join("\n")}`;
     { name: "get_status", description: "Fresh facts about his businesses: sales, posting, church outreach, agent health." },
     { name: "run_agent", description: "Start one of his agent jobs.", parameters: { type: "OBJECT", properties: { job: { type: "STRING", enum: Object.keys(FRIDAY_RUNS) } }, required: ["job"] } },
     { name: "shop", description: "Run his Payhip shop and money. do = sales|orders|refunds (days, limit) | coupons | coupon_create (code, percent, until YYYY-MM-DD; only when he asks) | balance|payments|payouts (Stripe) | xmoney (X Money, from its emails) | accounts (bank balances) | spending (bank + Apple Pay transactions).", parameters: { type: "OBJECT", properties: { do: { type: "STRING", enum: ["sales", "orders", "refunds", "coupons", "coupon_create", "balance", "payments", "payouts", "xmoney", "accounts", "spending"] }, days: { type: "NUMBER" }, limit: { type: "NUMBER" }, code: { type: "STRING" }, percent: { type: "NUMBER" }, until: { type: "STRING" } }, required: ["do"] } },
-    { name: "lookup", description: "Your second brain. tool = web (search the internet) | think (ask Claude a hard question) | notion (search his Notion) | note (save to his Notion) | discord (read one of his channels: content, sales, inbox, alerts, research, growth, trading-desk) | report (an agent's latest report).", parameters: { type: "OBJECT", properties: { tool: { type: "STRING", enum: ["web", "think", "notion", "note", "discord", "report"] }, query: { type: "STRING" }, context: { type: "STRING" }, title: { type: "STRING" }, text: { type: "STRING" }, channel: { type: "STRING" } }, required: ["tool"] } },
+    { name: "lookup", description: "Your second brain. tool = web (search the internet) | read (open any webpage by url) | think (ask Claude a hard question) | notion (search his Notion) | note (save to his Notion) | discord (read one of his channels: content, sales, inbox, alerts, research, growth, trading-desk) | report (an agent's latest report).", parameters: { type: "OBJECT", properties: { tool: { type: "STRING", enum: ["web", "read", "think", "notion", "note", "discord", "report", "markets", "direct", "wish"] }, url: { type: "STRING" }, agent: { type: "STRING" }, query: { type: "STRING" }, context: { type: "STRING" }, title: { type: "STRING" }, text: { type: "STRING" }, channel: { type: "STRING" } }, required: ["tool"] } },
     { name: "google", description: "His Gmail, Google Calendar and Drive. do = calendar|email_search|event_add|email_draft|email_send|drive_search|doc_read|doc_create|sheet_append.", parameters: { type: "OBJECT", properties: { do: { type: "STRING", enum: ["calendar", "email_search", "event_add", "email_draft", "email_send", "drive_search", "doc_read", "doc_create", "sheet_append"] }, id: { type: "STRING" }, text: { type: "STRING" }, row: { type: "ARRAY", items: { type: "STRING" } }, days: { type: "NUMBER" }, query: { type: "STRING" }, title: { type: "STRING" }, start: { type: "STRING" }, minutes: { type: "NUMBER" }, location: { type: "STRING" }, to: { type: "STRING" }, subject: { type: "STRING" }, body: { type: "STRING" } }, required: ["do"] } },
     { name: "remember", description: "Save a short fact about him for later.", parameters: { type: "OBJECT", properties: { fact: { type: "STRING" } }, required: ["fact"] } },
     { name: "phone_action", description: "Make his iPhone do something. do = text|call|reminder|event|timer|alarm|directions|note|music|health|open.", parameters: { type: "OBJECT", properties: { do: { type: "STRING" }, to: { type: "STRING" }, message: { type: "STRING" }, title: { type: "STRING" }, when: { type: "STRING" }, minutes: { type: "NUMBER" }, text: { type: "STRING" }, query: { type: "STRING" }, metric: { type: "STRING" }, url: { type: "STRING" } }, required: ["do"] } }
@@ -951,7 +952,8 @@ async function runGoogle(env, a = {}) {
       const addr = await resolveEmail(env, String(a.to));
       if (!addr) return `I couldn't find an email address for ${a.to}. Ask him for it.`;
       const subject = String(a.subject || "Quick note").replace(/[\r\n]+/g, " ");
-      const raw = `To: ${addr}\r\nSubject: =?UTF-8?B?${btoa(unescape(encodeURIComponent(subject)))}?=\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\n${a.body}`;
+      const b = "fri" + crypto.randomUUID().replace(/-/g, "");
+      const raw = `To: ${addr}\r\nSubject: =?UTF-8?B?${btoa(unescape(encodeURIComponent(subject)))}?=\r\nMIME-Version: 1.0\r\nContent-Type: multipart/alternative; boundary="${b}"\r\n\r\n--${b}\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\n${a.body}\r\n--${b}\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n${emailHtml(String(a.body), subject, !!a.business)}\r\n--${b}--`;
       const dr = await gApi(env, `${G_MAIL}/drafts`, { method: "POST", body: JSON.stringify({ message: { raw: b64urlText(raw) } }) });
       await env.SALES.put("friday:pending_email", JSON.stringify({ id: dr.id, to: addr, subject, at: Date.now() }), { expirationTtl: 1800 });
       return `DRAFT SAVED (not sent) to ${addr}, subject "${subject}". Read him the gist and ask: send it?`;
@@ -1150,6 +1152,16 @@ async function fridayLookup(env, a = {}) {
       return msgs.reverse().map((m) => `${nyTime(m.timestamp)}: ${[m.content, ...(m.embeds || []).map((e) => `${e.title || ""} ${e.description || ""}`)].join(" ").replace(/\s+/g, " ").trim().slice(0, 500)}`).join("\n") || "That channel is empty.";
     }
     if (a.tool === "markets") return await fridayMarkets(env, a);
+    if (a.tool === "read") {
+      let u = String(a.url || q).trim();
+      if (!/^https?:\/\//i.test(u)) { const m = u.match(/[\w-]+(\.[\w-]+)+(\/\S*)?/); if (!m) return "Couldn't find a link to read."; u = "https://" + m[0]; }
+      const r = await fetch(u, { signal: AbortSignal.timeout(15000), headers: { "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.7 Mobile/15E148 Safari/604.1", accept: "text/html,application/xhtml+xml,text/plain,application/json" } });
+      if (!r.ok) return `Couldn't open that page (HTTP ${r.status}).`;
+      const raw = (await r.text()).slice(0, 400000);
+      const title = (raw.match(/<title[^>]*>([^<]{1,200})/i) || [])[1] || "";
+      const text = raw.replace(/<(script|style|noscript|svg|nav|footer|header)[\s\S]*?<\/\1>/gi, " ").replace(/<br\s*\/?>|<\/(p|div|li|h\d|tr)>/gi, "\n").replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&#39;|&rsquo;/g, "'").replace(/&quot;|&ldquo;|&rdquo;/g, '"').replace(/[ \t]+/g, " ").replace(/\n\s*\n+/g, "\n").trim();
+      return `PAGE: ${title.trim()} (${new URL(r.url || u).hostname})\n${text.slice(0, 7000)}`;
+    }
     if (a.tool === "direct") {
       const agent = String(a.agent || "content-creator").toLowerCase().replace(/[^a-z-]/g, "");
       const d = JSON.parse(await env.SALES.get("friday:directives") || "{}");
@@ -1521,4 +1533,25 @@ async function plaidMoney(env, kind, days = 30) {
 // The Friday key as sent, cleaned of the stray spaces, line breaks and smart characters phones add when pasting.
 function sentKey(req) {
   return (req.headers.get("x-friday-key") || "").normalize("NFKC").replace(/[\s\u200B-\u200D\uFEFF]+/g, "").replace(/[\u2010-\u2015\u2212]/g, "-");
+}
+
+// Josiah's email look: clean, modern, a little futuristic. Dark header band with a thin cyan-violet line,
+// white reading card, sharp signature. Table layout + inline styles so it renders in Gmail, Outlook and phones.
+function emailHtml(body, subject, business) {
+  const esc = (t) => t.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  const lines = body.replace(/\r/g, "").trim().split(/\n{2,}/);
+  const sigStart = lines.length > 1 && /^(best|thanks|thank you|sincerely|regards|cheers|talk soon|warmly|blessings)/i.test(lines[lines.length - 1].trim()) ? lines.length - 1 : lines.length;
+  const paras = lines.slice(0, sigStart).map((p) => `<p style="margin:0 0 16px;font-size:16px;line-height:1.6;color:#1b2333">${esc(p).replace(/\n/g, "<br>")}</p>`).join("");
+  const signoff = sigStart < lines.length ? esc(lines[sigStart].split("\n")[0]) : "Best,";
+  return `<!doctype html><html><body style="margin:0;padding:0;background:#eef1f6">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eef1f6;padding:28px 12px"><tr><td align="center">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border-radius:14px;overflow:hidden;font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+<tr><td style="background:#0b1220;padding:22px 28px"><span style="color:#8fd3ff;font-size:12px;letter-spacing:.32em;font-weight:600">${business ? "FOREVER HELD" : "JOSIAH COTTINGHAM"}</span></td></tr>
+<tr><td style="height:3px;background:linear-gradient(90deg,#38d6ff,#7b6bff);background-color:#38d6ff;font-size:0;line-height:0">&nbsp;</td></tr>
+<tr><td style="padding:30px 28px 8px">${paras}</td></tr>
+<tr><td style="padding:0 28px 28px"><p style="margin:0 0 4px;font-size:16px;color:#1b2333">${signoff}</p>
+<p style="margin:0;font-size:16px;font-weight:600;color:#0b1220">Josiah Cottingham</p>
+${business ? `<p style="margin:2px 0 0;font-size:13px;color:#5b6b85">Forever Held &middot; <a href="https://foreverheld.pages.dev" style="color:#2a7fff;text-decoration:none">foreverheld.pages.dev</a></p>` : ""}
+<div style="margin-top:14px;width:42px;height:2px;background:#38d6ff;font-size:0;line-height:0">&nbsp;</div></td></tr>
+</table></td></tr></table></body></html>`;
 }
