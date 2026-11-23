@@ -1,5 +1,19 @@
 {
   "covered": [
+    "https://openai.com/index/introducing-shirudo",
+    "https://www.techtarget.com/news/model-release-gemini-4-neon-gpt-62-astra-sol-target-business-productivit/875440/",
+    "https://www.qt.io/blog/qt-creator-21-released",
+    "https://9to5linux.com/qt-creator-21-open-source-ide-released-with-new-profile-mode-improvements",
+    "https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview",
+    "https://github.blog/changelog/2026-11-23-secret-scanning-reduces-false-positives-for-slack",
+    "https://github.blog/changelog/2026-11-23-code-coverage-uploads-now-flag-invalid-report-formats",
+    "https://devblogs.microsoft.com/blog/do-ai-coding-agents-struggle-with-non-rest-apis/",
+    "https://huggingface.co/blog/allenai/robotrack",
+    "https://huggingface.co/blog/agentic-evals",
+    "https://z.ai/blog/glm-5.4",
+    "https://www.infoq.com/news/2026/11/claude-code-mode/",
+    "https://www.theverge.com/ai-artificial-intelligence/1040716/openai-launched-a-chat-specific-version-of-gpt-6-2-sol",
+    "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
     "https://openai.com/index/perplexity-and-intelligence",
     "https://tech.yahoo.com/ai/copilot/articles/microsoft-ai-coder-gunning-claude-094507756.html",
     "https://www.akm.ru/eng/news/anthropic-has-introduced-a-more-economical-opus-5-5-model-/",
@@ -166,6 +180,6 @@
     "https://hunch.net/?p=13764006",
     "https://www.kadoa.com/companies/insights/ai-selloff-perspective"
   ],
-  "lastRun": "2026-11-22",
-  "lastNotion": "2026-11-22"
+  "lastRun": "2026-11-23",
+  "lastNotion": "2026-11-23"
 }
