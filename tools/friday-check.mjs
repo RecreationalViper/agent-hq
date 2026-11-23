@@ -55,6 +55,6 @@ if (live.ok) {
 // Recent request traces (steps + milliseconds only, no words), to diagnose phone problems
 const tr = await fetch(URL_ + "/mechanic", { headers: { "x-friday-key": key } }).then((r) => r.json()).catch(() => ({}));
 console.log("\nRECENT TRACES:");
-for (const t of (tr.trace || []).slice(-12)) console.log(`  ${t.at} ${t.who} ${t.status} ${t.ms}ms facts=${t.facts}/${t.facts_ms}ms ai=${t.ai_ms}ms tools=${t.tools || "-"}/${t.tools_ms ?? "-"}ms ${t.type || ""} ${t.ua || ""}${t.crash ? " CRASH " + t.crash : ""}`);
+for (const t of (tr.trace || []).slice(-12)) console.log(`  ${t.at} ${t.who} ${t.status} ${t.ms}ms facts=${t.facts}/${t.facts_ms}ms ai=${t.ai_ms}ms tools=${t.tools || "-"}/${t.tools_ms ?? "-"}ms ${t.type || ""} ${t.ua || ""}${t.crash ? " CRASH " + t.crash : ""}${t.keylen != null ? ` key(len ${t.keylen}, starts "${t.keyhead}", ends "${t.keytail}")` : ""}`);
 console.log("\nRECENT LOG:");
 for (const l of (tr.log || []).slice(-10)) console.log(`  ${l.at} ${l.kind}: ${l.text}`);
