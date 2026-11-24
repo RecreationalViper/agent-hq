@@ -67,7 +67,7 @@ notes.push(`${jsonFiles.length} JSON files parse`);
 
 // ---------------------------------------------------------------- 3. agents.json
 
-const SCHEDULE = /^(daily|weekdays|manual|twice|weekly:(mon|tue|wed|thu|fri|sat|sun)|monthly:\d{1,2})$/;
+const SCHEDULE = /^(daily|weekdays|manual|twice|weekly:(mon|tue|wed|thu|fri|sat|sun)(,(mon|tue|wed|thu|fri|sat|sun))*|monthly:\d{1,2})$/
 const GROUPS = new Set(["shop", "studio"]);
 let agents = [];
 if (!exists("agents.json")) err("agents.json", "missing");

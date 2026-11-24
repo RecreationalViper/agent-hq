@@ -42,8 +42,8 @@ function isDue(agent, dow, date = "") {
   if (MODE === "all") return true;
   if (s === "daily") return true;
   if (s === "weekdays") return !["sat", "sun"].includes(dow);
-  const m = s.match(/^weekly:([a-z]{3})$/);
-  if (m) return m[1] === dow;
+  const m = s.match(/^weekly:([a-z]{3}(?:,[a-z]{3})*)$/); // e.g. weekly:mon or weekly:mon,thu
+  if (m) return m[1].split(",").includes(dow);
   const mo = s.match(/^monthly:(\d{1,2})$/); // e.g. monthly:1 = the 1st of each month
   return Boolean(mo && Number(date.slice(8, 10)) === Number(mo[1]));
 }

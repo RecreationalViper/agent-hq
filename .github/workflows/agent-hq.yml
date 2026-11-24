@@ -801,6 +801,7 @@ jobs:
         run: node tools/competitor-radar.mjs
         continue-on-error: true
         env:
+          RUN_MODE: ${{ github.event.inputs.agent || 'due' }}
           SCRAPCREATOR_API_KEY: ${{ secrets.SCRAPCREATOR_API_KEY }}
           SCRAPECREATOR_API_KEY: ${{ secrets.SCRAPECREATOR_API_KEY }}
           SCRAPECREATORS_API_KEY: ${{ secrets.SCRAPECREATORS_API_KEY }}

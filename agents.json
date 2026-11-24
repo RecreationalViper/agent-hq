@@ -652,7 +652,7 @@
     {
       "id": "competitor-radar",
       "name": "Competitor Radar",
-      "schedule": "weekly:mon",
+      "schedule": "weekly:mon,thu",
       "group": "studio",
       "saveAs": "studio/competitor-radar.md",
       "readsFiles": [
