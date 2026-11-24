@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-23T13:16:33.713Z",
-  "date": "2026-11-23",
+  "generatedAt": "2026-11-24T02:27:10.561Z",
+  "date": "2026-11-24",
   "token": true,
   "searches": {
     "ran": 12,
@@ -9,25 +9,26 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 16,
-  "rateRemaining": 4996,
-  "newItems": 2,
+  "apiCalls": 26,
+  "rateRemaining": 9,
+  "newItems": 6,
   "blockedToday": 0,
   "shortlist": [
     {
-      "name": "deusyu/harness-engineering",
-      "url": "https://github.com/deusyu/harness-engineering",
-      "description": "Harness Engineering（驭缰工程）中文学习档案：概念笔记、一手翻译与实践记录 · Chinese study archive",
-      "stars": 6313,
-      "forks": 547,
-      "language": "JavaScript",
+      "name": "HKUDS/OpenHarness",
+      "url": "https://github.com/HKUDS/OpenHarness",
+      "description": "\"OpenHarness: Open Agent Harness with a Built-in Personal Agent--Ohmo!\"",
+      "stars": 16239,
+      "forks": 2624,
+      "language": "Python",
       "license": "MIT",
-      "pushedAt": "2026-11-23T10:07:12Z",
-      "category": "enhancement",
-      "score": 70,
+      "pushedAt": "2026-11-23T04:28:10Z",
+      "category": "skills",
+      "score": 65,
       "tier": "watch",
       "reasons": [
-        "6,313 stars",
+        "filed under skills",
+        "16,239 stars",
         "updated this week",
         "MIT license",
         "well established"
@@ -40,25 +41,26 @@
       "commitUrl": null
     },
     {
-      "name": "langchain-ai/langchain-academy",
-      "url": "https://github.com/langchain-ai/langchain-academy",
-      "description": "",
-      "stars": 3034,
-      "forks": 1912,
-      "language": "Jupyter Notebook",
+      "name": "seanbabalala/SiftGate",
+      "url": "https://github.com/seanbabalala/SiftGate",
+      "description": "Self-hosted AI gateway for enterprise AI governance: scoped keys and policy, metadata-only audit, budgets and chargeback, smart routing and failover for apps, coding agents and MCP tools.",
+      "stars": 675,
+      "forks": 47,
+      "language": "TypeScript",
       "license": "MIT",
-      "pushedAt": "2026-11-22T02:50:23Z",
-      "category": "enhancement",
+      "pushedAt": "2026-11-23T03:05:55Z",
+      "category": "efficiency",
       "score": 60,
       "tier": "watch",
       "reasons": [
-        "filed under enhancement",
-        "3,034 stars",
+        "675 stars",
         "updated this week",
         "MIT license",
-        "first-party / well-known maintainer"
+        "directly cuts AI spend"
       ],
-      "flags": [],
+      "flags": [
+        "self-host-required"
+      ],
       "skillFiles": null,
       "source": "search",
       "newborn": false,
@@ -67,24 +69,114 @@
     }
   ],
   "watched": [],
-  "newborn": [],
+  "newborn": [
+    {
+      "name": "xikhar/papercraft",
+      "url": "https://github.com/xikhar/papercraft",
+      "description": "Agent skill to build games, interactive scenes, web pages and animations in a handcrafted pop-up papercraft style",
+      "stars": 462,
+      "forks": 46,
+      "language": "JavaScript",
+      "license": "MIT",
+      "pushedAt": "2026-11-21T17:37:19Z",
+      "category": "skills",
+      "score": 79,
+      "tier": "watch",
+      "reasons": [
+        "filed under skills",
+        "462 stars",
+        "updated this week",
+        "MIT license",
+        "new repo, 3 days old",
+        "early traction",
+        "contains SKILL.md skill files"
+      ],
+      "flags": [
+        "newborn"
+      ],
+      "skillFiles": true,
+      "source": "search",
+      "newborn": true,
+      "skillPath": null,
+      "commitUrl": null
+    },
+    {
+      "name": "w01fb0ss/PiBot",
+      "url": "https://github.com/w01fb0ss/PiBot",
+      "description": "Open-source, local-first AI agent team for your desktop: multi-agent group chats, computer use, browser, MCP, routines and approvals. macOS, Windows, Linux + Android. Built on pi.",
+      "stars": 507,
+      "forks": 71,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-23T17:08:53Z",
+      "category": "skills",
+      "score": 76,
+      "tier": "watch",
+      "reasons": [
+        "filed under skills",
+        "507 stars",
+        "updated this week",
+        "Apache-2.0 license",
+        "new repo, 3 days old",
+        "early traction"
+      ],
+      "flags": [
+        "newborn",
+        "self-host-required"
+      ],
+      "skillFiles": null,
+      "source": "search",
+      "newborn": true,
+      "skillPath": null,
+      "commitUrl": null
+    },
+    {
+      "name": "erkamyaman/safe-anything",
+      "url": "https://github.com/erkamyaman/safe-anything",
+      "description": "Find the holes before someone else does. A fast, 100% Rust vulnerability scanner: XSS, SQL injection, leaked secrets, dependency CVEs and AI agent setups.",
+      "stars": 505,
+      "forks": 36,
+      "language": "Rust",
+      "license": "MIT",
+      "pushedAt": "2026-11-23T20:22:42Z",
+      "category": "skills",
+      "score": 74,
+      "tier": "watch",
+      "reasons": [
+        "filed under skills",
+        "505 stars",
+        "updated this week",
+        "MIT license",
+        "new repo, 1 day old",
+        "early traction"
+      ],
+      "flags": [
+        "newborn"
+      ],
+      "skillFiles": null,
+      "source": "search",
+      "newborn": true,
+      "skillPath": null,
+      "commitUrl": null
+    }
+  ],
   "byCategory": {
-    "skills": [],
-    "enhancement": [
+    "skills": [
       {
-        "name": "deusyu/harness-engineering",
-        "url": "https://github.com/deusyu/harness-engineering",
-        "description": "Harness Engineering（驭缰工程）中文学习档案：概念笔记、一手翻译与实践记录 · Chinese study archive",
-        "stars": 6313,
-        "forks": 547,
-        "language": "JavaScript",
+        "name": "HKUDS/OpenHarness",
+        "url": "https://github.com/HKUDS/OpenHarness",
+        "description": "\"OpenHarness: Open Agent Harness with a Built-in Personal Agent--Ohmo!\"",
+        "stars": 16239,
+        "forks": 2624,
+        "language": "Python",
         "license": "MIT",
-        "pushedAt": "2026-11-23T10:07:12Z",
-        "category": "enhancement",
-        "score": 70,
+        "pushedAt": "2026-11-23T04:28:10Z",
+        "category": "skills",
+        "score": 65,
         "tier": "watch",
         "reasons": [
-          "6,313 stars",
+          "filed under skills",
+          "16,239 stars",
           "updated this week",
           "MIT license",
           "well established"
@@ -95,36 +187,39 @@
         "newborn": false,
         "skillPath": null,
         "commitUrl": null
-      },
+      }
+    ],
+    "enhancement": [],
+    "free-tokens": [],
+    "efficiency": [
       {
-        "name": "langchain-ai/langchain-academy",
-        "url": "https://github.com/langchain-ai/langchain-academy",
-        "description": "",
-        "stars": 3034,
-        "forks": 1912,
-        "language": "Jupyter Notebook",
+        "name": "seanbabalala/SiftGate",
+        "url": "https://github.com/seanbabalala/SiftGate",
+        "description": "Self-hosted AI gateway for enterprise AI governance: scoped keys and policy, metadata-only audit, budgets and chargeback, smart routing and failover for apps, coding agents and MCP tools.",
+        "stars": 675,
+        "forks": 47,
+        "language": "TypeScript",
         "license": "MIT",
-        "pushedAt": "2026-11-22T02:50:23Z",
-        "category": "enhancement",
+        "pushedAt": "2026-11-23T03:05:55Z",
+        "category": "efficiency",
         "score": 60,
         "tier": "watch",
         "reasons": [
-          "filed under enhancement",
-          "3,034 stars",
+          "675 stars",
           "updated this week",
           "MIT license",
-          "first-party / well-known maintainer"
+          "directly cuts AI spend"
         ],
-        "flags": [],
+        "flags": [
+          "self-host-required"
+        ],
         "skillFiles": null,
         "source": "search",
         "newborn": false,
         "skillPath": null,
         "commitUrl": null
       }
-    ],
-    "free-tokens": [],
-    "efficiency": []
+    ]
   },
   "blocked": [],
   "watching": [
