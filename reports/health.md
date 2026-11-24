@@ -1,12 +1,12 @@
-_Checked 2026-11-22 21:14 UTC._
+_Checked 2026-11-24 02:34 UTC._
 
 # HQ health — needs attention
 
 Agents alive: **20** · approved collections: **4** · problems: **4** · warnings: **8**
 
 ## Needs attention
-- **agents** — SEO Scout (seo) last reported 10 days ago (2026-11-12) — expected every thu, grace 9d
-- **agents** — Product Builder (product-builder) last reported 10 days ago (2026-11-12) — expected every thu, grace 9d
+- **agents** — SEO Scout (seo) last reported 12 days ago (2026-11-12) — expected every thu, grace 9d
+- **agents** — Product Builder (product-builder) last reported 12 days ago (2026-11-12) — expected every thu, grace 9d
 - **links** — 404 — dead link https://fonts.googleapis.com
 - **links** — 404 — dead link https://fonts.gstatic.com
 
@@ -22,26 +22,26 @@ Agents alive: **20** · approved collections: **4** · problems: **4** · warnin
 
 <details><summary>What passed</summary>
 
-- agents — Daily Focus (daily-task) alive, last report 0d ago
-- agents — Seasonal Planner (seasonal) alive, last report 6d ago
-- agents — Content Planner (content) alive, last report 6d ago
-- agents — Product Ideas (ideas) alive, last report 4d ago
-- agents — Listing Writer (listing) alive, last report 2d ago
-- agents — Credit Scout (credit-scout) alive, last report 6d ago
-- agents — GitHub Radar (github-radar) alive, last report 0d ago
-- agents — Competitor Scout (competitor-scout) alive, last report 5d ago
-- agents — Partner Finder (partner-finder) alive, last report 4d ago
-- agents — Weekly Review (Manager) (review) alive, last report 0d ago
-- agents — Trend Scout (studio-scout) alive, last report 0d ago
-- agents — TikTok Sound Watcher (tiktok-sounds) alive, last report 0d ago
-- agents — TikTok Format Watcher (tiktok-formats) alive, last report 0d ago
-- agents — TikTok Fandom Watcher (tiktok-fandoms) alive, last report 0d ago
-- agents — YouTube Shorts Watcher (youtube-watcher) alive, last report 0d ago
-- agents — Director (studio-director) alive, last report 0d ago
-- agents — Social Strategist (studio-writer) alive, last report 0d ago
-- agents — Studio Critic (studio-critic) alive, last report 0d ago
-- agents — Growth Coach (growth-coach) alive, last report 0d ago
-- agents — Producer (studio-producer) alive, last report 6d ago
+- agents — Daily Focus (daily-task) alive, last report 1d ago
+- agents — Seasonal Planner (seasonal) alive, last report 1d ago
+- agents — Content Planner (content) alive, last report 1d ago
+- agents — Product Ideas (ideas) alive, last report 6d ago
+- agents — Listing Writer (listing) alive, last report 4d ago
+- agents — Credit Scout (credit-scout) alive, last report 1d ago
+- agents — GitHub Radar (github-radar) alive, last report 1d ago
+- agents — Competitor Scout (competitor-scout) alive, last report 7d ago
+- agents — Partner Finder (partner-finder) alive, last report 6d ago
+- agents — Weekly Review (Manager) (review) alive, last report 2d ago
+- agents — Trend Scout (studio-scout) alive, last report 1d ago
+- agents — TikTok Sound Watcher (tiktok-sounds) alive, last report 1d ago
+- agents — TikTok Format Watcher (tiktok-formats) alive, last report 1d ago
+- agents — TikTok Fandom Watcher (tiktok-fandoms) alive, last report 1d ago
+- agents — YouTube Shorts Watcher (youtube-watcher) alive, last report 1d ago
+- agents — Director (studio-director) alive, last report 1d ago
+- agents — Social Strategist (studio-writer) alive, last report 1d ago
+- agents — Studio Critic (studio-critic) alive, last report 1d ago
+- agents — Growth Coach (growth-coach) alive, last report 1d ago
+- agents — Producer (studio-producer) alive, last report 1d ago
 - products — Evergreen & Candlelight is in season until 2026-12-26
 - products — Longest Night is in season until 2026-12-31
 - products — Harvest Table is in season until 2026-11-27
