@@ -1404,7 +1404,7 @@ async function extraChat(env, system, history) {
   const tries = [
     [env.NVIDIA_API_KEY, "https://integrate.api.nvidia.com/v1/chat/completions", ["meta/llama-3.3-70b-instruct", "nvidia/llama-3.3-nemotron-super-49b-v1"]],
     [env.CEREBRAS_API_KEY, "https://api.cerebras.ai/v1/chat/completions", ["gpt-oss-120b", "llama-3.3-70b", "llama3.1-8b"]],
-    [env.MISTRAL_API_KEY, "https://api.mistral.ai/v1/chat/completions", ["mistral-medium-latest", "mistral-small-latest"]],
+    [env.MISTRAL_API_KEY, "https://api.mistral.ai/v1/chat/completions", ["ministral-14b-latest", "ministral-8b-latest", "open-mistral-nemo"]],
     [env.SAMBANOVA_API_KEY, "https://api.sambanova.ai/v1/chat/completions", ["DeepSeek-V3.1", "gpt-oss-120b", "Meta-Llama-3.3-70B-Instruct"]],
     [env.SILICONFLOW_API_KEY, "https://api.siliconflow.com/v1/chat/completions", ["Qwen/Qwen3-8B", "THUDM/GLM-4-9B-0414"]],
     [env.SILICONFLOW_API_KEY, "https://api.siliconflow.cn/v1/chat/completions", ["Qwen/Qwen3-8B", "THUDM/GLM-4-9B-0414"]], // China-site accounts

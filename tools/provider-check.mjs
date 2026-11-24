@@ -229,7 +229,7 @@ if (process.env.MISTRAL_API_KEY?.trim()) {
   const m = await fetch("https://api.mistral.ai/v1/models", { headers: H });
   const mj = await m.json().catch(() => ({}));
   console.log(`RESULT mistral-diag models: HTTP ${m.status}, ${(mj.data || []).length} models, e.g. ${(mj.data || []).slice(0, 6).map((x) => x.id).join(", ")}`);
-  for (const model of ["mistral-small-latest", "open-mistral-nemo", "ministral-8b-latest"]) {
+  for (const model of ["ministral-14b-latest"]) {
     const r = await fetch("https://api.mistral.ai/v1/chat/completions", { method: "POST", headers: H, body: JSON.stringify({ model, messages: [{ role: "user", content: "Reply: ok" }], max_tokens: 5 }) });
     const hs = [...r.headers].filter(([k]) => /ratelimit|retry|x-kong|mistral/i.test(k)).map(([k, v]) => `${k}=${v}`).join(" ");
     console.log(`RESULT mistral-diag ${model}: HTTP ${r.status} ${(await r.text()).slice(0, 200)} | ${hs}`);

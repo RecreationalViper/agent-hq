@@ -252,7 +252,7 @@ export async function nvidiaChat(system, user, { json = false, temperature = 0.7
 // Mistral free plan, SambaNova free tier (keep no card linked), DeepSeek sign-up tokens, SiliconFlow free models,
 // Cerebras (only if a key exists). Cohere's trial key is NOT used here: its terms forbid commercial use.
 const EXTRA = [
-  ["Mistral", "MISTRAL_API_KEY", "https://api.mistral.ai/v1", ["mistral-medium-latest", "mistral-small-latest"]],
+  ["Mistral", "MISTRAL_API_KEY", "https://api.mistral.ai/v1", ["ministral-14b-latest", "ministral-8b-latest", "open-mistral-nemo"]],
   ["SambaNova", "SAMBANOVA_API_KEY", "https://api.sambanova.ai/v1", ["DeepSeek-V3.1", "gpt-oss-120b", "Meta-Llama-3.3-70B-Instruct"]],
   ["Cerebras", "CEREBRAS_API_KEY", "https://api.cerebras.ai/v1", ["gpt-oss-120b", "llama-3.3-70b"]],
   ["SiliconFlow", "SILICONFLOW_API_KEY", "https://api.siliconflow.com/v1", ["Qwen/Qwen3-8B", "THUDM/GLM-4-9B-0414", "Qwen/Qwen2.5-7B-Instruct"]],
