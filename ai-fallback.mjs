@@ -255,8 +255,8 @@ const EXTRA = [
   ["Mistral", "MISTRAL_API_KEY", "https://api.mistral.ai/v1", ["ministral-14b-latest", "ministral-8b-latest", "open-mistral-nemo"]],
   ["SambaNova", "SAMBANOVA_API_KEY", "https://api.sambanova.ai/v1", ["DeepSeek-V3.1", "gpt-oss-120b", "Meta-Llama-3.3-70B-Instruct"]],
   ["Cerebras", "CEREBRAS_API_KEY", "https://api.cerebras.ai/v1", ["gpt-oss-120b", "llama-3.3-70b"]],
-  ["SiliconFlow", "SILICONFLOW_API_KEY", "https://api.siliconflow.com/v1", ["Qwen/Qwen3-8B", "THUDM/GLM-4-9B-0414", "Qwen/Qwen2.5-7B-Instruct"]],
-  ["SiliconFlow-CN", "SILICONFLOW_API_KEY", "https://api.siliconflow.cn/v1", ["Qwen/Qwen3-8B", "THUDM/GLM-4-9B-0414", "Qwen/Qwen2.5-7B-Instruct"]],
+  ["SiliconFlow", "SILICONFLOW_API_KEY", "https://api.siliconflow.com/v1", ["Qwen/Qwen3-8B", "THUDM/GLM-4-9B-0414", "THUDM/glm-4-9b-chat", "Qwen/Qwen2.5-7B-Instruct", "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B", "internlm/internlm2_5-7b-chat"]],
+  ["SiliconFlow-CN", "SILICONFLOW_API_KEY", "https://api.siliconflow.cn/v1", ["Qwen/Qwen3-8B", "THUDM/GLM-4-9B-0414", "THUDM/glm-4-9b-chat", "Qwen/Qwen2.5-7B-Instruct", "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B", "internlm/internlm2_5-7b-chat"]],
   ["DeepSeek", "DEEPSEEK_API_KEY", "https://api.deepseek.com/v1", ["deepseek-chat"]]
 ];
 function extraProvider([name, env, base, models]) {
@@ -276,7 +276,7 @@ function extraProvider([name, env, base, models]) {
         if (!out) throw new Error(`${name} returned an empty reply`);
         console.log(`  answered by backup AI: ${name} ${model}`);
         return out;
-      } catch (e) { lastErr = e; if (e.status === 401 || e.status === 402 || e.status === 403) break; }
+      } catch (e) { lastErr = e; if (e.status === 401 || e.status === 403) break; } // 402 on one model: another may still be free
     }
     throw lastErr || new Error(`${name} could not answer`);
   };
