@@ -214,7 +214,15 @@ async function main() {
     // Try the best model first. Retired models are dropped for good; busy ones are
     // skipped. Whichever model answers moves to the front so later agents start there.
     let data, lastErr, backupText;
-    for (let i = 0; i < models.length && i < 5 && !data && !geminiOut; ) {
+    // Agents without web search don't need Gemini: share them out across the free backup AIs
+    // (a different starting provider per agent, rotating daily) and keep Gemini's small daily
+    // allowance for the search agents. Gemini still answers if every backup fails.
+    if (!search && hasGroq()) {
+      const day = Math.floor(Date.now() / 86400000);
+      try { backupText = await groqChat(system, task, { temperature: 0.8, spread: day + due.indexOf(agent) }); }
+      catch (e) { console.log(`  backup AIs could not answer (${e.message}); trying Gemini`); }
+    }
+    for (let i = 0; i < models.length && i < 5 && !data && !backupText && !geminiOut; ) {
       const m = models[i];
       try {
         data = await api(`/${m}:generateContent`, { method: "POST", body }, key);

@@ -292,6 +292,8 @@ export async function groqChat(system, user, opts = {}) {
   let chain = [["Groq", hasGroqKey, groqOnly], ["NVIDIA", hasNvidia, nvidiaChat], ...extraProviders.slice(0, 3), ["Cloudflare", hasCloudflare, cloudflareChat], ["Requesty", hasRequesty, requestyChat], ["OpenRouter", hasOpenRouter, openRouterChat], ...extraProviders.slice(3)].filter(([, has]) => has());
   // strong mode (Content Creator): NVIDIA's largest models before Groq's faster, smaller one
   if (opts.strong) chain = [...chain.filter(([n]) => n === "NVIDIA"), ...chain.filter(([n]) => n !== "NVIDIA")];
+  // spread mode: each agent starts on a different provider (rotates daily), so every free allowance gets used
+  if (Number.isInteger(opts.spread) && chain.length) { const k = opts.spread % chain.length; chain = [...chain.slice(k), ...chain.slice(0, k)]; }
   chain = chain.filter(([n]) => !usedUp.has(n)).concat(chain.filter(([n]) => usedUp.has(n))); // used-up providers go last
   let lastErr;
   for (const [name, , fn] of chain) {
