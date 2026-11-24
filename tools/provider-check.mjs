@@ -242,3 +242,10 @@ if (process.env.COHERE_API_KEY?.trim()) {
   const t = await r.text();
   console.log(`RESULT Cohere: HTTP ${r.status} ${r.ok ? "WORKS " + (JSON.parse(t).choices?.[0]?.message?.content || "") : t.slice(0, 160)}`);
 } else console.log("RESULT Cohere: no key in this workflow");
+
+// SiliconFlow: which chat models does this key list?
+if (process.env.SILICONFLOW_API_KEY?.trim()) {
+  const r = await fetch("https://api.siliconflow.com/v1/models?type=text&sub_type=chat", { headers: { Authorization: `Bearer ${process.env.SILICONFLOW_API_KEY.trim()}` } });
+  const j = await r.json().catch(() => ({}));
+  console.log(`RESULT siliconflow-models: HTTP ${r.status}: ${(j.data || []).map((m) => m.id).join(", ").slice(0, 1500)}`);
+}

@@ -276,7 +276,7 @@ function extraProvider([name, env, base, models]) {
         if (!out) throw new Error(`${name} returned an empty reply`);
         console.log(`  answered by backup AI: ${name} ${model}`);
         return out;
-      } catch (e) { lastErr = e; if (e.status === 401 || e.status === 403) break; } // 402 on one model: another may still be free
+      } catch (e) { lastErr = e; if (e.status === 401) break; } // 402/403 on one model: another may still be free
     }
     throw lastErr || new Error(`${name} could not answer`);
   };
