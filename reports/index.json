@@ -1,5 +1,11 @@
 [
   {
+    "file": "2026-11-23-backtest.md",
+    "agent": "backtest",
+    "name": "Backtest Analyst",
+    "date": "2026-11-23"
+  },
+  {
     "file": "2026-11-23-studio-producer.md",
     "agent": "studio-producer",
     "name": "Producer",
