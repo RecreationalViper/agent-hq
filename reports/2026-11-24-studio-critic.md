@@ -2,60 +2,57 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-## Studio Critic Review — 2026-11-24
+# Studio Critic Review — 2026-11-24
 
-### Clip 1 — Avengers: Doomsday | Cyclops Optic Blast Reveal
+## 1) GTA VI — “Chaos in Vice City”
+
 | Metric | Score | Why |
 |--------|-------|-----|
-| Hook strength | 7/10 | Visor snap is iconic, but the 0.3s freeze + white text feels static. First 2s need motion, not a still. |
-| Rewatch value | 6/10 | 35s is too long for Shorts. Beam travel (8s) drags; “We’re out of time” line is generic trailer dialogue. |
-| Comment bait | 5/10 | “Favorite X-Men moment?” is low-effort. Marsden trending in CA searches — not used. |
-| Copyright risk | 3/10 | **Business-account flagged sound.** 5 segments from same trailer = high claim risk. 2s commentary overlay is the bare minimum transformative defense. |
+| Hook strength | 6/10 | Police chase jump/explosion is visual candy but *generic GTA*—looks like every other GTA edit on the platform. No character, no stakes, just "stuff blowing up." |
+| Rewatch value | 5/10 | WASTED screen is a 2013 meme. Sunset skyline is pretty but passive. Neither makes me ask "how did they do that?" or "what happens next?" |
+| Comment bait | 4/10 | "Which trailer moment made you replay 5 times?" → low-effort engagement bait. Comments will be "the car" or "the graphics"—no conversation. |
+| Copyright risk | 3/10 | **Major risk.** Rockstar DMCA’s trailer re-uploads aggressively. Twitch gameplay (Rubius/Kai Cenat) = streamer IP + Rockstar IP double jeopardy. Justice track = blocked for business accounts (per sounds.md). You have *zero* safe source here. |
 
-**One change that helps most:** Cut to **25s total**. Use only **two trailer stretches** (visor→blast, collapse→logo). Add Marsden-specific voiceover/text: “James Marsden waited 20 years for this one shot.” Swap to a safe phonk track.
+**One change that would most improve it:**  
+**Drop the montage structure. Build a *single* 30-second "impossible escape" narrative:** one protagonist, one continuous chase, escalating near-misses, ending on a *choice* (jump vs. surrender) freeze-frame with text: **"YOU DECIDE."** Forces rewatch to spot the exit they missed. Still risky IP-wise, but at least it’s a *story* not a sizzle reel.
+
+**Verdict:** **DROP.** You have no safe footage, no unique angle, and the fandom is oversaturated (per fandoms.md). The Justice audio is unusable on a business account.  
+**Make instead:** **The Last of Us Part II — "The Quiet Part Hits Harder"** (per fandoms.md: moderate saturation, actor-driven search spike, emotional hooks that don't rely on explosions). Use official PlayStation promotional clips + a business-safe sound (Earrings / Duvet / Nicole Kidman from sounds.md). Hook: Ellie's face *before* the violence. Final beat: the silence after.
 
 ---
 
-### Clip 2 — Overgeared Ep 10 | Iron Dragon Boss Defeat
+## 2) Steel Ball Run — “The Spin” Showcase
+
 | Metric | Score | Why |
 |--------|-------|-----|
-| Hook strength | 9/10 | Sword shatter + camera shake + red “WHAT JUST HAPPENED?!” in 2s — visceral, native TikTok. |
-| Rewatch value | 9/10 | Level 99 UI pop (1.5s hold) = dopamine anchor. Slow-mo collapse + guild cheer sync to bass = loop fuel. |
-| Comment bait | 8/10 | “Did you catch the stat change?” + Ep 10 airs 11/29 (5 days out) = speculation window. |
-| Copyright risk | 8/10 | Crunchyroll official preview, CC-BY audio, single episode, transformative structure. Safe. |
+| Hook strength | 8/10 | Steel ball spinning up close = visually distinct, mechanically specific, *only JoJo does this*. Instant "what is that?" for non-fans; "oh ****" for fans. |
+| Rewatch value | 9/10 | Freeze on impact frame + "The Spin" text = the exact moment people scrub back to analyze the geometry. JoJo power systems *demand* frame-by-frame study. |
+| Comment bait | 8/10 | "Most broken ability in JoJo history?" → power-scaling wars in replies. Gold for algorithm. |
+| Copyright risk | 5/10 | Anime footage = WB/Shueisha/Toei risk. But: transformative (analysis-focused), short stretches, Episode 10 airs Nov 27 (hype window = fair use stronger for commentary). Duvet = likely business-safe (sounds.md). |
 
-**One change that helps most:** **Trim to 30s flat.** Cut Stretch 2 from 10s → 6s (dragon collapse → UI pop → breath). Drop the 8s guild cheer; the UI pop is the stronger loop point.
+**One change that would most improve it:**  
+**Add a 1-second "diagram overlay" at 0:15** — crude animation showing the Spin's rotation vector hitting the target. Turns "cool hit" into "teachable moment." Non-fans stay for the physics; fans pause to debate the math. Costs $0 (draw on phone).
+
+**Verdict:** **KEEP. Prioritize #1.** Highest creative ceiling, clearest hook, strongest comment mechanics, best audio option (Duvet). Cut this first.
 
 ---
 
-### Clip 3 — GTA VI Live-Action Trailer | POV: Neon Night Chase
+## 3) The Hunger Games: Sunrise on the Reaping — “The Ruthless Tribute”
+
 | Metric | Score | Why |
 |--------|-------|-----|
-| Hook strength | 9/10 | POV dash-cam + siren + animated “👀 POV: YOU JUST STOLE…” in 1.5s — format-native, instant stakes. |
-| Rewatch value | 8/10 | Logo flash + bass drop sync + reverse loop (logo→spotlight→dash-cam→black) built for replay. |
-| Comment bait | 6/10 | “Which Vice City district?” is generic. GTA VI is **oversaturated** (Fandom Watcher: “many creators post the same opening cut”). |
-| Copyright risk | 7/10 | Rockstar official trailer, public-domain promo audio. But algorithm may suppress undifferentiated GTA VI edits. |
+| Hook strength | 7/10 | Horn → eyes widening = classic, works. But "she doesn't flinch" is a *told* trait, not a *shown* one. Needs a micro-action (finger twitch, breath hold) to prove it. |
+| Rewatch value | 6/10 | Lone tribute standing alone = strong image, but *which tribute?* No name, no face recognition in trailer footage. Feels like a placeholder. |
+| Comment bait | 7/10 | "Who survives in your headcanon?" → BookTok will answer in paragraphs. Good. But only works if the clip shows *specific* tributes, not generic arena flashes. |
+| Copyright risk | 6/10 | Official trailers only = safest source of the three. Lionsgate tolerates transformative trailer edits better than Rockstar/WB. But: *zero* movie footage exists (film unreleased). You're editing a 2-minute trailer into 30 seconds—thin material. |
 
-**One change that helps most:** **Add a differentiator overlay** — per Fandom Watcher: “speed-run tip” graphic (e.g., “⚡ HOLD R1 TO DRIFT TIGHTER”) or a 1s meme reaction voiceover. Makes it *yours*, not a repost.
+**One change that would most improve it:**  
+**Pick ONE tribute from the trailer (the one with the most screen time/close-ups). Build the entire edit around *her* face.** Hook: her eyes. Body: *her* POV fragments (hands loading bow, feet in mud, opponent's knife). Final beat: *her* face, not a wide shot. "The Ruthless Tribute" needs a *name* (even if you invent a placeholder: "TRIBUTE 7 — DISTRICT 12"). Specificity > atmosphere.
 
----
-
-## Drop / Replace Decision
-
-**Drop Clip 1 (Avengers).**  
-- Highest copyright exposure (flagged sound, single-source trailer, minimal transform).  
-- Weakest comment hook, longest runtime, lowest rewatch density.  
-- Marvel tentpole velocity is real, but this *edit plan* doesn’t capture it.
-
-**Make instead: Vinland Saga — Thorfinn “I Have No Enemies” Farm Arc (Ep 24 S2).**  
-- YouTube Watcher: **Thorfinn edits hit 4.7M+ views twice this week**; pure emotion loop, 0:15 perfect length.  
-- Moment: Thorfinn drops knife → slow zoom on empty hands → “PEAK” text.  
-- Audio: Slowed/reverb anime OST (phonk-friendly, widely used, low claim rate).  
-- Title pattern: `Why Thorfinn moves so human 🥀 #edit #shorts #foryou`  
-- Copyright: Crunchyroll/Netflix official clips, short stretches, transformative emotion-loop format.  
-- Posts at **7:30 PM EST TikTok / 12:30 PM EST Shorts** (same slots as Clip 1).
+**Verdict:** **KEEP BUT RESTRUCTURE.** Doable with current assets. Post at 6:30 PM TikTok / 1:00 PM Shorts (per captions.md) to catch BookTok overlap.
 
 ---
 
-## One-Line Verdict
-**Cut Clip 1 (Avengers) first — replace with the Vinland Saga Thorfinn emotion loop; it’s safer, shorter, and already proving viral this week.**
+## ONE-LINE VERDICT
+
+**Cut Steel Ball Run first — it's the only clip with a unique visual hook, safe-ish audio, a teachable mechanic that drives rewatches, and a fandom that comments in paragraphs.**

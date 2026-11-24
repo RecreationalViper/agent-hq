@@ -2,10 +2,11 @@
 
 - Subscribers: 0 (+0 since 2026-11-17)
 - Total views: 35 (+13 since 2026-11-17)
-- Videos: 14
+- Videos: 15
 
 ## Latest uploads
-- [Superman or Zod? 🐉 #shortsvideo #superman #henrycavill #manofsteel #movieclips #moviescenes](https://youtu.be/F-gXrg30QjA) · 2026-11-23 · 0 views · 0 likes · 0 comments · 47s
+- [Hulk or the Army? 💪 #hulk #theincrediblehulk #marvel #movieclips #fyp](https://youtu.be/h6nyGhrrEDM) · 2026-11-24 · 2 views · 0 likes · 0 comments · 37s
+- [Superman or Zod? 🐉 #shortsvideo #superman #henrycavill #manofsteel #movieclips #moviescenes](https://youtu.be/F-gXrg30QjA) · 2026-11-23 · 1 views · 0 likes · 0 comments · 47s
 - [The moment Pete figured it out 💪🕷️ #movieclips #spiderman #brandnewday #marvelmovies](https://youtu.be/9w-ru2dgrIQ) · 2026-11-22 · 1 views · 0 likes · 0 comments · 50s
 - [It’s a Brand New Day 🕷️🕸️ #spiderman #spidermanbrandnewday #marvelstudios #movieclips #newmovie](https://youtu.be/HkAk5Hoth6U) · 2026-11-21 · 0 views · 0 likes · 0 comments · 43s
 - [How many movies can you name like this? #tronlegacy #disney #disneymovies #movieclips #moviescenes](https://youtu.be/_rqkmjQsrRw) · 2026-11-21 · 0 views · 0 likes · 0 comments · 46s

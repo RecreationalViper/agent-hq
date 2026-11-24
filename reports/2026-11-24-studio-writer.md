@@ -2,88 +2,82 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# MotionVault — Social Pack for 2026-11-24
+# Social Pack — 2026-11-24
 
 ---
 
-## Clip 1 — Avengers: Doomsday | Cyclops Optic Blast Reveal
+## 1) GTA VI — “Chaos in Vice City”
 
 ### TikTok Captions
-1. James Marsden finally gets the Cyclops moment we waited 20 years for 🥀
-2. That visor glow + choir hit = chills every time. **What’s your favorite X-Men movie moment?**
-3. Optic blast through a mech > any training montage. No debate.
-4. “We’re out of time” hits different when Cyclops says it. #AvengersDoomsday
+1. Vice City doesn't forgive mistakes 🌴💥  
+2. That jump at 0:07 though…  
+3. **Which GTA VI trailer moment made you replay it 5 times?**  
+4. Sound on for the bass drop 🎧
 
-### On-Screen Hook Text (6 words max)
-**THE MOMENT CYCLOPS FINALLY CUTS LOOSE**
+### On-Screen Hook (6 words max)
+**POLICE CHASE GOES WRONG INSTANTLY**
 
-### Hashtags (5–6)
-#AvengersDoomsday #InfinityCollapse #Marvel2026 #Cyclops #XMen #edit
+### Hashtags (5-6)
+#GTA6 #GTAVI #ViceCity #GamingClips #RockstarGames #GTA6Trailer
 
 ### YouTube Shorts Title (<60 chars)
-**Why Cyclops Moves So Human 🥀 #shorts**
+**GTA VI: Chaos in Vice City Montage 🌴💥**
 
-### Best Post Times (New York / EST)
-| Platform | Time | Reason |
-|----------|------|--------|
-| TikTok | **7:30 PM** | Prime scroll window; Marvel fans active after work/school, trailer velocity still 2.1M views/hr |
-| YouTube Shorts | **12:30 PM** | Lunch-break discovery feed; Shorts algorithm favors fresh event-tentpole clips midday |
+### Best Post Times (NY / EST)
+- **TikTok: 7:30 PM** — prime evening scroll after dinner, gaming audience active  
+- **Shorts: 12:30 PM** — lunch-break discovery slot, algorithm favors fresh uploads midday
 
 ---
 
-## Clip 2 — Overgeared Ep 10 | Iron Dragon Boss Defeat
+## 2) Steel Ball Run — “The Spin” Showcase
 
 ### TikTok Captions
-1. Sword shatters → Dragon Forge awakens → LEVEL 99. The ultimate power-up chain 💀
-2. That UI pop-up “LEVEL 99” stayed on screen 1.5s — **did you catch the stat change?**
-3. Blue particles + single clean strike + slow-mo collapse = peak fantasy editing.
-4. Overgeared Ep 10 drops Friday. Who’s staying up for the Dragon Forge?
+1. The Spin isn't a trick. It's physics broken 🌀  
+2. Johnny's first real rotation changed everything  
+3. **What's the most broken ability in JoJo history?**  
+4. Wait for the impact frame at the end 👀
 
-### On-Screen Hook Text (6 words max)
-**WHAT JUST HAPPENED?! SWORD SHATTERS**
+### On-Screen Hook (6 words max)
+**STEEL BALL BEGINS TO SPIN**
 
-### Hashtags (5–6)
-#Overgeared #OvergearedEp10 #DragonForge #WebnovelAnime #AnimeEdit #edit
+### Hashtags (5-6)
+#SteelBallRun #JoJo #JoJosBizarreAdventure #AnimeEdit #TheSpin #JohnnyJoestar
 
 ### YouTube Shorts Title (<60 chars)
-**The Ultimate "Dragon Forge" Twist! 💀 #shorts**
+**Steel Ball Run: The Spin Power Showcase 🌀**
 
-### Best Post Times (New York / EST)
-| Platform | Time | Reason |
-|----------|------|--------|
-| TikTok | **8:00 PM** | Anime community peak; Ep 10 airs 11/29 KST → hype builds evenings before release |
-| YouTube Shorts | **3:00 PM** | After-school/after-work anime watchers; “WebnovelAnime” niche searches spike mid-afternoon |
+### Best Post Times (NY / EST)
+- **TikTok: 8:00 PM** — anime fandom peak hours, high comment velocity  
+- **Shorts: 7:00 PM** — post-work anime crowd, strong rewatch retention window
 
 ---
 
-## Clip 3 — GTA VI Live-Action Trailer | POV: Neon Night Chase
+## 3) The Hunger Games: Sunrise on the Reaping — “The Ruthless Tribute”
 
 ### TikTok Captions
-1. POV: You just stole the neon supercar. Helicopter spotlight says otherwise 🔥
-2. That bass drop at 0:12 syncs perfectly with the GTA VI logo flash. **Which Vice City district you hitting first?**
-3. Chromatic aberration on near-misses > motion blur. Fight me.
-4. Rockstar’s “All-Points-Bullet” sound is public domain — finally a safe GTA VI edit audio.
+1. The horn sounds. She doesn't flinch 🏹  
+2. One tribute. Zero mercy.  
+3. **Who survives the Reaping in your headcanon?**  
+4. That final stare says everything 🥀
 
-### On-Screen Hook Text (6 words max)
-**POV: YOU JUST STOLE THE NEON SUPERCAR**
+### On-Screen Hook (6 words max)
+**HORN BLASTS — SHE DOESN'T BLINK**
 
-### Hashtags (5–6)
-#GTA6 #GTA6Moments #RockstarGames #ViceCity #OpenWorld #edit
+### Hashtags (5-6)
+#SunriseOnTheReaping #HungerGames #TheRuthlessTribute #MovieEdit #SuzanneCollins #FYP
 
 ### YouTube Shorts Title (<60 chars)
-**POV: You're the Most Wanted in Vice City 🔥 #shorts**
+**Sunrise on the Reaping: The Ruthless Tribute 🏹**
 
-### Best Post Times (New York / EST)
-| Platform | Time | Reason |
-|----------|------|--------|
-| TikTok | **6:30 PM** | GTA VI search trend #1 in US/UK; commuters + gamers overlap early evening |
-| YouTube Shorts | **7:00 PM** | “Gaming Hits” playlist refreshes ~7 PM EST; Rockstar freak-out clip did 302K views/hr at this slot |
+### Best Post Times (NY / EST)
+- **TikTok: 6:30 PM** — early evening movie/BookTok overlap, strong share potential  
+- **Shorts: 1:00 PM** — midday search traffic for new Hunger Games content
 
 ---
 
-### Quick Posting Order (per Director)
-1. **Clip 1** → Avengers (highest velocity, lowest saturation)  
-2. **Clip 2** → Overgeared (pre-air hype, safe audio)  
-3. **Clip 3** → GTA VI (same-day trailer, oversaturated but strong POV hook)  
+## Quick Production Notes for Claude
+- **GTA VI**: Sync cuts to Justice "Flower In A Hurricane" 0:18 bass hit (or business-safe soundalike with identical downbeat)
+- **Steel Ball Run**: Hit the impact frame on the vocal entry of "Duvet" (0:16) or your chosen sound's equivalent
+- **Hunger Games**: Hook must land on the horn → eyes widening frame; hold final tribute shot 1.0s with caption overlay
 
-**Reminder:** Add the 2s commentary overlay (“First time Cyclops cuts loose 🔥”) at 0:08 on Clip 1 for transformative safety. All clips get lower-third credit + title card. Export 9:16, 30–40s.
+All credits on-screen as specified in clip-plan.md.

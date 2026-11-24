@@ -2,22 +2,45 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-**Top 5 Clip Opportunities for 24 Nov 2026**  
-*(All sources are publicly‑available links you can open on your iPhone – no paid assets needed.  Each clip is under 30 seconds, keeps the source stretch short, and includes on‑screen title credit.)*  
+## Clip Plan: 2026-11-24
 
-| # | Title & Why It’ll Trend | Exact Moment to Clip (≈ 30 s) | Source Link |
-|---|------------------------|--------------------------------|-------------|
-| **1** | **Grand Theft Auto VI – “Live‑Action Trailer”**  <br>*Why:* “GTA VI” is the #1 Google‑Trends spike in the US (≈ 500 searches) and the most‑read Wikipedia page yesterday (266 k views).  New **live‑action trailer** dropped today on the Rockstar YouTube channel and is already getting millions of views – perfect for a hook‑first‑second “explosion‑in‑the‑city” vibe that TikTok loves. | • **0:00‑0:03** – opening aerial sweep over a neon‑lit night‑city (instant hook). <br>• **0:08‑0:18** – a quick, uncut car chase through narrow alleys (story‑order beat). <br>• **0:25‑0:30** – the final “GTA VI” logo flash with a heavy bass drop (re‑watch loop). | https://www.youtube.com/watch?v=GTA6LiveTrailer2026 |
-| **2** | **Overgeared – Episode 10 (Season 1) “Final Boss — The Iron Dragon”**  <br>*Why:* Overgeared is the #1 trending anime on AniList right now (score 287) and its next episode airs **29 Nov** – fans are already spamming spoilers.  A 30‑second “boss‑defeat” montage is a proven TikTok format (fast‑paced action → triumphant finish). | • **02:12‑02:42** – the hero lands the final sword strike on the Iron Dragon, followed by the dragon’s slow‑motion collapse and the “Level 99” UI pop‑up. | https://www.crunchyroll.com/overgeared/episode-10 |
-| **3** | **Black Clover Season 2 – Episode 9 “Wizard King’s Trial”**  <br>*Why:* Black Clover S2 is in the top‑5 AniList & MyAnimeList charts and just aired **28 Nov**.  The series’ “magic‑burst” moments get huge reaction spikes on Shorts. | • **05:45‑06:15** – Asta unleashes “Black Crescent” with a bright flare, then cuts to the shocked faces of the opposing squad (great visual contrast). | https://www.funimation.com/blackclover/season2/episode-9 |
-| **4** | **Avengers: Doomsday – “Opening Battle”**  <br>*Why:* “Avengers: Doomsday” is the 2nd‑most‑read Wikipedia article yesterday (116 k views) and the film just opened in theaters this week.  The opening 30‑second fight sequence is a high‑energy hook that works well on vertical video. | • **00:00‑00:30** – the rapid cut of Iron Man vs. a giant mech, ending on a close‑up of the hero’s visor glowing red (perfect for a “who‑won?” hook). | https://www.youtube.com/watch?v=AVENGERSDOOM2026 |
-| **5** | **Kraken (Seattle) – “Playoff‑Clinching Goal” (NHL)**  <br>*Why:* “kraken game” is trending in US Google searches (≈ 500 hits) after the Seattle Kraken secured a playoff spot yesterday.  Sports‑clip Shorts with a dramatic “last‑second goal” get high re‑watch rates, especially when paired with a quick reaction shot. | • **01:12‑01:42** – the puck crossing the line, the arena exploding, and the goalie’s stunned reaction (three quick beats). | https://www.nhl.com/video/kraken-playoff-goal-2026 |
+### 1. Grand Theft Auto VI (Game)
+*   **Why:** Absolute dominance. #1 on Twitch and huge Wikipedia volume (266k+ views). There is a specific audio synergy right now with the original score.
+*   **The Moment:** A "Chaos in Vice City" montage. 
+    *   **Hook (0-2s):** A high-speed police pursuit jump or a massive explosion in a crowded area.
+    *   **The Body:** Quick-cut sequence of the new map's neon lights, high-end cars, and protagonist interactions.
+    *   **Final Beat:** A sudden "Wasted" screen or a cinematic shot of the city skyline at sunset.
+*   **Sound Idea:** "Flower In A Hurricane" by Justice (From GTAVI: Original Score) — currently rising on Last.fm.
+*   **Source:** Twitch gameplay (Rubius/Kai Cenat) or official Rockstar trailers.
 
-### How to Use Each Clip  
-1. **Hook (first 1‑2 s):** Start with the most visually striking beat (city sweep, sword strike, explosion).  
-2. **Story Flow:** Keep a single unbroken stretch (≈ 8‑12 s) that shows cause‑and‑effect.  
-3. **Final Beat (last 3‑4 s):** End on a loud sound or visual pop (logo flash, UI “Level 99”, arena roar) to encourage re‑watch.  
-4. **On‑Screen Credit:** Add a lower‑third with the title (e.g., “GTA VI – Live‑Action Trailer”) and the year.  
-5. **Hashtags:** #GTA6 #Overgeared #BlackClover #Avengers #Kraken #Shorts #TikTokViral  
+### 2. Steel Ball Run: JoJo's Bizarre Adventure (Anime)
+*   **Why:** Top-rated airing anime (9.03 score). Episode 10 drops in 3 days (Nov 27), meaning hype is peaking.
+*   **The Moment:** "The Spin" power showcase.
+    *   **Hook (0-2s):** A close-up of a steel ball beginning to spin with high-contrast visual effects.
+    *   **The Body:** Long, unbroken stretches of the horse race across the American landscape to establish scale.
+    *   **Final Beat:** A decisive hit landing on an opponent, freezing on the impact frame.
+*   **Source:** [AniList - Steel Ball Run](https://anilist.co/anime/210482)
 
-All five clips are from **official, freely‑viewable** releases, keep each source stretch under 10 seconds, and fit the 30‑second vertical montage style that MotionVault’s audience loves. Happy clipping!
+### 3. The Hunger Games: Sunrise on the Reaping (Movie)
+*   **Why:** Massive search spike on Wikipedia (180k+ views). High interest in the prequel lore.
+*   **The Moment:** "The Ruthless Tribute" edit.
+    *   **Hook (0-2s):** The sound of the starting horn with a shot of a tribute's eyes widening.
+    *   **The Body:** Fast, transformative cuts of the arena's environment and combat flashes.
+    *   **Final Beat:** A single, cold shot of a tribute standing alone as the winner.
+*   **Source:** Official trailers/promotional clips.
+
+### 4. Black Clover Season 2 (Anime)
+*   **Why:** High trending score and strong member count. Episode 9 airs this Saturday (Nov 28).
+*   **The Moment:** "Aura/Him" edit (following the current YT trend of "Denji Is Him").
+    *   **Hook (0-2s):** Asta's anti-magic sword slashing through a massive spell.
+    *   **The Body:** A sequence of Asta powering up, synced to a heavy beat, focusing on the black energy.
+    *   **Final Beat:** A close-up of Asta's determined face before a final screen-shake attack.
+*   **Source:** [MyAnimeList - Black Clover S2](https://myanimelist.net/anime/61967)
+
+### 5. Avengers: Doomsday (Movie)
+*   **Why:** High curiosity (116k Wikipedia views). People are hunting for any footage of the new antagonist.
+*   **The Moment:** "The Arrival of Doom" teaser edit.
+    *   **Hook (0-2s):** A slow reveal of Doctor Doom's mask or silhouette.
+    *   **The Body:** Montage of the Avengers looking defeated or confused, contrasting with Doom's composure.
+    *   **Final Beat:** A heavy bass drop as Doom speaks a single, commanding line.
+*   **Source:** Official teaser/trailer footage.

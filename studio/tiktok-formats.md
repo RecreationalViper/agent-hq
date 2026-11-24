@@ -2,32 +2,168 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-## 7 TikTok / Shorts Edit Formats that Are Hot (Nov 2026)
+## 7 edit formats/styles that are working (right now) — and how MotionVault should use them
 
-| # | Format & Why It Works | How MotionVault Can Use It (specific title) | Example Source (public) |
-|---|-----------------------|---------------------------------------------|--------------------------|
-| 1 | **“The Moment When…” rapid‑reveal** – a 1‑2 s hook that flashes a question on screen (“The moment when *[character] finally…*”) followed by a fast‑cut montage of the build‑up and the payoff. The quick “question → answer” loop drives re‑watchability and encourages comments (“Did you see that coming?”). | **Movie:** *Avengers: Doomsday* – “The moment when the new Cyclops finally lands his first massive laser”. <br>Use the opening battle, cut to the laser‑charge, then the hit, ending on the shocked reaction of the enemy. Keep each clip < 2 s, add bold white text with a ticking sound effect. | TikTok trend #TheMomentWhen (≈ 3 M views on the last 48 h). |
-| 2 | **Velocity‑Cut / Speed‑Ramp Montage** – speed‑up the action (2‑3×) for the “run‑through” part, then slam back to real‑time for the climax. Viewers love the kinetic feel and the contrast highlights the payoff. | **Game:** *Kraken* (the “kraken game” spike in US searches). Show a 5‑second fast‑run of the player navigating the sea, then slow‑mo the giant‑kraken reveal. End with the “boss‑defeat” screen and a “💥 WOW!” text burst. | Example: @theeditlab’s “Speed‑Ramp Boss Fight” (≈ 1.2 M views, 2026‑09). |
-| 3 | **Side‑by‑Side Comparison (Before vs After / Original vs. Remake)** – split screen, left = original clip, right = newer version (or fan‑edit). The format sparks debate and gets saved for reference. | **Anime:** *One Piece* (episode 1181 trending). Compare the original 2022 “Luffy vs. Kaido” fight with the new 2026 “Luffy Gear 5” animation. Keep the two fights in sync, add a tiny “2022” / “2026” label, and a caption “Which is more epic?” | @compareclips (≈ 900 k views on a “Naruto vs. Boruto” split). |
-| 4 | **Ranking Countdown (Top 3 / Top 5)** – quick list with numbered graphics, each item gets a 4‑second highlight. The structure is predictable (people stay to see #1) and encourages “I agree/ disagree” comments. | **Movie:** *Grand Theft Auto VI* (most‑read Wikipedia article). Rank “Top 3 GTA VI missions that broke the internet”. Use short mission clips, overlay a bold “#3”, “#2”, “#1” stamp, and a 1‑second sound‑bite (“ding!”). End with a CTA “Vote your favorite in the comments”. | @rankitup (≈ 2.1 M views on “Top 5 Marvel post‑credits scenes”). |
-| 5 | **POV Text Overlay (First‑Person Reaction)** – the screen shows the scene, but a large “WHAT IF YOU WERE …?” text appears, then the clip plays as if the viewer is the protagonist. Works well for high‑stakes moments and drives “imagine yourself there” vibes. | **Game:** *GTA VI* – “POV: You just stole the neon‑lit supercar in Downtown Night”. Add a quick “👀 POV” banner, then the chase clip, ending on a “💸 Got away?” pop‑up. | @firstpersonclips (≈ 1.6 M views on “POV: You’re the last survivor in *The Last of Us*”). |
-| 6 | **Meme‑Template Remix (Audio + Visual Hook)** – take a trending sound bite (e.g., the “That’s when I realized…” voice‑over) and pair it with a recognizable visual from a movie/game. The meme format spreads fast because users can duplicate it. | **Anime:** *Overgeared* – use the “I didn’t sign up for this” voice clip over the moment the protagonist’s blacksmith forge explodes. Keep the clip < 3 s, add the caption “When you think you’re just crafting…”. | @memelab (≈ 2.4 M views on “That’s when I realized I’m late for school” with *Harry Potter*). |
-| 7 | **“What Happens Next?” Freeze‑Frame Prompt** – pause at a cliff‑hanger, freeze‑frame, overlay “What happens next?” and a poll sticker (TikTok) or comment prompt (YouTube). This drives high engagement and watch‑throughs as viewers replay to guess. | **Movie:** *The Hunger Games: Sunrise on the Reaping* (trending Wikipedia read). Freeze on the moment Katniss’s arrow is about to hit, add “What happens next? 🤔”. End with a fast‑forward flash to the next scene (spoiler‑free). | @guessnext (≈ 1.8 M views on “What happens next? – *Inception*”). |
+> Notes: I’m using the repo’s provided “most-viewed shorts edit” examples as *style signals* (not claiming these are your exact audience on TikTok), and I’m not sure whether any specific format is “currently trending” on TikTok without fresh platform-by-platform scraping. I’ll still flag what *feels* like it’s fading based on typical short-form cycles.
 
-### Formats That Are Fading
-| Format | Reason It’s Declining |
-|--------|-----------------------|
-| **“Before/After” pure makeover (no side‑by‑side)** – simple “old vs. new” without a clear hook has seen a drop in completion rate as viewers skim past static comparisons. |
-| **Long‑form “Story Recap” ( > 45 s )** – TikTok’s algorithm now favors sub‑45 s vertical cuts; longer recaps get lower distribution unless they’re tied to a viral sound. |
+---
 
----  
+### 1) “Single-beat trigger” edits (Hook → one uninterrupted story run → rewatch final beat)
+**What makes it work**
+- First 1–2 seconds show the *payoff* (fight win / betrayal reveal / big transformation).
+- Then you keep the viewer “locked” with minimal cuts for a few seconds in sequence.
+- End on a beat that begs comments (“Wait—why did he do that?” / “This changes everything.”).
 
-**How to Deploy These Quickly on an iPhone (Zero‑Budget Workflow)**  
+**How we’d use it (specific title)**
+- **Title:** *One Piece*
+- **Edit plan:**  
+  - Hook: pick the exact moment Luffy charges / commits (first frame of impact).
+  - Main run: keep 6–10 seconds of events in story order (no jump cuts mid-action).
+  - Final beat: end on the *expression reaction* (the “oh no / we’re not ready” face), with text: “The plan lasted 0.7 seconds.”
 
-1. **Collect clips** – Owner sends a short zip of raw footage (or a YouTube link).  
-2. **Use CapCut (free)** – It has built‑in speed‑ramp, split‑screen, and text templates.  
-3. **Add trending audio** – Pull from TikTok’s “Sounds” tab (search “POV”, “What happens next”).  
-4. **Export 30‑40 s vertical (9:16)**, add a title card crediting the source (e.g., “Avengers: Doomsday”).  
-5. **Upload** – Hook in first 1.5 s, use #TheMomentWhen, #Ranking, etc., and a CTA (“Comment #1”).  
+**Source link (style reference)**
+- YouTube Shorts “movie edit” example (hooky, punchy storytelling):  
+  https://youtu.be/IrJzG4V978I  
+- YouTube Shorts “anime edit” example (action-led + quick payoff):  
+  https://youtu.be/RpLbl2BD48M  
 
-These seven formats line up with the current search spikes (GTA VI, *Avengers: Doomsday*, *One Piece*, *Overgeared*) and the most‑read Wikipedia topics, giving MotionVault a ready pipeline of viral‑ready montages. Happy clipping!
+**Fading?** No (this is evergreen).
+
+---
+
+### 2) “POV text overlays” (viewer perspective + on-screen micro-choices)
+**What makes it work**
+- Big, readable captions that make the clip feel personal.
+- Text changes at key beats (not every second), so it doesn’t look like scrolling subtitles.
+
+**How we’d use it**
+- **Title:** *The Apothecary Diaries*
+- **Edit plan:**  
+  - Hook: start on a close-up of the investigation moment.
+  - Overlay: “POV: you realize the ‘harmless’ ingredient is the weapon.”
+  - Mid-beat: “You still drink it… because you trust the wrong person.”
+  - Final beat: hard cut to the consequence reaction + caption: “NEVER AGAIN.”
+
+**Source link**
+- Anime edit example (anime-style emotional hooks):  
+  https://youtu.be/MgwcY8E9l6o  
+
+**Fading?** Slightly? (POV is common, but still works when the POV line is *specific* to the scene.)
+
+---
+
+### 3) “The moment when…” (temporal phrase + emotion pivot)
+**What makes it work**
+- Starts with a universal phrase that instantly frames the scene.
+- The caption acts like a narrator: you’re not just watching—you’re *reaching* a moment.
+
+**How we’d use it**
+- **Title:** *Black Clover*
+- **Edit plan:**  
+  - Hook: show the exact “power-up reveal” frame.
+  - Text: “The moment he stopped asking for permission.”
+  - Main run: keep a short sequence through the transformation.
+  - Final beat: end on the opponent’s shocked reaction + “That’s when it became personal.”
+
+**Source link**
+- Movie edit example with strong “moment” caption energy:  
+  https://youtu.be/oMIKp0p-xJA  
+
+**Fading?** No (phrase-based storytelling stays reliable).
+
+---
+
+### 4) Side-by-side comparisons (Before/After or “Expected vs Reality”)
+**What makes it work**
+- Fast contrast = instant comprehension on mute.
+- Great for “skill jump,” “plan worked vs failed,” “hero before/after decision.”
+
+**How we’d use it**
+- **Title:** *Grand Theft Auto VI*
+- **Edit plan:**  
+  - Split-screen or quick A/B zoom cut:
+    - **Before:** the cautious setup moment (UI planning / checking options).
+    - **After:** the chaos moment (escape gone wrong / betrayal / chase).
+  - Overlay labels: “Before: thought it was easy” → “After: learned it the hard way.”
+  - Final beat: end with “Replay this to spot the first mistake.”
+
+**Source link**
+- Movie edit example that leans into high-signal storytelling (good reference for compression pacing):  
+  https://youtu.be/muC64zx_lBI  
+
+**Fading?** No (it’s basically a structural editing pattern that stays relevant).
+
+---
+
+### 5) “Ranking edits” (but keep it tight: 3 entries max)
+**What makes it work**
+- Rankings create built-in anticipation (“What’s #1?”).
+- On Shorts/TikTok, 10-item ranks are too slow; **3** items is optimal.
+
+**How we’d use it**
+- **Title:** *Bleach*
+- **Edit plan:**  
+  - Hook text: “Top 3 most illegal moments in Bleach.”
+  - Entry 1–2: quick montage of 2 highlights (name them with on-screen label).
+  - Entry 3 (final): the most iconic moment you can legally source from your available clips (end on the “beat that wins the thumbnail,” with “#1 is disrespectful.”)
+
+**Source link**
+- Not directly shown in the provided examples (so I can’t cite a specific matching clip from the repo list).  
+- **Use as a studio format template anyway** (ranking works across movie/anime even if the exact ranking meme template varies).
+
+**Fading?** Mildly (ranking is slightly saturated), but still effective if it’s **3 items + strong end beat**.
+
+---
+
+### 6) Meme-template captioning over serious footage (“comedy caption” / reaction tone)
+**What makes it work**
+- Juxtaposition: serious scene + dumb funny line = replay.
+- Captions should be short (5–8 words) and land on a facial expression beat.
+
+**How we’d use it**
+- **Title:** *Naruto: Shippuden*
+- **Edit plan:**  
+  - Hook: reaction face / sudden realization.
+  - Caption 1 (first second): “Me: I’ll be normal today.”
+  - Caption 2 (after a cut): “Also me: chooses violence.”
+  - Final beat: punchline text + end on the funniest micro-expression.
+
+**Source link**
+- Anime edit examples with comedic/chaotic caption energy:  
+  https://youtu.be/40RLk4XYbik  
+  https://youtu.be/691BbgeyFr8  
+
+**Fading?** No (but the *exact* meme caption style can change—keep it scene-specific).
+
+---
+
+### 7) “Velocity edit” (speed ramps + hit-synced cuts) — **flag: likely fading if overused**
+**What makes it work**
+- Fast cut rhythm + sound hits can outperform slower edits for certain audiences.
+- Best when it’s used for *movement peaks*, not the whole video.
+
+**How we’d use it**
+- **Title:** *Grand Theft Auto VI* (or any FPS/action game cut you have)
+- **Edit plan:**  
+  - Use velocity only for 3 short bursts (e.g., 0:05–0:08, 0:12–0:15, 0:20–0:22).
+  - Between bursts: return to cleaner continuity so the story still lands.
+  - Text: “Speedrun brain activated.”
+
+**Source link**
+- Movie edit examples that show high-energy pacing (not necessarily velocity-only, but good rhythm reference):  
+  https://youtu.be/nUDG9g6aUq4  
+
+**Fading?** **Yes/Maybe** if it’s “always-on.” Velocity that never lets the viewer breathe tends to fatigue audiences.
+
+---
+
+## Quick “studio workflow” note (so Claude can cut fast)
+For each format, pick:
+- **Hook frame** (exact face/impact)
+- **One short unbroken run** (6–10s)
+- **Final beat** (expression that invites replay)
+- **Caption placement** (only 2–4 text moments total)
+
+---
+
+If you tell me which 6–8 titles MotionVault wants to prioritize next (e.g., *One Piece, Black Clover, Bleach, GTA VI, Apothecary Diaries*), I’ll convert these into a **shooting list**: “Scene A timestamp → hook text → run length → final beat text” for each.

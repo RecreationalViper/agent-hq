@@ -2,86 +2,135 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# YouTube Shorts Trend Report — 2026-11-24
+## What’s working on YouTube right now (US) — fastest-rising clips you can mirror
+*(From your provided “fastest-rising” lists; this is mostly Film/Animation + Entertainment. Gaming has fewer “short (≤3 min)” entries in the data you gave.)*
 
-## 1. Fastest-rising relevant videos (5–8) with real numbers
+### 1) Film/Animation fastest-rising (top 5–8)
+1. **“Avengers: Doomsday | Final Trailer | In Theaters December 18”** — *Marvel Entertainment* — **44,811,322 views** — **1,377,733/hr** — **3:16**  
+   Link: https://youtu.be/Wb8Tq_HD4E8  
+2. **“Why they move so human 🥀”** — *MoVeak* — **39,500,846 views** — **383,409/hr** — **0:16**  
+   Link: https://youtu.be/_dEH-edCIN4  
+3. **“The Ultimate ‘Armed’ Plot Twist! 💀”** — *Foeko* — **39,222,661 views** — **312,477/hr** — **1:00**  
+   Link: https://youtu.be/jl1l63_8GX4  
+4. **“Por favor comparte con tus amigos #pov #herramientas #sketch #gracioso #actuación #historia”** — *ChaosBiteClips* — **20,461,051 views** — **334,775/hr** — **0:31**  
+   Link: https://youtu.be/XY_ov9X03GY  
+5. **“He is on Another Level.🔥#edit #shorts #foryou”** — *JJ_EditZ* — **14,995,279 views** — **253,062/hr** — **2:58**  
+   Link: https://youtu.be/aCqDrqDTfoQ  
+6. **“A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)”** — *ManNoirFacts* — **33,907,690 views** — **193,731/hr** — **0:11**  
+   Link: https://youtu.be/QSPoFd7tYwg  
+7. **“We need more people like him ✌️”** — *Smirk* — **26,626,249 views** — **191,550/hr** — **0:14**  
+   Link: https://youtu.be/E4nT85y858s  
 
-| # | Video | Channel | Views | Views/hr | Length | Category |
-|---|-------|---------|-------|----------|--------|----------|
-| 1 | **Avengers: Doomsday \| Final Trailer \| In Theaters December 18** | Marvel Entertainment | 32,278,007 | 2,108,373 | 3:16 | Film/Ent |
-| 2 | **Why they move so human 🥀** | MoVeak | 35,906,892 | 418,449 | 0:16 | Film/Ent |
-| 3 | **The Ultimate "Armed" Plot Twist! 💀** | Foeko | 35,582,786 | 328,540 | 1:00 | Film/Ent |
-| 4 | **He is on Another Level.🔥#edit #shorts #foryou** | JJ_EditZ | 13,143,383 | 312,644 | 2:58 | Film |
-| 5 | **Naruto VS Luffy \| DEATH BATTLE!** | DEATH BATTLE! | 8,744,904 | 247,684 | 30:36 | Film/Anime |
-| 6 | **We need more people like him ✌️** | Smirk | 26,210,518 | 215,214 | 0:14 | Ent |
-| 7 | **Rockstar is freaking out now..** | Asmongold Clips | 1,363,624 | 302,000 | 3:37 | Gaming |
-| 8 | **Thorfinn edit #anime #edit #shorts** | LightyXD | 4,784,596 | ~199k* | 0:??* | Anime edit |
-
-\* Estimated from 7-day edit data (uploaded 2026-11-18).
-
----
-
-## 2. What they have in common
-
-| Element | Pattern |
-|---------|---------|
-| **Title style** | **Emotional hook + emoji + hashtags** — “Why they move so human 🥀”, “The Ultimate 'Armed' Plot Twist! 💀”, “He is on Another Level.🔥#edit #shorts #foryou”. No clickbait questions; the payoff is in the title. |
-| **Hook (first 1–2 s)** | **Visual punch + sound sync** — MoVeak (0:16) and Smirk (0:14) are pure motion/emotion loops; Foeko (1:00) opens on the twist frame; JJ_EditZ opens on a high-impact action beat. |
-| **Length** | **Bimodal**: ultra-short (0:11–0:16) for pure loop/emotion, **or** 1:00–3:00 for mini-story/edit. Nothing at 30–45 s. |
-| **Topic** | **Three buckets only**: (1) **Event tentpoles** (Avengers: Doomsday, GTA 6), (2) **Character-emotion loops** (Thorfinn, Naruto/Luffy, “Why they move so human”), (3) **Plot-twist/reveal** (“Armed” twist, “Secret finally out”). |
-| **Audio** | Slowed/reverb anime OSTs, phonk, or iconic trailer score — always **beat-synced cuts**. |
-| **On-screen text** | Minimal: character name + episode/chapter stamp, or a single reaction word (“HIM”, “PEAK”, “🥀”). |
-| **Credit** | Title + episode in lower-third (transformative safety). |
-
----
-
-## 3. Titles/moments the studio should clip **this week**
-
-| Priority | Source | Moment (timestamp-ready) | Why it fits the pattern |
-|----------|--------|--------------------------|-------------------------|
-| **1** | **Avengers: Doomsday** (trailer just dropped, 2.1M views/hr) | Cyclops (James Marsden) optic blast reveal + “We’re out of time” line | Event tentpole + character-emotion + plot beat; Marsden trending in US/Mexico search |
-| **2** | **Vinland Saga — Thorfinn’s “I have no enemies” farm arc** (ep 24, S2) | Thorfinn dropping the knife, slow zoom on empty hands | **Thorfinn edits hit 4.7M+ views twice this week**; pure emotion loop, 0:15 perfect |
-| **3** | **One Piece — Gear 5 “Sun God” laugh** (ep 1071) | Luffy’s drum-liberation laugh + white-on-white transformation | One Piece #3 trending anime (772k fans), Luffy hunger edit 2M views |
-| **4** | **The Apothecary Diaries S3 — Maomao’s “wall deduction”** (ep 9, airs 2026-11-27) | Maomao tapping wall → cut to flashback → “Poison” text pop | Apothecary Diaries trending #6 (116k fans), edit got 1.6M views last week |
-| **5** | **Chainsaw Man — Denji “Aura” power-up** (ep 12) | Denji revving chainsaws, blood-mist aura, “HIM” text | Denji edit 2.2M views 3 days ago; phonk-friendly |
-| **6** | **GTA 6 — “First patch notes” / “Dimensional rifts” leaks** | Any 5-sec gameplay clip: rift opening, Lucia’s dual-wield, Vice City neon | GTA 6 #1 Twitch (77k+ viewers), “Rockstar freaking out” 302k views/hr, Cyberpunk 2 devs citing GTA 6 pressure |
-| **7** | **Blue Box S2 — Taiki’s match-point smash** (ep 8, airs 2026-11-29) | Slow-mo shuttle freeze-frame → crowd roar → “CHAMPION” | Blue Box trending #9 (54k fans), sports-emotion loop |
-| **8** | **Hunger Games: Sunrise on the Reaping** (trailer imminent, Wiki 180k views) | Young Haymitch reaping reaction + “The games begin again” title card | Pre-release buzz, franchise recognition, 65k Wiki views yesterday |
+### What they have in common (usable for MotionVault Shorts)
+- **Title style = punchy + emotional + “promise” framing**
+  - Examples from the winners: *“Why they move so human 🥀”*, *“Ultimate Plot Twist!”*, *“He is on Another Level.”*, *“We need more people like him”*
+- **Thumbnail/hook vibe (even from titles):**
+  - Strong sentiment + icon/emoji (🔥 💀 🥀 ✌️)
+  - Often reads like a **comment thread reply** or **challenge**
+- **Length bias:** lots of **sub-1-minute** and **micro-clips**  
+  - 0:11, 0:14, 0:16, 0:31 appear repeatedly
+- **Topic buckets that map well to your channel**
+  - “Human/realism” (movement, stunts, acting believability)
+  - “Plot twist / final beat”
+  - “Level-up / insane moment”
+  - “Short POV / sketch-style tagging” (the ChaosBiteClips title uses heavy hashtag POV structure)
 
 ---
 
-## 4. Title patterns to copy (plug-and-play)
+## Gaming: fastest-rising items (from your data) + what to extract
+Your “fastest-rising” gaming list is dominated by **long videos** (not ideal for Shorts). So below I’m focusing on what’s *still* actionable for clipping.
 
-| Pattern | Example for studio | When to use |
-|---------|-------------------|-------------|
-| **“Why [Character] [emotion verb] so [adjective] 🥀”** | `Why Thorfinn moves so human 🥀` | Ultra-short emotion loops (0:12–0:18) |
-| **“The Ultimate '[Noun]' [Twist/Reveal]! 💀”** | `The Ultimate "Farm" Twist! 💀` | 0:50–1:10 plot-punch edits |
-| **“[Character] is on Another Level.🔥 #edit #shorts #foryou”** | `Maomao is on Another Level.🔥 #edit #shorts #foryou` | 1:30–2:30 skill/compilation edits |
-| **“[Character A] VS [Character B] \| DEATH BATTLE!”** | `Cyclops VS Homelander \| DEATH BATTLE!` | Cross-franchise vs. edits (high comment rate) |
-| **“We need more [archetype] like [Character] ✌️”** | `We need more doctors like Maomao ✌️` | 0:10–0:15 wholesome/respect loops |
-| **“[Game] just exposed every [critic/fan]..”** | `GTA 6 just exposed every open-world game..` | Gaming commentary clips (3:00+) |
-| **“POV: You’re the [strongest/villain/hero] 🔥”** | `POV: You’re the Strongest Apothecary 🔥` | Anime/game power-fantasy edits |
+### Fastest-rising gaming (pickable topics)
+- **“Catching Hackers On Balsmp”** — *ikeacpvp* — **1,756,463 views** — **1,064,234/hr** — **68:36**  
+  https://youtu.be/P9bxxSMje-0  
+- **“10,000 Players Simulate WORLD WAR in Minecraft”** — *Spoke* — **4,984,647 views** — **179,122/hr** — **237:35**  
+  https://youtu.be/qvR50Jh7OmU  
+- **“Rockstar is freaking out now..”** — *Asmongold Clips* — **3,334,673 views** — **153,450/hr** — **3:37**  
+  https://youtu.be/sAr0M87A6ZE  
+- **“Grand Theft Auto VI is Full of Things You’d Never Notice”** — *Any Austin* — **632,078 views** — **110,377/hr** — **15:20**  
+  https://youtu.be/Yb9r-EMxrbw  
 
-**Tag block to append every time:**  
-`#edit #shorts #foryou #anime #gaming #movie` (pick 3–4 relevant)
+### Gaming shorts (≤3 min) in your dataset (small sample)
+- **“GTA 6 - What’s New In the First Patch?”** — *IGN* — **592,087 views** — **21,478/hr** — **1:14**  
+  https://youtu.be/GotN7bLCgpU  
+- **“Bishop Shell Cinematic | Marathon”** — *Marathon* — **164,157 views** — **19,257/hr** — **1:48**  
+  https://youtu.be/HPpil08YIRc  
 
----
-
-## 5. Immediate action checklist for the owner (iPhone-only)
-
-1. **Today** — Pull the Avengers: Doomsday trailer (official Marvel upload), clip Cyclops optic blast (2.5 s) + “We’re out of time” (1.5 s). Title: `Why Cyclops moves so human 🥀 #edit #shorts #foryou`
-2. **Tonight** — Screen-record Thorfinn farm scene (Crunchyroll, 1080p), cut to 0:15, add phonk beat. Title: `The Ultimate "Farm" Twist! 💀 #vinlandsaga #edit`
-3. **Tomorrow (11/27)** — Apothecary Diaries S3 ep 9 airs. Clip Maomao wall-tap deduction (0:45). Title: `Maomao is on Another Level.🔥 #apothecarydiaries #edit`
-4. **11/29** — Blue Box S2 ep 8 + Overgeared ep 10. Batch-record both match-point/smash moments.
-5. **Ongoing** — Capture any GTA 6 gameplay from Twitch (fair-use commentary: “Rockstar freaking out over this rift…”). Title: `GTA 6 just exposed every open-world game..`
+**Actionable takeaway for MotionVault:**  
+Gaming is “working” in general, but your strongest lever from this dataset is **short-form certainty**: pick clips that look like **a secret**, **an unexpected reveal**, or **a sudden insane moment**—then make the first 1–2 seconds do the “promise,” like the Film winners above.
 
 ---
 
-## 6. Data gaps / uncertainties
+## Anime: what you have (and what’s missing)
+Your “fastest-rising” dataset does **not** include a dedicated “Anime: fastest-rising” YouTube section. So I can’t quote anime clip view numbers from your provided chart data.
 
-- **No key** for exact upload timestamps on the Film/Animation fastest-rising list → views/hr are API-derived but exact hour-of-upload unknown.  
-- **Thorfinn edit length** not in 7-day data; assume 0:15–0:30 based on MoVeak/Smirk pattern.  
-- **GTA 6 patch/rift clips** — no official footage yet; rely on Twitch stream captures (fair-use commentary required).  
-- **Sunrise on the Reaping trailer** — not yet released; watch Lionsgate/YouTube Movies channel.
+**However**, your search/trending context *does* show what anime is actively trending right now (AniList / MAL):
+- **Overgeared** (RELEASING; ep 10 airs 2026-11-29)
+- **The Apothecary Diaries Season 3** (RELEASING; airs 2026-11-27)
+- **Black Clover Season 2** (RELEASING; ep 9 airs 2026-11-28)
+- **One Piece** (RELEASING)
+- **Blue Box Season 2** (RELEASING)
+*(These are trends context only; not YouTube views.)*
 
-*All view numbers quoted directly from `studio/youtube-trends.md` and `studio/live-data.md` collected 2026-11-24.*
+---
+
+## Shorts: titles/moments MotionVault should clip for YouTube right now (strategy)
+Because your input doesn’t include specific *scene timestamps* from movies/games/anime, the safest approach is to clip **repeatable moment types** that match what’s winning (plot twist, level-up, human-realism, final beat). Use these as “clip targets” when Claude builds the montages.
+
+### A) Movie / anime montage targets (30–40s, 1–2 sec hook)
+Pick one of these montage “skins” and build around the exact beat:
+- **“The Plot Twist Beat” montage**
+  - Structure: Hook on the *wrong assumption* → quick escalation → reveal → final emotional punch
+  - Title pattern to match: *“The Ultimate ‘X’ Plot Twist! 💀”*
+- **“Human-realism / movement” montage**
+  - Structure: faces + micro-reactions + body language → one surprising action → payoff close-up
+  - Title pattern: *“Why they move so human 🥀”*
+- **“Level-up / on another level” montage**
+  - Structure: calm setup → sudden jump (skill/strength/strategy) → aftermath shot that makes rewatching worth it
+  - Title pattern: *“He is on Another Level.🔥#edit #shorts #foryou”*
+- **“Stunt/impact realism” montage**
+  - Structure: setup → impact frame(s) → “this is real?” style caption beat → reaction
+  - Title pattern: *“A Real Stuntwoman Hit a REAL Car…”* (adapt to game/anime “real-feel” moments)
+
+### B) Gaming montage targets (make it “secret / patch / didn’t notice” style)
+- **“You’d never notice” (meta-discovery)**
+  - Use tiny detail moments: a hidden animation, a subtle physics interaction, a surprising mechanic interaction.
+  - Title pattern: *“Things you’d never notice”* (from Any Austin title)  
+- **“First patch / update” vibe (even if not literal)**
+  - Title pattern: *“What’s new in…”* + show the “new” behavior immediately in first second.
+- **“Insane scale” (10,000 players / chaos moment)**
+  - Aim for crowd/scale shots + one decisive win/loss moment.
+
+---
+
+## Title patterns to copy (directly from what’s working)
+Use these templates for MotionVault’s on-screen title cards + YouTube title:
+- **[Why/How] they [verb] [emotion/descriptor]**  
+  - e.g., “Why they move so human 🥀”
+- **The Ultimate “[thing]” Plot Twist! [emoji]**  
+  - e.g., “The Ultimate ‘Armed’ Plot Twist! 💀”
+- **He is on Another Level.🔥**  
+  - Short, declarative, single-idea
+- **We need more people like him ✌️**  
+  - Values-based / feel-good moral beat
+- **A Real [job/thing] Hit a REAL [impact] for This [year/label]**  
+  - “Real” credibility + specificity
+- **POV/Sketch/Hashtags as title body** (works for general virality style)  
+  - e.g., “Por favor comparte… #pov #sketch #gracioso…”
+
+---
+
+## Quick “studio next steps” (what to hand Claude to cut)
+1. **Pick 2 montage styles to run today:**
+   - Style 1: **Plot Twist 💀**
+   - Style 2: **Human realism 🥀**
+2. For each style, request **3 candidate clips** (movie + anime):
+   - One with a **misdirection → reveal**
+   - One with **micro-reaction acting**
+   - One with a **sudden level-up / power beat**
+3. Enforce Shorts pacing:
+   - **0:00–0:02 = hook beat**
+   - Prefer **one continuous stretch** of story order, keep it short (avoid long slow ramps)
+   - End on **the final emotional/action frame** that makes people rewatch.
+
+If you want, tell me **which franchises you have source clips for right now** (specific movies/anime/games), and I’ll convert the “moment types” above into an exact clip list (scene-by-scene beats + suggested on-screen text).

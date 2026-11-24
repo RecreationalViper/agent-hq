@@ -2,94 +2,151 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-**TikTok‑Fandom Hot‑List (Nov 24 2026) – 6‑8 titles ordered by current buzz**  
-*(All numbers are taken from the live‑data dump – no invented stats. “Oversaturated” means the same clip‑type is already trending in thousands of videos, so you’ll need a fresh angle.)*
-
----  
-
-## 1. **Grand Theft Auto VI** – Rockstar’s newest open‑world blockbuster  
-- **Why it’s hot:** Wikipedia shows 266 k reads today; Google Trends lists “rockstar games gta vi” in the UK and “gta vi”‑related searches in the US. The game launched last week and TikTok is exploding with “first‑hour reactions” and “Easter‑egg hunts.”  
-- **Key hashtags:** `#GTA6` (the official tag still dominates), `#GTA6Moments`, `#RockstarGames`, `#OpenWorld`.  
-- **Clip moment to steal:** *The opening cinematic’s “bank heist” jump‑cut* (first 4 seconds of pure action, perfect hook). Keep the clip under 4 seconds, add on‑screen text “First heist – did you spot the hidden car?” – this invites re‑watch & comments.  
-- **Source link:** Official trailer on Rockstar’s YouTube channel (public) → https://www.youtube.com/watch?v=GTA6_OfficialTrailer  
-- **Oversaturation?** **Yes –** many creators post the same opening cut. To stand out, overlay a quick “speed‑run tip” graphic or a meme‑style reaction voice‑over.  
-
----  
-
-## 2. **Avengers: Doomsday** – Marvel’s surprise 2026 summer sequel  
-- **Why it’s hot:** 116 k Wikipedia reads; the film’s final battle is already a meme‑factory after the global premiere on 10 Nov. Fans are re‑watching the *“Infinity Collapse”* sequence and adding their own theories.  
-- **Hashtags:** `#AvengersDoomsday`, `#InfinityCollapse`, `#Marvel2026`, `#DoomsdayFinale`.  
-- **Clip moment:** *The 7‑second “heroic sacrifice” freeze‑frame* (when the new hero lifts the shattered crystal). It’s a dramatic beat that ends with a visual shock – perfect for a 30‑sec montage ending on a cliff‑hanger.  
-- **Source link:** Studio‑released clip on Marvel’s TikTok (public) → https://www.tiktok.com/@marvelstudios/video/1234567890  
-- **Oversaturation?** **No** – only a handful of creators have used this exact beat; most focus on the opening trailer.  
-
----  
-
-## 3. **Overgeared** (anime) – New episode 10 drops 29 Nov  
-- **Why it’s hot:** AniList trending score 287, 69 k fans; episode 10 (the “Dragon‑forge showdown”) is a major plot twist that fans are live‑tweeting.  
-- **Hashtags:** `#Overgeared`, `#OvergearedEp10`, `#DragonForge`, `#WebnovelAnime`.  
-- **Clip moment:** *The moment the protagonist’s sword **shatters** and the dragon roars* (timestamp 02:13‑02:25). It’s a clean 12‑second visual punch that can be preceded by a 2‑second “What just happened?!” hook.  
-- **Source link:** Official Crunchyroll episode clip (public preview) → https://www.crunchyroll.com/overgeared/episode-10  
-- **Oversaturation?** **No** – early in the episode cycle, few TikToks exist yet.  
-
----  
-
-## 4. **One Piece** – Ongoing Wano‑era arc, episode 1181 airs 3 Jan 2027 (but fans are already dissecting the latest teaser)  
-- **Why it’s hot:** 772 k AniList fans, 2.75 M MAL members; the series’ “new Devil Fruit reveal” teaser has gone viral.  
-- **Hashtags:** `#OnePiece`, `#DevilFruitReveal`, `#WanoArc`, `#OPFans`.  
-- **Clip moment:** *The 3‑second flash of the new fruit’s silhouette* (timestamp 00:45‑00:48 in the teaser). Use a quick “What power?” overlay to spark speculation.  
-- **Source link:** Official One Piece YouTube teaser → https://www.youtube.com/watch?v=OP_DevilFruit_Teaser  
-- **Oversaturation?** **Yes** – dozens of “reaction” videos already exist. Add a **countdown timer** graphic or a “fan‑theory poll” sticker to differentiate.  
-
----  
-
-## 5. **Cyberpunk 2** – Highly anticipated sequel (rumored release 2027)  
-- **Why it’s hot:** Google Trends shows “cyberpunk 2” spikes in Canada and the US; AniList has no entry yet, but the *“Cyberpunk 2 cancelled”* rumor (Mexico) is trending, sparking debate.  
-- **Hashtags:** `#Cyberpunk2`, `#CP2Rumors`, `#GTA6Induced`, `#RPGNews`.  
-- **Clip moment:** *Official teaser’s 4‑second neon city fly‑by* (timestamp 00:12‑00:16). It’s a visually striking hook that works even without sound.  
-- **Source link:** CD Projekt Red press release video → https://www.youtube.com/watch?v=Cyberpunk2_Teaser  
-- **Oversaturation?** **No** – the rumor‑driven hype is just starting; a clean montage can capture the curiosity wave.  
-
----  
-
-## 6. **Black Clover – Season 2** (anime) – Episode 9 airs 28 Nov  
-- **Why it’s hot:** AniList trending 140, 113 k fans; the “Wizard King’s hidden spell” reveal is a fan‑favorite moment that’s being dissected on Reddit and TikTok.  
-- **Hashtags:** `#BlackCloverS2`, `#WizardKingSpell`, `#AnimeClips`, `#MagicBattle`.  
-- **Clip moment:** *The spell’s activation – bright burst + character’s shocked face* (timestamp 05:02‑05:12). A 10‑second beat that ends on a “wait for it” pause, perfect for a strong final beat.  
-- **Source link:** Crunchyroll preview clip → https://www.crunchyroll.com/black-clover/season-2/episode-9  
-- **Oversaturation?** **Low** – most existing clips focus on the opening theme; the spell moment is fresh.  
-
----  
-
-## 7. **The Hunger Games: Sunrise on the Reaping** (movie) – New prequel release 12 Dec (trailer out now)  
-- **Why it’s hot:** Wikipedia reads 180 k; the trailer’s *“Reaping flash‑forward”* scene is getting 100 k+ likes on TikTok.  
-- **Hashtags:** `#HungerGames2026`, `#SunriseReaping`, `#PrequelBuzz`, `#KatnissReturns`.  
-- **Clip moment:** *The instant where the camera zooms into the Capitol’s glowing banner (3 seconds)* – great hook, then cut to the protagonist’s determined stare (7 seconds).  
-- **Source link:** Official Lionsgate trailer → https://www.youtube.com/watch?v=HGSunrise_Trailer  
-- **Oversaturation?** **Yes** – many reaction videos already use this exact 10‑second slice. Consider adding **text commentary** (“What does this mean for the rebellion?”) to stand out.  
-
----  
-
-## 8. **Kraken (NHL) Game – 2026 Playoffs**  
-- **Why it’s hot:** Google Trends shows “kraken game” 500+ US searches; the Seattle Kraken just pulled off a dramatic overtime win (Nov 22). Sports clips explode on TikTok right after games.  
-- **Hashtags:** `#Kraken`, `#NHLPlayoffs`, `#OvertimeGoal`, `#SeattleStorm`.  
-- **Clip moment:** *The winning goal’s 4‑second highlight (player’s slapshot + goalie’s reaction)* – perfect for a fast‑punch vertical clip.  
-- **Source link:** NHL.com highlight reel (public) → https://www.nhl.com/video/kraken-overtime-goal  
-- **Oversaturation?** **Low** – sports highlights are less saturated than movies/anime right now.  
+## This week’s most active fandoms on TikTok (scanner-backed)
+**Date context:** 2026-11-24  
+**Data note:** The repo only gave us *search/anilist/myanimelist/twitch/youtube edit* signals—not TikTok hashtag/moment leaderboards—so below I’m using the strongest available indicators (AniList/MAL “airs soon”, Wikipedia most-read spikes, Twitch live viewers, YouTube Shorts edit momentum). Hashtags + “moment to clip” are **best-practice guesses** for what fans usually post; verify on-TikTok before final cutting.
 
 ---
 
-### Quick Takeaways for MotionVault
+### 1) **Grand Theft Auto VI (GTA VI)** — *notable buzz; very active*
+- **Why fans care now:** Live chatter + massive ongoing stream activity (Twitch “Grand Theft Auto VI” appears at #1 by viewers; multiple big streamers listed). Also general interest from “most-read” + cultural coverage.
+- **Likely active hashtags (pick 3-4):**
+  - `#GTA6`
+  - `#GTAVI`
+  - `#Gaming`
+  - `#RockstarGames`
+- **Moment to clip (30–40s montage plan):**
+  1. **Hook (0–2s):** fast smash-cuts of city/high-speed vibe (no long context; just impact frames).
+  2. **Sequence (story-order, short stretches):** heist/mission setup → tense movement → payoff/chaos beat.
+  3. **Final rewatch beat:** end on a “mission failure/escape escalation” style moment (use sound + text: “THIS is why everyone keeps replaying it”).
+- **Source link (safe, non-leak):**
+  - Rockstar Games (official hub): https://www.rockstargames.com/
+- **Oversaturated?** **Yes** (GTA edits + live-stream clips are extremely common right now.)
 
-| Title | Clip Hook (sec) | Hashtag Set | Oversaturation? |
-|-------|----------------|------------|-----------------|
-| GTA VI | Opening heist (0‑4) | #GTA6 #GTA6Moments #RockstarGames #OpenWorld | Yes |
-| Avengers: Doomsday | Heroic sacrifice (1‑8) | #AvengersDoomsday #InfinityCollapse #Marvel2026 #DoomsdayFinale | No |
-| Overgeared | Sword shatters (2:13‑2:25) | #Overgeared #OvergearedEp10 #DragonForge #WebnovelAnime | No |
-| One Piece | Devil Fruit flash (0:45‑0:48) | #OnePiece #DevilFruitReveal #WanoArc #OPFans | Yes |
-| Cyberpunk 2 | Neon city fly‑by (0:12‑0:16) | #Cyberpunk2 #CP2Rumors #GTA6Induced #RPGNews | No |
-| Black Clover S2 | Wizard King spell (5:02‑5:12) | #BlackCloverS2 #WizardKingSpell #AnimeClips #MagicBattle | Low |
-| Hunger Games prequel | Capitol banner zoom (0‑3) | #HungerGames2026 #SunriseReaping #PrequelBuzz #KatnissReturns | Yes |
-| Kraken OT win | Goal + reaction (0‑4) | #Kraken #NHLPlayoffs #OvertimeGoal #SeattleStorm | Low |
+---
 
-**Strategic tip:** For the oversaturated titles, add a *unique overlay* (countdown, poll sticker, or a 1‑second “reaction” sound bite) to give your 30‑second montage a fresh spin and encourage comments. Happy clipping!
+### 2) **The Last of Us Part II** — *interest bump (actor coverage)*
+- **Why fans care now:** Scanner shows a search spike tied to **Laura Bailey** and “The Last of Us Part II” coverage (Canada trend snippet).
+- **Likely active hashtags:**
+  - `#TheLastOfUs`
+  - `#TLOU2`
+  - `#GamingStories`
+  - `#PlayStation`
+- **Moment to clip:**
+  1. **Hook:** use a close-up reaction moment (player/character emotional beat).
+  2. **Montage:** grief/resolve phase → confrontation → “silent aftermath” moment (caption: “the quiet part hits harder”).
+  3. **Final beat:** snap to a contrast shot (violence → stillness) with a rewatch-trigger text overlay.
+- **Source link (safe):**
+  - PlayStation (official): https://www.playstation.com/
+- **Oversaturated?** **Moderate** (TLOU2 has a loyal base, but not as universally spammed as GTA.)
+
+---
+
+### 3) **One Piece** — *huge fandom; currently airing*
+- **Why fans care now:** MAL lists **One Piece** as top followed and airing; AniList also shows it as releasing.
+- **Likely active hashtags:**
+  - `#OnePiece`
+  - `#Luffy`
+  - `#OP`
+  - `#Anime`
+- **Moment to clip:**
+  1. **Hook:** strongest emotional face / power-up start (0–2s).
+  2. **Montage:** build tension → “big reveal” / named attack moment → crowd reaction.
+  3. **Final beat:** end on a panel-to-animation style transition (add on-screen title: “THIS PANEL GOT ANIMATIONED”).
+- **Source link (safe):**
+  - Toei/official franchise landing (general): https://one-piece.com/
+- **Oversaturated?** **Yes** (but you can still win with a *very specific* episode beat + tight captioning.)
+
+---
+
+### 4) **Black Clover (Season 2)** — *actively releasing; AniList + MAL indicate momentum*
+- **Why fans care now:** AniList shows **Black Clover Season 2** releasing (ep 9 on 2026-11-28). MAL also lists it as top airing this season.
+- **Likely active hashtags:**
+  - `#BlackClover`
+  - `#Asta`
+  - `#Yuno`
+  - `#AnimeEdit`
+- **Moment to clip:**
+  1. **Hook:** spell-casting transformation frame + impact SFX.
+  2. **Montage:** training/resolve → fight start → mid-fight reversal (make the turnaround obvious with bold text).
+  3. **Final beat:** landing shot + stunned reaction panel (end with “wait—watch it again” overlay).
+- **Source link (safe):**
+  - Official Black Clover portal (general): https://blackclover-prd.com/ (or verify official region URL)
+- **Oversaturated?** **Moderate–High** (strong fanbase; edits are common, but seasonal releases help.)
+
+---
+
+### 5) **The Apothecary Diaries (Season 3)** — *currently releasing*
+- **Why fans care now:** AniList + MAL both show Season 3 releasing (AniList ep 9 airs **2026-11-27**; MAL lists it as top followed this season).
+- **Likely active hashtags:**
+  - `#ApothecaryDiaries`
+  - `#MaoMao`
+  - `#Anime`
+  - `#Season3`
+- **Moment to clip:**
+  1. **Hook:** medical discovery / “she notices something” face (0–2s).
+  2. **Montage:** investigation → tense court/house scene → deduction reveal.
+  3. **Final beat:** cut on the deduction “click” moment with a text: “SHE NOTICED THE ONE DETAIL EVERYONE MISSED.”
+- **Source link (safe):**
+  - Crunchyroll (official anime platform; region varies): https://www.crunchyroll.com/
+- **Oversaturated?** **Moderate** (smart “deduction” edits do well if captioned clearly.)
+
+---
+
+### 6) **Cyberpunk: Edgerunners 2** — *big member base + series buzz*
+- **Why fans care now:** MAL shows **Cyberpunk: Edgerunners 2** as top followed this season with a large member count. (Release timing specifics weren’t provided, so treat “buzz now” as fandom momentum rather than a confirmed drop today.)
+- **Likely active hashtags:**
+  - `#Cyberpunk`
+  - `#Edgerunners`
+  - `#Anime`
+  - `#Vibes`
+- **Moment to clip:**
+  1. **Hook:** neon street + sprint/impact frame.
+  2. **Montage:** crew intro style beat → betrayal/plan turn → high-speed escape.
+  3. **Final beat:** end on a lingering shot (music + slow zoom) for rewatch.
+- **Source link (safe):**
+  - Netflix official (if you have access): https://www.netflix.com/
+- **Oversaturated?** **Moderate** (big fandom, but you can differentiate with “plot twist” structure.)
+
+---
+
+### 7) **Steel Ball Run (JoJo)** — *long-running fandom; currently highlighted in MAL*
+- **Why fans care now:** MAL “Steel Ball Run: JoJo’s Bizarre Adventure” has very high score/member and is listed under top airing right now.
+- **Likely active hashtags:**
+  - `#JoJo`
+  - `#SteelBallRun`
+  - `#JoJosBizarreAdventure`
+  - `#AnimeEdit`
+- **Moment to clip:**
+  1. **Hook:** a dramatic “charging/stance” close-up.
+  2. **Montage:** rule/strategy explanation (fast captions) → action burst → reaction to consequence.
+  3. **Final beat:** whiplash cut to a “plan worked / didn’t work” punchline frame.
+- **Source link (safe):**
+  - Official JoJo franchise hub (general): https://www.jojowiki.com/ (fan wiki—better to use official distributor if region known)
+- **Oversaturated?** **High** (JoJo edits are constant; win by making it *trackable* with “this is the exact moment” on-screen.)
+
+---
+
+### 8) **Overgeared** — *smaller but “releasing” (good opportunity if you move fast)*
+- **Why fans care now:** AniList lists **Overgeared** as releasing (ep 10 airs **2026-11-29**) with solid trending score.
+- **Likely active hashtags:**
+  - `#Overgeared`
+  - `#ManhwaToAnime` (optional—only if it matches how fans tag)
+  - `#Anime`
+  - `#Hype`
+- **Moment to clip:**
+  1. **Hook:** strongest “level-up / ranking / rage” visual.
+  2. **Montage:** strategy moment → boss/fight escalation → victorious turnaround.
+  3. **Final beat:** “top 1% player energy” style ending text.
+- **Source link (safe):**
+  - Crunchyroll (verify if licensed): https://www.crunchyroll.com/
+- **Oversaturated?** **Low** (relative)—best candidate for less-competitive slots this week.
+
+---
+
+## Quick editorial priorities (for MotionVault)
+- **Pick 1 “oversaturated monster” (GTA VI / One Piece / JoJo)** + **1–2 “release-window sleepers” (Apothecary Diaries S3 / Overgeared / Black Clover S2)**.
+- For each edit: include **title text on screen** in the first second (e.g., “TLOU2”, “Apothecary Diaries S3”) and a **single-sentence premise** (“HE NOTICED THE ONE DETAIL…”).  
+- Keep any single source stretch **under ~5 seconds**; use **reaction + impact SFX** to bridge cuts.
+
+If you want, I can turn this into a **cut list** (exact timestamp ranges + 3-hook variants per title) — but I’ll need either: (a) the episode numbers you plan to use for the anime, or (b) the specific clips you/Claude have access to for each title.

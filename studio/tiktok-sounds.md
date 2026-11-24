@@ -2,26 +2,104 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-## 5‑8 TikTok sounds that are **currently spiking** (Nov 24 2026) and work well for short‑form movie‑/game‑/anime‑edits  
+# TikTok Sounds Rising for Edits (2026-11-24)
 
-| # | Sound (title / artist) | Why it’s rising (quick data) | Best edit vibe | Key cut‑point (beat / drop) | Link (TikTok Creative Center) | Business‑account block? |
-|---|------------------------|------------------------------|----------------|----------------------------|------------------------------|--------------------------|
-| 1 | **“GTA VI Police Radio – “All‑Points‑Bullet”** – *Rockstar Games* | ‑ “Grand Theft Auto VI” is the #1 Wikipedia‑most‑read article (266 k views) and is trending in Google searches (US ≈ 500 searches for “kraken game”, UK ≈ 200 for “rockstar games gta vi”). <br>‑ TikTok’s “Gaming Hits” playlist shows a 34 % rise in plays over the past 48 h. | **Hype / Action‑reveal** – perfect for high‑speed chase, heist or showdown clips. | **Drop at 0:12** (siren‑blare → bass kick). Cut on the siren “WEE‑WEE‑WEE” to land a smash cut to the on‑screen action. | https://www.tiktok.com/music/All-Points-Bullet-7201234567890123456 | **No** – public‑domain game‑promo audio is safe for business accounts. |
-| 2 | **“Avengers Doomsday Main Theme” – *Marvel Studios* | ‑ “Avengers: Doomsday” appears in the Wikipedia most‑read list (116 k views). <br>‑ The official trailer sound bite has been used in > 150 K TikTok videos in the last 24 h, a 28 % lift. | **Epic / Heroic** – ideal for “big‑moment” reveals (e.g., a character’s power‑up or a climactic fight). | **Hit at 0:08** (orchestral hit + choir “AH!”). Use the choir swell to snap to the next clip. | https://www.tiktok.com/music/Avengers-Doomsday-7209876543210987654 | **Yes** – Marvel‑owned music is often flagged for commercial use; add a short commentary overlay or transform it > 2 s to stay safe. |
-| 3 | **“Overgeared OST – “Sword Summon”** – *Moe Music* | ‑ Anime **Overgeared** is the top trending AniList title (score 287, 69 k fans) with a new episode airing 29 Nov. <br>‑ TikTok’s “Anime BGM” chart shows a 42 % jump for this track after the episode’s release. | **Fantasy / Power‑up** – works for sword‑reveal, transformation, or “level‑up” moments in games or movies. | **Beat at 0:04** (synth arpeggio → cymbal crash). Cut right on the cymbal for a clean transition. | https://www.tiktok.com/music/Sword-Summon-7211122334455667788 | **No** – the track is released under a Creative‑Commons‑BY licence by the composer. |
-| 4 | **“One Piece Luffy Laugh” – *Toei Animation* | ‑ “One Piece” is the most‑followed anime on MyAnimeList (2.7 M members) and a new episode (1181) drops 3 Jan 2027, driving buzz now. <br>‑ The laugh clip has 120 K+ TikTok uses in the past day, up 19 %. | **Funny / Meme** – great for “unexpected twist” or comedic punch‑line edits (e.g., a character’s reaction). | **Punch at 0:02** (Luffy’s “HA‑HA‑HA!”). Snap the cut on the first “HA”. | https://www.tiktok.com/music/Luffy-Laugh-7213344556677889900 | **Yes** – studio‑owned audio may be muted on business accounts; add a text‑overlay (“Luffy’s reaction”) to qualify as commentary. |
-| 5 | **“Black Clover Season 2 Battle Theme” – *Yuki Kajiura* | ‑ “Black Clover Season 2” is in the top‑10 MyAnimeList & AniList trending lists (≈ 180 k combined followers). <br>‑ The battle theme saw a 31 % rise in TikTok plays after the 28 Nov episode aired. | **Intense / Slow‑mo reveal** – perfect for a dramatic slow‑motion showdown or a “boss‑defeat” moment. | **Drop at 0:09** (string hit + bass thump). Cut on the string hit for a dramatic freeze‑frame. | https://www.tiktok.com/music/Black-Clover-Battle-7215566778899001122 | **No** – composer has granted “fair‑use” permission for short (< 3 s) clips. |
-| 6 | **“Kraken Game Victory Jingle” – *Epic Games* | ‑ “kraken game” spikes 500 + US searches (Google Trends) – the new hockey‑style sports game released last week. <br>‑ TikTok’s “Game Clips” chart shows the victory jingle up 27 % in the last 24 h. | **Celebration / Win** – use for a final‑beat “win” moment (e.g., a movie hero’s triumph, a game‑round win). | **Hit at 0:03** (trumpet fanfare). Snap the cut on the first trumpet blast. | https://www.tiktok.com/music/Kraken-Victory-7217788990011223344 | **No** – short fan‑made jingle is public‑domain; safe for business accounts. |
-| 7 | **“Moon Ambient Pad” – *Luna Sounds* | ‑ “Moon” (the 2026 documentary) is among the most‑read Wikipedia articles (180 k views) and has a dreamy ambient track that TikTok users are pairing with space‑themed or emotional reveals. <br>‑ Plays up 22 % today. | **Sad / Slow‑mo reveal** – great for emotional montage endings or a quiet “night‑sky” shot. | **Swell at 0:06** (pad rise → soft bell). Cut on the bell for a gentle fade‑out. | https://www.tiktok.com/music/Moon-Ambient-Pad-7219900112233445566 | **No** – royalty‑free library sound; safe. |
-| 8 | **“Cyberpunk 2 Glitch Stab” – *Synthwave Collective* | ‑ “cyberpunk 2” spikes 200 + searches in Canada and appears in Steam new‑release news. <br>‑ The glitch‑stab sound has a 38 % rise on TikTok after the game’s trailer leaked (officially released). | **Tech‑hype / Glitch** – fits for cyber‑style edits, UI overlays, or fast‑cut game‑play montages. | **Stab at 0:01** (sharp synth stab). Cut exactly on the stab for a jump‑cut effect. | https://www.tiktok.com/music/Cyberpunk-Glitch-Stab-7221122334455667788 | **No** – produced under a Creative‑Commons licence for remixers. |
+Based on Last.fm spikes, YouTube edit performance, and the GTA VI / Olivia Rodrigo cultural moment. **I cannot access TikTok Creative Center directly**—these are inferred from the live data we have. Verify on the app before committing.
 
-### How to use them in a 30‑40 s vertical montage  
+---
 
-1. **Hook (0‑2 s)** – Start with a **high‑energy beat** (e.g., GTA VI Police Radio siren or Overgeared “Sword Summon”).  
-2. **Story‑flow** – Lay 2‑3 short, unbroken clips (5‑7 s each) that follow the narrative of the source (movie fight, game level, anime arc).  
-3. **Mid‑beat transition** – Use a **mid‑track drop** (e.g., Black Clover battle thump) to snap to the next segment.  
-4. **Final beat** – End on a **dramatic or funny punch** (Avengers Doomsday choir hit, One Piece laugh, or Moon ambient bell) to encourage re‑watch.  
+### 1. **Flower In A Hurricane – Justice (feat. Tame Impala, SZA, King Gizzard & the Lizard Wizard)**  
+*From GTA VI: Original Score*  
+**Why rising:** GTA VI dominates Twitch (51k+ viewers on Rubius), Steam top-seller, Wikipedia #2 most-read. The soundtrack drop is the only official audio source fans have.  
+**Edit type:** Hype / slow-mo reveal / montage opener  
+**Cut point:** The first heavy bass hit at **0:18** (after the ambient intro), then every 4-bar drop.  
+**Source:** [Last.fm – 73k listeners](https://www.last.fm/music/Justice/_/Flower+In+A+Hurricane) · GTA VI OST playlist  
+**Business account:** Likely **blocked** (major-label soundtrack).
 
-**Safety tip:** If a sound is flagged for business accounts (Avengers Doomsday, One Piece laugh), add a brief on‑screen commentary or reaction text (≤ 3 s) to qualify as “transformative” and avoid mute.  
+---
 
-*All links point to the official TikTok Creative Center page for the sound; you can copy the short URL into the iPhone “Add Sound” dialog.*
+### 2. **the cure – Olivia Rodrigo**  
+**Why rising:** Multiple Olivia tracks spiking globally (934k listeners on “the cure”, plus “stupid song”, “drop dead”, “maggots for brains”). New album cycle driving edits.  
+**Edit type:** Sad / emotional character arc / “final beat” rewatch moment  
+**Cut point:** Chorus entry at **0:32** (“I found the cure…”)—hard piano chord. Bridge at **1:45** for slow-mo.  
+**Source:** [Last.fm worldwide](https://www.last.fm/music/Olivia+Rodrigo/_/the+cure)  
+**Business account:** **Blocked** (UMG).
+
+---
+
+### 3. **Earrings – Malcolm Todd**  
+**Why rising:** 1.25M listeners worldwide, 17k US—breakout indie-pop track, very TikTok-friendly tempo (108 BPM).  
+**Edit type:** Funny / light character intro / “walking into frame” beat sync  
+**Cut point:** Guitar riff loop starts **0:04**; snap-cut on every downbeat. Chorus **0:28** for wider shot.  
+**Source:** [Last.fm](https://www.last.fm/music/Malcolm+Todd/_/Earrings)  
+**Business account:** **Likely clear** (independent/distro via AWAL—check TikTok library).
+
+---
+
+### 4. **505 – Arctic Monkeys**  
+**Why rising:** Perennial edit staple (3.2M listeners), spiking again in US (15k). Organ intro = instant recognition.  
+**Edit type:** Slow-mo reveal / villain entrance / “walking away” outro  
+**Cut point:** Organ swell **0:00–0:12** (hold shot), first drum hit **0:13** (cut to action). Final “recurring dream” lyric **2:58** for loop.  
+**Source:** [Last.fm](https://www.last.fm/music/Arctic+Monkeys/_/505)  
+**Business account:** **Blocked** (Domino/Warner).
+
+---
+
+### 5. **Duvet – bôa**  
+**Why rising:** 2.19M listeners; anime-edit evergreen (Serial Experiments Lain OP). Still climbing in US (14k).  
+**Edit type:** Sad / psychological / “eyes widen” close-up  
+**Cut point:** Vocal entry **0:16** (“And you don’t seem to understand…”). Drum fill **1:02** for hard cut.  
+**Source:** [Last.fm](https://www.last.fm/music/bôa/_/Duvet)  
+**Business account:** **Likely clear** (independent reissue—verify in app).
+
+---
+
+### 6. **Nicole Kidman – ADÉLA**  
+**Why rising:** 334k listeners; quirky title + catchy chorus = meme-edit fuel.  
+**Edit type:** Funny / “POV you’re [character]” / jump-cut montage  
+**Cut point:** Chorus **0:19** (“Nicole Kidman…”)—sync each name-drop to a different clip.  
+**Source:** [Last.fm](https://www.last.fm/music/AD%C3%89LA/_/Nicole+Kidman)  
+**Business account:** **Likely clear** (indie).
+
+---
+
+### 7. **Melatonin – Tinashe**  
+**Why rising:** 152k listeners; dreamy 100 BPM, perfect for “late-night drive” game edits (GTA VI, Cyberpunk).  
+**Edit type:** Slow-mo reveal / atmosphere / transition-heavy montage  
+**Cut point:** Synth pad swell **0:00–0:11**, kick drum **0:12** (first cut). Every 8 bars after.  
+**Source:** [Last.fm](https://www.last.fm/music/Tinashe/_/Melatonin)  
+**Business account:** **Blocked** (RCA/Sony).
+
+---
+
+### 8. **Creep – Radiohead**  
+**Why rising:** 4.28M listeners; spike in US (14k). Still the go-to for “broken protagonist” edits.  
+**Edit type:** Sad / villain monologue / final-frame hold  
+**Cut point:** Guitar crash **0:28** (“I’m a creep…”). Chorus **1:02** for wide shot. Outro feedback **3:30** for freeze-frame.  
+**Source:** [Last.fm](https://www.last.fm/music/Radiohead/_/Creep)  
+**Business account:** **Blocked** (XL/Warner).
+
+---
+
+## Quick Decision Table
+
+| Sound | Edit Vibe | Business Safe? | Best Source Clip |
+|-------|-----------|----------------|------------------|
+| Flower In A Hurricane | Hype / GTA VI montage | ❌ | GTA VI trailer / gameplay |
+| the cure | Emotional arc | ❌ | The Last of Us Pt II / Cyberpunk |
+| Earrings | Fun / character intro | ✅ | Anime slice-of-life / comedy game |
+| 505 | Villain walk / slow-mo | ❌ | Breaking Bad / JoJo / Elden Ring |
+| Duvet | Psych / eyes-close-up | ✅ | Lain / Chainsaw Man / Silent Hill |
+| Nicole Kidman | Meme / jump cuts | ✅ | The Office / funny game clips |
+| Melatonin | Night drive / atmosphere | ❌ | GTA VI / Cyberpunk 2077 / Midnight Club |
+| Creep | Broken hero / finale | ❌ | Batman / Taxi Driver / Red Dead 2 |
+
+---
+
+## Next Steps for You
+1. **Open TikTok → Sounds → Search each title** → confirm “Commercial Sounds” tag (green check = business safe).  
+2. **Download the 15-30 s segment** you’ll cut on (use TikTok’s “Save sound” → screen-record if needed).  
+3. **Send Claude the timestamped beat sheet** (e.g., “0:18 bass hit → cut to Arthur Morgan drawing gun”).  
+4. **Credit on-screen**: “Sound: [Artist] – [Title]” + “Clips: [Game/Movie/Anime]”.
+
+Want me to draft beat sheets for any 2-3 of these?
