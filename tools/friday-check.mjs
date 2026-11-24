@@ -21,11 +21,25 @@ for (const q of (process.env.QUESTIONS || "Good morning Friday, what's going on 
     console.log(`\nPHOTO (${r.status}): ${j.say}`);
   }
 }
-// optional: design Friday's own voice (VOICE_DESIGN = a description)
-if (process.env.VOICE_DESIGN) {
-  const r = await fetch(URL_ + "/voice", { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: JSON.stringify({ design: process.env.VOICE_DESIGN, name: "Friday" }) });
-  console.log(`\nVOICE DESIGN (${r.status}): ${(await r.text()).replace(/\s+/g, " ").slice(0, 600)}`);
-}
+// optional: design Friday's own voice (VOICE_DESIGN = a description). Done here, not in the Worker (too heavy for its CPU budget).
+const ek = (process.env.ELEVENLABS_API_KEY || "").trim();
+if (process.env.VOICE_DESIGN && ek) {
+  const H = { "xi-api-key": ek, "content-type": "application/json" };
+  const sample = "Morning, Josiah. Your calendar's clear until two, sales are steady, and I've already sorted the inbox. What are we building today?";
+  const r1 = await fetch("https://api.elevenlabs.io/v1/text-to-voice/design", { method: "POST", headers: H, body: JSON.stringify({ voice_description: process.env.VOICE_DESIGN, text: sample, model_id: "eleven_multilingual_ttv_v2" }) });
+  const j1 = await r1.json().catch(() => ({}));
+  const gen = j1.previews?.[0]?.generated_voice_id;
+  if (!gen) console.log(`\nVOICE DESIGN failed (${r1.status}): ${JSON.stringify(j1).slice(0, 300)}`);
+  else {
+    const r2 = await fetch("https://api.elevenlabs.io/v1/text-to-voice", { method: "POST", headers: H, body: JSON.stringify({ voice_name: "Friday", voice_description: process.env.VOICE_DESIGN, generated_voice_id: gen }) });
+    const j2 = await r2.json().catch(() => ({}));
+    if (!j2.voice_id) console.log(`\nVOICE SAVE failed (${r2.status}): ${JSON.stringify(j2).slice(0, 300)}`);
+    else {
+      const r3 = await fetch(URL_ + "/voice", { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: JSON.stringify({ voice_id: j2.voice_id }) });
+      console.log(`\nVOICE DESIGN: made "Friday" (${j2.voice_id}); Friday now uses it: ${r3.status} ${(await r3.text()).slice(0, 120)}`);
+    }
+  }
+} else if (process.env.VOICE_DESIGN) console.log("\nVOICE DESIGN: no ElevenLabs key in this workflow");
 
 // natural voice (ElevenLabs): one short line
 {

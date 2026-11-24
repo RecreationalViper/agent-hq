@@ -21,3 +21,4 @@ jobs:
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
           QUESTIONS: ${{ inputs.questions }}
           VOICE_DESIGN: ${{ inputs.voice_design }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY || secrets.ELEVENLABS_KEY || secrets.ELEVEN_LABS_API_KEY || secrets.ELEVENLABS }}

@@ -1165,7 +1165,7 @@ async function fridayTts(req, env) {
 }
 
 
-// Friday's eyes: Gemini first, then Groq's Llama 4 vision. Returns a detailed description plus any text in the photo.
+// Friday's eyes: Gemini first, then any free vision model we have (Groq, NVIDIA, Mistral, OpenRouter). Returns a detailed description plus any text in the photo.
 async function seePhoto(env, dataUrl, question = "") {
   const [, mime, b64] = dataUrl.match(/^data:(image\/[a-z]+);base64,(.*)$/) || [];
   if (!b64) return "";
@@ -1183,15 +1183,30 @@ async function seePhoto(env, dataUrl, question = "") {
       errs.push(`gemini ${model} empty ${JSON.stringify(j).slice(0, 120)}`);
     } catch (e) { errs.push(`gemini ${model} ${e.message}`); }
   }
-  if (env.GROQ_API_KEY) for (const model of ["meta-llama/llama-4-scout-17b-16e-instruct", "meta-llama/llama-4-maverick-17b-128e-instruct"]) {
+  // OpenAI-style vision fallbacks: Groq (whatever vision models it lists today), NVIDIA, Mistral, OpenRouter free
+  let groqVision = [];
+  if (env.GROQ_API_KEY) try {
+    const m = await fetch("https://api.groq.com/openai/v1/models", { headers: { Authorization: `Bearer ${env.GROQ_API_KEY}` }, signal: AbortSignal.timeout(6000) }).then((r) => r.json());
+    groqVision = (m.data || []).map((x) => x.id).filter((i) => /vision|scout|maverick|[-/]vl|gemma-?4|omni|kimi-k2\.?[5-9]/i.test(i) && !/guard|whisper|tts/i.test(i)).slice(0, 3);
+  } catch {}
+  const tries = [
+    ...groqVision.map((m) => [env.GROQ_API_KEY, "https://api.groq.com/openai/v1/chat/completions", m]),
+    [env.NVIDIA_API_KEY, "https://integrate.api.nvidia.com/v1/chat/completions", "google/gemma-4-31b-it"],
+    [env.NVIDIA_API_KEY, "https://integrate.api.nvidia.com/v1/chat/completions", "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"],
+    [env.MISTRAL_API_KEY, "https://api.mistral.ai/v1/chat/completions", "ministral-14b-latest"],
+    [env.OPENROUTER_API_KEY, "https://openrouter.ai/api/v1/chat/completions", "google/gemma-4-31b-it:free"]
+  ];
+  for (const [k, url, model] of tries) {
+    if (!k) continue;
     try {
-      const r = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", signal: AbortSignal.timeout(25000),
-        headers: { Authorization: `Bearer ${env.GROQ_API_KEY}`, "content-type": "application/json" },
-        body: JSON.stringify({ model, max_tokens: 700, temperature: 0.2, messages: [{ role: "user", content: [{ type: "text", text: ask }, { type: "image_url", image_url: { url: dataUrl } }] }] }) });
-      if (!r.ok) { errs.push(`groq ${model} ${r.status} ${(await r.text()).slice(0, 120)}`); continue; }
-      const t = ((await r.json()).choices?.[0]?.message?.content || "").trim();
+      const r = await fetch(url, { method: "POST", signal: AbortSignal.timeout(30000),
+        headers: { Authorization: `Bearer ${k}`, "content-type": "application/json" },
+        body: JSON.stringify({ model, max_tokens: 900, temperature: 0.2, messages: [{ role: "user", content: [{ type: "text", text: ask }, { type: "image_url", image_url: { url: dataUrl } }] }] }) });
+      if (!r.ok) { errs.push(`${new URL(url).hostname.split(".").slice(-2, -1)[0]} ${model} ${r.status} ${(await r.text()).slice(0, 100)}`); continue; }
+      const t = ((await r.json()).choices?.[0]?.message?.content || "").replace(/<think>[\s\S]*?<\/think>/g, "").trim();
       if (t) return t.slice(0, 2500);
-    } catch (e) { errs.push(`groq ${model} ${e.message}`); }
+      errs.push(`${model} empty`);
+    } catch (e) { errs.push(`${model} ${e.message}`); }
   }
   await fridayLog(env, "eyes", errs.join(" / ").slice(0, 600) || "no vision key");
   return "";
