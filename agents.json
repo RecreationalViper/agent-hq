@@ -648,6 +648,22 @@
         "TikTok ad policy update",
         "Meta ads policy update"
       ]
+    },
+    {
+      "id": "competitor-radar",
+      "name": "Competitor Radar",
+      "schedule": "weekly:mon",
+      "group": "studio",
+      "saveAs": "studio/competitor-radar.md",
+      "readsFiles": [
+        "studio/competitor-data.md",
+        "studio/channels.json",
+        "studio/social-stats.md",
+        "studio/notes.md"
+      ],
+      "instructions": "Using the live competitor data below (this week's most-played TikTok edits in movie, anime and gaming), report: 1) the 5 biggest competitor edits with their real view counts and links, 2) for each, which movie/show/game and which scene it most likely uses (say 'unclear' if the caption doesn't make it clear - never guess a title as fact), 3) what they have in common (length, hook, sound, caption style), 4) the top 5 'clip this' picks for MotionVault: the source and scene to clip, and how our version should be different (our own cut, hook and ending). MotionVault never downloads or reposts other creators' videos: the owner gets the original source footage and Claude cuts an original edit. If the data says unavailable, say so plainly.",
+      "context": "The owner runs MotionVault, a short-form clipping brand on TikTok and YouTube Shorts (channel handles in studio/channels.json): 30-40 second vertical montages of movie, game and anime scenes built to go viral (hook in the first 1-2 seconds, a few long unbroken stretches in story order, a strong final beat that makes people rewatch). Claude, the studio's editor, does the actual cutting from clips the owner sends; this team plans what to clip and how to post it. The owner works from an iPhone and has a $0 budget. This is separate from the Forever Held shop.",
+      "rules": "Rules: You write plans and drafts only. Never claim you posted, edited, spent money or contacted anyone - you cannot. Never invent view counts, trend data, release dates or quotes; if you are unsure, say so. Copyright: favour short, transformative edits (montage, reaction, commentary), credit the title on screen, keep any single source stretch short, and never suggest leaked, pirated or unreleased footage. Think like a professional short-form creator and editor: be specific (which scene, which moment, which beat), not generic. You have no live internet access: if a fact may be out of date (release dates, trends), say so. Keep it short and phone-friendly, using simple markdown (headings, bullets)."
     }
   ],
   "docs": {

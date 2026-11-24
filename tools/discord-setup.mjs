@@ -2,6 +2,7 @@
 import { setupChannels, report, hasDiscord } from "../discord.mjs";
 if (!hasDiscord()) { console.log("RESULT: DISCORD_BOT_TOKEN secret is missing."); process.exit(1); }
 const r = await setupChannels();
+if (r.renamed?.length) console.log(`RENAMED: ${r.renamed.join(", ")}`);
 console.log(`RESULT: server "${r.server}", ${r.total} channels ready${r.created.length ? `, created: ${r.created.join(", ")}` : ""}${r.removed.length ? `, removed from Agent HQ: ${r.removed.join(", ")}` : ""}`);
 if (r.studioInvite && !r.studioBot) console.log(`STUDIO: the Studio bot isn't in a server with "Studio" in its name yet. Invite it: ${r.studioInvite}`);
 console.log(r.studioServer ? `STUDIO: using server "${r.studioServer}" with the ${r.studioBot ? "Studio" : "Agent HQ"} bot${r.leftStudio ? "; the Agent HQ bot left Studio HQ" : ""}` : `STUDIO: no server with "Studio" in its name yet. Invite the bot: ${r.invite}`);
