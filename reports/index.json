@@ -1,5 +1,95 @@
 [
   {
+    "file": "2026-11-23-studio-producer.md",
+    "agent": "studio-producer",
+    "name": "Producer",
+    "date": "2026-11-23"
+  },
+  {
+    "file": "2026-11-23-growth-coach.md",
+    "agent": "growth-coach",
+    "name": "Growth Coach",
+    "date": "2026-11-23"
+  },
+  {
+    "file": "2026-11-23-studio-critic.md",
+    "agent": "studio-critic",
+    "name": "Studio Critic",
+    "date": "2026-11-23"
+  },
+  {
+    "file": "2026-11-23-studio-writer.md",
+    "agent": "studio-writer",
+    "name": "Social Strategist",
+    "date": "2026-11-23"
+  },
+  {
+    "file": "2026-11-23-studio-director.md",
+    "agent": "studio-director",
+    "name": "Director",
+    "date": "2026-11-23"
+  },
+  {
+    "file": "2026-11-23-youtube-watcher.md",
+    "agent": "youtube-watcher",
+    "name": "YouTube Shorts Watcher",
+    "date": "2026-11-23"
+  },
+  {
+    "file": "2026-11-23-tiktok-fandoms.md",
+    "agent": "tiktok-fandoms",
+    "name": "TikTok Fandom Watcher",
+    "date": "2026-11-23"
+  },
+  {
+    "file": "2026-11-23-tiktok-formats.md",
+    "agent": "tiktok-formats",
+    "name": "TikTok Format Watcher",
+    "date": "2026-11-23"
+  },
+  {
+    "file": "2026-11-23-tiktok-sounds.md",
+    "agent": "tiktok-sounds",
+    "name": "TikTok Sound Watcher",
+    "date": "2026-11-23"
+  },
+  {
+    "file": "2026-11-23-studio-scout.md",
+    "agent": "studio-scout",
+    "name": "Trend Scout",
+    "date": "2026-11-23"
+  },
+  {
+    "file": "2026-11-23-github-radar.md",
+    "agent": "github-radar",
+    "name": "GitHub Radar",
+    "date": "2026-11-23"
+  },
+  {
+    "file": "2026-11-23-credit-scout.md",
+    "agent": "credit-scout",
+    "name": "Credit Scout",
+    "date": "2026-11-23"
+  },
+  {
+    "file": "2026-11-23-content.md",
+    "agent": "content",
+    "name": "Content Planner",
+    "date": "2026-11-23"
+  },
+  {
+    "file": "2026-11-23-seasonal.md",
+    "agent": "seasonal",
+    "name": "Seasonal Planner",
+    "date": "2026-11-23"
+  },
+  {
+    "file": "2026-11-23-daily-task.md",
+    "agent": "daily-task",
+    "name": "Daily Focus",
+    "date": "2026-11-23"
+  },
+  {
     "file": "2026-11-23-researcher.md",
     "agent": "researcher",
     "name": "Deep Researcher",

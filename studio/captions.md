@@ -1,73 +1,71 @@
-# Social Strategist (updated 2026-11-22)
+# Social Strategist (updated 2026-11-23)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# MotionVault Social Strategy — Nov 22, 2026
-
-Here is the social posting suite for today's 3 cuts. Ready to copy-paste directly into TikTok and YouTube Shorts.
+# Social Strategy & Distribution Plan (2026-11-23)
 
 ---
 
-## Clip 1: Grand Theft Auto VI — Vice City Police Chase
+### Clip 1: Grand Theft Auto VI — Lucia’s Vice City Standoff & RDR2 Revolver Easter Egg
 
-* **On-Screen Hook Text (6 words max):**
-  `POV: You work Vice City security 💀`
+* **On-Screen Hook Text (5 words):**  
+  `Lucia found Arthur Morgan's revolver 🤠💀`
 
 * **TikTok Captions:**
-  1. Jason and Lucia really pulled up like this 🏎️💨
-  2. Vice City cops never stood a chance 💀
-  3. Who’s your go-to getaway driver in GTA 6—Jason or Lucia? 🚗💨 *(Comment Driver)*
-  4. That squad car flip at 0:28 was personal 😭
+  1. Rockstar really hid Arthur Morgan’s revolver in Vice City 🤠💀
+  2. Lucia’s aura in this scene is completely unmatched 🔥
+  3. Did you notice this Red Dead Easter egg in the trailer, or did you miss it? 👁️
+  4. The way she draws it in slow-motion is so cold 🥶
 
-* **Hashtags (5-6):**
-  `#gta6` `#vicecity` `#gta6gameplay` `#gta6mandy` `#gamingclips` `#gtavi`
+* **Hashtags (6 total):**  
+  `#gta6` `#gta6lucia` `#grandtheftautovi` `#gta6easteregg` `#reddeadredemption2` `#rockstargames`
 
-* **YouTube Shorts Title (<60 chars):**
-  `The hardest escape in Vice City ☠️🔥 #gta6 #shorts` *(49 chars)*
+* **YouTube Shorts Title (50 chars):**  
+  `Only 1% Noticed Lucia's Revolver Here 🤠💀 | GTA 6`
 
-* **Best Post Time (NY / EST):**
-  **4:00 PM EST** — *Captures peak after-school and after-work US gaming traffic right as GTA 6 Twitch streams peak.*
+* **Best Post Time (New York / EST):**  
+  **4:00 PM EST** — *Captures students right after school and aligns with the early evening Twitch/gaming browsing spike on the US East Coast.*
 
 ---
 
-## Clip 2: The Hunger Games: Sunrise on the Reaping — Haymitch’s Arena Entrance
+### Clip 2: The Hunger Games: Sunrise on the Reaping — Haymitch’s 50th Arena Origin Parallel
 
-* **On-Screen Hook Text (6 words max):**
-  `The arena trick that changed everything 👑`
+* **On-Screen Hook Text (5 words):**  
+  `Haymitch was reaped at 16... 💔`
 
 * **TikTok Captions:**
-  1. Haymitch figured out the arena real quick 👑
-  2. The 50th Quarter Quell forcefield moment never gets old 😳
-  3. Did Haymitch have the smartest arena move in Hunger Games history? 🏹 *(Comment Driver)*
-  4. The parallel between Katniss and Haymitch here gives chills 🥀
+  1. Knowing what Haymitch went through at 16 changes everything 💔
+  2. This match-cut from the arena to older Haymitch breaks me every time 😭
+  3. Do you think Haymitch had the hardest arena in Hunger Games history? 🏹
+  4. The 50th Hunger Games backstory hits completely different 🌾
 
-* **Hashtags (5-6):**
-  `#hungergames` `#sunriseonthereaping` `#haymitch` `#booktok` `#movietok` `#quarterquell`
+* **Hashtags (6 total):**  
+  `#sunriseonthereaping` `#hungergames` `#haymitchabernathy` `#hungergamesedit` `#haymitchedit` `#catchingfire`
 
-* **YouTube Shorts Title (<60 chars):**
-  `The hardest arena move in Hunger Games ☠️🔥 #shorts` *(51 chars)*
+* **YouTube Shorts Title (54 chars):**  
+  `The Moment Haymitch Changed Forever 💔 | Hunger Games`
 
-* **Best Post Time (NY / EST):**
-  **6:30 PM EST** — *Hits the prime evening scroll window for MovieTok and BookTok fandom communities.*
+* **Best Post Time (New York / EST):**  
+  **7:30 PM EST** — *Hits peak evening scroll hours for drama/story fandom edits on TikTok and Shorts.*
 
 ---
 
-## Clip 3: Steel Ball Run: JoJo’s Bizarre Adventure — Gyro Zeppeli Race Countdown
+### Clip 3: Overgeared — Episode 9 Sakuga Battle Scene (Grid & Jishuka Flex)
 
-* **On-Screen Hook Text (6 words max):**
-  `#1 rated anime sequence hits different 🐎`
+* **On-Screen Hook Text (6 words):**  
+  `He was never just a blacksmith 💀🔥`
 
 * **TikTok Captions:**
-  1. Gyro Zeppeli's aura at the start line is unmatched 🟢⚡
-  2. The San Diego beach race start gave pure goosebumps 🐎
-  3. Is Steel Ball Run already the best anime of 2026? 💬 *(Comment Driver)*
-  4. Tusk awakening at the end was insane 😭🔥
+  1. Episode 9 animation budget went completely out of control 🔥
+  2. Grid stepping out of the smoke like that was pure aura ⚔️
+  3. Is Grid currently the most underrated MC this season, or nah? 🧠
+  4. Jishuka’s flaming arrow synced to the audio beat drop is clean 🎯
 
-* **Hashtags (5-6):**
-  `#steelballrun` `#jojosbizarreadventure` `#gyrozeppeli` `#sbr` `#animedit` `#jojotok`
+* **Hashtags (6 total):**  
+  `#overgeared` `#overgearedanime` `#grid` `#animeedit` `#sakuga` `#animeshorts`
 
-* **YouTube Shorts Title (<60 chars):**
-  `He is on another level 🐎🔥 #steelballrun #shorts` *(48 chars)*
+* **YouTube Shorts Title (46 chars):**  
+  `Grid Proved Why He's The GOAT 🔥 | Overgeared`
 
-* **Best Post Time (NY / EST):**
-  **8:00 PM EST** — *Targets late-night peak engagement for high-FPS anime edit audiences on Shorts and TikTok.*
+* **Best Post Time (New York / EST):**  
+  **9:00 PM EST** — *Targeted late-night prime time when anime edit communities are most active on phone feeds.*
