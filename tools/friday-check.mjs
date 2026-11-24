@@ -41,6 +41,11 @@ if (process.env.VOICE_DESIGN && ek) {
   }
 } else if (process.env.VOICE_DESIGN) console.log("\nVOICE DESIGN: no ElevenLabs key in this workflow");
 
+if (process.env.VOICE_ID) {
+  const r = await fetch(URL_ + "/voice", { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: JSON.stringify({ voice_id: process.env.VOICE_ID.trim() }) });
+  console.log(`\nVOICE SET: ${r.status} ${(await r.text()).slice(0, 120)}`);
+}
+
 // natural voice (ElevenLabs): one short line
 {
   const r = await fetch(URL_ + "/tts", { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: JSON.stringify({ text: "Hi Josiah, this is my new voice." }) });

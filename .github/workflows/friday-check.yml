@@ -5,6 +5,7 @@ on:
     inputs:
       questions: { description: "Questions separated by |", required: false }
       voice_design: { description: "Describe a new voice for Friday (optional)", required: false }
+      voice_id: { description: "ElevenLabs voice ID for Friday (optional)", required: false }
 permissions:
   contents: read
 jobs:
@@ -21,4 +22,5 @@ jobs:
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
           QUESTIONS: ${{ inputs.questions }}
           VOICE_DESIGN: ${{ inputs.voice_design }}
+          VOICE_ID: ${{ inputs.voice_id }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY || secrets.ELEVENLABS_KEY || secrets.ELEVEN_LABS_API_KEY || secrets.ELEVENLABS }}
