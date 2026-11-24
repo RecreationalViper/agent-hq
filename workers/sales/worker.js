@@ -588,10 +588,10 @@ async function fridayInner(req, env, ctx, trace = {}) {
 
   let tf = Date.now();
   // facts are cached for 2 minutes so back-to-back questions answer fast
-  const fkey = `friday:factcache:${owner ? "o" : "t"}`;
+  const factKey = `friday:factcache:${owner ? "o" : "t"}`;
   let facts = null;
-  try { const c = JSON.parse(await env.SALES.get(fkey) || "null"); if (c && Date.now() - c.t < 120000) facts = c.f; } catch {}
-  if (!facts) { facts = await fridayFacts(env, now, owner); const w = env.SALES.put(fkey, JSON.stringify({ t: Date.now(), f: facts }), { expirationTtl: 300 }).catch(() => {}); if (ctx?.waitUntil) ctx.waitUntil(w); trace.facts = "fresh"; } else trace.facts = "cached";
+  try { const c = JSON.parse(await env.SALES.get(factKey) || "null"); if (c && Date.now() - c.t < 120000) facts = c.f; } catch {}
+  if (!facts) { facts = await fridayFacts(env, now, owner); const w = env.SALES.put(factKey, JSON.stringify({ t: Date.now(), f: facts }), { expirationTtl: 300 }).catch(() => {}); if (ctx?.waitUntil) ctx.waitUntil(w); trace.facts = "fresh"; } else trace.facts = "cached";
   trace.facts_ms = Date.now() - tf; tf = Date.now();
 
   const system = `You are FRIDAY, Josiah Cottingham's personal AI, modeled on Tony Stark's FRIDAY (and JARVIS before her). ${FRIDAY_PERSONA}
