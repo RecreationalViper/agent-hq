@@ -235,3 +235,10 @@ if (process.env.MISTRAL_API_KEY?.trim()) {
     console.log(`RESULT mistral-diag ${model}: HTTP ${r.status} ${(await r.text()).slice(0, 200)} | ${hs}`);
   }
 }
+
+// Cohere trial key (Friday only): one tiny call
+if (process.env.COHERE_API_KEY?.trim()) {
+  const r = await fetch("https://api.cohere.ai/compatibility/v1/chat/completions", { method: "POST", headers: { Authorization: `Bearer ${process.env.COHERE_API_KEY.trim()}`, "Content-Type": "application/json" }, body: JSON.stringify({ model: "command-a-03-2025", messages: [{ role: "user", content: "Reply with the single word: ready" }], max_tokens: 5 }) });
+  const t = await r.text();
+  console.log(`RESULT Cohere: HTTP ${r.status} ${r.ok ? "WORKS " + (JSON.parse(t).choices?.[0]?.message?.content || "") : t.slice(0, 160)}`);
+} else console.log("RESULT Cohere: no key in this workflow");
