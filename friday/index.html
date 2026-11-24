@@ -287,6 +287,7 @@ async function ask(q, bubble, audio) {
     if (j.ran) add(`Started: ${j.ran.replace(/-/g, " ")}`, "note");
     if (j.remembered) add(`Remembered: ${j.remembered}`, "note");
     if (j.phone) pendingPhone = j.phone;
+    if (j.image) { const d = add("", "fri"); const im = document.createElement("img"); im.src = j.image; im.alt = "Picture from Friday"; im.style.cssText = "width:100%;border-radius:14px;display:block"; im.onclick = () => window.open(j.image, "_blank"); im.onload = () => { log.scrollTop = log.scrollHeight; }; d.appendChild(im); }
   } catch { say = "I can't reach my brain right now. Check your connection."; }
   add(say, "fri"); history.push({ role: "assistant", content: say });
   try { sessionStorage.setItem("friday-hist", JSON.stringify(history.slice(-20))); } catch {}

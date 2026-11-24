@@ -65,6 +65,7 @@ export default {
     if (url.pathname === "/friday/connect" || url.pathname === "/friday/google/callback") return fridayGoogleRoute(req, url, env);
     if (url.pathname === "/friday/connections") return fridayConnections(req, env);
     if (url.pathname === "/friday/spend") return fridaySpend(req, env);
+    if (url.pathname.startsWith("/friday/img/")) return fridayImg(env, url);
     if (url.pathname === "/friday/mechanic") return fridayMechanic(req, env);
     if (url.pathname === "/friday/briefing") return fridayBriefing(req, env);
     if (url.pathname.startsWith("/friday/plaid")) return fridayPlaid(req, env, url);
@@ -618,6 +619,7 @@ Google also has: {"do":"drive_search","query":"..."} {"do":"doc_read","query":"f
   {"tool":"read","url":"https://..."}  open and read any webpage or article he names or that a search found (use after "web" when the snippets aren't enough)
   {"tool":"markets","query":"what he asked","symbols":["TSLA","NVDA"],"portfolio":false}  LIVE economy + markets: Fed rate, Treasury yields, mortgage rates, inflation, jobs, oil, gas, housing, dollar, VIX, S&P/Nasdaq/Dow, gold, crypto, any stock symbols, and (portfolio:true) the trading desk's paper account. ALWAYS use this for any money/markets/economy question instead of memory. Explain like a sharp banker friend: what it is, why it moved, what it means for him and small businesses. Never promise returns; say when something is opinion.
   {"tool":"direct","agent":"content-creator|email-marketer|growth-coach|researcher|webdev","text":"his instruction"}  pass his instruction to an agent (it follows it on its next runs for 3 days). Also start that agent with "run" if he wants it now.
+  {"tool":"image","query":"a detailed description of the picture","size":"square|tall|wide"}  make a picture for him (art, ideas, social posts, product mockups, wallpapers). Write a rich visual description. Never a real person's likeness, celebrities, or brand logos/characters.
   {"tool":"wish","text":"what you can't do yet and should learn, or a bug you noticed"}  your self-improvement list. Use it whenever he asks for something you can't do, or something of yours broke. Your mechanic writes the code overnight and he approves it.
 To fix yourself right away (he says "fix yourself", "you're broken", "upgrade yourself"), use "run": "mechanic".
 When you use a lookup, "say" can be a short "One sec." because you'll answer again with the result.
@@ -678,11 +680,12 @@ ${facts.join("\n")}`;
     }
     return "";
   };
-  let gResult = null, lResult = null;
+  let gResult = null, lResult = null, image = "";
   if (!r.lookup && /\b(think (hard|deep|it through|about it)|ask claude)\b/i.test(q)) r.lookup = { tool: "think", query: q, context: facts.join("\n").slice(0, 2500) };
-  if (r.lookup && typeof r.lookup === "object" && (owner || ["web", "think", "report", "markets", "read"].includes(r.lookup.tool))) {
+  if (r.lookup && typeof r.lookup === "object" && (owner || ["web", "think", "report", "markets", "read", "image"].includes(r.lookup.tool))) {
     lResult = await fridayLookup(env, r.lookup);
-    if (["note", "direct", "wish"].includes(r.lookup.tool) || /^Couldn't|isn't connected|Unknown lookup/.test(lResult)) say = r.lookup.tool === "note" && lResult === "Saved to Notion." ? say : lResult;
+    if (r.lookup.tool === "image") { if (/^IMAGE /.test(lResult)) { image = lResult.slice(6); say = /^\s*one sec\.?\s*$/i.test(say) || !say ? "Here it is." : say; } else say = lResult; }
+    else if (["note", "direct", "wish"].includes(r.lookup.tool) || /^Couldn't|isn't connected|Unknown lookup/.test(lResult)) say = r.lookup.tool === "note" && lResult === "Saved to Notion." ? say : lResult;
     else { const a2 = await secondPass(`${r.lookup.tool.toUpperCase()} RESULT`, r.lookup, lResult); if (a2) say = a2; else { say = `Here's what I found: ${String(lResult).replace(/\n+/g, ". ").slice(0, 600)}`; await fridayLog(env, "lookup", `second pass gave no answer for ${r.lookup.tool}`); } }
   }
   let sResult = null;
@@ -708,7 +711,7 @@ ${facts.join("\n")}`;
   trace.tools_ms = Date.now() - tf; trace.tools = [r.google && "google", r.lookup && "lookup", r.shop && "shop", r.phone && "phone", r.run && "run"].filter(Boolean).join(",");
   if (/^\s*one sec\.?\s*$/i.test(say)) say = owner ? "Sorry, I couldn't pull that up just now. Try me again in a moment." : "That one needs Josiah's key.";
   const listen = r.listen === true || (r.listen !== false && /\?\s*$/.test(say));
-  return out({ ok: true, heard, say, listen: listen ? "yes" : "", ran: r.run || null, remembered: r.remember || null, google: gResult, shop: sResult ? String(sResult).slice(0, 600) : null, lookup: lResult ? String(lResult).slice(0, 600) : null, phone, phone_json: phone ? JSON.stringify(phone) : "", phone_url: phone ? phoneUrl(phone) : "" });
+  return out({ ok: true, heard, say, listen: listen ? "yes" : "", ran: r.run || null, remembered: r.remember || null, google: gResult, shop: sResult ? String(sResult).slice(0, 600) : null, lookup: lResult ? String(lResult).slice(0, 600) : null, phone, phone_json: phone ? JSON.stringify(phone) : "", phone_url: phone ? phoneUrl(phone) : (image || ""), image });
 }
 
 
@@ -768,7 +771,7 @@ async function fridayLive(req, env, isTool) {
     if (d.name === "get_status") return out({ ok: true, result: (await fridayFacts(env, new Date(), owner)).join("\n") });
     if (d.name === "google") return out({ ok: true, result: owner ? await runGoogle(env, a) : "Google tools are owner-only." });
     if (d.name === "shop") return out({ ok: true, result: owner ? await fridayShop(env, a) : "Shop tools are owner-only." });
-    if (d.name === "lookup") return out({ ok: true, result: owner || ["web", "think", "report", "markets", "read"].includes(a.tool) ? await fridayLookup(env, a) : "That lookup is owner-only." });
+    if (d.name === "lookup") return out({ ok: true, result: owner || ["web", "think", "report", "markets", "read", "image"].includes(a.tool) ? await fridayLookup(env, a) : "That lookup is owner-only." });
     if (d.name === "remember" && a.fact) { memory.push(`${String(a.fact).slice(0, 200)} (${new Date().toISOString().slice(0, 10)})`); await env.SALES.put("friday:memory", JSON.stringify(memory.slice(-200))); return out({ ok: true, result: "Saved." }); }
     if (d.name === "run_agent" && FRIDAY_RUNS[a.job]) {
       const [wf, inputs] = FRIDAY_RUNS[a.job];
@@ -1083,10 +1086,43 @@ async function fridayConnections(req, env) {
 //   discord  read recent messages in one of his Discord channels (agent reports, church replies, sales)
 //   report   read an agent's latest report from the repo
 const NOTION_PARENT = "41204f0345cd81cd8121eca748974d48";
+// Friday's pictures: Pollinations (Flux) first, then Cloudflare Workers AI FLUX.1 schnell. Both free.
+// Saved in KV for 30 days and served at /friday/img/<random id>.
+const FRIDAY_ORIGIN = "https://foreverheld-sales.foreverheld.workers.dev";
+async function fridayImage(env, prompt, size = "square") {
+  if (!prompt) return "Couldn't make it: no description.";
+  const [w, h] = size === "tall" ? [768, 1344] : size === "wide" ? [1344, 768] : [1024, 1024];
+  let bytes = null, type = "image/jpeg";
+  const errs = [];
+  if (env.POLLINATIONS_API_KEY) try {
+    const q = new URLSearchParams({ model: "flux", width: String(w), height: String(h), nologo: "true", private: "true" });
+    const r = await fetch(`https://gen.pollinations.ai/image/${encodeURIComponent(prompt)}?${q}`, { headers: { Authorization: `Bearer ${env.POLLINATIONS_API_KEY}` }, signal: AbortSignal.timeout(60000) });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    type = r.headers.get("content-type") || type; bytes = await r.arrayBuffer();
+  } catch (e) { errs.push(`pollinations ${e.message}`); }
+  if (!bytes && env.AI) try {
+    const o = await env.AI.run("@cf/black-forest-labs/flux-1-schnell", { prompt: prompt.slice(0, 2000), steps: 8 });
+    if (!o?.image) throw new Error("no image");
+    bytes = Uint8Array.from(atob(o.image), (c) => c.charCodeAt(0)).buffer; type = "image/jpeg";
+  } catch (e) { errs.push(`cloudflare ${e.message}`); }
+  if (!bytes) { await fridayLog(env, "image", errs.join(" / ")); return "Couldn't make the picture right now."; }
+  const id = crypto.randomUUID().replace(/-/g, "");
+  await env.SALES.put(`friday:img:${id}`, bytes, { expirationTtl: 30 * 86400, metadata: { type } });
+  return `IMAGE ${FRIDAY_ORIGIN}/friday/img/${id}`;
+}
+async function fridayImg(env, url) {
+  const id = url.pathname.split("/").pop();
+  if (!/^[a-f0-9]{32}$/.test(id)) return new Response("Not found", { status: 404 });
+  const { value, metadata } = await env.SALES.getWithMetadata(`friday:img:${id}`, { type: "arrayBuffer" });
+  if (!value) return new Response("This picture expired.", { status: 404 });
+  return new Response(value, { headers: { "content-type": metadata?.type || "image/jpeg", "cache-control": "public, max-age=2592000" } });
+}
+
 const CLAUDE_FRIDAY_CAP = 2; // dollars per month
 async function fridayLookup(env, a = {}) {
   const q = String(a.query || "").slice(0, 400);
   try {
+    if (a.tool === "image") return await fridayImage(env, String(a.query || a.text || "").slice(0, 1500), a.size);
     if (a.tool === "web") {
       if (env.TAVILY_API_KEY) try {
         const r = await fetch("https://api.tavily.com/search", { method: "POST", signal: AbortSignal.timeout(9000), headers: { Authorization: `Bearer ${env.TAVILY_API_KEY}`, "content-type": "application/json" }, body: JSON.stringify({ query: q, search_depth: "basic", max_results: 5, include_answer: true }) });
