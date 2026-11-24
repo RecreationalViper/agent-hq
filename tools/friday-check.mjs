@@ -24,7 +24,7 @@ for (const q of (process.env.QUESTIONS || "Good morning Friday, what's going on 
 // optional: design Friday's own voice (VOICE_DESIGN = a description)
 if (process.env.VOICE_DESIGN) {
   const r = await fetch(URL_ + "/voice", { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: JSON.stringify({ design: process.env.VOICE_DESIGN, name: "Friday" }) });
-  console.log(`\nVOICE DESIGN (${r.status}): ${JSON.stringify(await r.json().catch(() => ({})))}`);
+  console.log(`\nVOICE DESIGN (${r.status}): ${(await r.text()).replace(/\s+/g, " ").slice(0, 600)}`);
 }
 
 // natural voice (ElevenLabs): one short line
@@ -80,4 +80,4 @@ const tr = await fetch(URL_ + "/mechanic", { headers: { "x-friday-key": key } })
 console.log("\nRECENT TRACES:");
 for (const t of (tr.trace || []).slice(-12)) console.log(`  ${t.at} ${t.who} ${t.status} ${t.ms}ms facts=${t.facts}/${t.facts_ms}ms ai=${t.ai_ms}ms tools=${t.tools || "-"}/${t.tools_ms ?? "-"}ms ${t.type || ""} ${t.ua || ""}${t.crash ? " CRASH " + t.crash : ""}${t.keylen != null ? ` key(len ${t.keylen}, starts "${t.keyhead}", ends "${t.keytail}")` : ""}`);
 console.log("\nRECENT LOG:");
-for (const l of (tr.log || []).slice(-10)) console.log(`  ${l.at} ${l.kind}: ${l.text}`);
+for (const l of (tr.log || []).slice(-10)) console.log(`  ${l.at} ${l.kind}: ${String(l.text).replace(/\s+/g, " ")}`);
