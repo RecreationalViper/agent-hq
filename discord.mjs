@@ -20,17 +20,18 @@ export const CHANNELS = {
   "trading-desk": ["trading-desk", "Trading Desk (paper money): daily trades, Head Trader reviews, backtests"],
   research: ["research", "Deep Researcher, Credit Scout and GitHub Radar"],
   inbox: ["inbox", "Email team: Junk Sweeper results and Customer Care reply drafts"],
-  "studio-alerts": ["studio-alerts", "Studio runs that failed or need your attention", "studio"],
-  "studio-trends": ["studio-trends", "Studio: Trend Scout's daily clip opportunities (movies, games, anime)", "studio"],
-  "tiktok-trends": ["tiktok-trends", "TikTok Sound, Format and Fandom Watchers: what's rising on TikTok right now", "studio"],
-  "youtube-trends": ["youtube-trends", "YouTube Shorts Watcher: live YouTube chart data and what to clip for Shorts", "studio"],
-  growth: ["growth", "Growth Coach: channel stats, monetization progress and today's top actions", "studio"],
-  studio: ["studio", "Studio: Director's clip plans, Social Strategist captions, Studio Critic reviews, Producer's weekly plan", "studio"],
-  "ads-studio": ["ads-studio", "Ads Studio: Ad Creative Director concepts and Ad Copywriter copy", "studio"],
+  "studio-alerts": ["🚨・studio-alerts", "Studio runs that failed or need your attention", "studio"],
+  "studio-trends": ["🎬・studio-trends", "Studio: Trend Scout's daily clip opportunities (movies, games, anime)", "studio"],
+  "tiktok-trends": ["🎵・tiktok-trends", "TikTok Sound, Format and Fandom Watchers: what's rising on TikTok right now", "studio"],
+  "youtube-trends": ["📺・youtube-trends", "YouTube Shorts Watcher: live YouTube chart data and what to clip for Shorts", "studio"],
+  growth: ["📈・growth", "Growth Coach: channel stats, monetization progress and today's top actions", "studio"],
+  studio: ["🎥・studio", "Studio: Director's clip plans, Social Strategist captions, Studio Critic reviews, Producer's weekly plan", "studio"],
+  "competitor-radar": ["🎯・competitor-radar", "Competitor Radar: this week's top competitor edits and the scenes to clip next", "studio"],
+  "ads-studio": ["📣・ads-studio", "Ads Studio: Ad Creative Director concepts and Ad Copywriter copy", "studio"],
   alerts: ["alerts", "Anything that failed or needs your attention"]
 };
 // Which channel each agent reports to
-export const AGENT_CHANNEL = { "daily-task": "daily-focus", content: "content", ideas: "product-ideas", listing: "listings", review: "weekly-review", "credit-scout": "research", "github-radar": "research", researcher: "research", "trading-desk": "trading-desk", "head-trader": "trading-desk", backtest: "trading-desk", launch: "listings", seo: "seo", "competitor-scout": "competitors", "partner-finder": "competitors", "content-creator": "content", webdev: "content", seasonal: "content", "email-marketer": "content", "product-builder": "product-ideas", bookkeeper: "sales", "customer-care": "sales", "studio-scout": "studio-trends", "tiktok-sounds": "tiktok-trends", "tiktok-formats": "tiktok-trends", "tiktok-fandoms": "tiktok-trends", "youtube-watcher": "youtube-trends", "growth-coach": "growth", "studio-director": "studio", "studio-writer": "studio", "studio-critic": "studio", "studio-producer": "studio", "ads-director": "ads-studio", "ads-copywriter": "ads-studio" };
+export const AGENT_CHANNEL = { "daily-task": "daily-focus", content: "content", ideas: "product-ideas", listing: "listings", review: "weekly-review", "credit-scout": "research", "github-radar": "research", researcher: "research", "trading-desk": "trading-desk", "head-trader": "trading-desk", backtest: "trading-desk", launch: "listings", seo: "seo", "competitor-scout": "competitors", "partner-finder": "competitors", "content-creator": "content", webdev: "content", seasonal: "content", "email-marketer": "content", "product-builder": "product-ideas", bookkeeper: "sales", "customer-care": "sales", "studio-scout": "studio-trends", "tiktok-sounds": "tiktok-trends", "tiktok-formats": "tiktok-trends", "tiktok-fandoms": "tiktok-trends", "youtube-watcher": "youtube-trends", "growth-coach": "growth", "studio-director": "studio", "studio-writer": "studio", "studio-critic": "studio", "studio-producer": "studio", "ads-director": "ads-studio", "ads-copywriter": "ads-studio", "competitor-radar": "competitor-radar" };
 
 export const hasDiscord = () => Boolean(process.env.DISCORD_BOT_TOKEN || process.env.STUDIO_DISCORD_BOT_TOKEN);
 const MAIN = () => process.env.DISCORD_BOT_TOKEN?.trim() || "";
@@ -70,14 +71,16 @@ export async function setupChannels() {
   // Studio bot not invited yet: keep using Studio HQ through the Agent HQ bot, never fall back into Agent HQ.
   if (!studio && STUDIO()) { studio = guilds.find((g) => /studio/i.test(g.name)); if (studio) studioToken = MAIN(); }
   const guild = guilds.find((g) => /agent hq/i.test(g.name)) || guilds.find((g) => !/studio/i.test(g.name)) || guilds[0];
-  const ids = {}, created = [], removed = [];
+  const ids = {}, created = [], removed = [], renamed = [];
   async function build(g, catName, keys, token) {
     const existing = await api(`/guilds/${g.id}/channels`, {}, token);
     let cat = existing.find((c) => c.type === 4 && c.name.toLowerCase() === catName.toLowerCase());
     if (!cat) cat = await api(`/guilds/${g.id}/channels`, { method: "POST", body: JSON.stringify({ name: catName, type: 4 }) }, token);
     for (const key of keys) {
       const [name, topic] = CHANNELS[key];
-      let ch = existing.find((c) => c.type === 0 && c.name === name);
+      const plain = (x) => x.replace(/^[^a-z0-9]+/i, "");
+      let ch = existing.find((c) => c.type === 0 && c.name === name) || existing.find((c) => c.type === 0 && plain(c.name) === plain(name));
+      if (ch && ch.name !== name) { await api(`/channels/${ch.id}`, { method: "PATCH", body: JSON.stringify({ name }) }, token); renamed.push(`${ch.name} → ${name}`); }
       if (!ch) { ch = await api(`/guilds/${g.id}/channels`, { method: "POST", body: JSON.stringify({ name, type: 0, topic, parent_id: cat.id }) }, token); created.push(name); }
       ids[key] = ch.id;
     }
@@ -97,7 +100,7 @@ export async function setupChannels() {
     if (studioToken === STUDIO() && STUDIO() && guilds.some((g) => g.id === studio.id)) { await api(`/users/@me/guilds/${studio.id}`, { method: "DELETE", body: "{}" }); leftStudio = true; }
   }
   await fs.writeFile("discord.json", JSON.stringify({ server: guild.name, serverId: guild.id, ...(studio ? { studioServer: studio.name, studioServerId: studio.id } : {}), channels: ids }, null, 2) + "\n");
-  return { server: guild.name, studioServer: studio?.name || null, studioBot: Boolean(STUDIO()) && studioToken === STUDIO(), studioInvite, leftStudio, created, removed, invite, total: Object.keys(ids).length };
+  return { server: guild.name, studioServer: studio?.name || null, studioBot: Boolean(STUDIO()) && studioToken === STUDIO(), studioInvite, leftStudio, created, removed, renamed, invite, total: Object.keys(ids).length };
 }
 
 async function channelId(key) {
