@@ -485,6 +485,7 @@
         "studio/tiktok-fandoms.md",
         "studio/youtube-watch.md",
         "studio/channel-stats.md",
+        "studio/social-stats.md",
         "studio/live-data.md"
       ],
       "saveAs": "studio/clip-plan.md",
@@ -510,6 +511,7 @@
         "studio/tiktok-fandoms.md",
         "studio/youtube-watch.md",
         "studio/channel-stats.md",
+        "studio/social-stats.md",
         "studio/live-data.md"
       ],
       "saveAs": "studio/captions.md",
@@ -537,6 +539,7 @@
         "studio/tiktok-fandoms.md",
         "studio/youtube-watch.md",
         "studio/channel-stats.md",
+        "studio/social-stats.md",
         "studio/live-data.md"
       ],
       "instructions": "You are the studio's independent third opinion. Review today's clip plan and captions as a tough, experienced short-form editor. For each clip score 1-10: hook strength, rewatch value, comment bait, and copyright risk (10 = safest). Give the one change that would most improve it. Say plainly if a clip should be dropped and what to make instead. End with a one-line verdict: which clip to cut first.",
@@ -557,6 +560,7 @@
       "readsFiles": [
         "studio/channels.json",
         "studio/channel-stats.md",
+        "studio/social-stats.md",
         "studio/notes.md",
         "studio/clip-plan.md",
         "studio/trends.md",
@@ -595,6 +599,7 @@
         "studio/tiktok-fandoms.md",
         "studio/youtube-watch.md",
         "studio/channel-stats.md",
+        "studio/social-stats.md",
         "studio/live-data.md"
       ],
       "instructions": "Plan the studio's week: a 7-day posting calendar for TikTok and YouTube Shorts (how many posts a day, which slot), a balance of movies, games and anime, one recurring series idea that builds followers, one experiment to test this week, and what to track to tell if it worked. Use the owner's notes on what has done well.",
