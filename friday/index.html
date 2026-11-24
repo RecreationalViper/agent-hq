@@ -66,7 +66,7 @@
 <label class="t"><input type="checkbox" id="livebox" style="flex:0"> <b style="color:#8fd0ff">Live mode</b>&nbsp;(talk naturally, interrupt anytime)</label>
 <label class="t"><input type="checkbox" id="hands" style="flex:0"> Keep listening after she answers</label>
 <label class="t">Voice <select id="voice" style="background:#0f1424;color:#e8f1ff;border:1px solid #223055;border-radius:10px;padding:6px;max-width:60%"></select></label>
-<form id="f"><input id="q" placeholder="Or type to Friday…" autocomplete="off"><button>Send</button></form>
+<form id="f"><button type="button" id="cam" aria-label="Send a photo" style="background:none;border:0;font-size:22px;padding:0 6px;cursor:pointer">📷</button><input type="file" id="pic" accept="image/*" hidden><input id="q" placeholder="Or type to Friday…" autocomplete="off"><button>Send</button></form>
 <div id="sheet">
   <div style="display:flex;justify-content:space-between;align-items:center"><b style="letter-spacing:.32em;font-size:13px;color:var(--dim)">SETTINGS</b><button id="close" class="ghost" style="background:none;border:0;color:var(--blue);font-size:16px;font-weight:600">Done</button></div>
   <h3>CONNECTIONS</h3>
@@ -154,10 +154,12 @@ function pickVoice() {
   const sel = document.getElementById("voice");
   if (sel) { sel.innerHTML = `<option value="natural">✨ Friday (natural voice)</option>` + v.map((x) => `<option value="${x.voiceURI}">${x.name}</option>`).join(""); sel.value = saved && saved !== "natural" && voice ? voice.voiceURI : "natural"; }
 }
+try { if (!localStorage.getItem("friday-voice-v2")) { localStorage.setItem("friday-voice", "natural"); localStorage.setItem("friday-voice-v2", "1"); } } catch {}
 const useNatural = () => { try { const s = localStorage.getItem("friday-voice"); return !s || s === "natural"; } catch { return true; } };
 // iPhone only lets audio play after a tap: one audio engine is unlocked on the first tap and reused.
 let actx = null, src = null;
-document.addEventListener("click", () => { try { actx = actx || new (window.AudioContext || window.webkitAudioContext)(); if (actx.state !== "running") actx.resume(); } catch {} }, { capture: true });
+function unlockAudio() { try { actx = actx || new (window.AudioContext || window.webkitAudioContext)(); if (actx.state !== "running") actx.resume(); const b = actx.createBuffer(1, 1, 22050), s0 = actx.createBufferSource(); s0.buffer = b; s0.connect(actx.destination); s0.start(0); } catch {} }
+for (const ev of ["click", "touchend", "keydown"]) document.addEventListener(ev, unlockAudio, { capture: true });
 const stopNatural = () => { try { src && src.stop(); } catch {} src = null; };
 async function speakNatural(text) {
   if (!actx) return false;
@@ -290,13 +292,13 @@ function stopLive(remote) {
 
 $("#orb").onclick = () => { if (liveOn) { L ? stopLive() : startLive(); return; } if (body.classList.contains("speaking")) { speechSynthesis.cancel(); stopNatural(); state(); return; } listen(); };
 
-async function ask(q, bubble, audio) {
-  if (!bubble) add(q, "you");
+async function ask(q, bubble, audio, image) {
+  if (!bubble) { const b = add(q || "", "you"); if (image) { const im = document.createElement("img"); im.src = image; im.style.cssText = "width:60%;border-radius:12px;display:block;margin-top:" + (q ? "6px" : "0"); b.appendChild(im); } }
   state("thinking", audio ? "Hearing you…" : "Thinking…");
   let say = "";
   try {
     const r = await fetch(API, audio ? { method: "POST", headers: { "content-type": audio.type || "audio/mp4", "x-friday-key": key }, body: audio }
-      : { method: "POST", headers: { "content-type": "application/json", "x-friday-key": key }, body: JSON.stringify({ q }) });
+      : { method: "POST", headers: { "content-type": "application/json", "x-friday-key": key }, body: JSON.stringify(image ? { q, image } : { q }) });
     const j = await r.json();
     if (audio) { q = j.heard || ""; if (q) bubble.textContent = q; else bubble.remove(); }
     if (q) history.push({ role: "user", content: q });
@@ -313,7 +315,18 @@ async function ask(q, bubble, audio) {
   if (pendingPhone) { const p = pendingPhone; pendingPhone = null; add(`On your phone: ${p.do}`, "note"); location.href = "shortcuts://run-shortcut?name=" + encodeURIComponent("Friday Hands") + "&input=text&text=" + encodeURIComponent(JSON.stringify(p)); return; }
   if (hands) setTimeout(listen, 350);
 }
-$("#f").onsubmit = (e) => { e.preventDefault(); const q = $("#q").value.trim(); if (!q) return; $("#q").value = ""; $("#q").blur(); ask(q); };
+$("#f").onsubmit = (e) => { e.preventDefault(); unlockAudio(); const q = $("#q").value.trim(); if (!q) return; $("#q").value = ""; $("#q").blur(); ask(q); };
+// photos: shrink on the phone (max 1280px JPEG), then send with whatever is typed in the box as the question
+$("#cam").onclick = () => $("#pic").click();
+$("#pic").onchange = async (e) => {
+  const f = e.target.files && e.target.files[0]; e.target.value = ""; if (!f) return;
+  const img = await new Promise((ok, no) => { const i = new Image(); i.onload = () => ok(i); i.onerror = no; i.src = URL.createObjectURL(f); }).catch(() => null);
+  if (!img) { add("I couldn't open that photo. Try a screenshot or a different picture.", "fri"); return; }
+  const k = Math.min(1, 1280 / Math.max(img.width, img.height)), c = document.createElement("canvas");
+  c.width = Math.round(img.width * k); c.height = Math.round(img.height * k); c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+  const data = c.toDataURL("image/jpeg", 0.82); const q = $("#q").value.trim(); $("#q").value = "";
+  ask(q, null, null, data);
+};
 
 for (const m of history) add(m.content, m.role === "user" ? "you" : "fri");
 function greet() { if (!history.length) add("I'm here. Tap the orb and talk, or type below.", "fri"); }

@@ -11,6 +11,22 @@ for (const q of (process.env.QUESTIONS || "Good morning Friday, what's going on 
   console.log(`\nQ: ${q}  [${((Date.now() - t0) / 1000).toFixed(1)}s]\nA (${r.status}): ${j.say}${j.phone ? `\n[phone ${JSON.stringify(j.phone)}]` : ""}${j.ran ? `\n[ran ${j.ran}]` : ""}${j.image ? `\n[image ${j.image}]` : ""}${j.why ? `\n[why ${j.why.join(" | ")}]` : ""}`);
 }
 
+// eyes: send a real store image and ask about it
+{
+  const img = await fetch("https://recreationalviper.github.io/agent-hq/store/img/program-cover.png").then((r) => (r.ok ? r.arrayBuffer() : null)).catch(() => null);
+  if (img) {
+    const image = "data:image/png;base64," + Buffer.from(img).toString("base64");
+    const r = await fetch(URL_, { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: JSON.stringify({ q: "What is this and what does it say?", image }) });
+    const j = await r.json().catch(() => ({}));
+    console.log(`\nPHOTO (${r.status}): ${j.say}`);
+  }
+}
+// optional: design Friday's own voice (VOICE_DESIGN = a description)
+if (process.env.VOICE_DESIGN) {
+  const r = await fetch(URL_ + "/voice", { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: JSON.stringify({ design: process.env.VOICE_DESIGN, name: "Friday" }) });
+  console.log(`\nVOICE DESIGN (${r.status}): ${JSON.stringify(await r.json().catch(() => ({})))}`);
+}
+
 // natural voice (ElevenLabs): one short line
 {
   const r = await fetch(URL_ + "/tts", { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: JSON.stringify({ text: "Hi Josiah, this is my new voice." }) });

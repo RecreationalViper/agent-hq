@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       questions: { description: "Questions separated by |", required: false }
+      voice_design: { description: "Describe a new voice for Friday (optional)", required: false }
 permissions:
   contents: read
 jobs:
@@ -19,3 +20,4 @@ jobs:
         env:
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
           QUESTIONS: ${{ inputs.questions }}
+          VOICE_DESIGN: ${{ inputs.voice_design }}

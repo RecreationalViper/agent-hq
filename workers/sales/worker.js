@@ -67,6 +67,7 @@ export default {
     if (url.pathname === "/friday/spend") return fridaySpend(req, env);
     if (url.pathname.startsWith("/friday/img/")) return fridayImg(env, url);
     if (url.pathname === "/friday/tts") return fridayTts(req, env);
+    if (url.pathname === "/friday/voice") return fridayVoice(req, env);
     if (url.pathname === "/friday/mechanic") return fridayMechanic(req, env);
     if (url.pathname === "/friday/briefing") return fridayBriefing(req, env);
     if (url.pathname.startsWith("/friday/plaid")) return fridayPlaid(req, env, url);
@@ -580,7 +581,13 @@ async function fridayInner(req, env, ctx, trace = {}) {
     if (!heard.trim() || /^(you|thank you\.?|thanks for watching!?|\.+)$/i.test(heard.trim())) return out({ ok: true, heard: "", say: "I didn't catch that. Say it again?" });
     d = { q: heard };
   } else { try { d = await req.json(); } catch { d = {}; } }
-  const q = String(d.q || d.text || "").trim().slice(0, 2000);
+  let q = String(d.q || d.text || "").trim().slice(0, 2000);
+  // a photo from the app: a vision model describes it (and copies any text), then Friday answers as usual
+  if (typeof d.image === "string" && /^data:image\/(jpeg|png|webp|heic);base64,/.test(d.image) && d.image.length < 6e6) {
+    const seen = await seePhoto(env, d.image, q);
+    trace.photo = seen ? "seen" : "failed";
+    q = `${q || "What's in this photo?"}\n\n[He sent a photo. ${seen ? `What it shows: ${seen}` : "You couldn't open the photo, so say that and ask him to try again."}]`;
+  }
   if (!q) return out({ ok: true, say: "I'm here. What do you need?" });
 
   const memory = JSON.parse(await env.SALES.get("friday:memory") || "[]");
@@ -1135,7 +1142,7 @@ async function fridayTts(req, env) {
   let text = "";
   try { text = String((await req.json()).text || "").replace(/[*_#`]/g, "").trim().slice(0, 600); } catch {}
   if (!text) return new Response(null, { status: 204 });
-  const voice = (env.ELEVENLABS_VOICE || "EXAVITQu4vr4xnSDxMaL").trim();
+  const voice = (await env.SALES.get("friday:tts:voice") || env.ELEVENLABS_VOICE || "EXAVITQu4vr4xnSDxMaL").trim();
   try {
     const r = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voice}?output_format=mp3_44100_64`, { method: "POST", signal: AbortSignal.timeout(15000),
       headers: { "xi-api-key": ek, "content-type": "application/json", accept: "audio/mpeg" },
@@ -1148,6 +1155,64 @@ async function fridayTts(req, env) {
     }
     return new Response(r.body, { headers: { "content-type": "audio/mpeg", "cache-control": "no-store" } });
   } catch (e) { await fridayLog(env, "voice", `ElevenLabs ${e.message}`); return new Response(null, { status: 204 }); }
+}
+
+
+// Friday's eyes: Gemini first, then Groq's Llama 4 vision. Returns a detailed description plus any text in the photo.
+async function seePhoto(env, dataUrl, question = "") {
+  const [, mime, b64] = dataUrl.match(/^data:(image\/[a-z]+);base64,(.*)$/) || [];
+  if (!b64) return "";
+  const ask = `Describe this photo in detail for an assistant who can't see it. Copy every piece of readable text exactly (prices, totals, dates, names, numbers). ${question ? `He asked: "${question.slice(0, 300)}". Focus on what helps answer that.` : ""} Plain text, under 250 words.`;
+  if (env.GEMINI_API_KEY) for (const model of ["gemini-flash-latest", "gemini-3.8-flash"]) {
+    try {
+      const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", signal: AbortSignal.timeout(25000),
+        headers: { "x-goog-api-key": env.GEMINI_API_KEY, "content-type": "application/json" },
+        body: JSON.stringify({ contents: [{ role: "user", parts: [{ inline_data: { mime_type: mime, data: b64 } }, { text: ask }] }], generationConfig: { maxOutputTokens: 700, temperature: 0.2 } }) });
+      if (!r.ok) continue;
+      const j = await r.json();
+      const t = (j.candidates?.[0]?.content?.parts || []).filter((p) => !p.thought).map((p) => p.text || "").join("").trim();
+      if (t) return t.slice(0, 2500);
+    } catch {}
+  }
+  if (env.GROQ_API_KEY) for (const model of ["meta-llama/llama-4-scout-17b-16e-instruct", "meta-llama/llama-4-maverick-17b-128e-instruct"]) {
+    try {
+      const r = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", signal: AbortSignal.timeout(25000),
+        headers: { Authorization: `Bearer ${env.GROQ_API_KEY}`, "content-type": "application/json" },
+        body: JSON.stringify({ model, max_tokens: 700, temperature: 0.2, messages: [{ role: "user", content: [{ type: "text", text: ask }, { type: "image_url", image_url: { url: dataUrl } }] }] }) });
+      if (!r.ok) continue;
+      const t = ((await r.json()).choices?.[0]?.message?.content || "").trim();
+      if (t) return t.slice(0, 2500);
+    } catch {}
+  }
+  await fridayLog(env, "eyes", "no vision model could read the photo");
+  return "";
+}
+
+
+// Design Friday's own ElevenLabs voice from a description (an original voice, not a copy of any real person),
+// or set one by voice id from his library. Body: {"design":"description"} or {"voice_id":"..."}.
+async function fridayVoice(req, env) {
+  const key = sentKey(req);
+  const ok = (await sha256(key)) === FRIDAY_KEY_SHA || (env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)));
+  if (req.method !== "POST" || !ok) return out({ ok: false }, 401);
+  const ek = elevenKey(env);
+  if (!ek) return out({ ok: false, error: "no ElevenLabs key" });
+  let b = {}; try { b = await req.json(); } catch {}
+  const H = { "xi-api-key": ek, "content-type": "application/json" };
+  if (b.voice_id) { await env.SALES.put("friday:tts:voice", String(b.voice_id).slice(0, 60)); await env.SALES.delete("friday:tts:out"); return out({ ok: true, voice_id: b.voice_id }); }
+  const desc = String(b.design || "").slice(0, 900);
+  if (desc.length < 20) return out({ ok: false, error: "describe the voice (20+ characters)" });
+  const sample = "Morning, Josiah. Your calendar's clear until two, sales are steady, and I've already sorted the inbox. What are we building today?";
+  const r1 = await fetch("https://api.elevenlabs.io/v1/text-to-voice/design", { method: "POST", headers: H, body: JSON.stringify({ voice_description: desc, text: sample, model_id: "eleven_multilingual_ttv_v2" }) });
+  const j1 = await r1.json().catch(() => ({}));
+  const gen = j1.previews?.[0]?.generated_voice_id;
+  if (!r1.ok || !gen) return out({ ok: false, step: "design", status: r1.status, error: JSON.stringify(j1).slice(0, 300) });
+  const r2 = await fetch("https://api.elevenlabs.io/v1/text-to-voice", { method: "POST", headers: H, body: JSON.stringify({ voice_name: String(b.name || "Friday").slice(0, 40), voice_description: desc, generated_voice_id: gen }) });
+  const j2 = await r2.json().catch(() => ({}));
+  if (!r2.ok || !j2.voice_id) return out({ ok: false, step: "save", status: r2.status, error: JSON.stringify(j2).slice(0, 300) });
+  await env.SALES.put("friday:tts:voice", j2.voice_id);
+  await env.SALES.delete("friday:tts:out");
+  return out({ ok: true, voice_id: j2.voice_id });
 }
 
 const CLAUDE_FRIDAY_CAP = 2; // dollars per month
