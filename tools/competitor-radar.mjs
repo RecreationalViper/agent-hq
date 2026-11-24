@@ -8,7 +8,10 @@ const OUT = "studio/competitor-data.md";
 const today = new Date().toISOString().slice(0, 10);
 if (!KEY) { console.log("Competitor radar: no ScrapeCreators key set, skipping"); process.exit(0); }
 const last = (await fs.readFile(OUT, "utf8").catch(() => "")).match(/\((\d{4}-\d{2}-\d{2})\)/)?.[1];
-if (last && (Date.parse(today) - Date.parse(last)) / 86400000 < 6 && !process.env.FORCE) { console.log(`Competitor radar: last run ${last}, saving credits until next week`); process.exit(0); }
+// Twice a week (Mon + Thu), or whenever the Competitor Radar agent is run by hand.
+const dow = new Date().getUTCDay(), byHand = (process.env.RUN_MODE || "") === "competitor-radar";
+if (!byHand && ![1, 4].includes(dow)) { console.log("Competitor radar: runs Mondays and Thursdays"); process.exit(0); }
+if (!byHand && last === today) { console.log("Competitor radar: already ran today"); process.exit(0); }
 
 const NICHES = ["movie edit", "anime edit", "gaming edit"];
 const n = (x) => (x === undefined || x === null ? "?" : Number(x).toLocaleString("en-US"));
