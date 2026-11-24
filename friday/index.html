@@ -152,11 +152,29 @@ function pickVoice() {
   const score = (x) => (/premium/i.test(x.name) ? 0 : /enhanced/i.test(x.name) ? 1 : 2) * 10 + (/Ava/i.test(x.name) ? 0 : /Zoe|Samantha|Allison|Serena|Evan/i.test(x.name) ? 1 : 5);
   voice = v.find((x) => x.voiceURI === saved) || v.sort((a, b) => score(a) - score(b))[0] || null;
   const sel = document.getElementById("voice");
-  if (sel && v.length) { sel.innerHTML = v.map((x) => `<option value="${x.voiceURI}">${x.name}</option>`).join(""); if (voice) sel.value = voice.voiceURI; }
+  if (sel) { sel.innerHTML = `<option value="natural">✨ Friday (natural voice)</option>` + v.map((x) => `<option value="${x.voiceURI}">${x.name}</option>`).join(""); sel.value = saved && saved !== "natural" && voice ? voice.voiceURI : "natural"; }
 }
-if ("speechSynthesis" in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; setTimeout(pickVoice, 600); }
-document.getElementById("voice").onchange = (e) => { try { localStorage.setItem("friday-voice", e.target.value); } catch {} pickVoice(); speak("Hi Josiah, this is my voice now."); };
-function speak(text) {
+const useNatural = () => { try { const s = localStorage.getItem("friday-voice"); return !s || s === "natural"; } catch { return true; } };
+// iPhone only lets audio play after a tap: one audio engine is unlocked on the first tap and reused.
+let actx = null, src = null;
+document.addEventListener("click", () => { try { actx = actx || new (window.AudioContext || window.webkitAudioContext)(); if (actx.state !== "running") actx.resume(); } catch {} }, { capture: true });
+const stopNatural = () => { try { src && src.stop(); } catch {} src = null; };
+async function speakNatural(text) {
+  if (!actx) return false;
+  const r = await fetch(API + "/tts", { method: "POST", headers: { "content-type": "application/json", "x-friday-key": key }, body: JSON.stringify({ text }) });
+  if (r.status !== 200) return false;
+  if (actx.state !== "running") await actx.resume();
+  const data = await r.arrayBuffer();
+  const buf = await new Promise((ok, no) => actx.decodeAudioData(data, ok, no));
+  return new Promise((res) => {
+    stopNatural();
+    src = actx.createBufferSource(); src.buffer = buf; src.connect(actx.destination);
+    src.onended = () => { src = null; res(true); };
+    state("speaking", "Speaking… tap to interrupt"); src.start();
+  });
+}
+async function speak(text) {
+  if (useNatural() && key) { try { if (await speakNatural(text)) return; } catch {} }
   return new Promise((res) => {
     if (!("speechSynthesis" in window)) return res();
     speechSynthesis.cancel();
@@ -270,7 +288,7 @@ function stopLive(remote) {
   if (pendingPhone) { const p = pendingPhone; pendingPhone = null; location.href = "shortcuts://run-shortcut?name=" + encodeURIComponent("Friday Hands") + "&input=text&text=" + encodeURIComponent(JSON.stringify(p)); }
 }
 
-$("#orb").onclick = () => { if (liveOn) { L ? stopLive() : startLive(); return; } if (body.classList.contains("speaking")) { speechSynthesis.cancel(); state(); return; } listen(); };
+$("#orb").onclick = () => { if (liveOn) { L ? stopLive() : startLive(); return; } if (body.classList.contains("speaking")) { speechSynthesis.cancel(); stopNatural(); state(); return; } listen(); };
 
 async function ask(q, bubble, audio) {
   if (!bubble) add(q, "you");

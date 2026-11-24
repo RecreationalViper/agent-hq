@@ -66,6 +66,7 @@ export default {
     if (url.pathname === "/friday/connections") return fridayConnections(req, env);
     if (url.pathname === "/friday/spend") return fridaySpend(req, env);
     if (url.pathname.startsWith("/friday/img/")) return fridayImg(env, url);
+    if (url.pathname === "/friday/tts") return fridayTts(req, env);
     if (url.pathname === "/friday/mechanic") return fridayMechanic(req, env);
     if (url.pathname === "/friday/briefing") return fridayBriefing(req, env);
     if (url.pathname.startsWith("/friday/plaid")) return fridayPlaid(req, env, url);
@@ -1116,6 +1117,37 @@ async function fridayImg(env, url) {
   const { value, metadata } = await env.SALES.getWithMetadata(`friday:img:${id}`, { type: "arrayBuffer" });
   if (!value) return new Response("This picture expired.", { status: 404 });
   return new Response(value, { headers: { "content-type": metadata?.type || "image/jpeg", "cache-control": "public, max-age=2592000" } });
+}
+
+
+// Friday's natural voice: ElevenLabs (free plan, ~10k credits a month). Flash model = half a credit per character.
+// Returns MP3, or 204 when the voice is unavailable/used up so the app falls back to the iPhone voice.
+const elevenKey = (env) => (env.ELEVENLABS_API_KEY || env.ELEVENLABS_KEY || env.ELEVEN_LABS_API_KEY || env.ELEVENLABS || "").trim();
+async function fridayTts(req, env) {
+  const key = sentKey(req);
+  const ok = (await sha256(key)) === FRIDAY_KEY_SHA || (env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)));
+  if (req.method !== "POST" || !ok) return out({ ok: false }, 401);
+  const ek = elevenKey(env);
+  if (!ek) return new Response(null, { status: 204 });
+  const month = new Date().toISOString().slice(0, 7);
+  const outUntil = await env.SALES.get("friday:tts:out");
+  if (outUntil === month) return new Response(null, { status: 204 });
+  let text = "";
+  try { text = String((await req.json()).text || "").replace(/[*_#`]/g, "").trim().slice(0, 600); } catch {}
+  if (!text) return new Response(null, { status: 204 });
+  const voice = (env.ELEVENLABS_VOICE || "EXAVITQu4vr4xnSDxMaL").trim();
+  try {
+    const r = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voice}?output_format=mp3_44100_64`, { method: "POST", signal: AbortSignal.timeout(15000),
+      headers: { "xi-api-key": ek, "content-type": "application/json", accept: "audio/mpeg" },
+      body: JSON.stringify({ text, model_id: "eleven_flash_v2_5", voice_settings: { stability: 0.45, similarity_boost: 0.8, style: 0.15, speed: 1.03 } }) });
+    if (!r.ok) {
+      const t = (await r.text()).slice(0, 200);
+      if (/quota|credits|limit/i.test(t)) await env.SALES.put("friday:tts:out", month, { expirationTtl: 40 * 86400 });
+      await fridayLog(env, "voice", `ElevenLabs ${r.status}: ${t}`);
+      return new Response(null, { status: 204 });
+    }
+    return new Response(r.body, { headers: { "content-type": "audio/mpeg", "cache-control": "no-store" } });
+  } catch (e) { await fridayLog(env, "voice", `ElevenLabs ${e.message}`); return new Response(null, { status: 204 }); }
 }
 
 const CLAUDE_FRIDAY_CAP = 2; // dollars per month

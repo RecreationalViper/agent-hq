@@ -11,6 +11,13 @@ for (const q of (process.env.QUESTIONS || "Good morning Friday, what's going on 
   console.log(`\nQ: ${q}  [${((Date.now() - t0) / 1000).toFixed(1)}s]\nA (${r.status}): ${j.say}${j.phone ? `\n[phone ${JSON.stringify(j.phone)}]` : ""}${j.ran ? `\n[ran ${j.ran}]` : ""}${j.image ? `\n[image ${j.image}]` : ""}${j.why ? `\n[why ${j.why.join(" | ")}]` : ""}`);
 }
 
+// natural voice (ElevenLabs): one short line
+{
+  const r = await fetch(URL_ + "/tts", { method: "POST", headers: { "x-friday-key": key, "content-type": "application/json" }, body: JSON.stringify({ text: "Hi Josiah, this is my new voice." }) });
+  const b = r.status === 200 ? (await r.arrayBuffer()).byteLength : 0;
+  console.log(`\nTTS: HTTP ${r.status}${r.status === 200 ? ` ${r.headers.get("content-type")} ${b} bytes` : r.status === 204 ? " (no voice: key missing, used up, or refused; see mechanic log)" : ""}`);
+}
+
 // voice: send a short public speech sample (JFK, from the Whisper repo) as audio, like the app does
 const clip = await fetch("https://github.com/openai/whisper/raw/main/tests/jfk.flac").then((r) => (r.ok ? r.arrayBuffer() : null)).catch(() => null);
 if (clip) {
