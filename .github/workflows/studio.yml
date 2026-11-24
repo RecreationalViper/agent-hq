@@ -37,6 +37,8 @@ jobs:
         continue-on-error: true
         env:
           SCRAPCREATOR_API_KEY: ${{ secrets.SCRAPCREATOR_API_KEY }}
+          SCRAPECREATOR_API_KEY: ${{ secrets.SCRAPECREATOR_API_KEY }}
+          SCRAPECREATORS_API_KEY: ${{ secrets.SCRAPECREATORS_API_KEY }}
       - name: Run agents
         run: node run-agents.mjs
         env:
