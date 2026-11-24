@@ -1162,29 +1162,31 @@ async function fridayTts(req, env) {
 async function seePhoto(env, dataUrl, question = "") {
   const [, mime, b64] = dataUrl.match(/^data:(image\/[a-z]+);base64,(.*)$/) || [];
   if (!b64) return "";
+  const errs = [];
   const ask = `Describe this photo in detail for an assistant who can't see it. Copy every piece of readable text exactly (prices, totals, dates, names, numbers). ${question ? `He asked: "${question.slice(0, 300)}". Focus on what helps answer that.` : ""} Plain text, under 250 words.`;
   if (env.GEMINI_API_KEY) for (const model of ["gemini-flash-latest", "gemini-3.8-flash"]) {
     try {
       const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", signal: AbortSignal.timeout(25000),
         headers: { "x-goog-api-key": env.GEMINI_API_KEY, "content-type": "application/json" },
         body: JSON.stringify({ contents: [{ role: "user", parts: [{ inline_data: { mime_type: mime, data: b64 } }, { text: ask }] }], generationConfig: { maxOutputTokens: 700, temperature: 0.2 } }) });
-      if (!r.ok) continue;
+      if (!r.ok) { errs.push(`gemini ${model} ${r.status} ${(await r.text()).slice(0, 120)}`); continue; }
       const j = await r.json();
       const t = (j.candidates?.[0]?.content?.parts || []).filter((p) => !p.thought).map((p) => p.text || "").join("").trim();
       if (t) return t.slice(0, 2500);
-    } catch {}
+      errs.push(`gemini ${model} empty ${JSON.stringify(j).slice(0, 120)}`);
+    } catch (e) { errs.push(`gemini ${model} ${e.message}`); }
   }
   if (env.GROQ_API_KEY) for (const model of ["meta-llama/llama-4-scout-17b-16e-instruct", "meta-llama/llama-4-maverick-17b-128e-instruct"]) {
     try {
       const r = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", signal: AbortSignal.timeout(25000),
         headers: { Authorization: `Bearer ${env.GROQ_API_KEY}`, "content-type": "application/json" },
         body: JSON.stringify({ model, max_tokens: 700, temperature: 0.2, messages: [{ role: "user", content: [{ type: "text", text: ask }, { type: "image_url", image_url: { url: dataUrl } }] }] }) });
-      if (!r.ok) continue;
+      if (!r.ok) { errs.push(`groq ${model} ${r.status} ${(await r.text()).slice(0, 120)}`); continue; }
       const t = ((await r.json()).choices?.[0]?.message?.content || "").trim();
       if (t) return t.slice(0, 2500);
-    } catch {}
+    } catch (e) { errs.push(`groq ${model} ${e.message}`); }
   }
-  await fridayLog(env, "eyes", "no vision model could read the photo");
+  await fridayLog(env, "eyes", errs.join(" / ").slice(0, 600) || "no vision key");
   return "";
 }
 
@@ -1192,6 +1194,9 @@ async function seePhoto(env, dataUrl, question = "") {
 // Design Friday's own ElevenLabs voice from a description (an original voice, not a copy of any real person),
 // or set one by voice id from his library. Body: {"design":"description"} or {"voice_id":"..."}.
 async function fridayVoice(req, env) {
+  try { return await fridayVoiceInner(req, env); } catch (e) { return out({ ok: false, error: String(e.stack || e).slice(0, 400) }); }
+}
+async function fridayVoiceInner(req, env) {
   const key = sentKey(req);
   const ok = (await sha256(key)) === FRIDAY_KEY_SHA || (env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)));
   if (req.method !== "POST" || !ok) return out({ ok: false }, 401);
