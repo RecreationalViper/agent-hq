@@ -2,33 +2,25 @@
 
 > Scanned 12 of 33 saved searches (12 returned data, 0 unchanged, 0 failed). 26 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (2)
+## Start here (1)
 
-- **[HKUDS/OpenHarness](https://github.com/HKUDS/OpenHarness)** 🟡 WATCH · score 65/100 · ⭐ 16,239 · MIT · updated 1d ago
-  - "OpenHarness: Open Agent Harness with a Built-in Personal Agent--Ohmo!"
-  - Why: filed under skills; 16,239 stars; updated this week; MIT license; well established
-- **[seanbabalala/SiftGate](https://github.com/seanbabalala/SiftGate)** 🟡 WATCH · score 60/100 · ⭐ 675 · MIT · updated 1d ago
-  - Self-hosted AI gateway for enterprise AI governance: scoped keys and policy, metadata-only audit, budgets and chargeback, smart routing and failove…
-  - Why: 675 stars; updated this week; MIT license; directly cuts AI spend
-  - Watch out: needs a machine running, not phone-only
+- **[backnotprop/plannotator](https://github.com/backnotprop/plannotator)** 🟢 ADOPT · score 82/100 · ⭐ 14,814 · Apache-2.0 · updated 0d ago
+  - The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agen…
+  - Why: 14,814 stars; updated this week; Apache-2.0 license; well established; contains SKILL.md skill files
+  - Confirmed: contains `SKILL.md` skill files
 
-## Just launched — new repos (3)
+## Just launched — new repos (2)
 
 _Created in the last few weeks. Surfaced early on purpose, so they stay WATCH until they have a track record._
 
-- **[xikhar/papercraft](https://github.com/xikhar/papercraft)** 🟡 WATCH · score 79/100 · ⭐ 462 · MIT · updated 2d ago
-  - Agent skill to build games, interactive scenes, web pages and animations in a handcrafted pop-up papercraft style
-  - Why: filed under skills; 462 stars; updated this week; MIT license; new repo, 3 days old; early traction; contains SKILL.md skill files
-  - Watch out: brand-new repo — unproven, watch before adopting
-  - Confirmed: contains `SKILL.md` skill files
-- **[w01fb0ss/PiBot](https://github.com/w01fb0ss/PiBot)** 🟡 WATCH · score 76/100 · ⭐ 507 · Apache-2.0 · updated 0d ago
-  - Open-source, local-first AI agent team for your desktop: multi-agent group chats, computer use, browser, MCP, routines and approvals. macOS, Window…
-  - Why: filed under skills; 507 stars; updated this week; Apache-2.0 license; new repo, 3 days old; early traction
-  - Watch out: brand-new repo — unproven, watch before adopting; needs a machine running, not phone-only
-- **[erkamyaman/safe-anything](https://github.com/erkamyaman/safe-anything)** 🟡 WATCH · score 74/100 · ⭐ 505 · MIT · updated 0d ago
-  - Find the holes before someone else does. A fast, 100% Rust vulnerability scanner: XSS, SQL injection, leaked secrets, dependency CVEs and AI agent …
-  - Why: filed under skills; 505 stars; updated this week; MIT license; new repo, 1 day old; early traction
-  - Watch out: brand-new repo — unproven, watch before adopting
+- **[GF007/game-rebuild-kit](https://github.com/GF007/game-rebuild-kit)** 🟡 WATCH · score 71/100 · ⭐ 105 · MIT · updated 4d ago
+  - AI-assisted game analysis and reconstruction, working toward one-click workflows for any game.
+  - Why: filed under skills; 105 stars; updated this week; MIT license; new repo, 4 days old; early traction
+  - Watch out: brand-new repo — unproven, watch before adopting; unofficial/scraping based — may break or breach terms
+- **[duwqijlk/browser-capture](https://github.com/duwqijlk/browser-capture)** 🟡 WATCH · score 69/100 · ⭐ 188 · MIT · updated 1d ago
+  - Zero-dependency browser CDP + stealth Hook capture & reverse-engineering AI Skill / CLI for BitBrowser, AdsPower, and Chrome/VisibleV8
+  - Why: filed under skills; 188 stars; updated this week; MIT license; new repo, 1 day old; early traction
+  - Watch out: brand-new repo — unproven, watch before adopting; unofficial/scraping based — may break or breach terms
 
 ## Agent skills you could install (0)
 

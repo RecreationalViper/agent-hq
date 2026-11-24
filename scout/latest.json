@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T02:27:10.561Z",
+  "generatedAt": "2026-11-24T14:02:00.448Z",
   "date": "2026-11-24",
   "token": true,
   "searches": {
@@ -10,58 +10,31 @@
     "failed": 0
   },
   "apiCalls": 26,
-  "rateRemaining": 9,
-  "newItems": 6,
+  "rateRemaining": 10,
+  "newItems": 3,
   "blockedToday": 0,
   "shortlist": [
     {
-      "name": "HKUDS/OpenHarness",
-      "url": "https://github.com/HKUDS/OpenHarness",
-      "description": "\"OpenHarness: Open Agent Harness with a Built-in Personal Agent--Ohmo!\"",
-      "stars": 16239,
-      "forks": 2624,
-      "language": "Python",
-      "license": "MIT",
-      "pushedAt": "2026-11-23T04:28:10Z",
+      "name": "backnotprop/plannotator",
+      "url": "https://github.com/backnotprop/plannotator",
+      "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+      "stars": 14814,
+      "forks": 1430,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-24T13:51:10Z",
       "category": "skills",
-      "score": 65,
-      "tier": "watch",
+      "score": 82,
+      "tier": "adopt",
       "reasons": [
-        "filed under skills",
-        "16,239 stars",
+        "14,814 stars",
         "updated this week",
-        "MIT license",
-        "well established"
+        "Apache-2.0 license",
+        "well established",
+        "contains SKILL.md skill files"
       ],
       "flags": [],
-      "skillFiles": null,
-      "source": "search",
-      "newborn": false,
-      "skillPath": null,
-      "commitUrl": null
-    },
-    {
-      "name": "seanbabalala/SiftGate",
-      "url": "https://github.com/seanbabalala/SiftGate",
-      "description": "Self-hosted AI gateway for enterprise AI governance: scoped keys and policy, metadata-only audit, budgets and chargeback, smart routing and failover for apps, coding agents and MCP tools.",
-      "stars": 675,
-      "forks": 47,
-      "language": "TypeScript",
-      "license": "MIT",
-      "pushedAt": "2026-11-23T03:05:55Z",
-      "category": "efficiency",
-      "score": 60,
-      "tier": "watch",
-      "reasons": [
-        "675 stars",
-        "updated this week",
-        "MIT license",
-        "directly cuts AI spend"
-      ],
-      "flags": [
-        "self-host-required"
-      ],
-      "skillFiles": null,
+      "skillFiles": true,
       "source": "search",
       "newborn": false,
       "skillPath": null,
@@ -71,58 +44,28 @@
   "watched": [],
   "newborn": [
     {
-      "name": "xikhar/papercraft",
-      "url": "https://github.com/xikhar/papercraft",
-      "description": "Agent skill to build games, interactive scenes, web pages and animations in a handcrafted pop-up papercraft style",
-      "stars": 462,
-      "forks": 46,
-      "language": "JavaScript",
+      "name": "GF007/game-rebuild-kit",
+      "url": "https://github.com/GF007/game-rebuild-kit",
+      "description": "AI-assisted game analysis and reconstruction, working toward one-click workflows for any game.",
+      "stars": 105,
+      "forks": 30,
+      "language": "",
       "license": "MIT",
-      "pushedAt": "2026-11-21T17:37:19Z",
+      "pushedAt": "2026-11-20T05:06:07Z",
       "category": "skills",
-      "score": 79,
+      "score": 71,
       "tier": "watch",
       "reasons": [
         "filed under skills",
-        "462 stars",
+        "105 stars",
         "updated this week",
         "MIT license",
-        "new repo, 3 days old",
-        "early traction",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [
-        "newborn"
-      ],
-      "skillFiles": true,
-      "source": "search",
-      "newborn": true,
-      "skillPath": null,
-      "commitUrl": null
-    },
-    {
-      "name": "w01fb0ss/PiBot",
-      "url": "https://github.com/w01fb0ss/PiBot",
-      "description": "Open-source, local-first AI agent team for your desktop: multi-agent group chats, computer use, browser, MCP, routines and approvals. macOS, Windows, Linux + Android. Built on pi.",
-      "stars": 507,
-      "forks": 71,
-      "language": "TypeScript",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-23T17:08:53Z",
-      "category": "skills",
-      "score": 76,
-      "tier": "watch",
-      "reasons": [
-        "filed under skills",
-        "507 stars",
-        "updated this week",
-        "Apache-2.0 license",
-        "new repo, 3 days old",
+        "new repo, 4 days old",
         "early traction"
       ],
       "flags": [
         "newborn",
-        "self-host-required"
+        "tos-risk"
       ],
       "skillFiles": null,
       "source": "search",
@@ -131,27 +74,28 @@
       "commitUrl": null
     },
     {
-      "name": "erkamyaman/safe-anything",
-      "url": "https://github.com/erkamyaman/safe-anything",
-      "description": "Find the holes before someone else does. A fast, 100% Rust vulnerability scanner: XSS, SQL injection, leaked secrets, dependency CVEs and AI agent setups.",
-      "stars": 505,
-      "forks": 36,
-      "language": "Rust",
+      "name": "duwqijlk/browser-capture",
+      "url": "https://github.com/duwqijlk/browser-capture",
+      "description": "Zero-dependency browser CDP + stealth Hook capture & reverse-engineering AI Skill / CLI for BitBrowser, AdsPower, and Chrome/VisibleV8",
+      "stars": 188,
+      "forks": 95,
+      "language": "JavaScript",
       "license": "MIT",
-      "pushedAt": "2026-11-23T20:22:42Z",
+      "pushedAt": "2026-11-23T08:19:50Z",
       "category": "skills",
-      "score": 74,
+      "score": 69,
       "tier": "watch",
       "reasons": [
         "filed under skills",
-        "505 stars",
+        "188 stars",
         "updated this week",
         "MIT license",
         "new repo, 1 day old",
         "early traction"
       ],
       "flags": [
-        "newborn"
+        "newborn",
+        "tos-risk"
       ],
       "skillFiles": null,
       "source": "search",
@@ -163,26 +107,26 @@
   "byCategory": {
     "skills": [
       {
-        "name": "HKUDS/OpenHarness",
-        "url": "https://github.com/HKUDS/OpenHarness",
-        "description": "\"OpenHarness: Open Agent Harness with a Built-in Personal Agent--Ohmo!\"",
-        "stars": 16239,
-        "forks": 2624,
-        "language": "Python",
-        "license": "MIT",
-        "pushedAt": "2026-11-23T04:28:10Z",
+        "name": "backnotprop/plannotator",
+        "url": "https://github.com/backnotprop/plannotator",
+        "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+        "stars": 14814,
+        "forks": 1430,
+        "language": "TypeScript",
+        "license": "Apache-2.0",
+        "pushedAt": "2026-11-24T13:51:10Z",
         "category": "skills",
-        "score": 65,
-        "tier": "watch",
+        "score": 82,
+        "tier": "adopt",
         "reasons": [
-          "filed under skills",
-          "16,239 stars",
+          "14,814 stars",
           "updated this week",
-          "MIT license",
-          "well established"
+          "Apache-2.0 license",
+          "well established",
+          "contains SKILL.md skill files"
         ],
         "flags": [],
-        "skillFiles": null,
+        "skillFiles": true,
         "source": "search",
         "newborn": false,
         "skillPath": null,
@@ -191,35 +135,7 @@
     ],
     "enhancement": [],
     "free-tokens": [],
-    "efficiency": [
-      {
-        "name": "seanbabalala/SiftGate",
-        "url": "https://github.com/seanbabalala/SiftGate",
-        "description": "Self-hosted AI gateway for enterprise AI governance: scoped keys and policy, metadata-only audit, budgets and chargeback, smart routing and failover for apps, coding agents and MCP tools.",
-        "stars": 675,
-        "forks": 47,
-        "language": "TypeScript",
-        "license": "MIT",
-        "pushedAt": "2026-11-23T03:05:55Z",
-        "category": "efficiency",
-        "score": 60,
-        "tier": "watch",
-        "reasons": [
-          "675 stars",
-          "updated this week",
-          "MIT license",
-          "directly cuts AI spend"
-        ],
-        "flags": [
-          "self-host-required"
-        ],
-        "skillFiles": null,
-        "source": "search",
-        "newborn": false,
-        "skillPath": null,
-        "commitUrl": null
-      }
-    ]
+    "efficiency": []
   },
   "blocked": [],
   "watching": [
