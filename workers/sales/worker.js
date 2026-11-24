@@ -66,8 +66,15 @@ export default {
     if (url.pathname === "/friday/connections") return fridayConnections(req, env);
     if (url.pathname === "/friday/spend") return fridaySpend(req, env);
     if (url.pathname.startsWith("/friday/img/")) return fridayImg(env, url);
-    if (url.pathname === "/friday/tts") return fridayTts(req, env);
-    if (url.pathname === "/friday/voice") return fridayVoice(req, env);
+    if (url.pathname === "/friday/tts" || url.pathname === "/friday/voice") {
+      // the app runs on github.io, so these need CORS (and the x-friday-key preflight)
+      const origin = req.headers.get("origin") || "";
+      const cors = /^https:\/\/recreationalviper\.github\.io$/i.test(origin) ? { "access-control-allow-origin": origin, "access-control-allow-methods": "POST, OPTIONS", "access-control-allow-headers": "content-type, x-friday-key", vary: "origin" } : {};
+      if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
+      const res = url.pathname === "/friday/tts" ? await fridayTts(req, env) : await fridayVoice(req, env);
+      const h = new Headers(res.headers); for (const [k, v] of Object.entries(cors)) h.set(k, v);
+      return new Response(res.body, { status: res.status, headers: h });
+    }
     if (url.pathname === "/friday/mechanic") return fridayMechanic(req, env);
     if (url.pathname === "/friday/briefing") return fridayBriefing(req, env);
     if (url.pathname.startsWith("/friday/plaid")) return fridayPlaid(req, env, url);
@@ -1133,7 +1140,7 @@ const elevenKey = (env) => (env.ELEVENLABS_API_KEY || env.ELEVENLABS_KEY || env.
 async function fridayTts(req, env) {
   const key = sentKey(req);
   const ok = (await sha256(key)) === FRIDAY_KEY_SHA || (env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)));
-  if (req.method !== "POST" || !ok) return out({ ok: false }, 401);
+  if (req.method !== "POST" || !ok) return json({ ok: false }, 401);
   const ek = elevenKey(env);
   if (!ek) return new Response(null, { status: 204 });
   const month = new Date().toISOString().slice(0, 7);
@@ -1194,30 +1201,30 @@ async function seePhoto(env, dataUrl, question = "") {
 // Design Friday's own ElevenLabs voice from a description (an original voice, not a copy of any real person),
 // or set one by voice id from his library. Body: {"design":"description"} or {"voice_id":"..."}.
 async function fridayVoice(req, env) {
-  try { return await fridayVoiceInner(req, env); } catch (e) { return out({ ok: false, error: String(e.stack || e).slice(0, 400) }); }
+  try { return await fridayVoiceInner(req, env); } catch (e) { return json({ ok: false, error: String(e.stack || e).slice(0, 400) }); }
 }
 async function fridayVoiceInner(req, env) {
   const key = sentKey(req);
   const ok = (await sha256(key)) === FRIDAY_KEY_SHA || (env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)));
-  if (req.method !== "POST" || !ok) return out({ ok: false }, 401);
+  if (req.method !== "POST" || !ok) return json({ ok: false }, 401);
   const ek = elevenKey(env);
-  if (!ek) return out({ ok: false, error: "no ElevenLabs key" });
+  if (!ek) return json({ ok: false, error: "no ElevenLabs key" });
   let b = {}; try { b = await req.json(); } catch {}
   const H = { "xi-api-key": ek, "content-type": "application/json" };
-  if (b.voice_id) { await env.SALES.put("friday:tts:voice", String(b.voice_id).slice(0, 60)); await env.SALES.delete("friday:tts:out"); return out({ ok: true, voice_id: b.voice_id }); }
+  if (b.voice_id) { await env.SALES.put("friday:tts:voice", String(b.voice_id).slice(0, 60)); await env.SALES.delete("friday:tts:out"); return json({ ok: true, voice_id: b.voice_id }); }
   const desc = String(b.design || "").slice(0, 900);
-  if (desc.length < 20) return out({ ok: false, error: "describe the voice (20+ characters)" });
+  if (desc.length < 20) return json({ ok: false, error: "describe the voice (20+ characters)" });
   const sample = "Morning, Josiah. Your calendar's clear until two, sales are steady, and I've already sorted the inbox. What are we building today?";
   const r1 = await fetch("https://api.elevenlabs.io/v1/text-to-voice/design", { method: "POST", headers: H, body: JSON.stringify({ voice_description: desc, text: sample, model_id: "eleven_multilingual_ttv_v2" }) });
   const j1 = await r1.json().catch(() => ({}));
   const gen = j1.previews?.[0]?.generated_voice_id;
-  if (!r1.ok || !gen) return out({ ok: false, step: "design", status: r1.status, error: JSON.stringify(j1).slice(0, 300) });
+  if (!r1.ok || !gen) return json({ ok: false, step: "design", status: r1.status, error: JSON.stringify(j1).slice(0, 300) });
   const r2 = await fetch("https://api.elevenlabs.io/v1/text-to-voice", { method: "POST", headers: H, body: JSON.stringify({ voice_name: String(b.name || "Friday").slice(0, 40), voice_description: desc, generated_voice_id: gen }) });
   const j2 = await r2.json().catch(() => ({}));
-  if (!r2.ok || !j2.voice_id) return out({ ok: false, step: "save", status: r2.status, error: JSON.stringify(j2).slice(0, 300) });
+  if (!r2.ok || !j2.voice_id) return json({ ok: false, step: "save", status: r2.status, error: JSON.stringify(j2).slice(0, 300) });
   await env.SALES.put("friday:tts:voice", j2.voice_id);
   await env.SALES.delete("friday:tts:out");
-  return out({ ok: true, voice_id: j2.voice_id });
+  return json({ ok: true, voice_id: j2.voice_id });
 }
 
 const CLAUDE_FRIDAY_CAP = 2; // dollars per month
