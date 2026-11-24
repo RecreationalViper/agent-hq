@@ -223,6 +223,13 @@ if (process.env.APIFY_TOKEN) {
   }
 }
 
+// Image makers (Pollinations, then Cloudflare FLUX): one tiny test image
+{
+  const { makeImage } = await import("./make-image.mjs");
+  try { const r = await makeImage("a small golden star icon on a dark background", "/tmp/provider-check.jpg", { width: 256, height: 256 }); console.log(`RESULT image maker: WORKS via ${r.via}`); }
+  catch (e) { console.log(`RESULT image maker: FAILED: ${e.message.slice(0, 200)}`); }
+}
+
 // Mistral diagnosis: models list + rate-limit headers on one tiny call (never prints the key)
 if (process.env.MISTRAL_API_KEY?.trim()) {
   const H = { Authorization: `Bearer ${process.env.MISTRAL_API_KEY.trim()}`, "Content-Type": "application/json" };

@@ -15,7 +15,7 @@ export const hasGroqKey = () => Boolean(process.env.GROQ_API_KEY);
 export const hasCloudflare = () => Boolean(process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID);
 // Any backup available? (Groq first, then Cloudflare Workers AI)
 export const hasOpenRouter = () => Boolean(process.env.OPENROUTER_API_KEY);
-export const hasGroq = () => ["MISTRAL_API_KEY", "SAMBANOVA_API_KEY", "CEREBRAS_API_KEY", "SILICONFLOW_API_KEY", "DEEPSEEK_API_KEY"].some((k) => process.env[k]?.trim()) || hasGroqKey() || hasCloudflare() || hasOpenRouter() || Boolean(process.env.NVIDIA_API_KEY?.trim()) || Boolean((process.env.REQUESTY_API_KEY || process.env.REQUESTY_KEY || "").trim());
+export const hasGroq = () => ["POLLINATIONS_API_KEY", "MISTRAL_API_KEY", "SAMBANOVA_API_KEY", "CEREBRAS_API_KEY", "SILICONFLOW_API_KEY", "DEEPSEEK_API_KEY"].some((k) => process.env[k]?.trim()) || hasGroqKey() || hasCloudflare() || hasOpenRouter() || Boolean(process.env.NVIDIA_API_KEY?.trim()) || Boolean((process.env.REQUESTY_API_KEY || process.env.REQUESTY_KEY || "").trim());
 
 async function call(path, init = {}) {
   const res = await gwFetch(BASE + path, { ...init, signal: AbortSignal.timeout(120000), headers: { Authorization: `Bearer ${process.env.GROQ_API_KEY}`, "Content-Type": "application/json" } });
@@ -257,7 +257,8 @@ const EXTRA = [
   ["Cerebras", "CEREBRAS_API_KEY", "https://api.cerebras.ai/v1", ["gpt-oss-120b", "llama-3.3-70b"]],
   ["SiliconFlow", "SILICONFLOW_API_KEY", "https://api.siliconflow.com/v1", ["Qwen/Qwen3-8B", "THUDM/GLM-4-9B-0414", "THUDM/glm-4-9b-chat", "Qwen/Qwen2.5-7B-Instruct", "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B", "internlm/internlm2_5-7b-chat"]],
   ["SiliconFlow-CN", "SILICONFLOW_API_KEY", "https://api.siliconflow.cn/v1", ["Qwen/Qwen3-8B", "THUDM/GLM-4-9B-0414", "THUDM/glm-4-9b-chat", "Qwen/Qwen2.5-7B-Instruct", "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B", "internlm/internlm2_5-7b-chat"]],
-  ["DeepSeek", "DEEPSEEK_API_KEY", "https://api.deepseek.com/v1", ["deepseek-chat"]]
+  ["DeepSeek", "DEEPSEEK_API_KEY", "https://api.deepseek.com/v1", ["deepseek-chat"]],
+  ["Pollinations", "POLLINATIONS_API_KEY", "https://gen.pollinations.ai/v1", ["openai", "mistral", "openai-fast"]]
 ];
 function extraProvider([name, env, base, models]) {
   const has = () => Boolean(process.env[env]?.trim());
