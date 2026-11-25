@@ -476,7 +476,7 @@ async function openAiStyle(url, key, model, system, history, extra = {}) {
 async function groqChat(env, system, history) {
   if (!env.GROQ_API_KEY) throw new Error("no key");
   const errs = [];
-  for (const [model, extra] of [["openai/gpt-oss-120b", { reasoning_effort: "low" }], ["llama-3.3-70b-versatile", {}], ["openai/gpt-oss-20b", { reasoning_effort: "low" }], ["meta-llama/llama-4-scout-17b-16e-instruct", {}], ["qwen/qwen3-32b", { reasoning_effort: "none" }]]) {
+  for (const [model, extra] of [["openai/gpt-oss-120b", { reasoning_effort: "low" }], ["llama-3.3-70b-versatile", {}], ["openai/gpt-oss-20b", { reasoning_effort: "low" }], ["llama-3.1-8b-instant", {}], ["qwen/qwen3-32b", { reasoning_effort: "none" }]]) {
     try { const t = await openAiStyle("https://api.groq.com/openai/v1/chat/completions", env.GROQ_API_KEY, model, system, history, extra); if (t) return t; }
     catch (e) { errs.push(e.message.slice(0, 60)); if (!/HTTP (429|413|404|5\d\d)/.test(e.message)) throw e; }
   }
@@ -1169,7 +1169,7 @@ async function fridayTts(req, env) {
       body: JSON.stringify({ text, model_id: "eleven_flash_v2_5", voice_settings: { stability: 0.45, similarity_boost: 0.8, style: 0.15, speed: 1.03 } }) });
     if (!r.ok) {
       const t = (await r.text()).slice(0, 200);
-      if (/quota|credits|limit/i.test(t)) await env.SALES.put("friday:tts:out", month, { expirationTtl: 40 * 86400 });
+      if (/quota|credits|limit|payment|paid_plan/i.test(t) || r.status === 402) await env.SALES.put("friday:tts:out", month, { expirationTtl: 40 * 86400 });
       await fridayLog(env, "voice", `ElevenLabs ${r.status}: ${t}`);
       return new Response(null, { status: 204 });
     }
@@ -1200,7 +1200,7 @@ async function seePhoto(env, dataUrl, question = "") {
   let groqVision = [];
   if (env.GROQ_API_KEY) try {
     const m = await fetch("https://api.groq.com/openai/v1/models", { headers: { Authorization: `Bearer ${env.GROQ_API_KEY}` }, signal: AbortSignal.timeout(6000) }).then((r) => r.json());
-    groqVision = (m.data || []).map((x) => x.id).filter((i) => /vision|scout|maverick|[-/]vl|gemma-?4|omni|kimi-k2\.?[5-9]/i.test(i) && !/guard|whisper|tts/i.test(i)).slice(0, 3);
+    groqVision = (m.data || []).map((x) => x.id).filter((i) => /vision|maverick|[-/]vl|gemma-?4|omni|kimi-k2\.?[5-9]/i.test(i) && !/guard|whisper|tts/i.test(i)).slice(0, 3);
   } catch {}
   const tries = [
     ...groqVision.map((m) => [env.GROQ_API_KEY, "https://api.groq.com/openai/v1/chat/completions", m]),
