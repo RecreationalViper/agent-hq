@@ -1,57 +1,56 @@
-# YouTube trends, US (2026-11-24)
+# YouTube trends, US (2026-11-25)
 
 Live from the YouTube Data API. Views/hr = views since upload ÷ hours since upload.
 
 ## Film & Animation: fastest-rising
-- [Avengers: Doomsday | Final Trailer | In Theaters December 18](https://youtu.be/Wb8Tq_HD4E8) · Marvel Entertainment · 44,811,322 views · 1,377,733/hr · 1,531,674 likes · 89,555 comments · 3:16
-- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 39,500,846 views · 383,409/hr · 446,090 likes · 1,959 comments · 0:16
-- [Por favor comparte con tus amigos #pov #herramientas #sketch #gracioso #actuación #historia](https://youtu.be/XY_ov9X03GY) · ChaosBiteClips · 20,461,051 views · 334,775/hr · 98,477 likes · 204 comments · 0:31
-- [The Ultimate "Armed" Plot Twist! 💀](https://youtu.be/jl1l63_8GX4) · Foeko · 39,222,661 views · 312,477/hr · 956,154 likes · 3,705 comments · 1:00
-- [He is on Another Level.🔥#edit #shorts #foryou](https://youtu.be/aCqDrqDTfoQ) · JJ_EditZ · 14,995,279 views · 253,062/hr · 711,108 likes · 1,406 comments · 2:58
-- [I couldn't even afford him a white T-shirt. He loved me anyway. #shorts](https://youtu.be/uK_8IXmGhO0) · The Love Editorial Office · 4,071,467 views · 198,863/hr · 157,842 likes · 1,541 comments · 2:35
-- [A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)](https://youtu.be/QSPoFd7tYwg) · ManNoirFacts · 33,907,690 views · 193,731/hr · 0 likes · 2,870 comments · 0:11
-- [We need more people like him ✌️](https://youtu.be/E4nT85y858s) · Smirk · 26,626,249 views · 191,550/hr · 403,531 likes · 941 comments · 0:14
+- [Avengers: Doomsday | Final Trailer | In Theaters December 18](https://youtu.be/Wb8Tq_HD4E8) · Marvel Entertainment · 46,704,135 views · 1,223,425/hr · 1,553,092 likes · 90,647 comments · 3:16
+- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 40,031,990 views · 368,365/hr · 450,905 likes · 1,986 comments · 0:16
+- [The Ultimate "Armed" Plot Twist! 💀](https://youtu.be/jl1l63_8GX4) · Foeko · 40,385,715 views · 307,885/hr · 978,719 likes · 3,799 comments · 1:00
+- [Por favor comparte con tus amigos #pov #herramientas #sketch #gracioso #actuación #historia](https://youtu.be/XY_ov9X03GY) · ChaosBiteClips · 20,545,652 views · 307,716/hr · 98,945 likes · 204 comments · 0:31
+- [I couldn't even afford him a white T-shirt. He loved me anyway. #shorts](https://youtu.be/uK_8IXmGhO0) · The Love Editorial Office · 6,993,801 views · 267,723/hr · 236,076 likes · 2,144 comments · 2:35
+- [He is on Another Level.🔥#edit #shorts #foryou](https://youtu.be/aCqDrqDTfoQ) · JJ_EditZ · 15,391,133 views · 237,134/hr · 730,268 likes · 1,439 comments · 2:58
+- [A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)](https://youtu.be/QSPoFd7tYwg) · ManNoirFacts · 33,908,030 views · 187,675/hr · 0 likes · 2,871 comments · 0:11
+- [We need more people like him ✌️](https://youtu.be/E4nT85y858s) · Smirk · 26,863,043 views · 185,706/hr · 406,546 likes · 950 comments · 0:14
 
 ## Film & Animation: short videos (3 min or less)
-- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 39,500,846 views · 383,409/hr · 446,090 likes · 1,959 comments · 0:16
-- [Por favor comparte con tus amigos #pov #herramientas #sketch #gracioso #actuación #historia](https://youtu.be/XY_ov9X03GY) · ChaosBiteClips · 20,461,051 views · 334,775/hr · 98,477 likes · 204 comments · 0:31
-- [The Ultimate "Armed" Plot Twist! 💀](https://youtu.be/jl1l63_8GX4) · Foeko · 39,222,661 views · 312,477/hr · 956,154 likes · 3,705 comments · 1:00
-- [He is on Another Level.🔥#edit #shorts #foryou](https://youtu.be/aCqDrqDTfoQ) · JJ_EditZ · 14,995,279 views · 253,062/hr · 711,108 likes · 1,406 comments · 2:58
-- [I couldn't even afford him a white T-shirt. He loved me anyway. #shorts](https://youtu.be/uK_8IXmGhO0) · The Love Editorial Office · 4,071,467 views · 198,863/hr · 157,842 likes · 1,541 comments · 2:35
-- [A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)](https://youtu.be/QSPoFd7tYwg) · ManNoirFacts · 33,907,690 views · 193,731/hr · 0 likes · 2,870 comments · 0:11
-- [We need more people like him ✌️](https://youtu.be/E4nT85y858s) · Smirk · 26,626,249 views · 191,550/hr · 403,531 likes · 941 comments · 0:14
-- [This is why you listen to Mom #AFV #fail](https://youtu.be/G69uJnkZu1Q) · America's Funniest Home Videos · 27,185,432 views · 165,243/hr · 388,769 likes · 5,348 comments · 0:16
+- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 40,031,990 views · 368,365/hr · 450,905 likes · 1,986 comments · 0:16
+- [The Ultimate "Armed" Plot Twist! 💀](https://youtu.be/jl1l63_8GX4) · Foeko · 40,385,715 views · 307,885/hr · 978,719 likes · 3,799 comments · 1:00
+- [Por favor comparte con tus amigos #pov #herramientas #sketch #gracioso #actuación #historia](https://youtu.be/XY_ov9X03GY) · ChaosBiteClips · 20,545,652 views · 307,716/hr · 98,945 likes · 204 comments · 0:31
+- [I couldn't even afford him a white T-shirt. He loved me anyway. #shorts](https://youtu.be/uK_8IXmGhO0) · The Love Editorial Office · 6,993,801 views · 267,723/hr · 236,076 likes · 2,144 comments · 2:35
+- [He is on Another Level.🔥#edit #shorts #foryou](https://youtu.be/aCqDrqDTfoQ) · JJ_EditZ · 15,391,133 views · 237,134/hr · 730,268 likes · 1,439 comments · 2:58
+- [A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)](https://youtu.be/QSPoFd7tYwg) · ManNoirFacts · 33,908,030 views · 187,675/hr · 0 likes · 2,871 comments · 0:11
+- [We need more people like him ✌️](https://youtu.be/E4nT85y858s) · Smirk · 26,863,043 views · 185,706/hr · 406,546 likes · 950 comments · 0:14
+- [This is why you listen to Mom #AFV #fail](https://youtu.be/G69uJnkZu1Q) · America's Funniest Home Videos · 27,590,210 views · 162,135/hr · 392,485 likes · 5,396 comments · 0:16
 
 ## Gaming: fastest-rising
-- [Catching Hackers On Balsmp](https://youtu.be/P9bxxSMje-0) · ikeacpvp · 1,756,463 views · 1,064,234/hr · 1,126 likes · 1 comments · 68:36
-- [Roblox stories in this world. #roblox #robloxstories #husshusshuss](https://youtu.be/HSnH46-O18A) · Usaid Edits · 1,923,364 views · 245,374/hr · 4,190 likes · 0 comments · 307:36
-- [10,000 Players Simulate WORLD WAR in Minecraft](https://youtu.be/qvR50Jh7OmU) · Spoke · 4,984,647 views · 179,122/hr · 149,344 likes · 30,536 comments · 237:35
-- [[A] PGL Major Singapore 2026 - Stage 1 - Day 1](https://youtu.be/_7LJB5SAgrY) · PGL · 1,423,619 views · 161,075/hr · 8,003 likes · 49 comments · 573:51
-- [Rockstar is freaking out now..](https://youtu.be/sAr0M87A6ZE) · Asmongold Clips · 3,334,673 views · 153,450/hr · 105,867 likes · 8,421 comments · 3:37
-- [Grand Theft Auto VI is Full of Things You’d Never Notice](https://youtu.be/Yb9r-EMxrbw) · Any Austin · 632,078 views · 110,377/hr · 34,677 likes · 2,555 comments · 15:20
-- [🔴LIVE | GTA 6 | DAY 5 | DIMENSIONAL RIFTS, DEMONS, SECRET MISSIONS | #BUNGULATE](https://youtu.be/ai39lbFr410) · TheBurntPeanut · 1,449,288 views · 108,404/hr · 12,706 likes · 159 comments · 507:20
-- [SML Movie: Brooklyn Guy Plays GTA 6](https://youtu.be/lu5yv5TZQ6Q) · SML · 1,712,804 views · 90,352/hr · 50,559 likes · 5,626 comments · 14:02
+- [🔴FIRST TO MAKE $1 MILLION IN GTA 6 WINS! ft. Kai Cenat 💰](https://youtu.be/91c96JtcIFg) · IShowSpeed · 5,174,430 views · 928,852/hr · 60,413 likes · 425 comments · 292:31
+- [Roblox stories in this world. #roblox #robloxstories #husshusshuss](https://youtu.be/HSnH46-O18A) · Usaid Edits · 1,923,812 views · 509,589/hr · 4,180 likes · 0 comments · 307:36
+- [GTA 6 #2](https://youtu.be/umDq3LY7sFA) · CoryxKenshin · 1,655,549 views · 258,861/hr · 169,527 likes · 21,272 comments · 94:37
+- [10,000 Players Simulate WORLD WAR in Minecraft](https://youtu.be/qvR50Jh7OmU) · Spoke · 5,431,310 views · 162,237/hr · 153,064 likes · 31,187 comments · 237:35
+- [Rockstar is freaking out now..](https://youtu.be/sAr0M87A6ZE) · Asmongold Clips · 3,547,908 views · 129,577/hr · 107,199 likes · 8,652 comments · 3:37
+- [Grand Theft Auto VI is Full of Things You’d Never Notice](https://youtu.be/Yb9r-EMxrbw) · Any Austin · 1,288,619 views · 113,275/hr · 51,992 likes · 3,499 comments · 15:20
+- [[A] PGL Major Singapore 2026 - Stage 1 - Day 1](https://youtu.be/_7LJB5SAgrY) · PGL · 1,441,475 views · 99,496/hr · 8,073 likes · 56 comments · 573:51
+- [Getting Fat in GTA 6 was Underwhelming](https://youtu.be/rFauHJjNGPs) · penguinz0 · 551,670 views · 89,404/hr · 6,382 likes · 633 comments · 21:56
 
 ## Gaming: short videos (3 min or less)
-- [GTA 6 - What's New In the First Patch?](https://youtu.be/GotN7bLCgpU) · IGN · 592,087 views · 21,478/hr · 6,559 likes · 1,085 comments · 1:14
-- [Bishop Shell Cinematic | Marathon](https://youtu.be/HPpil08YIRc) · Marathon · 164,157 views · 19,257/hr · 12,885 likes · 1,266 comments · 1:48
+- none in the chart today
 
 ## Entertainment: fastest-rising
-- [Avengers: Doomsday | Final Trailer | In Theaters December 18](https://youtu.be/Wb8Tq_HD4E8) · Marvel Entertainment · 44,811,322 views · 1,377,730/hr · 1,531,674 likes · 89,555 comments · 3:16
-- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts ib: @jaymondy.](https://youtu.be/qh0v4UiZvf0) · Cadel and Mia · 57,086,275 views · 682,792/hr · 174,751 likes · 448 comments · 0:11
-- [Bro 😭](https://youtu.be/7o9Al07wa6M) · Stewie · 13,727,008 views · 652,875/hr · 0 likes · 6,038 comments · 0:16
-- [Not Every Shot Goes as Planned](https://youtu.be/FByrCc303mI) · Operation Safa · 37,623,684 views · 513,193/hr · 515,328 likes · 945 comments · 0:48
-- [Francis did NOT hold back💀](https://youtu.be/FL0UZKpytSk) · Nick Wilkins · 20,082,215 views · 453,853/hr · 221,946 likes · 1,430 comments · 0:17
-- [Bro really waited for him to start walking 😭✌️](https://youtu.be/2QMDnzyTj_4) · MemeTweaker · 19,469,937 views · 401,240/hr · 407,966 likes · 934 comments · 0:12
-- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 39,500,846 views · 383,409/hr · 446,090 likes · 1,959 comments · 0:16
-- [Por favor comparte con tus amigos #pov #herramientas #sketch #gracioso #actuación #historia](https://youtu.be/XY_ov9X03GY) · ChaosBiteClips · 20,461,051 views · 334,775/hr · 98,477 likes · 204 comments · 0:31
+- [Avengers: Doomsday | Final Trailer | In Theaters December 18](https://youtu.be/Wb8Tq_HD4E8) · Marvel Entertainment · 46,704,135 views · 1,223,422/hr · 1,553,092 likes · 90,647 comments · 3:16
+- [Bro 😭](https://youtu.be/7o9Al07wa6M) · Stewie · 17,338,334 views · 649,985/hr · 0 likes · 6,915 comments · 0:16
+- [Not Every Shot Goes as Planned](https://youtu.be/FByrCc303mI) · Operation Safa · 40,038,496 views · 507,057/hr · 546,834 likes · 1,008 comments · 0:48
+- [Francis did NOT hold back💀](https://youtu.be/FL0UZKpytSk) · Nick Wilkins · 20,299,865 views · 406,829/hr · 223,975 likes · 1,455 comments · 0:17
+- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 40,031,990 views · 368,364/hr · 450,905 likes · 1,986 comments · 0:16
+- [Bro really waited for him to start walking 😭✌️](https://youtu.be/2QMDnzyTj_4) · MemeTweaker · 19,865,596 views · 366,701/hr · 414,475 likes · 952 comments · 0:12
+- [The Ultimate "Armed" Plot Twist! 💀](https://youtu.be/jl1l63_8GX4) · Foeko · 40,385,715 views · 307,885/hr · 978,719 likes · 3,799 comments · 1:00
+- [Por favor comparte con tus amigos #pov #herramientas #sketch #gracioso #actuación #historia](https://youtu.be/XY_ov9X03GY) · ChaosBiteClips · 20,545,652 views · 307,716/hr · 98,945 likes · 204 comments · 0:31
 
 ## Entertainment: short videos (3 min or less)
-- [SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 | Cadel and Mia #funny #couple #shorts ib: @jaymondy.](https://youtu.be/qh0v4UiZvf0) · Cadel and Mia · 57,086,275 views · 682,792/hr · 174,751 likes · 448 comments · 0:11
-- [Bro 😭](https://youtu.be/7o9Al07wa6M) · Stewie · 13,727,008 views · 652,875/hr · 0 likes · 6,038 comments · 0:16
-- [Not Every Shot Goes as Planned](https://youtu.be/FByrCc303mI) · Operation Safa · 37,623,684 views · 513,193/hr · 515,328 likes · 945 comments · 0:48
-- [Francis did NOT hold back💀](https://youtu.be/FL0UZKpytSk) · Nick Wilkins · 20,082,215 views · 453,853/hr · 221,946 likes · 1,430 comments · 0:17
-- [Bro really waited for him to start walking 😭✌️](https://youtu.be/2QMDnzyTj_4) · MemeTweaker · 19,469,937 views · 401,240/hr · 407,966 likes · 934 comments · 0:12
-- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 39,500,846 views · 383,409/hr · 446,090 likes · 1,959 comments · 0:16
-- [Por favor comparte con tus amigos #pov #herramientas #sketch #gracioso #actuación #historia](https://youtu.be/XY_ov9X03GY) · ChaosBiteClips · 20,461,051 views · 334,775/hr · 98,477 likes · 204 comments · 0:31
-- [The Ultimate "Armed" Plot Twist! 💀](https://youtu.be/jl1l63_8GX4) · Foeko · 39,222,661 views · 312,477/hr · 956,173 likes · 3,705 comments · 1:00
+- [Bro 😭](https://youtu.be/7o9Al07wa6M) · Stewie · 17,338,334 views · 649,985/hr · 0 likes · 6,915 comments · 0:16
+- [Not Every Shot Goes as Planned](https://youtu.be/FByrCc303mI) · Operation Safa · 40,038,496 views · 507,057/hr · 546,834 likes · 1,008 comments · 0:48
+- [Francis did NOT hold back💀](https://youtu.be/FL0UZKpytSk) · Nick Wilkins · 20,299,865 views · 406,829/hr · 223,975 likes · 1,455 comments · 0:17
+- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 40,031,990 views · 368,364/hr · 450,905 likes · 1,986 comments · 0:16
+- [Bro really waited for him to start walking 😭✌️](https://youtu.be/2QMDnzyTj_4) · MemeTweaker · 19,865,596 views · 366,701/hr · 414,475 likes · 952 comments · 0:12
+- [The Ultimate "Armed" Plot Twist! 💀](https://youtu.be/jl1l63_8GX4) · Foeko · 40,385,715 views · 307,885/hr · 978,719 likes · 3,799 comments · 1:00
+- [Por favor comparte con tus amigos #pov #herramientas #sketch #gracioso #actuación #historia](https://youtu.be/XY_ov9X03GY) · ChaosBiteClips · 20,545,652 views · 307,716/hr · 98,945 likes · 204 comments · 0:31
+- [I’m sleeping on the couch 😂 #Gta6 #Mandy #Shorts](https://youtu.be/gnCnc5bxViQ) · mmmjoemele · 7,945,194 views · 267,791/hr · 160,984 likes · 1,046 comments · 0:10

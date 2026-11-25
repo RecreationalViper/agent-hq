@@ -1,11 +1,5 @@
 [
   {
-    "file": "2026-11-24-trading-desk.md",
-    "agent": "trading-desk",
-    "name": "Trading Desk",
-    "date": "2026-11-24"
-  },
-  {
     "file": "2026-11-24-growth-coach.md",
     "agent": "growth-coach",
     "name": "Growth Coach",
@@ -57,6 +51,12 @@
     "file": "2026-11-24-studio-scout.md",
     "agent": "studio-scout",
     "name": "Trend Scout",
+    "date": "2026-11-24"
+  },
+  {
+    "file": "2026-11-24-trading-desk.md",
+    "agent": "trading-desk",
+    "name": "Trading Desk",
     "date": "2026-11-24"
   },
   {

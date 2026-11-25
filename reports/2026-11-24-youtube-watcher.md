@@ -2,135 +2,146 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-## What’s working on YouTube right now (US) — fastest-rising clips you can mirror
-*(From your provided “fastest-rising” lists; this is mostly Film/Animation + Entertainment. Gaming has fewer “short (≤3 min)” entries in the data you gave.)*
+## What’s working on YouTube right now (US fastest-rising) — movie/game/anime clips
+From the live “fastest-rising” chart data you provided (YouTube Data API, views/hr = views since upload ÷ hours since upload). **Note:** your chart includes mostly *movies/animation + entertainment + gaming long-form*, and **it says “none in the chart today” for “Gaming: short videos (3 min or less)”**.
 
-### 1) Film/Animation fastest-rising (top 5–8)
-1. **“Avengers: Doomsday | Final Trailer | In Theaters December 18”** — *Marvel Entertainment* — **44,811,322 views** — **1,377,733/hr** — **3:16**  
-   Link: https://youtu.be/Wb8Tq_HD4E8  
-2. **“Why they move so human 🥀”** — *MoVeak* — **39,500,846 views** — **383,409/hr** — **0:16**  
-   Link: https://youtu.be/_dEH-edCIN4  
-3. **“The Ultimate ‘Armed’ Plot Twist! 💀”** — *Foeko* — **39,222,661 views** — **312,477/hr** — **1:00**  
-   Link: https://youtu.be/jl1l63_8GX4  
-4. **“Por favor comparte con tus amigos #pov #herramientas #sketch #gracioso #actuación #historia”** — *ChaosBiteClips* — **20,461,051 views** — **334,775/hr** — **0:31**  
-   Link: https://youtu.be/XY_ov9X03GY  
-5. **“He is on Another Level.🔥#edit #shorts #foryou”** — *JJ_EditZ* — **14,995,279 views** — **253,062/hr** — **2:58**  
-   Link: https://youtu.be/aCqDrqDTfoQ  
-6. **“A Real Stuntwoman Hit a REAL Car for This 1981 Scene 🚗 | Looker (1981)”** — *ManNoirFacts* — **33,907,690 views** — **193,731/hr** — **0:11**  
-   Link: https://youtu.be/QSPoFd7tYwg  
-7. **“We need more people like him ✌️”** — *Smirk* — **26,626,249 views** — **191,550/hr** — **0:14**  
-   Link: https://youtu.be/E4nT85y858s  
+### Fastest-rising relevant videos (top 5–8)
+1) **Avengers: Doomsday | Final Trailer | In Theaters December 18**  
+- 46,704,135 views (1,223,422/hr) · 3:16 · Marvel Entertainment  
+- https://youtu.be/Wb8Tq_HD4E8  
 
-### What they have in common (usable for MotionVault Shorts)
-- **Title style = punchy + emotional + “promise” framing**
-  - Examples from the winners: *“Why they move so human 🥀”*, *“Ultimate Plot Twist!”*, *“He is on Another Level.”*, *“We need more people like him”*
-- **Thumbnail/hook vibe (even from titles):**
-  - Strong sentiment + icon/emoji (🔥 💀 🥀 ✌️)
-  - Often reads like a **comment thread reply** or **challenge**
-- **Length bias:** lots of **sub-1-minute** and **micro-clips**  
-  - 0:11, 0:14, 0:16, 0:31 appear repeatedly
-- **Topic buckets that map well to your channel**
-  - “Human/realism” (movement, stunts, acting believability)
-  - “Plot twist / final beat”
-  - “Level-up / insane moment”
-  - “Short POV / sketch-style tagging” (the ChaosBiteClips title uses heavy hashtag POV structure)
+2) **Why they move so human 🥀**  
+- 40,031,990 views (368,364/hr) · 0:16 · MoVeak  
+- https://youtu.be/_dEH-edCIN4  
 
----
+3) **The Ultimate "Armed" Plot Twist! 💀**  
+- 40,385,715 views (307,885/hr) · 1:00 · Foeko  
+- https://youtu.be/jl1l63_8GX4  
 
-## Gaming: fastest-rising items (from your data) + what to extract
-Your “fastest-rising” gaming list is dominated by **long videos** (not ideal for Shorts). So below I’m focusing on what’s *still* actionable for clipping.
+4) **Not Every Shot Goes as Planned**  
+- 40,038,496 views (507,057/hr) · 0:48 · Operation Safa  
+- https://youtu.be/FByrCc303mI  
 
-### Fastest-rising gaming (pickable topics)
-- **“Catching Hackers On Balsmp”** — *ikeacpvp* — **1,756,463 views** — **1,064,234/hr** — **68:36**  
-  https://youtu.be/P9bxxSMje-0  
-- **“10,000 Players Simulate WORLD WAR in Minecraft”** — *Spoke* — **4,984,647 views** — **179,122/hr** — **237:35**  
-  https://youtu.be/qvR50Jh7OmU  
-- **“Rockstar is freaking out now..”** — *Asmongold Clips* — **3,334,673 views** — **153,450/hr** — **3:37**  
-  https://youtu.be/sAr0M87A6ZE  
-- **“Grand Theft Auto VI is Full of Things You’d Never Notice”** — *Any Austin* — **632,078 views** — **110,377/hr** — **15:20**  
-  https://youtu.be/Yb9r-EMxrbw  
+5) **Francis did NOT hold back💀**  
+- 20,299,865 views (406,829/hr) · 0:17 · Nick Wilkins  
+- https://youtu.be/FL0UZKpytSk  
 
-### Gaming shorts (≤3 min) in your dataset (small sample)
-- **“GTA 6 - What’s New In the First Patch?”** — *IGN* — **592,087 views** — **21,478/hr** — **1:14**  
-  https://youtu.be/GotN7bLCgpU  
-- **“Bishop Shell Cinematic | Marathon”** — *Marathon* — **164,157 views** — **19,257/hr** — **1:48**  
-  https://youtu.be/HPpil08YIRc  
+6) **Bro really waited for him to start walking 😭✌️**  
+- 19,865,596 views (366,701/hr) · 0:12 · MemeTweaker  
+- https://youtu.be/2QMDnzyTj_4  
 
-**Actionable takeaway for MotionVault:**  
-Gaming is “working” in general, but your strongest lever from this dataset is **short-form certainty**: pick clips that look like **a secret**, **an unexpected reveal**, or **a sudden insane moment**—then make the first 1–2 seconds do the “promise,” like the Film winners above.
+7) **The Ultimate “Armed” Plot Twist! / armed twist pattern** (same cluster takeaway)  
+- These “plot twist / armed / unexpected” titles dominate the fast-risers alongside ultra-short runtime edits.
+
+8) **Gaming fastest-rising (relevant, but long-form): 🔴FIRST TO MAKE $1 MILLION IN GTA 6 WINS! ft. Kai Cenat 💰**  
+- 5,174,430 views (928,852/hr) · 292:31 · IShowSpeed  
+- https://youtu.be/91c96JtcIFg  
+
+**What they have in common (you can copy this):**
+- **Title style:** short, punchy, emotional/reaction language (“Why they move so human”, “Not Every Shot Goes as Planned”, “Francis did NOT hold back💀”, “Plot Twist!”).  
+- **Thumbnail/hook vibe:** even without seeing thumbnails here, these titles imply **shock + clarity fast** (human/plot twist/fail/not planned/hold back).  
+- **Length:** the biggest slam-dunks are **micro-edits (0:12–0:17)** and **under ~1 minute**. (Your chart’s top clips: 0:16, 0:17, 0:12, 0:48, 1:00.)  
+- **Topic:** cinematic/meme-able moments that feel like **one complete “beat”** (twist, fail, unexpected hold-back moment, sudden “human” realism).
 
 ---
 
-## Anime: what you have (and what’s missing)
-Your “fastest-rising” dataset does **not** include a dedicated “Anime: fastest-rising” YouTube section. So I can’t quote anime clip view numbers from your provided chart data.
+## Titles/moments MotionVault should clip for YouTube Shorts (movie/game/anime)
+Because your chart is short-heavy for “Film & Animation” but not anime-specific, the winning *structure* is clearer than the franchises. So the studio should hunt for moments that match the same “beat types”:
 
-**However**, your search/trending context *does* show what anime is actively trending right now (AniList / MAL):
-- **Overgeared** (RELEASING; ep 10 airs 2026-11-29)
-- **The Apothecary Diaries Season 3** (RELEASING; airs 2026-11-27)
-- **Black Clover Season 2** (RELEASING; ep 9 airs 2026-11-28)
-- **One Piece** (RELEASING)
-- **Blue Box Season 2** (RELEASING)
-*(These are trends context only; not YouTube views.)*
+### Clip #1 (movie/anime-adjacent): “plot twist” / betrayal / sudden outcome beat
+**Make a 25–35s montage** built around:
+- Hook (0–1s): show the *setup* instantly (weapon/plan/status).
+- Mid (10–20s): insert 1–2 quick cuts that increase tension.
+- Payoff (last 5s): the “twist” face/reaction + on-screen text: **“PLOT TWIST 💀”** (style match to *The Ultimate "Armed" Plot Twist! 💀*).
+
+**Target moment type:** any scene where a character’s intention is reversed (bait-and-switch, betrayal reveal, “he wasn’t who you thought”).
+
+### Clip #2 (movie/game): “Not every shot goes as planned” style fail montage
+**25–30s**:
+- Hook: first shot misses / ricochet / wrong target (use bold caption like **“NOT PLANNED 😭”**).
+- Then 2–3 uninterrupted “attempt → consequence” sequences.
+- Final beat: the biggest miss + comedic reaction.
+
+This directly matches:  
+- **Not Every Shot Goes as Planned** — 40,038,496 views (507,057/hr) · 0:48
+
+### Clip #3 (film realism / uncanny human motion): “Why they move so human 🥀”
+Make an anime/game clip montage that emphasizes **micro-animations**:
+- Hook: the most “human” movement/frame (blink, breathing, hand/shoulder micro-move).
+- Run: 2–3 short “movement streaks” (keep each source stretch short to stay transformative).
+- End: slow-mo reaction + text **“WHY IT LOOKS TOO REAL 🥀”**
+
+This directly matches:  
+- **Why they move so human 🥀** — 40,031,990 views (368,364/hr) · 0:16
+
+### Clip #4 (reaction-comedy): “held back / restrained violence” moment
+**20–35s**:
+- Hook: show the “I’m about to go” posture.
+- Mid: quick build (1–2 cuts).
+- Final: the restrained action + shocked face.
+
+Direct reference in the chart:  
+- **Francis did NOT hold back💀** — 20,299,865 views (406,829/hr) · 0:17
+
+### Clip #5 (reaction timing): “waited for him to start walking 😭✌️”
+**15–30s**:
+- Hook: show the pause / staring / wrong moment.
+- Mid: tiny timing-based cuts (but keep a story order, even if comedic).
+- End: reaction caption: **“BRO WAITED 😭✌️”**
+
+Direct reference:  
+- **Bro really waited for him to start walking 😭✌️** — 19,865,596 views (366,701/hr) · 0:12
+
+### Clip #6 (gaming—what to do even without short-video chart evidence)
+Your chart says **no “Gaming: short videos (3 min or less)”** today (“none in the chart today”), so we can’t claim what’s working specifically for *gaming Shorts* right now from that dataset.
+
+But the “fastest-rising gaming” entries (though long) show themes that likely translate to Shorts:
+- **GTA 6 competitive milestones** (e.g., first $1M)
+- **Things you’d never notice** (hidden details / surprising mechanics)
+- **Game state underperformance / underwhelming** (expectation vs reality)
+
+So for Shorts, clip:
+- “first big win moment” (hook: scoreboard/“$1M”)
+- “one hidden mechanic reveal”
+- “expectation → disappointment → funniest reaction”
+
+(Example gaming fast-riser, long-form):  
+- **🔴FIRST TO MAKE $1 MILLION IN GTA 6 WINS! ft. Kai Cenat 💰** — 5,174,430 views (928,852/hr) · 292:31
 
 ---
 
-## Shorts: titles/moments MotionVault should clip for YouTube right now (strategy)
-Because your input doesn’t include specific *scene timestamps* from movies/games/anime, the safest approach is to clip **repeatable moment types** that match what’s winning (plot twist, level-up, human-realism, final beat). Use these as “clip targets” when Claude builds the montages.
+## Title patterns to copy (from the real fastest-rising titles)
+Copy these formats closely:
 
-### A) Movie / anime montage targets (30–40s, 1–2 sec hook)
-Pick one of these montage “skins” and build around the exact beat:
-- **“The Plot Twist Beat” montage**
-  - Structure: Hook on the *wrong assumption* → quick escalation → reveal → final emotional punch
-  - Title pattern to match: *“The Ultimate ‘X’ Plot Twist! 💀”*
-- **“Human-realism / movement” montage**
-  - Structure: faces + micro-reactions + body language → one surprising action → payoff close-up
-  - Title pattern: *“Why they move so human 🥀”*
-- **“Level-up / on another level” montage**
-  - Structure: calm setup → sudden jump (skill/strength/strategy) → aftermath shot that makes rewatching worth it
-  - Title pattern: *“He is on Another Level.🔥#edit #shorts #foryou”*
-- **“Stunt/impact realism” montage**
-  - Structure: setup → impact frame(s) → “this is real?” style caption beat → reaction
-  - Title pattern: *“A Real Stuntwoman Hit a REAL Car…”* (adapt to game/anime “real-feel” moments)
+1) **Outcome + emotion + hook word**
+- “Why they move so human 🥀”
+- “Not Every Shot Goes as Planned”
+- “Francis did NOT hold back💀”
 
-### B) Gaming montage targets (make it “secret / patch / didn’t notice” style)
-- **“You’d never notice” (meta-discovery)**
-  - Use tiny detail moments: a hidden animation, a subtle physics interaction, a surprising mechanic interaction.
-  - Title pattern: *“Things you’d never notice”* (from Any Austin title)  
-- **“First patch / update” vibe (even if not literal)**
-  - Title pattern: *“What’s new in…”* + show the “new” behavior immediately in first second.
-- **“Insane scale” (10,000 players / chaos moment)**
-  - Aim for crowd/scale shots + one decisive win/loss moment.
+2) **Twist wording**
+- **“The Ultimate ‘[thing]’ Plot Twist! 💀”**  
+Pattern: *The Ultimate* + *Plot Twist* + skull/emoji
+
+3) **Banter reaction timing**
+- “Bro really waited for him to start walking 😭✌️”  
+Pattern: **Bro + action + what went wrong + emoji**
+
+4) **Short runtime implies: title is the whole premise**
+For clips around **0:12–0:17**, titles behave like *captions*: simple, single idea, no filler.
 
 ---
 
-## Title patterns to copy (directly from what’s working)
-Use these templates for MotionVault’s on-screen title cards + YouTube title:
-- **[Why/How] they [verb] [emotion/descriptor]**  
-  - e.g., “Why they move so human 🥀”
-- **The Ultimate “[thing]” Plot Twist! [emoji]**  
-  - e.g., “The Ultimate ‘Armed’ Plot Twist! 💀”
-- **He is on Another Level.🔥**  
-  - Short, declarative, single-idea
-- **We need more people like him ✌️**  
-  - Values-based / feel-good moral beat
-- **A Real [job/thing] Hit a REAL [impact] for This [year/label]**  
-  - “Real” credibility + specificity
-- **POV/Sketch/Hashtags as title body** (works for general virality style)  
-  - e.g., “Por favor comparte… #pov #sketch #gracioso…”
+## Immediate next step for MotionVault (editor instructions)
+Send Claude 5 clip candidates (movie/anime/game) that match these beat-types:
+- **Plot twist reveal**
+- **Multiple “attempt → failure” shots**
+- **Uncanny human movement / realism moment**
+- **Restrained vs explosive reaction**
+- **Timing-based comedic misunderstanding**
 
----
+And when cutting, aim for:
+- **Length:** 20–35s target (top performers in your chart include 0:12–0:17 and <1:00)
+- **Hook:** first frame must be the “payoff idea” (twist/fail/realistic motion)
+- **Final beat:** one strongest reaction + on-screen text in the last 3–5 seconds
 
-## Quick “studio next steps” (what to hand Claude to cut)
-1. **Pick 2 montage styles to run today:**
-   - Style 1: **Plot Twist 💀**
-   - Style 2: **Human realism 🥀**
-2. For each style, request **3 candidate clips** (movie + anime):
-   - One with a **misdirection → reveal**
-   - One with **micro-reaction acting**
-   - One with a **sudden level-up / power beat**
-3. Enforce Shorts pacing:
-   - **0:00–0:02 = hook beat**
-   - Prefer **one continuous stretch** of story order, keep it short (avoid long slow ramps)
-   - End on **the final emotional/action frame** that makes people rewatch.
-
-If you want, tell me **which franchises you have source clips for right now** (specific movies/anime/games), and I’ll convert the “moment types” above into an exact clip list (scene-by-scene beats + suggested on-screen text).
+If you want, list the specific movies/games/anime your library already covers, and I’ll map them to the above beat-types (scene-moment guidance) without needing any new sources.

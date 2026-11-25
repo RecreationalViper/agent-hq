@@ -2,57 +2,70 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# Studio Critic Review — 2026-11-24
+## Clip 1) **GTAVI — “Flower In A Hurricane” Gameplay Chaos**
+**Scores (1–10):**
+- **Hook strength:** 8  
+- **Rewatch value:** 7  
+- **Comment bait:** 6  
+- **Copyright risk (10 = safest):** 6  
 
-## 1) GTA VI — “Chaos in Vice City”
+**Tough editor read:** This is the most “format-correct” plan (fast escalation + clear final beat). The only weakness is the *assumed* footage structure: if “Ghosts & Demons & Aliens” doesn’t actually land in the VOD with the pacing you described, the montage will feel random instead of inevitable.
 
-| Metric | Score | Why |
-|--------|-------|-----|
-| Hook strength | 6/10 | Police chase jump/explosion is visual candy but *generic GTA*—looks like every other GTA edit on the platform. No character, no stakes, just "stuff blowing up." |
-| Rewatch value | 5/10 | WASTED screen is a 2013 meme. Sunset skyline is pretty but passive. Neither makes me ask "how did they do that?" or "what happens next?" |
-| Comment bait | 4/10 | "Which trailer moment made you replay 5 times?" → low-effort engagement bait. Comments will be "the car" or "the graphics"—no conversation. |
-| Copyright risk | 3/10 | **Major risk.** Rockstar DMCA’s trailer re-uploads aggressively. Twitch gameplay (Rubius/Kai Cenat) = streamer IP + Rockstar IP double jeopardy. Justice track = blocked for business accounts (per sounds.md). You have *zero* safe source here. |
+**One change to most improve it:**  
+Add a **literal “survival UI moment”** right before the final question overlay—make the last 3–4 seconds be: *near-death → freeze/slow-mo → on-screen “Would you survive?”*. Even if you keep the same chaos beats, tighten the ending to a decisive reaction/close-up.
 
-**One change that would most improve it:**  
-**Drop the montage structure. Build a *single* 30-second "impossible escape" narrative:** one protagonist, one continuous chase, escalating near-misses, ending on a *choice* (jump vs. surrender) freeze-frame with text: **"YOU DECIDE."** Forces rewatch to spot the exit they missed. Still risky IP-wise, but at least it’s a *story* not a sizzle reel.
+**Copyright note (plain):** using **trailer/gameplay audio + Justice** is usually fine for your use case compared to dialog, but the *track being “original score”* is not a guarantee. Keep individual source stretches short and avoid using any spoken dialogue from the game.
 
-**Verdict:** **DROP.** You have no safe footage, no unique angle, and the fandom is oversaturated (per fandoms.md). The Justice audio is unusable on a business account.  
-**Make instead:** **The Last of Us Part II — "The Quiet Part Hits Harder"** (per fandoms.md: moderate saturation, actor-driven search spike, emotional hooks that don't rely on explosions). Use official PlayStation promotional clips + a business-safe sound (Earrings / Duvet / Nicole Kidman from sounds.md). Hook: Ellie's face *before* the violence. Final beat: the silence after.
-
----
-
-## 2) Steel Ball Run — “The Spin” Showcase
-
-| Metric | Score | Why |
-|--------|-------|-----|
-| Hook strength | 8/10 | Steel ball spinning up close = visually distinct, mechanically specific, *only JoJo does this*. Instant "what is that?" for non-fans; "oh ****" for fans. |
-| Rewatch value | 9/10 | Freeze on impact frame + "The Spin" text = the exact moment people scrub back to analyze the geometry. JoJo power systems *demand* frame-by-frame study. |
-| Comment bait | 8/10 | "Most broken ability in JoJo history?" → power-scaling wars in replies. Gold for algorithm. |
-| Copyright risk | 5/10 | Anime footage = WB/Shueisha/Toei risk. But: transformative (analysis-focused), short stretches, Episode 10 airs Nov 27 (hype window = fair use stronger for commentary). Duvet = likely business-safe (sounds.md). |
-
-**One change that would most improve it:**  
-**Add a 1-second "diagram overlay" at 0:15** — crude animation showing the Spin's rotation vector hitting the target. Turns "cool hit" into "teachable moment." Non-fans stay for the physics; fans pause to debate the math. Costs $0 (draw on phone).
-
-**Verdict:** **KEEP. Prioritize #1.** Highest creative ceiling, clearest hook, strongest comment mechanics, best audio option (Duvet). Cut this first.
+**Drop or make instead?**  
+**Keep.** But only proceed once Claude confirms the **first clearly otherworldly contact** is within your first ~20 seconds, otherwise rebuild from earlier cinematic moments.
 
 ---
 
-## 3) The Hunger Games: Sunrise on the Reaping — “The Ruthless Tribute”
+## Clip 2) **One Piece — Luffy’s Hunger Gets Him In Big Trouble**
+**Scores (1–10):**
+- **Hook strength:** 6  
+- **Rewatch value:** 8  
+- **Comment bait:** 7  
+- **Copyright risk (10 = safest):** 5  
 
-| Metric | Score | Why |
-|--------|-------|-----|
-| Hook strength | 7/10 | Horn → eyes widening = classic, works. But "she doesn't flinch" is a *told* trait, not a *shown* one. Needs a micro-action (finger twitch, breath hold) to prove it. |
-| Rewatch value | 6/10 | Lone tribute standing alone = strong image, but *which tribute?* No name, no face recognition in trailer footage. Feels like a placeholder. |
-| Comment bait | 7/10 | "Who survives in your headcanon?" → BookTok will answer in paragraphs. Good. But only works if the clip shows *specific* tributes, not generic arena flashes. |
-| Copyright risk | 6/10 | Official trailers only = safest source of the three. Lionsgate tolerates transformative trailer edits better than Rockstar/WB. But: *zero* movie footage exists (film unreleased). You're editing a 2-minute trailer into 30 seconds—thin material. |
+**Tough editor read:** The escalation/comedy trait exaggeration is solid, but the plan is a bit “generic template” (bites → reactions → starving). One Piece edits live or die on **timing + specificity**—you need one *instantly readable* absurd visual payoff early.
 
-**One change that would most improve it:**  
-**Pick ONE tribute from the trailer (the one with the most screen time/close-ups). Build the entire edit around *her* face.** Hook: her eyes. Body: *her* POV fragments (hands loading bow, feet in mud, opponent's knife). Final beat: *her* face, not a wide shot. "The Ruthless Tribute" needs a *name* (even if you invent a placeholder: "TRIBUTE 7 — DISTRICT 12"). Specificity > atmosphere.
+**One change to most improve it:**  
+Make the **hook a 1-frame “hands on food” moment** (or the first time he commits to the impossible bite), then immediately cut to the **largest absurd consequence reaction** within the first 6–8 seconds. The current hook (“mid-bite / face-lunge”) may be too slow if the episode’s opening frames aren’t instantly recognizable.
 
-**Verdict:** **KEEP BUT RESTRUCTURE.** Doable with current assets. Post at 6:30 PM TikTok / 1:00 PM Shorts (per captions.md) to catch BookTok overlap.
+**Copyright note (plain):** higher risk than people expect because anime character animation/music is tightly associated with the show. Your best protection is **short source snippets** + heavy on-screen text (keep it transformative) and avoid any long unbroken “scene audio” segments.
+
+**Drop or make instead?**  
+**Conditional keep.** If Claude can’t find a hunger sequence where the **absurd payoff happens quickly**, drop it and make a different One Piece beat that has a *clear single visual gag* (e.g., “he goes into beast mode” / “food morphs into disaster” type moment). Since we don’t have exact timestamps, I can’t name the exact replacement episode moment—Claude needs to confirm the specific beat first.
 
 ---
 
-## ONE-LINE VERDICT
+## Clip 3) **Avengers: Doomsday — Shoulder-to-Shoulder Quote Card**
+**Scores (1–10):**
+- **Hook strength:** 5  
+- **Rewatch value:** 6  
+- **Comment bait:** 8  
+- **Copyright risk (10 = safest):** 2  
 
-**Cut Steel Ball Run first — it's the only clip with a unique visual hook, safe-ish audio, a teachable mechanic that drives rewatches, and a fandom that comments in paragraphs.**
+**Tough editor read:** The concept is good (quote card = retention), but this is the **highest copyright risk** and the most failure-prone execution. Two big issues:
+1. **Trailer dialogue**: you’ll likely be using the exact spoken line—major risk.
+2. **Sound licensing**: you’re floating major-label tracks; that’s a trap on business accounts.
+
+**One change to most improve it:**  
+Do **NOT** rely on the trailer’s audio/dialog for the line. Instead:
+- Use **visual-only** from the trailer (short, frequent cuts).
+- Put the “A mere mortal…” sentiment as **on-screen text** (your own typography timing).
+- Use a **safe indie/non-blocked sound** (your “Earrings – Malcolm Todd” is already listed as “No” for block—swap to that vibe for hype) and cut to *visual beats*, not spoken audio.
+
+**Copyright note (plain):** this is the one most likely to get hit because it’s *quote + trailer audio + studio-identifiable pacing*. Without certainty that your audio can be cleared, risk is very high.
+
+**Drop or make instead?**  
+**Drop this as written.** Make instead a *non-dialogue* Avengers Doomsday montage:
+- Pick **one recurring action visual** (team-up stance, portal opening, or villain reveal)
+- Use only **your own narration/VO** (you read text on camera or record a short VO) or pure text overlays
+- Avoid any continuous trailer audio bed.
+
+---
+
+# One-line verdict (which clip to cut first)
+**Cut first: Avengers: Doomsday** (quote-card) — too much copyright risk and execution uncertainty compared to the other two.
