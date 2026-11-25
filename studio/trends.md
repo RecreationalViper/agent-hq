@@ -1,119 +1,59 @@
-# Trend Scout (updated 2026-11-24)
+# Trend Scout (updated 2026-11-25)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-Here are the **5 strongest clip opportunities** for today (2026-11-24), ranked by virality potential, based on trends, data, and short-form edit formats doing well:
+## 1) **Black Clover (Season 2) — “Magic Knight’s brutal comeback / despair → resolve”**
+**Why now (views):** It’s one of the most-followed airing anime right now, and episode churn + “watch-with-me” edits tend to pop on Shorts/TikTok (people want the *one* moment that proves the stakes).  
+**Exact clip moment (what to cut):** From **Episode 9** onward, focus on the pattern: **a low point scene (silence / damage / defeat facial close-up) → sudden magic power-up or order-giving**.  
+- If you’re cutting from a finished montage: grab the **instant the character stops hesitating** and the **magic effect kicks in** (that beat is the rewatch trigger).  
+**Source link (confirmable):**  
+- https://myanimelist.net/anime/61967 (Black Clover Season 2 listing)  
+- https://anilist.co/anime/195604 (Anilist entry)
 
 ---
 
-### **1. *Grand Theft Auto VI* – "Flower in a Hurricane" (GTAVI Soundtrack) + Viral Gameplay Moments**
-**Why it’s hot now:**
-- **#1 trending game** on Twitch (50K+ concurrent viewers), **top seller on Steam**, and **soundtrack ("Flower in a Hurricane")** is rising on Last.fm (73K listeners).
-- **Edit format doing well:** Fast-paced gameplay comps with trending soundtracks (see [this YouTube Short](https://youtu.be/muC64zx_lBI) for *Elemental* edits).
-- **Hook potential:** Use the **iconic "GTAVI city reveal"** (first 10 sec of gameplay) + **chaotic moments** (e.g., Jensen Huang’s "I’m gonna kill you" scene, ghost encounters, or the "aliens" ending).
-
-**Clip plan:**
-- **Hook (0-3 sec):** Black screen → sudden **city reveal** (like the trailer) with the *Justice soundtrack* drop.
-- **Mid (3-25 sec):** Montage of:
-  - Jensen’s **"I’m gonna kill you"** line (cut to his face + gun cock).
-  - **Alien abduction scene** (slow-mo + scream).
-  - **Ghost chase sequence** (fast cuts of gunfights).
-- **End (25-30 sec):** **Text overlay:** *"GTA VI is the most hyped game of 2026. Who’s playing?"* + **soundtrack drop** (Flower in a Hurricane).
-- **Caption:** *"GTA VI is INSANE. Would you survive?"* + **#GTAVI #GTA6 #ViralGameplay**.
-
-**Source:**
-- Gameplay clips from [Twitch streams](https://www.twitch.tv/TheBurntPeanut) (public VODs).
-- Soundtrack: ["Flower in a Hurricane" by Justice](https://www.last.fm/music/Justice/_/Flower+in+a+Hurricane).
+## 2) **ONE PIECE (ongoing) — “Luffy’s hunger/resolve beat”**
+**Why now (views):** ONE PIECE is the biggest “always-on” anime brand on both platforms; edits tied to emotion + momentum (resolve, “I’m not done”) consistently outperform.  
+**Exact clip moment (what to cut):** Clip **Luffy reacting in panic/relentless determination**, then **the very next action frame** where he commits—i.e., **from shocked/low moment → forward strike / team rally**.  
+- Best format: **start on the face** (1–2 sec), then hard cut to the **first impact / attack wind-up**. Keep it to one short continuous story stretch.  
+**Source link (confirmable):**  
+- https://myanimelist.net/anime/21 (ONE PIECE)
 
 ---
 
-### **2. *Avengers: Doomsday* – "A mere mortal standing shoulder to shoulder with the gods" (Trailer/Scene)**
-**Why it’s hot now:**
-- **#1 trending movie on Wikipedia** (116K+ views yesterday) and **Avengers films always perform well in edits** (see [this viral Short](https://youtu.be/oMIKp0p-xJA)).
-- **Hook potential:** Use the **"Doomsday" reveal** (Thanos-like villain) or **heroic last stand** moments.
-- **Edit format doing well:** **"He single-handedly defeated [X]"** (see [this example](https://youtu.be/oMIKp0p-xJA)).
+## 3) **Grand Theft Auto VI — “live-stream energy → ‘this is unreal’ reactions” (movie/game crossover)**
+**Why now (views):** GTA VI is still pulling massive attention on live streams (high audience “around the topic” = Shorts discovery boost).  
+**Exact clip moment (what to cut):** Any GTA VI trailer or gameplay trailer moments where there’s a **sudden escalation** (chase starts, wanted level spikes, heist kickoff, or chaotic “caught in 4K” moment).  
+- Cut specifically: **start on the instant the chase/heat triggers** → keep **one continuous action stretch** up to the first big payoff (crash / escape / weapon-ready frame).  
+**Source link (confirmable):**  
+- https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI (overview; use its external links to locate official trailer pages)
 
-**Clip plan:**
-- **Hook (0-2 sec):** Black screen → **BOOM** (explosion) → **text:** *"This man just fought Thanos 2.0."*
-- **Mid (2-25 sec):** Montage of:
-  - **Hero’s one-liner** (e.g., *"I’m not done yet"*).
-  - **Villain’s power reveal** (e.g., Doomsday’s "cosmic" attack).
-  - **Team-up shot** (heroes standing together).
-- **End (25-30 sec):** **Text:** *"Avengers: Doomsday – Coming 2027"* + **trailer teaser clip**.
-- **Caption:** *"Avengers: Doomsday is the MCU’s darkest chapter yet. 🔥"* + **#Avengers #MCU #MovieEdit**.
-
-**Source:**
-- Official trailer/clips from [Marvel’s YouTube](https://www.youtube.com/user/MarvelEntertainment).
-- **Copyright-safe:** Use **under 10 sec of any single scene** (fair use for transformative edits).
+> Note: I can’t confirm *today’s* specific GTA VI trailer drop date or exact new footage from the data provided—so this is “evergreen high-demand” rather than “today’s new release.”
 
 ---
 
-### **3. *One Piece* (Episode 1181) – Luffy’s "Hunger" Arc (Trending Anime)**
-**Why it’s hot now:**
-- **#1 trending anime on AniList/MyAnimeList** (772K+ fans, releasing new eps weekly).
-- **Edit format doing well:** **"Luffy’s Hunger Gets Him In Big Trouble"** (see [this viral Short](https://youtu.be/MgwcY8E9l6o)).
-- **Hook potential:** Luffy’s **rage moments** or **comedy food scenes** (e.g., him eating like a wild animal).
-
-**Clip plan:**
-- **Hook (0-2 sec):** **Luffy’s face** mid-bite → **text:** *"When hunger hits..."*
-- **Mid (2-25 sec):** Montage of:
-  - **Luffy eating a whole cake in 3 bites**.
-  - **His "I’ll eat anything" reaction shots**.
-  - **Battle scene where he’s starving** (e.g., vs. a monster).
-- **End (25-30 sec):** **Text:** *"One Piece Ep 1181 – Who’s watching?"* + **sound effect:** *"NOM NOM NOM"*.
-- **Caption:** *"Luffy’s hunger is a vibe. 🍰🔥 #OnePiece #AnimeEdit"*.
-
-**Source:**
-- Episode 1181 clips from [Crunchyroll](https://www.crunchyroll.com/anime-1735/one-piece) (public domain for short clips).
-- **Copyright-safe:** **No single clip over 8 sec**, focus on **reaction/comedy edits**.
+## 4) **The Hunger Games — “Sunrise on the Reaping” (re-watch magnet: spectacle + dread)**
+**Why now (views):** It’s showing as highly read/popular in the last day’s Wikipedia list, which usually correlates with spikes in “what is this / best moment / explain” style Shorts doing well.  
+**Exact clip moment (what to cut):** The **Reaping / broadcast-style moment** (ceremony visuals) where tension ramps—clip the **transition from calm to dread**:
+- **wide shot of the event/arena vibe** (0.5–1 sec) → **tight face reaction** (fear/resolve) → **the reveal/selection beat**.  
+**Source link (confirmable):**  
+- https://en.wikipedia.org/wiki/The_Hunger_Games:_Sunrise_on_the_Reaping (use the title page to find official trailers/clips)
 
 ---
 
-### **4. *Black Clover Season 2* (Episode 9) – Asta’s "I’m Not Done Yet" Moment**
-**Why it’s hot now:**
-- **Top 3 trending anime on MyAnimeList** (184K+ fans, new ep dropped yesterday).
-- **Edit format doing well:** **"He’s not done yet"** (see [this *Chernobyl* edit](https://youtu.be/p7Dhpa8ufdo)).
-- **Hook potential:** Asta’s **determination arcs** or **power-up moments**.
-
-**Clip plan:**
-- **Hook (0-2 sec):** **Asta’s fist clenched** → **text:** *"This kid is UNSTOPPABLE."*
-- **Mid (2-25 sec):** Montage of:
-  - **Asta’s "I’m not done yet"** line (cut to his face).
-  - **His sword breaking** → **power-up glow**.
-  - **Victory pose** after winning a fight.
-- **End (25-30 sec):** **Text:** *"Black Clover S2 – Ep 9 just dropped. Watching?"* + **sound effect:** *"SHIELDS UP"*.
-- **Caption:** *"Asta’s growth is insane. 💪 #BlackClover #Anime"*.
-
-**Source:**
-- Ep 9 clips from [AnimeLab](https://www.animelab.com/shows/black-clover) (public domain for short clips).
+## 5) **Cyberpunk: Edgerunners 2 (anime continuation hype) — “first betrayal / cornered → power-up”**
+**Why now (views):** It’s trending on AniList and has a large built-in fandom; “emotion-to-action” edits (cornered + sudden escalation) tend to perform extremely well on Shorts.  
+**Exact clip moment (what to cut):** Look for the story beat: **someone realizes they’re trapped/betrayed → immediate decision to fight back**.  
+- Clip the **exact second they choose violence/escape**, then end on the **impact/punch/kick-off** (final beat that makes people rewatch).  
+**Source link (confirmable):**  
+- https://anilist.co/anime/195539 (Cyberpunk: Edgerunners 2)  
+- https://myanimelist.net/anime/61990 (if you want cross-check)
 
 ---
 
-### **5. *Overgeared* (Episode 10) – "I’m the Strongest" Montage**
-**Why it’s hot now:**
-- **#4 trending anime on AniList** (70K+ fans, new ep dropped yesterday).
-- **Edit format doing well:** **"POV: You’re the strongest"** (see [this *Yolanda Rayo* edit](https://youtu.be/f2FWvyPwhGU)).
-- **Hook potential:** **Hype moments** (e.g., character transformations, battles).
+### Quick posting format (for all 5)
+- **0:00–0:02:** hook frame (face reaction or magic/heat trigger)  
+- **0:02–0:22:** 2–3 short unbroken story stretches (no long drift)  
+- **0:22–0:30:** final payoff beat (attack/decision/reveal) + on-screen title (e.g., “BLACK CLOVER S2 — EP 9 MOMENT”)
 
-**Clip plan:**
-- **Hook (0-2 sec):** **Character’s face** → **text:** *"POV: You just got OP."*
-- **Mid (2-25 sec):** Montage of:
-  - **Power-up animation** (e.g., "gear" transformation).
-  - **One-liner** (e.g., *"I’m the strongest"*).
-  - **Boss fight win** (slow-mo punch).
-- **End (25-30 sec):** **Text:** *"Overgeared Ep 10 – Who’s hyped?"* + **sound effect:** *"KA-POW!"*.
-- **Caption:** *"Overgeared is the most hype anime right now. 💥 #Overgeared #Anime"*.
-
-**Source:**
-- Ep 10 clips from [Crunchyroll](https://www.crunchyroll.com/anime-212888/overgeared).
-
----
-
-### **Bonus: *Jumanji: Open World* (Trending on Google Trends)**
-**Why it’s hot now:**
-- Spiking searches in the **US (500+)** and **Mexico (100+)**.
-- **Edit format potential:** **"You’re trapped in Jumanji"** (use gameplay + movie clips).
-**Clip idea:**
-- Hook: **Vine-like trap scene** (from movie) → **text:** *"You just got teleported into JUMANJI."*
-- Mid: Montage of **gameplay traps** (from *Jumanji: Open World*) + **movie’s "danger room"** scenes.
-- End: **Text:** *"Jumanji: Open World – Coming soon!"* + **soundtrack drop** (e.g., *"The Jungle Book"* theme remix).
+If you want, tell me **which platform you’re prioritizing first (TikTok vs Shorts)** and I’ll draft **5 exact 30–40s cut scripts** (timestamp structure + overlay text + CTA wording) for these picks.

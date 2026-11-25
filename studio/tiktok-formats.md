@@ -1,77 +1,174 @@
-# TikTok Format Watcher (updated 2026-11-24)
+# TikTok Format Watcher (updated 2026-11-25)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# TikTok/Shorts Edit Formats Working Right Now (2026-11-24)
+## 1) “The Moment When…” (single-scene narrative punchline)
+**What makes it work**
+- Hook text in the first 1–2 seconds: *“The moment when he realized…”*
+- Then you ride the same emotional beat (not the whole movie), finishing with a **hard payoff line/on-screen action**
+- Works great for subtitles-style captions and rewatching (“wait, what happened right before?”)
 
-Based on live scanner data from the last 24–48 hours. All view counts and trends are from the provided sources.
+**Studio example (specific title)**
+- **Anime:** *Black Clover (Season 2)*  
+- Edit beat: montage toward **a power-up / willpower moment** (pick one fight sequence and build toward the instant the character commits).
+- On-screen text:  
+  - 0:00 “THE MOMENT WHEN HE STOPPED ASKING…”  
+  - 0:20 “AND STARTED BECOMING THE ANSWER.”  
+  - End: quick replay of the final impact frame.
 
----
+**Source link (reference format style)**
+- YouTube Shorts example (“story”/moment-style anime edit): https://youtu.be/MOqly9XXNQc
 
-## 1. “High-IQ / Smart Play” Montage
-**Why it works:** Fast-paced, beat-synced clips of clever tactical moments (game or film) that make viewers feel smart for spotting the setup. High rewatch to catch details.  
-**Studio example:** Cut a 35-sec montage of **GTA VI**’s “Ghosts & Demons & Aliens” mission (the ending streamers are hunting) — each clever stealth takedown or environmental kill hits on the downbeat. Use **Olivia Rodrigo’s “the cure”** (934k listeners, rising) for the tense-to-release swing.  
-**Source:** YouTube Shorts “High IQ Plays in the Wild West” — 8.7M views, 221k likes (Levristy Edit, 2026-11-20) · Twitch: GTA VI #1 game, 51k+ concurrent on TheBurntPeanut.
+**Fading flag:** Low (still consistently used)
 
----
-
-## 2. Single Iconic Line / “Quote Card” Edit
-**Why it works:** One unforgettable line, visual buildup to the delivery, text card on the beat, hard cut to black. Low footage needed, high emotional density.  
-**Studio example:** **Chernobyl** (HBO) — “A mere mortal standing shoulder to shoulder with the gods.” Open on the control-room wide, push in on Legasov’s face, line lands, smash to title card. Pair with **Radiohead “Let Down”** (2.6M listeners, rising).  
-**Source:** YouTube Shorts “A mere mortal…” — 3.3M views, 170k likes (Hh Hh, 2026-11-18).
-
----
-
-## 3. Character Trait Exaggeration (Comedy “Hunger/Obsession” Edit)
-**Why it works:** Takes a defining character quirk (Luffy’s hunger, Denji’s toast, Gojo’s blindfold) and escalates it absurdly in 3–4 escalating clips. Relatable, memeable, share-to-friend fuel.  
-**Studio example:** **One Piece** Ep 1181 (airs 2027-01-03) — Luffy smells meat across three islands. Cut: sniff → pupil dilation → Gear 5 sprint → faceplant in banquet. Sound: **Malcolm Todd “Earrings”** (1.25M listeners, rising).  
-**Source:** YouTube Shorts “Luffy’s Hunger Gets Him In Big Trouble” — 2.27M views, 67k likes (zsy, 2026-11-19) · AniList: One Piece #2 trending (772k fans).
 
 ---
 
-## 4. POV Power-Fantasy / “You Are the Villain” Edit
-**Why it works:** Second-person framing (“POV: YOU’RE…”) drops the viewer into a dominant role. Quick cuts of power moves, screen shake on beat, final stare-down. High save/share for “main character energy.”  
-**Studio example:** **Cyberpunk: Edgerunners 2** (airing, 227k MAL members) — POV: YOU’RE A SOLO WITH SANDEVISTAN. First-person cyberware HUD flashes, time-slow decapitations, final chrome reflection. Sound: **Justice “Flower In A Hurricane” (GTA VI OST)** — 73k listeners, fresh.  
-**Source:** YouTube Shorts “POV: YOU’RE THE STRONGEST SUPERVILLAIN EVER” — 1.4M views, 34k likes (RetroMic, 2026-11-21).
+## 2) “POV: You’re the one getting cooked” (POV + reaction beats)
+**What makes it work**
+- Viewers instantly understand role + stakes.
+- Captions are “comment bait”: people type “me fr” / “POV: you’re done.”
+- Pair POV text with **tight reaction close-ups** and quick zooms for rhythm.
+
+**Studio example (specific title)**
+- **Movie:** *John Wick: Chapter 2*  
+- Edit beat: use the **moment where John decides/targets**, then cut to the fastest execution beats (keep it short per source stretch).
+- On-screen POV text:  
+  - 0:00 “POV: YOU THOUGHT YOU COULD HIDE.”  
+  - 0:12 “HE READ THE ROOM.”  
+  - Final beat: the decisive hit → freeze + “REPLAY?”
+
+**Source link**
+- Movie edit style reference (fast, punchy edit): https://youtu.be/RXwAQsqISoU
+
 
 ---
 
-## 5. Cathartic Arc Payoff / “He Found Peace” Edit
-**Why it works:** Long-form arcs condensed to the emotional climax. Viewers who know the journey get chills; new viewers get hooked to watch the series. High comment engagement (“I’m crying”).  
-**Studio example:** **Vinland Saga** — Thorfinn dropping the knife / “I have no enemies” montage. Three beats: bloodied hands → quiet farm work → sunset silhouette. Sound: **Arctic Monkeys “505”** (3.2M listeners, rising).  
-**Source:** YouTube Shorts “Thorfinn edit” — 1.4M views, 42k likes (LightyXD, 2026-11-19) · “Naruto find his peace” — 1.9M views (LORD NATION, 2026-11-18).
+## 3) “Before/After” (transformation in 2–3 cuts)
+**What makes it work**
+- Extremely scannable: split-screen or left/right timeline.
+- People rewatch to confirm *what exactly changed* (stance, power level, facial expression, weapon, deal outcome).
+- Great for **character arc** clips and “glow-up” energy.
+
+**Studio example (specific title)**
+- **Game:** *Grand Theft Auto VI* (use non-exclusive publicly available gameplay footage you have rights to)  
+- Edit beat: **Before** = calm/neutral moment; **After** = chaos moment (chase/escape escalation).
+- Layout:  
+  - Left label “BEFORE” (setup)  
+  - Right label “AFTER” (burst of action)  
+  - End with “WHICH ONE IS YOU?” + character reaction.
+
+**Source link (format inspiration)**
+- “movie edit” examples with transformation-type pacing:  
+  - https://youtu.be/pPqBgUBG_2Q  
+  - https://youtu.be/oMIKp0p-xJA  
+
+**Fading flag:** Low (stable)
+
 
 ---
 
-## 6. “Before / After” Transformation Split-Screen
-**Why it works:** Visual proof of growth (character, graphics, skill). Split screen or rapid toggle. Works for game patches, anime power-ups, actor aging. High “wait for it” retention.  
-**Studio example:** **Mario Kart World** free update (Japan trend, 500+ searches) — left: launch Rainbow Road, right: new survival-route variant. Toggle on beat. Sound: **TV Girl “Lovers Rock”** (13.8k US listeners, rising).  
-**Source:** Google Trends JP: “マリオカート ワールド アップデート” 500+ (2026-11-25) · Steam: Mario Kart not on Steam but Nintendo Direct buzz cross-platform.
+## 4) “Ranking / Tier List: Who’s actually HIM?” (top-3 punch)
+**What makes it work**
+- You can structure the montage like a mini-game:
+  - “Tier S” = 1–2 fastest best moments
+  - “Tier A/B” = slightly slower or less intense clips
+- Captions do the talking; visuals support each tier.
+- Strong final beat: “S tier choice” with a zoom + text.
+
+**Studio example (specific title)**
+- **Anime:** *One Piece*  
+- Edit beat idea: pick 3 “dominance moments” from one character (or across characters) and rank them **based on decision impact** (not just power).
+- On-screen structure:  
+  - 0:00 “RANKING HIS MOST VIOLENT ‘I’LL HANDLE IT’ MOMENTS”  
+  - “#3” → montage  
+  - “#2” → montage  
+  - “#1” → single best payoff + “REWATCH THAT #1.”
+
+**Source link**
+- Anime edit references that lean into “big claim + punch payoff”:  
+  - https://youtu.be/MgwcY8E9l6o  
+  - https://youtu.be/AVNY1Zr_nBM  
+
+**Fading flag:** Medium (tier lists are common, but still performs if the #1 payoff is genuinely insane)
+
 
 ---
 
-## 7. Ranking / “Tier List Reveal” Speed-Run
-**Why it works:** Controversial opinions + fast visuals = comments defending favorites. 5 tiers, 1 sec per entry, final “S-tier” gets the beat drop.  
-**Studio example:** **The Apothecary Diaries S3** — “Every Poison Maomao Identified, Ranked.” Rapid-fire herb close-ups → S-tier: the fictional “Ghost Orchid” from Ep 9 (airs 2026-11-27). Sound: **Tinashe “Melatonin”** (151k listeners, rising).  
-**Source:** AniList: Apothecary Diaries S3 #9 trending (116k fans, ep 9 airs 2026-11-27) · MAL: #4 airing (236k members).
+## 5) “Side-by-side: Same Energy / Different Outcome” (A vs B)
+**What makes it work**
+- Two timelines create instant comparison without needing long explanation.
+- Works well for:
+  - “He did it once vs he did it again”
+  - “Tactician A vs Tactician B”
+- Add matching text labels so viewers don’t get lost.
+
+**Studio example (specific title)**
+- **Movie:** *The Hunger Games: Sunrise on the Reaping* (use whichever scenes you have approved access to)  
+- Edit beat: **Attempt #1 vs Attempt #2** in a tense sequence.
+- Layout: left clip = early attempt; right clip = later success/failure.
+- Text:  
+  - “Plan A” vs “Plan B”  
+  - End: “SAME PERSON… DIFFERENT DECISION.”
+
+**Source link**
+- Side-by-side comparison style is common in viral shorts; closest inspiration from the gathered set (fast story edits):  
+  - https://youtu.be/HTyCpjnKoak  
+  - https://youtu.be/muC64zx_lBI  
+
+**Fading flag:** Low
+
 
 ---
 
-## ⚠️ Formats Fading / Use Sparingly
-| Format | Signal |
-|--------|--------|
-| Pure “aesthetic” color-grade montages (no narrative hook) | Low comments, high scroll-past in YouTube Shorts data |
-| Unedited gameplay clips with trending sound only | Twitch clips dominate; Shorts edits need transformation |
-| Generic “best fights” compilations without a framing device | Saturated; algorithm favors specific POV / quote / comedy angle |
-| Leaked / unreleased footage teasers | Copyright strikes rising; stick to released material + transformative edit |
+## 6) “Sound/beat-synced ‘Velocity’ Cuts” (jump cuts to drums)
+**What makes it work**
+- The pattern is the product: every beat triggers a cut, zoom, or caption change.
+- Viewers feel momentum even if story is minimal.
+- Best when the final payoff lands exactly on the loudest hit.
+
+**Studio example (specific title)**
+- **Anime:** *Cyberpunk: Edgerunners 2* (or *Edgerunners* adjacent hype)  
+- Edit beat: pick a single chase/combat segment and cut:
+  - 0:00 hook on downbeat
+  - 0:10 first beat-drop = decision moment
+  - 0:25 climax = final impact synced to bass hit
+- Captions: ultra-short words (e.g., “RUN”, “NO CHOICE”, “NOW.”)
+
+**Source link**
+- “Velocity-style” pacing commonly seen in viral edit pages; reference anime edit with punchy energy:  
+  - https://youtu.be/r6-nE_cn55g  
+
+**Fading flag:** Medium-High (velocity is a trend category; it works, but audience can tire if every channel does the exact same cut density)
+
 
 ---
 
-## Quick Sound Cheat-Sheet (Rising This Week)
-| Track | Listeners (WW) | Best For |
-|-------|----------------|----------|
-| Olivia Rodrigo – *the cure* | 934k | Tension → release (High-IQ, Quote) |
-| Malcolm Todd – *Earrings* | 1.25M | Comedy escalation (Luffy, Denji) |
-| Justice – *Flower In A Hurricane* (GTA VI OST) | 73k | Cyberpunk / tech-power fantasy |
-| Arctic Monkeys – *505* | 3.2M | Emotional arc payoff |
-| TV Girl – *Lovers Rock* | 13.8k US
+## 7) “Heat Check / Hidden Detail (Your eye missed this)” (mystery caption)
+**What makes it work**
+- It’s a rewatch trigger: “pause here.”
+- You show a small detail (hand movement, expression, weapon swap, code/choice) and zoom for clarity.
+- Works extremely well on anime/game UI because details are visual.
+
+**Studio example (specific title)**
+- **Game:** *Counter-Strike* (use a match moment you can legally source)  
+- Edit beat: show pre-shot behavior → then zoom on the exact cue (crosshair shift / shoulder peek / comms reaction in-game).
+- Text:  
+  - 0:00 “STOP SCROLLING—LOOK AT THIS BEFORE THE SHOT.”  
+  - 0:18 “THAT’S WHY HE WON.”
+
+**Source link**
+- Mystery/attention-to-detail style is common; closest inspiration from the movie edit set (attention hooks):  
+  - https://youtu.be/ynED3mrBAKk  
+  - https://youtu.be/qaWvSyLkYjQ  
+
+**Fading flag:** Low
+
+
+---
+
+# Quick picks for what’s “most likely to work” this week (based on the collected refs)
+- **Most consistent:** #1 “The Moment When…”, #2 POV, #3 Before/After, #6 beat-synced velocity (if not overdone)
+- **High rewatch potential:** #7 “Look at this before…”, #1 moment payoff replay
+
+If you want, tell me 3 target titles from your library (movie/anime/game) and I’ll propose **2 exact 30–40s edit scripts per title** using these formats (hook text + timestamps + final beat).

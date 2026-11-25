@@ -1,22 +1,72 @@
-# TikTok Sound Watcher (updated 2026-11-24)
+# TikTok Sound Watcher (updated 2026-11-25)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-## 7 TikTok sounds that are **spiking right now** (Nov 24 2026) and work great for short‑form movie / game / anime edits  
+## Rising TikTok sounds to try (movie / game / anime edits) — **with what I can confirm from the data provided**
+**Important:** I *cannot* directly access TikTok Creative Center’s live “Trending sounds” page in this chat. The only music I can safely confirm “rising right now” from your repo data is from **Last.fm “songs rising right now”**. So I’m listing tracks that are clearly tagged as rising in that dataset.  
+For the **exact TikTok sound name/link**, I **don’t have Creative Center sound URLs** in the provided inputs—so I’m giving **source links to the rising-data page(s)** you provided instead. If you want, paste 5–10 TikTok sound links from Creative Center and I’ll map them to edit types + exact cut beats.
 
-| # | Sound (artist) | Why it’s rising (data‑backed) | Best edit vibe | Where to cut (beat / drop) | TikTok source link* | Business‑account block? |
-|---|----------------|------------------------------|----------------|----------------------------|---------------------|--------------------------|
-| 1 | **“Earrings” – Malcolm Todd** | 1. 1.25 M listeners on Last.fm (worldwide) → huge streaming bump.<br>2. Used in a wave of *“glow‑up / transformation*” memes on TikTok this week. | **Hype / reveal** – perfect for a character power‑up or epic weapon reveal. | Cut on the **first synth stab** (≈ 0:12) that leads into the “oh‑oh‑oh” vocal hook; the beat drops 1 beat later. | <https://www.tiktok.com/search?q=Earrings%20Malcolm%20Todd> | **No** – indie‑label track, usually stays unblocked. |
-| 2 | **“505” – Arctic Monkeys** | 3.21 M listeners on Last.fm (worldwide) – resurging after a viral TikTok dance challenge. | **Nostalgic / dramatic** – works for a slow‑mo showdown or a bittersweet farewell scene. | Slice on the **first snare hit** of the pre‑chorus (≈ 0:45) right before the “I’m going back to 505” line. | <https://www.tiktok.com/search?q=505%20Arctic%20Monkeys> | **Yes** – major‑label (Domino) often blocked for business accounts. |
-| 3 | **“Creep” – Radiohead** | 4.28 M listeners on Last.fm (worldwide) – back on TikTok after a “self‑esteem” trend. | **Sad / moody** – ideal for a character’s defeat or a “what‑if” alternate‑universe cut. | Cut on the **first distorted guitar chord** (≈ 0:30) that leads into the “I’m a creep” vocal. | <https://www.tiktok.com/search?q=Creep%20Radiohead> | **Yes** – owned by major label (EMI), frequently blocked. |
-| 4 | **“Duvet” – bôa** (anime *Serial Experiments Lain* opening) | 2.19 M listeners on Last.fm (worldwide) – renewed interest from the *Lain* revival posts and anime‑edit reels. | **Mystery / eerie** – fits cyber‑punk game reveals or spooky anime moments. | Slice on the **intro synth arpeggio beat** (≈ 0:08) that hits on the down‑beat of the first vocal line. | <https://www.tiktok.com/search?q=Duvet%20b%C5%8Fa> | **Potentially** – anime‑song licenses vary; many creators report occasional blocks. |
-| 5 | **“Flower In A Hurricane (From GTAVI: Original Score)” – Justice** | 73 K listeners on Last.fm (worldwide) – climbing because **GTA VI** is the top‑watched Twitch title (see live‑data “Grand Theft Auto VI” #1). | **Epic / action** – perfect for high‑octane car chases or boss‑fight intros. | Cut on the **first orchestral hit** (≈ 0:22) that leads into the soaring melody; the beat drops 2 beats later. | <https://www.tiktok.com/search?q=Flower%20In%20A%20Hurricane%20Justice> | **No** – original game‑composer track, usually safe for commercial use. |
-| 6 | **“Drop dead” – Olivia Rodrigo** | 964 K listeners (US) on Last.fm – trending after a TikTok “break‑up revenge” meme cascade. | **Angry / punchy** – great for a villain’s defeat or a fast‑cut montage of fails. | Slice on the **snare‑roll** right before the “Drop dead, I’m over you” line (≈ 0:38). | <https://www.tiktok.com/search?q=Drop%20dead%20Olivia%20Rodrigo> | **Yes** – major label (Geffen) often blocked for business accounts. |
-| 7 | **“My Moon My Man” – Feist** | 1.20 M listeners (worldwide) on Last.fm – appears in a wave of “slow‑mo sunrise” TikToks this week. | **Feel‑good / uplifting** – fits a triumphant ending or a “new‑day” reveal. | Cut on the **first piano chord** that lands on the down‑beat of the chorus (≈ 0:55). | <https://www.tiktok.com/search?q=My%20Moon%20My%20Man%20Feist> | **Potentially** – indie‑label but sometimes flagged; test before scheduling. |
+---
 
-\*Because TikTok does not expose a public “official” sound URL without an app login, the **search‑link** above points directly to the sound’s search results – the quickest way to grab the correct sound ID on a phone.
+### 1) **“the cure” — Olivia Rodrigo**
+- **Why it’s rising:** Listed in Last.fm “songs rising right now” (Worldwide + US).
+- **Best edit type:** **Sad / emotional build** (betrayal → acceptance).
+- **Beat to cut on:** Use the **main vocal entry** for the hook, then cut again on the **first big chorus swell** (small zooms + face reaction overlays).
+- **Source link:** https://www.last.fm (from your provided “Last.fm: songs rising right now” list — track: *the cure*, Olivia Rodrigo)
 
-### Quick tip for MotionVault
-- **Test each sound** in a short 5‑second draft before committing to a full edit; TikTok’s “blocked for business” flag can appear after the first few uploads.
-- For **blocked tracks** (e.g., “505”, “Creep”, “Drop dead”), consider using a **cover‑version** or a **royalty‑free remix** (many creators upload these on TikTok and they stay unblocked).  
-- Pair the **beat‑cut moments** above with a
+### 2) **“stupid song” — Olivia Rodrigo**
+- **Why it’s rising:** In Last.fm “songs rising right now” (Worldwide + US).
+- **Best edit type:** **Funny-angry irony** (swapping romantic scene beats for “why am I like this” humor).
+- **Beat to cut on:** Hook on the **first lyric hit**; then sync meme-style reaction cuts to the **rhythmic downbeats**.
+- **Source link:** https://www.last.fm (from your provided “Last.fm: songs rising right now” list — track: *stupid song*, Olivia Rodrigo)
+
+### 3) **“nothing” — Steve Lacy**
+- **Why it’s rising:** In Last.fm “songs rising right now” (US list).
+- **Best edit type:** **Cool / lowkey hype** (silent stare → sudden violence / victory).
+- **Beat to cut on:** Cut on **first bar of the groove**; then punch a **quick hard cut** on the **transition into the hook**.
+- **Source link:** https://www.last.fm (from your provided “Last.fm: songs rising right now” list — track: *nothing*, Steve Lacy)
+
+### 4) **“Melatonin” — Tinashe**
+- **Why it’s rising:** In Last.fm “songs rising right now” (Worldwide + US).
+- **Best edit type:** **Slow-mo / dreamy despair** (late-night regret, stalking, cooldown after fights).
+- **Beat to cut on:** Hook on the **first melodic phrase**, then match **slow zoom** to the **first drop in intensity** (reduce motion during verses).
+- **Source link:** https://www.last.fm (from your provided “Last.fm: songs rising right now” list — track: *Melatonin*, Tinashe)
+
+### 5) **“Creep” — Radiohead**
+- **Why it’s rising:** In Last.fm “songs rising right now” (Worldwide + US).
+- **Best edit type:** **Creepy / tense** (villain close-ups, “I knew it” reveals, stalking POV).
+- **Beat to cut on:** Use the **first iconic riff** as hook; then cut to **reaction faces on the lyric peaks**.
+- **Source link:** https://www.last.fm (from your provided “Last.fm: songs rising right now” list — track: *Creep*, Radiohead)
+
+### 6) **“505” — Arctic Monkeys**
+- **Why it’s rising:** In Last.fm “songs rising right now” (Worldwide + US).
+- **Best edit type:** **Hype with momentum** (rooftop runs, montage of wins, “don’t blink” editing).
+- **Beat to cut on:** Hook on the **driving beat start**; then stutter-cuts on **main drum hits** during the hook/chorus.
+- **Source link:** https://www.last.fm (from your provided “Last.fm: songs rising right now” list — track: *505*, Arctic Monkeys)
+
+### 7) **“Everlong” — Foo Fighters**
+- **Why it’s rising:** In Last.fm “songs rising right now” (US list).
+- **Best edit type:** **Crescendo emotion** (nostalgia, sacrifice, “hold the line” moments).
+- **Beat to cut on:** Hook on the **early recognizable vocal/phrase**, then slow zoom on **the first big swell**.
+- **Source link:** https://www.last.fm (from your provided “Last.fm: songs rising right now” list — track: *Everlong*, Foo Fighters)
+
+### 8) **“Flower In A Hurricane (feat. Tame Impala, SZA, King Gizzard & the Lizard Wizard) [From GTAVI: Original Score]” — Justice**
+- **Why it’s rising:** Listed in Last.fm “songs rising right now” (Worldwide list).
+- **Best edit type:** **Epic / cinematic** (final boss, GTA-like chaos, “escape” montage).
+- **Beat to cut on:** Hook on the **first big orchestral/track entry**, then align cuts to the **score’s first major lift** (build → release).
+- **Source link:** https://www.last.fm (from your provided “Last.fm: songs rising right now” list — track: *Flower In A Hurricane…*, Justice)
+
+---
+
+## Business/account block risk (what I can say safely)
+I **can’t confirm per-sound TikTok Business block status** from your provided inputs. In general, major-label tracks (Radiohead/Arctic Monkeys/Foo Fighters/Olivia Rodrigo/Justice) **often get restricted** at some point for monetization, but whether they’re blocked on *your* account can’t be verified here.  
+**If you want,** tell me your posting mode (**music on/off, “use sound” vs “upload with audio”**) and I’ll suggest safer cut strategies (e.g., **use only the instrumental tail**, tighten to copyrighted-claim-avoidance patterns)—without claiming exact block status.
+
+---
+
+## Next step (so I can make this truly “TikTok sound” specific)
+Paste either:
+- 5–8 **TikTok Creative Center sound links/screenshots** (sound page URLs), **or**
+- the **TikTok sound names** exactly as shown in Creative Center + their “Audio ID” if visible.
+
+Then I’ll return a **clean list with exact TikTok sound links** + precise **0:00–0:20 hook + drop timestamps** tailored to **movie / game / anime** scenes.
