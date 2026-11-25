@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T08:52:54.946Z",
+  "generatedAt": "2026-11-25T19:27:32.606Z",
   "date": "2026-11-25",
   "token": true,
   "searches": {
@@ -9,389 +9,86 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 28,
-  "rateRemaining": 6,
-  "newItems": 12,
-  "blockedToday": 3,
+  "apiCalls": 19,
+  "rateRemaining": 9,
+  "newItems": 1,
+  "blockedToday": 0,
   "shortlist": [
     {
-      "name": "MODSetter/SurfSense",
-      "url": "https://github.com/MODSetter/SurfSense",
-      "description": "Air-gapped, private AI for confidential documents. Open-source NotebookLM alternative that runs on your computer. Join our Discord: https://discord.gg/ejRNvftDp9",
-      "stars": 16945,
-      "forks": 1618,
+      "name": "Ebazhanov/linkedin-skill-assessments-quizzes",
+      "url": "https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes",
+      "description": "Full reference of LinkedIn answers 2024 for skill assessments (aws-lambda, rest-api, javascript, react, git, html, jquery, mongodb, java, Go, python, machine-learning, power-point) linkedin excel test lösungen, linkedin machine learning test LinkedIn test questions and answers",
+      "stars": 28890,
+      "forks": 12819,
       "language": "Python",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-24T05:55:17Z",
-      "category": "efficiency",
-      "score": 70,
+      "license": "AGPL-3.0",
+      "pushedAt": "2026-11-25T08:20:12Z",
+      "category": "skills",
+      "score": 64,
       "tier": "watch",
       "reasons": [
-        "16,945 stars",
+        "matched the search but not clearly about this topic",
+        "28,890 stars",
         "updated this week",
-        "Apache-2.0 license",
+        "AGPL-3.0 license",
         "well established"
       ],
       "flags": [
-        "self-host-required"
+        "off-topic"
       ],
-      "skillFiles": null,
-      "source": "search",
-      "newborn": false,
-      "skillPath": null,
-      "commitUrl": null
-    },
-    {
-      "name": "AntigmaLabs/ante",
-      "url": "https://github.com/AntigmaLabs/ante",
-      "description": "Ghost in your shell. Ante is a self-contained agent harness with a highly optimized core. It works like Claude Code or Codex, with none of their dependencies or model constraints.",
-      "stars": 2050,
-      "forks": 81,
-      "language": "Rust",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-25T06:29:51Z",
-      "category": "efficiency",
-      "score": 60,
-      "tier": "watch",
-      "reasons": [
-        "2,050 stars",
-        "updated this week",
-        "Apache-2.0 license"
-      ],
-      "flags": [],
-      "skillFiles": null,
-      "source": "search",
-      "newborn": false,
-      "skillPath": null,
-      "commitUrl": null
-    },
-    {
-      "name": "KIvanow/sessionly",
-      "url": "https://github.com/KIvanow/sessionly",
-      "description": "Lab-neutral, local-first ledger for Claude Code, Codex, Cursor and Grok sessions: what they did, what it cost, what survived.",
-      "stars": 190,
-      "forks": 6,
-      "language": "TypeScript",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-25T08:31:29Z",
-      "category": "efficiency",
-      "score": 55,
-      "tier": "watch",
-      "reasons": [
-        "190 stars",
-        "updated this week",
-        "Apache-2.0 license",
-        "directly cuts AI spend"
-      ],
-      "flags": [
-        "self-host-required"
-      ],
-      "skillFiles": null,
+      "skillFiles": false,
       "source": "search",
       "newborn": false,
       "skillPath": null,
       "commitUrl": null
     }
   ],
-  "watched": [
-    {
-      "name": "anthropics/claude-plugins-official",
-      "url": "https://github.com/anthropics/claude-plugins-official",
-      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
-      "stars": 48151,
-      "forks": 5031,
-      "language": "Python",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-25T07:32:58Z",
-      "category": "skills",
-      "score": 100,
-      "tier": "adopt",
-      "reasons": [
-        "new skill file: plugins/claude-security/skills/attack-surface-analysis/SKILL.md",
-        "48,151 stars",
-        "updated this week",
-        "Apache-2.0 license",
-        "first-party / well-known maintainer",
-        "well established",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [],
-      "skillFiles": true,
-      "source": "watched",
-      "newborn": false,
-      "skillPath": "plugins/claude-security/skills/attack-surface-analysis/SKILL.md",
-      "commitUrl": "https://github.com/anthropics/claude-plugins-official/commits/6985b2d88dc08b4a0d202f5f0301f02e360b9cb1"
-    },
-    {
-      "name": "anthropics/claude-plugins-official",
-      "url": "https://github.com/anthropics/claude-plugins-official",
-      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
-      "stars": 48151,
-      "forks": 5031,
-      "language": "Python",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-25T07:32:58Z",
-      "category": "skills",
-      "score": 100,
-      "tier": "adopt",
-      "reasons": [
-        "new skill file: plugins/claude-security/skills/ci-review/SKILL.md",
-        "48,151 stars",
-        "updated this week",
-        "Apache-2.0 license",
-        "first-party / well-known maintainer",
-        "well established",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [],
-      "skillFiles": true,
-      "source": "watched",
-      "newborn": false,
-      "skillPath": "plugins/claude-security/skills/ci-review/SKILL.md",
-      "commitUrl": "https://github.com/anthropics/claude-plugins-official/commits/6985b2d88dc08b4a0d202f5f0301f02e360b9cb1"
-    },
-    {
-      "name": "anthropics/claude-plugins-official",
-      "url": "https://github.com/anthropics/claude-plugins-official",
-      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
-      "stars": 48151,
-      "forks": 5031,
-      "language": "Python",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-25T07:32:58Z",
-      "category": "skills",
-      "score": 100,
-      "tier": "adopt",
-      "reasons": [
-        "new skill file: plugins/claude-security/skills/hosted/SKILL.md",
-        "48,151 stars",
-        "updated this week",
-        "Apache-2.0 license",
-        "first-party / well-known maintainer",
-        "well established",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [],
-      "skillFiles": true,
-      "source": "watched",
-      "newborn": false,
-      "skillPath": "plugins/claude-security/skills/hosted/SKILL.md",
-      "commitUrl": "https://github.com/anthropics/claude-plugins-official/commits/6985b2d88dc08b4a0d202f5f0301f02e360b9cb1"
-    },
-    {
-      "name": "anthropics/claude-plugins-official",
-      "url": "https://github.com/anthropics/claude-plugins-official",
-      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
-      "stars": 48151,
-      "forks": 5031,
-      "language": "Python",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-25T07:32:58Z",
-      "category": "skills",
-      "score": 84,
-      "tier": "adopt",
-      "reasons": [
-        "2 more new skill file(s) in this repo",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [],
-      "skillFiles": true,
-      "source": "watched",
-      "newborn": false,
-      "skillPath": null,
-      "commitUrl": "https://github.com/anthropics/claude-plugins-official/commits/6985b2d88dc08b4a0d202f5f0301f02e360b9cb1"
-    }
-  ],
-  "newborn": [
-    {
-      "name": "Developing-Gamer/agent-sim",
-      "url": "https://github.com/Developing-Gamer/agent-sim",
-      "description": "iOS simulators for AI agents, on Linux. The agent layer for x86Sim.",
-      "stars": 577,
-      "forks": 61,
-      "language": "Rust",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-25T00:26:34Z",
-      "category": "skills",
-      "score": 74,
-      "tier": "watch",
-      "reasons": [
-        "filed under skills",
-        "577 stars",
-        "updated this week",
-        "Apache-2.0 license",
-        "new repo, 4 days old",
-        "early traction"
-      ],
-      "flags": [
-        "newborn"
-      ],
-      "skillFiles": null,
-      "source": "search",
-      "newborn": true,
-      "skillPath": null,
-      "commitUrl": null
-    },
-    {
-      "name": "Karimk899/free-llm-router",
-      "url": "https://github.com/Karimk899/free-llm-router",
-      "description": "One API key, 15+ free providers, automatic fallback. The free-tier router for LLMs. \\| llm router free fallback proxy openai-compatible \\| Portable x64 prebuilt for Windows",
-      "stars": 65,
-      "forks": 0,
-      "language": "C++",
-      "license": "MIT",
-      "pushedAt": "2026-11-24T21:46:39Z",
-      "category": "skills",
-      "score": 67,
-      "tier": "watch",
-      "reasons": [
-        "filed under skills",
-        "updated this week",
-        "MIT license",
-        "new repo, 1 day old",
-        "early traction"
-      ],
-      "flags": [
-        "newborn"
-      ],
-      "skillFiles": null,
-      "source": "search",
-      "newborn": true,
-      "skillPath": null,
-      "commitUrl": null
-    },
-    {
-      "name": "ThaoYou30020/llm-router-free",
-      "url": "https://github.com/ThaoYou30020/llm-router-free",
-      "description": "One API key, 15+ free providers, automatic fallback. The free-tier router for LLMs. \\| llm router free fallback proxy openai-compatible \\| Portable x64 prebuilt for Windows",
-      "stars": 62,
-      "forks": 0,
-      "language": "C++",
-      "license": "MIT",
-      "pushedAt": "2026-11-24T21:46:40Z",
-      "category": "skills",
-      "score": 67,
-      "tier": "watch",
-      "reasons": [
-        "filed under skills",
-        "updated this week",
-        "MIT license",
-        "new repo, 1 day old",
-        "early traction"
-      ],
-      "flags": [
-        "newborn"
-      ],
-      "skillFiles": null,
-      "source": "search",
-      "newborn": true,
-      "skillPath": null,
-      "commitUrl": null
-    }
-  ],
+  "watched": [],
+  "newborn": [],
   "byCategory": {
-    "skills": [],
-    "enhancement": [],
-    "free-tokens": [],
-    "efficiency": [
+    "skills": [
       {
-        "name": "MODSetter/SurfSense",
-        "url": "https://github.com/MODSetter/SurfSense",
-        "description": "Air-gapped, private AI for confidential documents. Open-source NotebookLM alternative that runs on your computer. Join our Discord: https://discord.gg/ejRNvftDp9",
-        "stars": 16945,
-        "forks": 1618,
+        "name": "Ebazhanov/linkedin-skill-assessments-quizzes",
+        "url": "https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes",
+        "description": "Full reference of LinkedIn answers 2024 for skill assessments (aws-lambda, rest-api, javascript, react, git, html, jquery, mongodb, java, Go, python, machine-learning, power-point) linkedin excel test lösungen, linkedin machine learning test LinkedIn test questions and answers",
+        "stars": 28890,
+        "forks": 12819,
         "language": "Python",
-        "license": "Apache-2.0",
-        "pushedAt": "2026-11-24T05:55:17Z",
-        "category": "efficiency",
-        "score": 70,
+        "license": "AGPL-3.0",
+        "pushedAt": "2026-11-25T08:20:12Z",
+        "category": "skills",
+        "score": 64,
         "tier": "watch",
         "reasons": [
-          "16,945 stars",
+          "matched the search but not clearly about this topic",
+          "28,890 stars",
           "updated this week",
-          "Apache-2.0 license",
+          "AGPL-3.0 license",
           "well established"
         ],
         "flags": [
-          "self-host-required"
+          "off-topic"
         ],
-        "skillFiles": null,
-        "source": "search",
-        "newborn": false,
-        "skillPath": null,
-        "commitUrl": null
-      },
-      {
-        "name": "AntigmaLabs/ante",
-        "url": "https://github.com/AntigmaLabs/ante",
-        "description": "Ghost in your shell. Ante is a self-contained agent harness with a highly optimized core. It works like Claude Code or Codex, with none of their dependencies or model constraints.",
-        "stars": 2050,
-        "forks": 81,
-        "language": "Rust",
-        "license": "Apache-2.0",
-        "pushedAt": "2026-11-25T06:29:51Z",
-        "category": "efficiency",
-        "score": 60,
-        "tier": "watch",
-        "reasons": [
-          "2,050 stars",
-          "updated this week",
-          "Apache-2.0 license"
-        ],
-        "flags": [],
-        "skillFiles": null,
-        "source": "search",
-        "newborn": false,
-        "skillPath": null,
-        "commitUrl": null
-      },
-      {
-        "name": "KIvanow/sessionly",
-        "url": "https://github.com/KIvanow/sessionly",
-        "description": "Lab-neutral, local-first ledger for Claude Code, Codex, Cursor and Grok sessions: what they did, what it cost, what survived.",
-        "stars": 190,
-        "forks": 6,
-        "language": "TypeScript",
-        "license": "Apache-2.0",
-        "pushedAt": "2026-11-25T08:31:29Z",
-        "category": "efficiency",
-        "score": 55,
-        "tier": "watch",
-        "reasons": [
-          "190 stars",
-          "updated this week",
-          "Apache-2.0 license",
-          "directly cuts AI spend"
-        ],
-        "flags": [
-          "self-host-required"
-        ],
-        "skillFiles": null,
+        "skillFiles": false,
         "source": "search",
         "newborn": false,
         "skillPath": null,
         "commitUrl": null
       }
-    ]
+    ],
+    "enhancement": [],
+    "free-tokens": [],
+    "efficiency": []
   },
-  "blocked": [
-    {
-      "name": "francoisokada/llm-key-pool",
-      "why": "matched the scam / key-generator filter",
-      "stars": 51
-    },
-    {
-      "name": "aSimmons5907/key-pool-rotator",
-      "why": "matched the scam / key-generator filter",
-      "stars": 48
-    },
-    {
-      "name": "ebbapanagiotou44/llm-key-rotator",
-      "why": "matched the scam / key-generator filter",
-      "stars": 41
-    }
-  ],
+  "blocked": [],
   "watching": [
+    {
+      "name": "anthropics/claude-plugins-official",
+      "score": 96,
+      "tier": "adopt",
+      "category": "skills",
+      "first": "2026-11-06"
+    },
     {
       "name": "modelcontextprotocol/python-sdk",
       "score": 96,
@@ -426,17 +123,10 @@
       "tier": "watch",
       "category": "skills",
       "first": "2026-11-18"
-    },
-    {
-      "name": "DIYgod/pinky",
-      "score": 88,
-      "tier": "watch",
-      "category": "skills",
-      "first": "2026-11-17"
     }
   ],
   "watchedRepos": {
     "ran": 3,
-    "newSkillFiles": 5
+    "newSkillFiles": 0
   }
 }
