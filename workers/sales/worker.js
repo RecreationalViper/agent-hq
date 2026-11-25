@@ -1627,6 +1627,7 @@ async function fridayWatch(req, env) {
     } catch {}
   }
   for (const id of newIds) seen.add(id);
+  seen.add("init");
   await env.SALES.put("friday:watch:seen", JSON.stringify([...seen].slice(-400)));
   if (first || !lines.length) return out({ ok: true, sent: 0, learned: first ? newIds.length : 0 });
   await fridayNotify(env, lines.length === 1 ? "Friday" : `Friday · ${lines.length} things`, lines.join("\n"), "default").catch(() => {});
