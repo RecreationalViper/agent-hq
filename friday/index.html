@@ -30,20 +30,10 @@
   @keyframes blink { 50% { opacity:.35; } }
   header button { background:none; border:1px solid var(--line); color:var(--cyan2); border-radius:10px; width:36px; height:32px; font-size:16px; }
   #hud { display:flex; justify-content:space-between; color:var(--dim); padding:2px 4px 0; }
-  #core { position:relative; height:232px; display:grid; place-items:center; flex-shrink:0; }
-  #orb { width:212px; height:212px; border:0; padding:0; background:none; cursor:pointer; position:relative; border-radius:50%; }
-  #orb svg { width:100%; height:100%; overflow:visible; filter:drop-shadow(0 0 calc(10px + var(--amp) * 26px) var(--tone)); transition:filter .12s; }
-  #orb .r { fill:none; stroke:var(--tone); transform-origin:100px 100px; transition:stroke .4s; }
-  .r1 { stroke-width:1.2; opacity:.55; stroke-dasharray:2 5; animation:spin 40s linear infinite; }
-  .r2 { stroke-width:3; opacity:.85; stroke-dasharray:60 18 8 18; animation:spin 14s linear infinite reverse; }
-  .r3 { stroke-width:1.5; opacity:.6; stroke-dasharray:110 40; animation:spin 9s linear infinite; }
-  .r4 { stroke-width:6; opacity:.25; stroke-dasharray:1 7; animation:spin 22s linear infinite reverse; }
-  #orb .c { fill:url(#g); transform-origin:100px 100px; transform:scale(calc(1 + var(--amp) * .22)); transition:transform .08s; }
-  @keyframes spin { to { transform:rotate(360deg); } }
-  body.listening .r2, body.listening .r3 { animation-duration:3s; } body.listening #orb svg { filter:drop-shadow(0 0 30px var(--tone)); }
-  body.listening .r1 { opacity:1; }
-  body.thinking .r2 { animation-duration:1.6s; } body.thinking .r3 { animation-duration:1.1s; }
-  #hint { position:absolute; bottom:-2px; color:var(--cyan2); opacity:.8; }
+  #core { position:relative; height:270px; display:grid; place-items:center; flex-shrink:0; margin:0 -16px; }
+  #orb { width:100%; height:270px; border:0; padding:0; background:none; cursor:pointer; position:relative; }
+  #ent { width:100%; height:100%; display:block; }
+  #hint { position:absolute; bottom:4px; color:var(--cyan2); opacity:.8; }
   #log { flex:1; overflow-y:auto; padding:14px 0 10px; display:flex; flex-direction:column; gap:10px; mask-image:linear-gradient(transparent,#000 22px); }
   .m { max-width:88%; padding:10px 14px; animation:in .35s cubic-bezier(.34,1.45,.55,1); white-space:pre-wrap; position:relative; }
   .you { align-self:flex-end; background:rgba(53,208,255,.08); border:1px solid rgba(53,208,255,.18); border-radius:14px 14px 4px 14px; color:#cdeaff; }
@@ -85,14 +75,7 @@
 <div id="hud" class="mono"><span id="clock">--:--</span><span id="sys">All systems nominal</span></div>
 <div id="core">
   <button id="orb" aria-label="Talk to Friday">
-    <svg viewBox="0 0 200 200" aria-hidden="true">
-      <defs><radialGradient id="g"><stop offset="0" stop-color="#ffffff"/><stop offset=".25" stop-color="#bff1ff"/><stop offset=".55" stop-color="#35d0ff" stop-opacity=".9"/><stop offset="1" stop-color="#0a4f8f" stop-opacity="0"/></radialGradient></defs>
-      <circle class="r r1" cx="100" cy="100" r="96"/>
-      <circle class="r r4" cx="100" cy="100" r="84"/>
-      <circle class="r r2" cx="100" cy="100" r="72"/>
-      <circle class="r r3" cx="100" cy="100" r="58"/>
-      <circle class="c" cx="100" cy="100" r="42"/>
-    </svg>
+    <canvas id="ent" aria-hidden="true"></canvas>
   </button>
   <div id="hint" class="mono">Tap to talk</div>
 </div>
@@ -186,6 +169,85 @@ async function loadApps() {
 document.addEventListener("visibilitychange", () => { if (!document.hidden && $("#sheet").classList.contains("on")) loadApps(); });
 
 function add(text, who) { const d = document.createElement("div"); d.className = "m " + who; d.textContent = text; log.appendChild(d); log.scrollTop = log.scrollHeight; return d; }
+
+// ---------- Friday's form: a living web of points that morphs with her state ----------
+// idle = drifting cloud, listening = rippling ring, thinking = double helix (amber), speaking = a body that pulses with her voice.
+// fridayShape("text:HELLO") / ("sphere"|"ring"|"helix"|"wave"|"cube") makes her take any shape.
+(() => {
+  const cv = $("#ent"), cx = cv.getContext("2d"), N = 640, DPR = Math.min(2, devicePixelRatio || 1);
+  let W = 0, H = 0;
+  const fit = () => { W = cv.clientWidth; H = cv.clientHeight; cv.width = W * DPR; cv.height = H * DPR; cx.setTransform(DPR, 0, 0, DPR, 0, 0); };
+  fit(); addEventListener("resize", fit);
+  const P = Array.from({ length: N }, (_, i) => ({ x: 0, y: 0, z: 0, tx: 0, ty: 0, tz: 0, s: Math.random(), k: i }));
+  // shapes: each returns N target points around the origin, radius ~1
+  const gold = Math.PI * (3 - Math.sqrt(5));
+  const SH = {
+    sphere: (i) => { const y = 1 - (i / (N - 1)) * 2, r = Math.sqrt(1 - y * y), t = gold * i; return [Math.cos(t) * r, y, Math.sin(t) * r]; },
+    ring: (i) => { const t = (i / N) * Math.PI * 2 * 7, u = (i / N) * Math.PI * 2; return [Math.cos(u) * (1 + 0.22 * Math.cos(t)), 0.22 * Math.sin(t), Math.sin(u) * (1 + 0.22 * Math.cos(t))]; },
+    helix: (i) => { const h = i % 2, t = (i / N) * Math.PI * 7; return [Math.cos(t + h * Math.PI) * 0.55, (i / N) * 1.7 - 0.85, Math.sin(t + h * Math.PI) * 0.55]; },
+    wave: (i) => { const c = Math.ceil(Math.sqrt(N)), gx = (i % c) / c * 2.4 - 1.2, gz = Math.floor(i / c) / c * 2.4 - 1.2; return [gx, 0, gz]; },
+    cube: (i) => { const f = i % 6, a = Math.random() * 2 - 1, b = Math.random() * 2 - 1, v = [[1, a, b], [-1, a, b], [a, 1, b], [a, -1, b], [a, b, 1], [a, b, -1]][f]; return v.map((n) => n * 0.72); }
+  };
+  function textShape(str) {
+    const c = document.createElement("canvas"), w = 220, h = 70; c.width = w; c.height = h; const g = c.getContext("2d");
+    g.fillStyle = "#fff"; g.font = `bold ${str.length > 4 ? 40 : 56}px -apple-system,system-ui,sans-serif`; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(str.slice(0, 9), w / 2, h / 2);
+    const d = g.getImageData(0, 0, w, h).data, pts = [];
+    for (let y = 0; y < h; y += 2) for (let x = 0; x < w; x += 2) if (d[(y * w + x) * 4 + 3] > 128) pts.push([(x - w / 2) / 62, (y - h / 2) / 62, 0]);
+    return (i) => { const p = pts[i % Math.max(1, pts.length)] || [0, 0, 0]; return [p[0], p[1], (Math.random() - 0.5) * 0.08]; };
+  }
+  let shape = "sphere", hold = 0;
+  window.fridayShape = (name, ms = 0) => {
+    const fn = name.startsWith("text:") ? textShape(name.slice(5)) : SH[name] || SH.sphere;
+    for (const p of P) { const [x, y, z] = fn(p.k); p.tx = x; p.ty = y; p.tz = z; }
+    shape = name; hold = ms ? Date.now() + ms : 0;
+  };
+  fridayShape("text:FRIDAY", 2600);
+  for (const p of P) { p.x = p.tx * 1.25; p.y = p.ty * 1.25; p.z = p.tz * 1.25; }
+  // web: link each point to its 2 nearest neighbours in the sphere layout (computed once)
+  const links = [];
+  { const base = P.map((p) => SH.sphere(p.k)); for (let i = 0; i < N; i += 1) { const d = []; for (let j = 0; j < N; j++) if (j !== i) { const a = base[i], b = base[j]; d.push([(a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2 + (a[2] - b[2]) ** 2, j]); } d.sort((m, n) => m[0] - n[0]); links.push([i, d[0][1]], [i, d[1][1]]); } }
+  let rotY = 0, rotX = 0.35, last = performance.now(), smoothAmp = 0;
+  const modeShape = () => body.classList.contains("listening") ? "ring" : body.classList.contains("thinking") ? "helix" : "sphere";
+  function frame(now) {
+    const dt = Math.min(0.25, (now - last) / 1000); last = now;
+    const amp = parseFloat(getComputedStyle(body).getPropertyValue("--amp")) || 0; smoothAmp += (amp - smoothAmp) * 0.25;
+    if (!hold || Date.now() > hold) { const m = modeShape(); if (m !== shape) fridayShape(m); }
+    const think = body.classList.contains("thinking"), listen = body.classList.contains("listening"), speak = body.classList.contains("speaking");
+    rotY += dt * (think ? 1.4 : listen ? 0.9 : 0.25 + smoothAmp); rotX = 0.35 + Math.sin(now / 4000) * 0.15;
+    const t = now / 1000, R = Math.min(W, H) * (0.34 + smoothAmp * 0.06), cyx = W / 2, cyy = H / 2 - 8;
+    const cy = Math.cos(rotY), sy = Math.sin(rotY), cxr = Math.cos(rotX), sxr = Math.sin(rotX);
+    const proj = new Array(N);
+    for (const p of P) {
+      const e = 1 - Math.pow(0.025, dt); p.x += (p.tx - p.x) * e; p.y += (p.ty - p.y) * e; p.z += (p.tz - p.z) * e;
+      // organic, never-the-same surface: layered waves, pushed outward by her voice
+      const wob = 0.1 + (speak ? smoothAmp * 0.45 : 0) + (listen ? 0.05 : 0);
+      const n = Math.sin(p.x * 3.1 + t * 1.3) * Math.cos(p.y * 2.7 - t * 1.1) * Math.sin(p.z * 3.3 + t * 0.9 + p.s);
+      const k = 1 + n * wob;
+      let x = p.x * k, y = p.y * k, z = p.z * k;
+      const x1 = x * cy - z * sy, z1 = x * sy + z * cy, y1 = y * cxr - z1 * sxr, z2 = y * sxr + z1 * cxr;
+      const f = Math.min(1.6, 2.6 / Math.max(1.2, 2.6 + z2));
+      proj[p.k] = [cyx + x1 * R * f, cyy + y1 * R * f, z2, f];
+    }
+    cx.clearRect(0, 0, W, H);
+    const col = think ? "255,181,71" : "53,208,255";
+    cx.lineWidth = 0.6;
+    for (const [a, b] of links) {
+      const A = proj[a], B = proj[b]; const dx = A[0] - B[0], dy = A[1] - B[1]; if (dx * dx + dy * dy > 1800) continue;
+      const al = 0.08 + 0.22 * ((A[3] + B[3]) / 2 - 0.7) + smoothAmp * 0.25;
+      cx.strokeStyle = `rgba(${col},${Math.max(0.03, al).toFixed(3)})`; cx.beginPath(); cx.moveTo(A[0], A[1]); cx.lineTo(B[0], B[1]); cx.stroke();
+    }
+    for (let i = 0; i < N; i++) {
+      const [x, y, z, f] = proj[i], front = (1 - z) / 2;
+      const r = Math.max(0.2, (0.6 + Math.max(0, front) * 1.5) * f * (1 + smoothAmp * 0.8)), hot = P[i].s > 0.93;
+      cx.fillStyle = hot ? `rgba(255,255,255,${(0.5 + front * 0.5).toFixed(2)})` : `rgba(${col},${(0.25 + front * 0.7).toFixed(2)})`;
+      cx.beginPath(); cx.arc(x, y, r, 0, 6.283); cx.fill();
+    }
+    requestAnimationFrame(frame);
+  }
+  window.fridaySettle = () => { for (const p of P) { p.x = p.tx; p.y = p.ty; p.z = p.tz; } };
+  requestAnimationFrame(frame);
+})();
+
 // HUD: clock, quick chips, and the core glowing with her voice
 const clock = () => { const d = new Date(); $("#clock").textContent = d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) + " · " + d.toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" }); };
 clock(); setInterval(clock, 15000);
