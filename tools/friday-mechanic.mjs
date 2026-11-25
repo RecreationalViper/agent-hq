@@ -30,7 +30,14 @@ const mech = await fetch(API + "/mechanic", { headers: { "x-friday-key": key } }
 const log = mech.log || [], wishes = mech.wishes || [];
 if (process.env.EXTRA_WISH?.trim()) wishes.push({ id: "manual", at: new Date().toISOString(), text: process.env.EXTRA_WISH.trim() });
 console.log(`health problems: ${problems.length}, logged errors: ${log.length}, wishes: ${wishes.length}`);
-if (!problems.length && !log.length && !wishes.length) { console.log("Friday is healthy and has no wishes. Nothing to do."); process.exit(0); }
+// nothing broken and no wishes: build the next idea from her plan (friday/PLAN.md, "Mechanic's idea list")
+if (!problems.length && !log.length && !wishes.length) {
+  let plan = ""; try { plan = fs.readFileSync("friday/PLAN.md", "utf8"); } catch {}
+  const idea = (plan.split("## Mechanic's idea list")[1] || "").split("\n").find((l) => l.startsWith("- [ ] "));
+  if (!idea) { console.log("Friday is healthy, has no wishes, and the idea list is empty. Nothing to do."); process.exit(0); }
+  wishes.push({ id: "plan", at: new Date().toISOString(), text: `${idea.slice(6)} (From her idea list in friday/PLAN.md: also change that line from "- [ ]" to "- [x]".)` });
+  console.log(`Building the next planned idea: ${idea.slice(6, 120)}`);
+}
 
 // 3) ask for one small change
 const code = FILES.map((f) => `===== FILE: ${f} =====\n${fs.readFileSync(f, "utf8")}`).join("\n\n");

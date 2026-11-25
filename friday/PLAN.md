@@ -41,3 +41,12 @@ Settings › Connections in the app lists everything (green dot = live). Worker 
 - Second brain: fridayLookup: web (Tavily, Exa), think (Claude, $2/month cap in KV), notion/note, discord, report.
 - Owner key only for private data; the agents' test key gets web/think/report only (its output lands in public logs).
 - Next: PayPal, Etsy, Shopify, Spotify, bank accounts (read-only), Friday Hands Shortcut.
+
+## Mechanic's idea list
+The nightly mechanic builds the first unchecked idea when Friday has no errors or wishes, opens a reviewed PR, and ticks it here. Josiah can add ideas anytime.
+- [ ] When he asks about sales, her web-form shapes into a "$" for a few seconds (fridayShape("text:$", 3000) in the app after a sales answer).
+- [ ] Weekly recap every Sunday evening: goals progress, sales, what the agents shipped, one suggestion. Pushed to his phone.
+- [ ] "What do you remember about X?" answers straight from long-term memory (a recall lookup tool).
+- [ ] Goal check-ins: once a day, if an active goal has a step owned by Josiah that's been open 2+ days, she nudges him once.
+- [ ] Friday can read a PDF or doc link he sends and summarize it.
+

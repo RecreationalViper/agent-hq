@@ -75,6 +75,14 @@ const G_ID = (process.env.GMAIL_CLIENT_ID || "").trim(), G_SECRET = (process.env
 if (G_ID && G_SECRET) { bindings.push({ type: "plain_text", name: "GOOGLE_CLIENT_ID", text: G_ID }, { type: "secret_text", name: "GOOGLE_CLIENT_SECRET", text: G_SECRET }); console.log("Friday: Google client saved on the Worker"); }
 // Friday's second brain: web search, Claude for hard questions, Notion (all keys the agents already use)
 for (const name of ["NVIDIA_API_KEY", "CEREBRAS_API_KEY", "MISTRAL_API_KEY", "SAMBANOVA_API_KEY", "SILICONFLOW_API_KEY", "COHERE_API_KEY", "DEEPSEEK_API_KEY", "POLLINATIONS_API_KEY", "ELEVENLABS_API_KEY", "ELEVENLABS_VOICE", "FRED_API_KEY", "ALPACA_KEY", "ALPACA_SECRET", "PLAID_CLIENT_ID", "PLAID_SECRET"]) if (process.env[name]?.trim()) bindings.push({ type: "secret_text", name, text: process.env[name].trim() });
+// Friday's long-term memory: a Vectorize index (free plan). Skipped quietly if this token can't manage Vectorize.
+try {
+  const idx = await cf("/vectorize/v2/indexes").catch(() => []);
+  if (!(idx || []).some((i) => i.name === "friday-memory")) await cf("/vectorize/v2/indexes", { method: "POST", body: JSON.stringify({ name: "friday-memory", description: "Friday long-term memory", config: { dimensions: 384, metric: "cosine" } }) });
+  try { await cf("/vectorize/v2/indexes/friday-memory/metadata_index/create", { method: "POST", body: JSON.stringify({ propertyName: "kind", indexType: "string" }) }); } catch {}
+  bindings.push({ type: "vectorize", name: "MEMVEC", index_name: "friday-memory" });
+  console.log("Friday memory: Vectorize index ready");
+} catch (e) { console.log(`Friday memory: Vectorize not available (${String(e.message).slice(0, 160)}), using simple memory`); }
 for (const [name, v] of [["TAVILY_API_KEY", process.env.TAVILY_API_KEY], ["EXA_API_KEY", process.env.EXA_API_KEY], ["CLAUDE_API_KEY", process.env.CLAUDE_API_KEY], ["NOTION_TOKEN", process.env.NOTION_TOKEN]]) if (v?.trim()) bindings.push({ type: "secret_text", name, text: v.trim() });
 console.log(`Friday lookups: ${["TAVILY_API_KEY", "EXA_API_KEY", "CLAUDE_API_KEY", "NOTION_TOKEN"].filter((n) => process.env[n]?.trim()).join(", ") || "none"}`);
 const form = new FormData();

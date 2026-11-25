@@ -77,6 +77,7 @@ export default {
     }
     if (url.pathname === "/friday/mechanic") return fridayMechanic(req, env);
     if (url.pathname === "/friday/briefing") return fridayBriefing(req, env);
+    if (url.pathname === "/friday/watch") return fridayWatch(req, env);
     if (url.pathname.startsWith("/friday/plaid")) return fridayPlaid(req, env, url);
     if (url.pathname === "/friday/directives" || url.pathname === "/friday/notify") return fridayAgentBridge(req, env, url);
     if (url.pathname === "/friday") return friday(req, env, ctx);
@@ -602,6 +603,10 @@ async function fridayInner(req, env, ctx, trace = {}) {
   const now = new Date();
   const ny = now.toLocaleString("en-US", { timeZone: "America/New_York", weekday: "long", month: "long", day: "numeric", hour: "numeric", minute: "2-digit" });
 
+  // long-term memory: recall what's relevant to this message (runs alongside the facts lookup)
+  const recallP = owner ? memRecall(env, q.slice(0, 600)) : Promise.resolve([]);
+  // one-time: copy the old simple memory list into long-term memory
+  if (owner && env.MEMVEC && memory.length && !(await env.SALES.get("friday:mem:migrated"))) { const mig = memAdd(env, memory.map((m) => ({ text: m, kind: "fact" }))).then(() => env.SALES.put("friday:mem:migrated", "1")); if (ctx?.waitUntil) ctx.waitUntil(mig); }
   let tf = Date.now();
   // facts are cached for 2 minutes so back-to-back questions answer fast
   const fkey = `friday:factcache:${owner ? "o" : "t"}`;
@@ -610,6 +615,7 @@ async function fridayInner(req, env, ctx, trace = {}) {
   if (!facts) { facts = await fridayFacts(env, now, owner); const w = env.SALES.put(fkey, JSON.stringify({ t: Date.now(), f: facts }), { expirationTtl: 300 }).catch(() => {}); if (ctx?.waitUntil) ctx.waitUntil(w); trace.facts = "fresh"; } else trace.facts = "cached";
   trace.facts_ms = Date.now() - tf; tf = Date.now();
 
+  const recalled = await recallP; trace.memories = recalled.length;
   const system = `You are FRIDAY, Josiah Cottingham's personal AI, modeled on Tony Stark's FRIDAY (and JARVIS before her). ${FRIDAY_PERSONA}
 It's ${ny} (New York).
 
@@ -633,6 +639,8 @@ Google also has: {"do":"drive_search","query":"..."} {"do":"doc_read","query":"f
   {"tool":"report","query":"agent name like growth coach or researcher"}  read an agent's latest report
   {"tool":"read","url":"https://..."}  open and read any webpage or article he names or that a search found (use after "web" when the snippets aren't enough)
   {"tool":"markets","query":"what he asked","symbols":["TSLA","NVDA"],"portfolio":false}  LIVE economy + markets: Fed rate, Treasury yields, mortgage rates, inflation, jobs, oil, gas, housing, dollar, VIX, S&P/Nasdaq/Dow, gold, crypto, any stock symbols, and (portfolio:true) the trading desk's paper account. ALWAYS use this for any money/markets/economy question instead of memory. Explain like a sharp banker friend: what it is, why it moved, what it means for him and small businesses. Never promise returns; say when something is opinion.
+  {"tool":"goal","query":"the goal in his words"}  when he gives you a GOAL (not a single task), e.g. "get 3 sales this week": you plan it into steps, hand the agents their parts, and track it until it's done
+  {"tool":"goal_done","query":"which step or goal finished"}  mark progress when he (or the facts) show a step is done
   {"tool":"direct","agent":"content-creator|email-marketer|growth-coach|researcher|webdev","text":"his instruction"}  pass his instruction to an agent (it follows it on its next runs for 3 days). Also start that agent with "run" if he wants it now.
   {"tool":"image","query":"a detailed description of the picture","size":"square|tall|wide"}  make a picture for him (art, ideas, social posts, product mockups, wallpapers). Write a rich visual description. Never a real person's likeness, celebrities, or brand logos/characters.
   {"tool":"wish","text":"what you can't do yet and should learn, or a bug you noticed"}  your self-improvement list. Use it whenever he asks for something you can't do, or something of yours broke. Your mechanic writes the code overnight and he approves it.
@@ -644,7 +652,7 @@ When you use a lookup, "say" can be a short "One sec." because you'll answer aga
   {"do":"email_draft","to":"email address or a name he's emailed before","subject":"...","body":"the full email in his voice: plain paragraphs separated by blank lines, ending with a sign-off line like Best, (no name, the design adds his signature)","business":true if it's about Forever Held or work}   {"do":"email_send"}
 Email rule: NEVER send on the first ask. Draft first, tell him who it's to and the gist, and ask "Send it?". Use email_send only when his NEXT message clearly says to send it. Write emails like a real person, short and professional for business.
 For calendar events prefer google event_add when Google is connected; otherwise use the phone "event".
-Use "run" only when he clearly asks to start an agent job. Use "remember" when he tells you something worth keeping (a preference, a plan, a person) or says "remember".
+You have real long-term memory: past conversations and facts that relate to his message appear under FROM YOUR LONG-TERM MEMORY; use them naturally like someone who knows him. When he gives you a goal, use the goal tool, then track it from ACTIVE GOALS. Use "run" only when he clearly asks to start an agent job. Use "remember" when he tells you something worth keeping (a preference, a plan, a person) or says "remember".
 "phone" makes HIS iPhone do something (his Shortcuts app carries it out). Use it only when he asks for it. Shapes:
   {"do":"text","to":"contact name or number","message":"..."}   {"do":"call","to":"contact name or number"}
   {"do":"reminder","title":"...","when":"YYYY-MM-DD HH:MM in New York time, or empty"}   {"do":"event","title":"...","when":"natural start time","minutes":60}
@@ -655,8 +663,8 @@ For texts, write the message in his voice, short. Your "say" should confirm what
 If his message starts with "PHONE DATA:", it's numbers his phone just sent for a question he asked: answer from them.
 
 THINGS HE ASKED YOU TO REMEMBER:
-${memory.map((m) => `- ${m}`).join("\n") || "- (nothing yet)"}
-
+${memory.slice(-40).map((m) => `- ${m}`).join("\n") || "- (nothing yet)"}
+${recalled.length ? `\nFROM YOUR LONG-TERM MEMORY (past conversations and facts that relate to what he just said; use them naturally, never recite them):\n${recalled.map((m) => `- ${m}`).join("\n")}\n` : ""}
 LIVE FACTS:
 ${facts.join("\n")}`;
   const convo = [...past.slice(-8), { role: "user", content: q }];
@@ -719,6 +727,7 @@ ${facts.join("\n")}`;
     else if (r.google.do === "email_send") say = /^SENT/.test(gResult) ? `Sent to ${gResult.match(/to (\S+)/)?.[1] || "them"}.` : say;
   } else if (!owner && r.google) say += " (Google tools are owner-only.)";
   if (r.remember && typeof r.remember === "string") { memory.push(`${r.remember.slice(0, 200)} (${now.toISOString().slice(0, 10)})`); await env.SALES.put("friday:memory", JSON.stringify(memory.slice(-200))); }
+  if (owner) { const save = memAdd(env, [{ text: `He said: ${q.slice(0, 500)} | Friday answered: ${String(say).slice(0, 380)}`, kind: "chat" }, ...(r.remember && typeof r.remember === "string" ? [{ text: r.remember.slice(0, 300), kind: "fact" }] : [])]); if (ctx?.waitUntil) ctx.waitUntil(save); }
   await env.SALES.put("friday:history", JSON.stringify([...convo, { role: "assistant", content: say }].slice(-12)), { expirationTtl: 6 * 3600 });
   const PHONE = ["text", "call", "reminder", "event", "timer", "alarm", "directions", "note", "music", "health", "open", "pay"];
   const phone = r.phone && typeof r.phone === "object" && PHONE.includes(r.phone.do) ? r.phone : null;
@@ -742,6 +751,10 @@ async function fridayFacts(env, now = new Date(), owner = false) {
     const total = sales.reduce((s, x) => s + (Number(x.amount) || 0), 0);
     facts.push(`SALES (last 30 days): ${sales.length} order(s), about $${total.toFixed(2)}.${sales.slice(-5).map((x) => ` ${x.date.slice(0, 10)}: ${(x.items || []).map((i) => i.product).join(" + ") || "order"} $${x.amount}${x.coupon ? ` (code ${x.coupon})` : ""}`).join(";")}`);
   } catch (e) { facts.push("SALES: couldn't read."); }
+  try {
+    const goals = JSON.parse(await env.SALES.get("friday:goals") || "[]").filter((g) => !g.done);
+    if (goals.length) facts.push(`ACTIVE GOALS (you're tracking these with him; nudge progress, mark steps done with goal_done):\n${goals.map((g) => `- ${g.title}${g.deadline ? ` (by ${g.deadline})` : ""}: ${g.steps.map((x, i) => `${i + 1}) ${x.done ? "✓" : "○"} ${x.text} [${x.owner}]`).join(" ")}`).join("\n")}`);
+  } catch {}
   const get = (p) => fetch(`${FRIDAY_RAW}/${p}`, { signal: timeout() }).then((r) => (r.ok ? r.text() : "")).catch(() => "");
   const [status, churches, reportsIdx, history] = await Promise.all([get("skills/automation/status.md"), get("outreach/churches.csv"), get("reports/index.json"), get("content/history.json")]);
   if (status) facts.push(`POSTING STATUS:\n${status.replace(/\|/g, " ").replace(/-{3,}/g, "").slice(0, 1400)}`);
@@ -812,7 +825,7 @@ FACTS AT THE START OF THIS CALL:\n${facts.join("\n")}`;
     { name: "get_status", description: "Fresh facts about his businesses: sales, posting, church outreach, agent health." },
     { name: "run_agent", description: "Start one of his agent jobs.", parameters: { type: "OBJECT", properties: { job: { type: "STRING", enum: Object.keys(FRIDAY_RUNS) } }, required: ["job"] } },
     { name: "shop", description: "Run his Payhip shop and money. do = sales|orders|refunds (days, limit) | coupons | coupon_create (code, percent, until YYYY-MM-DD; only when he asks) | balance|payments|payouts (Stripe) | xmoney (X Money, from its emails) | accounts (bank balances) | spending (bank + Apple Pay transactions).", parameters: { type: "OBJECT", properties: { do: { type: "STRING", enum: ["sales", "orders", "refunds", "coupons", "coupon_create", "balance", "payments", "payouts", "xmoney", "accounts", "spending"] }, days: { type: "NUMBER" }, limit: { type: "NUMBER" }, code: { type: "STRING" }, percent: { type: "NUMBER" }, until: { type: "STRING" } }, required: ["do"] } },
-    { name: "lookup", description: "Your second brain. tool = web (search the internet) | read (open any webpage by url) | think (ask Claude a hard question) | notion (search his Notion) | note (save to his Notion) | discord (read one of his channels: content, sales, inbox, alerts, research, growth, trading-desk) | report (an agent's latest report).", parameters: { type: "OBJECT", properties: { tool: { type: "STRING", enum: ["web", "read", "think", "notion", "note", "discord", "report", "markets", "direct", "wish"] }, url: { type: "STRING" }, agent: { type: "STRING" }, query: { type: "STRING" }, context: { type: "STRING" }, title: { type: "STRING" }, text: { type: "STRING" }, channel: { type: "STRING" } }, required: ["tool"] } },
+    { name: "lookup", description: "Your second brain. tool = web (search the internet) | read (open any webpage by url) | think (ask Claude a hard question) | notion (search his Notion) | note (save to his Notion) | discord (read one of his channels: content, sales, inbox, alerts, research, growth, trading-desk) | report (an agent's latest report).", parameters: { type: "OBJECT", properties: { tool: { type: "STRING", enum: ["web", "read", "think", "notion", "note", "discord", "report", "markets", "direct", "wish", "goal", "goal_done"] }, url: { type: "STRING" }, agent: { type: "STRING" }, query: { type: "STRING" }, context: { type: "STRING" }, title: { type: "STRING" }, text: { type: "STRING" }, channel: { type: "STRING" } }, required: ["tool"] } },
     { name: "google", description: "His Gmail, Google Calendar and Drive. do = calendar|email_search|event_add|email_draft|email_send|drive_search|doc_read|doc_create|sheet_append.", parameters: { type: "OBJECT", properties: { do: { type: "STRING", enum: ["calendar", "email_search", "event_add", "email_draft", "email_send", "drive_search", "doc_read", "doc_create", "sheet_append"] }, id: { type: "STRING" }, text: { type: "STRING" }, row: { type: "ARRAY", items: { type: "STRING" } }, days: { type: "NUMBER" }, query: { type: "STRING" }, title: { type: "STRING" }, start: { type: "STRING" }, minutes: { type: "NUMBER" }, location: { type: "STRING" }, to: { type: "STRING" }, subject: { type: "STRING" }, body: { type: "STRING" } }, required: ["do"] } },
     { name: "remember", description: "Save a short fact about him for later.", parameters: { type: "OBJECT", properties: { fact: { type: "STRING" } }, required: ["fact"] } },
     { name: "phone_action", description: "Make his iPhone do something. do = text|call|reminder|event|timer|alarm|directions|note|music|health|open.", parameters: { type: "OBJECT", properties: { do: { type: "STRING" }, to: { type: "STRING" }, message: { type: "STRING" }, title: { type: "STRING" }, when: { type: "STRING" }, minutes: { type: "NUMBER" }, text: { type: "STRING" }, query: { type: "STRING" }, metric: { type: "STRING" }, url: { type: "STRING" } }, required: ["do"] } }
@@ -1242,6 +1255,53 @@ async function fridayVoiceInner(req, env) {
   return json({ ok: true, voice_id: j2.voice_id });
 }
 
+
+// ---------- Friday's long-term memory (Vectorize + Workers AI embeddings, both free) ----------
+// Every conversation turn and every fact is stored as meaning, then the most relevant pieces are recalled each turn.
+async function memEmbed(env, texts) {
+  const r = await env.AI.run("@cf/baai/bge-small-en-v1.5", { text: texts.map((t) => String(t).slice(0, 1500)) });
+  return r.data;
+}
+async function memAdd(env, items) {
+  if (!env.MEMVEC || !env.AI || !items.length) return;
+  try {
+    const vecs = await memEmbed(env, items.map((i) => i.text));
+    const at = new Date().toISOString();
+    await env.MEMVEC.upsert(items.map((it, n) => ({ id: `${it.kind}-${Date.now().toString(36)}-${n}-${Math.random().toString(36).slice(2, 6)}`, values: vecs[n], metadata: { text: String(it.text).slice(0, 900), kind: it.kind, at } })));
+  } catch (e) { await fridayLog(env, "memory", `save failed: ${e.message}`); }
+}
+async function memRecall(env, q, k = 6) {
+  if (!env.MEMVEC || !env.AI || !q) return [];
+  try {
+    const [v] = await memEmbed(env, [q]);
+    const r = await env.MEMVEC.query(v, { topK: k, returnMetadata: "all" });
+    return (r.matches || []).filter((m) => m.score > 0.55 && m.metadata?.text).map((m) => `${String(m.metadata.at || "").slice(0, 10)} ${m.metadata.kind}: ${m.metadata.text}`);
+  } catch (e) { await fridayLog(env, "memory", `recall failed: ${e.message}`); return []; }
+}
+
+
+// Multi-step goals: Friday turns a goal into 3-6 concrete steps with owners (Josiah, Friday, or an agent),
+// hands each agent its step as a directive, and keeps the goal in her facts until every step is done.
+const GOAL_AGENTS = ["content-creator", "email-marketer", "growth-coach", "researcher", "webdev"];
+async function fridayGoal(env, goal) {
+  if (!goal) return "What's the goal?";
+  const facts = await fridayFacts(env, new Date(), true).catch(() => []);
+  const sys = `You plan goals for Josiah's one-person business (Forever Held: memorial printables on Payhip; free tools only, no paid ads, no fake urgency or discounts, every new design needs his approval, never post to his personal social accounts). Break the goal into 3-6 concrete steps that can each be finished within a few days. Owner of each step is one of: "Josiah", "Friday", ${GOAL_AGENTS.map((x) => `"${x}"`).join(", ")}. Agents do: content-creator = Pinterest/Facebook posts and videos, email-marketer = outreach and newsletters, growth-coach = strategy and listings, researcher = market and keyword research, webdev = the store website. Return ONLY JSON: {"title":"short goal title","deadline":"YYYY-MM-DD or null","steps":[{"text":"step","owner":"..."}]}`;
+  let plan = null;
+  for (const askAi of [groqChat, geminiChat, extraChat, openRouterChat, workersChat]) {
+    try { const raw = await askAi(env, sys, [{ role: "user", content: `GOAL: ${goal}\n\nCURRENT FACTS:\n${facts.join("\n").slice(0, 5000)}` }]); const m = String(raw).match(/\{[\s\S]*\}/); plan = m ? JSON.parse(m[0]) : null; if (plan?.steps?.length) break; } catch {}
+  }
+  if (!plan?.steps?.length) return "I couldn't plan that right now. Try again in a minute.";
+  const g = { id: crypto.randomUUID().slice(0, 8), title: String(plan.title || goal).slice(0, 80), goal, deadline: plan.deadline || null, at: new Date().toISOString(), steps: plan.steps.slice(0, 6).map((x) => ({ text: String(x.text).slice(0, 200), owner: String(x.owner || "Josiah").toLowerCase() })) };
+  const goals = JSON.parse(await env.SALES.get("friday:goals") || "[]"); goals.push(g);
+  await env.SALES.put("friday:goals", JSON.stringify(goals.slice(-12)));
+  const d = JSON.parse(await env.SALES.get("friday:directives") || "{}");
+  for (const st of g.steps) if (GOAL_AGENTS.includes(st.owner)) d[st.owner] = [...(d[st.owner] || []).filter((x) => Date.now() - Date.parse(x.at) < 3 * 864e5), { at: new Date().toISOString(), text: `GOAL "${g.title}": ${st.text}` }].slice(-5);
+  await env.SALES.put("friday:directives", JSON.stringify(d));
+  await memAdd(env, [{ text: `New goal: ${g.title}. Plan: ${g.steps.map((x) => `${x.text} (${x.owner})`).join("; ")}`, kind: "goal" }]);
+  return `GOAL SAVED: ${g.title}${g.deadline ? ` (by ${g.deadline})` : ""}\n${g.steps.map((x, i) => `${i + 1}. ${x.text} [${x.owner}]`).join("\n")}\nAgent steps were handed to the agents.`;
+}
+
 const CLAUDE_FRIDAY_CAP = 2; // dollars per month
 async function fridayLookup(env, a = {}) {
   const q = String(a.query || "").slice(0, 400);
@@ -1328,6 +1388,17 @@ async function fridayLookup(env, a = {}) {
       const title = (raw.match(/<title[^>]*>([^<]{1,200})/i) || [])[1] || "";
       const text = raw.replace(/<(script|style|noscript|svg|nav|footer|header)[\s\S]*?<\/\1>/gi, " ").replace(/<br\s*\/?>|<\/(p|div|li|h\d|tr)>/gi, "\n").replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&#39;|&rsquo;/g, "'").replace(/&quot;|&ldquo;|&rdquo;/g, '"').replace(/[ \t]+/g, " ").replace(/\n\s*\n+/g, "\n").trim();
       return `PAGE: ${title.trim()} (${new URL(r.url || u).hostname})\n${text.slice(0, 7000)}`;
+    }
+    if (a.tool === "goal") return await fridayGoal(env, String(a.query || a.text || "").slice(0, 400));
+    if (a.tool === "goal_done") {
+      const goals = JSON.parse(await env.SALES.get("friday:goals") || "[]");
+      const t = String(a.query || a.text || "").toLowerCase();
+      let hit = "";
+      for (const g of goals.filter((g) => !g.done)) for (const st of g.steps) if (!st.done && (t.includes(st.text.toLowerCase().slice(0, 25)) || st.text.toLowerCase().split(/\W+/).filter((w) => w.length > 4 && t.includes(w)).length >= 2)) { st.done = new Date().toISOString(); hit = st.text; break; }
+      if (!hit) for (const g of goals.filter((g) => !g.done)) if (t.includes(g.title.toLowerCase().slice(0, 20)) || /whole goal|goal is done|all done/.test(t)) { g.done = new Date().toISOString(); hit = `goal: ${g.title}`; break; }
+      for (const g of goals) if (!g.done && g.steps.every((x) => x.done)) g.done = new Date().toISOString();
+      await env.SALES.put("friday:goals", JSON.stringify(goals.slice(-12)));
+      return hit ? `Marked done: ${hit}` : "I couldn't tell which step that was; say the step's name.";
     }
     if (a.tool === "direct") {
       const agent = String(a.agent || "content-creator").toLowerCase().replace(/[^a-z-]/g, "");
@@ -1525,6 +1596,42 @@ async function fridayBriefing(req, env) {
   }
   await fridayNotify(env, "Good morning, Josiah", text.slice(0, 900)).catch(() => {});
   return out({ ok: true, posted, words: text.split(/\s+/).length });
+}
+
+
+// Proactive Friday: every 30 minutes she checks for things worth interrupting him for (an important
+// unread email, a meeting about to start) and pings his phone once per item. Quiet 11pm-7am.
+async function fridayWatch(req, env) {
+  const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
+  const key = sentKey(req);
+  const ok = (await sha256(key)) === FRIDAY_KEY_SHA || (env.PAYHIP_API_KEY && key === (await sha256("friday-check:" + env.PAYHIP_API_KEY)));
+  if (req.method !== "POST" || !ok) return out({ ok: false }, 401);
+  const seen = new Set(JSON.parse(await env.SALES.get("friday:watch:seen") || "[]"));
+  const first = seen.size === 0; // first run only learns what's already there, so he isn't flooded
+  const hour = Number(new Date().toLocaleString("en-US", { timeZone: "America/New_York", hour: "numeric", hour12: false }));
+  const quiet = hour >= 23 || hour < 7;
+  const lines = [], newIds = [];
+  // (sales already ping him the moment Payhip reports them)
+  const g = JSON.parse(await env.SALES.get("friday:google") || "null");
+  if (g && !quiet) {
+    // 2. important unread email
+    try {
+      const m = await gmailFind(env, "in:inbox is:unread is:important newer_than:1d -category:promotions -category:social -category:updates -category:forums", 6);
+      for (const e of m.items) { const id = "mail:" + (await sha256(e.from + e.subject)).slice(0, 16); if (seen.has(id)) continue; newIds.push(id); lines.push(`📬 ${who(e.from)}: ${e.subject}`); }
+    } catch {}
+    // 3. meetings starting within the hour
+    try {
+      const now = new Date();
+      const j = await gApi(env, `${G_CAL}/events?singleEvents=true&orderBy=startTime&maxResults=5&timeMin=${now.toISOString()}&timeMax=${new Date(+now + 65 * 6e4).toISOString()}`);
+      for (const e of j.items || []) { if (!e.start?.dateTime) continue; const id = "cal:" + e.id + e.start.dateTime; if (seen.has(id)) continue; newIds.push(id); lines.push(`📅 ${nyTime(e.start.dateTime)}: ${e.summary || "Event"}${e.location ? ` at ${e.location}` : ""}`); }
+    } catch {}
+  }
+  for (const id of newIds) seen.add(id);
+  await env.SALES.put("friday:watch:seen", JSON.stringify([...seen].slice(-400)));
+  if (first || !lines.length) return out({ ok: true, sent: 0, learned: first ? newIds.length : 0 });
+  await fridayNotify(env, lines.length === 1 ? "Friday" : `Friday · ${lines.length} things`, lines.join("\n"), "default").catch(() => {});
+  await memAdd(env, lines.map((l) => ({ text: `Friday alerted him: ${l}`, kind: "alert" })));
+  return out({ ok: true, sent: lines.length });
 }
 
 // Push notifications to his phone through the free ntfy app. The topic is a long random name kept in KV,
