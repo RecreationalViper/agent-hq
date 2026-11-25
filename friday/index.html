@@ -13,62 +13,106 @@
 <link rel="apple-touch-icon" href="icon-180.png">
 <title>Friday</title>
 <style>
-  :root { --bg:#080a12; --ink:#e8f1ff; --dim:#7f8fb0; --blue:#4aa3ff; --glow:#8fd0ff; }
+  :root { --bg:#03060d; --ink:#e6f4ff; --dim:#6f86a8; --cyan:#35d0ff; --cyan2:#8fe6ff; --amber:#ffb547; --line:rgba(53,208,255,.22); --amp:0; --tone:var(--cyan); }
   * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
   html,body { margin:0; height:100%; background:var(--bg); color:var(--ink); font:16px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif; overflow:hidden; }
-  body { display:flex; flex-direction:column; padding:env(safe-area-inset-top) 18px env(safe-area-inset-bottom); }
-  header { display:flex; justify-content:space-between; align-items:center; padding:14px 2px 6px; }
-  header b { letter-spacing:.32em; font-size:13px; color:var(--dim); font-weight:600; }
-  header button { background:none; border:0; color:var(--dim); font-size:13px; padding:6px; }
-  #log { flex:1; overflow-y:auto; padding:8px 0 12px; display:flex; flex-direction:column; gap:10px; mask-image:linear-gradient(transparent,#000 24px); }
-  .m { max-width:86%; padding:10px 14px; border-radius:18px; animation:in .35s cubic-bezier(.34,1.45,.55,1); white-space:pre-wrap; }
-  .you { align-self:flex-end; background:#16203a; color:#cfe0ff; border-bottom-right-radius:6px; }
-  .fri { align-self:flex-start; background:rgba(74,163,255,.10); border:1px solid rgba(143,208,255,.18); border-bottom-left-radius:6px; }
+  body { display:flex; flex-direction:column; padding:env(safe-area-inset-top) 16px env(safe-area-inset-bottom);
+    background:radial-gradient(ellipse 80% 45% at 50% 34%, rgba(20,90,160,.28), transparent 70%),
+      linear-gradient(rgba(53,208,255,.045) 1px, transparent 1px) 0 0/100% 28px,
+      linear-gradient(90deg, rgba(53,208,255,.045) 1px, transparent 1px) 0 0/28px 100%, var(--bg); }
+  body.thinking { --tone:var(--amber); }
+  .mono { font-family:"SF Mono",ui-monospace,Menlo,monospace; letter-spacing:.14em; font-size:11px; text-transform:uppercase; }
+  header { display:flex; justify-content:space-between; align-items:center; padding:12px 2px 4px; }
+  .brand { display:flex; align-items:center; gap:10px; }
+  .brand b { letter-spacing:.42em; font-size:13px; font-weight:700; color:var(--cyan2); text-shadow:0 0 12px rgba(53,208,255,.6); }
+  .pill { display:flex; align-items:center; gap:6px; color:var(--dim); border:1px solid var(--line); border-radius:20px; padding:3px 9px; }
+  .pill i { width:7px; height:7px; border-radius:50%; background:#38d39f; box-shadow:0 0 8px #38d39f; animation:blink 2.4s infinite; }
+  @keyframes blink { 50% { opacity:.35; } }
+  header button { background:none; border:1px solid var(--line); color:var(--cyan2); border-radius:10px; width:36px; height:32px; font-size:16px; }
+  #hud { display:flex; justify-content:space-between; color:var(--dim); padding:2px 4px 0; }
+  #core { position:relative; height:232px; display:grid; place-items:center; flex-shrink:0; }
+  #orb { width:212px; height:212px; border:0; padding:0; background:none; cursor:pointer; position:relative; border-radius:50%; }
+  #orb svg { width:100%; height:100%; overflow:visible; filter:drop-shadow(0 0 calc(10px + var(--amp) * 26px) var(--tone)); transition:filter .12s; }
+  #orb .r { fill:none; stroke:var(--tone); transform-origin:100px 100px; transition:stroke .4s; }
+  .r1 { stroke-width:1.2; opacity:.55; stroke-dasharray:2 5; animation:spin 40s linear infinite; }
+  .r2 { stroke-width:3; opacity:.85; stroke-dasharray:60 18 8 18; animation:spin 14s linear infinite reverse; }
+  .r3 { stroke-width:1.5; opacity:.6; stroke-dasharray:110 40; animation:spin 9s linear infinite; }
+  .r4 { stroke-width:6; opacity:.25; stroke-dasharray:1 7; animation:spin 22s linear infinite reverse; }
+  #orb .c { fill:url(#g); transform-origin:100px 100px; transform:scale(calc(1 + var(--amp) * .22)); transition:transform .08s; }
+  @keyframes spin { to { transform:rotate(360deg); } }
+  body.listening .r2, body.listening .r3 { animation-duration:3s; } body.listening #orb svg { filter:drop-shadow(0 0 30px var(--tone)); }
+  body.listening .r1 { opacity:1; }
+  body.thinking .r2 { animation-duration:1.6s; } body.thinking .r3 { animation-duration:1.1s; }
+  #hint { position:absolute; bottom:-2px; color:var(--cyan2); opacity:.8; }
+  #log { flex:1; overflow-y:auto; padding:14px 0 10px; display:flex; flex-direction:column; gap:10px; mask-image:linear-gradient(transparent,#000 22px); }
+  .m { max-width:88%; padding:10px 14px; animation:in .35s cubic-bezier(.34,1.45,.55,1); white-space:pre-wrap; position:relative; }
+  .you { align-self:flex-end; background:rgba(53,208,255,.08); border:1px solid rgba(53,208,255,.18); border-radius:14px 14px 4px 14px; color:#cdeaff; }
+  .fri { align-self:flex-start; background:linear-gradient(180deg, rgba(10,40,70,.55), rgba(6,20,38,.55)); border:1px solid var(--line); border-radius:4px 14px 14px 14px; }
+  .fri::before { content:"F.R.I.D.A.Y."; display:block; font:600 9px/1 "SF Mono",ui-monospace,Menlo,monospace; letter-spacing:.3em; color:var(--cyan); opacity:.7; margin-bottom:6px; }
   .note { align-self:center; color:var(--dim); font-size:12px; }
   @keyframes in { from { opacity:0; transform:translateY(8px) scale(.97); } }
-  #core { position:relative; height:210px; display:grid; place-items:center; }
-  #orb { width:120px; height:120px; border-radius:50%; border:0; cursor:pointer; position:relative;
-    background:radial-gradient(circle at 50% 50%, #cfeaff 0 18%, #6cb8ff 30%, #1d5fd1 55%, rgba(20,60,160,.0) 72%);
-    box-shadow:0 0 60px 10px rgba(74,163,255,.35), inset 0 0 30px rgba(255,255,255,.25); transition:transform .4s cubic-bezier(.34,1.45,.55,1); }
-  #orb::after { content:""; position:absolute; inset:-18px; border-radius:50%; border:2px solid rgba(143,208,255,.35); animation:ring 3.2s ease-in-out infinite; }
-  @keyframes ring { 50% { transform:scale(1.08); opacity:.4; } }
-  body.listening #orb { transform:scale(1.12); box-shadow:0 0 90px 24px rgba(74,163,255,.6), inset 0 0 30px rgba(255,255,255,.35); }
-  body.listening #orb::after { animation-duration:.9s; border-color:rgba(143,208,255,.8); }
-  body.thinking #orb { animation:think 1.1s linear infinite; }
-  @keyframes think { to { filter:hue-rotate(60deg); } }
-  body.speaking #orb { animation:talk .5s ease-in-out infinite alternate; }
-  @keyframes talk { to { transform:scale(1.07); } }
-  #hint { position:absolute; bottom:6px; color:var(--dim); font-size:13px; }
-  form { display:flex; gap:8px; padding-bottom:12px; }
-  input { flex:1; background:#0f1424; color:var(--ink); border:1px solid #223055; border-radius:22px; padding:12px 16px; font-size:16px; outline:none; }
-  form button { background:var(--blue); color:#041022; border:0; border-radius:22px; padding:0 18px; font-weight:600; font-size:15px; }
-  #setup { position:fixed; inset:0; background:var(--bg); display:none; flex-direction:column; justify-content:center; padding:30px; gap:14px; }
-  #setup.on { display:flex; }
-  #setup p { color:var(--dim); margin:0; }
-  #sheet { position:fixed; inset:0; background:var(--bg); display:none; flex-direction:column; padding:calc(env(safe-area-inset-top) + 14px) 20px calc(env(safe-area-inset-bottom) + 20px); overflow-y:auto; gap:10px; z-index:5; }
+  #chips { display:flex; gap:8px; overflow-x:auto; padding:2px 0 10px; scrollbar-width:none; } #chips::-webkit-scrollbar { display:none; }
+  #chips button { flex:0 0 auto; background:rgba(53,208,255,.06); border:1px solid var(--line); color:var(--cyan2); border-radius:18px; padding:7px 12px; font-size:13px; }
+  form { display:flex; gap:8px; align-items:center; padding-bottom:12px; }
+  form input { flex:1; min-width:0; background:rgba(8,18,34,.9); color:var(--ink); border:1px solid var(--line); border-radius:22px; padding:12px 16px; font-size:16px; outline:none; }
+  form input:focus { border-color:var(--cyan); box-shadow:0 0 0 3px rgba(53,208,255,.12); }
+  form button { background:var(--cyan); color:#02131f; border:0; border-radius:22px; padding:0 16px; height:44px; font-weight:700; font-size:15px; }
+  form #cam { background:rgba(53,208,255,.08); border:1px solid var(--line); width:44px; padding:0; font-size:19px; }
+  #setup { position:fixed; inset:0; background:var(--bg); display:none; flex-direction:column; justify-content:center; padding:30px; gap:14px; z-index:9; }
+  #setup.on { display:flex; } #setup p { color:var(--dim); margin:0; }
+  #setup input { background:#08121f; color:var(--ink); border:1px solid var(--line); border-radius:14px; padding:14px; font-size:16px; }
+  #setup button { background:var(--cyan); color:#02131f; border:0; border-radius:14px; font-weight:700; }
+  #sheet { position:fixed; inset:0; background:rgba(3,6,13,.97); backdrop-filter:blur(10px); display:none; flex-direction:column; padding:calc(env(safe-area-inset-top) + 14px) 20px calc(env(safe-area-inset-bottom) + 20px); overflow-y:auto; gap:10px; z-index:5; }
   #sheet.on { display:flex; }
-  #sheet h3 { margin:18px 0 4px; font-size:12px; letter-spacing:.2em; color:var(--dim); font-weight:600; }
-  .app { display:flex; align-items:center; gap:12px; background:#0f1424; border:1px solid #1c2747; border-radius:16px; padding:14px; }
+  #sheet h3 { margin:18px 0 4px; font-size:11px; letter-spacing:.3em; color:var(--cyan); font-weight:600; font-family:"SF Mono",ui-monospace,Menlo,monospace; }
+  .app { display:flex; align-items:center; gap:12px; background:rgba(8,18,34,.9); border:1px solid var(--line); border-radius:14px; padding:14px; }
   .app .ic { font-size:24px; width:32px; text-align:center; }
   .app .tx { flex:1; min-width:0; } .app .tx b { display:block; } .app .tx small { color:var(--dim); display:block; overflow:hidden; text-overflow:ellipsis; }
-  .app button, .row button { background:var(--blue); color:#041022; border:0; border-radius:14px; padding:9px 14px; font-weight:600; font-size:14px; }
-  .app button.ghost, .row button.ghost { background:none; color:var(--dim); border:1px solid #223055; }
+  .app button, .row button { background:var(--cyan); color:#02131f; border:0; border-radius:12px; padding:9px 14px; font-weight:700; font-size:14px; }
+  .app button.ghost, .row button.ghost { background:none; color:var(--cyan2); border:1px solid var(--line); }
   .dot { width:9px; height:9px; border-radius:50%; background:#3a4566; display:inline-block; margin-right:6px; } .dot.on { background:#38d39f; box-shadow:0 0 8px #38d39f; }
   .row { display:flex; gap:8px; } .row button { flex:1; padding:13px; }
-  #sheet ol { margin:0; padding-left:20px; color:#c6d3ee; font-size:15px; } #sheet ol li { margin:4px 0; }
-  label.t { display:flex; align-items:center; gap:8px; color:var(--dim); font-size:13px; justify-content:center; padding-bottom:6px; }
+  label.t { display:flex; align-items:center; gap:10px; color:#c6d3ee; font-size:15px; background:rgba(8,18,34,.9); border:1px solid var(--line); border-radius:14px; padding:13px 14px; }
+  label.t input[type=checkbox] { width:20px; height:20px; accent-color:var(--cyan); }
+  label.t select { margin-left:auto; background:#08121f; color:var(--ink); border:1px solid var(--line); border-radius:10px; padding:6px; max-width:60%; }
 </style>
 </head>
 <body>
-<header><b>FRIDAY</b><button id="forget" type="button">Settings</button></header>
+<header>
+  <div class="brand"><b>F.R.I.D.A.Y.</b><span class="pill mono"><i></i>Online</span></div>
+  <button id="forget" type="button" aria-label="Settings">⚙︎</button>
+</header>
+<div id="hud" class="mono"><span id="clock">--:--</span><span id="sys">All systems nominal</span></div>
+<div id="core">
+  <button id="orb" aria-label="Talk to Friday">
+    <svg viewBox="0 0 200 200" aria-hidden="true">
+      <defs><radialGradient id="g"><stop offset="0" stop-color="#ffffff"/><stop offset=".25" stop-color="#bff1ff"/><stop offset=".55" stop-color="#35d0ff" stop-opacity=".9"/><stop offset="1" stop-color="#0a4f8f" stop-opacity="0"/></radialGradient></defs>
+      <circle class="r r1" cx="100" cy="100" r="96"/>
+      <circle class="r r4" cx="100" cy="100" r="84"/>
+      <circle class="r r2" cx="100" cy="100" r="72"/>
+      <circle class="r r3" cx="100" cy="100" r="58"/>
+      <circle class="c" cx="100" cy="100" r="42"/>
+    </svg>
+  </button>
+  <div id="hint" class="mono">Tap to talk</div>
+</div>
 <div id="log"></div>
-<div id="core"><button id="orb" aria-label="Talk to Friday"></button><div id="hint">Tap to talk</div></div>
-<label class="t"><input type="checkbox" id="livebox" style="flex:0"> <b style="color:#8fd0ff">Live mode</b>&nbsp;(talk naturally, interrupt anytime)</label>
-<label class="t"><input type="checkbox" id="hands" style="flex:0"> Keep listening after she answers</label>
-<label class="t">Voice <select id="voice" style="background:#0f1424;color:#e8f1ff;border:1px solid #223055;border-radius:10px;padding:6px;max-width:60%"></select></label>
-<form id="f"><button type="button" id="cam" aria-label="Send a photo" style="background:none;border:0;font-size:22px;padding:0 6px;cursor:pointer">📷</button><input type="file" id="pic" accept="image/*" hidden><input id="q" placeholder="Or type to Friday…" autocomplete="off"><button>Send</button></form>
+<div id="chips">
+  <button data-q="Give me my morning briefing">☀️ Briefing</button>
+  <button data-q="How are sales today?">💰 Sales</button>
+  <button data-q="Anything important in my email?">📬 Inbox</button>
+  <button data-q="What's on my calendar today?">📅 Today</button>
+  <button data-q="How are the markets doing?">📈 Markets</button>
+  <button data-fill="Make me an image of ">🎨 Image</button>
+  <button data-q="Think hard: what should I focus on today to move the business forward?">🧠 Focus</button>
+</div>
+<form id="f"><button type="button" id="cam" aria-label="Send a photo">📷</button><input type="file" id="pic" accept="image/*" hidden><input id="q" placeholder="Talk or type to Friday…" autocomplete="off"><button>Send</button></form>
 <div id="sheet">
   <div style="display:flex;justify-content:space-between;align-items:center"><b style="letter-spacing:.32em;font-size:13px;color:var(--dim)">SETTINGS</b><button id="close" class="ghost" style="background:none;border:0;color:var(--blue);font-size:16px;font-weight:600">Done</button></div>
+  <h3>VOICE &amp; LISTENING</h3>
+  <label class="t">Voice <select id="voice"></select></label>
+  <label class="t"><input type="checkbox" id="livebox"> <span><b style="color:var(--cyan2)">Live mode</b><br><small style="color:var(--dim)">Talk naturally, interrupt anytime</small></span></label>
+  <label class="t"><input type="checkbox" id="hands"> Keep listening after she answers</label>
   <h3>CONNECTIONS</h3>
   <div id="apps"><div class="note">Checking…</div></div>
   <h3>ON YOUR IPHONE</h3>
@@ -142,7 +186,21 @@ async function loadApps() {
 document.addEventListener("visibilitychange", () => { if (!document.hidden && $("#sheet").classList.contains("on")) loadApps(); });
 
 function add(text, who) { const d = document.createElement("div"); d.className = "m " + who; d.textContent = text; log.appendChild(d); log.scrollTop = log.scrollHeight; return d; }
-function state(s, h) { body.classList.remove("listening", "thinking", "speaking"); if (s) body.classList.add(s); hint.textContent = h || "Tap to talk"; }
+// HUD: clock, quick chips, and the core glowing with her voice
+const clock = () => { const d = new Date(); $("#clock").textContent = d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) + " · " + d.toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" }); };
+clock(); setInterval(clock, 15000);
+for (const c of document.querySelectorAll("#chips button")) c.onclick = () => { if (c.dataset.fill) { $("#q").value = c.dataset.fill; $("#q").focus(); } else ask(c.dataset.q); };
+let analyser = null, ampOn = false;
+function ampLoop() {
+  if (!ampOn) { body.style.setProperty("--amp", 0); return; }
+  let v = 0;
+  if (analyser) { const a = new Uint8Array(analyser.fftSize); analyser.getByteTimeDomainData(a); let sum = 0; for (const x of a) sum += (x - 128) ** 2; v = Math.min(1, Math.sqrt(sum / a.length) / 40); }
+  else v = 0.35 + 0.3 * Math.sin(Date.now() / 90);
+  body.style.setProperty("--amp", v.toFixed(3)); requestAnimationFrame(ampLoop);
+}
+const ampStart = (withAnalyser) => { if (!withAnalyser) analyser = null; ampOn = true; ampLoop(); };
+const ampStop = () => { ampOn = false; };
+function state(s, h) { body.classList.remove("listening", "thinking", "speaking"); if (s) body.classList.add(s); if (s !== "speaking") ampStop(); hint.textContent = h || "Tap to talk"; const sys = $("#sys"); if (sys) sys.textContent = s === "listening" ? "Listening" : s === "thinking" ? "Processing" : s === "speaking" ? "Speaking" : "All systems nominal"; }
 
 // voice out
 let voice = null;
@@ -170,9 +228,11 @@ async function speakNatural(text) {
   const buf = await new Promise((ok, no) => actx.decodeAudioData(data, ok, no));
   return new Promise((res) => {
     stopNatural();
-    src = actx.createBufferSource(); src.buffer = buf; src.connect(actx.destination);
-    src.onended = () => { src = null; res(true); };
-    state("speaking", "Speaking… tap to interrupt"); src.start();
+    src = actx.createBufferSource(); src.buffer = buf;
+    analyser = analyser && analyser.context === actx ? analyser : actx.createAnalyser(); analyser.fftSize = 512;
+    src.connect(analyser); analyser.connect(actx.destination);
+    src.onended = () => { src = null; ampStop(); res(true); };
+    state("speaking", "Speaking… tap to interrupt"); ampStart(true); src.start();
   });
 }
 async function speak(text) {
@@ -181,7 +241,7 @@ async function speak(text) {
     if (!("speechSynthesis" in window)) return res();
     speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text); if (voice) u.voice = voice; u.rate = 1.03; u.pitch = 1.02;
-    u.onend = u.onerror = () => res(); state("speaking", "Speaking… tap to interrupt"); speechSynthesis.speak(u);
+    u.onend = u.onerror = () => { ampStop(); res(); }; state("speaking", "Speaking… tap to interrupt"); ampStart(false); speechSynthesis.speak(u);
   });
 }
 
