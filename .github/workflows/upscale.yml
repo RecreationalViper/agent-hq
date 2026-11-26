@@ -1,0 +1,32 @@
+name: Upscale (Kaggle GPU)
+# Claude pushes a clip to the upscale-queue branch, then runs this. Kaggle's free GPU AI-upscales it
+# (Real-ESRGAN for movies, realesr-animevideov3 for anime) and the results are committed back to upscale-queue.
+on:
+  workflow_dispatch:
+    inputs:
+      file: { description: "Path of the clip on the upscale-queue branch", required: true }
+      model: { description: "movie or anime", required: true, default: "movie" }
+permissions:
+  contents: write
+concurrency: { group: upscale, cancel-in-progress: false }
+jobs:
+  upscale:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with: { ref: upscale-queue, path: queue }
+      - name: Upscale on Kaggle
+        env:
+          KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_API_TOKEN }}
+          KAGGLE_USERNAME: josiahcottingham
+        run: tools/upscale/run.sh "queue/${{ github.event.inputs.file }}" "${{ github.event.inputs.model }}"
+      - name: Save results to upscale-queue
+        run: |
+          base=$(basename "${{ github.event.inputs.file }}" .mp4)
+          mkdir -p queue/done
+          mv out/out_1080.mp4 "queue/done/${base}_1080.mp4"
+          mv out/out_4k.mp4 "queue/done/${base}_4k.mp4"
+          cd queue && git config user.name "upscaler" && git config user.email "actions@github.com"
+          git add done && git commit -qm "Upscaled ${base}" && git push -q origin HEAD:upscale-queue
