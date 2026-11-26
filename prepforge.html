@@ -1,0 +1,402 @@
+<html lang="en"><head><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>PrepForge</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Syne:wght@500;700&display=swap');
+  :root{
+    --bg:#030308; --fg:#e6f0ff; --muted:#7d8ca3;
+    --hx:50; --hy:50;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;background:var(--bg);color:var(--fg);font-family:Syne,system-ui;overflow:hidden}
+  /* Liquid background */
+  .liquid{
+    position:fixed;inset:-20%;filter:blur(60px) saturate(140%);z-index:0;pointer-events:none;
+  }
+  .blob{
+    position:absolute;border-radius:50%;mix-blend-mode:screen;opacity:.8;
+    background:radial-gradient(circle at 30% 30%, #7b5cff, transparent 60%),
+               radial-gradient(circle at 70% 70%, #00e5ff, transparent 55%);
+    animation:float 24s ease-in-out infinite;
+  }
+  .b1{width:70vmax;height:70vmax;left:-10%;top:-15%;background:radial-gradient(circle, #8a2be2 0%, #00d4ff 40%, transparent 70%)}
+  .b2{width:60vmax;height:60vmax;right:-20%;top:20%;animation-delay:-8s;background:radial-gradient(circle, #ff3cac 0%, #784ba0 40%, transparent 70%)}
+  .b3{width:55vmax;height:55vmax;left:20%;bottom:-25%;animation-delay:-16s;background:radial-gradient(circle, #00f5a0 0%, #00b8ff 45%, transparent 70%)}
+  @keyframes float{0%,100%{transform:translate3d(0,0,0) rotate(0)}50%{transform:translate3d(4%,-3%,0) rotate(8deg) scale(1.05)}}
+
+  /* Liquid glass material */
+  .lg{
+    position:relative;background:linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.02));
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:28px;
+    backdrop-filter:blur(32px) saturate(180%) contrast(110%);
+    -webkit-backdrop-filter:blur(32px) saturate(180%) contrast(110%);
+    box-shadow:0 20px 60px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.18), inset 0 -20px 40px rgba(0,0,0,.25);
+    overflow:hidden;
+  }
+  .lg::before{
+    content:"";position:absolute;inset:-1px;border-radius:inherit;pointer-events:none;
+    background:radial-gradient(600px 300px at calc(var(--hx)*1%) calc(var(--hy)*1%), rgba(255,255,255,.22), transparent 40%),
+               conic-gradient(from 200deg at 50% 0%, rgba(255,255,255,.18), transparent 30%, rgba(255,255,255,.12), transparent 70%);
+    mix-blend-mode:screen;opacity:.9;
+  }
+  .lg::after{
+    content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+    background:linear-gradient( to bottom, rgba(255,255,255,.12), transparent 30%, transparent 70%, rgba(0,0,0,.25));
+  }
+
+  .app{position:relative;z-index:2;height:100dvh;display:grid;grid-template-rows:auto 1fr auto;max-width:520px;margin:0 auto;padding:18px 16px 22px;gap:14px}
+  .top{display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.12em}
+  .dot{width:10px;height:10px;border-radius:50%;background:conic-gradient(from 0deg,#7b5cff,#00e5ff,#ff3cac,#7b5cff);box-shadow:0 0 16px #7b5cffa8}
+  .meta{font-family:"Fragment Mono",monospace;font-size:12px;color:var(--muted)}
+
+  .stage{position:relative;perspective:1200px}
+  .deck{position:absolute;inset:0;display:grid;place-items:center;transition:opacity .4s, transform .4s}
+  .deck[hidden]{opacity:0;transform:translateY(12px) scale(.98);pointer-events:none}
+
+  /* 3D cards */
+  .cards{display:flex;gap:14px;overflow:auto;padding:8px 4px 18px;scroll-snap-type:x mandatory}
+  .cards::-webkit-scrollbar{display:none}
+  .card{
+    scroll-snap-align:center;min-width:78%;max-width:78%;aspect-ratio:4/5;position:relative;
+    transform-style:preserve-3d;transition:transform .25s;
+  }
+  .card .face{position:absolute;inset:0;padding:18px;display:flex;flex-direction:column;justify-content:space-between}
+  .title{font-size:28px;line-height:1.05;font-weight:700}
+  .specs{display:flex;gap:8px;flex-wrap:wrap}
+  .pill{font-family:"Fragment Mono";font-size:11px;padding:6px 9px;border-radius:999px;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.14);color:#b9c6dd}
+  .cta{margin-top:auto;display:flex;gap:8px}
+  .btn{flex:1;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:var(--fg);font-weight:600;backdrop-filter:blur(12px)}
+  .btn.pri{background:linear-gradient(180deg, rgba(123,92,255,.45), rgba(0,229,255,.25));border-color:rgba(255,255,255,.3)}
+
+  /* controls */
+  .controls{display:flex;gap:8px;padding:10px}
+  .seg{display:flex;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:4px}
+  .seg button{padding:8px 12px;border-radius:10px;border:0;background:transparent;color:var(--muted);font-weight:600}
+  .seg button.active{background:rgba(255,255,255,.12);color:var(--fg);box-shadow:inset 0 1px 0 rgba(255,255,255,.2)}
+
+  .list{display:grid;gap:10px;max-height:58dvh;overflow:auto;padding-right:4px}
+  .row{display:flex;justify-content:space-between;align-items:center;padding:14px 16px}
+  .row strong{font-weight:700}
+
+  .dock{display:flex;justify-content:center}
+  .dock .bar{display:flex;gap:10px;padding:8px}
+  .dock button{width:44px;height:44px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#c9d6ea}
+  .dock button.active{background:rgba(255,255,255,.16);color:white}
+
+  /* sheet */
+  .sheet{position:fixed;inset:0;display:grid;place-items:end center;background:rgba(0,0,0,.5);z-index:10;opacity:0;pointer-events:none;transition:.3s}
+  .sheet.open{opacity:1;pointer-events:auto}
+  .sheet .panel{width:100%;max-width:520px;max-height:88dvh;overflow:auto;padding:18px 18px 24px;border-radius:32px 32px 0 0}
+</style>
+</head>
+<body>
+<div class="liquid" aria-hidden="true">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+</div>
+
+<div class="app" id="app">
+  <div class="top lg">
+    <div class="brand"><span class="dot"></span> PREPFORGE</div>
+    <div class="meta" id="clock">09:58 PM</div>
+  </div>
+
+  <div class="stage">
+    <!-- RECIPES -->
+    <div class="deck" id="d-recipes">
+      <div class="lg" style="width:100%;padding:12px">
+        <div class="controls">
+          <div class="seg" id="cat">
+            <button class="active" data-c="all">All</button>
+            <button data-c="breakfast">AM</button>
+            <button data-c="lunch">PM</button>
+            <button data-c="dinner">Night</button>
+            <button data-c="snack">Snack</button>
+          </div>
+          <div style="flex:1"></div>
+          <button class="btn" id="filterBtn">Filters</button>
+        </div>
+        <div class="cards" id="cards"><div class="card lg">
+      <div class="face">
+        <div>
+          <div class="title">Cottage Cheese Berry Bowl</div>
+          <div class="meta">Silky base, bright berries, crunch chia.</div>
+        </div>
+        <div>
+          <div class="specs">
+            <span class="pill">SNACK</span>
+            <span class="pill">5M</span>
+            <span class="pill">26G P</span>
+            <span class="pill">easy</span>
+          </div>
+          <div class="cta">
+            <button class="btn" data-save="bowl">Save</button>
+            <button class="btn pri" data-open="bowl">Open</button>
+          </div>
+        </div>
+      </div></div><div class="card lg">
+      <div class="face">
+        <div>
+          <div class="title">Chicken Power Bowl</div>
+          <div class="meta">Quinoa, greens, charred chicken.</div>
+        </div>
+        <div>
+          <div class="specs">
+            <span class="pill">LUNCH</span>
+            <span class="pill">15M</span>
+            <span class="pill">42G P</span>
+            <span class="pill">easy</span>
+          </div>
+          <div class="cta">
+            <button class="btn" data-save="power">Save</button>
+            <button class="btn pri" data-open="power">Open</button>
+          </div>
+        </div>
+      </div></div><div class="card lg">
+      <div class="face">
+        <div>
+          <div class="title">Salmon &amp; Sweet Potato</div>
+          <div class="meta">Crispy skin, caramelized edges.</div>
+        </div>
+        <div>
+          <div class="specs">
+            <span class="pill">DINNER</span>
+            <span class="pill">25M</span>
+            <span class="pill">38G P</span>
+            <span class="pill">med</span>
+          </div>
+          <div class="cta">
+            <button class="btn" data-save="salmon">Save</button>
+            <button class="btn pri" data-open="salmon">Open</button>
+          </div>
+        </div>
+      </div></div><div class="card lg">
+      <div class="face">
+        <div>
+          <div class="title">Protein Pancakes</div>
+          <div class="meta">Fluffy, fast, freezer-friendly.</div>
+        </div>
+        <div>
+          <div class="specs">
+            <span class="pill">BREAKFAST</span>
+            <span class="pill">12M</span>
+            <span class="pill">31G P</span>
+            <span class="pill">easy</span>
+          </div>
+          <div class="cta">
+            <button class="btn" data-save="pancake">Save</button>
+            <button class="btn pri" data-open="pancake">Open</button>
+          </div>
+        </div>
+      </div></div></div>
+      </div>
+    </div>
+
+    <!-- PLAN -->
+    <div class="deck" id="d-plan" hidden="">
+      <div class="lg" style="width:100%;padding:14px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <div style="font-weight:700;letter-spacing:.08em">BUILD</div>
+          <div class="meta">drag to reorder • tap to open</div>
+        </div>
+        <div class="list" id="planList"><div class="row lg"><div><strong>My Prep Week</strong><div class="meta">28 meals</div></div><button class="btn" data-i="0">Delete</button></div></div>
+        <div style="display:flex;gap:8px;margin-top:10px">
+          <button class="btn pri" id="addDay">+ Day</button>
+          <button class="btn" id="addWeek">+ Week</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAVED -->
+    <div class="deck" id="d-saved" hidden="">
+      <div class="lg" style="width:100%;padding:14px">
+        <div style="font-weight:700;margin-bottom:8px">VAULT</div>
+        <div class="list" id="vault"><div class="row lg"><span class="meta">Nothing saved yet</span></div></div>
+      </div>
+    </div>
+
+    <!-- PROFILE -->
+    <div class="deck" id="d-profile" hidden="">
+      <div class="lg" style="width:100%;padding:16px">
+        <div style="font-weight:700;margin-bottom:10px">PREFERENCES</div>
+        <div class="list">
+          <div class="row lg"><span>Allergies</span><input id="al" placeholder="peanuts, shellfish" style="background:transparent;border:0;outline:0;color:var(--fg);text-align:right;width:60%"></div>
+          <div class="row lg"><span>Diets</span><input id="di" placeholder="high-protein" style="background:transparent;border:0;outline:0;color:var(--fg);text-align:right;width:60%"></div>
+          <div class="row lg"><span>YouTube API Key</span><input id="yt" placeholder="paste key" style="background:transparent;border:0;outline:0;color:var(--fg);text-align:right;width:60%"></div>
+        </div>
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <button class="btn pri" id="save">Save</button>
+          <button class="btn" id="connect">Connect TikTok / IG</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dock">
+    <div class="bar lg">
+      <button data-d="recipes" class="active" title="Recipes">◈</button>
+      <button data-d="plan" title="Plan">⬢</button>
+      <button data-d="saved" title="Saved">⬣</button>
+      <button data-d="profile" title="Profile">⬙</button>
+    </div>
+  </div>
+</div>
+
+<div class="sheet" id="sheet"><div class="panel lg" id="panel"></div></div>
+
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const store = JSON.parse(localStorage.getItem('pf2')||'{}');
+store.favs=store.favs||[]; store.plan=store.plan||[{t:'My Prep Week',m:28}]; store.prefs=store.prefs||{};
+
+const recipes=[
+ {id:'bowl',n:'Cottage Cheese Berry Bowl',c:'snack',p:26,t:5,l:'easy',d:'Silky base, bright berries, crunch chia.',
+  ing:['1c cottage cheese','1/2c mixed berries','1 tbsp chia','1 tsp honey'],
+  steps:['Layer cheese','Top berries + chia','Drizzle honey']},
+ {id:'power',n:'Chicken Power Bowl',c:'lunch',p:42,t:15,l:'easy',d:'Quinoa, greens, charred chicken.',
+  ing:['200g chicken','1c quinoa','greens','lemon','olive oil'],
+  steps:['Cook quinoa','Grill chicken','Assemble','Dress']},
+ {id:'salmon',n:'Salmon & Sweet Potato',c:'dinner',p:38,t:25,l:'med',d:'Crispy skin, caramelized edges.',
+  ing:['salmon','sweet potato','broccoli','garlic'],
+  steps:['Roast potato 20m','Add salmon 10m','Steam broccoli']},
+ {id:'pancake',n:'Protein Pancakes',c:'breakfast',p:31,t:12,l:'easy',d:'Fluffy, fast, freezer-friendly.',
+  ing:['oats','egg whites','whey','banana'],
+  steps:['Blend','Cook 2-3m/side']}
+];
+
+function tick(){ $('#clock').textContent=new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'}); }
+setInterval(tick,1000); tick();
+
+function renderCards(){
+  const cat=$('#cat .active').dataset.c;
+  const wrap=$('#cards'); wrap.innerHTML='';
+  recipes.filter(r=>cat==='all'||r.c===cat).forEach(r=>{
+    const el=document.createElement('div'); el.className='card lg'; el.innerHTML=`
+      <div class="face">
+        <div>
+          <div class="title">${r.n}</div>
+          <div class="meta">${r.d}</div>
+        </div>
+        <div>
+          <div class="specs">
+            <span class="pill">${r.c.toUpperCase()}</span>
+            <span class="pill">${r.t}M</span>
+            <span class="pill">${r.p}G P</span>
+            <span class="pill">${r.l}</span>
+          </div>
+          <div class="cta">
+            <button class="btn" data-save="${r.id}">${store.favs.includes(r.id)?'Saved':'Save'}</button>
+            <button class="btn pri" data-open="${r.id}">Open</button>
+          </div>
+        </div>
+      </div>`;
+    // 3d tilt
+    el.addEventListener('pointermove',e=>{
+      const b=el.getBoundingClientRect(); const x=(e.clientX-b.left)/b.width-.5; const y=(e.clientY-b.top)/b.height-.5;
+      el.style.transform=`rotateY(${x*8}deg) rotateX(${-y*8}deg)`;
+    });
+    el.addEventListener('pointerleave',()=>el.style.transform='');
+    wrap.appendChild(el);
+  });
+  wrap.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openRecipe(b.dataset.open));
+  wrap.querySelectorAll('[data-save]').forEach(b=>b.onclick=()=>{
+    const id=b.dataset.save; store.favs=store.favs.includes(id)?store.favs.filter(x=>x!==id):[...store.favs,id];
+    localStorage.setItem('pf2',JSON.stringify(store)); b.textContent=store.favs.includes(id)?'Saved':'Save'; renderVault();
+  });
+}
+$('#cat').onclick=e=>{if(e.target.tagName!=='BUTTON')return; $$('#cat button').forEach(b=>b.classList.remove('active')); e.target.classList.add('active'); renderCards();};
+$('#filterBtn').onclick=()=>alert('Filters: time ≤15, protein 30g+, easy — coming soon');
+
+function openRecipe(id){
+  const r=recipes.find(x=>x.id===id);
+  $('#panel').innerHTML=`
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div style="font-size:26px;font-weight:700">${r.n}</div>
+      <button class="btn" onclick="document.getElementById('sheet').classList.remove('open')">Close</button>
+    </div>
+    <div class="meta" style="margin:6px 0 14px">${r.c} • ${r.t}m • ${r.p}g protein</div>
+    <div class="row lg"><div>Ingredients</div></div>
+    <div class="list" style="margin:8px 0">${r.ing.map(i=>`<div class="row lg"><span>${i}</span></div>`).join('')}</div>
+    <div class="row lg" style="margin-top:8px"><div>Method</div></div>
+    <div class="list" style="margin:8px 0">${r.steps.map((s,i)=>`<div class="row lg"><span>Step ${i+1}</span><span class="meta">${s}</span></div>`).join('')}</div>
+    <div style="display:flex;gap:8px;margin-top:12px">
+      <button class="btn pri" id="watch">Watch it made → YouTube</button>
+      <button class="btn" id="addPlan">Add to Plan</button>
+    </div>`;
+  $('#sheet').classList.add('open');
+  $('#watch').onclick=()=>watch(r.n+' recipe');
+  $('#addPlan').onclick=()=>{store.plan.unshift({t:r.n,m:1});localStorage.setItem('pf2',JSON.stringify(store));renderPlan();alert('Added to Plan');};
+}
+function watch(q){
+  const key=store.prefs.yt||$('#yt')?.value;
+  if(!key){switchDeck('profile');alert('Paste your YouTube API key in Profile first');return;}
+  fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(q)}&type=video&maxResults=1&key=${key}`)
+    .then(r=>r.json()).then(d=>{const v=d.items?.[0]?.id?.videoId; if(v) open(`https://www.youtube.com/watch?v=${v}`,'_blank'); else alert('No video found')})
+    .catch(()=>alert('YouTube error'));
+}
+
+function renderPlan(){
+  const list=$('#planList'); list.innerHTML='';
+  store.plan.forEach((p,i)=>{
+    const el=document.createElement('div'); el.className='row lg'; el.innerHTML=`<div><strong>${p.t}</strong><div class="meta">${p.m} meals</div></div><button class="btn" data-i="${i}">Delete</button>`;
+    el.querySelector('button').onclick=()=>{store.plan.splice(i,1);localStorage.setItem('pf2',JSON.stringify(store));renderPlan();};
+    list.appendChild(el);
+  });
+}
+$('#addDay').onclick=()=>{store.plan.unshift({t:'Day Build',m:4});localStorage.setItem('pf2',JSON.stringify(store));renderPlan();};
+$('#addWeek').onclick=()=>{store.plan.unshift({t:'Week Build',m:28});localStorage.setItem('pf2',JSON.stringify(store));renderPlan();};
+
+function renderVault(){
+  const v=$('#vault'); v.innerHTML='';
+  recipes.filter(r=>store.favs.includes(r.id)).forEach(r=>{
+    const el=document.createElement('div'); el.className='row lg'; el.innerHTML=`<div>${r.n}</div><button class="btn" data-o="${r.id}">Open</button>`;
+    el.querySelector('button').onclick=()=>openRecipe(r.id); v.appendChild(el);
+  });
+  if(!v.children.length) v.innerHTML=`<div class="row lg"><span class="meta">Nothing saved yet</span></div>`;
+}
+
+function switchDeck(name){
+  $$('.deck').forEach(d=>d.hidden=true); $('#d-'+name).hidden=false;
+  $$('.dock button').forEach(b=>b.classList.toggle('active', b.dataset.d===name));
+}
+$$('.dock button').forEach(b=>b.onclick=()=>switchDeck(b.dataset.d));
+
+$('#save').onclick=()=>{store.prefs={al:$('#al').value,di:$('#di').value,yt:$('#yt').value};localStorage.setItem('pf2',JSON.stringify(store));alert('Saved');};
+$('#connect').onclick=()=>alert('Connect TikTok/IG — add OAuth later');
+$('#sheet').onclick=e=>{if(e.target.id==='sheet') e.target.classList.remove('open')};
+
+// liquid glass highlight follows pointer
+addEventListener('pointermove',e=>{
+  const x=e.clientX/innerWidth*100, y=e.clientY/innerHeight*100;
+  document.documentElement.style.setProperty('--hx',x.toFixed(1));
+  document.documentElement.style.setProperty('--hy',y.toFixed(1));
+},{passive:true});
+
+renderCards(); renderPlan(); renderVault();
+</script>
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script>
+
+</body></html>
