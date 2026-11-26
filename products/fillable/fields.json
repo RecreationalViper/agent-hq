@@ -44,7 +44,7 @@
      "font": "I",
      "color": "#5f6e56",
      "multiline": true,
-     "value": "Like the leaves that turn and fall, you return to the quiet earth \u2014 and still, in every spring, we will find you.",
+     "value": "Like the leaves that turn and fall, you return to the quiet earth — and still, in every spring, we will find you.",
      "lead": 1.65
     },
     {
@@ -93,7 +93,7 @@
      "size": 11,
      "font": "S",
      "color": "#5f6e56",
-     "value": "1941  \u2014  2026"
+     "value": "1941  —  2026"
     },
     {
      "name": "Service item 1",
@@ -117,7 +117,7 @@
      "size": 12.5,
      "font": "I",
      "color": "#7a746c",
-     "value": "\u201cMorning Has Broken\u201d \u00b7 Piano"
+     "value": "“Morning Has Broken” · Piano"
     },
     {
      "name": "Service item 2",
@@ -213,7 +213,7 @@
      "size": 12.5,
      "font": "I",
      "color": "#7a746c",
-     "value": "\u201cOver the Rainbow\u201d \u00b7 Lisa Chen"
+     "value": "“Over the Rainbow” · Lisa Chen"
     },
     {
      "name": "Service item 6",
@@ -333,7 +333,7 @@
      "size": 12.5,
      "font": "I",
      "color": "#7a746c",
-     "value": "\u201cWhat a Wonderful World\u201d"
+     "value": "“What a Wonderful World”"
     },
     {
      "name": "Service date and place",
@@ -346,7 +346,7 @@
      "font": "S",
      "color": "#8a9a7b",
      "multiline": true,
-     "value": "SATURDAY, OCTOBER 11, 2026 \u00b7 11:00 AM\nWILLOW CREEK HALL \u00b7 FAIRVIEW",
+     "value": "SATURDAY, OCTOBER 11, 2026 · 11:00 AM\nWILLOW CREEK HALL · FAIRVIEW",
      "lead": 1.9
     },
     {
@@ -371,7 +371,7 @@
      "size": 12,
      "font": "I",
      "color": "#7a746c",
-     "value": "March 14, 1941  \u00b7  October 2, 2026"
+     "value": "March 14, 1941  ·  October 2, 2026"
     },
     {
      "name": "Life story",
@@ -385,7 +385,7 @@
      "color": "#4a4540",
      "multiline": true,
      "align": 0,
-     "value": "Eleanor was born on a spring morning in 1941 and spent her childhood on her family\u2019s farm outside Fairview, where she learned to love early sunrises and tomato vines. She taught second grade for thirty-four years and could still name nearly every student she ever had.\n\nShe married her sweetheart, Robert, in 1963, and together they raised three children in a house that was never quiet and always smelled of coffee. Eleanor tended a garden the whole street admired, never missed a grandchild\u2019s recital, and believed that a handwritten letter could fix almost anything.\n\nShe is survived by her children Anna, James and Thomas, seven grandchildren, and countless friends who were made to feel like family the moment they arrived.",
+     "value": "Eleanor was born on a spring morning in 1941 and spent her childhood on her family’s farm outside Fairview, where she learned to love early sunrises and tomato vines. She taught second grade for thirty-four years and could still name nearly every student she ever had.\n\nShe married her sweetheart, Robert, in 1963, and together they raised three children in a house that was never quiet and always smelled of coffee. Eleanor tended a garden the whole street admired, never missed a grandchild’s recital, and believed that a handwritten letter could fix almost anything.\n\nShe is survived by her children Anna, James and Thomas, seven grandchildren, and countless friends who were made to feel like family the moment they arrived.",
      "lead": 1.65
     }
    ]
@@ -439,7 +439,7 @@
      "size": 49,
      "font": "S",
      "color": "#5f6e56",
-     "value": "1941  \u2014  2026"
+     "value": "1941  —  2026"
     }
    ]
   },
@@ -497,7 +497,7 @@
      "size": 8,
      "font": "S",
      "color": "#5f6e56",
-     "value": "1941  \u2014  2026",
+     "value": "1941  —  2026",
      "page": 1
     },
     {
@@ -511,7 +511,7 @@
      "color": "#4a4540",
      "multiline": true,
      "lead": 1.7,
-     "value": "Those we love don\u2019t go away, they walk beside us every day. Unseen, unheard, but always near, still loved, still missed and very dear.",
+     "value": "Those we love don’t go away, they walk beside us every day. Unseen, unheard, but always near, still loved, still missed and very dear.",
      "page": 1
     }
    ],
@@ -541,7 +541,7 @@
      "color": "#4a4540",
      "multiline": true,
      "lead": 1.7,
-     "value": "Your kind words, flowers and presence meant more to us than we can say. Thank you for honoring Eleanor\u2019s life and for holding our family close.",
+     "value": "Your kind words, flowers and presence meant more to us than we can say. Thank you for honoring Eleanor’s life and for holding our family close.",
      "page": 1
     },
     {
@@ -604,7 +604,7 @@
      "size": 11,
      "font": "S",
      "color": "#5f6e56",
-     "value": "1941  \u2014  2026",
+     "value": "1941  —  2026",
      "page": 1
     },
     {
@@ -630,7 +630,7 @@
      "color": "#4a4540",
      "multiline": true,
      "lead": 1.55,
-     "value": "Saturday, October 11, 2026 \u00b7 11:00 AM\nWillow Creek Hall\n214 Maple Lane, Fairview",
+     "value": "Saturday, October 11, 2026 · 11:00 AM\nWillow Creek Hall\n214 Maple Lane, Fairview",
      "page": 1
     },
     {
@@ -685,7 +685,7 @@
      "color": "#4a4a52",
      "multiline": true,
      "lead": 1.65,
-     "value": "Our family is deeply grateful for your kindness, your prayers and your presence today. Thank you for honoring Robert\u2019s life with us."
+     "value": "Our family is deeply grateful for your kindness, your prayers and your presence today. Thank you for honoring Robert’s life with us."
     },
     {
      "name": "Reception details",
@@ -713,7 +713,7 @@
      "color": "#1f2d44",
      "multiline": true,
      "lead": 1.65,
-     "value": "\u201cWell done, good and faithful servant.\u201d \u2014 Matthew 25:23"
+     "value": "“Well done, good and faithful servant.” — Matthew 25:23"
     },
     {
      "name": "In lieu of flowers",
@@ -762,7 +762,7 @@
      "size": 13,
      "font": "I",
      "color": "#9c7a45",
-     "value": "1938  \u2014  2026"
+     "value": "1938  —  2026"
     },
     {
      "name": "Service item 1",
@@ -786,7 +786,7 @@
      "size": 12.5,
      "font": "I",
      "color": "#4a4a52",
-     "value": "\u201cMorning Has Broken\u201d \u00b7 Piano"
+     "value": "“Morning Has Broken” · Piano"
     },
     {
      "name": "Service item 2",
@@ -882,7 +882,7 @@
      "size": 12.5,
      "font": "I",
      "color": "#4a4a52",
-     "value": "\u201cAmazing Grace\u201d"
+     "value": "“Amazing Grace”"
     },
     {
      "name": "Service item 6",
@@ -1002,7 +1002,7 @@
      "size": 12.5,
      "font": "I",
      "color": "#4a4a52",
-     "value": "\u201cIt Is Well with My Soul\u201d"
+     "value": "“It Is Well with My Soul”"
     },
     {
      "name": "Service date and place",
@@ -1016,7 +1016,7 @@
      "color": "#9c7a45",
      "multiline": true,
      "lead": 1.7,
-     "value": "SATURDAY, OCTOBER 11, 2026 \u00b7 11:00 AM\nGRACE COMMUNITY CHURCH \u00b7 FAIRVIEW"
+     "value": "SATURDAY, OCTOBER 11, 2026 · 11:00 AM\nGRACE COMMUNITY CHURCH · FAIRVIEW"
     },
     {
      "name": "Name",
@@ -1040,7 +1040,7 @@
      "size": 13,
      "font": "I",
      "color": "#9c7a45",
-     "value": "May 2, 1938  \u00b7  October 2, 2026"
+     "value": "May 2, 1938  ·  October 2, 2026"
     },
     {
      "name": "Life story",
@@ -1109,7 +1109,7 @@
      "size": 64,
      "font": "I",
      "color": "#9c7a45",
-     "value": "1938  \u2014  2026"
+     "value": "1938  —  2026"
     }
    ]
   },
@@ -1167,7 +1167,7 @@
      "size": 11,
      "font": "I",
      "color": "#9c7a45",
-     "value": "1938  \u2014  2026",
+     "value": "1938  —  2026",
      "page": 1
     },
     {
@@ -1181,7 +1181,7 @@
      "color": "#4a4a52",
      "multiline": true,
      "lead": 1.7,
-     "value": "The Lord is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul. \u2014 Psalm 23",
+     "value": "The Lord is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul. — Psalm 23",
      "page": 1
     }
    ],
@@ -1211,7 +1211,7 @@
      "color": "#4a4a52",
      "multiline": true,
      "lead": 1.7,
-     "value": "Your kindness, prayers and presence meant more to us than words can say. Thank you for honoring Robert\u2019s life and for standing beside our family.",
+     "value": "Your kindness, prayers and presence meant more to us than words can say. Thank you for honoring Robert’s life and for standing beside our family.",
      "page": 1
     },
     {
@@ -1274,7 +1274,7 @@
      "size": 14,
      "font": "I",
      "color": "#cdb88e",
-     "value": "1938  \u2014  2026",
+     "value": "1938  —  2026",
      "page": 1
     },
     {
@@ -1300,7 +1300,7 @@
      "color": "#f3ede0",
      "multiline": true,
      "lead": 1.6,
-     "value": "Saturday, October 11, 2026 \u00b7 11:00 AM\nGrace Community Church\n410 Oak Street, Fairview",
+     "value": "Saturday, October 11, 2026 · 11:00 AM\nGrace Community Church\n410 Oak Street, Fairview",
      "page": 1
     },
     {
@@ -2137,6 +2137,2016 @@
     "cols": 2,
     "rows": 2
    }
+  },
+  {
+   "file": "Golden Hour/01 Program - Golden Hour (fill-in).pdf",
+   "title": "Memorial Program - Golden Hour",
+   "bg": "golden-program.pdf",
+   "fields": [
+    {
+     "name": "Thank you note",
+     "page": 1,
+     "left": 90,
+     "top": 188,
+     "width": 348,
+     "height": 140,
+     "size": 15,
+     "font": "I",
+     "color": "#5A4636",
+     "multiline": true,
+     "lead": 1.65,
+     "value": "Thank you for coming to celebrate Margaret with us. She would have loved seeing all of you in one place, laughing."
+    },
+    {
+     "name": "Reception details",
+     "page": 1,
+     "left": 110,
+     "top": 408,
+     "width": 308,
+     "height": 84,
+     "size": 14,
+     "font": "R",
+     "color": "#5A4636",
+     "multiline": true,
+     "lead": 1.6,
+     "value": "Lunch on the lawn right after,\nRiverside Garden Pavilion\n200 River Road, Fairview"
+    },
+    {
+     "name": "Closing verse",
+     "page": 1,
+     "left": 110,
+     "top": 556,
+     "width": 308,
+     "height": 118,
+     "size": 15,
+     "font": "I",
+     "color": "#3E2A1A",
+     "multiline": true,
+     "lead": 1.65,
+     "value": "She filled every room with sunlight and every table with friends."
+    },
+    {
+     "name": "In lieu of flowers",
+     "page": 1,
+     "left": 70,
+     "top": 700,
+     "width": 388,
+     "height": 34,
+     "size": 9,
+     "font": "R",
+     "color": "#B5651D",
+     "multiline": true,
+     "lead": 1.6,
+     "value": "IN LIEU OF FLOWERS, PLEASE PLANT SOMETHING THAT BLOOMS"
+    },
+    {
+     "name": "Photo",
+     "type": "photo",
+     "page": 1,
+     "left": 724,
+     "top": 170,
+     "width": 136,
+     "height": 170
+    },
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 586,
+     "top": 408,
+     "width": 412,
+     "height": 122,
+     "size": 44,
+     "font": "R",
+     "color": "#3E2A1A",
+     "multiline": true,
+     "lead": 1.15,
+     "value": "Margaret Anne Ellis"
+    },
+    {
+     "name": "Years",
+     "page": 1,
+     "left": 640,
+     "top": 538,
+     "width": 304,
+     "height": 22,
+     "size": 13,
+     "font": "I",
+     "color": "#B5651D",
+     "value": "1948  —  2026"
+    },
+    {
+     "name": "Service item 1",
+     "page": 2,
+     "left": 105,
+     "top": 158.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3E2A1A",
+     "value": "Prelude"
+    },
+    {
+     "name": "Service item 1 detail",
+     "page": 2,
+     "left": 105,
+     "top": 181.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#5A4636",
+     "value": "“Morning Has Broken” · Piano"
+    },
+    {
+     "name": "Service item 2",
+     "page": 2,
+     "left": 105,
+     "top": 211.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3E2A1A",
+     "value": "Welcome"
+    },
+    {
+     "name": "Service item 2 detail",
+     "page": 2,
+     "left": 105,
+     "top": 235.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#5A4636",
+     "value": "Daniel Brooks, officiant"
+    },
+    {
+     "name": "Service item 3",
+     "page": 2,
+     "left": 105,
+     "top": 265.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3E2A1A",
+     "value": "Opening Prayer"
+    },
+    {
+     "name": "Service item 3 detail",
+     "page": 2,
+     "left": 105,
+     "top": 288.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#5A4636",
+     "value": "Pastor Ruth Allen"
+    },
+    {
+     "name": "Service item 4",
+     "page": 2,
+     "left": 105,
+     "top": 318.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3E2A1A",
+     "value": "Scripture Reading"
+    },
+    {
+     "name": "Service item 4 detail",
+     "page": 2,
+     "left": 105,
+     "top": 342.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#5A4636",
+     "value": "Psalm 23, read by Thomas Ellis"
+    },
+    {
+     "name": "Service item 5",
+     "page": 2,
+     "left": 105,
+     "top": 372.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3E2A1A",
+     "value": "Hymn"
+    },
+    {
+     "name": "Service item 5 detail",
+     "page": 2,
+     "left": 105,
+     "top": 395.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#5A4636",
+     "value": "“Amazing Grace”"
+    },
+    {
+     "name": "Service item 6",
+     "page": 2,
+     "left": 105,
+     "top": 425.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3E2A1A",
+     "value": "Eulogy"
+    },
+    {
+     "name": "Service item 6 detail",
+     "page": 2,
+     "left": 105,
+     "top": 449.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#5A4636",
+     "value": "James Ellis, son"
+    },
+    {
+     "name": "Service item 7",
+     "page": 2,
+     "left": 105,
+     "top": 479.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3E2A1A",
+     "value": "Sharing of Memories"
+    },
+    {
+     "name": "Service item 7 detail",
+     "page": 2,
+     "left": 105,
+     "top": 502.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#5A4636",
+     "value": "All are welcome to speak"
+    },
+    {
+     "name": "Service item 8",
+     "page": 2,
+     "left": 105,
+     "top": 532.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3E2A1A",
+     "value": "Moment of Silence"
+    },
+    {
+     "name": "Service item 8 detail",
+     "page": 2,
+     "left": 105,
+     "top": 556.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#5A4636",
+     "value": ""
+    },
+    {
+     "name": "Service item 9",
+     "page": 2,
+     "left": 105,
+     "top": 586.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3E2A1A",
+     "value": "Benediction"
+    },
+    {
+     "name": "Service item 9 detail",
+     "page": 2,
+     "left": 105,
+     "top": 609.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#5A4636",
+     "value": "Pastor Ruth Allen"
+    },
+    {
+     "name": "Service item 10",
+     "page": 2,
+     "left": 105,
+     "top": 639.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#3E2A1A",
+     "value": "Recessional"
+    },
+    {
+     "name": "Service item 10 detail",
+     "page": 2,
+     "left": 105,
+     "top": 663.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#5A4636",
+     "value": "“It Is Well with My Soul”"
+    },
+    {
+     "name": "Service date and place",
+     "page": 2,
+     "left": 95,
+     "top": 712,
+     "width": 340,
+     "height": 40,
+     "size": 9.5,
+     "font": "R",
+     "color": "#B5651D",
+     "multiline": true,
+     "lead": 1.7,
+     "value": "SATURDAY, NOVEMBER 8, 2026 · 11:00 AM\nRIVERSIDE GARDEN PAVILION · FAIRVIEW"
+    },
+    {
+     "name": "Name",
+     "page": 2,
+     "left": 586,
+     "top": 108,
+     "width": 412,
+     "height": 40,
+     "size": 30,
+     "font": "I",
+     "color": "#3E2A1A",
+     "value": "Margaret Anne Ellis"
+    },
+    {
+     "name": "Full dates",
+     "page": 2,
+     "left": 645,
+     "top": 156,
+     "width": 300,
+     "height": 20,
+     "size": 13,
+     "font": "I",
+     "color": "#B5651D",
+     "value": "May 3, 1948  ·  November 2, 2026"
+    },
+    {
+     "name": "Life story",
+     "page": 2,
+     "left": 606,
+     "top": 216,
+     "width": 380,
+     "height": 430,
+     "size": 13.5,
+     "font": "R",
+     "color": "#5A4636",
+     "multiline": true,
+     "lead": 1.65,
+     "align": 0,
+     "value": "Margaret was born in the spring of 1948 and never stopped growing things: tomatoes, friendships and a family that now fills three long tables. She taught second grade for thirty-one years, kept a garden that fed half the street, and believed any day could be improved by pie. She is remembered for her laugh, her open door and the sunflowers she planted every single June."
+    }
+   ]
+  },
+  {
+   "file": "Golden Hour/02 Welcome Sign - Golden Hour (fill-in).pdf",
+   "title": "Welcome Sign - Golden Hour",
+   "bg": "golden-sign.pdf",
+   "fields": [
+    {
+     "name": "Subtitle",
+     "page": 1,
+     "left": 202,
+     "top": 1200,
+     "width": 1900,
+     "height": 70,
+     "size": 48,
+     "font": "R",
+     "color": "#3E2A1A",
+     "value": "TO THE CELEBRATION OF LIFE FOR"
+    },
+    {
+     "name": "Photo",
+     "type": "photo",
+     "page": 1,
+     "left": 992,
+     "top": 1440,
+     "width": 320,
+     "height": 400
+    },
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 330,
+     "top": 2000,
+     "width": 1644,
+     "height": 520,
+     "size": 190,
+     "font": "R",
+     "color": "#3E2A1A",
+     "multiline": true,
+     "lead": 1.12,
+     "value": "Margaret Anne Ellis"
+    },
+    {
+     "name": "Years",
+     "page": 1,
+     "left": 700,
+     "top": 2560,
+     "width": 904,
+     "height": 90,
+     "size": 64,
+     "font": "I",
+     "color": "#B5651D",
+     "value": "1948  —  2026"
+    }
+   ]
+  },
+  {
+   "file": "Golden Hour/03 Memory Card - Golden Hour (fill-in).pdf",
+   "title": "Share a Memory Card - Golden Hour",
+   "bg": "golden-card.pdf",
+   "fields": [
+    {
+     "name": "Name line",
+     "page": 1,
+     "left": 34,
+     "top": 150,
+     "width": 340,
+     "height": 18,
+     "size": 9,
+     "font": "R",
+     "color": "#B5651D",
+     "value": "FOR MARGARET ANNE ELLIS"
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 0.94
+   }
+  },
+  {
+   "file": "Golden Hour/04 Bookmark - Golden Hour (fill-in).pdf",
+   "title": "Memorial Bookmark - Golden Hour",
+   "bg": "golden-bookmark.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "left": 16,
+     "top": 122,
+     "width": 160,
+     "height": 58,
+     "size": 19,
+     "font": "R",
+     "color": "#3E2A1A",
+     "multiline": true,
+     "lead": 1.15,
+     "value": "Margaret Anne Ellis",
+     "page": 1
+    },
+    {
+     "name": "Years",
+     "left": 16,
+     "top": 196,
+     "width": 160,
+     "height": 18,
+     "size": 11,
+     "font": "I",
+     "color": "#B5651D",
+     "value": "1948  —  2026",
+     "page": 1
+    },
+    {
+     "name": "Verse",
+     "left": 18,
+     "top": 256,
+     "width": 156,
+     "height": 256,
+     "size": 11.5,
+     "font": "I",
+     "color": "#5A4636",
+     "multiline": true,
+     "lead": 1.7,
+     "value": "Do not stand at my grave and weep; I am in the morning light, the golden fields, the summer's sweep.",
+     "page": 1
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 1,
+    "cols": 4,
+    "rows": 1
+   }
+  },
+  {
+   "file": "Golden Hour/05 Thank-You Card - Golden Hour (fill-in).pdf",
+   "title": "Thank-You Card - Golden Hour",
+   "bg": "golden-thankyou.pdf",
+   "fields": [
+    {
+     "name": "Thank you message",
+     "left": 44,
+     "top": 214,
+     "width": 320,
+     "height": 150,
+     "size": 13,
+     "font": "I",
+     "color": "#5A4636",
+     "multiline": true,
+     "lead": 1.7,
+     "value": "Your kindness, prayers and presence meant more to us than words can say. Thank you for honoring Margaret’s life and for standing beside our family.",
+     "page": 1
+    },
+    {
+     "name": "Signed",
+     "left": 44,
+     "top": 386,
+     "width": 320,
+     "height": 48,
+     "size": 13,
+     "font": "R",
+     "color": "#3E2A1A",
+     "multiline": true,
+     "lead": 1.4,
+     "value": "With love and thanks,\nthe Ellis family",
+     "page": 1
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 0.94
+   }
+  },
+  {
+   "file": "Golden Hour/06 Phone Announcement - Golden Hour (fill-in).pdf",
+   "title": "Memorial Announcement for Phones - Golden Hour",
+   "bg": "golden-announcement.pdf",
+   "fields": [
+    {
+     "name": "Photo",
+     "type": "photo",
+     "left": 214,
+     "top": 258,
+     "width": 112,
+     "height": 144,
+     "page": 1
+    },
+    {
+     "name": "Name",
+     "left": 40,
+     "top": 452,
+     "width": 460,
+     "height": 84,
+     "size": 36,
+     "font": "R",
+     "color": "#FBF4E6",
+     "multiline": true,
+     "lead": 1.1,
+     "value": "Margaret Anne Ellis",
+     "page": 1
+    },
+    {
+     "name": "Years",
+     "left": 120,
+     "top": 566,
+     "width": 300,
+     "height": 22,
+     "size": 14,
+     "font": "I",
+     "color": "#F2C14E",
+     "value": "1948  —  2026",
+     "page": 1
+    },
+    {
+     "name": "Gathering",
+     "left": 60,
+     "top": 620,
+     "width": 420,
+     "height": 30,
+     "size": 20,
+     "font": "I",
+     "color": "#F2C14E",
+     "value": "Celebration of Life",
+     "page": 1
+    },
+    {
+     "name": "Service details",
+     "left": 60,
+     "top": 656,
+     "width": 420,
+     "height": 100,
+     "size": 14,
+     "font": "R",
+     "color": "#FBF4E6",
+     "multiline": true,
+     "lead": 1.6,
+     "value": "Saturday, November 8, 2026 · 11:00 AM\nRiverside Garden Pavilion\n200 River Road, Fairview",
+     "page": 1
+    },
+    {
+     "name": "Note",
+     "left": 60,
+     "top": 774,
+     "width": 420,
+     "height": 60,
+     "size": 12.5,
+     "font": "I",
+     "color": "#F2C14E",
+     "multiline": true,
+     "lead": 1.5,
+     "value": "Come as you are, wear something bright, and bring a story. A potluck lunch follows.",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "file": "Golden Hour/07 Guest Book Page - Golden Hour (fill-in).pdf",
+   "title": "Guest Book Page - Golden Hour",
+   "bg": "golden-guestbook.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "left": 108,
+     "top": 222,
+     "width": 600,
+     "height": 46,
+     "size": 32,
+     "font": "I",
+     "color": "#3E2A1A",
+     "value": "Margaret Anne Ellis",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "file": "Homegoing Grace/01 Program - Homegoing Grace (fill-in).pdf",
+   "title": "Memorial Program - Homegoing Grace",
+   "bg": "grace-program.pdf",
+   "fields": [
+    {
+     "name": "Thank you note",
+     "page": 1,
+     "left": 90,
+     "top": 188,
+     "width": 348,
+     "height": 140,
+     "size": 15,
+     "font": "I",
+     "color": "#4B3A47",
+     "multiline": true,
+     "lead": 1.65,
+     "value": "Our family is deeply grateful for your kindness, your prayers and your presence today. Thank you for honoring Dorothy’s life with us."
+    },
+    {
+     "name": "Reception details",
+     "page": 1,
+     "left": 110,
+     "top": 408,
+     "width": 308,
+     "height": 84,
+     "size": 14,
+     "font": "R",
+     "color": "#4B3A47",
+     "multiline": true,
+     "lead": 1.6,
+     "value": "Repast immediately following\nFellowship Hall, Greater Hope Baptist Church\n410 Oak Street, Fairview"
+    },
+    {
+     "name": "Closing verse",
+     "page": 1,
+     "left": 110,
+     "top": 556,
+     "width": 308,
+     "height": 118,
+     "size": 15,
+     "font": "I",
+     "color": "#2E1A2B",
+     "multiline": true,
+     "lead": 1.65,
+     "value": "“I have fought a good fight, I have finished my course, I have kept the faith.” 2 Timothy 4:7"
+    },
+    {
+     "name": "In lieu of flowers",
+     "page": 1,
+     "left": 70,
+     "top": 700,
+     "width": 388,
+     "height": 34,
+     "size": 9,
+     "font": "R",
+     "color": "#9A7638",
+     "multiline": true,
+     "lead": 1.6,
+     "value": "IN LIEU OF FLOWERS, GIFTS MAY BE MADE TO THE GREATER HOPE CHURCH BUILDING FUND"
+    },
+    {
+     "name": "Photo",
+     "type": "photo",
+     "page": 1,
+     "left": 724,
+     "top": 170,
+     "width": 136,
+     "height": 170
+    },
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 586,
+     "top": 408,
+     "width": 412,
+     "height": 122,
+     "size": 44,
+     "font": "R",
+     "color": "#2E1A2B",
+     "multiline": true,
+     "lead": 1.15,
+     "value": "Dorothy Mae Johnson"
+    },
+    {
+     "name": "Years",
+     "page": 1,
+     "left": 640,
+     "top": 538,
+     "width": 304,
+     "height": 22,
+     "size": 13,
+     "font": "I",
+     "color": "#9A7638",
+     "value": "1941  —  2026"
+    },
+    {
+     "name": "Service item 1",
+     "page": 2,
+     "left": 105,
+     "top": 158.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#2E1A2B",
+     "value": "Processional"
+    },
+    {
+     "name": "Service item 1 detail",
+     "page": 2,
+     "left": 105,
+     "top": 181.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4B3A47",
+     "value": "Family and friends"
+    },
+    {
+     "name": "Service item 2",
+     "page": 2,
+     "left": 105,
+     "top": 211.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#2E1A2B",
+     "value": "Welcome"
+    },
+    {
+     "name": "Service item 2 detail",
+     "page": 2,
+     "left": 105,
+     "top": 235.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4B3A47",
+     "value": "Daniel Brooks, officiant"
+    },
+    {
+     "name": "Service item 3",
+     "page": 2,
+     "left": 105,
+     "top": 265.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#2E1A2B",
+     "value": "Opening Prayer"
+    },
+    {
+     "name": "Service item 3 detail",
+     "page": 2,
+     "left": 105,
+     "top": 288.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4B3A47",
+     "value": "Rev. Samuel Hayes"
+    },
+    {
+     "name": "Service item 4",
+     "page": 2,
+     "left": 105,
+     "top": 318.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#2E1A2B",
+     "value": "Scripture Reading"
+    },
+    {
+     "name": "Service item 4 detail",
+     "page": 2,
+     "left": 105,
+     "top": 342.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4B3A47",
+     "value": "Psalm 23, read by Thomas Johnson"
+    },
+    {
+     "name": "Service item 5",
+     "page": 2,
+     "left": 105,
+     "top": 372.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#2E1A2B",
+     "value": "Hymn"
+    },
+    {
+     "name": "Service item 5 detail",
+     "page": 2,
+     "left": 105,
+     "top": 395.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4B3A47",
+     "value": "“Amazing Grace”"
+    },
+    {
+     "name": "Service item 6",
+     "page": 2,
+     "left": 105,
+     "top": 425.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#2E1A2B",
+     "value": "Obituary & Eulogy"
+    },
+    {
+     "name": "Service item 6 detail",
+     "page": 2,
+     "left": 105,
+     "top": 449.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4B3A47",
+     "value": "Rev. Samuel Hayes"
+    },
+    {
+     "name": "Service item 7",
+     "page": 2,
+     "left": 105,
+     "top": 479.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#2E1A2B",
+     "value": "Reflections"
+    },
+    {
+     "name": "Service item 7 detail",
+     "page": 2,
+     "left": 105,
+     "top": 502.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4B3A47",
+     "value": "Two minutes, please"
+    },
+    {
+     "name": "Service item 8",
+     "page": 2,
+     "left": 105,
+     "top": 532.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#2E1A2B",
+     "value": "Musical Selection"
+    },
+    {
+     "name": "Service item 8 detail",
+     "page": 2,
+     "left": 105,
+     "top": 556.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4B3A47",
+     "value": "Greater Hope Mass Choir"
+    },
+    {
+     "name": "Service item 9",
+     "page": 2,
+     "left": 105,
+     "top": 586.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#2E1A2B",
+     "value": "Benediction"
+    },
+    {
+     "name": "Service item 9 detail",
+     "page": 2,
+     "left": 105,
+     "top": 609.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4B3A47",
+     "value": "Rev. Samuel Hayes"
+    },
+    {
+     "name": "Service item 10",
+     "page": 2,
+     "left": 105,
+     "top": 639.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#2E1A2B",
+     "value": "Recessional"
+    },
+    {
+     "name": "Service item 10 detail",
+     "page": 2,
+     "left": 105,
+     "top": 663.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#4B3A47",
+     "value": "“It Is Well with My Soul”"
+    },
+    {
+     "name": "Service date and place",
+     "page": 2,
+     "left": 95,
+     "top": 712,
+     "width": 340,
+     "height": 40,
+     "size": 9.5,
+     "font": "R",
+     "color": "#9A7638",
+     "multiline": true,
+     "lead": 1.7,
+     "value": "SATURDAY, NOVEMBER 15, 2026 · 11:00 AM\nGREATER HOPE BAPTIST CHURCH · FAIRVIEW"
+    },
+    {
+     "name": "Name",
+     "page": 2,
+     "left": 586,
+     "top": 108,
+     "width": 412,
+     "height": 40,
+     "size": 30,
+     "font": "I",
+     "color": "#2E1A2B",
+     "value": "Dorothy Mae Johnson"
+    },
+    {
+     "name": "Full dates",
+     "page": 2,
+     "left": 645,
+     "top": 156,
+     "width": 300,
+     "height": 20,
+     "size": 13,
+     "font": "I",
+     "color": "#9A7638",
+     "value": "March 14, 1941  ·  November 9, 2026"
+    },
+    {
+     "name": "Life story",
+     "page": 2,
+     "left": 606,
+     "top": 216,
+     "width": 380,
+     "height": 430,
+     "size": 13.5,
+     "font": "R",
+     "color": "#4B3A47",
+     "multiline": true,
+     "lead": 1.65,
+     "align": 0,
+     "value": "Dorothy Mae was born March 14, 1941, the third of seven children. She gave her life to Christ at the age of twelve and served faithfully on the Mother's Board and in the choir for over fifty years. A devoted wife, mother of five and grandmother to many, she never met a stranger and never let anyone leave her kitchen hungry. Her faith, her laughter and her sweet potato pie will be remembered always."
+    }
+   ]
+  },
+  {
+   "file": "Homegoing Grace/02 Welcome Sign - Homegoing Grace (fill-in).pdf",
+   "title": "Welcome Sign - Homegoing Grace",
+   "bg": "grace-sign.pdf",
+   "fields": [
+    {
+     "name": "Subtitle",
+     "page": 1,
+     "left": 202,
+     "top": 1200,
+     "width": 1900,
+     "height": 70,
+     "size": 48,
+     "font": "R",
+     "color": "#F4EBDD",
+     "value": "TO THE HOMEGOING SERVICE FOR"
+    },
+    {
+     "name": "Photo",
+     "type": "photo",
+     "page": 1,
+     "left": 992,
+     "top": 1440,
+     "width": 320,
+     "height": 400
+    },
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 330,
+     "top": 2000,
+     "width": 1644,
+     "height": 520,
+     "size": 190,
+     "font": "R",
+     "color": "#F4EBDD",
+     "multiline": true,
+     "lead": 1.12,
+     "value": "Dorothy Mae Johnson"
+    },
+    {
+     "name": "Years",
+     "page": 1,
+     "left": 700,
+     "top": 2560,
+     "width": 904,
+     "height": 90,
+     "size": 64,
+     "font": "I",
+     "color": "#C9A45C",
+     "value": "1941  —  2026"
+    }
+   ]
+  },
+  {
+   "file": "Homegoing Grace/03 Memory Card - Homegoing Grace (fill-in).pdf",
+   "title": "Share a Memory Card - Homegoing Grace",
+   "bg": "grace-card.pdf",
+   "fields": [
+    {
+     "name": "Name line",
+     "page": 1,
+     "left": 34,
+     "top": 150,
+     "width": 340,
+     "height": 18,
+     "size": 9,
+     "font": "R",
+     "color": "#9A7638",
+     "value": "FOR DOROTHY MAE JOHNSON"
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 0.94
+   }
+  },
+  {
+   "file": "Homegoing Grace/04 Bookmark - Homegoing Grace (fill-in).pdf",
+   "title": "Memorial Bookmark - Homegoing Grace",
+   "bg": "grace-bookmark.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "left": 16,
+     "top": 122,
+     "width": 160,
+     "height": 58,
+     "size": 19,
+     "font": "R",
+     "color": "#2E1A2B",
+     "multiline": true,
+     "lead": 1.15,
+     "value": "Dorothy Mae Johnson",
+     "page": 1
+    },
+    {
+     "name": "Years",
+     "left": 16,
+     "top": 196,
+     "width": 160,
+     "height": 18,
+     "size": 11,
+     "font": "I",
+     "color": "#9A7638",
+     "value": "1941  —  2026",
+     "page": 1
+    },
+    {
+     "name": "Verse",
+     "left": 18,
+     "top": 256,
+     "width": 156,
+     "height": 256,
+     "size": 11.5,
+     "font": "I",
+     "color": "#4B3A47",
+     "multiline": true,
+     "lead": 1.7,
+     "value": "The Lord is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. Psalm 23",
+     "page": 1
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 1,
+    "cols": 4,
+    "rows": 1
+   }
+  },
+  {
+   "file": "Homegoing Grace/05 Thank-You Card - Homegoing Grace (fill-in).pdf",
+   "title": "Thank-You Card - Homegoing Grace",
+   "bg": "grace-thankyou.pdf",
+   "fields": [
+    {
+     "name": "Thank you message",
+     "left": 44,
+     "top": 214,
+     "width": 320,
+     "height": 150,
+     "size": 13,
+     "font": "I",
+     "color": "#4B3A47",
+     "multiline": true,
+     "lead": 1.7,
+     "value": "Your kindness, prayers and presence meant more to us than words can say. Thank you for honoring Dorothy’s life and for standing beside our family.",
+     "page": 1
+    },
+    {
+     "name": "Signed",
+     "left": 44,
+     "top": 386,
+     "width": 320,
+     "height": 48,
+     "size": 13,
+     "font": "R",
+     "color": "#2E1A2B",
+     "multiline": true,
+     "lead": 1.4,
+     "value": "With grateful hearts,\nthe Johnson family",
+     "page": 1
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 0.94
+   }
+  },
+  {
+   "file": "Homegoing Grace/06 Phone Announcement - Homegoing Grace (fill-in).pdf",
+   "title": "Memorial Announcement for Phones - Homegoing Grace",
+   "bg": "grace-announcement.pdf",
+   "fields": [
+    {
+     "name": "Photo",
+     "type": "photo",
+     "left": 214,
+     "top": 258,
+     "width": 112,
+     "height": 144,
+     "page": 1
+    },
+    {
+     "name": "Name",
+     "left": 40,
+     "top": 452,
+     "width": 460,
+     "height": 84,
+     "size": 36,
+     "font": "R",
+     "color": "#F4EBDD",
+     "multiline": true,
+     "lead": 1.1,
+     "value": "Dorothy Mae Johnson",
+     "page": 1
+    },
+    {
+     "name": "Years",
+     "left": 120,
+     "top": 566,
+     "width": 300,
+     "height": 22,
+     "size": 14,
+     "font": "I",
+     "color": "#C9A45C",
+     "value": "1941  —  2026",
+     "page": 1
+    },
+    {
+     "name": "Gathering",
+     "left": 60,
+     "top": 620,
+     "width": 420,
+     "height": 30,
+     "size": 20,
+     "font": "I",
+     "color": "#C9A45C",
+     "value": "Homegoing Celebration",
+     "page": 1
+    },
+    {
+     "name": "Service details",
+     "left": 60,
+     "top": 656,
+     "width": 420,
+     "height": 100,
+     "size": 14,
+     "font": "R",
+     "color": "#F4EBDD",
+     "multiline": true,
+     "lead": 1.6,
+     "value": "Saturday, November 15, 2026 · 11:00 AM\nGreater Hope Baptist Church\n410 Oak Street, Fairview",
+     "page": 1
+    },
+    {
+     "name": "Note",
+     "left": 60,
+     "top": 774,
+     "width": 420,
+     "height": 60,
+     "size": 12.5,
+     "font": "I",
+     "color": "#C9A45C",
+     "multiline": true,
+     "lead": 1.5,
+     "value": "Viewing from 10:00 AM. Repast to follow in the fellowship hall.",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "file": "Homegoing Grace/07 Guest Book Page - Homegoing Grace (fill-in).pdf",
+   "title": "Guest Book Page - Homegoing Grace",
+   "bg": "grace-guestbook.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "left": 108,
+     "top": 222,
+     "width": 600,
+     "height": 46,
+     "size": 32,
+     "font": "I",
+     "color": "#2E1A2B",
+     "value": "Dorothy Mae Johnson",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "file": "Rainbow Bridge/01 Program - Rainbow Bridge (fill-in).pdf",
+   "title": "Memorial Program - Rainbow Bridge",
+   "bg": "rainbow-program.pdf",
+   "fields": [
+    {
+     "name": "Thank you note",
+     "page": 1,
+     "left": 90,
+     "top": 188,
+     "width": 348,
+     "height": 140,
+     "size": 15,
+     "font": "I",
+     "color": "#6A5A54",
+     "multiline": true,
+     "lead": 1.65,
+     "value": "Thank you for loving Biscuit and for being here today. He was family, and so are you."
+    },
+    {
+     "name": "Reception details",
+     "page": 1,
+     "left": 110,
+     "top": 408,
+     "width": 308,
+     "height": 84,
+     "size": 14,
+     "font": "R",
+     "color": "#6A5A54",
+     "multiline": true,
+     "lead": 1.6,
+     "value": "Lemonade and treats after,\non the back porch"
+    },
+    {
+     "name": "Closing verse",
+     "page": 1,
+     "left": 110,
+     "top": 556,
+     "width": 308,
+     "height": 118,
+     "size": 15,
+     "font": "I",
+     "color": "#4B3B36",
+     "multiline": true,
+     "lead": 1.65,
+     "value": "Until we meet again at the Rainbow Bridge."
+    },
+    {
+     "name": "In lieu of flowers",
+     "page": 1,
+     "left": 70,
+     "top": 700,
+     "width": 388,
+     "height": 34,
+     "size": 9,
+     "font": "R",
+     "color": "#B07A6A",
+     "multiline": true,
+     "lead": 1.6,
+     "value": "IN LIEU OF FLOWERS, PLEASE SUPPORT YOUR LOCAL ANIMAL SHELTER"
+    },
+    {
+     "name": "Photo",
+     "type": "photo",
+     "page": 1,
+     "left": 724,
+     "top": 170,
+     "width": 136,
+     "height": 170
+    },
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 586,
+     "top": 408,
+     "width": 412,
+     "height": 122,
+     "size": 44,
+     "font": "R",
+     "color": "#4B3B36",
+     "multiline": true,
+     "lead": 1.15,
+     "value": "Biscuit"
+    },
+    {
+     "name": "Years",
+     "page": 1,
+     "left": 640,
+     "top": 538,
+     "width": 304,
+     "height": 22,
+     "size": 13,
+     "font": "I",
+     "color": "#B07A6A",
+     "value": "2011  —  2026"
+    },
+    {
+     "name": "Service item 1",
+     "page": 2,
+     "left": 105,
+     "top": 158.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#4B3B36",
+     "value": "Welcome"
+    },
+    {
+     "name": "Service item 1 detail",
+     "page": 2,
+     "left": 105,
+     "top": 181.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#6A5A54",
+     "value": "Sarah Parker"
+    },
+    {
+     "name": "Service item 2",
+     "page": 2,
+     "left": 105,
+     "top": 211.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#4B3B36",
+     "value": "Biscuit's Story"
+    },
+    {
+     "name": "Service item 2 detail",
+     "page": 2,
+     "left": 105,
+     "top": 235.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#6A5A54",
+     "value": "Emma, age 11"
+    },
+    {
+     "name": "Service item 3",
+     "page": 2,
+     "left": 105,
+     "top": 265.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#4B3B36",
+     "value": "Favorite Memories"
+    },
+    {
+     "name": "Service item 3 detail",
+     "page": 2,
+     "left": 105,
+     "top": 288.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#6A5A54",
+     "value": "Everyone is welcome to share"
+    },
+    {
+     "name": "Service item 4",
+     "page": 2,
+     "left": 105,
+     "top": 318.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#4B3B36",
+     "value": "Reading"
+    },
+    {
+     "name": "Service item 4 detail",
+     "page": 2,
+     "left": 105,
+     "top": 342.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#6A5A54",
+     "value": "“The Rainbow Bridge”"
+    },
+    {
+     "name": "Service item 5",
+     "page": 2,
+     "left": 105,
+     "top": 372.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#4B3B36",
+     "value": "Planting His Tree"
+    },
+    {
+     "name": "Service item 5 detail",
+     "page": 2,
+     "left": 105,
+     "top": 395.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#6A5A54",
+     "value": "By the back gate"
+    },
+    {
+     "name": "Service item 6",
+     "page": 2,
+     "left": 105,
+     "top": 425.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#4B3B36",
+     "value": "A Quiet Moment"
+    },
+    {
+     "name": "Service item 6 detail",
+     "page": 2,
+     "left": 105,
+     "top": 449.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#6A5A54",
+     "value": ""
+    },
+    {
+     "name": "Service item 7",
+     "page": 2,
+     "left": 105,
+     "top": 479.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#4B3B36",
+     "value": "Treats & Hugs"
+    },
+    {
+     "name": "Service item 7 detail",
+     "page": 2,
+     "left": 105,
+     "top": 502.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#6A5A54",
+     "value": "For every dog in the yard"
+    },
+    {
+     "name": "Service item 8",
+     "page": 2,
+     "left": 105,
+     "top": 532.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#4B3B36",
+     "value": ""
+    },
+    {
+     "name": "Service item 8 detail",
+     "page": 2,
+     "left": 105,
+     "top": 556.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#6A5A54",
+     "value": ""
+    },
+    {
+     "name": "Service item 9",
+     "page": 2,
+     "left": 105,
+     "top": 586.0,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#4B3B36",
+     "value": ""
+    },
+    {
+     "name": "Service item 9 detail",
+     "page": 2,
+     "left": 105,
+     "top": 609.5,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#6A5A54",
+     "value": ""
+    },
+    {
+     "name": "Service item 10",
+     "page": 2,
+     "left": 105,
+     "top": 639.5,
+     "width": 320,
+     "height": 22,
+     "size": 16,
+     "font": "R",
+     "color": "#4B3B36",
+     "value": ""
+    },
+    {
+     "name": "Service item 10 detail",
+     "page": 2,
+     "left": 105,
+     "top": 663.0,
+     "width": 320,
+     "height": 18,
+     "size": 12.5,
+     "font": "I",
+     "color": "#6A5A54",
+     "value": ""
+    },
+    {
+     "name": "Service date and place",
+     "page": 2,
+     "left": 95,
+     "top": 712,
+     "width": 340,
+     "height": 40,
+     "size": 9.5,
+     "font": "R",
+     "color": "#B07A6A",
+     "multiline": true,
+     "lead": 1.7,
+     "value": "SUNDAY, NOVEMBER 16, 2026 · 2:00 PM\nOUR BACKYARD · 12 MAPLE LANE"
+    },
+    {
+     "name": "Name",
+     "page": 2,
+     "left": 586,
+     "top": 108,
+     "width": 412,
+     "height": 40,
+     "size": 30,
+     "font": "I",
+     "color": "#4B3B36",
+     "value": "Biscuit"
+    },
+    {
+     "name": "Full dates",
+     "page": 2,
+     "left": 645,
+     "top": 156,
+     "width": 300,
+     "height": 20,
+     "size": 13,
+     "font": "I",
+     "color": "#B07A6A",
+     "value": "June 2011  ·  November 2026"
+    },
+    {
+     "name": "Life story",
+     "page": 2,
+     "left": 606,
+     "top": 216,
+     "width": 380,
+     "height": 430,
+     "size": 13.5,
+     "font": "R",
+     "color": "#6A5A54",
+     "multiline": true,
+     "lead": 1.65,
+     "align": 0,
+     "value": "Biscuit came home in June 2011, a scruffy pup with one ear up and one ear down. For fifteen years he greeted every car in the driveway, stole exactly one sock a week, and never once let anyone eat a sandwich alone. He was a gentle shadow, a patient pillow and the best listener we ever knew. Our home is quieter now, but it is full of his love."
+    }
+   ]
+  },
+  {
+   "file": "Rainbow Bridge/02 Welcome Sign - Rainbow Bridge (fill-in).pdf",
+   "title": "Welcome Sign - Rainbow Bridge",
+   "bg": "rainbow-sign.pdf",
+   "fields": [
+    {
+     "name": "Subtitle",
+     "page": 1,
+     "left": 202,
+     "top": 1200,
+     "width": 1900,
+     "height": 70,
+     "size": 48,
+     "font": "R",
+     "color": "#4B3B36",
+     "value": "TO A CELEBRATION OF"
+    },
+    {
+     "name": "Photo",
+     "type": "photo",
+     "page": 1,
+     "left": 992,
+     "top": 1440,
+     "width": 320,
+     "height": 400
+    },
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 330,
+     "top": 2000,
+     "width": 1644,
+     "height": 520,
+     "size": 190,
+     "font": "R",
+     "color": "#4B3B36",
+     "multiline": true,
+     "lead": 1.12,
+     "value": "Biscuit"
+    },
+    {
+     "name": "Years",
+     "page": 1,
+     "left": 700,
+     "top": 2560,
+     "width": 904,
+     "height": 90,
+     "size": 64,
+     "font": "I",
+     "color": "#B07A6A",
+     "value": "2011  —  2026"
+    }
+   ]
+  },
+  {
+   "file": "Rainbow Bridge/03 Memory Card - Rainbow Bridge (fill-in).pdf",
+   "title": "Share a Memory Card - Rainbow Bridge",
+   "bg": "rainbow-card.pdf",
+   "fields": [
+    {
+     "name": "Name line",
+     "page": 1,
+     "left": 34,
+     "top": 150,
+     "width": 340,
+     "height": 18,
+     "size": 9,
+     "font": "R",
+     "color": "#B07A6A",
+     "value": "FOR BISCUIT"
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 0.94
+   }
+  },
+  {
+   "file": "Rainbow Bridge/04 Bookmark - Rainbow Bridge (fill-in).pdf",
+   "title": "Memorial Bookmark - Rainbow Bridge",
+   "bg": "rainbow-bookmark.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "left": 16,
+     "top": 122,
+     "width": 160,
+     "height": 58,
+     "size": 19,
+     "font": "R",
+     "color": "#4B3B36",
+     "multiline": true,
+     "lead": 1.15,
+     "value": "Biscuit",
+     "page": 1
+    },
+    {
+     "name": "Years",
+     "left": 16,
+     "top": 196,
+     "width": 160,
+     "height": 18,
+     "size": 11,
+     "font": "I",
+     "color": "#B07A6A",
+     "value": "2011  —  2026",
+     "page": 1
+    },
+    {
+     "name": "Verse",
+     "left": 18,
+     "top": 256,
+     "width": 156,
+     "height": 256,
+     "size": 11.5,
+     "font": "I",
+     "color": "#6A5A54",
+     "multiline": true,
+     "lead": 1.7,
+     "value": "Just this side of heaven is a place called Rainbow Bridge, where our friends wait in warm green meadows until we meet again.",
+     "page": 1
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 1,
+    "cols": 4,
+    "rows": 1
+   }
+  },
+  {
+   "file": "Rainbow Bridge/05 Thank-You Card - Rainbow Bridge (fill-in).pdf",
+   "title": "Thank-You Card - Rainbow Bridge",
+   "bg": "rainbow-thankyou.pdf",
+   "fields": [
+    {
+     "name": "Thank you message",
+     "left": 44,
+     "top": 214,
+     "width": 320,
+     "height": 150,
+     "size": 13,
+     "font": "I",
+     "color": "#6A5A54",
+     "multiline": true,
+     "lead": 1.7,
+     "value": "Your kindness, prayers and presence meant more to us than words can say. Thank you for honoring Biscuit’s life and for standing beside our family.",
+     "page": 1
+    },
+    {
+     "name": "Signed",
+     "left": 44,
+     "top": 386,
+     "width": 320,
+     "height": 48,
+     "size": 13,
+     "font": "R",
+     "color": "#4B3B36",
+     "multiline": true,
+     "lead": 1.4,
+     "value": "With love and thanks,\nthe Parker family",
+     "page": 1
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 0.94
+   }
+  },
+  {
+   "file": "Rainbow Bridge/06 Phone Announcement - Rainbow Bridge (fill-in).pdf",
+   "title": "Memorial Announcement for Phones - Rainbow Bridge",
+   "bg": "rainbow-announcement.pdf",
+   "fields": [
+    {
+     "name": "Photo",
+     "type": "photo",
+     "left": 214,
+     "top": 258,
+     "width": 112,
+     "height": 144,
+     "page": 1
+    },
+    {
+     "name": "Name",
+     "left": 40,
+     "top": 452,
+     "width": 460,
+     "height": 84,
+     "size": 36,
+     "font": "R",
+     "color": "#4B3B36",
+     "multiline": true,
+     "lead": 1.1,
+     "value": "Biscuit",
+     "page": 1
+    },
+    {
+     "name": "Years",
+     "left": 120,
+     "top": 566,
+     "width": 300,
+     "height": 22,
+     "size": 14,
+     "font": "I",
+     "color": "#B07A6A",
+     "value": "2011  —  2026",
+     "page": 1
+    },
+    {
+     "name": "Gathering",
+     "left": 60,
+     "top": 620,
+     "width": 420,
+     "height": 30,
+     "size": 20,
+     "font": "I",
+     "color": "#B07A6A",
+     "value": "A Little Goodbye",
+     "page": 1
+    },
+    {
+     "name": "Service details",
+     "left": 60,
+     "top": 656,
+     "width": 420,
+     "height": 100,
+     "size": 14,
+     "font": "R",
+     "color": "#4B3B36",
+     "multiline": true,
+     "lead": 1.6,
+     "value": "Sunday, November 16, 2026 · 2:00 PM\nIn our backyard\n12 Maple Lane, Fairview",
+     "page": 1
+    },
+    {
+     "name": "Note",
+     "left": 60,
+     "top": 774,
+     "width": 420,
+     "height": 60,
+     "size": 12.5,
+     "font": "I",
+     "color": "#B07A6A",
+     "multiline": true,
+     "lead": 1.5,
+     "value": "Bring a favorite story about Biscuit. Treats for the neighborhood dogs will be at the gate.",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "file": "Rainbow Bridge/07 Guest Book Page - Rainbow Bridge (fill-in).pdf",
+   "title": "Guest Book Page - Rainbow Bridge",
+   "bg": "rainbow-guestbook.pdf",
+   "fields": [
+    {
+     "name": "Name",
+     "left": 108,
+     "top": 222,
+     "width": 600,
+     "height": 46,
+     "size": 32,
+     "font": "I",
+     "color": "#4B3B36",
+     "value": "Biscuit",
+     "page": 1
+    }
+   ]
   }
  ]
 }

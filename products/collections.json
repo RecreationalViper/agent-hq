@@ -102,6 +102,39 @@
         "products/fillable/previews/listing/harvest-table-3.jpg",
         "products/fillable/previews/listing/harvest-table-4.jpg"
       ]
+    },
+    {
+      "id": "golden-hour",
+      "name": "Golden Hour",
+      "status": "built",
+      "note": "awaiting owner final approval (concept approved 2026-11-26)",
+      "audience": "Families planning a joyful celebration of life",
+      "look": "warm cream, sunflower gold, terracotta, olive; hand-drawn sunflowers",
+      "fonts": "Cormorant Garamond Italic + Inter Light (fill-in text in Times/Helvetica)",
+      "files": "products/fillable/out/Golden Hour/",
+      "suggestedPrice": "$12.99"
+    },
+    {
+      "id": "homegoing-grace",
+      "name": "Homegoing Grace",
+      "status": "built",
+      "note": "awaiting owner final approval (concept approved 2026-11-26)",
+      "audience": "Church and homegoing services",
+      "look": "ivory paper with plum and gold, dove in gold light rays, small cross dividers; plum welcome sign and phone card",
+      "fonts": "Cinzel + Cormorant (fill-in text in Times/Helvetica)",
+      "files": "products/fillable/out/Homegoing Grace/",
+      "suggestedPrice": "$12.99"
+    },
+    {
+      "id": "rainbow-bridge",
+      "name": "Rainbow Bridge",
+      "status": "built",
+      "note": "awaiting owner final approval (concept approved 2026-11-26)",
+      "audience": "People grieving a pet; sympathy gifts",
+      "look": "soft cream, pastel rainbow, paw prints",
+      "fonts": "Caladea Italic + Inter (fill-in text in Times/Helvetica)",
+      "files": "products/fillable/out/Rainbow Bridge/",
+      "suggestedPrice": "$9.99"
     }
   ],
   "promos": [
