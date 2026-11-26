@@ -1,70 +1,57 @@
-# Director (updated 2026-11-25)
+# Director (updated 2026-11-26)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-## Make these 3 clips today (2026-11-25)
+# Today's 3 Clips — Shot Plans for Claude
 
-### First: **Black Clover Season 2 (Aura / “He is Him”)** — why first
-It’s the best “stand out” pick vs today’s other oversized targets (GTA VI, One Piece). Also it’s a clear anime-power-up format that matches both TikTok + Shorts fast-swap editing.
-
----
-
-## Clip #1 — **Black Clover (S2)**
-- **Platform:** **Both (TikTok + YouTube Shorts)**
-- **Source title:** *Black Clover* (Season 2)
-- **Where to cut (episode/timestamp):** **Unsure** — pull the **episode with Asta’s biggest power-up/aura impact** (look for: wind-up close-up → aura burst → wide impact frame → immediate “new form” hold). If you can’t identify episode number quickly, Claude should work from the library’s scene list and timestamp the exact moment.
-- **Hook (0–2s):** Tight close-up on **Asta/eyes + magic aura building** → cut on the **first frame the aura explodes**.
-- **Unbroken stretches (story order; 2–4 total):**
-  1. **Wind-up close-up (5–9s):** aura starts forming, camera pushes in.
-  2. **Pre-impact reaction (4–7s):** faces of allies/antagonist as aura grows (keep one continuous action beat).
-  3. **Aura release → impact wide (8–12s):** the attack goes off and lands (don’t jump-cut inside the strike—hold the impact moment).
-  4. **“New rage / new form” hold (3–5s):** pause on the first dominant silhouette/frame after the hit.
-- **Biggest moment:** The **aura burst + attack impact frame** (the “he is him” visual).
-- **Final beat (30–40s total):** 0.4–0.8s **silence beat**: hold the last aura/new-form frame, then overlay text: **“HE IS HIM.”**
-- **Target length:** **34–38s**
-- **Mood:** Aggressive hype, loud and clean.
-- **Audio note:** Trending idea: **Olivia Rodrigo – “maggots for brains”** (per your TikTok Sound Watcher). If not available, use an **original sound** that has a **big bass hit** aligned to the aura release/impact.
+**Make Clip 1 first.** The Justice track (“Flower In A Hurricane” from the *GTA VI* score) is the #1 rising sound worldwide *and* it’s literally from the game — a rare sound/topic lock that algorithms boost hard. GTA 6 is the #1 Twitch category right now. Velocity-cut chaos edits are the most proven format for gaming Shorts. If we hit the first-frame hook + beat-sync, this has the highest breakout probability on a 0-sub channel.
 
 ---
 
-## Clip #2 — **Steel Ball Run: JoJo’s Bizarre Adventure**
-- **Platform:** **Both (TikTok + YouTube Shorts)**
-- **Source title:** *Steel Ball Run* (JoJo’s Bizarre Adventure)
-- **Where to cut (episode/timestamp):** **Unsure** — choose a moment where a character uses a **high-IQ strategy** in a race/arena and you can clearly read the “solution” on screen. Claude should timestamp the sequence in-library (target: **solve → immediate advantage**).
-- **Hook (0–2s):** The **most iconic “Spin/technique” pose or confident realization face** (single frame). Start on the pose, not the lead-in.
-- **Unbroken stretches (2–4 total):**
-  1. **Setup flow (6–9s):** show the plan forming (movement + the technique starting).
-  2. **Strategy execution (10–16s):** keep it continuous through the “turn the tide” moment (bullet/obstacle/race read).
-  3. **Tide turning reaction (6–8s):** opponents realize they’re losing / stunned expression.
-  4. **Dominant payoff frame (4–6s):** hold on the successful Spin/impact aftermath.
-- **Biggest moment:** The **“genius realization” frame** followed immediately by the **clean turning point** (no filler frames).
-- **Final beat:** Freeze the payoff frame for **~0.4s**, then overlay: **“DON’T LOOK AWAY.”**
-- **Target length:** **32–36s**
-- **Mood:** Cool confidence + satisfying problem-solving.
-- **Audio note:** Use a **phonk** track that supports a “slow-down on realization” effect. Trending idea from your repo: **“Flower In A Hurricane”** is suggested for high-octane edits generally, but your Steel Ball Run “High IQ Plays” format works better if the phonk has a clear transient for the slow-mo beat. (If Claude can’t find phonk fast, default to an available phonk and sync slowdown to the technique start.)
+## 1) Grand Theft Auto VI — “First Chaos Escalation”  
+**Platforms:** TikTok + YouTube Shorts  
+**Target length:** 35 s  
+**Mood:** High-octane, visceral, “did that just happen?”  
+**Audio:** **Justice – “Flower In A Hurricane (feat. Tame Impala, SZA, King Gizzard) [From GTAVI: Original Score]”** (rising #1 worldwide). Cut on the first heavy downbeat (~0:07 in the track) for the reveal; stack 2–3 beat-sync hits; end on a bar-end impact.
+
+| Beat | Source & Location | Visual / Action | On-Screen Text |
+|------|-------------------|-----------------|----------------|
+| **Hook (0–1.5 s)** | **Twitch VOD: illojuan — GTA VI category** (first major chaos escalation you can verify in a legal VOD). *Exact timestamp unsure — scrub for the moment the player triggers a 5-star wanted level / massive explosion / city-wide panic.* | Cold open: wide Vice City aerial → sudden explosion blossoms → sirens scream → player’s POV snaps to chaos. | **“HE THOUGHT HE’D GET AWAY…”** (bold, white, outline) |
+| **Stretch 1 (1.5–9 s)** | Same VOD, continuous 7–8 s run. | Unbroken chase: player floors it through traffic → helicopters swarm → RPG barely misses → car flips, slides, keeps going. | — |
+| **Stretch 2 (9–18 s)** | Same VOD, next continuous 8–9 s run. | On foot: sprint through alley → vault fence → minigun shreds cover → player dives through window → slow-mo glass shatter. | **“VICE CITY DOESN’T FORGIVE”** (flash at 14 s on downbeat) |
+| **Biggest Moment (18–24 s)** | Same VOD, 5–6 s continuous. | **The escalation peak:** tank rolls in → player hijacks it point-blank → turret swings → **massive detonation chain** (fuel trucks, gas station, billboard). | **“NOW YOU’RE PLAYING WITH POWER”** (locks to biggest bass hit) |
+| **Final Beat (24–35 s)** | Same VOD, 2–3 s aftermath + 1 s title card. | Tank turret settles on smoldering crater → player steps out, lights cigarette (or equivalent “cool” emote) → hard cut to **“GTA VI”** logo + **“#GTA6 #Shorts”** lower third. | **“REWATCH THAT HIJACK 🔥”** (tiny, bottom, appears last 1 s) |
+
+**Editor note (Claude):** Keep every stretch **unbroken** — no internal cuts. Sync *every* hard impact (explosion, glass, tank hijack) to the track’s downbeats. First frame must be the explosion, not the aerial. Credit “Grand Theft Auto VI / Rockstar Games” on screen for 1.5 s at end.
 
 ---
 
-## Clip #3 — **Grand Theft Auto VI (Game) — Lucia**
-- **Platform:** **Both (TikTok + YouTube Shorts)**
-- **Source title:** *Grand Theft Auto VI* (GTA VI)
-- **Where to cut (episode/chapter/timestamp):** **Unsure** — use streamer VOD highlights (your trend notes cite Lucia and Chapter 5, but timestamps aren’t provided). Claude should use the Twitch capture you have and locate a Lucia moment with: **high-stakes escalation + cinematic dialogue/decision vibe**.
-- **Hook (0–2s):** Fast cut to **Lucia’s face close-up** + overlay text: **“POV: YOU’RE THE REAL MAIN CHARACTER”** (text appears immediately as the camera settles on her expression).
-- **Unbroken stretches (2–4 total):**
-  1. **Escalation (7–10s):** weapon/vehicle/UI/mission-start energy—keep one continuous momentum sequence.
-  2. **Cinematic choice/danger beat (10–14s):** Lucia in control (dialogue vibe or decisive movement). Try to avoid rapid scene swaps within this stretch.
-  3. **Heist/crime peak (10–14s):** weapon + objective execution montage *but* keep the main action as one continuous run (few cuts allowed).
-- **Biggest moment:** The **“mission peak / unstoppable”** beat right before things go fully chaotic.
-- **Final beat:** End on a **decision/pose** frame (Lucia moment) + overlay: **“YOU THOUGHT IT WAS OVER…”**
-- **Target length:** **30–40s** (aim ~36s for the GTA pacing)
-- **Mood:** High-octane, cinematic POV power fantasy.
-- **Audio note:** Trending idea: **Justice – “Flower In A Hurricane”** (your TikTok Sound Watcher). Cut the visuals to the **synth drop** and end exactly when the track hits its final “snap” energy.
+## 2) The Apothecary Diaries (Season 3) — “The Poison Wasn’t Poison”  
+**Platforms:** TikTok + YouTube Shorts  
+**Target length:** 38 s  
+**Mood:** Intellectual thriller → quiet dread → “oh…” realization  
+**Audio:** **Olivia Rodrigo – “the cure”** (rising worldwide; melodic build fits mystery-solve). Hook on first lyric entrance; reveal on first strong chord change; final line emphasis on walk-away beat. *Alternative: original dialogue + subtle SFX if sound licensing unclear.*
+
+| Beat | Source & Location | Visual / Action | On-Screen Text |
+|------|-------------------|-----------------|----------------|
+| **Hook (0–1.5 s)** | **Ep 8 (latest available today — Ep 9 airs 2026-11-27).** *Timestamp unsure — find the “wrong assumption” frame: Maomao examining a vial, calm, narrating the obvious diagnosis.* | Extreme close-up: Maomao’s eye reflecting the vial → she nods “arsenic.” | **“THE MOMENT SHE REALIZED THE POISON…”** |
+| **Stretch 1 (1.5–12 s)** | Same episode, continuous 10 s. | Unbroken deduction: ingredient close-ups (mortar, pestle, herb) → Jinshi’s skeptical face → Maomao’s fingers freeze mid-motion → **the “oh” micro-expression** (eyes widen 3 frames). | **“…WASN’T POISON AT ALL”** (appears exactly on the micro-expression) |
+| **Stretch 2 (12–24 s)** | Same episode, continuous 12 s. | Reveal sequence: Maomao drops herb → new ingredient glows under light → rapid whispered explanation (lip-sync visible) → Jinshi’s guard drops a scroll → **the antidote crystallizes in real time**. | — |
+| **Biggest Moment (24–30 s)** | Same episode, 6 s continuous. | **The proof:** Maomao drips antidote on a withered plant → instant green revival → Jinshi exhales, first genuine smile this arc. | **“THE CURE WAS HIDDEN IN PLAIN SIGHT”** (sync to chord change) |
+| **Final Beat (30–38 s)** | Same episode, 2 s stare + 2 s title. | Maomao turns, sleeve brushes camera → **linger on her half-smile 1 s** → hard cut to **“The Apothecary Diaries S3”** + **#anime #mystery**. | **“No going back now.”** (tiny, last 1 s) |
+
+**Editor note:** Preserve the **single unbroken deduction stretch** (1.5–24 s) — that’s the rewatch engine. If the episode isn’t legally accessible yet, **pause this clip** and tell me. Credit “The Apothecary Diaries / Toho Animation” on screen.
 
 ---
 
-# Which one to make first (again)
-1) **Black Clover S2** — most likely to convert immediately because it’s **clear power-up/aura** storytelling and less exposed than GTA VI (which is oversaturated).  
-2) **Steel Ball Run** — niche “High IQ plays” is built for completion + replay.  
-3) **GTA VI (Lucia)** — big audience, but needs the *right* Lucia cinematic moment to avoid feeling generic.
+## 3) Black Clover (Season 2) — “Captain Goes Beyond Limits”  
+**Platforms:** TikTok + YouTube Shorts  
+**Target length:** 36 s  
+**Mood:** Hype chain — breath → chant → impact → silence  
+**Audio:** **Panchiko – “D>E>A>T>H>M>E>T>A>L”** (rising worldwide; glitchy intro → bass drop = power-up → impact). Hook on glitchy intro; captain’s eyes flare on first bass hit; final impact on terminal drop. *Alternative: Arctic Monkeys “505” for cool-hype walk if Panchiko feels too dark.*
 
-If you tell me what exact footage sources Claude already has loaded (episode lists or VOD links you’ve saved), I’ll tighten the “Where to cut” timestamps from “unsure” to specific numbers.
+| Beat | Source & Location | Visual / Action | On-Screen Text |
+|------|-------------------|-----------------|----------------|
+| **Hook (0–1 s)** | **Ep 8 (latest available — Ep 9 airs 2026-11-28).** *Timestamp unsure — locate the captain’s “first breath / eyes flare” frame before a named spell.* | Black screen 0.2 s → **sudden eye flare (magic color)** + glitch SFX. | **“POV: YOU’RE THE ENEMY WATCHING THIS”** |
+| **Stretch 1 (1–10 s)** | Same episode, continuous 9 s. | Unbroken chant: mouth moves, mana particles spiral → camera orbits captain → grimoire pages turn themselves → **spell name appears in runes** (diegetic). | **“CAPTAIN [NAME] — [SPELL NAME]”** (runes fade at 8 s) |
+| **Stretch 2 (10–22 s)** | Same episode,

@@ -1,5 +1,89 @@
 [
   {
+    "file": "2026-11-26-product-builder.md",
+    "agent": "product-builder",
+    "name": "Product Builder",
+    "date": "2026-11-26"
+  },
+  {
+    "file": "2026-11-26-competitor-radar.md",
+    "agent": "competitor-radar",
+    "name": "Competitor Radar",
+    "date": "2026-11-26"
+  },
+  {
+    "file": "2026-11-26-growth-coach.md",
+    "agent": "growth-coach",
+    "name": "Growth Coach",
+    "date": "2026-11-26"
+  },
+  {
+    "file": "2026-11-26-studio-critic.md",
+    "agent": "studio-critic",
+    "name": "Studio Critic",
+    "date": "2026-11-26"
+  },
+  {
+    "file": "2026-11-26-studio-writer.md",
+    "agent": "studio-writer",
+    "name": "Social Strategist",
+    "date": "2026-11-26"
+  },
+  {
+    "file": "2026-11-26-studio-director.md",
+    "agent": "studio-director",
+    "name": "Director",
+    "date": "2026-11-26"
+  },
+  {
+    "file": "2026-11-26-youtube-watcher.md",
+    "agent": "youtube-watcher",
+    "name": "YouTube Shorts Watcher",
+    "date": "2026-11-26"
+  },
+  {
+    "file": "2026-11-26-tiktok-fandoms.md",
+    "agent": "tiktok-fandoms",
+    "name": "TikTok Fandom Watcher",
+    "date": "2026-11-26"
+  },
+  {
+    "file": "2026-11-26-tiktok-formats.md",
+    "agent": "tiktok-formats",
+    "name": "TikTok Format Watcher",
+    "date": "2026-11-26"
+  },
+  {
+    "file": "2026-11-26-tiktok-sounds.md",
+    "agent": "tiktok-sounds",
+    "name": "TikTok Sound Watcher",
+    "date": "2026-11-26"
+  },
+  {
+    "file": "2026-11-26-studio-scout.md",
+    "agent": "studio-scout",
+    "name": "Trend Scout",
+    "date": "2026-11-26"
+  },
+  {
+    "file": "2026-11-26-seo.md",
+    "agent": "seo",
+    "name": "SEO Scout",
+    "date": "2026-11-26"
+  },
+  {
+    "file": "2026-11-26-github-radar.md",
+    "agent": "github-radar",
+    "name": "GitHub Radar",
+    "date": "2026-11-26"
+  },
+  {
+    "file": "2026-11-26-daily-task.md",
+    "agent": "daily-task",
+    "name": "Daily Focus",
+    "date": "2026-11-26"
+  },
+  {
     "file": "2026-11-26-researcher.md",
     "agent": "researcher",
     "name": "Deep Researcher",

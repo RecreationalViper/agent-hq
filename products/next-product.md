@@ -1,78 +1,120 @@
-# Product Builder (updated 2026-11-12)
+# Product Builder (updated 2026-11-26)
 
-# Product Build Spec: Soft Botanical Holiday Table Memorial Sign & Place Card Kit
+## Next Product To Build (1 per week): **Letters to Heaven — Winter Remembrance Memory Note Cards (Soft Botanical)**
 
-## 1. Product Name & Concept
-* **Product Name:** Soft Botanical Holiday Table Memorial Sign & Memory Place Cards
-* **Concept:** A gentle, printable holiday remembrance kit designed for families navigating their first Thanksgiving, Hanukkah, or Christmas after a loss. Includes an 8x10 in framed memory table sign and matching 4.25x5.5 in place-setting memory cards where family members can type or handwrite cherished stories during holiday meals.
+### Product type
+**Fill-in PDF kit** (single purchase) in the **Soft Botanical** style, made to pair with our current **Christmas in heaven** demand (and to complement the existing holiday programs without duplicating them).
 
----
-
-## 2. Why Now (Seasonal & Teammate Rationale)
-* **Seasonal Demand:** Thanksgiving is 14 days away (Nov 26, 2026) and Christmas is 43 days away. Families hosting holiday dinners face the emotional "first empty chair" and are actively seeking simple ways to honor loved ones.
-* **Teammate Suggestions:** 
-  * Cites **Seasonal Planner (2026-11-10)** who identified Thanksgiving place-setting memory cards and holiday table signs as urgent priorities for November search intent.
-  * Cites **Product Ideas (2026-11-11)** who proposed pairing an 8x10 display sign with place-setting memory cards under our **Soft Botanical** style.
-  * Cites **Competitor Scout (2026-11-10)** who noted competitors sell standalone signs or cards separately ($5–$8 each), creating a gap for an affordable, cohesive multi-piece holiday kit.
+### Why now
+- This week’s seasonal plan is pushing Christmas remembrance pins and grief-friendly holiday items (see **Seasonal Planner: “Christmas Memory Cards” focus** for this window).
+- SEO scout shows strong ongoing demand for **“share a memory card template”** and **“memorial program examples”**—we should capture the “memory card” intent with a *stand-alone card* families can use whether they’re doing a full program or not.
 
 ---
 
-## 3. Exact Dimensions & Page Structure
-* **Page 1: Holiday Table Memorial Sign**
-  * **Size:** 8x10 in (formatted on US Letter 8.5x11 in portrait with subtle trim lines; also fits standard 8x10 photo frames).
-  * **Format:** Single-page fill-in PDF.
-* **Page 2: Holiday Memory Place Cards (2-Up Sheet)**
-  * **Size:** US Letter 8.5x11 in portrait containing 2 single cards (each card trims to exact 4.25x5.5 in standard card size).
-  * **Format:** Single-page fill-in PDF with light dotted trim guides.
-
-*(Note: Standard US Letter format only; no A4).*
+## Bundle & suggested price
+- **Suggested price:** **$6.99**
+- **Bundle membership:** **Not included** in the Soft Botanical bundle (Soft Botanical bundle is $12.99 and already launched).  
+  *However:* we should cross-promote this as a matching add-on to the Soft Botanical bundle + Evergreen & Candlelight.
 
 ---
 
-## 4. Fill-In Field Specifications
-*Editable using the free Adobe Acrobat Reader app on phone or desktop.*
+## What’s inside (fill-in PDFs buyers type in)
+### File A — **Memory Note Cards (Single 1-page sheet PDF)**
+**Print size:** **US Letter (8.5x11 in) portrait**  
+**Card format per sheet:** **1 card per sheet** (to match our spec request for this item as a “single card” product experience rather than a “4 per sheet” set)
 
-### Page 1: 8x10 Table Memorial Sign
-1. **`Header_Text`** (1 line, ~60 characters)
-   * *Sample Text:* `"This candle burns in loving memory of"`
-2. **`Loved_One_Names`** (1 line, ~40 characters)
-   * *Sample Text:* `"Our Loved Ones Who Are Spending Christmas in Heaven"`
-3. **`Blessing_Verse`** (2 lines, ~140 characters)
-   * *Sample Text:* `"Though your chair at our table is quiet today, your warmth, love, and laughter live forever in our hearts."`
+> Note: We will use the **exact card size** from your existing spec: **share-a-memory card = 4.25x5.5 in** single card.
 
-### Page 2: 4.25x5.5 Memory Place Cards (2 Cards per Page)
-*(Each card on the page contains identical fillable fields)*
-1. **`Card_Header`** (1 line, ~45 characters)
-   * *Sample Text:* `"A Favorite Holiday Memory of [ Name ]"`
-2. **`Memory_Prompt`** (4 lines, ~220 characters fillable for typing or left blank for handwriting)
-   * *Sample Text:* `"I remember when we would always..."`
-3. **`Shared_By`** (1 line, ~40 characters)
-   * *Sample Text:* `"Shared with love by: ____________________"`
+**Page 1 (Front / card face): 8.5x11 portrait**
+- Card placement centered with margins reserved for printing.
 
 ---
 
-## 5. Visual Artwork & Layout Requirements
-* **Style:** Soft Botanical (sage green watercolor eucalyptus, soft olive leaves, cream background, elegant serif typography).
-* **Page 1 (Sign):** A centered botanical wreath/garland arch framing the header text with soft watercolor sprigs along the top and bottom borders.
-* **Page 2 (Place Cards):** A subtle botanical accent stem in the top-right corner of each 4.25x5.5 card boundary, maintaining a clean writing surface with 4 light horizontal guide lines.
+## Page-by-page build spec (exact sizes + fields)
+
+## File A — Letters to Heaven Memory Note Cards (Soft Botanical)
+### Page 1 — **Card face**
+- **Document size:** **US Letter (8.5 x 11 in), portrait**
+- **Card size (design area):** **4.25 x 5.5 in**
+- **Theme:** soft botanical winter greens/cream (match Soft Botanical palette), gentle handwritten-feel headings, ample line space.
+
+#### Fill-in fields (with sample text)
+Use calm, simple grief language. Each field should be a text box with clear placeholder/sample text.
+
+1) **Sender heading**
+- **Field name:** `From (your name)`
+- **Sample text:** `From: (Your name)`
+- **Lines:** ~1 line
+
+2) **Loved one name**
+- **Field name:** `In loving memory of`
+- **Sample text:** `In loving memory of Michael`
+- **Lines:** ~1–2 lines
+
+3) **Short opening line**
+- **Field name:** `A note for you`
+- **Sample text:** `A note for you—today I’m thinking of you.`
+- **Lines:** ~1–2 lines
+
+4) **Main reflection (primary prompt)**
+- **Field name:** `What I want you to know`
+- **Sample text:** `Thank you for the way you loved me. I miss your voice, and I carry your kindness with me.`
+- **Lines:** ~6–8 lines
+
+5) **Christmas in heaven line (winter-specific, but faith-neutral)**
+- **Field name:** `A winter memory`
+- **Sample text:** `This season reminds me of (a small tradition): the warmth, the laughter, and how you made everything feel safe.`
+- **Lines:** ~3–5 lines
+
+6) **Closing**
+- **Field name:** `With love`
+- **Sample text:** `With love, (Your name)`
+- **Lines:** ~1–2 lines
 
 ---
 
-## 6. Pricing & Store Strategy
-* **Suggested Price:** **$5.99** (standalone PDF download).
-* **Bundle Belonging:** Can be purchased as a standalone holiday item ($5.99) or included as a seasonal bonus inside the core **Soft Botanical Memorial Suite** ($12.99) during November–December to boost bundle sales.
+## Artwork needed per page
+### Page 1 artwork checklist
+- Soft Botanical **background artwork** (winter botanicals/greens in the same family as the Soft Botanical suite)
+- A **header area** for “Letters to Heaven” (or “Letters to Heaven / A Note for You”)
+- Decorative elements that do **not** cover the fill-in text areas:
+  - light botanical corner accent
+  - subtle divider/underline rules
+- Typography:
+  - heading font consistent with Soft Botanical style (match existing Soft Botanical design language)
+
+**No new photographs** needed—prefer existing-style illustration assets to keep production simple.
 
 ---
 
-## 7. Payhip Listing Title & Preview Image Briefs
+## Preview image ideas (use for Payhip + Etsy)
+Create 3 preview renders (or 3 distinct crops) for listing images:
 
-### Payhip Listing Title
-`Soft Botanical Holiday Table Memorial Sign & Memory Cards | Thanksgiving & Christmas Remembrance Kit (Fill-in PDF)`
+1) **Full card preview on white background**
+- “Letters to Heaven” visible + sample text fill
 
-### 3 Preview Image Ideas (iPhone-Ready Canva Mock-ups)
-1. **Image 1 (Main Hero - 1200x1800 px):** An 8x10 sign in a light wood frame next to a white pillar candle on a wooden holiday dinner table, surrounded by 2 printed place cards and a eucalyptus branch. Text overlay: *"Holiday Table Memorial Kit — Printable Fill-in PDF"*.
-2. **Image 2 (Product Breakdown - 1200x1800 px):** Clean flat-lay showing both PDF pages side-by-side with clear callout badges: *"8x10 Table Sign"* and *"4.25x5.5 Memory Cards (2 per sheet)"*.
-3. **Image 3 (Ease of Use - 1200x1800 px):** Graphic showing an iPhone screen editing the field in free Adobe Acrobat Reader. Bullet points: *"No paid software needed • Fill in with free Adobe Reader • Print at home or local shop"*.
+2) **Close-up of the main writing area**
+- show how many lines fit; gentle readable sample text
+
+3) **Stacked product mock**
+- 3 cards slightly overlapping; include a small caption overlay: “Type in the free Adobe Reader” (or similar)
+
+---
+
+## Payhip listing draft
+- **Payhip title (SEO-friendly):**  
+  **“Letters to Heaven Memory Note Cards — Soft Botanical (4.25×5.5 in) | Fill-In PDF for Christmas Grief Remembrance”**
+
+- **Product checkout link to be used in posts:**  
+  *(needs creation by build; do not publish until owner approves)*
+
+---
+
+## Notes / compliance (for the builder)
+- This is a **fillable PDF** for typing in **free Adobe Acrobat Reader** (buyers only type; no Canva workflow).
+- Include clear instructions on the PDF about typing and printing (kept short and calm).
+- Ensure all text is **original** and not copied from any competitor listing.
+- No AI disclaimers on the listing unless the designer uses AI-generative imagery; if AI imagery is used, we must disclose it in the listing per policy. (Builder to confirm.)
 
 ---
 
