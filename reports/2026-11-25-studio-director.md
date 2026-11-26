@@ -2,75 +2,69 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# Today's 3 Clips — Cut List for Claude
+## Make these 3 clips today (2026-11-25)
 
-**Priority order:** Vinland Saga S2 → Black Clover S2 → One Piece  
-**Why:** Vinland Saga S2 is explicitly called "the trending anime edit right now" by YouTube Shorts Watcher (3 edits in top-10, 5.9M+ views). Black Clover S2 is *currently airing* (Ep 9) with a clear "despair → resolve" beat the Trend Scout flagged. One Piece Gear 5 is evergreen massive but we'll use the "Moment When" format for cut-through.
-
----
-
-## 1) VINLAND SAGA SEASON 2 — Thorfinn's "I Have No Enemies" Monologue (Ep 9–10)
-**Platform:** Both (TikTok + YouTube Shorts)  
-**Target length:** 35s  
-**Mood:** Quiet intensity → emotional release  
-**Format:** "The Moment When…" (TikTok Format #1 — most consistent)
-
-| Segment | Source & Timing | Visual / Audio Plan |
-|---------|-----------------|---------------------|
-| **Hook (0:00–0:02)** | Ep 9, ~14:30 — Thorfinn's extreme close-up: blood-splattered face, dead eyes, rain. *Unsure of exact timestamp; owner to confirm.* | **Original audio** (rain + breathing). On-screen text: `THE MOMENT HE STOPPED FIGHTING…` |
-| **Stretch 1 (0:02–0:10)** | Ep 9, ~14:30–14:38 — Unbroken: Thorfinn kneeling, Einar's voice off-screen, Thorfinn's lips move "I have no enemies." | Hold the take. No cuts. Let the silence breathe. |
-| **Stretch 2 (0:10–0:18)** | Ep 9–10 transition — 3 rapid flashbacks (1.5s each): young Thorfinn killing / Askeladd's death / Einar's hand on shoulder. | **Sound:** Vinland Saga S2 OST "Without Love" swell (or trending sound "Everlong — Foo Fighters" first swell at 0:12). Hard cuts on drum hits. |
-| **Stretch 3 (0:18–0:26)** | Ep 10, ~3:10 — Thorfinn stands, wide shot, wind in hair. Single unbroken take to the horizon. | Audio peaks. Text: `AND STARTED BECOMING THE ANSWER.` |
-| **Final Beat (0:26–0:35)** | Ep 10, ~3:15 — Freeze on Thorfinn's profile, eyes clear. Zoom 105% → hold 2s. | **Original OST tail** or "Everlong" final chord. End card: `VINLAND SAGA S2 — EP 9–10` + `FOLLOW FOR MORE` |
-
-**Audio note:** Prefer original OST (transformative, safer). If using "Everlong" (rising on Last.fm), cut instrumental tail only to reduce claim risk.
+### First: **Black Clover Season 2 (Aura / “He is Him”)** — why first
+It’s the best “stand out” pick vs today’s other oversized targets (GTA VI, One Piece). Also it’s a clear anime-power-up format that matches both TikTok + Shorts fast-swap editing.
 
 ---
 
-## 2) BLACK CLOVER SEASON 2 — Asta's "Despair → Resolve" Power-Up (Episode 9)
-**Platform:** Both  
-**Target length:** 32s  
-**Mood:** Gritty → explosive  
-**Format:** POV + "Moment When" hybrid (TikTok Formats #1 + #2)
-
-| Segment | Source & Timing | Visual / Audio Plan |
-|---------|-----------------|---------------------|
-| **Hook (0:00–0:01.5)** | Ep 9, ~8:45 — Asta face close-up: battered, panting, one eye swollen shut. *Timestamp approximate; owner to verify.* | **Original sound** (heavy breathing, magic hum). Text: `POV: YOU'RE BROKEN. NOW WHAT?` |
-| **Stretch 1 (0:01.5–0:09)** | Ep 9, ~8:45–8:53 — Unbroken: anti-magic sword trembles → black aura ignites → Asta's grin cracks. | No cuts. Let the power-up build. |
-| **Stretch 2 (0:09–0:17)** | Ep 9, ~8:53–9:00 — Single stretch: Asta launches forward, devil union flash, one clean slash. | **Sound:** "505 — Arctic Monkeys" driving beat entry at 0:09 (rising on Last.fm). Cut on each drum hit. |
-| **Stretch 3 (0:17–0:24)** | Ep 9, ~9:00–9:07 — Team reaction (Noelle, Yuno, Mereoleona) — 2s each, story order. | Quick cuts synced to snare. Text flashes: `NOELLE` → `YUNO` → `CAPTAIN` |
-| **Final Beat (0:24–0:32)** | Ep 9, ~9:07 — Freeze on Asta mid-swing, devil grin, magic shredding the screen. Zoom punch 110% → hold. | Audio hard stop on impact frame. End card: `BLACK CLOVER S2 — EP 9` + `ASTA DEVIL UNION` |
-
-**Audio note:** "505" is rising (Last.fm) and fits hype momentum. Use only the instrumental groove (0:09–0:30) to lower claim risk.
-
----
-
-## 3) ONE PIECE — Gear 5 "Sun God" Transformation (Episode 1071+)
-**Platform:** Both  
-**Target length:** 38s  
-**Mood:** Mythic joy → absurd freedom  
-**Format:** Before/After (TikTok Format #3) + Velocity tail (Format #6)
-
-| Segment | Source & Timing | Visual / Audio Plan |
-|---------|-----------------|---------------------|
-| **Hook (0:00–0:01.5)** | Ep 1071, ~16:20 — Luffy crushed, heartbeat SFX, screen shakes. *Timestamp approx; owner to confirm.* | **Original audio** (heartbeat + Kaido laugh). Text: `BEFORE: THE "GOD" KNEELS.` |
-| **Stretch 1 (0:01.5–0:10)** | Ep 1071, ~16:20–16:35 — Unbroken: drums of liberation start → hair whitens → grin widens → color shift. | Hold the transformation. No cuts. |
-| **Stretch 2 (0:10–0:20)** | Ep 1071–1072 — 4 velocity cuts (2s each): 1) Luffy bouncing off air 2) Kaido's face: confusion 3) Lightning rubber snap 4) Giant fist wind-up. | **Sound:** "Flower In A Hurricane — Justice (GTA VI OST)" first major lift at 0:10 (rising on Last.fm, epic/cinematic). Cuts on each orchestral hit. |
-| **Stretch 3 (0:20–0:30)** | Ep 1072, ~5:10 — Single stretch: "Gomu Gomu no… DAWN GATLING" — unbroken barrage to impact. | Audio peaks. Text: `AFTER: THE SUN GOD DANCES.` |
-| **Final Beat (0:30–0:38)** | Ep 1072, ~5:18 — Freeze on Luffy mid-laugh, steam rising, "Nika" silhouette. Slow zoom 103% → hold. | Orchestral tail resolves. End card: `ONE PIECE — GEAR 5 DEBUT` + `WHICH FORM'S NEXT?` |
-
-**Audio note:** Justice/GTA VI track is rising worldwide (Last.fm) and fits "epic cinematic" edit type. Instrumental section only.
+## Clip #1 — **Black Clover (S2)**
+- **Platform:** **Both (TikTok + YouTube Shorts)**
+- **Source title:** *Black Clover* (Season 2)
+- **Where to cut (episode/timestamp):** **Unsure** — pull the **episode with Asta’s biggest power-up/aura impact** (look for: wind-up close-up → aura burst → wide impact frame → immediate “new form” hold). If you can’t identify episode number quickly, Claude should work from the library’s scene list and timestamp the exact moment.
+- **Hook (0–2s):** Tight close-up on **Asta/eyes + magic aura building** → cut on the **first frame the aura explodes**.
+- **Unbroken stretches (story order; 2–4 total):**
+  1. **Wind-up close-up (5–9s):** aura starts forming, camera pushes in.
+  2. **Pre-impact reaction (4–7s):** faces of allies/antagonist as aura grows (keep one continuous action beat).
+  3. **Aura release → impact wide (8–12s):** the attack goes off and lands (don’t jump-cut inside the strike—hold the impact moment).
+  4. **“New rage / new form” hold (3–5s):** pause on the first dominant silhouette/frame after the hit.
+- **Biggest moment:** The **aura burst + attack impact frame** (the “he is him” visual).
+- **Final beat (30–40s total):** 0.4–0.8s **silence beat**: hold the last aura/new-form frame, then overlay text: **“HE IS HIM.”**
+- **Target length:** **34–38s**
+- **Mood:** Aggressive hype, loud and clean.
+- **Audio note:** Trending idea: **Olivia Rodrigo – “maggots for brains”** (per your TikTok Sound Watcher). If not available, use an **original sound** that has a **big bass hit** aligned to the aura release/impact.
 
 ---
 
-## Quick Reference for Claude
+## Clip #2 — **Steel Ball Run: JoJo’s Bizarre Adventure**
+- **Platform:** **Both (TikTok + YouTube Shorts)**
+- **Source title:** *Steel Ball Run* (JoJo’s Bizarre Adventure)
+- **Where to cut (episode/timestamp):** **Unsure** — choose a moment where a character uses a **high-IQ strategy** in a race/arena and you can clearly read the “solution” on screen. Claude should timestamp the sequence in-library (target: **solve → immediate advantage**).
+- **Hook (0–2s):** The **most iconic “Spin/technique” pose or confident realization face** (single frame). Start on the pose, not the lead-in.
+- **Unbroken stretches (2–4 total):**
+  1. **Setup flow (6–9s):** show the plan forming (movement + the technique starting).
+  2. **Strategy execution (10–16s):** keep it continuous through the “turn the tide” moment (bullet/obstacle/race read).
+  3. **Tide turning reaction (6–8s):** opponents realize they’re losing / stunned expression.
+  4. **Dominant payoff frame (4–6s):** hold on the successful Spin/impact aftermath.
+- **Biggest moment:** The **“genius realization” frame** followed immediately by the **clean turning point** (no filler frames).
+- **Final beat:** Freeze the payoff frame for **~0.4s**, then overlay: **“DON’T LOOK AWAY.”**
+- **Target length:** **32–36s**
+- **Mood:** Cool confidence + satisfying problem-solving.
+- **Audio note:** Use a **phonk** track that supports a “slow-down on realization” effect. Trending idea from your repo: **“Flower In A Hurricane”** is suggested for high-octane edits generally, but your Steel Ball Run “High IQ Plays” format works better if the phonk has a clear transient for the slow-mo beat. (If Claude can’t find phonk fast, default to an available phonk and sync slowdown to the technique start.)
 
-| Clip | Source Files Needed | Risk Notes |
-|------|---------------------|------------|
-| Vinland Saga S2 | Ep 9–10 (Crunchyroll/Netflix) | Original OST safest; "Everlong" rising but major label |
-| Black Clover S2 | Ep 9 (Crunchyroll) | "505" rising; use instrumental groove only |
-| One Piece | Ep 1071–1072 (Crunchyroll) | Justice track rising; instrumental tail only |
+---
 
-**Make first:** **Vinland Saga S2** — YouTube Shorts Watcher explicitly identifies it as the #1 trending anime edit *this week* with multiple 1M+ velocity proofs. Highest probability of algorithm pickup for a 0-sub channel.
+## Clip #3 — **Grand Theft Auto VI (Game) — Lucia**
+- **Platform:** **Both (TikTok + YouTube Shorts)**
+- **Source title:** *Grand Theft Auto VI* (GTA VI)
+- **Where to cut (episode/chapter/timestamp):** **Unsure** — use streamer VOD highlights (your trend notes cite Lucia and Chapter 5, but timestamps aren’t provided). Claude should use the Twitch capture you have and locate a Lucia moment with: **high-stakes escalation + cinematic dialogue/decision vibe**.
+- **Hook (0–2s):** Fast cut to **Lucia’s face close-up** + overlay text: **“POV: YOU’RE THE REAL MAIN CHARACTER”** (text appears immediately as the camera settles on her expression).
+- **Unbroken stretches (2–4 total):**
+  1. **Escalation (7–10s):** weapon/vehicle/UI/mission-start energy—keep one continuous momentum sequence.
+  2. **Cinematic choice/danger beat (10–14s):** Lucia in control (dialogue vibe or decisive movement). Try to avoid rapid scene swaps within this stretch.
+  3. **Heist/crime peak (10–14s):** weapon + objective execution montage *but* keep the main action as one continuous run (few cuts allowed).
+- **Biggest moment:** The **“mission peak / unstoppable”** beat right before things go fully chaotic.
+- **Final beat:** End on a **decision/pose** frame (Lucia moment) + overlay: **“YOU THOUGHT IT WAS OVER…”**
+- **Target length:** **30–40s** (aim ~36s for the GTA pacing)
+- **Mood:** High-octane, cinematic POV power fantasy.
+- **Audio note:** Trending idea: **Justice – “Flower In A Hurricane”** (your TikTok Sound Watcher). Cut the visuals to the **synth drop** and end exactly when the track hits its final “snap” energy.
 
-**Owner action:** Confirm exact timestamps for each hook/stretch (marked "approx" above) and send the source files.
+---
+
+# Which one to make first (again)
+1) **Black Clover S2** — most likely to convert immediately because it’s **clear power-up/aura** storytelling and less exposed than GTA VI (which is oversaturated).  
+2) **Steel Ball Run** — niche “High IQ plays” is built for completion + replay.  
+3) **GTA VI (Lucia)** — big audience, but needs the *right* Lucia cinematic moment to avoid feeling generic.
+
+If you tell me what exact footage sources Claude already has loaded (episode lists or VOD links you’ve saved), I’ll tighten the “Where to cut” timestamps from “unsure” to specific numbers.

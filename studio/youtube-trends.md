@@ -1,57 +1,56 @@
-# YouTube trends, US (2026-11-25)
+# YouTube trends, US (2026-11-26)
 
 Live from the YouTube Data API. Views/hr = views since upload ÷ hours since upload.
 
 ## Film & Animation: fastest-rising
-- [Teaching my GF how to dive 🤣😭](https://youtu.be/jU6cUtK_hGk) · Cadel and Mia · 64,897,736 views · 5,404,006/hr · 301,395 likes · 710 comments · 0:10
-- [Avengers: Doomsday | Final Trailer | In Theaters December 18](https://youtu.be/Wb8Tq_HD4E8) · Marvel Entertainment · 52,862,585 views · 947,966/hr · 1,614,512 likes · 93,421 comments · 3:16
-- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 40,953,986 views · 324,352/hr · 461,995 likes · 2,042 comments · 0:16
-- [Absolutely NOTHING could've prepared me for the ending](https://youtu.be/DLDXQCLDGgE) · Mi Desing · 7,897,854 views · 312,611/hr · 191,051 likes · 1,715 comments · 0:53
-- [Mom tore big bro's shirt to wipe boba, wait until she sees his back#shorts](https://youtu.be/XY_ov9X03GY) · ChaosBiteClips · 20,628,685 views · 244,539/hr · 99,274 likes · 207 comments · 0:31
-- [I couldn't even afford him a white T-shirt. He loved me anyway. #shorts](https://youtu.be/uK_8IXmGhO0) · The Love Editorial Office · 9,321,408 views · 213,243/hr · 304,778 likes · 2,800 comments · 2:35
-- [He is on Another Level.🔥#edit #shorts #foryou](https://youtu.be/aCqDrqDTfoQ) · JJ_EditZ · 16,565,567 views · 200,809/hr · 779,977 likes · 1,518 comments · 2:58
-- [When The Gender Swap Filter Turns Christina Into A Whole "Hot Looking Man" 😭💀](https://youtu.be/c1fuGUlVb-M) · Foeko · 14,117,052 views · 196,719/hr · 227,389 likes · 1,508 comments · 0:16
+- [Teaching my GF how to dive 🤣😭](https://youtu.be/jU6cUtK_hGk) · Cadel and Mia · 76,853,546 views · 4,319,807/hr · 342,673 likes · 838 comments · 0:10
+- [Avengers: Doomsday | Final Trailer | In Theaters December 18](https://youtu.be/Wb8Tq_HD4E8) · Marvel Entertainment · 54,446,572 views · 884,649/hr · 1,624,389 likes · 93,945 comments · 3:16
+- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 41,227,738 views · 312,223/hr · 464,005 likes · 2,046 comments · 0:16
+- [Absolutely NOTHING could've prepared me for the ending](https://youtu.be/DLDXQCLDGgE) · Mi Desing · 9,310,782 views · 299,903/hr · 216,024 likes · 1,952 comments · 0:53
+- [Mom tore big bro's shirt to wipe boba, wait until she sees his back#shorts](https://youtu.be/XY_ov9X03GY) · ChaosBiteClips · 20,630,446 views · 228,873/hr · 99,294 likes · 207 comments · 0:31
+- [Nobody's taking my dog. 😂😅](https://youtu.be/Zca-eKzSBvE) · Tale Talker · 2,877,638 views · 216,488/hr · 98,515 likes · 372 comments · 2:56
+- [I couldn't even afford him a white T-shirt. He loved me anyway. #shorts](https://youtu.be/uK_8IXmGhO0) · The Love Editorial Office · 9,693,456 views · 195,850/hr · 316,907 likes · 2,909 comments · 2:35
+- [He is on Another Level.🔥#edit #shorts #foryou](https://youtu.be/aCqDrqDTfoQ) · JJ_EditZ · 16,828,981 views · 190,641/hr · 790,854 likes · 1,539 comments · 2:58
 
 ## Film & Animation: short videos (3 min or less)
-- [Teaching my GF how to dive 🤣😭](https://youtu.be/jU6cUtK_hGk) · Cadel and Mia · 64,897,736 views · 5,404,006/hr · 301,395 likes · 710 comments · 0:10
-- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 40,953,986 views · 324,352/hr · 461,995 likes · 2,042 comments · 0:16
-- [Absolutely NOTHING could've prepared me for the ending](https://youtu.be/DLDXQCLDGgE) · Mi Desing · 7,897,854 views · 312,611/hr · 191,051 likes · 1,715 comments · 0:53
-- [Mom tore big bro's shirt to wipe boba, wait until she sees his back#shorts](https://youtu.be/XY_ov9X03GY) · ChaosBiteClips · 20,628,685 views · 244,539/hr · 99,274 likes · 207 comments · 0:31
-- [I couldn't even afford him a white T-shirt. He loved me anyway. #shorts](https://youtu.be/uK_8IXmGhO0) · The Love Editorial Office · 9,321,408 views · 213,243/hr · 304,778 likes · 2,800 comments · 2:35
-- [He is on Another Level.🔥#edit #shorts #foryou](https://youtu.be/aCqDrqDTfoQ) · JJ_EditZ · 16,565,567 views · 200,809/hr · 779,977 likes · 1,518 comments · 2:58
-- [When The Gender Swap Filter Turns Christina Into A Whole "Hot Looking Man" 😭💀](https://youtu.be/c1fuGUlVb-M) · Foeko · 14,117,052 views · 196,719/hr · 227,389 likes · 1,508 comments · 0:16
-- [Girls in Japan Confess Love With Erasers](https://youtu.be/M-QQKqDd_0I) · Japanimationz · 5,241,494 views · 191,098/hr · 136,247 likes · 707 comments · 1:05
+- [Teaching my GF how to dive 🤣😭](https://youtu.be/jU6cUtK_hGk) · Cadel and Mia · 76,853,546 views · 4,319,807/hr · 342,673 likes · 838 comments · 0:10
+- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 41,227,738 views · 312,223/hr · 464,005 likes · 2,046 comments · 0:16
+- [Absolutely NOTHING could've prepared me for the ending](https://youtu.be/DLDXQCLDGgE) · Mi Desing · 9,310,782 views · 299,903/hr · 216,024 likes · 1,952 comments · 0:53
+- [Mom tore big bro's shirt to wipe boba, wait until she sees his back#shorts](https://youtu.be/XY_ov9X03GY) · ChaosBiteClips · 20,630,446 views · 228,873/hr · 99,294 likes · 207 comments · 0:31
+- [Nobody's taking my dog. 😂😅](https://youtu.be/Zca-eKzSBvE) · Tale Talker · 2,877,638 views · 216,488/hr · 98,515 likes · 372 comments · 2:56
+- [I couldn't even afford him a white T-shirt. He loved me anyway. #shorts](https://youtu.be/uK_8IXmGhO0) · The Love Editorial Office · 9,693,456 views · 195,850/hr · 316,907 likes · 2,909 comments · 2:35
+- [He is on Another Level.🔥#edit #shorts #foryou](https://youtu.be/aCqDrqDTfoQ) · JJ_EditZ · 16,828,981 views · 190,641/hr · 790,854 likes · 1,539 comments · 2:58
+- [When The Gender Swap Filter Turns Christina Into A Whole "Hot Looking Man" 😭💀](https://youtu.be/c1fuGUlVb-M) · Foeko · 14,592,905 views · 188,188/hr · 236,773 likes · 1,579 comments · 0:16
 
 ## Gaming: fastest-rising
-- [🔴FIRST TO MAKE $1 MILLION IN GTA 6 WINS! ft. Kai Cenat 💰](https://youtu.be/91c96JtcIFg) · IShowSpeed · 5,784,494 views · 249,762/hr · 65,272 likes · 787 comments · 292:31
-- [Don't Do That](https://youtu.be/9B1ljU7lv-E) · penguinz0 · 885,499 views · 185,951/hr · 33,193 likes · 3,214 comments · 15:48
-- [🔴 LIVE! - BEATING GTA 6 RIGHT NOW! (PS5 PRO)](https://youtu.be/6r62rTzESks) · Typical Gamer · 1,661,492 views · 183,212/hr · 6,517 likes · 38 comments · 652:24
-- [We need to talk about GTA 6](https://youtu.be/NMFn6IjThPk) · Asmongold TV   · 1,346,900 views · 173,612/hr · 86,023 likes · 14,160 comments · 28:27
-- [GTA 6 #2](https://youtu.be/umDq3LY7sFA) · CoryxKenshin · 3,555,012 views · 148,219/hr · 249,719 likes · 23,865 comments · 94:37
-- [10,000 Players Simulate WORLD WAR in Minecraft](https://youtu.be/qvR50Jh7OmU) · Spoke · 6,683,083 views · 130,869/hr · 165,118 likes · 33,226 comments · 237:35
-- [[A] PGL Major Singapore 2026 - Stage 1 - Day 2](https://youtu.be/Cfe3Vp39n2g) · PGL · 816,449 views · 109,639/hr · 3,964 likes · 22 comments · 479:51
-- [This Is An Absolute Disaster](https://youtu.be/GytZyKUlKEc) · Dolan Darkest · 684,474 views · 102,730/hr · 15,288 likes · 2,728 comments · 2:26
+- [Catching Hackers On Balsmp](https://youtu.be/YgaAFWDrc6g) · ikeacpvp · 2,211,254 views · 388,154/hr · 1,819 likes · 1 comments · 71:45
+- [Don't Do That](https://youtu.be/9B1ljU7lv-E) · penguinz0 · 2,594,021 views · 246,024/hr · 56,362 likes · 4,798 comments · 15:48
+- [🔴FIRST TO MAKE $1 MILLION IN GTA 6 WINS! ft. Kai Cenat 💰](https://youtu.be/91c96JtcIFg) · IShowSpeed · 5,849,415 views · 202,109/hr · 65,664 likes · 860 comments · 292:31
+- [Grand Theft Auto VI](https://youtu.be/jPU38VyVVgE) · videogamedunkey · 1,189,911 views · 168,871/hr · 39,850 likes · 2,408 comments · 15:53
+- [GTA 6 #2](https://youtu.be/umDq3LY7sFA) · CoryxKenshin · 4,010,264 views · 134,724/hr · 263,990 likes · 24,545 comments · 94:37
+- [We need to talk about GTA 6](https://youtu.be/NMFn6IjThPk) · Asmongold TV   · 1,806,690 views · 133,435/hr · 92,786 likes · 16,183 comments · 28:27
+- [10,000 Players Simulate WORLD WAR in Minecraft](https://youtu.be/qvR50Jh7OmU) · Spoke · 6,943,801 views · 122,145/hr · 166,675 likes · 33,484 comments · 237:35
+- [🔴 LIVE! - BEATING GTA 6 RIGHT NOW! (PS5 PRO)](https://youtu.be/6r62rTzESks) · Typical Gamer · 1,678,735 views · 113,043/hr · 6,606 likes · 43 comments · 652:24
 
 ## Gaming: short videos (3 min or less)
-- [This Is An Absolute Disaster](https://youtu.be/GytZyKUlKEc) · Dolan Darkest · 684,474 views · 102,730/hr · 15,288 likes · 2,728 comments · 2:26
-- [Mario Kart World – Ver. 1.9.0 Update Available Now – Nintendo Switch 2](https://youtu.be/Pn0MuiE7YDQ) · Nintendo of America · 851,970 views · 41,049/hr · 22,104 likes · 3,301 comments · 1:20
+- [This Is An Absolute Disaster](https://youtu.be/GytZyKUlKEc) · Dolan Darkest · 925,286 views · 74,352/hr · 18,347 likes · 3,114 comments · 2:26
 
 ## Entertainment: fastest-rising
-- [Teaching my GF how to dive 🤣😭](https://youtu.be/jU6cUtK_hGk) · Cadel and Mia · 64,897,736 views · 5,403,974/hr · 301,395 likes · 710 comments · 0:10
-- [Turning A Kid’s Drawing Into Real Life](https://youtu.be/MxRpi8BEN4Q) · MrBeast · 49,121,631 views · 1,707,880/hr · 830,080 likes · 7,267 comments · 1:04
-- [Avengers: Doomsday | Final Trailer | In Theaters December 18](https://youtu.be/Wb8Tq_HD4E8) · Marvel Entertainment · 52,862,585 views · 947,965/hr · 1,614,512 likes · 93,421 comments · 3:16
-- [Well we know what time it is 😂 #funny](https://youtu.be/W_cuX6leGak) · No Tatts · 20,274,405 views · 705,044/hr · 411,801 likes · 6,648 comments · 0:16
-- [Not Every Shot Goes as Planned](https://youtu.be/FByrCc303mI) · Operation Safa · 49,792,549 views · 515,708/hr · 680,288 likes · 1,262 comments · 0:48
-- [Bro 😭](https://youtu.be/7o9Al07wa6M) · Stewie · 20,202,299 views · 456,402/hr · 0 likes · 7,757 comments · 0:16
-- [999 level of experience 😩](https://youtu.be/hMASOA-87IE) · Frame242 · 7,286,692 views · 350,929/hr · 166,942 likes · 627 comments · 0:13
-- [Togi plays GTA6 🎮 #togi](https://youtu.be/wPgZXwW_dhI) · TogiToon  · 8,766,130 views · 347,344/hr · 149,382 likes · 654 comments · 0:28
+- [Teaching my GF how to dive 🤣😭](https://youtu.be/jU6cUtK_hGk) · Cadel and Mia · 76,853,546 views · 4,319,788/hr · 342,673 likes · 838 comments · 0:10
+- [Turning A Kid’s Drawing Into Real Life](https://youtu.be/MxRpi8BEN4Q) · MrBeast · 50,894,672 views · 1,473,348/hr · 859,202 likes · 7,474 comments · 1:04
+- [Avengers: Doomsday | Final Trailer | In Theaters December 18](https://youtu.be/Wb8Tq_HD4E8) · Marvel Entertainment · 54,446,572 views · 884,648/hr · 1,624,395 likes · 93,945 comments · 3:16
+- [1,2,3 or 4? 🤔](https://youtu.be/JiaJPvwwxUk) · The Smily Fam · 13,965,268 views · 844,124/hr · 48,376 likes · 33,313 comments · 0:12
+- [Well we know what time it is 😂 #funny](https://youtu.be/W_cuX6leGak) · No Tatts · 25,589,043 views · 740,896/hr · 501,045 likes · 7,949 comments · 0:16
+- [Not Every Shot Goes as Planned](https://youtu.be/FByrCc303mI) · Operation Safa · 52,242,127 views · 510,508/hr · 708,573 likes · 1,328 comments · 0:48
+- [Your Sister Runied Your Birthday 💔😭](https://youtu.be/R_1ulH99Sfs) · Plato Tube · 6,557,885 views · 435,927/hr · 54,390 likes · 1,622 comments · 0:17
+- [Bro 😭](https://youtu.be/7o9Al07wa6M) · Stewie · 20,490,787 views · 409,439/hr · 0 likes · 7,853 comments · 0:16
 
 ## Entertainment: short videos (3 min or less)
-- [Teaching my GF how to dive 🤣😭](https://youtu.be/jU6cUtK_hGk) · Cadel and Mia · 64,897,736 views · 5,403,974/hr · 301,395 likes · 710 comments · 0:10
-- [Turning A Kid’s Drawing Into Real Life](https://youtu.be/MxRpi8BEN4Q) · MrBeast · 49,121,631 views · 1,707,880/hr · 830,080 likes · 7,267 comments · 1:04
-- [Well we know what time it is 😂 #funny](https://youtu.be/W_cuX6leGak) · No Tatts · 20,274,405 views · 705,044/hr · 411,801 likes · 6,648 comments · 0:16
-- [Not Every Shot Goes as Planned](https://youtu.be/FByrCc303mI) · Operation Safa · 49,792,549 views · 515,708/hr · 680,288 likes · 1,262 comments · 0:48
-- [Bro 😭](https://youtu.be/7o9Al07wa6M) · Stewie · 20,202,299 views · 456,402/hr · 0 likes · 7,757 comments · 0:16
-- [999 level of experience 😩](https://youtu.be/hMASOA-87IE) · Frame242 · 7,286,692 views · 350,929/hr · 166,942 likes · 627 comments · 0:13
-- [Togi plays GTA6 🎮 #togi](https://youtu.be/wPgZXwW_dhI) · TogiToon  · 8,766,130 views · 347,344/hr · 149,382 likes · 654 comments · 0:28
-- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 40,953,986 views · 324,351/hr · 461,995 likes · 2,042 comments · 0:16
+- [Teaching my GF how to dive 🤣😭](https://youtu.be/jU6cUtK_hGk) · Cadel and Mia · 76,853,546 views · 4,319,788/hr · 342,673 likes · 838 comments · 0:10
+- [Turning A Kid’s Drawing Into Real Life](https://youtu.be/MxRpi8BEN4Q) · MrBeast · 50,894,672 views · 1,473,348/hr · 859,202 likes · 7,474 comments · 1:04
+- [1,2,3 or 4? 🤔](https://youtu.be/JiaJPvwwxUk) · The Smily Fam · 13,965,268 views · 844,124/hr · 48,376 likes · 33,313 comments · 0:12
+- [Well we know what time it is 😂 #funny](https://youtu.be/W_cuX6leGak) · No Tatts · 25,589,043 views · 740,896/hr · 501,045 likes · 7,949 comments · 0:16
+- [Not Every Shot Goes as Planned](https://youtu.be/FByrCc303mI) · Operation Safa · 52,242,127 views · 510,508/hr · 708,573 likes · 1,328 comments · 0:48
+- [Your Sister Runied Your Birthday 💔😭](https://youtu.be/R_1ulH99Sfs) · Plato Tube · 6,557,885 views · 435,927/hr · 54,390 likes · 1,622 comments · 0:17
+- [Bro 😭](https://youtu.be/7o9Al07wa6M) · Stewie · 20,490,787 views · 409,439/hr · 0 likes · 7,853 comments · 0:16
+- [The introvert return to normal is killing me🤣](https://youtu.be/ieuIYtmYkD4) · yoinked · 9,649,131 views · 363,517/hr · 161,260 likes · 2,186 comments · 0:11

@@ -2,42 +2,139 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# YouTube Shorts Intelligence Report — 2026-11-25
+## What’s working on YouTube *right now* (US, fastest-rising)
 
-## 🎯 8 Fastest-Rising Relevant Videos (Movie / Game / Anime)
+Below are the **5–8 fastest-rising relevant** clips we can directly use for *movie/game/anime-style* content from your live chart feed (real view numbers included).
 
-| # | Title / Link | Category | Views | Views/hr | Length | Why it matters |
-|---|--------------|----------|-------|----------|--------|----------------|
-| 1 | **Avengers: Doomsday \| Final Trailer \| In Theaters December 18** (Marvel) | Film & Animation | 52.9 M | **947 K** | 3:16 | Only *official trailer* in the top‑8; proves Marvel hype still drives massive velocity. |
-| 2 | **Why they move so human 🥀** (MoVeak) | Film & Animation | 41.0 M | **324 K** | 0:16 | Facial‑animation / motion‑capture breakdown — ultra‑short, high‑retention. |
-| 3 | **Absolutely NOTHING could've prepared me for the ending** (Mi Desing) | Film & Animation | 7.9 M | **312 K** | 0:53 | Twist‑ending tease; title is the hook. |
-| 4 | **He is on Another Level.🔥#edit #shorts #foryou** (JJ_EditZ) | Film & Animation | 16.6 M | **200 K** | 2:58 | Character‑power montage; 779 K likes = strong save/share signal. |
-| 5 | **🔴FIRST TO MAKE $1 MILLION IN GTA 6 WINS! ft. Kai Cenat** (IShowSpeed) | Gaming | 5.8 M | **249 K** | 292:31 | GTA 6 + creator collab = algorithm rocket fuel. |
-| 6 | **🔴 LIVE! - BEATING GTA 6 RIGHT NOW! (PS5 PRO)** (Typical Gamer) | Gaming | 1.7 M | **183 K** | 652:24 | Live “first clear” energy; 652 hr runtime shows live‑stream clipping potential. |
-| 7 | **We need to talk about GTA 6** (Asmongold TV) | Gaming | 1.3 M | **173 K** | 28:27 | Commentary + speculation; 86 K likes, 14 K comments = discussion magnet. |
-| 8 | **Togi plays GTA6 🎮 #togi** (TogiToon) | Entertainment (Shorts) | 8.8 M | **347 K** | 0:28 | **Animated Short** — stylized GTA 6 gameplay parody; proof that *original animation* on trending IP wins. |
+### 1) Fastest-rising “short” style examples (Film & Animation)
+These are not strictly “movie/game/anime clips,” but they show the *format* that’s currently accelerating:
 
-> **Note:** “Teaching my GF how to dive” (64.9 M / 5.4 M/hr) dominates every list but is a *real‑life couple Short* — not a movie/game/anime clip. Excluded above.
+1. **“Teaching my GF how to dive 🤣😭”** — **76,853,546 views** (0:10)  
+   https://youtu.be/jU6cUtK_hGk  
+2. **“Why they move so human 🥀”** — **41,227,738 views** (0:16)  
+   https://youtu.be/_dEH-edCIN4  
+3. **“Absolutely NOTHING could've prepared me for the ending”** — **9,310,782 views** (0:53)  
+   https://youtu.be/DLDXQCLDGgE  
+4. **“Mom tore big bro's shirt to wipe boba, wait until she sees his back#shorts”** — **20,630,446 views** (0:31)  
+   https://youtu.be/XY_ov9X03GY  
+5. **“I couldn't even afford him a white T-shirt. He loved me anyway. #shorts”** — **9,693,456 views** (2:35)  
+   https://youtu.be/uK_8IXmGhO0  
+6. **“He is on Another Level.🔥#edit #shorts #foryou”** — **16,828,981 views** (2:58)  
+   https://youtu.be/aCqDrqDTfoQ  
+
+### 2) Fastest-rising “game” relevance (Gaming)
+These are more long-form than Shorts, but they tell us what topics are currently pulling attention:
+
+1. **“Catching Hackers On Balsmp”** — **2,211,254 views**  
+   https://youtu.be/YgaAFWDrc6g  
+2. **“Don't Do That”** — **2,594,021 views**  
+   https://youtu.be/9B1ljU7lv-E  
+3. **“🔴FIRST TO MAKE $1 MILLION IN GTA 6 WINS! ft. Kai Cenat 💰”** — **5,849,415 views**  
+   https://youtu.be/91c96JtcIFg  
+4. **“Grand Theft Auto VI”** — **1,189,911 views**  
+   https://youtu.be/jPU38VyVVgE  
+5. **“GTA 6 #2”** — **4,010,264 views**  
+   https://youtu.be/umDq3LY7sFA  
+6. **“We need to talk about GTA 6”** — **1,806,690 views**  
+   https://youtu.be/NMFn6IjThPk  
+
+### 3) Fastest-rising “short video” format (Gaming + Entertainment)
+Gaming Shorts example is only **1** item in the feed:
+
+- **“This Is An Absolute Disaster”** — **925,286 views** (2:26)  
+  https://youtu.be/GytZyKUlKEc  
+
+And Entertainment Shorts examples show the same “emotion + cliff” pattern:
+
+- **“Turning A Kid’s Drawing Into Real Life”** — **50,894,672 views** (1:04)  
+  https://youtu.be/MxRpi8BEN4Q  
+- **“1,2,3 or 4? 🤔”** — **13,965,268 views** (0:12)  
+  https://youtu.be/JiaJPvwwxUk  
+- **“Not Every Shot Goes as Planned”** — **52,242,127 views** (0:48)  
+  https://youtu.be/FByrCc303mI  
 
 ---
 
-## 🧩 What They Share (Pattern Breakdown)
+## What they have in common (we can copy the formula)
+From the titles + durations above, the common traits are:
 
-| Element | Pattern | Example from data |
-|---------|---------|-------------------|
-| **Length** | **10–53 sec** for pure Shorts; 2–3 min for “edit” montages that still qualify as Shorts. | 0:10, 0:16, 0:53, 2:58 |
-| **Title style** | **All‑caps hook + emoji + hashtag stack** (3–5 tags). | `Absolutely NOTHING could've prepared me for the ending` • `He is on Another Level.🔥#edit #shorts #foryou` |
-| **Hook** | **First 1–2 sec = visual payoff or question** — no slow intros. | MoVeak’s motion‑capture close‑up; TogiToon’s instant GTA 6 caricature. |
-| **Topic** | **One clear “unit of hype”**: a trailer drop, a character’s peak moment, a game’s launch week, a twist ending. | Avengers: Doomsday trailer; Thorfinn’s “monster town” arc; GTA 6 first‑clear. |
-| **Audio** | **Trending sound / OST snippet** — often the same 5–10 sec clip across 50+ edits. | Vinland Saga S2 OST under Thorfinn edits; GTA 6 radio snippets. |
-| **Credit** | **On‑screen title card** (IP name + episode/chapter) — keeps it transformative. | `Vinland Saga S2 Ep 9` watermark on Thorfinn edits. |
-| **Thumbnail / first frame** | **Extreme close‑up face or high‑contrast action freeze** — readable at 9:16 phone size. | Thorfinn’s blood‑spattered eyes; Luffy’s gear‑5 glow. |
+- **Immediate hook in the first line** (often a *warning*, *promise*, or *twist*: “Don’t…”, “Absolutely NOTHING…”, “He is on Another Level”, “Why they move so human”)
+- **Emoji-heavy emotional signaling** (🤣😭🥀🔥🤔)
+- **Short runtimes dominate fastest acceleration**: many are **0:10–0:16** and still hit huge views/hr
+- **Clear “payoff framing”**  
+  Examples: “wait until…”, “ending”, “another level”
+- **Title style is punchy + readable on mobile** (no long explanations; mostly 3–8 words + emotion)
 
 ---
 
-## ✂️ 6 Clips the Studio Should Cut This Week
+## What the studio should clip for *YouTube Shorts* (movie/game/anime)
+Using your chart data alone, we **do not have specific movie/game/anime scene IDs**—so we can only base recommendations on **topics that are clearly hot** right now and **clip types that match the winning title formats**.
 
-| IP / Moment | Source | Why now | Suggested Short structure (30–40 s) |
-|-------------|--------|---------|-------------------------------------|
-| **Vinland Saga S2 — Thorfinn’s “I have no enemies” monologue (Ep 9–10)** | Crunchyroll / Netflix | **3 Thorfinn edits in top‑10 anime edits** (5.9 M, 1.4 M, 1.5 M views) — Vinland Saga S2 is *the* trending anime edit right now. | 1. Cold open: Thorfinn’s eyes, blood splatter (0–1 s) 2. Unbroken 8‑sec monologue (1–9 s) 3. Quick 3‑cut montage of his past violence (9–14 s) 4. Silence + “I have no enemies” text card (14–16 s) 5. OST swell + final wide shot (16–30 s) |
-| **One Piece — Gear 5 “Sun God” transformation (Ep 1071+)** | Crunchyroll | One Piece #1 on MyAnimeList (2.7 M members); Luffy edit at 2.3 M views. | 0–1 s: black screen + drum hit → 1–6 s: transformation key frames (no narration) → 6–12 s: Luffy laughing, color shift → 12
+### Topics to prioritize now (based on your feeds)
+- **GTA 6** (Wikipedia read + Gaming fastest-rising + Twitch top games + Google trends context)
+- **Big upcoming “event” movies** (example in charts: *Avengers: Doomsday* trailer hit big; plus search interest shows broader blockbuster attention)
+- **Anime that’s actively airing / highly followed** (AniList + MAL “top airing right now” lists)
+  - Strong candidates to test: **One Piece**, **Black Clover Season 2**, **The Apothecary Diaries S3**, **Reincarnated as a Sword S2**, etc. (these are explicitly in your MAL/AniList feed)
+
+### Clip formats to build (actionable for Claude/iPhone workflow)
+Pick moments that fit these 3 formats:
+
+1. **“Don’t do that → instant consequence” (warning → payoff)**  
+   - Movie/game/anime: any scene where someone makes a rash move and the result lands hard.
+   - Short cut target: **7–18 seconds**, keep **one unbroken action burst**, end exactly on the consequence beat.
+
+2. **“Wait until the ending / you’re not ready for this” (reveal payoff)**  
+   - Clip: long setup = okay, but **hard cut** into reveal.  
+   - Keep single source stretches **≤ ~20–30s**; add on-screen title and 1 line VO/sub.
+
+3. **“One Level / Human / Unnatural” (aesthetics + motion)**  
+   - Clip: animation/motion/special effect moment (combat, stance change, weapon draw, transformation).
+   - Target: **0:10–0:16** style pacing.
+
+### Concrete “moment types” to scan for in your library (so Claude can cut fast)
+For each franchise you have access to, look for:
+- **Anime:** transformation / limit-break / “name reveal” speech / irreversible decision
+- **Movies:** sudden betrayal reveal / “final shot” / turn-your-head moment (camera whip + reaction)
+- **Games:** boss aggro moment, clutch win/lose screen, “first to do X” moment, rage quit, flawless dodge-to-KO chain
+
+*(If you tell me which anime/movies/games MotionVault already has clip access to, I can turn these into exact scene-by-scene picks.)*
+
+---
+
+## Title patterns to copy (steal these templates)
+These are directly aligned with what’s accelerating in your chart data:
+
+### Pattern A — Hyper-emotional twist
+- **“Absolutely NOTHING could've prepared me for the ending”**
+- **“Wait until she sees his back…”**
+Use for: reveal/payoff endings.
+
+### Pattern B — Warning / consequence
+- **“Don’t Do That”**
+Use for: rash action → immediate consequence.
+
+### Pattern C — Level-up / superiority
+- **“He is on Another Level.🔥”**
+Use for: best moment, peak animation, strongest hit.
+
+### Pattern D — “Human/Real” aesthetic
+- **“Why they move so human 🥀”**
+Use for: motion quality / uncanny realism / animation craft.
+
+### Pattern E — Micro-question hooks
+- **“1,2,3 or 4? 🤔”**
+Use for: quick “choose the next action” edits.
+
+### Pattern F — Short emotional storyline
+- **“I couldn't even afford him a white T-shirt. He loved me anyway.”**
+Use for: “context in title” + 8–20s clip that visually supports it.
+
+---
+
+## Quick next step (so we can make this specific)
+Reply with **3 things**:
+1) Your top **5 anime series** you currently clip (or want to clip)  
+2) Your top **5 games** (especially if any GTA 6-related assets you already use)  
+3) Whether Claude can reliably find **short, clean ending/payoff moments** (yes/no)
+
+Then I’ll convert the formats above into a **Shorts clipping list (10–15 exact montage concepts)** with recommended **timestamps + exact title templates** for MotionVault.

@@ -2,110 +2,165 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-## Best fandom targets to clip this week (strongest first)
-
-> **Note:** Your repo scanners gave **search + anime trending + GTA VI stream buzz + top edits**, but they did **not** include TikTok-specific hashtag lists or specific “moments fans keep posting.” So below I’m inferring likely fan hashtags/moments from standard community patterns for these franchises and the “releasing/airing” signals you provided. If you want, I can convert this into a tighter list after you share any TikTok hashtag scrape you have.
-
----
-
-### 1) **Grand Theft Auto VI (GTA VI)** — *oversaturated*
-- **Why fans care now:** Huge ongoing attention from mainstream + massive Twitch viewing (GTA VI multiple top live streams), plus “music from GTAVI” appearing in rising songs lists.
-- **Likely hashtags (3–4):** `#GTA6` `#GTAVI` `#RockstarGames` `#Gaming`
-- **Moment to clip (30–40s montage beat):**
-  - **Montage plan:** open with a **high-energy chase/combat** moment → cut to **interiors/robbery vibe** → end on **a major “turning point” beat** (wanted level / weapon reveal / betrayal moment) to trigger rewatch.
-  - If you have your own GTA VI clips: structure it as **“wanted level escalation” → “crew betrayal / close call” → “final boss-style moment.”**
-- **Source link (use for editor reference):**
-  - Wikipedia “Grand Theft Auto VI” page (for scene context): https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI  
-  - (I can’t safely link to leaked footage; use only official trailers/game footage you own/have permission to clip.)
+## TikTok Fandom Watch (week of **2026-11-25**) — 6–8 strongest titles
+*Note: I can’t directly verify TikTok-specific hashtag usage or “what fans keep posting” without live TikTok access. So I’m basing this on your repo scanners (search/most-read/anilist/mal/steam/twitch/youtube edit activity). Any “moments” below are suggested clip targets, not claimed current viral posts.*
 
 ---
 
-### 2) **One Piece (anime)** — *not oversaturated (but very constant)*
-- **Why fans care now:** MAL shows **One Piece airing weekly** and it’s massive evergreen; your AniList/MAL lists confirm it remains “releasing.”
-- **Likely hashtags:** `#OnePiece` `#Luffy` `#Anime` `#StrawHatCrew`
+### 1) **Grand Theft Auto VI (GTA VI)** — **Oversaturated**
+- **Why fans care now:** Massive ongoing hype + constant streamer activity; also strong general interest in related music/sounds.  
+  (From your scanners: Twitch top streams include **GTA VI** with very high concurrent viewers; YouTube shorts show repeated “GTA 6 / Chapter …” content.)
+- **Fan hashtags (pick 3–4 to test):**
+  - `#GTA6`
+  - `#GTAVI`
+  - `#GamingShorts`
+  - `#RockstarGames`
+- **Moment to clip (transformative montage target):**
+  - Use a **“heist escalation”** chain: quick cuts of character face-closeups → weapon/vehicle shots → UI/mission start vibe → end on a “mission failed / unstoppable” style beat.
+  - Structure: **0–1s hook** = action flash + text “YOU THOUGHT IT WAS OVER…”, then 2–3 short stretches in story order, then a **final beat** (pose/decision screen).
+- **Source link:**  
+  - Steam/launcher sales aren’t a direct GTA VI source here, but your Twitch “GTA VI” activity is the best pointer. (No direct link provided in the repo data—so I’m listing the repo’s evidence type only.)
+
+---
+
+### 2) **Black Clover Season 2** (Anime) — **Not oversaturated (relative)**
+- **Why fans care now:** It’s explicitly listed as **releasing** in your AniList/MAL set; Season 2 fans usually clip episode-specific fights and power-ups.
+  - AniList: **Black Clover Season 2** trending; **ep 9 airs 2026-11-28**
+  - MAL: **Black Clover Season 2** “airs saturday 23:00 JST”
+- **Hashtags:**
+  - `#BlackClover`
+  - `#BlackCloverAnime`
+  - `#Asta`
+  - `#AnimeEdits`
 - **Moment to clip:**
-  - Pick a **new episode’s most visually iconic moment** (usually: a signature attack name reveal / power-up / “I’m not done yet” emotional beat).
-  - Montage rule: **1st beat in 1 second** (“Luffy facing impossible odds”) → 2–3 short stretches of escalating action → **final beat: the moment the crowd/friends react**.
+  - Clip a **high-cost spell moment**: 1) wind-up → 2) Asta/ally reaction shot → 3) impact wide shot → 4) immediate “new form / new rage” beat.
+  - Post format: montage that starts with **a dramatic close-up** (crowd/eyes/antagonist) then resolves into the spell impact, ending with a **silence beat** (last frame holds).
 - **Source link:**
-  - MAL One Piece entry: https://myanimelist.net/anime/21
+  - AniList page (title): https://anilist.co/anime/195604
 
 ---
 
-### 3) **Black Clover (Season 2)** — *good “currently releasing” target*
-- **Why fans care now:** AniList + MAL both show **Black Clover Season 2 releasing** (episode 9 noted in your AniList feed).
-- **Likely hashtags:** `#BlackClover` `#Asta` `#Yuno` `#AnimeEdit`
+### 3) **The Apothecary Diaries Season 3** (Anime) — **Not oversaturated**
+- **Why fans care now:** Listed as **releasing**; MAL shows it as top “most followed” this season.
+  - AniList: **Season 3** trending; **ep 9 airs 2026-11-27**
+  - MAL: **airs friday 23:00 JST**
+- **Hashtags:**
+  - `#TheApothecaryDiaries`
+  - `#Maomao`
+  - `#Anime`
+  - `#Edits`
 - **Moment to clip:**
-  - Target a **battle sequence that shows Asta’s “power/resolve spike”** (usually accompanied by intense close-ups + magic effects).
-  - Montage beats: **Asta determined face (hook)** → **spell/magic clash** → **team reactions** → **final frame: the winning/final strike pose**.
+  - Clip “**investigation → reveal**” pacing:
+    - Hook: Maomao expression / study moment (1 frame)
+    - Middle: 2–3 cuts of tests/observations (hands/notes/poison cues)
+    - Final beat: the **instant conclusion** reaction (the “oh, it’s *this*” look).
 - **Source link:**
-  - AniList Black Clover Season 2: https://anilist.co/anime/195604  
-  - (If you prefer MAL): https://myanimelist.net/anime/61967
+  - AniList (title): https://anilist.co/anime/195516
 
 ---
 
-### 4) **The Apothecary Diaries (Season 3)** — *less oversaturated, high fan-attachment*
-- **Why fans care now:** AniList + MAL show **Season 3 releasing** (ep 9 airs 2026-11-27 in your AniList section).
-- **Likely hashtags:** `#TheApothecaryDiaries` `#Maomao` `#Anime` `#RomanceFantasy`
+### 4) **Reincarnated as a Sword Season 2** (Anime) — **Not oversaturated**
+- **Why fans care now:** Releasing + explicit episode air date in your AniList set.
+  - AniList: **ep 10 airs 2026-12-02**
+- **Hashtags:**
+  - `#ReincarnatedAsASword`
+  - `#SwordIsTheMainCharacter`
+  - `#AnimeEdits`
+  - `#Iska`
 - **Moment to clip:**
-  - Pick a **“Maomao solves the mystery”** sequence (fast cuts from clues → realization → confession/solution).
-  - Montage beats: **hook with her deadpan realization face** → clue montage (1–2 seconds each) → reveal shot → **final beat: someone realizing she’s right** (rewatch trigger).
+  - “**power unlock**” montage:
+    - Hook: sudden aura / transformation-like moment
+    - Middle: 2 quick fight exchanges (parry → hit)
+    - Final beat: “level-up” visual or the character’s decisive grin/resolve.
 - **Source link:**
-  - AniList Season 3: https://anilist.co/anime/195516
+  - AniList: https://anilist.co/anime/159042
 
 ---
 
-### 5) **Reincarnated as a Sword (Season 2)** — *releasing, fans post hype recaps*
-- **Why fans care now:** AniList shows **Season 2 releasing** (ep 10 airs 2026-12-02).
-- **Likely hashtags:** `#ReincarnatedAsASword` `#Anime` `#Fantasy` `#SwordGod`
+### 5) **Overgeared** (Anime) — **Oversaturated-ish (gaming/VR-style gets flooded)**
+- **Why fans care now:** Releasing and trending; your MAL/AniList show active episode rollout soon.
+  - AniList: **ep 10 airs 2026-11-29**
+- **Hashtags:**
+  - `#Overgeared`
+  - `#VRMMO`
+  - `#AnimeEdits`
+  - `#BossFight`
 - **Moment to clip:**
-  - Focus on **the “evolution/upgrade” moment** (new ability activation, weapon transformation, or major threat introduction).
-  - Montage beats: **start with the ability glow** → mid with enemy reaction → **end on the first successful hit** + immediate aftermath close-up.
+  - “**raid boss wipe / clutch comeback**”:
+    - Hook: HP bar drop / failed attempt vibe
+    - Middle: 2–3 micro “strategy” shots (map/UI/party coordination style)
+    - Final beat: the **one clean finishing strike** + character POV reaction.
 - **Source link:**
-  - AniList Season 2: https://anilist.co/anime/159042
+  - AniList: https://anilist.co/anime/212888
 
 ---
 
-### 6) **Overgeared** — *releasing, niche enough to cut through*
-- **Why fans care now:** AniList trending shows **Overgeared releasing** (ep 10 airs 2026-11-29).
-- **Likely hashtags:** `#Overgeared` `#VRMMO` `#AnimeEdit` `#Gaming`
+### 6) **One Piece** (Anime) — **Extremely oversaturated**
+- **Why fans care now:** It’s the #1 evergreen fandom, and your sources show ongoing release momentum (next episode date listed).
+  - AniList: **ep 1181 airs 2027-01-03**
+  - MAL: airs weekly; massive follower base
+- **Hashtags:**
+  - `#OnePiece`
+  - `#Luffy`
+  - `#OnePieceEdit`
+  - `#Anime`
 - **Moment to clip:**
-  - Target a **“ranked battle / boss wipe recovery”** moment (these perform well in Shorts-style edits).
-  - Montage beats: hook with **HUD/UI overlay or countdown** → two tight fight exchanges → final beat: **the comeback finisher** (big visual impact frame).
+  - Because it’s oversaturated, make it **niche**:
+    - Clip a **single emotionally loaded character beat** (anger/resolve/tears) rather than giant action.
+    - Use text overlays like: “THIS PANEL HURT” / “THE SECOND HE REALIZED…” (avoid quoting dialogue verbatim).
 - **Source link:**
-  - AniList Overgeared: https://anilist.co/anime/212888
+  - AniList: https://anilist.co/anime/21
+  - (Oversaturation warning: this is likely to be hard to stand out unless the edit is unusually specific.)
 
 ---
 
-### 7) **Cyberpunk: Edgerunners 2** — *oversaturated (cyber + Netflix), but still strong*
-- **Why fans care now:** Your AniList lists it as **FINISHED**, but it’s still a very repostable fan-culture title; plus your “most-read” list shows **Cyberpunk: Edgerunners 2** wasn’t directly referenced, so I’m only using AniList trend presence.
-- **Likely hashtags:** `#Cyberpunk` `#Edgerunners` `#Anime` `#KillBillEnergy` (community-specific; may vary)
+### 7) **Steel Ball Run: JoJo’s Bizarre Adventure** (Anime) — **Not oversaturated (fanbase is huge but clip niches work)**
+- **Why fans care now:** Your MAL list shows it as top airing right now; JoJo fans often respond to **lineage of poses** + **“that shot”** moments.
+  - MAL: Steel Ball Run listed as top airing now
+- **Hashtags:**
+  - `#JoJo`
+  - `#SteelBallRun`
+  - `#JojosBizarreAdventure`
+  - `#AnimeEdits`
 - **Moment to clip:**
-  - Clip a **“team betrayal → sprint escape”** style sequence (high rewatch: hard cuts + emotion).
-  - Montage beats: **hook: kinetic street chase** → **quick character close-ups** → **final beat: a vow/ignition moment** (even without exact quotes).
+  - “**steel resolve pose → instant impact**” edit:
+    - Hook: iconic pose close-up frame
+    - Middle: quick directional movement / weapon read
+    - Final beat: impact freeze-frame (hold 0.4s) + quick text “DON’T LOOK AWAY”.
 - **Source link:**
-  - AniList Cyberpunk: Edgerunners 2: https://anilist.co/anime/195539
+  - MAL: https://myanimelist.net/anime/61469
 
 ---
 
-### 8) **Grand Theft Auto (series)** — *oversaturated but safe “remix” lane*
-- **Why fans care now:** Wikipedia most-read includes **Grand Theft Auto** (and GTA VI). Even if TikTok is primarily on GTA VI, fan edits reuse franchise beats.
-- **Likely hashtags:** `#GrandTheftAuto` `#GTA` `#Gaming` `#Memes`
+### 8) **Grand Theft Auto VI (music/sound angle)** — **Oversaturated, but useful for audio testing**
+- **Why fans care now:** Your Last.fm “Worldwide rising” list includes **“Flower In A Hurricane [From GTAVI: Original Score]”** (Justice). This suggests sound re-use potential.
+- **Hashtags:**
+  - `#GTAVI`
+  - `#TrendingSound`
+  - `#Shorts`
+  - `#Edit`
 - **Moment to clip:**
-  - Use **classic GTA chaos energy**: a “wanted level” escalation montage that ends on a **funny/tragic fail state** (Shorts loves punchline endings).
+  - Use the **music swell**: start the clip exactly at the beat drop; keep visuals in motion (camera shake / fast cuts) and end on a dramatic “camera snap” frame.
 - **Source link:**
-  - Wikipedia Grand Theft Auto: https://en.wikipedia.org/wiki/Grand_Theft_Auto
+  - Last.fm rising track list (GTAVI-related): (from your repo snippet) “**Flower In A Hurricane (feat… ) [From GTAVI: Original Score]** - Justice”
 
 ---
 
-## Oversaturation callouts
-- **Most oversaturated:** **GTA VI**, **GTA (series)** (also likely “One Piece” is always crowded).
-- **More cut-through:** **Black Clover S2**, **Apothecary Diaries S3**, **Reincarnated as a Sword S2**, **Overgeared**.
+## Quick “oversaturated” flags
+- **Most oversaturated:** **GTA VI**, **One Piece**
+- **Potentially oversaturated:** **Overgeared** (raid/comeback clips tend to flood quickly)
+- **More stand-out potential this week:** **Black Clover S2**, **The Apothecary Diaries S3**, **Reincarnated as a Sword S2**, **Steel Ball Run**
 
 ---
 
-## Quick question (so we can tighten the “source link” + “moment fans keep posting”)
-Do you want your clips sourced from:
-1) **official trailers / official episode previews**, or  
-2) **your own saved clips** (you send the exact timestamps you have)?
+## Source links recap (titles)
+- Black Clover S2: https://anilist.co/anime/195604  
+- Apothecary Diaries S3: https://anilist.co/anime/195516  
+- Reincarnated as a Sword S2: https://anilist.co/anime/159042  
+- Overgeared: https://anilist.co/anime/212888  
+- One Piece: https://anilist.co/anime/21  
+- Steel Ball Run (JoJo): https://myanimelist.net/anime/61469  
 
-If you choose (1), I’ll format each title with **specific official trailer/episode-preview links** (no leaked footage). If (2), tell me the episode numbers/timestamps you have and I’ll build the **exact 30–40s beat map** per title.
+---
+
+If you want, I can turn this into a **clip list for Claude** (exact 30–40s edit blueprint per title: hook text, cut lengths, and final beat) — but I’d need you to confirm which content you already have licensed/available in your clip library (movies/games/anime).
