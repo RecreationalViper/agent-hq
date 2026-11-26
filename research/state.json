@@ -1,5 +1,19 @@
 {
   "covered": [
+    "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+    "https://commandcode.ai/moat",
+    "https://twitter.com/thsottiaux/status/2125784147889393806",
+    "https://modaic.dev/blog/latency-doesnt-lie",
+    "https://github.com/lsernau/grh-lean",
+    "https://arxiv.org/abs/2611.34875v1",
+    "https://arxiv.org/abs/2611.34852v1",
+    "https://devblogs.microsoft.com/blog/do-inconsistent-docs-hurt-ai-coding-agents/",
+    "https://devnull.land/amd-specific-llama-cpp",
+    "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+    "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+    "https://progrium.github.io/minipg/",
+    "https://1password.com/blog/update-on-nov-2026-security-incident",
+    "https://s.conao3.com/blog/2026/e4f733",
     "https://openai.com/index/introducing-shirudo",
     "https://www.techtarget.com/news/model-release-gemini-4-neon-gpt-62-astra-sol-target-business-productivit/875440/",
     "https://www.qt.io/blog/qt-creator-21-released",
@@ -180,6 +194,6 @@
     "https://hunch.net/?p=13764006",
     "https://www.kadoa.com/companies/insights/ai-selloff-perspective"
   ],
-  "lastRun": "2026-11-23",
-  "lastNotion": "2026-11-23"
+  "lastRun": "2026-11-26",
+  "lastNotion": "2026-11-26"
 }
