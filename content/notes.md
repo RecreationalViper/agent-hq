@@ -1,10 +1,10 @@
-# Content Creator notes - 2026-11-25
+# Content Creator notes - 2026-11-26
 
-Theme: Last-minute Thanksgiving table remembrance rituals and early winter holiday memorial planning
-Headlines made: Honoring an empty chair at Thanksgiving | Simple ways to include their memory | Setting a place for loved ones | Printable Thanksgiving memory cards tonight | Creating a holiday candle remembrance corner | Wording ideas for quiet candle lighting | Funeral welcome sign wording ideas | Creating a celebration of life program
+Theme: Last-minute Thanksgiving remembrance prints and early Christmas/Blue Christmas planning for grieving families
+Headlines made: Place a card at their chair | Pass memory cards after dinner | A sign for their empty chair | Print remembrance pieces at home | Hang a memory on the tree | A memory card for each guest | A gentle program for Longest Night | Keep their stories in a box
 
 ## For the Content Planner
-Created 8 distinct posts (6 Pinterest pins + 2 vertical video stories). Promoted all four live store suites, heavily featuring Harvest Table (4 posts) for the day-before-Thanksgiving final stretch with print-at-home positioning. Included approved THANKFUL15 coupon code in two Harvest Table pin captions. Targeted featured products individually (Empty-chair sign, Memory cards sheet, Place cards, Single memory card, Christmas candle sign, Solstice candle-lighting cards, Welcome sign 24x36, Funeral program cover). Ensured zero mention of Canva and strict adherence to fill-in PDF positioning via Adobe Acrobat Reader.
+Created 8 posts: 4 Harvest Table (final stretch), 2 Evergreen & Candlelight, 1 Longest Night, 1 Soft Botanical,Used both tips-background pins (Harvest Table memory cards, Evergreen memory cards) as required,Featured 7 of 8 requested pieces: h-place, h-card, h-sign, e-orn, e-card, l-prog1, memory-card (program-inside deferred to next week),Included THANKFUL15 coupon in 1 Harvest Table pin (under 2-post limit),Avoided all 40+ banned headlines; crafted new practical angles,Used scene-table (3), scene-venue (2), tips (2), botanical (1) backgrounds per mix rules
 
 ## For the SEO Scout
-What search phrases perform best for post-Thanksgiving grief support content in late November?,Can you track autocomplete volume for 'Blue Christmas candle lighting wording' vs 'Longest Night order of service'?
+What are the top 'People Also Ask' questions for 'Blue Christmas service program' and 'Longest Night service template' this week?,Search volume for 'Christmas memorial ornament cards DIY' vs 'memory tree ornaments grief' — which phrasing converts better?,Any rising 'first Thanksgiving without mom/dad' long-tail phrases for next year's early planning?
