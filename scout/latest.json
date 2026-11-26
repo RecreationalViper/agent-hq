@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-25T19:27:32.606Z",
-  "date": "2026-11-25",
+  "generatedAt": "2026-11-26T03:43:17.405Z",
+  "date": "2026-11-26",
   "token": true,
   "searches": {
     "ran": 12,
@@ -9,34 +9,35 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 19,
-  "rateRemaining": 9,
+  "apiCalls": 17,
+  "rateRemaining": 4993,
   "newItems": 1,
   "blockedToday": 0,
   "shortlist": [
     {
-      "name": "Ebazhanov/linkedin-skill-assessments-quizzes",
-      "url": "https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes",
-      "description": "Full reference of LinkedIn answers 2024 for skill assessments (aws-lambda, rest-api, javascript, react, git, html, jquery, mongodb, java, Go, python, machine-learning, power-point) linkedin excel test lösungen, linkedin machine learning test LinkedIn test questions and answers",
-      "stars": 28890,
-      "forks": 12819,
+      "name": "mutonby/openshorts",
+      "url": "https://github.com/mutonby/openshorts",
+      "description": "Open source AI clip generator: turns long videos into viral 9:16 shorts with AI moment detection, face tracking, subtitles and dubbing. Self-host free with Docker (MIT), or use the cloud with GPU speed from $12/mo. MCP server and API for AI agents.",
+      "stars": 9900,
+      "forks": 2101,
       "language": "Python",
-      "license": "AGPL-3.0",
-      "pushedAt": "2026-11-25T08:20:12Z",
-      "category": "skills",
-      "score": 64,
+      "license": "MIT",
+      "pushedAt": "2026-11-25T22:45:44Z",
+      "category": "free-tokens",
+      "score": 62,
       "tier": "watch",
       "reasons": [
-        "matched the search but not clearly about this topic",
-        "28,890 stars",
+        "9,900 stars",
         "updated this week",
-        "AGPL-3.0 license",
-        "well established"
+        "MIT license",
+        "well established",
+        "third-party source, needs checking"
       ],
       "flags": [
-        "off-topic"
+        "unverified-offer",
+        "self-host-required"
       ],
-      "skillFiles": false,
+      "skillFiles": null,
       "source": "search",
       "newborn": false,
       "skillPath": null,
@@ -46,38 +47,39 @@
   "watched": [],
   "newborn": [],
   "byCategory": {
-    "skills": [
+    "skills": [],
+    "enhancement": [],
+    "free-tokens": [
       {
-        "name": "Ebazhanov/linkedin-skill-assessments-quizzes",
-        "url": "https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes",
-        "description": "Full reference of LinkedIn answers 2024 for skill assessments (aws-lambda, rest-api, javascript, react, git, html, jquery, mongodb, java, Go, python, machine-learning, power-point) linkedin excel test lösungen, linkedin machine learning test LinkedIn test questions and answers",
-        "stars": 28890,
-        "forks": 12819,
+        "name": "mutonby/openshorts",
+        "url": "https://github.com/mutonby/openshorts",
+        "description": "Open source AI clip generator: turns long videos into viral 9:16 shorts with AI moment detection, face tracking, subtitles and dubbing. Self-host free with Docker (MIT), or use the cloud with GPU speed from $12/mo. MCP server and API for AI agents.",
+        "stars": 9900,
+        "forks": 2101,
         "language": "Python",
-        "license": "AGPL-3.0",
-        "pushedAt": "2026-11-25T08:20:12Z",
-        "category": "skills",
-        "score": 64,
+        "license": "MIT",
+        "pushedAt": "2026-11-25T22:45:44Z",
+        "category": "free-tokens",
+        "score": 62,
         "tier": "watch",
         "reasons": [
-          "matched the search but not clearly about this topic",
-          "28,890 stars",
+          "9,900 stars",
           "updated this week",
-          "AGPL-3.0 license",
-          "well established"
+          "MIT license",
+          "well established",
+          "third-party source, needs checking"
         ],
         "flags": [
-          "off-topic"
+          "unverified-offer",
+          "self-host-required"
         ],
-        "skillFiles": false,
+        "skillFiles": null,
         "source": "search",
         "newborn": false,
         "skillPath": null,
         "commitUrl": null
       }
     ],
-    "enhancement": [],
-    "free-tokens": [],
     "efficiency": []
   },
   "blocked": [],

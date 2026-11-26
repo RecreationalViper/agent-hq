@@ -1,13 +1,13 @@
-# GitHub Radar — 2026-11-25
+# GitHub Radar — 2026-11-26
 
-> Scanned 12 of 33 saved searches (12 returned data, 0 unchanged, 0 failed). 19 GitHub API calls, authenticated. Zero AI tokens used.
+> Scanned 12 of 33 saved searches (12 returned data, 0 unchanged, 0 failed). 17 GitHub API calls, authenticated. Zero AI tokens used.
 
 ## Start here (1)
 
-- **[Ebazhanov/linkedin-skill-assessments-quizzes](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes)** 🟡 WATCH · score 64/100 · ⭐ 28,890 · AGPL-3.0 · updated 0d ago
-  - Full reference of LinkedIn answers 2024 for skill assessments (aws-lambda, rest-api, javascript, react, git, html, jquery, mongodb, java, Go, pytho…
-  - Why: matched the search but not clearly about this topic; 28,890 stars; updated this week; AGPL-3.0 license; well established
-  - Watch out: matched the search but not clearly on topic
+- **[mutonby/openshorts](https://github.com/mutonby/openshorts)** 🟡 WATCH · score 62/100 · ⭐ 9,900 · MIT · updated 0d ago
+  - Open source AI clip generator: turns long videos into viral 9:16 shorts with AI moment detection, face tracking, subtitles and dubbing. Self-host f…
+  - Why: 9,900 stars; updated this week; MIT license; well established; third-party source, needs checking
+  - Watch out: third-party claim, verify on the provider's own site; needs a machine running, not phone-only
 
 ## Agent skills you could install (0)
 
