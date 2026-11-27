@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-26T17:08:38.448Z",
-  "date": "2026-11-26",
+  "generatedAt": "2026-11-27T01:49:27.961Z",
+  "date": "2026-11-27",
   "token": true,
   "searches": {
     "ran": 12,
@@ -9,159 +9,75 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 26,
-  "rateRemaining": 9,
-  "newItems": 4,
+  "apiCalls": 22,
+  "rateRemaining": 8,
+  "newItems": 2,
   "blockedToday": 0,
-  "shortlist": [
+  "shortlist": [],
+  "watched": [
     {
-      "name": "yetone/magpie",
-      "url": "https://github.com/yetone/magpie",
-      "description": "Pool every plan you pay for — Claude, ChatGPT, Copilot, GLM Coding Plan, Kimi Code and more — and use them in any agent: Claude Code, Codex, Claude Desktop… When one runs out, the next takes over.",
-      "stars": 41963,
-      "forks": 3854,
-      "language": "Go",
-      "license": "MIT",
-      "pushedAt": "2026-11-26T16:40:37Z",
-      "category": "efficiency",
-      "score": 74,
+      "name": "google/skills",
+      "url": "https://github.com/google/skills",
+      "description": "Agent Skills for Google products and technologies",
+      "stars": 24712,
+      "forks": 2058,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-26T17:51:57Z",
+      "category": "skills",
+      "score": 100,
       "tier": "adopt",
       "reasons": [
-        "41,963 stars",
-        "updated this week",
-        "MIT license",
-        "well established"
-      ],
-      "flags": [],
-      "skillFiles": null,
-      "source": "search",
-      "newborn": false,
-      "skillPath": null,
-      "commitUrl": null
-    }
-  ],
-  "watched": [],
-  "newborn": [
-    {
-      "name": "nexu-io/opengame",
-      "url": "https://github.com/nexu-io/opengame",
-      "description": "The Super Game Agent — the Unity & Unreal for AI agents, with 100+ viral games to remix. Turn 20+ coding agents (Claude Code, Codex, DeepSeek, etc.) into a full-stack AI game studio. Build and publish 3D & mini-games to WeChat, Douyin, TikTok, Telegram, itch.io, and more.",
-      "stars": 575,
-      "forks": 110,
-      "language": "TypeScript",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-26T17:05:13Z",
-      "category": "skills",
-      "score": 82,
-      "tier": "watch",
-      "reasons": [
-        "filed under skills",
-        "575 stars",
+        "new skill file: plugins/home/google-home-developer/skills/finding-google-skills/SKILL.md",
+        "24,712 stars",
         "updated this week",
         "Apache-2.0 license",
-        "new repo, 1 day old",
-        "early traction",
+        "first-party / well-known maintainer",
+        "well established",
         "contains SKILL.md skill files"
       ],
-      "flags": [
-        "newborn"
-      ],
+      "flags": [],
       "skillFiles": true,
-      "source": "search",
-      "newborn": true,
-      "skillPath": null,
-      "commitUrl": null
+      "source": "watched",
+      "newborn": false,
+      "skillPath": "plugins/home/google-home-developer/skills/finding-google-skills/SKILL.md",
+      "commitUrl": "https://github.com/google/skills/commits/6dc0d53303b9f96f166ac72d7f8f1920cb260f24"
     },
     {
-      "name": "petergyang/video-explainer",
-      "url": "https://github.com/petergyang/video-explainer",
-      "description": "Turn any topic, doc, codebase, or URL into a crisp 1-minute explainer video in Motion, Illustrated, or 3D style",
-      "stars": 412,
-      "forks": 38,
+      "name": "google/skills",
+      "url": "https://github.com/google/skills",
+      "description": "Agent Skills for Google products and technologies",
+      "stars": 24712,
+      "forks": 2058,
       "language": "Python",
-      "license": "MIT",
-      "pushedAt": "2026-11-25T18:00:55Z",
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-26T17:51:57Z",
       "category": "skills",
-      "score": 74,
-      "tier": "watch",
+      "score": 100,
+      "tier": "adopt",
       "reasons": [
-        "filed under skills",
-        "412 stars",
+        "new skill file: skills/cloud/cloud-operator-admin-setup/SKILL.md",
+        "24,712 stars",
         "updated this week",
-        "MIT license",
-        "new repo, 11 days old",
-        "early traction"
-      ],
-      "flags": [
-        "newborn"
-      ],
-      "skillFiles": null,
-      "source": "search",
-      "newborn": true,
-      "skillPath": null,
-      "commitUrl": null
-    },
-    {
-      "name": "matheusmongarde/skill-prospeccao",
-      "url": "https://github.com/matheusmongarde/skill-prospeccao",
-      "description": "Playbook operacional completo para transformar qualquer agente de IA (OpenBot, Claude Code, Codex, Cursor ou runtime próprio) em um operador comercial sênior de ponta a ponta. Funciona para qualquer produto ou serviço (SaaS, software sob medida, agência, consultoria, profissionais liberais, indústria, comércio B2B, serviços locais)",
-      "stars": 74,
-      "forks": 17,
-      "language": "",
-      "license": "MIT",
-      "pushedAt": "2026-11-24T17:22:03Z",
-      "category": "skills",
-      "score": 73,
-      "tier": "watch",
-      "reasons": [
-        "filed under skills",
-        "updated this week",
-        "MIT license",
-        "new repo, 2 days old",
-        "early traction",
+        "Apache-2.0 license",
+        "first-party / well-known maintainer",
+        "well established",
         "contains SKILL.md skill files"
       ],
-      "flags": [
-        "newborn"
-      ],
+      "flags": [],
       "skillFiles": true,
-      "source": "search",
-      "newborn": true,
-      "skillPath": null,
-      "commitUrl": null
+      "source": "watched",
+      "newborn": false,
+      "skillPath": "skills/cloud/cloud-operator-admin-setup/SKILL.md",
+      "commitUrl": "https://github.com/google/skills/commits/6dc0d53303b9f96f166ac72d7f8f1920cb260f24"
     }
   ],
+  "newborn": [],
   "byCategory": {
     "skills": [],
     "enhancement": [],
     "free-tokens": [],
-    "efficiency": [
-      {
-        "name": "yetone/magpie",
-        "url": "https://github.com/yetone/magpie",
-        "description": "Pool every plan you pay for — Claude, ChatGPT, Copilot, GLM Coding Plan, Kimi Code and more — and use them in any agent: Claude Code, Codex, Claude Desktop… When one runs out, the next takes over.",
-        "stars": 41963,
-        "forks": 3854,
-        "language": "Go",
-        "license": "MIT",
-        "pushedAt": "2026-11-26T16:40:37Z",
-        "category": "efficiency",
-        "score": 74,
-        "tier": "adopt",
-        "reasons": [
-          "41,963 stars",
-          "updated this week",
-          "MIT license",
-          "well established"
-        ],
-        "flags": [],
-        "skillFiles": null,
-        "source": "search",
-        "newborn": false,
-        "skillPath": null,
-        "commitUrl": null
-      }
-    ]
+    "efficiency": []
   },
   "blocked": [],
   "watching": [
@@ -187,13 +103,6 @@
       "first": "2026-11-06"
     },
     {
-      "name": "google/skills",
-      "score": 94,
-      "tier": "adopt",
-      "category": "skills",
-      "first": "2026-11-06"
-    },
-    {
       "name": "agentes-chat/agentes-chat",
       "score": 90,
       "tier": "watch",
@@ -206,10 +115,17 @@
       "tier": "watch",
       "category": "skills",
       "first": "2026-11-18"
+    },
+    {
+      "name": "DIYgod/pinky",
+      "score": 88,
+      "tier": "watch",
+      "category": "skills",
+      "first": "2026-11-17"
     }
   ],
   "watchedRepos": {
     "ran": 3,
-    "newSkillFiles": 0
+    "newSkillFiles": 2
   }
 }
