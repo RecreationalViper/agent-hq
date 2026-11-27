@@ -1,17 +1,13 @@
 # GitHub Radar — 2026-11-27
 
-> Scanned 12 of 33 saved searches (12 returned data, 0 unchanged, 0 failed). 22 GitHub API calls, authenticated. Zero AI tokens used.
+> Scanned 12 of 33 saved searches (12 returned data, 0 unchanged, 0 failed). 15 GitHub API calls, authenticated. Zero AI tokens used.
 
-## Start here (0)
+## Start here (1)
 
-_Nothing new cleared the quality bar this scan. That is a normal, healthy result — the radar is rotating through its searches and will cover the rest next time._
-
-## New inside repos you watch (2)
-
-- **[google/skills](https://github.com/google/skills)** 🟢 ADOPT · ⭐ 24,712 · Apache-2.0
-  - Added: [plugins/home/google-home-developer/skills/finding-google-skills/SKILL.md](https://github.com/google/skills/blob/HEAD/plugins/home/google-home-developer/skills/finding-google-skills/SKILL.md)
-- **[google/skills](https://github.com/google/skills)** 🟢 ADOPT · ⭐ 24,712 · Apache-2.0
-  - Added: [skills/cloud/cloud-operator-admin-setup/SKILL.md](https://github.com/google/skills/blob/HEAD/skills/cloud/cloud-operator-admin-setup/SKILL.md)
+- **[janus-sh/Janus](https://github.com/janus-sh/Janus)** 🟡 WATCH · score 60/100 · ⭐ 6,558 · MIT · updated 1d ago
+  - A free coding agent in your terminal. It runs on the smartest free model that is up today.
+  - Why: 6,558 stars; updated this week; MIT license; well established; third-party source, needs checking
+  - Watch out: third-party claim, verify on the provider's own site
 
 ## Agent skills you could install (0)
 
@@ -34,9 +30,9 @@ _Nothing else new here this scan._
 - [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) — score 96, first seen 2026-11-06, adopt
 - [modelcontextprotocol/python-sdk](https://github.com/modelcontextprotocol/python-sdk) — score 96, first seen 2026-11-06, adopt
 - [obra/superpowers](https://github.com/obra/superpowers) — score 94, first seen 2026-11-06, adopt
+- [google/skills](https://github.com/google/skills) — score 94, first seen 2026-11-06, adopt
 - [agentes-chat/agentes-chat](https://github.com/agentes-chat/agentes-chat) — score 90, first seen 2026-11-17, watch
 - [erkamyaman/rust-anything](https://github.com/erkamyaman/rust-anything) — score 90, first seen 2026-11-18, watch
-- [DIYgod/pinky](https://github.com/DIYgod/pinky) — score 88, first seen 2026-11-17, watch
 
 ## How to read this
 

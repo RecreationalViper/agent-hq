@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T01:49:27.961Z",
+  "generatedAt": "2026-11-27T12:48:23.839Z",
   "date": "2026-11-27",
   "token": true,
   "searches": {
@@ -9,74 +9,75 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 22,
-  "rateRemaining": 8,
-  "newItems": 2,
+  "apiCalls": 15,
+  "rateRemaining": 4997,
+  "newItems": 1,
   "blockedToday": 0,
-  "shortlist": [],
-  "watched": [
+  "shortlist": [
     {
-      "name": "google/skills",
-      "url": "https://github.com/google/skills",
-      "description": "Agent Skills for Google products and technologies",
-      "stars": 24712,
-      "forks": 2058,
-      "language": "Python",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-26T17:51:57Z",
-      "category": "skills",
-      "score": 100,
-      "tier": "adopt",
+      "name": "janus-sh/Janus",
+      "url": "https://github.com/janus-sh/Janus",
+      "description": "A free coding agent in your terminal. It runs on the smartest free model that is up today.",
+      "stars": 6558,
+      "forks": 917,
+      "language": "JavaScript",
+      "license": "MIT",
+      "pushedAt": "2026-11-26T11:26:01Z",
+      "category": "free-tokens",
+      "score": 60,
+      "tier": "watch",
       "reasons": [
-        "new skill file: plugins/home/google-home-developer/skills/finding-google-skills/SKILL.md",
-        "24,712 stars",
+        "6,558 stars",
         "updated this week",
-        "Apache-2.0 license",
-        "first-party / well-known maintainer",
+        "MIT license",
         "well established",
-        "contains SKILL.md skill files"
+        "third-party source, needs checking"
       ],
-      "flags": [],
-      "skillFiles": true,
-      "source": "watched",
-      "newborn": false,
-      "skillPath": "plugins/home/google-home-developer/skills/finding-google-skills/SKILL.md",
-      "commitUrl": "https://github.com/google/skills/commits/6dc0d53303b9f96f166ac72d7f8f1920cb260f24"
-    },
-    {
-      "name": "google/skills",
-      "url": "https://github.com/google/skills",
-      "description": "Agent Skills for Google products and technologies",
-      "stars": 24712,
-      "forks": 2058,
-      "language": "Python",
-      "license": "Apache-2.0",
-      "pushedAt": "2026-11-26T17:51:57Z",
-      "category": "skills",
-      "score": 100,
-      "tier": "adopt",
-      "reasons": [
-        "new skill file: skills/cloud/cloud-operator-admin-setup/SKILL.md",
-        "24,712 stars",
-        "updated this week",
-        "Apache-2.0 license",
-        "first-party / well-known maintainer",
-        "well established",
-        "contains SKILL.md skill files"
+      "flags": [
+        "unverified-offer"
       ],
-      "flags": [],
-      "skillFiles": true,
-      "source": "watched",
+      "skillFiles": null,
+      "source": "search",
       "newborn": false,
-      "skillPath": "skills/cloud/cloud-operator-admin-setup/SKILL.md",
-      "commitUrl": "https://github.com/google/skills/commits/6dc0d53303b9f96f166ac72d7f8f1920cb260f24"
+      "skillPath": null,
+      "commitUrl": null
     }
   ],
+  "watched": [],
   "newborn": [],
   "byCategory": {
     "skills": [],
     "enhancement": [],
-    "free-tokens": [],
+    "free-tokens": [
+      {
+        "name": "janus-sh/Janus",
+        "url": "https://github.com/janus-sh/Janus",
+        "description": "A free coding agent in your terminal. It runs on the smartest free model that is up today.",
+        "stars": 6558,
+        "forks": 917,
+        "language": "JavaScript",
+        "license": "MIT",
+        "pushedAt": "2026-11-26T11:26:01Z",
+        "category": "free-tokens",
+        "score": 60,
+        "tier": "watch",
+        "reasons": [
+          "6,558 stars",
+          "updated this week",
+          "MIT license",
+          "well established",
+          "third-party source, needs checking"
+        ],
+        "flags": [
+          "unverified-offer"
+        ],
+        "skillFiles": null,
+        "source": "search",
+        "newborn": false,
+        "skillPath": null,
+        "commitUrl": null
+      }
+    ],
     "efficiency": []
   },
   "blocked": [],
@@ -103,6 +104,13 @@
       "first": "2026-11-06"
     },
     {
+      "name": "google/skills",
+      "score": 94,
+      "tier": "adopt",
+      "category": "skills",
+      "first": "2026-11-06"
+    },
+    {
       "name": "agentes-chat/agentes-chat",
       "score": 90,
       "tier": "watch",
@@ -115,17 +123,10 @@
       "tier": "watch",
       "category": "skills",
       "first": "2026-11-18"
-    },
-    {
-      "name": "DIYgod/pinky",
-      "score": 88,
-      "tier": "watch",
-      "category": "skills",
-      "first": "2026-11-17"
     }
   ],
   "watchedRepos": {
     "ran": 3,
-    "newSkillFiles": 2
+    "newSkillFiles": 0
   }
 }
