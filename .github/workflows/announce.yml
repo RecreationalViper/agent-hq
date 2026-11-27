@@ -1,0 +1,24 @@
+name: Announce (Discord)
+# Manual: post a message + repo images to a Discord channel. Used for new collection hand-offs.
+on:
+  workflow_dispatch:
+    inputs:
+      channel: { description: "Channel key from discord.json (e.g. listings)", default: "listings" }
+      text: { description: "Message text", required: true }
+      files: { description: "Repo image paths, space-separated", default: "" }
+permissions:
+  contents: read
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Post
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          CHANNEL: ${{ inputs.channel }}
+          TEXT: ${{ inputs.text }}
+          FILES: ${{ inputs.files }}
+        run: node tools/announce.mjs "$CHANNEL" "$TEXT" $FILES

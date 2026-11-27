@@ -139,8 +139,8 @@
     {
       "id": "a-life",
       "name": "A Life",
-      "status": "built",
-      "note": "awaiting owner final approval (owner chose design B 'A Life', 2026-11-27); replaces Rainbow Bridge",
+      "status": "approved",
+      "note": "approved by owner 2026-11-27; replaces Rainbow Bridge. checkout is empty until the owner uploads it to Payhip: do not link a checkout or run promotions until it is a real payhip.com URL.",
       "audience": "Families who want the program to tell the person's story; celebration of life or traditional service",
       "look": "magazine style: newsprint white, black ink, one oxblood accent; big 'A Life' masthead, photo cover, order of service as contents page, story as the feature",
       "fonts": "Cormorant Garamond + Inter SemiBold (fill-in text in Times/Helvetica)",
@@ -160,13 +160,21 @@
         "products/fillable/previews/a-life/a-life-suite.jpg",
         "products/fillable/previews/a-life/a-life-program.jpg"
       ],
-      "tryPage": "store/try-a-life.html (not live yet)"
+      "tryPage": "https://foreverheld.pages.dev/try-a-life.html",
+      "approved": "2026-11-27",
+      "marketFrom": "2026-11-27",
+      "marketUntil": "9999-12-31",
+      "season": "year-round",
+      "delivery": "fill-in PDFs: buyers type in free Adobe Acrobat Reader, print at home on US Letter or at a print shop",
+      "checkout": "",
+      "price": "$12.99",
+      "previewUrl": "https://foreverheld.pages.dev/img/a-life/a-life-suite.jpg"
     },
     {
       "id": "a-life-tonight",
       "name": "A Life Tonight Kit",
-      "status": "built",
-      "note": "awaiting owner final approval (requested 2026-11-27)",
+      "status": "approved",
+      "note": "approved by owner 2026-11-27; low-cost entry kit in the A Life look for services that are very soon. checkout is empty until the owner uploads it to Payhip: do not link a checkout or run promotions until it is a real payhip.com URL.",
       "audience": "Families whose service is very soon; low-cost entry product",
       "look": "same as A Life",
       "files": "products/fillable/out/A Life Tonight Kit/",
@@ -179,7 +187,16 @@
       "suggestedPrice": "$4.99",
       "previews": [
         "products/fillable/previews/a-life/tonight-kit.jpg"
-      ]
+      ],
+      "approved": "2026-11-27",
+      "marketFrom": "2026-11-27",
+      "marketUntil": "9999-12-31",
+      "season": "year-round",
+      "delivery": "fill-in PDFs: buyers type in free Adobe Acrobat Reader, print at home on US Letter or at a print shop",
+      "checkout": "",
+      "tryPage": "https://foreverheld.pages.dev/try-a-life.html",
+      "price": "$4.99",
+      "previewUrl": "https://foreverheld.pages.dev/img/a-life/tonight-kit.jpg"
     }
   ],
   "promos": [

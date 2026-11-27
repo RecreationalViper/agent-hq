@@ -68,6 +68,12 @@
   }));
   document.getElementById("f").addEventListener("submit", (e) => e.preventDefault());
 
+  // Buy buttons stay "Coming soon" until they point at a real Payhip product.
+  document.querySelectorAll("[data-buy]").forEach((a) => {
+    if (!/^https:\/\/payhip\.com\//.test(a.getAttribute("href") || "")) {
+      a.removeAttribute("href"); a.setAttribute("aria-disabled", "true"); a.textContent = "Coming soon"; a.style.opacity = ".55";
+    }
+  });
   layout();
   if (reduce) { typed = { nm: SAMPLE.nm, cl: SAMPLE.cl }; render(); }
   else { render(); setTimeout(step, 500); }
