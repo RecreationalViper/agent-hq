@@ -1,10 +1,12 @@
-_Checked 2026-11-26 23:59 UTC._
+_Checked 2026-11-27 23:44 UTC._
 
 # HQ health — needs attention
 
-Agents alive: **23** · approved collections: **4** · problems: **2** · warnings: **8**
+Agents alive: **23** · approved collections: **6** · problems: **4** · warnings: **8**
 
 ## Needs attention
+- **products** — A Life is approved but has no checkout link
+- **products** — A Life Tonight Kit is approved but has no checkout link
 - **links** — 404 — dead link https://fonts.googleapis.com
 - **links** — 404 — dead link https://fonts.gstatic.com
 
@@ -21,17 +23,17 @@ Agents alive: **23** · approved collections: **4** · problems: **2** · warnin
 <details><summary>What passed</summary>
 
 - agents — Daily Focus (daily-task) alive, last report 0d ago
-- agents — Seasonal Planner (seasonal) alive, last report 3d ago
-- agents — Content Planner (content) alive, last report 3d ago
-- agents — Product Ideas (ideas) alive, last report 1d ago
-- agents — Listing Writer (listing) alive, last report 6d ago
-- agents — Credit Scout (credit-scout) alive, last report 3d ago
+- agents — Seasonal Planner (seasonal) alive, last report 4d ago
+- agents — Content Planner (content) alive, last report 4d ago
+- agents — Product Ideas (ideas) alive, last report 2d ago
+- agents — Listing Writer (listing) alive, last report 0d ago
+- agents — Credit Scout (credit-scout) alive, last report 4d ago
 - agents — GitHub Radar (github-radar) alive, last report 0d ago
-- agents — Competitor Scout (competitor-scout) alive, last report 2d ago
-- agents — Partner Finder (partner-finder) alive, last report 1d ago
-- agents — SEO Scout (seo) alive, last report 0d ago
-- agents — Weekly Review (Manager) (review) alive, last report 4d ago
-- agents — Product Builder (product-builder) alive, last report 0d ago
+- agents — Competitor Scout (competitor-scout) alive, last report 3d ago
+- agents — Partner Finder (partner-finder) alive, last report 2d ago
+- agents — SEO Scout (seo) alive, last report 1d ago
+- agents — Weekly Review (Manager) (review) alive, last report 5d ago
+- agents — Product Builder (product-builder) alive, last report 1d ago
 - agents — Trend Scout (studio-scout) alive, last report 0d ago
 - agents — TikTok Sound Watcher (tiktok-sounds) alive, last report 0d ago
 - agents — TikTok Format Watcher (tiktok-formats) alive, last report 0d ago
@@ -41,11 +43,13 @@ Agents alive: **23** · approved collections: **4** · problems: **2** · warnin
 - agents — Social Strategist (studio-writer) alive, last report 0d ago
 - agents — Studio Critic (studio-critic) alive, last report 0d ago
 - agents — Growth Coach (growth-coach) alive, last report 0d ago
-- agents — Producer (studio-producer) alive, last report 3d ago
-- agents — Competitor Radar (competitor-radar) alive, last report 0d ago
+- agents — Producer (studio-producer) alive, last report 4d ago
+- agents — Competitor Radar (competitor-radar) alive, last report 1d ago
 - products — Evergreen & Candlelight is in season until 2026-12-26
 - products — Longest Night is in season until 2026-12-31
 - products — Harvest Table is in season until 2026-11-27
-- products — 4 approved collection(s) passed checks out
+- products — A Life is in season until 9999-12-31
+- products — A Life Tonight Kit is in season until 9999-12-31
+- products — 6 approved collection(s) passed checks out
 
 </details>
