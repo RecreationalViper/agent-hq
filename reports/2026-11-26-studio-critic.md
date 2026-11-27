@@ -6,35 +6,54 @@
 
 ---
 
-## Clip 1: GTA VI — “First Chaos Escalation”
+## 1) GTA VI — “Prison bus door → neon Vice City reveal”
 
-| Metric | Score | Why |
-|--------|-------|-----|
-| Hook Strength | 7/10 | Cold-open explosion + Justice downbeat sync is the right grammar, but the on-screen text “HE THOUGHT HE’D GET AWAY…” is generic filler. The visual *is* the hook — don’t annotate it. |
-| Rewatch Value | 6/10 | Tank hijack → detonation chain is a solid peak, but 35 s of chase footage without a single perspective shift (POV → wide → drone → first-person) fatigues. The “unbroken stretch” rule helps retention only if the geography stays readable. |
-| Comment Bait | 5/10 | “What’s the wildest 5-star escape?” is the most generic gaming question possible. The rewatch prompt (“Rewatched 12 times for the glass shatter”) is stronger — lead with that energy. |
-| Copyright Risk | **3/10** | **Critical flaw.** Twitch VOD gameplay (illojuan) ≠ licensed reuse. Rockstar/Take-Two issue Content ID claims and manual strikes on *monetized* Shorts using streamer footage — even “transformative” edits. The Justice track *is* from the official score (good), but the footage source makes this a liability on a 0-sub channel. |
+| Metric | Score | Notes |
+|--------|-------|-------|
+| Hook strength | **8/10** | Prison bus door opening is a strong visual hook; bass drop sync helps. But it’s *trailer footage everyone has*—no exclusivity. |
+| Rewatch value | **7/10** | Freeze-frame “LOOK—pause here” works, but the skyline reveal is a known beat. Needs a *detail* only 1% catch. |
+| Comment bait | **6/10** | Captions ask “first thing you’d do” and “hidden Easter egg”—generic. No specific debate trigger. |
+| Copyright risk | **4/10** | **Risky.** Official Trailer 2 is heavily claimed by Rockstar/Take-Two. Even 15s can trigger Content ID. No transformative commentary, just music sync. |
 
-**One change that matters most:** **Swap every frame for official Rockstar Games trailer / press-kit footage only.** If zero official chaos-escalation clips exist yet, **drop this plan** and build a “Vice City Vibe” montage from the *official* trailers (aerials, neon, car culture) synced to the Justice track — sound/topic lock stays, copyright risk drops to 8/10.
+**One change that would most improve it:**  
+Add **voiceover or on-screen text commentary** breaking down *one* specific detail (e.g., “That neon sign? It’s a real Miami landmark—here’s the address”). Makes it transformative commentary, not just a trailer rip.
 
----
-
-## Clip 2: The Apothecary Diaries S3 — “The Poison Wasn’t Poison”
-
-| Metric | Score | Why |
-|--------|-------|-----|
-| Hook Strength | 7/10 | Extreme close-up eye reflection → micro-expression is textbook anime hook. Text “THE MOMENT SHE REALIZED THE POISON…” wastes 1.5 s stating the obvious — cut it, let the face do the work. |
-| Rewatch Value | 8/10 | The 3-frame “oh” + plant revival + Jinshi smile = three distinct re-watch triggers in one stretch. The unbroken 22 s deduction run *is* the engine — protect it. |
-| Comment Bait | 7/10 | “Which ingredient did YOU think was the poison?” is specific, low-friction, and invites theory-crafting. “Jinshi’s first genuine smile this arc” targets the shipper crowd — good. |
-| Copyright Risk | **3/10** | Toho Animation / Aniplex are the most aggressive anime rightsholders on Shorts. Ep 8 (latest) = zero safe harbor. Even 10 s continuous = Content ID match. “Legally accessible” ≠ “licensed for derivative use.” |
-
-**One change that matters most:** **Use ONLY official Toho Animation promo / trailer / key-visual assets released on their YouTube/Twitter.** If the “poison reveal” beat isn’t in official promos, pivot to a **Season 1–2 iconic moment** (Maomao’s first deduction, Jinshi’s mask slip) — older footage has stronger fair-use precedent and existing fan recognition.
+**Verdict:** Keep, but **only if you add transformative analysis**. Otherwise drop—copyright strike risk isn’t worth 35s of trailer.
 
 ---
 
-## Clip 3: Black Clover S2 — “Captain Goes Beyond Limits”
+## 2) The Apothecary Diaries S3 — “Medicine → suspicion → gut-punch realization”
 
-| Metric | Score | Why |
-|--------|-------|-----|
-| Hook Strength | 5/10 | Black-screen → eye flare + “POV: ENEMY WATCHING THIS” is the most overused anime-edit template on the platform. No specificity — which captain? which spell? — means no *character* hook. |
-| Rewatch Value | 5/10 | Chant → rune text → impact is competent but indistinguishable from 500 other Black Clover edits
+| Metric | Score | Notes |
+|--------|-------|-------|
+| Hook strength | **5/10** | “Tight close-up of mixing medicine” is vague. No *specific* visual from Ep 4 (14:22–15:??) confirmed. Hook depends on footage you haven’t located. |
+| Rewatch value | **7/10** | “That’s why she knew…” freeze on Maomao’s face is strong—*if* the realization beat lands. |
+| Comment bait | **7/10** | “Can you guess what she discovers?” + “Which clue gave her the ‘aha’?” — good, specific to the mystery format. |
+| Copyright risk | **5/10** | Season 3 is new, CR/Netflix claim aggressively. Short stretches (2–4s) in story order *with commentary* is safer, but still medium risk. |
+
+**One change that would most improve it:**  
+**Lock the exact timestamps TODAY.** Tell Claude: “Pull Ep 4, 14:22–15:10 *exactly*—if that scene isn’t the medicine→deduction beat, pull Ep 6’s poison-tasting scene instead.” No “unsure timestamps” in a shoot plan.
+
+**Verdict:** **Drop as written.** The plan has no confirmed source beats. Replace with: **“Maomao’s 3 deadliest deductions (Ep 1–8)”** — a ranking edit (Format #5) using *confirmed* moments you already have. Safer, higher comment bait, clearer hook.
+
+---
+
+## 3) Overgeared — “Strategy flex POV → comeback win”
+
+| Metric | Score | Notes |
+|--------|-------|-------|
+| Hook strength | **6/10** | “POV you just locked the strategy” + HUD frame is solid *if* the HUD moment is visually distinct. Unknown episode = unknown hook. |
+| Rewatch value | **8/10** | Micro-rewind on the comeback win + “He didn’t get lucky—he had the setup” is excellent rewatch bait. |
+| Comment bait | **7/10** | “What’s your favorite over-gear move?” + “Did you see the hidden combo?” — gamer debate triggers. |
+| Copyright risk | **6/10** | Newer anime, less aggressive claiming than CR mainstays. Still: use only *your* sourced clips, short stretches. |
+
+**One change that would most improve it:**  
+**Pre-select the exact episode + timestamp** before Claude cuts. “Ep 9, 18:40–19:15 — Grid’s Item Combination HUD → Lightning God’s Rage activation → comeback.” No “scan recent episodes.”
+
+**Verdict:** Keep *if* you lock the source today. Otherwise drop—too much “find it later” risk.
+
+---
+
+## ONE-LINE VERDICT
+
+**Cut GTA VI first** — it’s the only clip with a *locked, high-impact source* (Trailer 2, 0:17–0:32) and a clear structure. Add transformative commentary to survive copyright, and it ships today. The other two need confirmed timestamps before they’re worth cutting.

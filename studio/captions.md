@@ -2,81 +2,76 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# Social Pack — 2026-11-26
+## 1️⃣ GTA VI – “Prison bus door → neon Vice City reveal”  
+
+**TikTok captions**  
+- “What’s the first thing you’d do in Vice City? 👀”  
+- “That neon skyline hits different 🌃💥”  
+- “🚍➡️🌆 – the ultimate drop‑in moment”  
+- “Did you catch the hidden Easter egg in the bus?”  
+
+**On‑screen hook (≤6 words)**  
+- **“Bus doors open… Vice City awakens”**  
+
+**Hashtags**  
+- #GTA6 #ViceCity #Gaming #RockstarGames #TrailerEdit  
+
+**YouTube Shorts title**  
+- *GTA VI Trailer: Bus Door to Neon Skyline (35‑sec wow)*  
+
+**Best posting time (NY)**  
+- **7 PM EST (Wednesday)** – peak evening scroll on both TikTok and Shorts; gamers are winding down after work and checking news feeds, so the hype‑trailer clip gets maximum organic reach.  
+
+
 
 ---
 
-## 1) Grand Theft Auto VI — “First Chaos Escalation”
+## 2️⃣ The Apothecary Diaries S3 – “Medicine → suspicion → gut‑punch realization”  
 
-### TikTok Captions
-1. That tank hijack at 0:18 ruined my sleep schedule 💀 #GTA6  
-2. **What’s the wildest 5-star escape you’ve ever pulled off?**  
-3. Justice + GTA VI score = main character energy only 🎶  
-4. Rewatched 12 times just for the glass shatter sync. You?
+**TikTok captions**  
+- “Can you guess what she discovers? 🧪🤔”  
+- “When a simple potion turns deadly… 😳”  
+- “Maomao’s deduction will blow your mind!”  
+- “Which clue gave her the ‘aha’ moment? Comment!”  
 
-### On-Screen Hook (6 words max)
-**HE THOUGHT HE'D GET AWAY…**
+**On‑screen hook (≤6 words)**  
+- **“Mixing medicine… then the truth hits”**  
 
-### Hashtags (5–6)
-#GTA6 #GTAVI #GamingShorts #RockstarGames #Justice #FlowerInAHurricane
+**Hashtags**  
+- #TheApothecaryDiaries #Maomao #AnimeEdit #Mystery #Season3  
 
-### YouTube Shorts Title (≤60 chars)
-**GTA VI: Tank Hijack Chaos Escalation 🔥 #Shorts**
+**YouTube Shorts title**  
+- *Apothecary Diaries S3: The Killer Reveal (33 sec)*  
 
-### Best Post Times (New York)
-- **TikTok:** 7:30 PM EST — gamers scrolling post-work, sound is #1 rising globally right now  
-- **Shorts:** 8:00 PM EST — YouTube gaming audience peaks after dinner, algorithm favors fresh sound usage
+**Best posting time (NY)**  
+- **12 PM EST (Tuesday)** – lunchtime scroll spikes for anime fans; the “quick‑reveal” format fits the short break vibe and drives comments before the evening binge window.  
 
----
 
-## 2) The Apothecary Diaries S3 — “The Poison Wasn't Poison”
-
-### TikTok Captions
-1. Maomao’s micro-expression at 0:04 says everything 🧪 #ApothecaryDiaries  
-2. **Which ingredient did YOU think was the poison?**  
-3. That plant revival gave me chills. Olivia Rodrigo’s “the cure” fits perfectly.  
-4. Jinshi’s first genuine smile this arc 😭 worth the 38s watch.
-
-### On-Screen Hook (6 words max)
-**THE POISON WASN'T POISON AT ALL**
-
-### Hashtags (5–6)
-#ApothecaryDiaries #AnimeEdit #MysteryAnime #Maomao #TheCure #AnimeTok
-
-### YouTube Shorts Title (≤60 chars)
-**Apothecary Diaries S3: The Poison Wasn't Poison 🧪 #Shorts**
-
-### Best Post Times (New York)
-- **TikTok:** 5:00 PM EST — anime community active pre-prime-time, episode 9 airs tomorrow (novelty boost)  
-- **Shorts:** 6:30 PM EST — "mystery solve" Shorts perform best early evening when viewers settle in
 
 ---
 
-## 3) Black Clover S2 — “Captain Goes Beyond Limits”
+## 3️⃣ Overgeared – “Strategy flex POV → comeback win”  
 
-### TikTok Captions
-1. Captain [NAME]’s eye flare + Panchiko drop = GOATed 🖤 #BlackClover  
-2. **Which captain’s limit-break moment lives rent-free in your head?**  
-3. That rune spell name appearing diegetically? Chef’s kiss editing.  
-4. Panchiko’s “D>E>A>T>H>M>E>T>A>L” finally getting its anime edit era.
+**TikTok captions**  
+- “Ever locked a perfect strategy? 🎮💡”  
+- “Watch the comeback that changes everything!”  
+- “What’s your favorite over‑gear move? Drop it!”  
+- “Did you see the hidden combo? 👀”  
 
-### On-Screen Hook (6 words max)
-**POV: ENEMY WATCHING THIS POWER**
+**On‑screen hook (≤6 words)**  
+- **“POV: Strategy locked, fight begins”**  
 
-### Hashtags (5–6)
-#BlackClover #BlackCloverS2 #AnimeEdit #MagicAnime #Panchiko #AnimeTok
+**Hashtags**  
+- #Overgeared #AnimeGaming #StrategyFlex #Comeback #GameEdit  
 
-### YouTube Shorts Title (≤60 chars)
-**Black Clover S2: Captain’s Limit Break 🔥 #Shorts**
+**YouTube Shorts title**  
+- *Overgeared EP 10: Strategy to Victory (30 sec)*  
 
-### Best Post Times (New York)
-- **TikTok:** 8:00 PM EST — Black Clover fandom spikes nightly; episode 9 airs in 2 days (anticipation high)  
-- **Shorts:** 7:30 PM EST — action/hype edits catch the "late-night scroll" crowd before midnight
+**Best posting time (NY)**  
+- **9 PM EST (Thursday)** – prime “gaming night” window; viewers are online, looking for hype clips before they jump into their own sessions, boosting re‑watch and shares.  
 
----
 
-### Quick Notes for Owner
-- All three clips use **rising worldwide sounds** (Justice, Olivia Rodrigo, Panchiko) — algorithm tailwind.  
-- GTA VI clip has the strongest sound/topic lock; post it **first** tonight.  
-- Apothecary Diaries clip depends on legal access to Ep 8 — confirm with Claude before final render.  
-- Black Clover is oversaturated; the Panchiko sound + diegetic rune text is your differentiator.
+
+---  
+
+*All captions are crafted to spark comments, keep the hook under six words, and pair with a mix of broad‑reach and niche hashtags. Use the listed TikTok sounds (e.g., “Flower In A Hurricane” for GTA VI, “D>E>A>T>H>M>E>T>A>L” or “brand new chanel$” for the anime cuts) if they’re available in your business account; otherwise fall back to a royalty‑free underscore track.*

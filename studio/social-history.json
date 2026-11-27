@@ -24,5 +24,18 @@
       "posts": 3
     },
     "creditsLeft": 1293
+  },
+  {
+    "date": "2026-11-27",
+    "tiktok": {
+      "followers": 23,
+      "likes": 625,
+      "videos": 45
+    },
+    "instagram": {
+      "followers": 0,
+      "posts": 5
+    },
+    "creditsLeft": 1287
   }
 ]

@@ -2,56 +2,112 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# Today's 3 Clips — Shot Plans for Claude
+## Today’s 3 best clips to make (2026-11-26)
 
-**Make Clip 1 first.** The Justice track (“Flower In A Hurricane” from the *GTA VI* score) is the #1 rising sound worldwide *and* it’s literally from the game — a rare sound/topic lock that algorithms boost hard. GTA 6 is the #1 Twitch category right now. Velocity-cut chaos edits are the most proven format for gaming Shorts. If we hit the first-frame hook + beat-sync, this has the highest breakout probability on a 0-sub channel.
-
----
-
-## 1) Grand Theft Auto VI — “First Chaos Escalation”  
-**Platforms:** TikTok + YouTube Shorts  
-**Target length:** 35 s  
-**Mood:** High-octane, visceral, “did that just happen?”  
-**Audio:** **Justice – “Flower In A Hurricane (feat. Tame Impala, SZA, King Gizzard) [From GTAVI: Original Score]”** (rising #1 worldwide). Cut on the first heavy downbeat (~0:07 in the track) for the reveal; stack 2–3 beat-sync hits; end on a bar-end impact.
-
-| Beat | Source & Location | Visual / Action | On-Screen Text |
-|------|-------------------|-----------------|----------------|
-| **Hook (0–1.5 s)** | **Twitch VOD: illojuan — GTA VI category** (first major chaos escalation you can verify in a legal VOD). *Exact timestamp unsure — scrub for the moment the player triggers a 5-star wanted level / massive explosion / city-wide panic.* | Cold open: wide Vice City aerial → sudden explosion blossoms → sirens scream → player’s POV snaps to chaos. | **“HE THOUGHT HE’D GET AWAY…”** (bold, white, outline) |
-| **Stretch 1 (1.5–9 s)** | Same VOD, continuous 7–8 s run. | Unbroken chase: player floors it through traffic → helicopters swarm → RPG barely misses → car flips, slides, keeps going. | — |
-| **Stretch 2 (9–18 s)** | Same VOD, next continuous 8–9 s run. | On foot: sprint through alley → vault fence → minigun shreds cover → player dives through window → slow-mo glass shatter. | **“VICE CITY DOESN’T FORGIVE”** (flash at 14 s on downbeat) |
-| **Biggest Moment (18–24 s)** | Same VOD, 5–6 s continuous. | **The escalation peak:** tank rolls in → player hijacks it point-blank → turret swings → **massive detonation chain** (fuel trucks, gas station, billboard). | **“NOW YOU’RE PLAYING WITH POWER”** (locks to biggest bass hit) |
-| **Final Beat (24–35 s)** | Same VOD, 2–3 s aftermath + 1 s title card. | Tank turret settles on smoldering crater → player steps out, lights cigarette (or equivalent “cool” emote) → hard cut to **“GTA VI”** logo + **“#GTA6 #Shorts”** lower third. | **“REWATCH THAT HIJACK 🔥”** (tiny, bottom, appears last 1 s) |
-
-**Editor note (Claude):** Keep every stretch **unbroken** — no internal cuts. Sync *every* hard impact (explosion, glass, tank hijack) to the track’s downbeats. First frame must be the explosion, not the aerial. Credit “Grand Theft Auto VI / Rockstar Games” on screen for 1.5 s at end.
+**Make first:** **#1 GTA VI** — because it’s the strongest cross-signal (Twitch/Steam/Wikipedia + immediate trailer-driven audience), and we also have a very specific trailer timestamp + a ready “hook → seamless match-cut → rewatch bait” structure.
 
 ---
 
-## 2) The Apothecary Diaries (Season 3) — “The Poison Wasn’t Poison”  
-**Platforms:** TikTok + YouTube Shorts  
-**Target length:** 38 s  
-**Mood:** Intellectual thriller → quiet dread → “oh…” realization  
-**Audio:** **Olivia Rodrigo – “the cure”** (rising worldwide; melodic build fits mystery-solve). Hook on first lyric entrance; reveal on first strong chord change; final line emphasis on walk-away beat. *Alternative: original dialogue + subtle SFX if sound licensing unclear.*
+# 1) GTA VI (Game) — “Prison bus door → neon Vice City reveal”
+**Platform:** **both (TikTok + YouTube Shorts)**  
+**Source title:** *Grand Theft Auto VI* (official trailer)  
+**Where to cut (unsure exact episode/chapter; we’ll use trailer timestamp):**  
+- **Trailer 2 (“Grand Theft Auto VI Trailer 2”)**: **0:17–0:32** (Lucia steps out; neon skyline reveal) — timestamp from Trend Scout  
+- Optional gameplay match-cuts: use any short legal gameplay clips you already have in your library (don’t hunt outside your owned sources)
 
-| Beat | Source & Location | Visual / Action | On-Screen Text |
-|------|-------------------|-----------------|----------------|
-| **Hook (0–1.5 s)** | **Ep 8 (latest available today — Ep 9 airs 2026-11-27).** *Timestamp unsure — find the “wrong assumption” frame: Maomao examining a vial, calm, narrating the obvious diagnosis.* | Extreme close-up: Maomao’s eye reflecting the vial → she nods “arsenic.” | **“THE MOMENT SHE REALIZED THE POISON…”** |
-| **Stretch 1 (1.5–12 s)** | Same episode, continuous 10 s. | Unbroken deduction: ingredient close-ups (mortar, pestle, herb) → Jinshi’s skeptical face → Maomao’s fingers freeze mid-motion → **the “oh” micro-expression** (eyes widen 3 frames). | **“…WASN’T POISON AT ALL”** (appears exactly on the micro-expression) |
-| **Stretch 2 (12–24 s)** | Same episode, continuous 12 s. | Reveal sequence: Maomao drops herb → new ingredient glows under light → rapid whispered explanation (lip-sync visible) → Jinshi’s guard drops a scroll → **the antidote crystallizes in real time**. | — |
-| **Biggest Moment (24–30 s)** | Same episode, 6 s continuous. | **The proof:** Maomao drips antidote on a withered plant → instant green revival → Jinshi exhales, first genuine smile this arc. | **“THE CURE WAS HIDDEN IN PLAIN SIGHT”** (sync to chord change) |
-| **Final Beat (30–38 s)** | Same episode, 2 s stare + 2 s title. | Maomao turns, sleeve brushes camera → **linger on her half-smile 1 s** → hard cut to **“The Apothecary Diaries S3”** + **#anime #mystery**. | **“No going back now.”** (tiny, last 1 s) |
+**Hook (first 1–2s):**  
+- **3s:** the **prison bus door opening / first step out** moment (hit with a bass “start”)
 
-**Editor note:** Preserve the **single unbroken deduction stretch** (1.5–24 s) — that’s the rewatch engine. If the episode isn’t legally accessible yet, **pause this clip** and tell me. Credit “The Apothecary Diaries / Toho Animation” on screen.
+**Story-order stretches (2–4 unbroken, tight story sequence):**  
+1. **0:17–0:20**: door opens → Lucia’s first look (build dread/curiosity)  
+2. **0:20–0:24**: stepping down → camera tilt into the **city reveal setup**  
+3. **0:24–0:30**: **neon Vice City skyline reveal** (let it breathe unbroken for the “wow”)  
+4. **0:30–0:32**: final beat into the trailer’s next action beat (clean transition)
+
+**Biggest moment:**  
+- The **neon skyline reveal** (the “main wow” beat)
+
+**Final beat (rewatch bait):**  
+- **7s:** freeze-frame on the **most recognizable skyline/character posture**, overlay:  
+  - **“LOOK—pause here.”** (0.3s freeze + quick zoom back into motion)
+
+**Target length:** **35–38s**  
+**Mood:** high-gloss, hyped, cinematic chaos preview  
+**Audio note (sound):**  
+- Use **“Flower In A Hurricane” — Justice (from TikTok Sound Watcher)**  
+  - Sync: **orchestral swell (~0:42) → trap drop (~0:58)** idea (if your chosen audio segment doesn’t match, use the **closest swell-to-drop** moment you can find in the track)
 
 ---
 
-## 3) Black Clover (Season 2) — “Captain Goes Beyond Limits”  
-**Platforms:** TikTok + YouTube Shorts  
-**Target length:** 36 s  
-**Mood:** Hype chain — breath → chant → impact → silence  
-**Audio:** **Panchiko – “D>E>A>T>H>M>E>T>A>L”** (rising worldwide; glitchy intro → bass drop = power-up → impact). Hook on glitchy intro; captain’s eyes flare on first bass hit; final impact on terminal drop. *Alternative: Arctic Monkeys “505” for cool-hype walk if Panchiko feels too dark.*
+# 2) The Apothecary Diaries (Anime) — “Medicine → suspicion → gut-punch realization”
+**Platform:** **both (TikTok + YouTube Shorts)**  
+**Source title:** *The Apothecary Diaries* — Season 3  
+**Where to cut:**  
+- Trend Scout says **S3 Episode 9 airs tomorrow (23:00 JST)**, but their “exact moments” snippet is **truncated**.  
+- So: we must cut from **episodes 1–8 for today’s prep window**, focusing on investigation/medicine beats we can actually find quickly.  
+- **Unsure timestamps:** we’ll instruct Claude to locate the beats in **Ep 4** around **14:22–15:??** if that line is usable; otherwise cut similar “medicine mix → reaction → deduction” segments from Ep 1–8.
 
-| Beat | Source & Location | Visual / Action | On-Screen Text |
-|------|-------------------|-----------------|----------------|
-| **Hook (0–1 s)** | **Ep 8 (latest available — Ep 9 airs 2026-11-28).** *Timestamp unsure — locate the captain’s “first breath / eyes flare” frame before a named spell.* | Black screen 0.2 s → **sudden eye flare (magic color)** + glitch SFX. | **“POV: YOU’RE THE ENEMY WATCHING THIS”** |
-| **Stretch 1 (1–10 s)** | Same episode, continuous 9 s. | Unbroken chant: mouth moves, mana particles spiral → camera orbits captain → grimoire pages turn themselves → **spell name appears in runes** (diegetic). | **“CAPTAIN [NAME] — [SPELL NAME]”** (runes fade at 8 s) |
-| **Stretch 2 (10–22 s)** | Same episode,
+**Hook (first 1–2s):**  
+- **1.5–2s:** tight close-up of **mixing/medicine prep** (then immediately cut to a shocked/suspicious reaction face)
+
+**Story-order stretches (2–4 unbroken, story-feeling sequence):**  
+1. **Medicine preparation** (keep as one unbroken stretch: mixing motion + ingredient reveal)  
+2. **First deduction reaction** (expression change / she clocks something)  
+3. **Investigation escalation** (someone presses/guards; she responds with certainty)  
+4. **Realization gut-punch** (cut in sequence to the “oh no / this explains it” moment)
+
+**Biggest moment:**  
+- The **realization beat** where the viewer understands the consequence of her inference (the “she’s terrifyingly smart” feeling)
+
+**Final beat (rewatch bait):**  
+- **6–8s:** on-screen title + single-line caption like:  
+  - **“That’s why she knew…”**  
+- End on a **freeze** of her expression (make it rewatchable)
+
+**Target length:** **33–40s**  
+**Mood:** clever, tense, emotional (slow dread → sharp clarity)  
+**Audio note (sound):**  
+- Use a trending-feeling anime edit sound approach. Preferred from your list:  
+  - **“D>E>A>T>H>M>E>T>A>L” — Panchiko** (high-energy glitch transitions) **OR**  
+  - If you want cozy emotional contrast: **“Melatonin” — Tinashe** (but business may be blocked—use only if your account can access it).  
+- If Claude can’t confirm sound availability, default to **underscores – “Music”** (likely available).
+
+---
+
+# 3) Overgeared (Anime) (new/trending) — “Strategy flex POV → comeback win”
+**Platform:** **both (TikTok + YouTube Shorts)**  
+**Source title:** *Overgeared*  
+**Where to cut:**  
+- Trend Scout flags it as trending and “ep 10 airs soon,” but **no timestamps provided**.  
+- **Plan:** Claude should scan the **most recent episode(s) you have** for: HUD/formation/skill execution + a comeback finish.
+
+**Hook (first 1–2s):**  
+- **“POV you just locked the strategy”** moment: a clear **HUD/skill activation** frame or team formation shot (text overlay appears immediately)
+
+**Story-order stretches (2–4 unbroken, story sequence):**  
+1. **HUD/skill selection** (one clean stretch; emphasize the “plan”)  
+2. **Execution beat** (the moment the ability actually fires / combo starts)  
+3. **Counter from enemy** (short unbroken stretch showing the plan getting challenged)  
+4. **Comback payoff** (the reversal / win moment—keep it coherent)
+
+**Biggest moment:**  
+- **The comeback win** (the first frame where it flips from losing → turning the fight)
+
+**Final beat (rewatch bait):**  
+- **5–7s:** scoreboard-style text overlay:  
+  - **“He didn’t get lucky—he had the setup.”**  
+- End on the character’s reaction (smirk / shock) and **do a micro-rewind edit** (flash back 0.2–0.3s)
+
+**Target length:** **30–36s**  
+**Mood:** gamer-confidence, satisfying “outplay” payoff  
+**Audio note (sound):**  
+- Use **“brand new chanel$” — Slayyyter** for the flex/level-up energy (likely available).  
+- Sync: hit the “base drop” with the **strategy activation** beat.
+
+---
+
+## Why #1 is first (GTA VI)
+- It has the **strongest multi-platform demand signals** (Twitch/Steam + massive hype), and we also have the **specific trailer timestamp** for a clean hook + skyline reveal.
+- Oversaturation is **high**, but this cut is built around an **ultra-recognizable rewatch moment** (freeze bait) so you’re not competing on novelty—you’re competing on *clarity + impact*.
+
+If you want, I can rewrite these into a **Claude editing checklist** (exact overlay text per segment + freeze points) once you tell me whether you prefer **more text/commentary** or **cinematic music-first**.

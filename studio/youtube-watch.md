@@ -2,77 +2,160 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-## 🎬 What’s Hot on YouTube Right Now (Nov 26 2026)  
+## What’s working on YouTube right now (US) — fastest-rising (relevant to movie/game/anime)
 
-Below are the **fastest‑rising videos that are directly relevant to our three pillars** – film/animation, gaming, and anime (anime didn’t appear in the live chart, so we’ll rely on recent search spikes). All numbers are taken straight from the studio’s `youtube‑trends.md` file –‑ **no invented data**.
+### Fastest-rising “Movie/Animation” (short-form friendly)
+1) **“Teaching my GF how to dive 🤣😭”** — **93,292,620 views** (**2,227,394/hr**) — 0:10  
+   https://youtu.be/jU6cUtK_hGk  
+2) **“Why they move so human 🥀”** — **41,964,897 views** (**268,766/hr**) — 0:16  
+   https://youtu.be/_dEH-edCIN4  
+3) **“Bro really waited for him to start walking 😭✌️”** — **23,395,278 views** (**230,182/hr**) — 0:12  
+   https://youtu.be/2QMDnzyTj_4  
+4) **“Nobody’s taking my dog. 😂😅”** — **11,222,242 views** (**300,176/hr**) — 2:56  
+   https://youtu.be/Zca-eKzSBvE  
+5) **“Absolutely NOTHING could've prepared me for the ending”** — **11,808,485 views** (**214,158/hr**) — 0:53  
+   https://youtu.be/DLDXQCLDGgE  
+6) **“How To Sneak Thanksgiving Into A Movie Theater 🤔”** — **4,109,023 views** (**290,829/hr**) — 1:04  
+   https://youtu.be/wavxRZZNgaQ  
 
----
+### Fastest-rising “Gaming” (relevant titles)
+1) **“Don't Do That”** — **5,391,588 views** (**155,660/hr**) — 15:48  
+   https://youtu.be/9B1ljU7lv-E  
+2) **“Grand Theft Auto VI”** — **3,022,271 views** (**97,056/hr**) — 15:53  
+   https://youtu.be/jPU38VyVVgE  
+3) **“GTA 6 #2”** — **4,988,298 views** (**92,616/hr**) — 94:37  
+   https://youtu.be/umDq3LY7sFA  
+4) **“We Went Duck Hunting...”** — **744,094 views** (**100,281/hr**) — 22:44  
+   https://youtu.be/hXZR2EI4Df0  
+(Chess/PGL/Fide entries are fastest-rising too, but they’re not a great match for typical MotionVault movie/game/anime clip formats.)
 
-### 1️⃣ Film & Animation (short‑form ≤ 3 min)
+### Fastest-rising “Entertainment” (short videos ≤3 min; best transferable formatting)
+Same as above, plus:
+- **“Well we know what time it is 😂 #funny”** — **35,846,627 views** (**611,391/hr**) — 0:16  
+  https://youtu.be/W_cuX6leGak  
+- **“Your Sister Runied Your Birthday 💔😭”** — **21,073,142 views** (**538,448/hr**) — 0:17  
+  https://youtu.be/R_1ulH99Sfs  
+- **“1,2,3 or 4? 🤔”** — **20,150,146 views** (**495,853/hr**) — 0:12  
+  https://youtu.be/JiaJPvwwxUk  
 
-| Rank | Video (link) | Channel | Views | Views / hr | Length | Why it’s exploding |
-|------|--------------|---------|-------|-----------|--------|-------------------|
-| 1 | **[Teaching my GF how to dive 🤣😭](https://youtu.be/jU6cUtK_hGk)** | Cadel and Mia | **92,931,589** | **2,588,865** | 0:10 | Ultra‑short “reaction‑style” hook, relatable couple‑dynamic, emoji‑rich title. |
-| 2 | **[Why they move so human 🥀](https://youtu.be/_dEH-edCIN4)** | MoVeak | **41,864,509** | **278,815** | 0:16 | Mystery‑question phrasing + emoticon, fast‑cut montage of animal footage. |
-| 3 | **[Mom tore big bro’s shirt … #shorts](https://youtu.be/XY_ov9X03GY)** | ChaosBiteClips | **20,648,729** | **190,759** | 0:31 | Family‑drama hook, “wait until she sees his back” creates curiosity. |
-| 4 | **[He is on Another Level.🔥#edit #shorts #foryou](https://youtu.be/aCqDrqDTfoQ)** | JJ_EditZ | **17,945,365** | **168,689** | 2:58 | Gaming‑style edit, “🔥” + “#foryou” for algorithm boost. |
-| 5 | **[Absolutely NOTHING could’ve prepared me for the ending](https://youtu.be/DLDXQCLDGgE)** | Mi Desing | **11,424,575** | **232,435** | 0:53 | “Nothing could’ve prepared me” → strong emotional payoff, good for reaction clips. |
-| 6 | **[Nobody’s taking my dog. 😂😅](https://youtu.be/Zca-eKzSBvE)** | Tale Talker | **10,698,195** | **340,728** | 2:56 | Cute‑pet premise + emojis, easy to remix with movie‑dog moments. |
-| 7 | **[Why Ducks Sleep With One Eye Open 🤨](https://youtu.be/9k_UeVDf-0Y)** | Zack D. Films | **6,337,601** | **273,746** | 0:29 | Curiosity‑driven question + animal fact hook. |
-| 8 | **[When The Gender Swap Filter Turns Christina … 😭💀](https://youtu.be/c1fuGUlVb-M)** | Foeko | **15,598,177** | **163,076** | 0:16 | Trending filter + shock value, short‑form format. |
-
-#### Common DNA of the top Film & Animation Shorts
-| Element | What creators are doing | How we can copy it |
-|---------|------------------------|-------------------|
-| **Hook in the first 2 seconds** | Immediate visual gag or a bold question (“Why they move so human?”) | Start with a 1‑second “wow” moment from the source clip (e.g., a character’s iconic line or an explosive action beat). |
-| **Emoji‑rich, curiosity‑driven titles** | Emojis, caps, “WHAT HAPPENS NEXT?” phrasing, “#shorts”, “#foryou”. | Use a title like **“_When the Hero finally lands the FINAL BOSS KO! 🔥 #shorts”**. |
-| **Sub‑minute length** (most ≤ 30 s) | Keeps the algorithm happy; viewers re‑watch. | Keep our montages 25‑45 s (30‑40 s ideal for TikTok/YouTube Shorts). |
-| **Story‑order cuts** | Even in 10‑second clips, there’s a mini‑narrative (setup → payoff). | Choose moments that have a clear set‑up and payoff (e.g., a character’s “I’m not afraid” → sudden defeat). |
-| **Strong final beat** | A punchline, twist, or “I didn’t see that coming” moment. | End with a reaction shot, a “mind‑blown” facial expression, or a dramatic sound effect. |
-| **Credit on screen** | Quick lower‑third with movie/game title. | Add a 2‑second title card: “*[Movie]* – 2026” or “*[Game]* – Final Boss”. |
-
----
-
-### 2️⃣ Gaming (fastest‑rising)
-
-| Rank | Video (link) | Channel | Views | Views / hr | Length | Why it’s exploding |
-|------|--------------|---------|-------|-----------|--------|-------------------|
-| 1 | **[Catching Hackers on BalSMP](https://youtu.be/x412HQxRT84)** | KlingKlong | **1,463,961** | **733,194** | 100:07 (long) | High‑stakes “catch the hacker” premise; community‑driven SMP. |
-| 2 | **[PGL Major Singapore 2026 – Stage 1 – Day 3](https://youtu.be/GqUI1CqXc48)** | PGL | **1,169,430** | **309,121** | 619:21 | eSports highlights; strong “stage 1” keyword. |
-| 3 | **[Don’t Do That](https://youtu.be/9B1ljU7lv-E)** | penguinz0 | **5,000,179** | **174,530** | 15:48 | Humor‑driven “what NOT to do” montage; recognizable creator. |
-| 4 | **[🔴 LIVE! - GTA 6 FREE ROAM and EASTER EGGS! (PS5 PRO)](https://youtu.be/nNfHuQkyins)** | Typical Gamer | **1,343,219** | **135,796** | 542:29 | GTA 6 hype; “Easter Eggs” keyword. |
-| 5 | **[Grand Theft Auto VI](https://youtu.be/jPU38VyVVgE)** | videogamedunkey | **2,700,178** | **107,355** | 15:53 | Dunkey’s brand, “GTA VI” buzz. |
-| 6 | **[GTA 6 #2](https://youtu.be/umDq3LY7sFA)** | CoryxKenshin | **4,754,669** | **99,320** | 94:37 | High‑energy commentary, big subscriber base. |
-| 7 | **[TV Royale | Barbarian King…](https://youtu.be/O-3nK-3NOKk)** | Clash Royale | **638,018** | **94,755** | 3:55 | Short‑form game‑specific montage. |
-
-> **Note:** No “short‑form” gaming videos appeared in the “short videos (≤ 3 min)” list, so the fastest‑rising clips are all long‑form. The pattern we can still steal is the **click‑bait phrasing** (“Catching Hackers”, “Don’t Do That”, “FREE ROAM & EASTER EGGS”) and **high‑energy thumbnail** (bright text overlay, big‑face reaction).
-
-#### What works for gaming shorts
-| Element | Observation | How we apply it |
-|---------|-------------|-----------------|
-| **High‑stakes premise** (“Catching Hackers”, “Don’t Do That”) | Viewers love a clear “risk” hook. | Title our clips **“When the Final Boss Traps YOU… 😱”** and start with the trap animation. |
-| **Creator‑style reaction overlay** | Many top videos feature a face‑cam or bold reaction text. | Add a quick 1‑second reaction shot (our own face or a stylized emoji) before the main clip. |
-| **Keyword‑heavy titles** | “GTA 6”, “Easter Eggs”, “Major Singapore”. | Use current hot game names (e.g., **“GTA 6 – The Hidden Ending in 30 s!”**). |
-| **Bright, contrast‑heavy thumbnails** | Red/blue text, large game logo, “LIVE!” tag. | For Shorts we can’t control thumbnail on the feed, but the first frame (cover) should be a bold, high‑contrast still with the game logo and a “⚡️”. |
-| **Short‑form edit style** | Even long videos are cut into bite‑size moments for Shorts. | Take a 30‑second “best‑of” segment (e.g., a perfect head‑shot chain) and add fast cuts (2‑3 fps). |
+> **Important limitation:** the “Gaming: short videos (3 min or less)” section says **none in the chart today**, so we can’t directly infer gaming-short formatting from this dataset.
 
 ---
 
-### 3️⃣ Anime (no fast‑rising Shorts in the chart)
+## What these fastest-rising videos have in common (patterns you can copy)
 
-The live YouTube data didn’t list any anime‑specific short videos, but **Google Trends** shows a spike in **“update zelda ocarina of time”** (Mexico) and **“cocomi”** (Japan). While those are game/celebrity trends, they hint at **retro‑nostalgia** and **character‑driven moments** – both perfect for anime clips.
+### 1) Title style = instant reaction + emoji cues
+Examples:  
+- “**Teaching my GF… 🤣😭**”  
+- “**Why they move so human 🥀**”  
+- “**Bro really waited… 😭✌️**”  
+- “**Absolutely NOTHING…**”  
+- “**1,2,3 or 4? 🤔**”  
 
-#### What to target for anime Shorts
-| Trend cue | Potential anime hook | Example clip idea (30‑40 s) |
-|-----------|----------------------|-----------------------------|
-| **Retro nostalgia** (Ocarina of Time) | Classic anime with iconic “theme song” moments (e.g., *Cowboy Bebop* “Spike’s final duel”). | Open with the opening guitar riff, cut to the final duel, end on the “boom” sound. |
-| **Celebrity “cocomi”** (Japanese pop) | Recent anime that feature a music‑performance episode (e.g., *Bocchi the Rock!*). | Show the moment the band hits the perfect high note, then a quick reaction shot. |
-| **General high‑energy anime fights** (always evergreen) | Use the most visually striking 3‑second combo from *Demon Slayer*, *Jujutsu Kaisen*, *Attack on Titan*. | Hook: “You won’t believe how this fight ends!” → rapid cut of the combo → final scream. |
+**Copy rule:** lead with a *moment*, use a *conflict/promise*, add **2–3 emojis** that match the emotion.
 
-**Title patterns to copy for anime Shorts**
+### 2) Thumbnail/hook logic (based on title + length pattern)
+Even without thumbnails in the dataset, the **0:10–0:20** viral range suggests:
+- **Hook beat lands immediately** (first second is the “payoff” or the “wrong expectation”)
+- Minimal text; big emotion/facial expression or the “setup” object
 
-- **“_When the Hero finally unlocks the TRUE POWER! ⚡️ #shorts”**  
-- **“_That ONE scene that broke the internet 😱”** (use a recent meme‑related anime moment).  
-- **“_Top 3 *[Anime]* fight moves in 30 seconds 🔥”** (list‑style, good for re‑watch).  
+**Copy rule:** on frame 1–2 show the “payoff” (or the clearly wrong outcome), not the slow setup.
 
-Add a lower‑third credit: **“*Demon Slayer – 2026*
+### 3) Length distribution = very short, rewatchable loops
+Most winners are **0:10, 0:12, 0:16, 0:17**; some are ~**1–3 minutes** when the ending twist is strong.
+
+**Copy rule:** build Shorts as:
+- **Setup (0.5–1.5s)**
+- **Payoff stretch(s)** (1–3 unbroken mini-blocks, each short)
+- **Final beat** designed for replay
+
+### 4) Topic framing: “unexpected human moment” or “betrayal / failure / twist”
+Across the fastest-rising list, the common payoff types are:
+- comedic mishap
+- “nobody expected that ending”
+- human behavior/realism
+- “can you believe this happened?”
+
+**MotionVault translation:** choose anime/movie/game moments that feel like **a reaction clip** (betrayal, overconfidence punished, sudden reversal, uncanny realism).
+
+---
+
+## Anime/game/movie Shorts we should clip (from what’s trending right now)
+
+### Anime targets (from AniList / MyAnimeList trending + airing right now)
+These are *trending/airing*, so prioritize recent episodes/moments (no exact scene timestamps available from the data you provided):
+- **The Apothecary Diaries Season 3** (airing Friday; also explicitly listed as airing)  
+- **Overgeared** (RELEASING; ep 10 airs 2026-11-29)  
+- **The Ramparts of Ice Season 2** (RELEASING; ep 10 airs 2026-12-03)  
+- **The Exiled Heavy Knight Knows How to Game the System** (RELEASING; ep 23 airs 2026-12-03)  
+- **One Piece** (still massively releasing; huge audience baseline)  
+- **Black Clover Season 2** (RELEASING; ep 9 airs 2026-11-28)  
+
+**Shorts-friendly moment types to hunt while watching:**
+- Apothecary: “clever deduction reveals,” “quiet threat,” “doctoring gone wrong → instant reaction”
+- Overgeared: “system-game gotcha,” “power spike,” “betrayal reveal”
+- Ramparts of Ice: “battle formation reveal,” “freezing/limit-break moment,” “hero delivers the line → instant cut”
+- Exiled Heavy Knight: “gaming loophole,” “confidence → instant checkmate”
+- One Piece: “emotional punchline,” “new commander moment,” “gear/power reveal beat”
+- Black Clover: “grimereveal,” “spell sequence landing,” “villain humiliation → final beat”
+
+*(I can’t name exact episode scenes without pulling episode content; if you send episode numbers or timestamps Claude can cut, I’ll convert them into clip plans.)*
+
+### Gaming targets (from what’s fastest-rising)
+From the fastest-rising gaming entries:
+- **GTA VI** / **GTA 6 #2** (big velocity; huge mainstream overlap)
+- **“Don’t Do That”** (unknown game from the dataset; but title screams “punish the mistake” format)
+
+**Shorts to make (format, not copyrighted specifics):**
+- “Don’t do that” style: clip the moment right before the mistake, then the immediate consequence (1–2 beat replay loop)
+- GTA VI: use “unexpected outcome” missions/free roam moments—especially any **Easter egg reveal** + instant reaction
+
+*(No exact gameplay moments/timestamps are provided in your data, so we’ll need the owner/studio to pick specific clips from the game footage or provided sources.)*
+
+### Movie targets
+The fastest-rising list includes a mainstream trailer:
+- **“Avengers: Doomsday | Final Trailer | In Theaters December 18”** — **61,537,685 views** (**718,569/hr**) — 3:16  
+  https://youtu.be/Wb8Tq_HD4E8  
+
+**Clip angle for MotionVault:** from trailers, don’t take whole sequences—pull **tight 20–35s montage** around:
+- the clearest “villain/hero reveal”
+- 1–2 “power showcase” beats
+- the **last trailer-second punchline** (perfect for the rewatch trigger)
+
+---
+
+## Title patterns to copy (directly from today’s winners)
+
+Use these templates with your movie/anime/game moment:
+
+1) **[Verby Setup] + [Emotion emoji]**
+- “Teaching my GF how to dive 🤣😭”
+- “Bro really waited for him to start walking 😭✌️”
+- “Your Sister Runied Your Birthday 💔😭”
+
+2) **[Unexpected realism / uncanny observation] + [symbol emoji]**
+- “Why they move so human 🥀”
+
+3) **[Big promise / twist framing]**
+- “Absolutely NOTHING could've prepared me for the ending”
+
+4) **[Question hook with numbers]**
+- “1,2,3 or 4? 🤔”
+
+5) **[Short instruction + absurdity]**
+- “How To Sneak Thanksgiving Into A Movie Theater 🤔”
+
+**MotionVault adapted titles (examples to draft):**
+- “He thought it was safe… until that second happened 😭”
+- “That animation is TOO real 🥀”
+- “Nothing prepared me for the ending beat 💥”
+- “1,2,3… which move wins? 🤔”
+
+---
+
+## Next step for the studio (what I need from Claude/owner)
+To turn this into *specific clip instructions* (exact timestamps + 30–40s montage blocks), reply with either:
+- the **movie/anime/game sources you want to use** (episode numbers, or which trailer cutdown), and/or
+- 5–10 candidate timestamps Claude should evaluate.
+
+Then I’ll output: **3–6 Shorts scripts** per source with *hook line text*, *cut points*, and a *final rewatch beat*.

@@ -2,144 +2,105 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-## Active fandoms to target this week (2026-11-26) — strongest first
-
-> Notes: I can only use what your scanners provided (Google Trends spike + AniList/MAL airing/trending + the YouTube “most-viewed edits” list). I *cannot* reliably pull TikTok-specific hashtag/clip-moment data without live TikTok access—so I’m proposing **likely fan-post moments** and **common fan hashtags** for each fandom. Marked **OVERSATURATED** when the fandom is heavily edited on Shorts/edits already.
-
----
-
-### 1) **Black Clover (Season 2) — OVERSATURATED**
-- **Why fans care now:** AniList shows **Black Clover Season 2 trending** and **ep 9 airs 2026-11-28** (so activity ramps right before + after episode drops).
-- **Best clip moment (30–40s montage):**
-  - Build around **a high-emotion “magic reveal / power-up” beat** from the current season episode(s):  
-  - Structure: *close-up of character expression → fast sequence of spell casting frames → the “result” panel/impact shot → quick reaction shot (team/party reaction)*.
-- **Hashtags (use 3–4):**
-  - `#BlackClover`
-  - `#BlackCloverSeason2`
-  - `#animeedit`
-  - `#magic`
-- **Source link (for episode context):**
-  - https://anilist.co/anime/195604
-- **Oversaturated?** **Yes** (big fandom + constant edit volume).
+## Most active fandoms on TikTok this week (top 7)
+*Note: you asked for “this week on TikTok,” but the provided scanners are Google Trends/Wikipedia/AnimeList/Steam/Twitch/YouTube edits. I’m using those as **best-available signals**, not guaranteed TikTok-only truth.*
 
 ---
 
-### 2) **The Apothecary Diaries (Season 3)**
-- **Why fans care now:** AniList + MAL both show it **actively releasing** (AniList: **ep 9 airs 2026-11-27**). That usually triggers “episode reaction” + “mystery solution” repost cycles.
-- **Best clip moment:**
-  - Focus on **one “investigation → conclusion” segment**:  
-  - Structure: *ingredient/observation shots → deduction dialogue beats (if visible) → stunned reaction / reveal close-up → end on the final “click” moment (dramatic pause + cut to reaction)*.
-- **Hashtags:**
-  - `#ApothecaryDiaries`
-  - `#MushroomTok` *(if you can tie it to medicine/culinary vibes; otherwise skip)*
-  - `#anime`
-  - `#spoilerwarning` *(optional overlay; don’t spoil hard in captions)*
-- **Source link:**
-  - https://anilist.co/anime/195516
-- **Oversaturated?** Medium (popular but not as endlessly edited as BC/Demon Slayer).
+### 1) **Grand Theft Auto VI (GTA 6)**
+- **Why fans care now:** Huge ongoing public buzz; also shows up as a top “most-read” item and strong Twitch watchers for GTA VI.
+- **Moment to clip (30–40s montage):** Quick-cut montage of **the most replayed “announcement/trailer-style” beats** (UI overlays, close-up driving/chaos moments, city establishing shots). Since I can’t verify exact timestamps from your sources, structure it as: **hook (0–2s: logo/shot that screams GTA), 2–3 mini story beats, final beat = chaos escalation → hard cut to logo/name on-screen**.
+- **Hashtags (3–4):** `#GTA6 #GTAVIFanEdit #Gaming #RockstarGames`
+- **Source link:** *(Video edits are on YouTube in your feed, not the official trailer; use any official GTA VI trailer/clip source if available in your editor folder.)*  
+  - Use as inspiration: https://www.youtube.com/results?search_query=Grand+Theft+Auto+VI+trailer
+
+**Oversaturated:** **YES** (massive mainstream hype + constant posting everywhere).
 
 ---
 
-### 3) **Overgeared**
-- **Why fans care now:** AniList: **RELEASING**, **ep 10 airs 2026-11-29**, and it’s showing strong trending momentum. Fans of new-season shows often post “first major fight” and “meta/gaming” beats repeatedly.
-- **Best clip moment:**
-  - Pick **the most “arena / rank / build” moment** you can find in the episode:  
-  - Structure: *HUD/status shots (if present) → character charging → combo execution → teammate/confidence reaction → final KO/scoreboard shot (end beat for rewatch)*.
-- **Hashtags:**
-  - `#Overgeared`
-  - `#isekai`
-  - `#animeedit`
-  - `#gaming`
-- **Source link:**
-  - https://anilist.co/anime/212888
-- **Oversaturated?** Lower (good “new-ish” window).
+### 2) **One Piece**
+- **Why fans care now:** Still a mega-fandom with strong “airs Sunday” signal on MyAnimeList; also trending on AniList/ MAL—fans will be posting episode reactions + theories.
+- **Moment to clip:** **Episode-end reaction montage format**:  
+  - 0–2s hook: **a panel-like close-up moment** (dramatic expression / reveal)  
+  - Middle: **2–3 short fight/camaraderie beats in order**  
+  - Final: **big reveal / power-up / vow moment** with on-screen title card: “One Piece — [arc name if you know it]”
+  - (I can’t confirm the exact episode content/timestamps from your feed.)
+- **Hashtags:** `#OnePiece #Luffy #Anime #MangaTok`
+- **Source link:** https://myanimelist.net/anime/21
+
+**Oversaturated:** **YES** (but you can still win with “best single moment” + clean pacing).
 
 ---
 
-### 4) **The Ramparts of Ice (Season 2)**
-- **Why fans care now:** AniList shows **Season 2 trending** and **ep 10 airs 2026-12-03**—people often binge old arcs + anticipate the next big confrontation.
-- **Best clip moment:**
-  - Choose a **“brutal battlefield / formation”** beat:  
-  - Structure: *wind-up → enemy formation reveal → narrow escape / impact cut → ally shout reaction → final “status/aftermath” shot*.
-- **Hashtags:**
-  - `#RampartsOfIce`
-  - `#anime`
-  - `#fantasy`
-  - `#fightscene`
-- **Source link:**
-  - https://anilist.co/anime/213805
-- **Oversaturated?** Low–medium (niche fantasy compared to top giants).
+### 3) **The Apothecary Diaries (Season 3)**
+- **Why fans care now:** Strong seasonal momentum—AniList + MyAnimeList show it **releasing/airing today/this timeframe** (high posting likelihood).
+- **Moment to clip:** **“medicine → consequence → emotional gut-punch”** montage:  
+  - Hook: close shot of a **mix/recipe moment** (then hard cut to a reaction)  
+  - Middle: **one investigation scene** + **one court/power scene** (short, in sequence)  
+  - Final beat: a **major realization** moment (add on-screen text: “This is why she’s terrifyingly smart.”)
+- **Hashtags:** `#TheApothecaryDiaries #Maomao #Anime #WinterArc`
+- **Source link:** https://myanimelist.net/anime/61987
+
+**Oversaturated:** **MED** (big show, but Season 3 specific posts create fresh angles).
 
 ---
 
-### 5) **Cyberpunk: Edgerunners 2 — OVERSATURATED**
-- **Why fans care now:** It’s listed as **top airing right now** on MAL (members + strong score shown in your scan). Even without TikTok-specific spikes, “Edgerunners”-style edits tend to dominate Shorts.
-- **Best clip moment:**
-  - Target a **signature “someone’s life changes in 1 second”** beat:  
-  - Structure: *calm before → sudden decision moment → quick montage of cyber/impact frames → end on the emotional face close-up (re-watch hook)*.
-- **Hashtags:**
-  - `#Cyberpunk`
-  - `#Edgerunners`
-  - `#animeedit`
-  - `#synth`
-- **Source link:**
-  - https://myanimelist.net/anime/61990
-- **Oversaturated?** **Yes** (anime edits + cyber aesthetic are consistently reposted).
+### 4) **Black Clover (Season 2)**
+- **Why fans care now:** AniList + MAL both show it airing soon/this week; established fandom will flood TikTok with “next episode” and “who’s stronger” clips.
+- **Moment to clip:** **Magic reveal / transformation** montage:  
+  - Hook: **burst magic / spell start** (0–2s)  
+  - Middle: 2–3 short spell clashes (keep each segment short)  
+  - Final: **one decisive counter / power display** with a replay-friendly ending beat (text overlay: “Wait—HOW did he do that?”)
+- **Hashtags:** `#BlackClover #Asta #Yuno #Anime`
+- **Source link:** https://myanimelist.net/anime/61967
+
+**Oversaturated:** **HIGH** (but transformation clips always perform—if you cut cleaner than everyone).
 
 ---
 
-### 6) **Grand Theft Auto VI (GTA 6)**
-- **Why fans care now:** Your Twitch scan shows **GTA VI is #1 by viewers**, plus the YouTube “movie edits” list includes GTA-adjacent music/sound energy (and generally Shorts keep resurfacing new “chapters”/moments). Also, Wikipedia most-read includes **Grand Theft Auto VI**.
-- **Best clip moment (non-spoiler, transformative):**
-  - Use a **high-drama “arrival / escalation” moment** from gameplay footage you have access to (avoid anything unreleased/leaked).  
-  - Structure: *spawn/first look → immediate chaos escalation → chaotic chase/impact chain (short unbroken stretches max) → final “character reaction” or “switch of plan” beat*.
-- **Hashtags:**
-  - `#GTA6`
-  - `#Gaming`
-  - `#Shorts`
-  - `#Rockstar`
-- **Source link:**
-  - (For general reference) https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI
-- **Oversaturated?** **Yes** (massive audience + constant edits).
+### 5) **Cyberpunk: Edgerunners 2 (anime)**
+- **Why fans care now:** Listed as “this season most followed” on MAL; Edgerunners always triggers big edit culture (and people will try to recreate emotional beats).
+- **Moment to clip:** **“street chaos → mentor loss/turning point”** style:  
+  - Hook: sudden high-intensity action beat  
+  - Middle: 2 short relationship/character moments (faces close-up → then back to action)  
+  - Final beat: a **major emotional pivot** (freeze-frame style text overlay + sharp SFX)
+- **Hashtags:** `#Edgerunners #Cyberpunk #AnimeEdit #SciFi`
+- **Source link:** https://myanimelist.net/anime/61990
+
+**Oversaturated:** **MED-HIGH** (fandom is loud, but “Edgerunners 2 episode-specific” makes it fresher).
 
 ---
 
-### 7) **One Piece — OVERSATURATED**
-- **Why fans care now:** MAL shows **One Piece airs Sunday** and is massively followed. Even without your TikTok hashtag data, the fandom is always posting reaction + “latest chapter panel” edits.
-- **Best clip moment:**
-  - Clip a **signature stare / vow / power reveal** moment (whichever aligns with the latest episode/chapter you’re tracking).  
-  - Structure: *face reaction close-up → montage of decisive action → end on “team shot” + dramatic caption overlay*.
-- **Hashtags:**
-  - `#OnePiece`
-  - `#Luffy`
-  - `#animeedit`
-  - `#episode`
-- **Source link:**
-  - https://myanimelist.net/anime/21
-- **Oversaturated?** **Yes** (always trending globally).
+### 6) **Overgeared (new trending anime)**
+- **Why fans care now:** AniList says trending + releasing + ep 10 airs soon (fresh content = higher “first reactions” volume).
+- **Moment to clip:** **“gamer POV / strategy flex”** montage:  
+  - Hook: best **HUD/skill/formation** moment  
+  - Middle: 2–3 short “read the fight / execute plan” beats  
+  - Final: **comeback win** or “that was the strategy all along” moment (perfect rewatch fuel)
+- **Hashtags:** `#Overgeared #Anime #IsThisRealLife #GamerTok`
+- **Source link:** https://anilist.co/anime/212888
+
+**Oversaturated:** **LOW-MED** (good opportunity; fewer accounts will have the newest episode bits).
 
 ---
 
-### 8) **The Exiled Heavy Knight Knows How to Game the System**
-- **Why fans care now:** AniList: **RELEASING**, **ep 23 airs 2026-12-03**, and it’s trending with a large fan count for a newer title.
-- **Best clip moment:**
-  - Choose a **“system exploit / plan succeeds”** sequence:  
-  - Structure: *smirk/plan → step-by-step montage (fast cuts) → unexpected success payoff → end on “silent satisfaction” face shot*.
-- **Hashtags:**
-  - `#ExiledHeavyKnight`
-  - `#anime`
-  - `#isekai`
-  - `#edit`
-- **Source link:**
-  - https://anilist.co/anime/180136
-- **Oversaturated?** Medium-low.
+### 7) **John Wick (movies)**
+- **Why fans care now:** Your YouTube feed shows **John Wick edits with extremely high view counts** this last week—indicates sustained edit demand (TikTok often mirrors this).
+- **Moment to clip:** **“The Baba Yaga wakes up → targets the problem → brutal payoff”** montage:  
+  - Hook: the moment that screams *deadly calm* (face/weapon reveal)  
+  - Middle: 2–3 short kill/escape beats (keep tight, avoid long unbroken stretches)  
+  - Final beat: **the signature “no more games” takedown** with on-screen title: “John Wick”
+- **Hashtags:** `#JohnWick #MovieEdit #KeanuReeves #Action`
+- **Source link (edit inspiration):**  
+  - Example in your feed: https://youtu.be/2ahMXLOOtag
+
+**Oversaturated:** **HIGH** (but still performs because action editors constantly remake the same iconic beats—your edge is pacing + story-order clarity).
 
 ---
 
-## Quick “oversaturated vs safer” ranking
-- **Most oversaturated:** **Black Clover**, **Cyberpunk: Edgerunners 2**, **GTA 6**, **One Piece**
-- **Safer bets (less crowded):** **Overgeared**, **Ramparts of Ice S2**, **Exiled Heavy Knight**, **Apothecary Diaries S3** (still big, but strong episode-cycle opportunity)
+## Quick notes for execution (so these don’t get stuck)
+- Keep each **source clip stretch short** (aim 0.6–1.5s segments) and preserve **story order** with captions.
+- For anime releases: caption should say **“Season X / Ep X (if you know it)”**—otherwise keep it generic: **“new episode reaction”** without guessing.
+- Oversaturated ones (GTA VI, One Piece, Black Clover, John Wick): win by using **one unforgettable beat + strong final rewatch moment**.
 
----
-
-If you want, tell me **which media access you have** right now (anime clips you can legally/cleanly source, gameplay capture you can use, etc.), and I’ll convert each title into a **single precise 30–40s storyboard** (exact timestamps/micro-beats) that Claude can cut efficiently.
+If you want, tell me whether your MotionVault style is more **“text/commentary”** or **“cinematic music edit”**—then I’ll propose 1 specific 30–40s beat-by-beat timeline per top 3.

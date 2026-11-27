@@ -1,23 +1,5 @@
 [
   {
-    "file": "2026-11-26-trading-desk.md",
-    "agent": "trading-desk",
-    "name": "Trading Desk",
-    "date": "2026-11-26"
-  },
-  {
-    "file": "2026-11-26-product-builder.md",
-    "agent": "product-builder",
-    "name": "Product Builder",
-    "date": "2026-11-26"
-  },
-  {
-    "file": "2026-11-26-competitor-radar.md",
-    "agent": "competitor-radar",
-    "name": "Competitor Radar",
-    "date": "2026-11-26"
-  },
-  {
     "file": "2026-11-26-growth-coach.md",
     "agent": "growth-coach",
     "name": "Growth Coach",
@@ -69,6 +51,24 @@
     "file": "2026-11-26-studio-scout.md",
     "agent": "studio-scout",
     "name": "Trend Scout",
+    "date": "2026-11-26"
+  },
+  {
+    "file": "2026-11-26-trading-desk.md",
+    "agent": "trading-desk",
+    "name": "Trading Desk",
+    "date": "2026-11-26"
+  },
+  {
+    "file": "2026-11-26-product-builder.md",
+    "agent": "product-builder",
+    "name": "Product Builder",
+    "date": "2026-11-26"
+  },
+  {
+    "file": "2026-11-26-competitor-radar.md",
+    "agent": "competitor-radar",
+    "name": "Competitor Radar",
     "date": "2026-11-26"
   },
   {
