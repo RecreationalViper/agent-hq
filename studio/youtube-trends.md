@@ -3,54 +3,56 @@
 Live from the YouTube Data API. Views/hr = views since upload ÷ hours since upload.
 
 ## Film & Animation: fastest-rising
-- [Teaching my GF how to dive 🤣😭](https://youtu.be/jU6cUtK_hGk) · Cadel and Mia · 93,292,620 views · 2,227,394/hr · 393,154 likes · 960 comments · 0:10
-- [Avengers: Doomsday | Final Trailer | In Theaters December 18](https://youtu.be/Wb8Tq_HD4E8) · Marvel Entertainment · 61,537,685 views · 718,569/hr · 1,672,683 likes · 96,099 comments · 3:16
-- [Nobody's taking my dog. 😂😅](https://youtu.be/Zca-eKzSBvE) · Tale Talker · 11,222,242 views · 300,176/hr · 272,526 likes · 954 comments · 2:56
-- [How To Sneak Thanksgiving Into A Movie Theater 🤔](https://youtu.be/wavxRZZNgaQ) · Zack D. Films · 4,109,023 views · 290,829/hr · 208,148 likes · 5,662 comments · 1:04
-- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 41,964,897 views · 268,766/hr · 473,006 likes · 2,085 comments · 0:16
-- [Bro really waited for him to start walking 😭✌️](https://youtu.be/2QMDnzyTj_4) · MemeTweaker · 23,395,278 views · 230,182/hr · 481,801 likes · 1,106 comments · 0:12
-- [Absolutely NOTHING could've prepared me for the ending](https://youtu.be/DLDXQCLDGgE) · Mi Desing · 11,808,485 views · 214,158/hr · 271,900 likes · 2,395 comments · 0:53
-- [Mom tore big bro's shirt to wipe boba, wait until she sees his back#shorts](https://youtu.be/XY_ov9X03GY) · ChaosBiteClips · 20,651,643 views · 180,786/hr · 99,419 likes · 212 comments · 0:31
+- [Teaching my GF how to dive 🤣😭](https://youtu.be/jU6cUtK_hGk) · Cadel and Mia · 94,243,801 views · 1,580,248/hr · 395,905 likes · 965 comments · 0:10
+- [Avengers: Doomsday | Final Trailer | In Theaters December 18](https://youtu.be/Wb8Tq_HD4E8) · Marvel Entertainment · 66,004,557 views · 638,381/hr · 1,697,251 likes · 97,185 comments · 3:16
+- [How To Sneak Thanksgiving Into A Movie Theater 🤔](https://youtu.be/wavxRZZNgaQ) · Zack D. Films · 11,629,785 views · 364,764/hr · 355,283 likes · 8,266 comments · 1:04
+- [Doom beat Magneto's magnetism with pure magic😭✌🏻Magneto tries to unmask Doom #avengersdoomsday #4k](https://youtu.be/CzHklBsKyhk) · Quirky Things · 7,958,571 views · 239,917/hr · 103,744 likes · 1,338 comments · 0:10
+- [Nobody's taking my dog. 😂😅](https://youtu.be/Zca-eKzSBvE) · Tale Talker · 11,612,955 views · 210,608/hr · 279,941 likes · 978 comments · 2:56
+- [Bro really waited for him to start walking 😭✌️](https://youtu.be/2QMDnzyTj_4) · MemeTweaker · 23,670,210 views · 198,255/hr · 488,018 likes · 1,102 comments · 0:12
+- [Absolutely NOTHING could've prepared me for the ending](https://youtu.be/DLDXQCLDGgE) · Mi Desing · 13,052,154 views · 179,058/hr · 300,875 likes · 2,636 comments · 0:53
+- [They Couldn't Stand Each Other… Now They're Stuck on a Road Trip Together! 😂🚗 #flight #movie](https://youtu.be/6rLBRgF03gI) · Tina Kelch · 11,671,079 views · 165,903/hr · 343,662 likes · 1,057 comments · 2:47
 
 ## Film & Animation: short videos (3 min or less)
-- [Teaching my GF how to dive 🤣😭](https://youtu.be/jU6cUtK_hGk) · Cadel and Mia · 93,292,620 views · 2,227,394/hr · 393,154 likes · 960 comments · 0:10
-- [Nobody's taking my dog. 😂😅](https://youtu.be/Zca-eKzSBvE) · Tale Talker · 11,222,242 views · 300,176/hr · 272,526 likes · 954 comments · 2:56
-- [How To Sneak Thanksgiving Into A Movie Theater 🤔](https://youtu.be/wavxRZZNgaQ) · Zack D. Films · 4,109,023 views · 290,829/hr · 208,148 likes · 5,662 comments · 1:04
-- [Why they move so human 🥀](https://youtu.be/_dEH-edCIN4) · MoVeak · 41,964,897 views · 268,766/hr · 473,006 likes · 2,085 comments · 0:16
-- [Bro really waited for him to start walking 😭✌️](https://youtu.be/2QMDnzyTj_4) · MemeTweaker · 23,395,278 views · 230,182/hr · 481,801 likes · 1,106 comments · 0:12
-- [Absolutely NOTHING could've prepared me for the ending](https://youtu.be/DLDXQCLDGgE) · Mi Desing · 11,808,485 views · 214,158/hr · 271,900 likes · 2,395 comments · 0:53
-- [Mom tore big bro's shirt to wipe boba, wait until she sees his back#shorts](https://youtu.be/XY_ov9X03GY) · ChaosBiteClips · 20,651,643 views · 180,786/hr · 99,419 likes · 212 comments · 0:31
-- [#naofloppa](https://youtu.be/4TislAds8xg) · qrk9 · 2,950,268 views · 177,403/hr · 0 likes · 884 comments · 0:13
+- [Teaching my GF how to dive 🤣😭](https://youtu.be/jU6cUtK_hGk) · Cadel and Mia · 94,243,801 views · 1,580,248/hr · 395,905 likes · 965 comments · 0:10
+- [How To Sneak Thanksgiving Into A Movie Theater 🤔](https://youtu.be/wavxRZZNgaQ) · Zack D. Films · 11,629,785 views · 364,764/hr · 355,283 likes · 8,266 comments · 1:04
+- [Doom beat Magneto's magnetism with pure magic😭✌🏻Magneto tries to unmask Doom #avengersdoomsday #4k](https://youtu.be/CzHklBsKyhk) · Quirky Things · 7,958,571 views · 239,917/hr · 103,744 likes · 1,338 comments · 0:10
+- [Nobody's taking my dog. 😂😅](https://youtu.be/Zca-eKzSBvE) · Tale Talker · 11,612,955 views · 210,608/hr · 279,941 likes · 978 comments · 2:56
+- [Bro really waited for him to start walking 😭✌️](https://youtu.be/2QMDnzyTj_4) · MemeTweaker · 23,670,210 views · 198,255/hr · 488,018 likes · 1,102 comments · 0:12
+- [Absolutely NOTHING could've prepared me for the ending](https://youtu.be/DLDXQCLDGgE) · Mi Desing · 13,052,154 views · 179,058/hr · 300,875 likes · 2,636 comments · 0:53
+- [They Couldn't Stand Each Other… Now They're Stuck on a Road Trip Together! 😂🚗 #flight #movie](https://youtu.be/6rLBRgF03gI) · Tina Kelch · 11,671,079 views · 165,903/hr · 343,662 likes · 1,057 comments · 2:47
+- [Thanksgiving meme](https://youtu.be/R8i-QxFmppI) · memepples · 3,658,669 views · 155,693/hr · 40,583 likes · 245 comments · 0:11
 
 ## Gaming: fastest-rising
-- [Gukesh vs Sindarov | Game 3 | Salesforce FIDE World Championship 2026](https://youtu.be/fv-0q97mSJE) · ChessBase India · 2,176,848 views · 279,508/hr · 25,893 likes · 25 comments · 386:32
-- [Don't Do That](https://youtu.be/9B1ljU7lv-E) · penguinz0 · 5,391,588 views · 155,660/hr · 89,818 likes · 6,755 comments · 15:48
-- [[B] PGL Major Singapore 2026 - Stage 1 - Day 3](https://youtu.be/GqUI1CqXc48) · PGL · 1,178,102 views · 120,576/hr · 5,229 likes · 6 comments · 619:21
-- [We Went Duck Hunting...](https://youtu.be/hXZR2EI4Df0) · SMii7Y · 744,094 views · 100,281/hr · 29,199 likes · 1,093 comments · 22:44
-- [Grand Theft Auto VI](https://youtu.be/jPU38VyVVgE) · videogamedunkey · 3,022,271 views · 97,056/hr · 75,724 likes · 3,774 comments · 15:53
-- [GTA 6 #2](https://youtu.be/umDq3LY7sFA) · CoryxKenshin · 4,988,298 views · 92,616/hr · 292,322 likes · 26,358 comments · 94:37
-- [🔴 LIVE! - GTA 6 FREE ROAM and EASTER EGGS! (PS5 PRO)](https://youtu.be/nNfHuQkyins) · Typical Gamer · 1,355,502 views · 85,365/hr · 5,610 likes · 73 comments · 542:29
-- [🔴LIVE | GTA 6 | DAY 7 | CHAPTER 5 | irredeemable | LUCIA DUMPED ME | BEST ENDING 100% | #BUNGULATE](https://youtu.be/Y7PPzKj6kTQ) · TheBurntPeanut · 1,442,442 views · 82,319/hr · 12,821 likes · 349 comments · 560:44
+- [Catching Hackers on BalSMP](https://youtu.be/ZljwWVavFJI) · KlingKlong · 1,256,838 views · 969,455/hr · 1,143 likes · 0 comments · 93:49
+- [Cherry Time! Special Presentation - November 2026](https://youtu.be/M-QUgdcBpZU) · Team Cherry · 1,332,061 views · 208,395/hr · 129,315 likes · 7,552 comments · 9:04
+- [🔴 LIVE! - LAST GTA 6 STREAM before PIRATE TOKEN 10 DAY MARATHON!](https://youtu.be/HWGs6vY_JOQ) · Typical Gamer · 1,080,013 views · 127,984/hr · 4,475 likes · 27 comments · 534:25
+- [Don't Do That](https://youtu.be/9B1ljU7lv-E) · penguinz0 · 6,178,747 views · 117,934/hr · 99,305 likes · 7,246 comments · 15:48
+- [GTA 6 #2](https://youtu.be/umDq3LY7sFA) · CoryxKenshin · 5,470,531 views · 76,389/hr · 304,370 likes · 27,181 comments · 94:37
+- [Grand Theft Auto VI](https://youtu.be/jPU38VyVVgE) · videogamedunkey · 3,626,726 views · 74,175/hr · 85,423 likes · 4,073 comments · 15:53
+- [We Went Duck Hunting...](https://youtu.be/hXZR2EI4Df0) · SMii7Y · 1,796,275 views · 71,353/hr · 53,836 likes · 1,261 comments · 22:44
+- [if you don't TIP you DIE](https://youtu.be/1qa9PrPY3kk) · TheRussianBadger · 188,634 views · 71,323/hr · 23,379 likes · 2,020 comments · 55:44
 
 ## Gaming: short videos (3 min or less)
-- none in the chart today
+- [Garten of Banban 2027](https://youtu.be/g9UP8Yx29wk) · Euphoric Brothers · 369,026 views · 57,926/hr · 20,002 likes · 2,737 comments · 2:45
+- [Mecha Base Trailer | Tower Defense Simulator](https://youtu.be/rkhpk8m3Yh4) · Paradoxum Games · 130,058 views · 24,119/hr · 5,739 likes · 957 comments · 0:56
+- [*UNSEEN* $1 MILLION in 1 MINUTE GTA 6 UNLIMITED MONEY GLITCH](https://youtu.be/si_oAlgehIU) · YTLukeyy · 98,139 views · 8,821/hr · 3,983 likes · 619 comments · 2:31
 
 ## Entertainment: fastest-rising
-- [Teaching my GF how to dive 🤣😭](https://youtu.be/jU6cUtK_hGk) · Cadel and Mia · 93,292,620 views · 2,227,389/hr · 393,154 likes · 960 comments · 0:10
-- [Avengers: Doomsday | Final Trailer | In Theaters December 18](https://youtu.be/Wb8Tq_HD4E8) · Marvel Entertainment · 61,537,685 views · 718,568/hr · 1,672,683 likes · 96,099 comments · 3:16
-- [Well we know what time it is 😂 #funny](https://youtu.be/W_cuX6leGak) · No Tatts · 35,846,627 views · 611,391/hr · 634,243 likes · 9,483 comments · 0:16
-- [Your Sister Runied Your Birthday 💔😭](https://youtu.be/R_1ulH99Sfs) · Plato Tube · 21,073,142 views · 538,448/hr · 128,718 likes · 3,094 comments · 0:17
-- [1,2,3 or 4? 🤔](https://youtu.be/JiaJPvwwxUk) · The Smily Fam · 20,150,146 views · 495,853/hr · 60,041 likes · 44,336 comments · 0:12
-- [Not Every Shot Goes as Planned](https://youtu.be/FByrCc303mI) · Operation Safa · 60,134,014 views · 475,643/hr · 810,648 likes · 1,481 comments · 0:48
-- [She was NOT a Subject 😭🥀 #funny #memes #shorts](https://youtu.be/UW4W9jaJq20) · Mivzo · 12,770,184 views · 417,909/hr · 274,298 likes · 1,117 comments · 0:18
-- [When A Stranger's Advice Meant More Than He Realized](https://youtu.be/YqRRVu4SPFI) · Havoc Cams · 11,292,840 views · 302,761/hr · 281,953 likes · 1,205 comments · 0:20
+- [Teaching my GF how to dive 🤣😭](https://youtu.be/jU6cUtK_hGk) · Cadel and Mia · 94,243,801 views · 1,580,246/hr · 395,905 likes · 965 comments · 0:10
+- [Your bro at a funeral 🫩🥀](https://youtu.be/Vp-WKxK7nlI) · MaxCurrent · 21,980,034 views · 735,055/hr · 321,223 likes · 10,563 comments · 0:15
+- [Avengers: Doomsday | Final Trailer | In Theaters December 18](https://youtu.be/Wb8Tq_HD4E8) · Marvel Entertainment · 66,004,557 views · 638,381/hr · 1,697,251 likes · 97,185 comments · 3:16
+- [Well we know what time it is 😂 #funny](https://youtu.be/W_cuX6leGak) · No Tatts · 36,407,051 views · 476,622/hr · 640,588 likes · 9,570 comments · 0:16
+- [This Man Is Incredibly Calm 😳](https://youtu.be/3cTdimJGm8w) · On Camera Motion · 22,193,406 views · 460,239/hr · 299,100 likes · 2,234 comments · 0:17
+- [Thanksgiving off to a bad start 🥀](https://youtu.be/jnfWYETRXw4) · em0geelie · 9,565,328 views · 434,556/hr · 166,068 likes · 3,540 comments · 0:10
+- [Not Every Shot Goes as Planned](https://youtu.be/FByrCc303mI) · Operation Safa · 62,585,885 views · 434,078/hr · 847,233 likes · 1,517 comments · 0:48
+- [Your Sister Runied Your Birthday 💔😭](https://youtu.be/R_1ulH99Sfs) · Plato Tube · 22,050,415 views · 387,589/hr · 133,275 likes · 3,182 comments · 0:17
 
 ## Entertainment: short videos (3 min or less)
-- [Teaching my GF how to dive 🤣😭](https://youtu.be/jU6cUtK_hGk) · Cadel and Mia · 93,292,620 views · 2,227,389/hr · 393,154 likes · 960 comments · 0:10
-- [Well we know what time it is 😂 #funny](https://youtu.be/W_cuX6leGak) · No Tatts · 35,846,627 views · 611,391/hr · 634,243 likes · 9,483 comments · 0:16
-- [Your Sister Runied Your Birthday 💔😭](https://youtu.be/R_1ulH99Sfs) · Plato Tube · 21,073,142 views · 538,448/hr · 128,718 likes · 3,094 comments · 0:17
-- [1,2,3 or 4? 🤔](https://youtu.be/JiaJPvwwxUk) · The Smily Fam · 20,150,146 views · 495,853/hr · 60,041 likes · 44,336 comments · 0:12
-- [Not Every Shot Goes as Planned](https://youtu.be/FByrCc303mI) · Operation Safa · 60,134,014 views · 475,643/hr · 810,648 likes · 1,481 comments · 0:48
-- [She was NOT a Subject 😭🥀 #funny #memes #shorts](https://youtu.be/UW4W9jaJq20) · Mivzo · 12,770,184 views · 417,909/hr · 274,298 likes · 1,117 comments · 0:18
-- [When A Stranger's Advice Meant More Than He Realized](https://youtu.be/YqRRVu4SPFI) · Havoc Cams · 11,292,840 views · 302,761/hr · 281,953 likes · 1,205 comments · 0:20
-- [Nobody's taking my dog. 😂😅](https://youtu.be/Zca-eKzSBvE) · Tale Talker · 11,222,242 views · 300,175/hr · 272,526 likes · 954 comments · 2:56
+- [Teaching my GF how to dive 🤣😭](https://youtu.be/jU6cUtK_hGk) · Cadel and Mia · 94,243,801 views · 1,580,246/hr · 395,905 likes · 965 comments · 0:10
+- [Your bro at a funeral 🫩🥀](https://youtu.be/Vp-WKxK7nlI) · MaxCurrent · 21,980,034 views · 735,055/hr · 321,223 likes · 10,563 comments · 0:15
+- [Well we know what time it is 😂 #funny](https://youtu.be/W_cuX6leGak) · No Tatts · 36,407,051 views · 476,622/hr · 640,588 likes · 9,570 comments · 0:16
+- [This Man Is Incredibly Calm 😳](https://youtu.be/3cTdimJGm8w) · On Camera Motion · 22,193,406 views · 460,239/hr · 299,100 likes · 2,234 comments · 0:17
+- [Thanksgiving off to a bad start 🥀](https://youtu.be/jnfWYETRXw4) · em0geelie · 9,565,328 views · 434,556/hr · 166,068 likes · 3,540 comments · 0:10
+- [Not Every Shot Goes as Planned](https://youtu.be/FByrCc303mI) · Operation Safa · 62,585,885 views · 434,078/hr · 847,233 likes · 1,517 comments · 0:48
+- [Your Sister Runied Your Birthday 💔😭](https://youtu.be/R_1ulH99Sfs) · Plato Tube · 22,050,415 views · 387,589/hr · 133,275 likes · 3,182 comments · 0:17
+- [How To Sneak Thanksgiving Into A Movie Theater 🤔](https://youtu.be/wavxRZZNgaQ) · Zack D. Films · 11,629,785 views · 364,763/hr · 355,283 likes · 8,266 comments · 1:04

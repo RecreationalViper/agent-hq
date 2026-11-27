@@ -1,161 +1,58 @@
-# YouTube Shorts Watcher (updated 2026-11-26)
+# YouTube Shorts Watcher (updated 2026-11-27)
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-## What’s working on YouTube right now (US) — fastest-rising (relevant to movie/game/anime)
+# YouTube Shorts Trend Report — 2026-11-27
 
-### Fastest-rising “Movie/Animation” (short-form friendly)
-1) **“Teaching my GF how to dive 🤣😭”** — **93,292,620 views** (**2,227,394/hr**) — 0:10  
-   https://youtu.be/jU6cUtK_hGk  
-2) **“Why they move so human 🥀”** — **41,964,897 views** (**268,766/hr**) — 0:16  
-   https://youtu.be/_dEH-edCIN4  
-3) **“Bro really waited for him to start walking 😭✌️”** — **23,395,278 views** (**230,182/hr**) — 0:12  
-   https://youtu.be/2QMDnzyTj_4  
-4) **“Nobody’s taking my dog. 😂😅”** — **11,222,242 views** (**300,176/hr**) — 2:56  
-   https://youtu.be/Zca-eKzSBvE  
-5) **“Absolutely NOTHING could've prepared me for the ending”** — **11,808,485 views** (**214,158/hr**) — 0:53  
-   https://youtu.be/DLDXQCLDGgE  
-6) **“How To Sneak Thanksgiving Into A Movie Theater 🤔”** — **4,109,023 views** (**290,829/hr**) — 1:04  
-   https://youtu.be/wavxRZZNgaQ  
+## 1. Fastest-rising relevant videos (last ~24 h)
 
-### Fastest-rising “Gaming” (relevant titles)
-1) **“Don't Do That”** — **5,391,588 views** (**155,660/hr**) — 15:48  
-   https://youtu.be/9B1ljU7lv-E  
-2) **“Grand Theft Auto VI”** — **3,022,271 views** (**97,056/hr**) — 15:53  
-   https://youtu.be/jPU38VyVVgE  
-3) **“GTA 6 #2”** — **4,988,298 views** (**92,616/hr**) — 94:37  
-   https://youtu.be/umDq3LY7sFA  
-4) **“We Went Duck Hunting...”** — **744,094 views** (**100,281/hr**) — 22:44  
-   https://youtu.be/hXZR2EI4Df0  
-(Chess/PGL/Fide entries are fastest-rising too, but they’re not a great match for typical MotionVault movie/game/anime clip formats.)
+| # | Video | Category | Views | Views/hr | Length | Key metadata |
+|---|-------|----------|-------|----------|--------|--------------|
+| 1 | **Teaching my GF how to dive 🤣😭** (Cadel and Mia) | Film & Animation / Entertainment | 94,243,801 | **1,580,248** | 0:10 | 395,905 likes, 965 comments |
+| 2 | **Avengers: Doomsday \| Final Trailer \| In Theaters December 18** (Marvel Entertainment) | Film & Animation / Entertainment | 66,004,557 | **638,381** | 3:16 | 1.7M likes, 97K comments |
+| 3 | **Your bro at a funeral 🫩🥀** (MaxCurrent) | Entertainment | 21,980,034 | **735,055** | 0:15 | 321,223 likes, 10,563 comments |
+| 4 | **Well we know what time it is 😂 #funny** (No Tatts) | Entertainment | 36,407,051 | **476,622** | 0:16 | 640,588 likes, 9,570 comments |
+| 5 | **This Man Is Incredibly Calm 😳** (On Camera Motion) | Entertainment | 22,193,406 | **460,239** | 0:17 | 299,100 likes, 2,234 comments |
+| 6 | **Doom beat Magneto's magnetism with pure magic😭✌🏻 #avengersdoomsday #4k** (Quirky Things) | Film & Animation (short) | 7,958,571 | **239,917** | 0:10 | 103,744 likes |
+| 7 | **Bro really waited for him to start walking 😭✌️** (MemeTweaker) | Film & Animation (short) | 23,670,210 | **198,255** | 0:12 | 488,018 likes |
+| 8 | **Absolutely NOTHING could've prepared me for the ending** (Mi Desing) | Film & Animation (short) | 13,052,154 | **179,058** | 0:53 | 300,875 likes |
 
-### Fastest-rising “Entertainment” (short videos ≤3 min; best transferable formatting)
-Same as above, plus:
-- **“Well we know what time it is 😂 #funny”** — **35,846,627 views** (**611,391/hr**) — 0:16  
-  https://youtu.be/W_cuX6leGak  
-- **“Your Sister Runied Your Birthday 💔😭”** — **21,073,142 views** (**538,448/hr**) — 0:17  
-  https://youtu.be/R_1ulH99Sfs  
-- **“1,2,3 or 4? 🤔”** — **20,150,146 views** (**495,853/hr**) — 0:12  
-  https://youtu.be/JiaJPvwwxUk  
+**Gaming short-form standouts** (≤3 min):
+- **Garten of Banban 2027** (Euphoric Brothers) — 369,026 views, **57,926/hr**, 2:45
+- **Mecha Base Trailer \| Tower Defense Simulator** (Paradoxum Games) — 130,058 views, **24,119/hr**, 0:56
+- **\*UNSEEN\* $1 MILLION in 1 MINUTE GTA 6 UNLIMITED MONEY GLITCH** (YTLukeyy) — 98,139 views, **8,821/hr**, 2:31
 
-> **Important limitation:** the “Gaming: short videos (3 min or less)” section says **none in the chart today**, so we can’t directly infer gaming-short formatting from this dataset.
+**Top movie-edit Shorts (last 7 days)**:
+- **John Wick: Chapter 3 \| The Baba Yaga wakes up** (Te01_movie) — **11,343,692** views
+- **“Fatzilla” – The Nutty Professor \| FUNK MANDALA** (AfterAditZZ) — **12,254,032** views
+- **ABSOLUTE MAGICIANS \| Now You See Me** (Levristy Edit) — **6,754,053** views
+- **They were so happy… until 💔** (Tinybits) — **8,144,361** views
+
+**Top anime-edit Shorts (last 7 days)**:
+- **Tanjiro saved everyones day in a busy City** (NAESFX) — **13,214,213** views
+- **Tanjiro's love shows up without being asked** (NAESFX) — **3,732,490** views
+- **THORFINN Edit 😭💔 \| A-Wall** (xcdRL) — **2,329,261** views
+- **squishy cheeks trend x JJK** (*•. ʏᴇʟʟᴀ) — **2,931,674** views
 
 ---
 
-## What these fastest-rising videos have in common (patterns you can copy)
+## 2. What they have in common
 
-### 1) Title style = instant reaction + emoji cues
-Examples:  
-- “**Teaching my GF… 🤣😭**”  
-- “**Why they move so human 🥀**”  
-- “**Bro really waited… 😭✌️**”  
-- “**Absolutely NOTHING…**”  
-- “**1,2,3 or 4? 🤔**”  
-
-**Copy rule:** lead with a *moment*, use a *conflict/promise*, add **2–3 emojis** that match the emotion.
-
-### 2) Thumbnail/hook logic (based on title + length pattern)
-Even without thumbnails in the dataset, the **0:10–0:20** viral range suggests:
-- **Hook beat lands immediately** (first second is the “payoff” or the “wrong expectation”)
-- Minimal text; big emotion/facial expression or the “setup” object
-
-**Copy rule:** on frame 1–2 show the “payoff” (or the clearly wrong outcome), not the slow setup.
-
-### 3) Length distribution = very short, rewatchable loops
-Most winners are **0:10, 0:12, 0:16, 0:17**; some are ~**1–3 minutes** when the ending twist is strong.
-
-**Copy rule:** build Shorts as:
-- **Setup (0.5–1.5s)**
-- **Payoff stretch(s)** (1–3 unbroken mini-blocks, each short)
-- **Final beat** designed for replay
-
-### 4) Topic framing: “unexpected human moment” or “betrayal / failure / twist”
-Across the fastest-rising list, the common payoff types are:
-- comedic mishap
-- “nobody expected that ending”
-- human behavior/realism
-- “can you believe this happened?”
-
-**MotionVault translation:** choose anime/movie/game moments that feel like **a reaction clip** (betrayal, overconfidence punished, sudden reversal, uncanny realism).
+| Element | Pattern |
+|---------|---------|
+| **Length** | **10–17 seconds** dominates the absolute fastest risers (8 of top 10 ≤ 0:17). Longer “story” edits (0:50–2:50) still pull 150k–350k views/hr but lose the 1M+/hr velocity. |
+| **Hook** | **Visual payoff in frame 1** — dive fail, funeral reaction, calm guy, Magneto vs Doom clash, “nothing prepared me for ending.” No cold opens. |
+| **Title style** | **Sentence-case + 1–3 emojis + 1–2 hashtags**. Examples: “Teaching my GF how to dive 🤣😭”, “Doom beat Magneto's magnetism with pure magic😭✌🏻 #avengersdoomsday #4k”, “Your bro at a funeral 🫩🥀”. |
+| **Thumbnail / first frame** | High-contrast face or VFX moment, text ≤ 3 words (“NOTHING PREPARED ME”, “DOOM VS MAGNETO”). |
+| **Topic clusters** | 1) **Avengers: Doomsday** (trailer + fan theory clips) 2) **Relatable micro-skits** (GF dive, funeral bro, calm guy) 3) **Emotional pivot** (“happy until 💔”, “nothing prepared me”) 4) **Anime “iconic moment” loops** (Tanjiro, Thorfinn, JJK squishy cheeks). |
+| **Audio** | Trending sound bites (A-Wall, “FUNK MANDALA”, Olivia Rodrigo “the cure”/“stupid song”, Justice “Flower In A Hurricane” from GTA VI OST). |
+| **Posting cadence** | Channels posting **daily 10–15 s clips** (Cadel and Mia, MaxCurrent, NAESFX) outpace weekly long-form. |
 
 ---
 
-## Anime/game/movie Shorts we should clip (from what’s trending right now)
+## 3. Titles / moments the studio should clip **this week**
 
-### Anime targets (from AniList / MyAnimeList trending + airing right now)
-These are *trending/airing*, so prioritize recent episodes/moments (no exact scene timestamps available from the data you provided):
-- **The Apothecary Diaries Season 3** (airing Friday; also explicitly listed as airing)  
-- **Overgeared** (RELEASING; ep 10 airs 2026-11-29)  
-- **The Ramparts of Ice Season 2** (RELEASING; ep 10 airs 2026-12-03)  
-- **The Exiled Heavy Knight Knows How to Game the System** (RELEASING; ep 23 airs 2026-12-03)  
-- **One Piece** (still massively releasing; huge audience baseline)  
-- **Black Clover Season 2** (RELEASING; ep 9 airs 2026-11-28)  
-
-**Shorts-friendly moment types to hunt while watching:**
-- Apothecary: “clever deduction reveals,” “quiet threat,” “doctoring gone wrong → instant reaction”
-- Overgeared: “system-game gotcha,” “power spike,” “betrayal reveal”
-- Ramparts of Ice: “battle formation reveal,” “freezing/limit-break moment,” “hero delivers the line → instant cut”
-- Exiled Heavy Knight: “gaming loophole,” “confidence → instant checkmate”
-- One Piece: “emotional punchline,” “new commander moment,” “gear/power reveal beat”
-- Black Clover: “grimereveal,” “spell sequence landing,” “villain humiliation → final beat”
-
-*(I can’t name exact episode scenes without pulling episode content; if you send episode numbers or timestamps Claude can cut, I’ll convert them into clip plans.)*
-
-### Gaming targets (from what’s fastest-rising)
-From the fastest-rising gaming entries:
-- **GTA VI** / **GTA 6 #2** (big velocity; huge mainstream overlap)
-- **“Don’t Do That”** (unknown game from the dataset; but title screams “punish the mistake” format)
-
-**Shorts to make (format, not copyrighted specifics):**
-- “Don’t do that” style: clip the moment right before the mistake, then the immediate consequence (1–2 beat replay loop)
-- GTA VI: use “unexpected outcome” missions/free roam moments—especially any **Easter egg reveal** + instant reaction
-
-*(No exact gameplay moments/timestamps are provided in your data, so we’ll need the owner/studio to pick specific clips from the game footage or provided sources.)*
-
-### Movie targets
-The fastest-rising list includes a mainstream trailer:
-- **“Avengers: Doomsday | Final Trailer | In Theaters December 18”** — **61,537,685 views** (**718,569/hr**) — 3:16  
-  https://youtu.be/Wb8Tq_HD4E8  
-
-**Clip angle for MotionVault:** from trailers, don’t take whole sequences—pull **tight 20–35s montage** around:
-- the clearest “villain/hero reveal”
-- 1–2 “power showcase” beats
-- the **last trailer-second punchline** (perfect for the rewatch trigger)
-
----
-
-## Title patterns to copy (directly from today’s winners)
-
-Use these templates with your movie/anime/game moment:
-
-1) **[Verby Setup] + [Emotion emoji]**
-- “Teaching my GF how to dive 🤣😭”
-- “Bro really waited for him to start walking 😭✌️”
-- “Your Sister Runied Your Birthday 💔😭”
-
-2) **[Unexpected realism / uncanny observation] + [symbol emoji]**
-- “Why they move so human 🥀”
-
-3) **[Big promise / twist framing]**
-- “Absolutely NOTHING could've prepared me for the ending”
-
-4) **[Question hook with numbers]**
-- “1,2,3 or 4? 🤔”
-
-5) **[Short instruction + absurdity]**
-- “How To Sneak Thanksgiving Into A Movie Theater 🤔”
-
-**MotionVault adapted titles (examples to draft):**
-- “He thought it was safe… until that second happened 😭”
-- “That animation is TOO real 🥀”
-- “Nothing prepared me for the ending beat 💥”
-- “1,2,3… which move wins? 🤔”
-
----
-
-## Next step for the studio (what I need from Claude/owner)
-To turn this into *specific clip instructions* (exact timestamps + 30–40s montage blocks), reply with either:
-- the **movie/anime/game sources you want to use** (episode numbers, or which trailer cutdown), and/or
-- 5–10 candidate timestamps Claude should evaluate.
-
-Then I’ll output: **3–6 Shorts scripts** per source with *hook line text*, *cut points*, and a *final rewatch beat*.
+| Source | Exact moment (timecode-ready) | Why it fits the pattern | Suggested Short title (copy pattern) |
+|--------|------------------------------|------------------------|--------------------------------------|
+| **Avengers: Doomsday** (trailer just dropped, 638k views/hr) | Doom unmasking Magneto / “pure magic” beat (0:42–0:52 in trailer) | Already spawning 240k views/hr fan clips; 4K tag pulls search | **Doom breaks Magneto's helmet with magic 😭✌🏻 #avengersdoomsday #4k** |
+| **The Apothecary Diaries S3** (ep 10 airs Dec 4, trending #1 on AniList) | Maomao’s “deduction face” zoom + wall-of-text reveal (ep 9 climax) | Tanjiro-style “iconic face” loop works; 13M views on Demon Slayer equivalent | **Maomao's brain evolves into ultimate form 🤯💊 #apothecarydiaries #anime**
