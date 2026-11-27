@@ -1,13 +1,32 @@
 # GitHub Radar — 2026-11-27
 
-> Scanned 12 of 33 saved searches (12 returned data, 0 unchanged, 0 failed). 15 GitHub API calls, authenticated. Zero AI tokens used.
+> Scanned 12 of 33 saved searches (12 returned data, 0 unchanged, 0 failed). 21 GitHub API calls, authenticated. Zero AI tokens used.
 
 ## Start here (1)
 
-- **[janus-sh/Janus](https://github.com/janus-sh/Janus)** 🟡 WATCH · score 60/100 · ⭐ 6,558 · MIT · updated 1d ago
-  - A free coding agent in your terminal. It runs on the smartest free model that is up today.
-  - Why: 6,558 stars; updated this week; MIT license; well established; third-party source, needs checking
-  - Watch out: third-party claim, verify on the provider's own site
+- **[opensetlabs/openset-llm](https://github.com/opensetlabs/openset-llm)** 🟡 WATCH · score 64/100 · ⭐ 2,192 · MIT · updated 0d ago
+  - Fast local LLM inference on plain CPUs. No GPU, 8 GB of RAM. OpenAI-compatible server.
+  - Why: 2,192 stars; updated this week; MIT license; directly cuts AI spend
+  - Watch out: needs a machine running, not phone-only
+
+## Just launched — new repos (3)
+
+_Created in the last few weeks. Surfaced early on purpose, so they stay WATCH until they have a track record._
+
+- **[DeadInternetStudios/100x-engineer-skill](https://github.com/DeadInternetStudios/100x-engineer-skill)** 🟡 WATCH · score 82/100 · ⭐ 799 · MIT · updated 0d ago
+  - 100x is a skill by a former Cursor engineer that turns prompts into formally verified, production-ready code
+  - Why: filed under skills; 799 stars; updated this week; MIT license; new repo, 5 days old; early traction; contains SKILL.md skill files
+  - Watch out: brand-new repo — unproven, watch before adopting
+  - Confirmed: contains `SKILL.md` skill files
+- **[sergiobanhos/generate-icons](https://github.com/sergiobanhos/generate-icons)** 🟡 WATCH · score 77/100 · ⭐ 173 · MIT · updated 1d ago
+  - Agent skill that draws an original icon library matching your design system (React, Vue, Svelte, React Native, SVG).
+  - Why: filed under skills; 173 stars; updated this week; MIT license; new repo, 1 day old; early traction; contains SKILL.md skill files
+  - Watch out: brand-new repo — unproven, watch before adopting
+  - Confirmed: contains `SKILL.md` skill files
+- **[Moh4696/inkworks-skill](https://github.com/Moh4696/inkworks-skill)** 🟡 WATCH · score 76/100 · ⭐ 536 · MIT · updated 2d ago
+  - Inkworks: an agent skill for interactive 3D how-it-works pages drawn like an engineering sheet.
+  - Why: filed under skills; 536 stars; updated this week; MIT license; new repo, 3 days old; early traction
+  - Watch out: brand-new repo — unproven, watch before adopting
 
 ## Agent skills you could install (0)
 

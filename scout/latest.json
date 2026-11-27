@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T12:48:23.839Z",
+  "generatedAt": "2026-11-27T23:35:39.418Z",
   "date": "2026-11-27",
   "token": true,
   "searches": {
@@ -9,32 +9,31 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 15,
-  "rateRemaining": 4997,
-  "newItems": 1,
+  "apiCalls": 21,
+  "rateRemaining": 8,
+  "newItems": 5,
   "blockedToday": 0,
   "shortlist": [
     {
-      "name": "janus-sh/Janus",
-      "url": "https://github.com/janus-sh/Janus",
-      "description": "A free coding agent in your terminal. It runs on the smartest free model that is up today.",
-      "stars": 6558,
-      "forks": 917,
-      "language": "JavaScript",
+      "name": "opensetlabs/openset-llm",
+      "url": "https://github.com/opensetlabs/openset-llm",
+      "description": "Fast local LLM inference on plain CPUs. No GPU, 8 GB of RAM. OpenAI-compatible server.",
+      "stars": 2192,
+      "forks": 208,
+      "language": "Python",
       "license": "MIT",
-      "pushedAt": "2026-11-26T11:26:01Z",
-      "category": "free-tokens",
-      "score": 60,
+      "pushedAt": "2026-11-27T21:44:57Z",
+      "category": "efficiency",
+      "score": 64,
       "tier": "watch",
       "reasons": [
-        "6,558 stars",
+        "2,192 stars",
         "updated this week",
         "MIT license",
-        "well established",
-        "third-party source, needs checking"
+        "directly cuts AI spend"
       ],
       "flags": [
-        "unverified-offer"
+        "self-host-required"
       ],
       "skillFiles": null,
       "source": "search",
@@ -44,32 +43,122 @@
     }
   ],
   "watched": [],
-  "newborn": [],
+  "newborn": [
+    {
+      "name": "DeadInternetStudios/100x-engineer-skill",
+      "url": "https://github.com/DeadInternetStudios/100x-engineer-skill",
+      "description": "100x is a skill by a former Cursor engineer that turns prompts into formally verified, production-ready code",
+      "stars": 799,
+      "forks": 116,
+      "language": "JavaScript",
+      "license": "MIT",
+      "pushedAt": "2026-11-27T23:28:12Z",
+      "category": "skills",
+      "score": 82,
+      "tier": "watch",
+      "reasons": [
+        "filed under skills",
+        "799 stars",
+        "updated this week",
+        "MIT license",
+        "new repo, 5 days old",
+        "early traction",
+        "contains SKILL.md skill files"
+      ],
+      "flags": [
+        "newborn"
+      ],
+      "skillFiles": true,
+      "source": "search",
+      "newborn": true,
+      "skillPath": null,
+      "commitUrl": null
+    },
+    {
+      "name": "sergiobanhos/generate-icons",
+      "url": "https://github.com/sergiobanhos/generate-icons",
+      "description": "Agent skill that draws an original icon library matching your design system (React, Vue, Svelte, React Native, SVG).",
+      "stars": 173,
+      "forks": 12,
+      "language": "Python",
+      "license": "MIT",
+      "pushedAt": "2026-11-26T12:22:40Z",
+      "category": "skills",
+      "score": 77,
+      "tier": "watch",
+      "reasons": [
+        "filed under skills",
+        "173 stars",
+        "updated this week",
+        "MIT license",
+        "new repo, 1 day old",
+        "early traction",
+        "contains SKILL.md skill files"
+      ],
+      "flags": [
+        "newborn"
+      ],
+      "skillFiles": true,
+      "source": "search",
+      "newborn": true,
+      "skillPath": null,
+      "commitUrl": null
+    },
+    {
+      "name": "Moh4696/inkworks-skill",
+      "url": "https://github.com/Moh4696/inkworks-skill",
+      "description": "Inkworks: an agent skill for interactive 3D how-it-works pages drawn like an engineering sheet.",
+      "stars": 536,
+      "forks": 54,
+      "language": "JavaScript",
+      "license": "MIT",
+      "pushedAt": "2026-11-25T13:53:35Z",
+      "category": "skills",
+      "score": 76,
+      "tier": "watch",
+      "reasons": [
+        "filed under skills",
+        "536 stars",
+        "updated this week",
+        "MIT license",
+        "new repo, 3 days old",
+        "early traction"
+      ],
+      "flags": [
+        "newborn"
+      ],
+      "skillFiles": null,
+      "source": "search",
+      "newborn": true,
+      "skillPath": null,
+      "commitUrl": null
+    }
+  ],
   "byCategory": {
     "skills": [],
     "enhancement": [],
-    "free-tokens": [
+    "free-tokens": [],
+    "efficiency": [
       {
-        "name": "janus-sh/Janus",
-        "url": "https://github.com/janus-sh/Janus",
-        "description": "A free coding agent in your terminal. It runs on the smartest free model that is up today.",
-        "stars": 6558,
-        "forks": 917,
-        "language": "JavaScript",
+        "name": "opensetlabs/openset-llm",
+        "url": "https://github.com/opensetlabs/openset-llm",
+        "description": "Fast local LLM inference on plain CPUs. No GPU, 8 GB of RAM. OpenAI-compatible server.",
+        "stars": 2192,
+        "forks": 208,
+        "language": "Python",
         "license": "MIT",
-        "pushedAt": "2026-11-26T11:26:01Z",
-        "category": "free-tokens",
-        "score": 60,
+        "pushedAt": "2026-11-27T21:44:57Z",
+        "category": "efficiency",
+        "score": 64,
         "tier": "watch",
         "reasons": [
-          "6,558 stars",
+          "2,192 stars",
           "updated this week",
           "MIT license",
-          "well established",
-          "third-party source, needs checking"
+          "directly cuts AI spend"
         ],
         "flags": [
-          "unverified-offer"
+          "self-host-required"
         ],
         "skillFiles": null,
         "source": "search",
@@ -77,8 +166,7 @@
         "skillPath": null,
         "commitUrl": null
       }
-    ],
-    "efficiency": []
+    ]
   },
   "blocked": [],
   "watching": [
