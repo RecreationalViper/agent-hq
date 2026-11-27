@@ -128,13 +128,75 @@
     {
       "id": "rainbow-bridge",
       "name": "Rainbow Bridge",
-      "status": "built",
-      "note": "awaiting owner final approval (concept approved 2026-11-26)",
+      "status": "replaced",
+      "note": "never listed; replaced by A Life on owner request 2026-11-27. Agents: do not market.",
       "audience": "People grieving a pet; sympathy gifts",
       "look": "soft cream, pastel rainbow, paw prints",
       "fonts": "Caladea Italic + Inter (fill-in text in Times/Helvetica)",
       "files": "products/fillable/out/Rainbow Bridge/",
       "suggestedPrice": "$9.99"
+    },
+    {
+      "id": "a-life",
+      "name": "A Life",
+      "status": "approved",
+      "note": "approved by owner 2026-11-27; replaces Rainbow Bridge. checkout is empty until the owner uploads it to Payhip: do not link a checkout or run promotions until it is a real payhip.com URL.",
+      "audience": "Families who want the program to tell the person's story; celebration of life or traditional service",
+      "look": "magazine style: newsprint white, black ink, one oxblood accent; big 'A Life' masthead, photo cover, order of service as contents page, story as the feature",
+      "fonts": "Cormorant Garamond + Inter SemiBold (fill-in text in Times/Helvetica)",
+      "files": "products/fillable/out/A Life/",
+      "pieces": [
+        "Program 11x8.5 in folding to 5.5x8.5 in (cover with photo, order of service with 10 lines, life story with second photo, favorite things, pull quote, back-cover thank-you note)",
+        "Welcome Sign 24x36 in",
+        "Memory cards 4.25x5.5 in, 4 per sheet",
+        "Bookmarks 2x7 in, 4 per sheet, with photo",
+        "Thank-you cards 4.25x5.5 in, 4 per sheet",
+        "Phone announcement",
+        "Guest book page (13 guests)",
+        "Start Here guide"
+      ],
+      "suggestedPrice": "$12.99",
+      "previews": [
+        "products/fillable/previews/a-life/a-life-suite.jpg",
+        "products/fillable/previews/a-life/a-life-program.jpg"
+      ],
+      "tryPage": "https://foreverheld.pages.dev/try-a-life.html",
+      "approved": "2026-11-27",
+      "marketFrom": "2026-11-27",
+      "marketUntil": "9999-12-31",
+      "season": "year-round",
+      "delivery": "fill-in PDFs: buyers type in free Adobe Acrobat Reader, print at home on US Letter or at a print shop",
+      "checkout": "",
+      "price": "$12.99",
+      "previewUrl": "https://foreverheld.pages.dev/img/a-life/a-life-suite.jpg"
+    },
+    {
+      "id": "a-life-tonight",
+      "name": "A Life Tonight Kit",
+      "status": "approved",
+      "note": "approved by owner 2026-11-27; low-cost entry kit in the A Life look for services that are very soon. checkout is empty until the owner uploads it to Payhip: do not link a checkout or run promotions until it is a real payhip.com URL.",
+      "audience": "Families whose service is very soon; low-cost entry product",
+      "look": "same as A Life",
+      "files": "products/fillable/out/A Life Tonight Kit/",
+      "pieces": [
+        "One-page program, US Letter portrait, single-sided, no folding (photo, name, dates, short story, 8 order-of-service lines)",
+        "Welcome sign 8x10 in (+ US Letter trim sheet)",
+        "Memory cards 4.25x5.5 in, 4 per sheet",
+        "Start Here guide"
+      ],
+      "suggestedPrice": "$4.99",
+      "previews": [
+        "products/fillable/previews/a-life/tonight-kit.jpg"
+      ],
+      "approved": "2026-11-27",
+      "marketFrom": "2026-11-27",
+      "marketUntil": "9999-12-31",
+      "season": "year-round",
+      "delivery": "fill-in PDFs: buyers type in free Adobe Acrobat Reader, print at home on US Letter or at a print shop",
+      "checkout": "",
+      "tryPage": "https://foreverheld.pages.dev/try-a-life.html",
+      "price": "$4.99",
+      "previewUrl": "https://foreverheld.pages.dev/img/a-life/tonight-kit.jpg"
     }
   ],
   "promos": [

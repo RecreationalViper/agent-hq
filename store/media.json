@@ -213,6 +213,40 @@
    "used_on": [
     "longest-night.html"
    ]
+  },
+  {
+   "id": "a-life-suite",
+   "file": "img/a-life/a-life-suite.jpg",
+   "shows": "A Life suite (magazine style): program outside and inside, 24x36 welcome sign, phone announcement, memory card, thank-you card, bookmark, guest book page. Sample photo is a drawn lake scene.",
+   "used_on": [
+    "try-a-life.html"
+   ],
+   "good_for": [
+    "listing images",
+    "pins once the Payhip link exists"
+   ]
+  },
+  {
+   "id": "a-life-program",
+   "file": "img/a-life/a-life-program.jpg",
+   "shows": "A Life program close-up: magazine cover with photo, back-cover thank-you, order of service as contents page, life story feature",
+   "used_on": [],
+   "good_for": [
+    "listing images",
+    "pins"
+   ]
+  },
+  {
+   "id": "a-life-tonight-kit",
+   "file": "img/a-life/tonight-kit.jpg",
+   "shows": "A Life Tonight Kit ($4.99): one-page program, 8x10 welcome sign, memory cards",
+   "used_on": [
+    "try-a-life.html"
+   ],
+   "good_for": [
+    "listing images",
+    "pins once the Payhip link exists"
+   ]
   }
  ],
  "links": {
