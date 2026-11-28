@@ -28,6 +28,11 @@ PAGES = {
     "holiday-2026-A": ("evergreen-candlelight.html", "Christmas", "img/thumbs/evergreen.jpg"),
     "holiday-2026-B": ("longest-night.html", "Blue Christmas service", "img/thumbs/longest-night.jpg"),
 }
+# Year-round suites besides Soft Botanical: collection id -> (page, short label, thumbnail)
+EVERGREEN = {
+    "a-life": ("try-a-life.html", "Magazine-style memorial suite", "img/thumbs/a-life.jpg"),
+    "a-life-tonight": ("try-a-life.html#tonight", "Program, sign & card tonight", "img/thumbs/a-life-tonight.jpg"),
+}
 SOFT = {"name": "Soft Botanical suite", "label": "Funeral & celebration of life", "price": "$12.99", "url": "index.html#collections", "thumb": "img/thumbs/soft-botanical.jpg"}
 
 
@@ -43,6 +48,16 @@ def holiday_products():
             page, label, thumb = PAGES[c["id"]]
             out.append({"name": c["name"], "label": label, "price": c["price"], "url": page, "thumb": thumb, "until": c.get("marketUntil", ""), "c": c})
     return sorted(out, key=lambda p: p["until"])
+
+
+def evergreen_products():
+    """Approved year-round suites with a real Payhip checkout (menu + search)."""
+    out = []
+    for c in collections():
+        if c["id"] in EVERGREEN and c.get("status") == "approved" and str(c.get("checkout", "")).startswith("https://payhip.com/"):
+            page, label, thumb = EVERGREEN[c["id"]]
+            out.append({"name": c["name"], "label": label, "price": c["price"], "url": page, "thumb": thumb, "c": c})
+    return out
 
 
 def _item(p, h):
@@ -64,7 +79,7 @@ def chrome(home=False):
   <button class="fh-dsearch" type="button" data-fh-search>{I_SEARCH}<span>Search products and help</span></button>
   <nav class="fh-dnav" aria-label="Store">
     {f'<p class="fh-label">Holiday 2026</p>{hol}' if hol else ''}
-    <p class="fh-label">Memorial suites</p>{_item(SOFT, h)}
+    <p class="fh-label">Memorial suites</p>{_item(SOFT, h)}{"".join(_item(p, h) for p in evergreen_products())}
     <a class="fh-free" href="{CHECKLIST}">Free planning checklist <small>Printable, sent to your email</small></a>
     <details class="fh-acc" open><summary>Help</summary>
       {link(f"{h}#how", "How it works")}{link("guides.html", "Planning guides")}{link(f"{h}#faq-title", "Questions families ask")}<button type="button" data-fh-chat>Ask our assistant</button>{link("contact.html", "Contact us")}
@@ -130,6 +145,11 @@ def build_index():
         text = (f'{c["name"]} ({c["season"]}), {c["price"]}, instant download. Pieces: ' + "; ".join(c.get("pieces", [])) +
                 f'. {c.get("delivery", "")}. Buy: {c["checkout"]}. Who it is for: {c.get("audience", "")}. Look: {c.get("look", "")}.')
         items.append({"group": "Products", "title": f'{c["name"]} · {p["label"]} set', "url": p["url"], "desc": f'{p["label"]} memorial printables · {c["price"]}', "img": p["thumb"], "text": text})
+    for p in evergreen_products():
+        c = p["c"]
+        text = (f'{c["name"]}, {c["price"]}, instant download. {c.get("blurb", "")} Pieces: ' + "; ".join(c.get("pieces", [])) +
+                f'. {c.get("delivery", "")}. Buy: {c["checkout"]}. Try it free with your own name: https://foreverheld.pages.dev/try-a-life.html. Who it is for: {c.get("audience", "")}. Look: {c.get("look", "")}.')
+        items.append({"group": "Products", "title": c["name"], "url": p["url"], "desc": f'{p["label"]} · {c["price"]}', "img": p["thumb"], "text": text})
     idx = strip_chrome((STORE / "index.html").read_text())
     suite = re.search(r'<section class="suite.*?</section>', (ROOT / "tools/templates/home-classic.html").read_text(), re.S)
     items.append({"group": "Products", "title": "Soft Botanical Celebration of Life Suite", "url": "index.html#collections", "desc": "Funeral program, welcome sign and memory cards · $12.99", "img": SOFT["thumb"],
@@ -152,7 +172,7 @@ def build_index():
         items.append({"group": "Pages", "title": title, "url": f"index.html#{anchor}", "desc": desc, "text": _text(sec.group(0)) if sec else ""})
     # guides + pages
     guides = {json.loads(f.read_text())["slug"] for f in (STORE / "content/pages").glob("*.json")}
-    skip = {"index", "next", "classic", "harvest-table", "evergreen-candlelight", "longest-night"}
+    skip = {"index", "next", "classic", "try-a-life", "harvest-table", "evergreen-candlelight", "longest-night"}
     for f in sorted(STORE.glob("*.html")):
         if f.stem in skip or f.stem.startswith("google"):
             continue

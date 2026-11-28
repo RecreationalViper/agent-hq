@@ -5,7 +5,9 @@
       "id": "soft-botanical",
       "name": "Soft Botanical",
       "status": "approved",
-      "live": "https://payhip.com/b/vqNSA"
+      "live": "https://payhip.com/b/vqNSA",
+      "price": "$12.99",
+      "blurb": "Funeral program, welcome sign and memory cards you fill in on your phone and print today."
     },
     {
       "id": "classic-elegance",
@@ -169,7 +171,8 @@
       "checkout": "https://payhip.com/b/V7xfI",
       "price": "$12.99",
       "previewUrl": "https://foreverheld.pages.dev/img/a-life/a-life-suite.jpg",
-      "live": "2026-11-27"
+      "live": "2026-11-27",
+      "blurb": "A memorial program made like a magazine: their photo on the cover, the service as the contents page, their story as the feature. 7 matching pieces."
     },
     {
       "id": "a-life-tonight",
@@ -198,7 +201,8 @@
       "tryPage": "https://foreverheld.pages.dev/try-a-life.html",
       "price": "$4.99",
       "previewUrl": "https://foreverheld.pages.dev/img/a-life/tonight-kit.jpg",
-      "live": "2026-11-27"
+      "live": "2026-11-27",
+      "blurb": "When the service is close: a one-page program, an 8 x 10 welcome sign and memory cards to print tonight."
     }
   ],
   "promos": [

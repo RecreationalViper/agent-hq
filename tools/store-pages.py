@@ -213,6 +213,16 @@ for f in sorted((STORE / "content" / "pages").glob("*.json")):
     if g.get("draft"): continue
     guides.append(g)
 e = H.escape
+# The closing button offers the product the guide was written around (guide JSON "feature"), else Soft Botanical.
+_cols = {c["id"]: c for c in json.loads((ROOT / "products/collections.json").read_text())["collections"]}
+def _feature(fid):
+    c = _cols.get(fid or "", {})
+    link = next((u for u in (c.get("checkout"), c.get("live")) if str(u or "").startswith("https://payhip.com/")), None)
+    if c.get("status") != "approved" or not link:
+        return ("Everything for the service, in one gentle suite", "Funeral program, welcome sign and memory cards you fill in on your phone and print today.", KIT, "Get the suite · $12.99", None)
+    short = "Get the Tonight Kit" if fid == "a-life-tonight" else f'Get {c["name"]}'
+    tryit = ("try-a-life.html", "Try it free with their name") if fid in ("a-life", "a-life-tonight") else None
+    return (None, c.get("blurb", ""), link, f'{short} · {c["price"]}', tryit)
 for g in guides:
     secs = ""
     for sct in g.get("sections", []):
@@ -223,9 +233,11 @@ for g in guides:
     related = [x for x in guides if x["slug"] != g["slug"]][:3]
     rel = ("<h2>More planning guides</h2><ul>" + "".join(f'<li><a href="{x["slug"]}.html">{e(x["h1"])}</a></li>' for x in related) + "</ul>") if related else ""
     relpanel = f'<article class="panel glass legal">{rel}</article>' if rel else ""
-    cta = f'''<section class="panel glass" style="text-align:center"><h2 class="section-title" style="font-size:28px">{e(g.get("cta_title") or "Everything for the service, in one gentle suite")}</h2>
-<p style="color:var(--ink-soft);margin:0 0 18px">Funeral program, welcome sign and memory cards you fill in on your phone and print today.</p>
-<div class="hero-cta"><a class="btn btn-sage" href="{KIT}">Get the suite · $12.99</a><a class="btn glass" href="{CHECKLIST}">Free planning checklist</a></div></section>'''
+    ftitle, fblurb, flink, fbtn, ftry = _feature(g.get("feature"))
+    second = f'<a class="btn glass" href="{ftry[0]}">{ftry[1]}</a>' if ftry else f'<a class="btn glass" href="{CHECKLIST}">Free planning checklist</a>'
+    cta = f'''<section class="panel glass" style="text-align:center"><h2 class="section-title" style="font-size:28px">{e(g.get("cta_title") or ftitle or "Everything for the service, in one place")}</h2>
+<p style="color:var(--ink-soft);margin:0 0 18px">{e(fblurb)}</p>
+<div class="hero-cta"><a class="btn btn-sage" href="{flink}">{e(fbtn)}</a>{second}</div></section>'''
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "Article", "headline": g["h1"], "description": g["description"], "dateModified": g.get("updated", UPDATED),
          "author": {"@type": "Organization", "name": "Forever Held"}, "publisher": {"@type": "Organization", "name": "Forever Held", "logo": f"{SITE}/brand/logo-square.png"},
