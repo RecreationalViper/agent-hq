@@ -205,13 +205,33 @@
       "blurb": "When the service is close: a one-page program, an 8 x 10 welcome sign and memory cards to print tonight."
     },
     {
-      "id": "new-2027-A",
+      "id": "forever-in-my-heart",
       "name": "Forever in My Heart",
-      "status": "concept",
+      "status": "approved",
       "audience": "Valentine's remembrance for someone grieving a spouse or partner",
-      "suggestedPrice": "$8.99",
       "preview": "products/concepts/new-2027/concept-A-forever-in-my-heart.jpg",
-      "note": "concept shown to owner 2026-11-27; not approved"
+      "note": "approved by owner 2026-11-28. checkout is empty until the owner uploads it to Payhip: do not link a checkout or promote until it is a real payhip.com URL. Promote Dec 26 - Feb 14.",
+      "season": "Valentine's Day remembrance",
+      "look": "cream, blush, rose and wine with a gold accent; two hearts drawn as one line; candle",
+      "fonts": "Cormorant Garamond Italic + Inter SemiBold (fill-in text in Times/Helvetica)",
+      "files": "products/fillable/out/Forever in My Heart/",
+      "pieces": [
+        "Table sign 8x10 in (+ US Letter trim sheet), editable top line",
+        "Love letter cards 4.25x5.5 in, 4 per sheet, type or handwrite",
+        "Candle cards 3x4 in, 4 per sheet, plus ink-saver version",
+        "Phone post with photo",
+        "Start Here guide"
+      ],
+      "previews": [
+        "products/fillable/previews/forever/forever-in-my-heart.jpg"
+      ],
+      "approved": "2026-11-28",
+      "price": "$8.99",
+      "marketFrom": "2026-12-26",
+      "marketUntil": "2027-02-14",
+      "checkout": "",
+      "previewUrl": "https://foreverheld.pages.dev/img/forever/forever-in-my-heart.jpg",
+      "delivery": "fill-in PDFs: buyers type in free Adobe Acrobat Reader, print at home on US Letter or at a print shop"
     },
     {
       "id": "new-2027-B",
