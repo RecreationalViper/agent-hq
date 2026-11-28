@@ -140,7 +140,7 @@
       "id": "a-life",
       "name": "A Life",
       "status": "approved",
-      "note": "approved by owner 2026-11-27; replaces Rainbow Bridge. checkout is empty until the owner uploads it to Payhip: do not link a checkout or run promotions until it is a real payhip.com URL.",
+      "note": "approved by owner 2026-11-27; replaces Rainbow Bridge. Live on Payhip 2026-11-27.",
       "audience": "Families who want the program to tell the person's story; celebration of life or traditional service",
       "look": "magazine style: newsprint white, black ink, one oxblood accent; big 'A Life' masthead, photo cover, order of service as contents page, story as the feature",
       "fonts": "Cormorant Garamond + Inter SemiBold (fill-in text in Times/Helvetica)",
@@ -166,15 +166,16 @@
       "marketUntil": "9999-12-31",
       "season": "year-round",
       "delivery": "fill-in PDFs: buyers type in free Adobe Acrobat Reader, print at home on US Letter or at a print shop",
-      "checkout": "",
+      "checkout": "https://payhip.com/b/V7xfI",
       "price": "$12.99",
-      "previewUrl": "https://foreverheld.pages.dev/img/a-life/a-life-suite.jpg"
+      "previewUrl": "https://foreverheld.pages.dev/img/a-life/a-life-suite.jpg",
+      "live": "2026-11-27"
     },
     {
       "id": "a-life-tonight",
       "name": "A Life Tonight Kit",
       "status": "approved",
-      "note": "approved by owner 2026-11-27; low-cost entry kit in the A Life look for services that are very soon. checkout is empty until the owner uploads it to Payhip: do not link a checkout or run promotions until it is a real payhip.com URL.",
+      "note": "approved by owner 2026-11-27; low-cost entry kit in the A Life look for services that are very soon. Live on Payhip 2026-11-27.",
       "audience": "Families whose service is very soon; low-cost entry product",
       "look": "same as A Life",
       "files": "products/fillable/out/A Life Tonight Kit/",
@@ -193,10 +194,11 @@
       "marketUntil": "9999-12-31",
       "season": "year-round",
       "delivery": "fill-in PDFs: buyers type in free Adobe Acrobat Reader, print at home on US Letter or at a print shop",
-      "checkout": "",
+      "checkout": "https://payhip.com/b/GB9Kh",
       "tryPage": "https://foreverheld.pages.dev/try-a-life.html",
       "price": "$4.99",
-      "previewUrl": "https://foreverheld.pages.dev/img/a-life/tonight-kit.jpg"
+      "previewUrl": "https://foreverheld.pages.dev/img/a-life/tonight-kit.jpg",
+      "live": "2026-11-27"
     }
   ],
   "promos": [
