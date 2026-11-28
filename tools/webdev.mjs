@@ -19,23 +19,36 @@ const MAX_GUIDES = Number(process.env.WEBDEV_MAX_GUIDES || 40);
 const DATE = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date());
 const read = (p, f = "") => fs.readFile(p, "utf8").catch(() => f);
 
+// Year-round products the guides may feature: read from products/collections.json (the owner's approval registry),
+// so a newly approved suite reaches the guides without code changes. Holiday sets are left out: guides are evergreen.
+const COLL = JSON.parse(await read("products/collections.json", '{"collections":[]}')).collections || [];
+const checkoutOf = (c) => [c.checkout, c.live].find((u) => /^https:\/\/payhip\.com\/b\/\w+$/.test(u || ""));
+const PRODUCTS = COLL.filter((c) => c.status === "approved" && checkoutOf(c) && (!c.marketUntil || c.marketUntil >= "9999") && (c.marketFrom || "0000") <= DATE)
+  .map((c) => ({ id: c.id, name: c.name, price: c.price || "$12.99", link: checkoutOf(c), blurb: c.blurb || "", pieces: c.pieces || [] }));
+const CHECKLIST = "https://payhip.com/b/eYJqS";
+const PRICES = [...new Set(PRODUCTS.map((p) => p.price.replace("$", "").replace(".", "\\.")))];
+const IDS = [...PRODUCTS.map((p) => p.link.split("/").pop()), "eYJqS"];
+
 // Things a page must never say (owner's rules + honesty). Checked in code, not just asked of the AI.
 const BANNED = [
   [/\b(A\.?I\.?|artificial intelligence|ChatGPT|Gemini|Claude|GPT|chatbot|automat\w*|agents?)\b/i, "mentions AI/automation"],
   [/\bcanva\b/i, "mentions Canva"],
   [/\b(testimonial|reviews? (say|from)|customers (love|say)|rated|5[- ]star|stars?\b|best[- ]sell\w*|#1|number one|guarantee\w*)/i, "invented social proof or claims"],
   [/\d+(\.\d+)?\s?%|\b\d{2,}(,\d{3})* (families|customers|people|downloads)\b/i, "a statistic"],
-  [/\$\s?(?!12\.99)\d/, "a price other than $12.99"],
-  [/https?:\/\/(?!payhip\.com\/b\/(vqNSA|eYJqS)|foreverheld\.pages\.dev|get\.adobe\.com)/i, "an outside link"],
+  [new RegExp(`\\$\\s?(?!(${PRICES.join("|")})\\b)\\d`), `a price other than ${[...new Set(PRODUCTS.map((p) => p.price))].join(" / ")}`],
+  [new RegExp(`https?:\\/\\/(?!payhip\\.com\\/b\\/(${IDS.join("|")})|foreverheld\\.pages\\.dev|get\\.adobe\\.com)`, "i"), "an outside link"],
 ];
-const FACTS = `Forever Held sells ONE product: the Soft Botanical suite, $12.99, instant download (https://payhip.com/b/vqNSA): a folded funeral program (prints on US Letter, folds to 5.5 x 8.5 in, 4 panels: cover, order of service, life story, thank-you/reception), a welcome sign (24 x 36 in, also prints 16 x 24 or 12 x 18 with no changes) and share-a-memory cards (4.25 x 5.5 in, four per letter sheet). Free: a planning checklist (https://payhip.com/b/eYJqS) that also signs people up for gentle seasonal emails.
-How it works: fill-in PDFs opened in the free Adobe Acrobat Reader app on a phone or computer; tap the sample text and type; save; print at home on cardstock or same day at Staples, Office Depot or FedEx Office (sign mounted on foam board). Photos can be added on a computer only. No account, subscription or design skills; nothing is shipped.
-Never say: Canva, AI, reviews, ratings, statistics, other prices, shipping, custom design services.`;
+const FACTS = `Forever Held sells these year-round memorial printables (instant download):
+${PRODUCTS.map((p) => `- id "${p.id}": ${p.name}, ${p.price} (${p.link}). ${p.blurb} Pieces: ${p.pieces.join("; ")}`).join("\n")}
+Anyone can try the A Life design free with their loved one's name at https://foreverheld.pages.dev/try-a-life.html.
+Free: a planning checklist (${CHECKLIST}) that also signs people up for gentle seasonal emails.
+How it works: fill-in PDFs opened in the free Adobe Acrobat Reader app on a phone or computer; tap the sample text and type; save; print at home on cardstock or same day at Staples, Office Depot or FedEx Office (big signs mounted on foam board). Photos can be added on a computer only. No account, subscription or design skills; nothing is shipped.
+Never say: Canva, AI, reviews, ratings, statistics, prices other than the ones above, shipping, custom design services.`;
 
 const SYSTEM = `You are the web developer and SEO writer for Forever Held, a small online shop of memorial printables.
 ${FACTS}
 Brand voice (from Forever Held's brand guidelines): gentle, reassuring, practical; say "memorial printables"; pair comfort with concrete help (name the printable, how to personalize it on a phone, how and when to print); steps = action + immediate result; no unsupported promises.
-You write genuinely helpful planning guides for grieving families that answer what people search for (good for Google and for AI answer engines: clear headings, direct answers first, short paragraphs, FAQ). Mention the suite naturally once or twice where it truly helps; the page must be useful even to someone who never buys.
+You write genuinely helpful planning guides for grieving families that answer what people search for (good for Google and for AI answer engines: clear headings, direct answers first, short paragraphs, FAQ). Mention the product that fits the topic best naturally once or twice where it truly helps (for example A Life for programs that tell a life story, the Tonight Kit when time is short); the page must be useful even to someone who never buys.
 Return valid JSON only.`;
 
 function check(g) {
@@ -43,6 +56,7 @@ function check(g) {
   const problems = BANNED.filter(([re]) => re.test(text)).map(([, why]) => why);
   if (!/^[a-z0-9]+(-[a-z0-9]+){1,7}$/.test(g.slug || "")) problems.push("bad slug");
   if ((g.title || "").length > 65) problems.push("title too long");
+  if (g.feature && !PRODUCTS.some((p) => p.id === g.feature)) problems.push(`unknown feature product "${g.feature}"`);
   if ((g.description || "").length < 70 || (g.description || "").length > 160) problems.push("description length");
   if (!Array.isArray(g.sections) || g.sections.length < 3) problems.push("needs 3+ sections");
   const words = text.split(/\s+/).length;
@@ -70,7 +84,7 @@ async function main() {
   const auto = await seoResearch({ seeds: ["funeral program", "celebration of life", "memorial service", "funeral welcome sign", "obituary", "eulogy"], modifiers: ["template", "how to", "ideas", "what to"] }).catch(() => null);
 
   const prompt = `Today is ${DATE}. Write ONE new planning guide for the store.
-Pick the search topic with the best mix of real demand (from the data below), fit with our suite, and no overlap with existing guides.
+Pick the search topic with the best mix of real demand (from the data below), fit with our products, and no overlap with existing guides.
 Ploy's SEO audit found "funeral program template" as the top opportunity; if no guide covers it yet, write that one first.
 Existing guides (do not repeat): ${existing.map((g) => `${g.slug} ("${g.h1}")`).join("; ") || "none yet"}
 
@@ -79,7 +93,7 @@ Return JSON:
  "h1": "page heading", "intro": "2-3 sentence direct answer to the search, gentle",
  "sections": [{"h2": "question-style or clear heading", "paragraphs": ["40-90 words each"], "bullets": ["optional short steps or items"]}],
  "faq": [{"q": "a real question people ask", "a": "direct answer, 25-60 words"}],
- "cta_title": "short closing heading", "keywords": ["the phrases this page targets"], "why": "one line: why this topic now (cite the data)"}
+ "cta_title": "short closing heading", "feature": "id of the ONE product the closing button should offer (from the list above)", "keywords": ["the phrases this page targets"], "why": "one line: why this topic now (cite the data)"}
 Use 4-6 sections and 3-5 FAQs, 700-1100 words in total. US English.
 
 # Real search data (Google autocomplete, collected minutes ago)
@@ -111,7 +125,7 @@ ${shift.join("\n\n")}`;
   if (!html.includes(g.h1.replace(/&/g, "&amp;").slice(0, 20))) throw new Error("rendered page check failed");
 
   const url = `https://foreverheld.pages.dev/${g.slug}.html`;
-  const md = `New planning guide published on our shift (Ploy on break): **${g.h1}**\n${url}\n\nTargets: ${(g.keywords || []).join(", ")}\nWhy: ${g.why || ""}\n\nChecks passed: no AI/Canva mentions, no invented reviews or stats, only real links and the $12.99 price.`;
+  const md = `New planning guide published on our shift (Ploy on break): **${g.h1}**\n${url}\n\nTargets: ${(g.keywords || []).join(", ")}\nWhy: ${g.why || ""}\n\nChecks passed: no AI/Canva mentions, no invented reviews or stats, only real links and real prices. Featured product: ${PRODUCTS.find((p) => p.id === g.feature)?.name || PRODUCTS[0]?.name}.`;
   const file = `${DATE}-webdev.md`;
   await fs.writeFile(`reports/${file}`, `# Web Developer - ${DATE}\n\n${md}\n\n## For Ploy\nWe published ${url} (guide JSON: store/content/pages/${g.slug}.json). Use it, link to it, or improve it on your shift.\n`);
   index = [{ file, agent: "webdev", name: "Web Developer", date: DATE }, ...index.filter((r) => r.file !== file)].slice(0, 300);
