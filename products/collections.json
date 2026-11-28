@@ -207,11 +207,27 @@
     {
       "id": "new-2027-A",
       "name": "Forever in My Heart",
-      "status": "concept",
+      "status": "built",
       "audience": "Valentine's remembrance for someone grieving a spouse or partner",
       "suggestedPrice": "$8.99",
       "preview": "products/concepts/new-2027/concept-A-forever-in-my-heart.jpg",
-      "note": "concept shown to owner 2026-11-27; not approved"
+      "note": "owner picked concept A 2026-11-27; built, awaiting owner final approval",
+      "season": "Valentine's Day remembrance",
+      "look": "cream, blush, rose and wine with a gold accent; two hearts drawn as one line; candle",
+      "fonts": "Cormorant Garamond Italic + Inter SemiBold (fill-in text in Times/Helvetica)",
+      "files": "products/fillable/out/Forever in My Heart/",
+      "pieces": [
+        "Table sign 8x10 in (+ US Letter trim sheet), editable top line",
+        "Love letter cards 4.25x5.5 in, 4 per sheet, type or handwrite",
+        "Candle cards 3x4 in, 4 per sheet, plus ink-saver version",
+        "Phone post with photo",
+        "Start Here guide"
+      ],
+      "suggestedMarketFrom": "2026-12-26",
+      "suggestedMarketUntil": "2027-02-14",
+      "previews": [
+        "products/fillable/previews/forever/forever-in-my-heart.jpg"
+      ]
     },
     {
       "id": "new-2027-B",

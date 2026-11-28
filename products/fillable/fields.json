@@ -5393,6 +5393,285 @@
     ],
     "scale": 0.94
    }
+  },
+  {
+   "file": "Forever in My Heart/01 Table Sign 8x10 - Forever in My Heart (fill-in).pdf",
+   "title": "Valentine's Remembrance Table Sign - Forever in My Heart",
+   "bg": "forever-sign.pdf",
+   "fields": [
+    {
+     "name": "Top line",
+     "page": 1,
+     "left": 80,
+     "top": 96,
+     "width": 608,
+     "height": 24,
+     "size": 13,
+     "font": "S",
+     "color": "#A4485A",
+     "value": "VALENTINE'S DAY · IN REMEMBRANCE",
+     "align": 1
+    },
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 60,
+     "top": 498,
+     "width": 648,
+     "height": 60,
+     "size": 46,
+     "font": "R",
+     "color": "#2B1A1F",
+     "value": "Daniel Thomas Reyes",
+     "align": 1
+    },
+    {
+     "name": "Years",
+     "page": 1,
+     "left": 60,
+     "top": 568,
+     "width": 648,
+     "height": 24,
+     "size": 15,
+     "font": "S",
+     "color": "#A4485A",
+     "value": "1958  —  2025",
+     "align": 1
+    },
+    {
+     "name": "Message",
+     "page": 1,
+     "left": 90,
+     "top": 624,
+     "width": 588,
+     "height": 116,
+     "size": 27,
+     "font": "I",
+     "color": "#6B4A50",
+     "value": "Married thirty-four years.\nLoved for always.",
+     "align": 1,
+     "multiline": true,
+     "lead": 1.4
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 1,
+    "cols": 1,
+    "rows": 1
+   }
+  },
+  {
+   "file": "Forever in My Heart/02 Love Letter Cards - Forever in My Heart (fill-in).pdf",
+   "title": "Love Letter Cards - Forever in My Heart",
+   "bg": "forever-letter.pdf",
+   "fields": [
+    {
+     "name": "Greeting",
+     "page": 1,
+     "left": 44,
+     "top": 156,
+     "width": 320,
+     "height": 24,
+     "size": 16,
+     "font": "I",
+     "color": "#4B1E2B",
+     "value": "My Daniel,",
+     "align": 0
+    },
+    {
+     "name": "Letter",
+     "page": 1,
+     "left": 44,
+     "top": 190,
+     "width": 320,
+     "height": 262,
+     "size": 14,
+     "font": "I",
+     "color": "#6B4A50",
+     "value": "I still set out two cups every morning. I hope you know how much you are missed, and how much you are still loved.",
+     "align": 0,
+     "multiline": true,
+     "lead": 2.14
+    },
+    {
+     "name": "Signed",
+     "page": 1,
+     "left": 44,
+     "top": 462,
+     "width": 320,
+     "height": 24,
+     "size": 15,
+     "font": "I",
+     "color": "#4B1E2B",
+     "value": "Love always, Maria",
+     "align": 2
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 0.94
+   }
+  },
+  {
+   "file": "Forever in My Heart/03 Candle Cards - Forever in My Heart (fill-in).pdf",
+   "title": "Candle Cards - Forever in My Heart",
+   "bg": "forever-candle.pdf",
+   "fields": [
+    {
+     "name": "First name",
+     "page": 1,
+     "left": 24,
+     "top": 284,
+     "width": 240,
+     "height": 40,
+     "size": 30,
+     "font": "R",
+     "color": "#E7C98F",
+     "value": "Daniel",
+     "align": 1
+    },
+    {
+     "name": "Bottom line",
+     "page": 1,
+     "left": 24,
+     "top": 334,
+     "width": 240,
+     "height": 16,
+     "size": 8,
+     "font": "S",
+     "color": "#D9B7B3",
+     "value": "FOREVER IN OUR HEARTS",
+     "align": 1
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 1,
+    "cols": 2,
+    "rows": 2
+   }
+  },
+  {
+   "file": "Forever in My Heart/03b Candle Cards Ink-Saver - Forever in My Heart (fill-in).pdf",
+   "title": "Candle Cards (ink-saver) - Forever in My Heart",
+   "bg": "forever-candlelight.pdf",
+   "fields": [
+    {
+     "name": "First name",
+     "page": 1,
+     "left": 24,
+     "top": 284,
+     "width": 240,
+     "height": 40,
+     "size": 30,
+     "font": "R",
+     "color": "#4B1E2B",
+     "value": "Daniel",
+     "align": 1
+    },
+    {
+     "name": "Bottom line",
+     "page": 1,
+     "left": 24,
+     "top": 334,
+     "width": 240,
+     "height": 16,
+     "size": 8,
+     "font": "S",
+     "color": "#A4485A",
+     "value": "FOREVER IN OUR HEARTS",
+     "align": 1
+    }
+   ],
+   "sheet": {
+    "size": [
+     612,
+     792
+    ],
+    "scale": 1,
+    "cols": 2,
+    "rows": 2
+   }
+  },
+  {
+   "file": "Forever in My Heart/04 Phone Post - Forever in My Heart (fill-in).pdf",
+   "title": "Remembrance Post for Phones - Forever in My Heart",
+   "bg": "forever-phone.pdf",
+   "fields": [
+    {
+     "name": "Date line",
+     "page": 1,
+     "left": 40,
+     "top": 50,
+     "width": 460,
+     "height": 22,
+     "size": 13,
+     "font": "S",
+     "color": "#A4485A",
+     "value": "Valentine's Day 2027",
+     "align": 1
+    },
+    {
+     "name": "Photo",
+     "type": "photo",
+     "page": 1,
+     "left": 110,
+     "top": 96,
+     "width": 320,
+     "height": 380
+    },
+    {
+     "name": "Name",
+     "page": 1,
+     "left": 40,
+     "top": 682,
+     "width": 460,
+     "height": 44,
+     "size": 32,
+     "font": "R",
+     "color": "#2B1A1F",
+     "value": "Daniel Thomas Reyes",
+     "align": 1
+    },
+    {
+     "name": "Years",
+     "page": 1,
+     "left": 40,
+     "top": 732,
+     "width": 460,
+     "height": 20,
+     "size": 12,
+     "font": "S",
+     "color": "#A4485A",
+     "value": "1958  —  2025",
+     "align": 1
+    },
+    {
+     "name": "Message",
+     "page": 1,
+     "left": 60,
+     "top": 772,
+     "width": 420,
+     "height": 90,
+     "size": 20,
+     "font": "I",
+     "color": "#6B4A50",
+     "value": "Married thirty-four years.\nLoved for always.",
+     "align": 1,
+     "multiline": true,
+     "lead": 1.4
+    }
+   ]
   }
  ]
 }
