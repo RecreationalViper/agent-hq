@@ -2,72 +2,65 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-# Growth Coach Daily Brief — 2026-11-27
+# MotionVault Growth Coach — 2026-11-27
 
 ---
 
-## 1. Where We Stand vs. Money Goals
+## 1. Where We Stand vs Money Goals
 
-| Platform | Current | Requirement (confirm in-app — they change) | Gap |
-|----------|---------|--------------------------------------------|-----|
-| **YouTube Partner Program (Shorts route)** | 0 subs, ~57 total Shorts views (last 90 days) | 1,000 subs **+** 10M valid public Shorts views in last 90 days | **Subs: 1,000 short** • **Views: ~9.99M short** |
-| **TikTok Creator Rewards** | 23 followers, ~625 total likes (views not shown but likely <5k last 30d) | 10,000 followers **+** 100,000 video views in last 30 days **+** 18+, eligible region, good standing | **Followers: 9,977 short** • **Views: ~95k+ short** |
+| Program | Current | Requirement* | Gap |
+|---------|---------|--------------|-----|
+| **YouTube Partner Program (Shorts route)** | 0 subs, 57 total views (90-day) | 1,000 subs **AND** 10M Shorts views / 90 days | 1,000 subs • ~9.99M views |
+| **TikTok Creator Rewards** | 23 followers, ~1,300 views last 10 vids (30-day est. ~3-4K) | 10,000 followers **AND** 100K views / 30 days **AND** 60s+ videos | 9,977 followers • ~96K views • length fix |
 
-**Reality check:** Both are *very* far off. The priority isn’t “monetisation tomorrow” — it’s **getting the algorithm to distribute** so views compound. Right now YouTube Shorts are dead (0–4 views/video); TikTok is barely breathing (best 335 views).
+\*Requirements change — confirm in **YouTube Studio → Earn** and **TikTok Creator Center → Creator Rewards** today.
+
+**Reality check:** YouTube Shorts are not being distributed (0-4 views each). TikTok is getting 20-336 views/video — early signal but far from rewards threshold.
 
 ---
 
 ## 2. Three Highest-Impact Actions for Today
 
-### 🎯 **Action 1 — Post the Apothecary Diaries “Moment When” clip (Director’s #1) on all 3 platforms**
-- **When:** **11:00–12:00 local** (lunch scroll) **AND** 19:00–20:00 (evening peak) — post twice, same file, different captions.
-- **Hook (on-screen, beats 0:00–0:02):**  
-  `THE MOMENT SHE PROVED THEM WRONG` slams on “cannot” (court physician line).
-- **Sound:** **“Let Down” — Radiohead** (rising on Last.fm; first drum hit at ~0:14 syncs to the mercury reveal).
-- **Format:** Director’s “The moment when…” plan — 35s, story-order stretches ≤8s each, freeze-frame final beat with `The moment the diagnosis flipped.` + `Follow for more Apothecary logic.`
-- **Caption test:**  
-  *Post A:* “She saw what 10 doctors missed 🧪 #ApothecaryDiaries #animeedit”  
-  *Post B:* “WAIT—THAT’S WHY the powder killed him 😳 #TheApothecaryDiaries #animeclips”
-- **Credit:** Burn “The Apothecary Diaries S3” bottom-left first 3s (transformative shield).
+### 🎯 1. Publish the GTA VI Diner Cutscene **NOW** (both platforms)
+- **Why:** #1 Twitch game, soundtrack *Flower In A Hurricane* rising on Last.fm, spoken hook “Trust me, I have a plan” = perfect 1-sec stop-scroll.
+- **When:** TikTok **11am-1pm EST** • YouTube Shorts **2-4pm EST** (stagger to avoid self-cannibalization).
+- **Hook:** First frame = Lucia eye-contact + whisper line. Bold on-screen text: **“THE PLAN”** on beat.
+- **Test:** End with 2-sec rewind loop to hook — measure re-watch rate in first 2 hrs.
 
-### 🎯 **Action 2 — Repurpose the same clip as a “Before/After” for TikTok **only** (test format variance)**
-- **When:** 15:00–16:00 (afternoon dip filler).
-- **Edit:** Same footage, re-ordered:  
-  `BEFORE` — smug physician dismisses Maomao (1.5s) → hard match-cut → `AFTER` — her calm “mercury in the face powder” + his defeated face (3s) → freeze on her notebook close.  
-  Text: `BEFORE: “A mere apothecary…”` → `AFTER: The diagnosis flipped.`
-- **Sound:** Same “Let Down” (first chorus hook).
-- **Why:** TikTok’s “Before/After” format (studio/tiktok-formats.md #3) still converts; lets us A/B test which structure the algo prefers **without new footage**.
+### 🎯 2. Fix YouTube Shorts Distribution (do before next post)
+- **Add to every Short:** `#shorts` in title, 3-5 specific tags in description (e.g. `#GTA6 #Lucia #GamingClips`), custom thumbnail frame (even if Shorts shelf doesn’t show it, it helps embed), **pinned comment with a question** (“What’s the first mission you’re running?”).
+- **Check:** YouTube Studio → Content → Analytics → “Shown in feed” %. If <10%, the algorithm isn’t testing — add stronger hook text overlay in first 0.5s.
 
-### 🎯 **Action 3 — Fix the YouTube Shorts “0 views” trap: add a pinned comment + community post**
-- **Pinned comment on today’s Short:** “Which diagnosis flip shocked you most? 👇 1) Mercury powder 2) [other Apothecary moment] 3) I need to watch this show”
-- **Community post (text + clip thumbnail):** “New Short: the exact second Maomao proves the court wrong. Sound on for the Radiohead drop 🎧” — drives notified subs (even 0) back to the Short, signalling retention.
+### 🎯 3. Pre-empt Apothecary Diaries S3 Trend (TikTok only, post **7-9pm EST**)
+- **Format:** “The Moment When…” (Format Watcher #1) — Maomao’s eyes widen → clue montage → realization gasp.
+- **Sound:** “the cure” — Olivia Rodrigo (rising on Last.fm, melancholy detective vibe). Cut on vocal entrance, sync clues to bars.
+- **Text:** **“THE MOMENT WHEN SHE REALIZED…”** → final beat on gasp. Tag `#ApothecaryDiaries #Maomao #AnimeEdit`.
+- **Length:** 34s (TikTok rewards needs 60s+ — extend final freeze/rewind to hit 60s minimum).
 
 ---
 
-## 3. One Risk to Fix — **Reused Content / Copyright Strike Exposure**
-**Evidence:** 19 YouTube Shorts, 45 TikToks — nearly all raw movie/anime/game clips with only music overlay. YouTube’s reused-content filter **will** demonetise/limit distribution at scale; TikTok’s “unoriginal content” throttle already explains the 18–44 view floor.
+## 3. One Risk to Fix: **Reused-Content Suppression + TikTok Length**
 
-**Fix this week (Claude + Owner):**
-1. **Every clip must have ≥1 transformative layer:** on-screen analysis text, voiceover insight, reaction face (owner iPhone selfie), or “POV” decision overlay (studio/tiktok-formats.md #2).
-2. **Keep any single source stretch ≤8s** (Director already enforces this — good).
-3. **Add “Commentary” or “Edit” to titles/tags** — signals transformative intent to reviewers.
-4. **Build 1 “face + clip” pilot this week:** Owner records 5s reaction to the Apothecary mercury reveal → Claude inserts as bookend. Tests if **your face + clip** beats **clip only** on distribution.
+- **YouTube:** 19 Shorts in 11 days, nearly all 0-4 views = classic reused-content signal. **Fix:** Every edit must have **transformative structure** (ranking, “moment when”, analysis voiceover, or clear commentary text). No raw clip + music only.
+- **TikTok:** Several videos 19-36s. **Creator Rewards requires 60s+.** Stretch every edit to ≥60s (loopable ending, slow-mo replay, bonus reaction beat).
 
 ---
 
 ## 4. One Metric to Watch This Week
-**YouTube Shorts: “Average Percentage Viewed” (APV) on the Apothecary clip.**  
-- Current baseline: unknown (views too low to show retention).  
-- Target: **>65% APV** on first 1,000 views.  
-- Why: APV >65% is the strongest signal for Shorts algorithm to push wider. If it’s <50%, the hook or pacing failed — we re-cut next week.
+
+**YouTube Shorts “Shown in Feed” % + Average View Duration (AVD)**  
+- Check daily in Studio → Analytics → Shorts.  
+- **Target:** Shown-in-feed >15% • AVD >50% (i.e. 20s+ on 35s video).  
+- If both stay low after 3 posts with fixes above → pivot format (add voiceover, ranking, or “how it was made” B-roll).
 
 ---
 
-## If You Haven’t Already — Set Up Today
-- [ ] **YouTube Studio → Analytics → Advanced Mode → “Shorts feed”** — bookmark the APV chart.
-- [ ] **TikTok Analytics → Content → “Average watch time”** — same metric.
-- [ ] **Linkme.bio** (studio/channels.json) — add the Apothecary Short URL + “Follow on TikTok” button so cross-platform traffic counts.
+## 5. Setup Checklist (if not done)
+- [ ] YouTube Studio access verified (owner + editor)
+- [ ] TikTok Creator Center → Creator Rewards page bookmarked
+- [ ] Link.me bio links to both channels + contact
+- [ ] Clip folder naming convention: `YYYY-MM-DD_source_platform_v#` (so Claude and owner stay synced)
 
 ---
 
-**Bottom line:** Today’s Apothecary clip is the best shot at a distribution breakout (active release window, low saturation, perfect “moment when” structure). Post it **twice on TikTok**,
+**Bottom line:** Today’s GTA VI clip is your best shot at a breakout. Post it with the fixes above, then immediately build the Apothecary Diaries “Moment When” for tonight. Measure feed % tomorrow morning — that’s your truth signal.

@@ -2,125 +2,96 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-## 1) “The moment when…” (story-order montage + label that lands on the beat)
-**What makes it work**
-- First 1–2 seconds: bold text “THE MOMENT WHEN…” + quick shot of the payoff.
-- Then 2–4 short story stretches (not full scenes), keeping momentum.
-- Ends on a “replay trigger” frame (impact / reveal / dramatic look).
-
-**Example (specific title)**
-- **Anime:** *The Apothecary Diaries* (Season 3)  
-  Cut: Maomao noticing a tiny detail → sudden realization → the calculated response (label the exact realization moment with the text).  
-  CTA text on screen: “THE MOMENT WHEN she realized the pattern…”
-
-**Source link (format examples)**
-- YouTube Shorts style example (anime): https://youtu.be/GeyidvgPxME  
-- YouTube Shorts style example (movie): https://youtu.be/UlltlStEWjM  
+## 1) “The Moment When…” (story-order micro-montage)
+- **What makes it work:** You don’t explain the whole plot—just label *one* turning point. Viewers stay for the reveal, then rewatch to catch the exact beat.
+- **How the studio could use it (specific title):**  
+  **Anime:** *The Apothecary Diaries* (Season 3)  
+  - Cut to 2–3 short clips that ladder tension → then the “moment when” Maomao realizes the truth / makes the decisive move.  
+  - On-screen text: **“THE MOMENT WHEN she realized…”** → hit the final reaction face with a hard bass beat.
+- **Source link:** Use Anilist for season tracking: https://anilist.co/anime/195516  
+- **Trending signal from your repo data:** *The Apothecary Diaries Season 3* is actively releasing right now (and has attention).
 
 ---
 
-## 2) “POV: …” overlays (you’re the character making the decision)
-**What makes it work**
-- POV text is readable + emotionally specific (“POV: you finally choose violence / mercy”).
-- Editing matches your “choices” with quick cuts (decision → consequence → reaction).
-- Works best with close-ups + fast UI-style captions.
-
-**Example (specific title)**
-- **Game:** *Grand Theft Auto VI*  
-  POV: “POV: you think it’s a clean getaway…”  
-  Cut: planning/slow pan → first gunshot/alarms → chase escalation → final escape attempt shot.
-
-**Source link (format examples)**
-- YouTube Shorts style example (movie POV-like captioning): https://youtu.be/ynED3mrBAKk  
-- YouTube Shorts style example (anime emotional captioning): https://youtu.be/DahwUlUbTn0  
+## 2) “Ranking edits” (1–5 / tiers: who’s strongest / coldest / smartest)
+- **What makes it work:** Rankings create “completion pressure” (“wait where does X go?”). Quick cuts between 5 contenders keeps retention high.
+- **How the studio could use it (specific title):**  
+  **Game:** *Grand Theft Auto VI*  
+  - Title on screen: **“TOP 5 MOST ‘WTF’ GTA VI Missions (so far)”** (only if your clips are from available material—don’t guess).  
+  - Template structure: 0.5s hook (“#1 is diabolical…”) → 4 fast entries → final entry ends with a loopable reaction shot.
+- **Source link:** Wikipedia most-read mention (as a reference point; release specifics may be out of date): https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI  
+- **Flag:** **Still strong**, but the *topic* matters—generic “best moments” without a fresh angle can fade.
 
 ---
 
-## 3) “Before/After” (two rapid timelines with a hard cut between states)
-**What makes it work**
-- Two clear states: **before** (setup, calm, disbelief) vs **after** (impact, transformation, revenge).
-- Visual “match cut” (same angle / same character position) so the audience instantly understands.
-- Text stays minimal: “BEFORE” and “AFTER” + 1 line conclusion.
-
-**Example (specific title)**
-- **Movie:** *Blade Runner 2099* (if you can find usable clips)  
-  Cut: “Before: doubt” (quiet observation) → “After: certainty” (weapon/choice beat).
-
-**Source link (format examples)**
-- YouTube Shorts style example (fast emotional transformation editing): https://youtu.be/qaWvSyLkYjQ  
-
-**Fading flag:** **Not fading yet**—this keeps working—but it’s *less effective* if the two states aren’t clearly different.
+## 3) Velocity / Impact Cuts (beat-synced, speed ramp + zoom punches)
+- **What makes it work:** Modern shorts win on *kinetic editing*: speed ramps, motion blur, zoom-to-impact, and sound hits that land exactly when the character strikes/dodges.
+- **How the studio could use it (specific title):**  
+  **Movie:** *John Wick: Chapter 4* (from your Shorts top list)  
+  - Build: reload → doorway → first takedown (tight).  
+  - Text overlay: **“He’s not even aiming…”** (keep it minimal).  
+  - Use 2–3 “unbroken” micro stretches (each 1–2s max), then cut hard on every punch.
+- **Source link:** YouTube Shorts example (same style category):  
+  https://youtu.be/FVyhRH9imHY  
+- **Flag:** **Not fading**—this style remains consistently rewarded.
 
 ---
 
-## 4) “Ranking: 3/5 best moments” (numbered cards + mini-arc per entry)
-**What makes it work**
-- Viewers binge: “#5… #4…” creates natural rewatch/scroll-stopping.
-- Each ranked entry is a self-contained mini-story (setup → beat → reaction).
-- Final entry ends with the “best” payoff.
-
-**Example (specific title)**
-- **Anime:** *Black Clover Season 2*  
-  “RANKED: 5 moments that prove Asta’s growth”  
-  Use 5 short clips across the arc (power-up / vow moment / big save / discipline moment / final win beat).
-
-**Source link (format examples)**
-- YouTube Shorts style example (ranking-energy pacing, numbers implied): https://youtu.be/UlltlStEWjM  
-
-**Fading flag:** Mildly **stable**. It can feel oversaturated, so keep the text fresh and avoid generic “top 10” padding.
+## 4) Side-by-side “Before / After” (same character: changed by 1 event)
+- **What makes it work:** Split-screen comparisons are instantly scannable. It also creates a satisfying “transformation payoff.”
+- **How the studio could use it (specific title):**  
+  **Anime:** *One Piece*  
+  - “Before/After” framing around a crew moment (e.g., confidence → chaos → resolve).  
+  - Split layout: left = hesitation panel; right = instant action panel.  
+  - End beat: right side freezes on the signature expression while left side replays 0.25x for the loop.
+- **Source link:** Anilist: https://anilist.co/anime/21  
+- **Flag:** **Slightly fading** in generic form, but *works again* if you tie it to a very specific event/character moment.
 
 ---
 
-## 5) “Side-by-side: character vs character” (A/B contrast with synced actions)
-**What makes it work**
-- The “contrast” is immediate: same moment type (fight, betrayal, reveal).
-- Split-screen + quick captions (“WHO HAD THE BETTER PLAN?”).
-- Great for comment farming: “Team A or Team B?”
-
-**Example (specific title)**
-- **Anime:** *One Piece*  
-  Side-by-side: two similar “resolve” moments from different crew members (use text like “Strategy” vs “Willpower”).
-
-**Source link (format examples)**
-- YouTube Shorts example category (contrast-driven edits): https://youtu.be/muC64zx_lBI  
-
-**Fading flag:** **Not fading**—but it’s only strong if you can match timing (same vibe/beat), otherwise it looks random.
+## 5) POV Text Overlays (“POV: you’re the one who…”)
+- **What makes it work:** POV captions sell the viewer’s imagination. Best when the text matches a visible action (not background exposition).
+- **How the studio could use it (specific title):**  
+  **Anime:** *Black Clover*  
+  - Clip ladder: magic charge → first clash → stunned realization.  
+  - On-screen captions (very short):  
+    - **“POV: you said ‘it’s over’…”**  
+    - **“(it wasn’t)”**  
+  - Final beat: quick rewind of the last slash + re-hit the caption.
+- **Source link:** Anilist: https://anilist.co/anime/97940  
+- **Flag:** **Fading if overused**, but stays effective when the POV is *scene-specific* and the text is minimal.
 
 ---
 
-## 6) “Template meme: reaction cut + caption punchline” (set up → cutaway → laugh)
-**What makes it work**
-- Uses familiar meme timing: exaggerate with text, then cut to the best facial reaction frame.
-- 0.5s hook: “WHEN YOU THINK YOU’RE READY…” then immediate reaction.
-- Best for anime facial expressions and game HUD chaos.
-
-**Example (specific title)**
-- **Anime:** *Jujutsu Kaisen* (if you have clips)  
-  Use “me vs me when…” style captions; cut to the strongest deadpan/panic expression after each line.
-
-**Source link (format examples)**
-- Meme/reaction energy example: https://youtu.be/lf2rzOMv7ZI  
-
-**Fading flag:** **Fading risk: medium-high** for meme-only edits. If there’s no story order or payoff beat, performance drops.
+## 6) Meme Template “Facts vs. Fiction” (caption cards over real scenes)
+- **What makes it work:** Fast alternating caption cards create rhythm: “They said X” → “Reality: Y”. Comment bait works (“true or cap?”) *without* needing dialogue quotes.
+- **How the studio could use it (specific title):**  
+  **Anime:** *Tokyo Revengers: War of the Three Titans Arc*  
+  - Template:  
+    - Card 1: **“They’ll change…”**  
+    - Card 2: **“Reality:”**  
+    - Card 3 (final): **“They always come back.”**  
+  - Use 3 quick cards over 3 matching reactions (anger → shock → determination).
+- **Source link:** Anilist: https://anilist.co/anime/178083  
+- **Flag:** **Moderately fading** if it becomes too text-heavy; keep it to 3 cards max.
 
 ---
 
-## 7) “Speed/velocity montage” (rapid build-ups with BPM-matched transitions)
-**What makes it work**
-- You feel escalation: early slow tension → then “velocity” with motion blur + match cuts.
-- Short unbroken stretches (keep each clip ~0.3–1.0s) to maintain kinetic feel.
-- Final beat is a “hard stop” (impact frame) before the clip ends.
-
-**Example (specific title)**
-- **Movie:** *The Hunger Games: Sunrise on the Reaping* (from the trending list)  
-  Cut: camera/torch/arena establishing shots → weapon readies → sprint/impact → final close-up on the decisive moment.
-
-**Source link (format examples)**
-- YouTube Shorts velocity/punch style example (fast, high-energy): https://youtu.be/ibtNEam8k-0  
-
-**Fading flag:** **Not fading**, but it’s strongest when you include at least one narrative “why it matters” caption.
+## 7) “Side quests / Hidden detail” micro-ditches (easter-egg cuts)
+- **What makes it work:** Short “teaser → reveal” structure (“you missed this”), plus zoom on the detail. People rewatch to verify.
+- **How the studio could use it (specific title):**  
+  **Game:** *Cyberpunk 2077* (has strong ongoing relevance; your Steam list mentions it)  
+  - Format: show normal moment → quick cut to an earlier frame → zoom on a symbol/NPC behavior → caption **“This is why it matters…”**  
+  - Final beat: loop back to the first frame with a small “now you see it” label.
+- **Source link:** Steam listing isn’t specific per item in your repo, so use a stable reference:  
+  https://en.wikipedia.org/wiki/Cyberpunk_2077 (only for general context; details can be out of date)
+- **Flag:** **Growing**, but depends on having a *real* visible detail in your footage (don’t invent).
 
 ---
 
-### Quick note on “source link”
-I’m using the **live-data you provided** (YouTube Shorts example links) because I don’t have direct access to TikTok trend pages right now. If you want, I can convert these into **exact posting scripts** (hook text, timestamps, on-screen captions) for MotionVault once you pick 2–3 target titles from your library.
+### Quick “fading” watchlist (from the typical short-form lifecycle)
+- **Fading risk (medium):** Generic **POV** + generic **Before/After** without a pinpoint event.
+- **Fading risk (low right now):** **Velocity/impact edits** + **Moment When** (these are resilient).
+- **Most likely to need freshness:** **Ranking** (must be tied to a current arc/episode/mission or it feels stale).
+
+If you want, tell me **which 2–3 titles MotionVault wants to prioritize today** (from your trending lists), and I’ll turn these into **exact 30–40s shot-by-shot outlines** (hook text, cut points, end loop beat, and caption styling).

@@ -2,29 +2,130 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-## TikTok‑Ready Fandom Buzz (Nov 27 2026)  
-*6‑8 titles, strongest first.  All info comes from the live‑data you supplied – no invented numbers.*
+## TikTok fandom radar (week of 2026-11-27 → live-data cut: 2026-11-28)
+Based on the repo’s **Google Trends + AniList + MAL + Steam + Twitch** snippets you provided (no true TikTok hashtag scraping included in the feed), I’m prioritizing fandoms that are clearly “buzzing” right now and are likely to have **high clip/Repost velocity**.
 
-| # | Title (movie / game / anime) | Why it’s hot **now** | Core hashtags (TikTok) | Clip‑worthy moment (30‑40 s) | Source link | Saturation? |
-|---|------------------------------|----------------------|------------------------|------------------------------|-------------|--------------|
-| 1 | **Grand Theft Auto VI** (game) | Wikipedia shows 123 k reads – the newest GTA entry just hit the “most‑read” list, and fans are flooding TikTok with reaction videos to the **official trailer** released two weeks ago. | `#GTA6`, `#GTA6Trailer`, `#GrandTheftAuto`, `#GamingNews` | **Trailer “Heist Reveal”** – 0:12‑0:25 (the massive downtown robbery) + 0:45‑0:58 (the surprise cameo). Keep the clip under 5 s per source, add on‑screen title credit. | https://www.youtube.com/watch?v=GTA6_trailer (official) | **High** – dozens of 15‑sec cuts already viral; still viable if you add a fresh spin (e.g., “What the *soundtrack* says about the story”). |
-| 2 | **Avengers: Doomsday** (movie) | Appears in Wikipedia’s “most‑read” list (75 k reads) and the **“Do You See Everything”** meme trend in the UK is surfacing around it. A teaser for the film’s **mid‑credits scene** leaked a few days ago and fans are dissecting it. | `#AvengersDoomsday`, `#MarvelTikTok`, `#DoYouSeeEverything`, `#MCU` | **Mid‑credits tease** – 1:02‑1:12 (the mysterious portal) + 1:45‑1:55 (the surprise hero silhouette). Use quick jump‑cuts to keep it “transformative”. | https://www.youtube.com/watch?v=AV_Doomsday_teaser (official) | **Medium** – many reaction clips, but a clean montage of *two* beats (hook + final beat) still stands out. |
-| 3 | **The Apothecary Diaries – Season 3** (anime) | Episode 10 airs 4 Dec; AniList shows a spike (117 k fans, trending score 634). Fans are posting **“first‑look” reaction** to the new love‑triangle reveal. | `#ApothecaryDiaries`, `#Anime2026`, `#Season3`, `#OtakuReaction` | **Scene: “Secret Letter Reveal”** – 03:14‑03:30 (the letter being read) → 03:45‑04:00 (the shocked expression). Keep the source < 4 s each, overlay text “What does this mean?” | https://www.crunchyroll.com/apothecary-diaries‑s3 (episode) | **Low** – still early in the release cycle; few TikToks yet. |
-| 4 | **Steel Ball Run – JoJo’s Bizarre Adventure (2nd‑3rd Stage)** (anime) | AniList trending score 437; episode 11 drops 4 Dec. The **“Stand‑Battle climax”** is already generating meme‑ready clips. | `#JoJo`, `#SteelBallRun`, `#AnimeClash`, `#StandPower` | **Battle: “Golden Spin Finish”** – 07:22‑07:38 (the final spin) → 07:45‑08:00 (opponent’s defeat). Use rapid cuts and add a “POW!” graphic for extra punch. | https://www.netflix.com/title/jojo‑steel‑ball‑run (episode) | **Medium** – many fans post 15‑s fight highlights; a 30‑s montage with a strong hook can cut through. |
-| 5 | **One Piece** (anime) | Still the top‑followed anime on MyAnimeList (2.75 M members). Episode 1181 (1 Jan 2027) is a **“Luffy’s New Gear”** tease that’s already leaking on TikTok as a “future‑spoiler” trend. | `#OnePiece`, `#LuffyGear`, `#Anime2026`, `#PirateLife` | **Gear reveal** – 02:10‑02:25 (Luffy’s silhouette) → 02:30‑02:45 (the flash of the new power). Keep each source ≤ 3 s, add bold on‑screen “NEW GEAR?” | https://www.funimation.com/shows/one-piece (episode preview) | **High** – thousands of short clips; you’ll need a twist (e.g., “What if Luffy’s power was a meme?”). |
-| 6 | **Overgeared** (anime) | Episode 10 airs 4 Dec; 82 k reads on Wikipedia. The **“Blacksmith’s Final Forge”** scene is getting repeated as a “skill‑up” meme. | `#Overgeared`, `#SkillUp`, `#AnimeEdit`, `#Fantasy` | **Forge climax** – 05:12‑05:28 (weapon glowing) → 05:35‑05:50 (hero’s reaction). Use a fast‑cut intro (first 2 s) that shows the glowing sword, then end on the hero’s shocked face for rewatch value. | https://www.crunchyroll.com/overgeared (episode) | **Low** – niche but growing; good low‑competition pick. |
-| 7 | **Grand Vista Hotel** (Steam new release) | New indie horror released this week; Steam’s “new releases” list shows it. Early TikTok users are posting **“first‑play jump‑scare”** clips. | `#GrandVistaHotel`, `#IndieHorror`, `#SteamGames`, `#ScareTok` | **Opening lobby scare** – 00:45‑01:00 (door creaks) → 01:05‑01:20 (ghost appears). Keep each clip ≤ 4 s, add a caption “Did you see that?” | https://store.steampowered.com/app/XXXX (store page) | **Very Low** – virtually no TikTok presence yet; high potential for early‑adopter virality. |
-| 8 | **Black Clover – Season 2** (anime) | Trending on MyAnimeList (185 k members) and AniList (114 k fans). Episode 9 (28 Nov) just aired with the **“Wizard King’s Secret Spell”** reveal. | `#BlackClover`, `#WizardKing`, `#AnimeMagic`, `#Season2` | **Spell reveal** – 04:20‑04:35 (spell incantation) → 04:40‑04:55 (explosive effect). Use a rapid hook (first 2 s of the incantation) then end on the explosion for that “wow” beat. | https://www.netflix.com/title/black‑clover‑s2 (episode) | **Medium** – some clips already out, but the spell moment is fresh enough for a new edit. |
+> **Important:** “source link” below is the best available link from your scanners (AniList/MAL pages). I *cannot* reliably provide TikTok hashtag lists from this dataset.
 
-### Quick Tips for Your 30‑40 s Montages
-1. **Hook (first 1‑2 s):** Show the most eye‑catching visual (e.g., glowing sword, portal, ghost). Add a bold on‑screen title (“NEW GEAR?”) to capture scroll‑stoppers.  
-2. **Story beat:** Stitch 2‑3 short cuts that keep the narrative flow (setup → climax → reaction). Keep each source ≤ 4 s to stay “transformative”.  
-3. **Final beat:** End on a surprise or strong reaction that makes viewers replay (e.g., a shocked face, a sudden sound effect).  
-4. **Credit:** Put the title on screen for ≤ 3 s (e.g., “Grand Theft Auto VI”) to satisfy copyright best‑practice.  
-5. **Hashtag stack:** Use the 3‑4 core tags above **plus** one generic tag (`#Shorts`, `#ViralEdit`) to broaden reach.  
+---
 
-### Oversaturation Warning
-- **GTA VI** and **One Piece** are already saturated with dozens of 15‑second cuts. To succeed, add a *unique angle* (e.g., overlay fan theories, sync to a trending song, or combine two unrelated beats).  
-- The other titles have low‑to‑medium competition, making them ideal for quick virality on a $0 budget.  
+# 1) One Piece (Anime) — **RELEASING / massive baseline**
+**Why fans care now:** AniList + MAL show it as actively releasing, with enormous, always-on posting volume.  
+**Most likely clip moment:** a **high-impact Straw Hat action beat** from the newest ep’s start/middle (fans post early for recaps). Pick the cleanest 1–2 sentence visual moment, then end on the **K.O./reveal**.  
+**3–4 hashtags (fan-typical):**
+- #onepiece  
+- #luffy  
+- #strawhats  
+- #anime  
+**Source link:** https://anilist.co/anime/21  
+**Oversaturated:** **Yes** (massive, constant posting)
 
-Happy clipping! 🚀
+---
+
+# 2) The Apothecary Diaries (Season 3) (Anime) — **NEW episodes**
+**Why fans care now:** AniList/MAL: **Season 3 releasing**, with an ep scheduled **2026-12-04**. This usually spikes clip volume right before/after new episode drops.  
+**Most likely clip moment:** “**detective-style observation → realization**” beat (the show lends itself to quick montage: close-ups of clues, then the sudden conclusion).  
+**Hashtags:**
+- #apothecarydiaries  
+- #maomao  
+- #anime  
+- #romance  
+**Source link:** https://anilist.co/anime/195516  
+**Oversaturated:** **Moderate** (smaller than One Piece, but still hot)
+
+---
+
+# 3) Steel Ball Run / JoJo (Anime) — **RELEASING**
+**Why fans care now:** AniList + MAL lists **Steel Ball Run (SBR)** as top airing right now with **ongoing episode momentum**; JoJo clips typically go viral via iconic poses/ability reads.  
+**Most likely clip moment:** any **stand/ability reveal** moment where the frame composition is loud (great for rewatch). Cut into a final beat of **“wait—THIS is the trick”**.  
+**Hashtags:**
+- #jojo  
+- #steelballrun  
+- #anime  
+- #jjba  
+**Source link:** https://anilist.co/anime/210482  
+**Oversaturated:** **Moderate** (huge community, but still less than One Piece)
+
+---
+
+# 4) Tokyo Revengers: War of the Three Titans Arc (Anime) — **RELEASING**
+**Why fans care now:** AniList shows it releasing with **ep 10 on 2026-12-04**. Revengers fandom posts heavily around **battle forecasts + “character moment” rage/hope edits**.  
+**Most likely clip moment:** **time-leap / resolve / “I can’t lose”** emotional beat—end with a stare or a vow shot so viewers rewatch to catch the transition.  
+**Hashtags:**
+- #tokyorevengers  
+- #anime  
+- #takemichi  
+- #revengers  
+**Source link:** https://anilist.co/anime/178083  
+**Oversaturated:** **Moderate**
+
+---
+
+# 5) Black Clover (Season 2) (Anime) — **NEW season momentum**
+**Why fans care now:** MAL lists **Black Clover Season 2** as top airing now; AniList shows **Black Clover** trending (even if “FINISHED” on one list, the season momentum is current per MAL).  
+**Most likely clip moment:** **spell ignition → power-up → montage of impacts** (this series edits extremely well; keep the stretch short and jump between clean hits).  
+**Hashtags:**
+- #blackclover  
+- #asta  
+- #yuno  
+- #anime  
+**Source link:** https://anilist.co/anime/97940  
+**Oversaturated:** **High** (big franchise, frequent reposts)
+
+---
+
+# 6) Cyberpunk: Edgerunners 2 (Anime) — **big fan crossover**
+**Why fans care now:** MAL shows **Cyberpunk: Edgerunners 2** as top followed, with substantial community interest. (I don’t have “this week” trailer/episode specifics from your data—so treat as “likely buzzing.”)  
+**Most likely clip moment:** a **street-level firefight + quick moral/identity beat** (Edgerunners-style cuts perform well: quick dread → punchy action → final emotional punch).  
+**Hashtags:**
+- #cyberpunk  
+- #edgerunners  
+- #anime  
+- #shorts  
+**Source link:** https://myanimelist.net/anime/61990 *(from your MAL list: Cyberpunk: Edgerunners 2)*  
+**Oversaturated:** **Moderate** (big mainstream base, but not as constant as JoJo/OP)
+
+---
+
+# 7) Overgeared (Anime) — **NEW episode window (11/29)**
+**Why fans care now:** AniList: **RELEASING**, ep **10 airs 2026-11-29**—this is “right around the corner,” so clip authors usually rush countdowns and “what to expect” edits.  
+**Most likely clip moment:** a **game/system explanation → character power spike** (fantasy + gamer logic = perfect for VO overlay/caption-driven hooks).  
+**Hashtags:**
+- #overgeared  
+- #isekai  
+- #anime  
+- #gamer  
+**Source link:** https://anilist.co/anime/212888  
+**Oversaturated:** **Low → Moderate** (good window to be early)
+
+---
+
+# 8) Black Clover / One Piece-level alternative: The Apothecary Diaries vs Firefly Wedding / Ramparts of Ice (Anime)
+If you want a **second cluster** that’s all “releasing soon” and likely to have fresh clip churn, pick from:
+- **Firefly Wedding** (AniList releasing, ep 9 on 2026-12-04): https://anilist.co/anime/205909  
+- **The Ramparts of Ice (S2)** (AniList releasing, ep 10 on 2026-12-03): https://anilist.co/anime/213805  
+
+**Oversaturated:** likely **lower than OP/JoJo**, but I can’t rank which is “most posted” without TikTok hashtag/volume feeds.
+
+---
+
+## Quick clip-spec (so Claude can cut fast)
+For each title above, ask for:
+- **Hook (first 1–2s):** punchy close-up / ability flash / vow line (no long setup).
+- **Narrative order:** at least one **clean 8–12s unbroken stretch** so it “feels like story,” not random clips.
+- **Final beat:** end on a **reveal + emotion** (viewers rewatch to decode what just happened).
+
+---
+
+## Game + movie notes (from your scanners)
+Your week-activity feed is **dominated by sports + GTA VI + music**, but you asked for **movie/game/anime fandoms** with “buzz.” From what’s present:
+- **Grand Theft Auto VI** (Twitch: top game by viewers) → fandom is extremely active, but **I can’t claim “this week” specific trailer/release** from your data alone. (Link source not provided by scanners.)
+- **No specific “this week” movie fandom spikes** are clearly indicated in the provided dataset; Wikipedia “most read” shows **Avengers: Doomsday** and **Blade Runner 2099**, but that’s search interest, not necessarily TikTok clip buzz.
+
+If you want, I can propose **3 GTA VI game clips** + **2 movie edit concepts** using *only* what’s supported (still without inventing release dates/quotes).
+
+--- 
+
+### Tell me your priority:
+1) Want **only anime** (best supported by scanners), or  
+2) Include **GTA VI + Avengers/Blade Runner** as “likely active,” but clearly marked as *inferred* from your data?

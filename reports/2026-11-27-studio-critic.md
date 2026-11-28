@@ -6,44 +6,44 @@
 
 ---
 
-## Clip 1: The Apothecary Diaries S3 — Ep 3 “Mercury Reveal”
+## Clip 1: GTA VI “Lucia & Jason” Diner Cutscene
 
-| Metric | Score | Why |
-|--------|-------|-----|
-| **Hook Strength** | 8/10 | Text slam on “cannot” + smug physician face = instant conflict. Promises a specific intellectual payoff. |
-| **Rewatch Value** | 6/10 | The diagnosis flip is genuine, but **12-second freeze hold (0:23–0:35) kills momentum**. Viewers swipe on static frames. The “Let Down” drum hit at 0:16 is well-synced, but the tail-out guitar note over a freeze is dead air. |
-| **Comment Bait** | 8/10 | Caption 3 (“smartest ‘it’s not poison, it’s ___’ moment”) and Caption 2 (“detail everyone missed”) both trigger “I caught it / I missed it” replies. |
-| **Copyright Risk** | 6/10 | ✅ Ep 1–9 aired, ≤8s stretches, credit on screen, transformative framing. ⚠️ **Radiohead “Let Down”** — Last.fm “rising” ≠ TikTok licensed. Business accounts get blocked on major-label tracks more often. |
-
-**One change that would most improve it:**  
-**Cut the 12s freeze. Replace 0:23–0:35 with a 3-clip micro-montage:** (1) physician’s hand trembling on teacup, (2) Maomao’s notebook snap shut (same angle as open), (3) wide court reaction — all on the guitar tail-out. End on the notebook snap **freeze-frame only (1.5s)** with the CTA text. Keeps the mic-drop without the swipe-away.
-
-**Drop?** No. Strong concept, fixable retention leak.
-
----
-
-## Clip 2: Black Clover S2 — Ep 9 “Wizard King Spell”
-
-| Metric | Score | Why |
-|--------|-------|-----|
-| **Hook Strength** | 5/10 | “BEFORE THE SPELL / AFTER THE KING” is clever **only if you know the Wizard King**. Cold viewers see “before/after” with no stakes. The plan truncates at “0” — I can’t score the actual hook visual. |
-| **Rewatch Value** | 6/10 | Spell transformation + enemy reaction is a proven loop. “505” chorus at 0:13 sync is solid. But **single-source stretch risk**: if the “overwhelmed → interruption → transformation” run is one unbroken 15s chunk from Ep 9, it’s not transformative enough. |
-| **Comment Bait** | 8/10 | Caption 3 (“which spell reveal made you replay 5×?”) is the strongest bait in the pack. Caption 1 (“Same stance. Different universe.”) invites duet/stitch comparison. |
-| **Copyright Risk** | **3/10** | 🚨 **Ep 9 airs Nov 28 (tomorrow). Today is Nov 27.** Cutting from an unaired episode = piracy risk, DMCA strike territory, and burns creator trust. Netflix/Crunchyroll source on unaired eps is a hard “do not ship.” |
+| Metric | Score | Notes |
+|--------|-------|-------|
+| Hook Strength | **9/10** | Spoken line “Trust me, I have a plan” is a perfect 1‑second verbal hook. |
+| Rewatch Value | **8/10** | Loopable rewind + beat-sync on instrumental drop drives replays. |
+| Comment Bait | **7/10** | “Which GTA protagonist had the best intro line?” works — easy, tribal. |
+| Copyright Risk | **3/10** | **Severe.** Rockstar/Take‑Two auto‑claim GTA VI footage aggressively; 22 s unbroken is a red flag. *Flower In A Hurricane* is major‑label (Justice/SZA/Tame Impala) — Content ID will hit. |
 
 **One change that would most improve it:**  
-**Swap the source to Ep 8 (already aired) or a prior Wizard King moment.** Rebuild the “before/after” around a **confirmed-aired** power-up. If no aired equivalent exists, **drop this clip today** and replace it.
+Break every “unbroken stretch” into **≤3‑second chunks** with **voiceover commentary or reaction overlay** (e.g., “Watch Lucia’s eyes — she’s already calculating the exit”). Transformative commentary is your only shield; raw gameplay montages get claimed or struck.
 
-**Drop?** **Yes — unless you have Ep 8 or earlier Wizard King footage that matches the beat structure.** Do not cut unaired content.
-
----
-
-## Clip 3: *Missing from provided plans*
-
-The Director’s note says “Today’s 3 Clips” and “Make order: 1 → 2 → 3” but only two cutting plans and caption packs are in the files. The third clip (likely **Cyberpunk: Edgerunners 2**, **GTA VI**, or **WoW** from trends.md) has no plan to review.
-
-**Recommendation:** Pull a third clip from **trends.md #1 (Cyberpunk: Edgerunners 2)** — the “realization → desperate reversal” beat maps to your best format, has aired source (AniList confirms S2 exists), and rides Black Friday gaming search traffic. Cut it in the **“The moment when…”** format with a **licensed/royalty-free soundalike** for the Radiohead slot.
+**Verdict:** **Keep, but only if you add transformative VO/text analysis throughout.** Without it, this gets claimed day one.
 
 ---
 
-## One-Line Verdict
+## Clip 2: One Piece “Luffy’s Sudden KO”
+
+| Metric | Score | Notes |
+|--------|-------|-------|
+| Hook Strength | **8/10** | Wide‑eyed “what?!” face is instant visual hook — no audio needed. |
+| Rewatch Value | **7/10** | Freeze‑frame rewind loop works, but less kinetic than GTA’s ramp hit. |
+| Comment Bait | **8/10** | “This vs Gear 5 first hit” taps a massive, ongoing fandom war. |
+| Copyright Risk | **2/10** | **Critical.** Toei Animation is the single most aggressive anime claimant. Even 1‑second clips trigger claims. “505” (Arctic Monkeys) = second claim layer. |
+
+**One change that would most improve it:**  
+**Drop the licensed music entirely.** Use the **original punch impact SFX + ambient battle sound** as your audio bed. Sync cuts to the *visual* impact frames, not a song. Removes one claim vector and keeps the kinetic “velocity edit” feel the format watcher recommends.
+
+**Verdict:** **Drop unless you have explicit permission or a licensed clip library.** Toei risk outweighs engagement.  
+**Instead:** Make a **“Top 5 Luffy Punches That Broke the Sound Barrier”** ranking edit (Format #2) using **only official trailer/promo frames** (Toei‑released) + original SFX + VO commentary. Safer, same fandom, fits the ranking format that’s still strong.
+
+---
+
+## Clip 3: The Apothecary Diaries S3 “The Moment Maomao Cracks the Case”
+
+| Metric | Score | Notes |
+|--------|-------|-------|
+| Hook Strength | **7/10** | “THE MOMENT WHEN…” text hook is format‑dependent; works but less visceral than a spoken line or shock face. |
+| Rewatch Value | **6/10** | Slow‑mo rewind to clue is clever but low kinetic energy; saves/shares > replays. |
+| Comment Bait | **6/10** | “Smallest clue that cracked a case?” is niche — saves, not mass comments. |
+| Copyright Risk | **4/10** | **High.** New season (Dec

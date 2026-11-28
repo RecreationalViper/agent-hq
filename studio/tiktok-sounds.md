@@ -2,81 +2,73 @@
 
 > ℹ️ Google Search was busy, so this is built from the live data and news feeds collected minutes before this run (links included).
 
-## Rising TikTok sounds to try (movie/game/anime edits) — **only what I can confirm from the data you provided**
+I can’t safely “find TikTok rising sounds” from Creative Center with the data you provided—your repo dump includes **Google Trends / Last.fm rising / YouTube top edits**, but **not TikTok Creative Center trending sound names + links**. Per your rule (“Skip anything you can't confirm”), I’ll only list items I can confirm from *this message*.
 
-⚠️ I **don’t have direct access** to TikTok Creative Center trending-page links in this run, and your “fresh scanners” output only includes **Last.fm “songs rising”** + YouTube/other popularity. So I **cannot fully confirm** “TikTok Creative Center says it’s trending” for specific sounds.  
-What I *can* do: use the **rising-now song list from Last.fm (provided)** as “likely trending on TikTok,” and flag anything that may be risky for business use.
+Below are **music candidates that are rising right now** (per **Last.fm**) and that **tend to work** for movie/game/anime edits. **Sound availability for Business accounts** is **not confirmable** from your data, so I mark it as **unknown**.
 
-### 1) “Creep” — Radiohead
-- **Why it’s rising (confirmed by your data):** very high/rising listeners on Last.fm list.
-- **Best edit type:** sad / slow-burn tension → bittersweet payoff
-- **Cut beat / drop:** start on the **first “Creep in” vocal entry**; then use the **first big chorus lift** for the rewatch moment.
-- **Works for:** anime character backstory reveals, “regret” montages, stealth-to-attack pivots in games.
-- **Possible business/account block?** Low risk (song is widely used), but always depends on the specific recording/rights on TikTok.
-- **Source link:** https://www.last.fm/music/Radiohead/_/Creep
+## Rising sound picks (confirmed “rising right now” via Last.fm)
 
-### 2) “Let Down” — Radiohead
-- **Why it’s rising (confirmed):** appears on your Last.fm rising list with strong listener count.
-- **Best edit type:** melancholic / regret / “everything goes wrong” montage
-- **Cut beat / drop:** sync the **first drum/beat entrance** and hit character reaction faces right on the **vocal phrasing downbeats**.
-- **Works for:** RPG party fallouts, villain monologues, “almost made it” game clips.
-- **Possible business/account block?** Similar to above—generally safe, but can vary by TikTok licensing.
-- **Source link:** https://www.last.fm/music/Radiohead/_/Let+Down
+1) **“the cure” — Olivia Rodrigo**  
+- **Why it’s rising:** Listed as one of Last.fm’s “Worldwide … rising right now” songs.  
+- **Best edit type:** **Sad / reflective** (hurt feelings, regret montages).  
+- **Cut on beat/drop:** Use the **main vocal entrance** (start montage on the first “the cure” phrase), then sync cuts to **every bar of the lyric**; for rewatch, finish on a **single close-up beat** right before the song’s strongest emotional lift.  
+- **Source link:** https://www.last.fm/music/Olivia+Rodrigo/_/the+cure  
+- **Business blocked risk:** **Unknown** (depends on TikTok licensing/claims).
 
-### 3) “505” — Arctic Monkeys
-- **Why it’s rising (confirmed):** in your Last.fm “rising now” list.
-- **Best edit type:** hype/tempo ramp (cool + confident) → final flex beat
-- **Cut beat / drop:** use the **first prominent hook/chorus section** to match a **weapon draw / dash / jump scare reveal**.
-- **Works for:** action escalations, speedrun-style edits, JoJo-style “momentum” edits.
-- **Possible business/account block?** Likely OK; still depends on track availability in TikTok’s library.
-- **Source link:** https://www.last.fm/music/Arctic+Monkeys/_/505
+2) **“D>E>A>T>H>M>E>T>A>L” — Panchiko**  
+- **Why it’s rising:** Included in Last.fm “Worldwide” rising list.  
+- **Best edit type:** **Hype / chaotic** (powers-ups, berserker sequences, “going too far” energy).  
+- **Cut on beat/drop:** Start with the **first punchy drum hit**, then do **rapid micro-cuts on the beat** during the most driving section; end the 30–40s with a **hard match cut** on the last big phrase.  
+- **Source link:** https://www.last.fm/music/Panchiko/_/D%3E%3EA%3ET%3EH%3EM%3EA%3EL  
+- **Business blocked risk:** **Unknown**.
 
-### 4) “My Moon My Man” — Feist
-- **Why it’s rising (confirmed):** listed among worldwide rising songs with high listeners.
-- **Best edit type:** soft emotional montage (tender, romantic, or “found family”)
-- **Cut beat / drop:** start right before a **lyric entry**, then do clean 0.5–1s scene swaps on each **phrase change**.
-- **Works for:** slower character-growth cuts, healing scenes, post-battle downtime (then snap back at the end).
-- **Possible business/account block?** Lower risk than niche tracks.
-- **Source link:** https://www.last.fm/music/Feist/_/My+Moon+My+Man
+3) **“stupid song” — Olivia Rodrigo**  
+- **Why it’s rising:** Listed in Last.fm “Worldwide” rising.  
+- **Best edit type:** **Funny-bitter** (petty revenge, comedic relationship drama, “I’m over it” montage with irony).  
+- **Cut on beat/drop:** Line cuts to **vocal syllables**; emphasize the **contrast beats** (soft line → quick slap/KO cut).  
+- **Source link:** https://www.last.fm/music/Olivia+Rodrigo/_/stupid+song  
+- **Business blocked risk:** **Unknown**.
 
-### 5) “Housewife” — Tate McRae
-- **Why it’s rising (confirmed):** included in your Last.fm rising list.
-- **Best edit type:** confident / funny-drama (sass + defiance)
-- **Cut beat / drop:** cut on the **first strong beat emphasis**; then keep edits tighter (0.25–0.5s) during the **main hook**.
-- **Works for:** “boss walks in” edits, petty revenge moments, comedic fails that still feel cool.
-- **Possible business/account block?** Pop tracks are usually available, but business licensing can vary.
-- **Source link:** https://www.last.fm/music/Tate+McRae/_/Housewife
+4) **“Earrings” — Malcolm Todd**  
+- **Why it’s rising:** Listed in Last.fm “Worldwide” rising.  
+- **Best edit type:** **Cool/romantic tension** or **smooth reveal** (plot reveal, stalking reveal, “quiet menace”).  
+- **Cut on beat/drop:** Start on the **first steady groove**; use **one-beat-lag match cuts** (character moves at the same time the kick lands). Build to a **final image beat** on the last chorus/vocal emphasis.  
+- **Source link:** https://www.last.fm/music/Malcolm+Todd/_/Earrings  
+- **Business blocked risk:** **Unknown**.
 
-### 6) “Earrings” — Malcolm Todd
-- **Why it’s rising (confirmed):** on your Last.fm rising list (Worldwide + US).
-- **Best edit type:** eerie-catchy / stylish (good for mystery builds)
-- **Cut beat / drop:** align transitions to **percussion hits** and do a **single longer source stretch** only right before the **hook peaks**.
-- **Works for:** “something’s off” edits, investigator reveals, crime anime beats.
-- **Possible business/account block?** Unsure—less mainstream than Radiohead/Arctic Monkeys; might be more licensing-variable.
-- **Source link:** https://www.last.fm/music/Malcolm+Todd/_/Earrings
+5) **“505” — Arctic Monkeys**  
+- **Why it’s rising:** Listed in Last.fm “Worldwide” rising.  
+- **Best edit type:** **Hype + swagger** (stand-offs, street fights, stylish entrances).  
+- **Cut on beat/drop:** Hit cuts on **guitar strums** and the **snare emphasis**; for rewatch, do a **tight loop ending** (final frame echoes the intro pose).  
+- **Source link:** https://www.last.fm/music/Arctic+Monkeys/_/505  
+- **Business blocked risk:** **Unknown**.
 
-### 7) “Nicole Kidman - ADÉLA” — ADÉLA
-- **Why it’s rising (confirmed):** appears in your Last.fm rising list (worldwide + US).
-- **Best edit type:** strange/funny + aesthetic (works great with stylized memes)
-- **Cut beat / drop:** use the **first recognizable melodic hit** for the hook, then keep a “plot punch” at ~0:20 with a scene swap.
-- **Works for:** anime reaction faces, game menu → cinematic cut transitions, “main character energy” moments.
-- **Possible business/account block?** Unknown; smaller artists sometimes get inconsistent availability.
-- **Source link:** https://www.last.fm/music/AD%C3%89LA/_/Nicole+Kidman+-+AD%C3%89LA
+6) **“Creep” — Radiohead**  
+- **Why it’s rising:** Listed in Last.fm “Worldwide” rising list (also US).  
+- **Best edit type:** **Creepy/sad dread** (villain stare-downs, stalking shots, betrayal).  
+- **Cut on beat/drop:** Start on the **first “creep” vocal** or the **first recognizable chord**; cut face reactions on **downbeats**. Finish on a **silence/hold frame** right after the last major vocal hit (people rewatch for the “break”).  
+- **Source link:** https://www.last.fm/music/Radiohead/_/Creep  
+- **Business blocked risk:** **Unknown**.
 
-### 8) “drop dead” — Olivia Rodrigo
-- **Why it’s rising (confirmed):** on your Last.fm rising list with very high listeners.
-- **Best edit type:** intense/fight-ending / hurt-turns-to-anger
-- **Cut beat / drop:** start on the **leading vocal intensity**; use the **big chorus/peak** for the “final beat” (the moment you want people to rewatch).
-- **Works for:** betrayal → comeback, final duel, character breaking point in anime.
-- **Possible business/account block?** Pop/label rights can be restrictive in some niches; but it’s also frequently used—still, **can vary**.
-- **Source link:** https://www.last.fm/music/Olivia+Rodrigo/_/drop+dead
+7) **“Everlong” — Foo Fighters**  
+- **Why it’s rising:** Listed in Last.fm “United States” rising list (and also present in Worldwide list excerpt you included).  
+- **Best edit type:** **Grief-to-resolve** (loss → determination).  
+- **Cut on beat/drop:** Use the **big melodic lift** moments for scene transitions; keep 2–3 **long unbroken story stretches** (your montage style) aligned to the song’s repeated hook sections.  
+- **Source link:** https://www.last.fm/music/Foo+Fighters/_/Everlong  
+- **Business blocked risk:** **Unknown**.
+
+8) **“Melatonin” — Tinashe**  
+- **Why it’s rising:** Listed in Last.fm “Worldwide” rising list.  
+- **Best edit type:** **Slow-mo reveal / late-night vibe** (mystery, stealth, “watch this” reveal).  
+- **Cut on beat/drop:** Start montage with a **slow, smooth sync** (no fast cuts for the first 3–5 seconds), then go punchier when the rhythm tightens; end with a **slow close-up on the final hook**.  
+- **Source link:** https://www.last.fm/music/Tinashe/_/Melatonin  
+- **Business blocked risk:** **Unknown**.
 
 ---
 
-### Quick note (so we don’t waste editor time)
-If you want, I can turn these into **8 specific 30–40s montage scripts** (hook timing + which story-order beats to keep) for:
-- **Movie**: (choose: John Wick / Hunger Games / Blade Runner 2099 / Avengers: Doomsday—only based on what appears in your “most-read” list)
-- **Game**: (choose your staples: GTA VI / Cyberpunk 2077 / CoD MW4 / Destiny-style, etc.)
-- **Anime**: (pick from your AniList “releasing now” list like *Overgeared* / *Apothecary Diaries S3* / *Tokyo Revengers arc* / *Ramparts of Ice S2*)
+### Quick note (so we don’t get burned)
+Because I don’t have **TikTok Creative Center “trending songs” + the actual sound pages/links** from your data, I **cannot confirm**:
+- that these exact tracks are *currently trending on TikTok* (only that they’re rising on Last.fm),
+- or whether they’re **blocked/claim-restricted** for **Business accounts**.
 
-Just tell me which **3 sources** you want to prioritize this round.
+If you paste (or export) the **TikTok Creative Center trending songs list + URLs** from the last 24h, I’ll re-run this and produce the exact **5–8 TikTok sounds with confirmed “why rising,” the exact beat/drop to cut on, and direct source links**.
