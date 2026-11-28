@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-27T23:35:39.418Z",
-  "date": "2026-11-27",
+  "generatedAt": "2026-11-28T08:06:41.208Z",
+  "date": "2026-11-28",
   "token": true,
   "searches": {
     "ran": 12,
@@ -9,32 +9,29 @@
     "unchanged": 0,
     "failed": 0
   },
-  "apiCalls": 21,
-  "rateRemaining": 8,
-  "newItems": 5,
+  "apiCalls": 19,
+  "rateRemaining": 9,
+  "newItems": 2,
   "blockedToday": 0,
   "shortlist": [
     {
-      "name": "opensetlabs/openset-llm",
-      "url": "https://github.com/opensetlabs/openset-llm",
-      "description": "Fast local LLM inference on plain CPUs. No GPU, 8 GB of RAM. OpenAI-compatible server.",
-      "stars": 2192,
-      "forks": 208,
+      "name": "NVIDIA-NeMo/Gym",
+      "url": "https://github.com/NVIDIA-NeMo/Gym",
+      "description": "Evaluate and improve AI agents: run agents on tasks, score every attempt, and use the results to optimize the agent or train the model",
+      "stars": 1364,
+      "forks": 492,
       "language": "Python",
-      "license": "MIT",
-      "pushedAt": "2026-11-27T21:44:57Z",
-      "category": "efficiency",
-      "score": 64,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-28T05:29:31Z",
+      "category": "enhancement",
+      "score": 60,
       "tier": "watch",
       "reasons": [
-        "2,192 stars",
+        "1,364 stars",
         "updated this week",
-        "MIT license",
-        "directly cuts AI spend"
+        "Apache-2.0 license"
       ],
-      "flags": [
-        "self-host-required"
-      ],
+      "flags": [],
       "skillFiles": null,
       "source": "search",
       "newborn": false,
@@ -42,131 +39,67 @@
       "commitUrl": null
     }
   ],
-  "watched": [],
-  "newborn": [
+  "watched": [
     {
-      "name": "DeadInternetStudios/100x-engineer-skill",
-      "url": "https://github.com/DeadInternetStudios/100x-engineer-skill",
-      "description": "100x is a skill by a former Cursor engineer that turns prompts into formally verified, production-ready code",
-      "stars": 799,
-      "forks": 116,
-      "language": "JavaScript",
-      "license": "MIT",
-      "pushedAt": "2026-11-27T23:28:12Z",
+      "name": "vercel/ai",
+      "url": "https://github.com/vercel/ai",
+      "description": "The AI Toolkit for TypeScript. From the creators of Next.js, the AI SDK is a free open-source library for building AI-powered applications and agents",
+      "stars": 28258,
+      "forks": 5738,
+      "language": "TypeScript",
+      "license": null,
+      "pushedAt": "2026-11-27T23:25:39Z",
       "category": "skills",
-      "score": 82,
+      "score": 86,
       "tier": "watch",
       "reasons": [
-        "filed under skills",
-        "799 stars",
+        "new skill file: skills/add-guideline/SKILL.md",
+        "28,258 stars",
         "updated this week",
-        "MIT license",
-        "new repo, 5 days old",
-        "early traction",
+        "first-party / well-known maintainer",
         "contains SKILL.md skill files"
       ],
       "flags": [
-        "newborn"
+        "no-license"
       ],
       "skillFiles": true,
-      "source": "search",
-      "newborn": true,
-      "skillPath": null,
-      "commitUrl": null
-    },
-    {
-      "name": "sergiobanhos/generate-icons",
-      "url": "https://github.com/sergiobanhos/generate-icons",
-      "description": "Agent skill that draws an original icon library matching your design system (React, Vue, Svelte, React Native, SVG).",
-      "stars": 173,
-      "forks": 12,
-      "language": "Python",
-      "license": "MIT",
-      "pushedAt": "2026-11-26T12:22:40Z",
-      "category": "skills",
-      "score": 77,
-      "tier": "watch",
-      "reasons": [
-        "filed under skills",
-        "173 stars",
-        "updated this week",
-        "MIT license",
-        "new repo, 1 day old",
-        "early traction",
-        "contains SKILL.md skill files"
-      ],
-      "flags": [
-        "newborn"
-      ],
-      "skillFiles": true,
-      "source": "search",
-      "newborn": true,
-      "skillPath": null,
-      "commitUrl": null
-    },
-    {
-      "name": "Moh4696/inkworks-skill",
-      "url": "https://github.com/Moh4696/inkworks-skill",
-      "description": "Inkworks: an agent skill for interactive 3D how-it-works pages drawn like an engineering sheet.",
-      "stars": 536,
-      "forks": 54,
-      "language": "JavaScript",
-      "license": "MIT",
-      "pushedAt": "2026-11-25T13:53:35Z",
-      "category": "skills",
-      "score": 76,
-      "tier": "watch",
-      "reasons": [
-        "filed under skills",
-        "536 stars",
-        "updated this week",
-        "MIT license",
-        "new repo, 3 days old",
-        "early traction"
-      ],
-      "flags": [
-        "newborn"
-      ],
-      "skillFiles": null,
-      "source": "search",
-      "newborn": true,
-      "skillPath": null,
-      "commitUrl": null
+      "source": "watched",
+      "newborn": false,
+      "skillPath": "skills/add-guideline/SKILL.md",
+      "commitUrl": "https://github.com/vercel/ai/commits/71aa4dd03a840c9a98bc7426402a96fb9fe147c2"
     }
   ],
+  "newborn": [],
   "byCategory": {
     "skills": [],
-    "enhancement": [],
-    "free-tokens": [],
-    "efficiency": [
+    "enhancement": [
       {
-        "name": "opensetlabs/openset-llm",
-        "url": "https://github.com/opensetlabs/openset-llm",
-        "description": "Fast local LLM inference on plain CPUs. No GPU, 8 GB of RAM. OpenAI-compatible server.",
-        "stars": 2192,
-        "forks": 208,
+        "name": "NVIDIA-NeMo/Gym",
+        "url": "https://github.com/NVIDIA-NeMo/Gym",
+        "description": "Evaluate and improve AI agents: run agents on tasks, score every attempt, and use the results to optimize the agent or train the model",
+        "stars": 1364,
+        "forks": 492,
         "language": "Python",
-        "license": "MIT",
-        "pushedAt": "2026-11-27T21:44:57Z",
-        "category": "efficiency",
-        "score": 64,
+        "license": "Apache-2.0",
+        "pushedAt": "2026-11-28T05:29:31Z",
+        "category": "enhancement",
+        "score": 60,
         "tier": "watch",
         "reasons": [
-          "2,192 stars",
+          "1,364 stars",
           "updated this week",
-          "MIT license",
-          "directly cuts AI spend"
+          "Apache-2.0 license"
         ],
-        "flags": [
-          "self-host-required"
-        ],
+        "flags": [],
         "skillFiles": null,
         "source": "search",
         "newborn": false,
         "skillPath": null,
         "commitUrl": null
       }
-    ]
+    ],
+    "free-tokens": [],
+    "efficiency": []
   },
   "blocked": [],
   "watching": [
@@ -215,6 +148,6 @@
   ],
   "watchedRepos": {
     "ran": 3,
-    "newSkillFiles": 0
+    "newSkillFiles": 1
   }
 }
