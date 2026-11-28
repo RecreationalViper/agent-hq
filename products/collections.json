@@ -203,6 +203,33 @@
       "previewUrl": "https://foreverheld.pages.dev/img/a-life/tonight-kit.jpg",
       "live": "2026-11-27",
       "blurb": "When the service is close: a one-page program, an 8 x 10 welcome sign and memory cards to print tonight."
+    },
+    {
+      "id": "new-2027-A",
+      "name": "Forever in My Heart",
+      "status": "concept",
+      "audience": "Valentine's remembrance for someone grieving a spouse or partner",
+      "suggestedPrice": "$8.99",
+      "preview": "products/concepts/new-2027/concept-A-forever-in-my-heart.jpg",
+      "note": "concept shown to owner 2026-11-27; not approved"
+    },
+    {
+      "id": "new-2027-B",
+      "name": "Service of Remembrance",
+      "status": "concept",
+      "audience": "Churches, hospices and funeral homes holding a yearly memorial service",
+      "suggestedPrice": "$14.99",
+      "preview": "products/concepts/new-2027/concept-B-service-of-remembrance.jpg",
+      "note": "concept shown to owner 2026-11-27; not approved"
+    },
+    {
+      "id": "new-2027-C",
+      "name": "Birthday in Heaven",
+      "status": "concept",
+      "audience": "Families marking a birthday in heaven or the anniversary of a passing",
+      "suggestedPrice": "$6.99",
+      "preview": "products/concepts/new-2027/concept-C-birthday-in-heaven.jpg",
+      "note": "concept shown to owner 2026-11-27; not approved"
     }
   ],
   "promos": [
