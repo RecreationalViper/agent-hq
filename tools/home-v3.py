@@ -7,23 +7,34 @@ import site_chrome as SC
 
 STORE = SC.STORE
 SOFT_BUY = "https://payhip.com/b/vqNSA"
+# The featured (hero) product: A Life, read from products/collections.json so price/link stay true.
+_ev = {p["c"]["id"]: p["c"] for p in SC.evergreen_products()}
+LIFE, TONIGHT = _ev.get("a-life"), _ev.get("a-life-tonight")
+MAIN_BUY = LIFE["checkout"] if LIFE else SOFT_BUY
+MAIN_CTA = f'Get A Life · {LIFE["price"]}' if LIFE else "Get the suite · $12.99"
+A = "img/a-life/pieces/"
 hol = {p["url"]: p for p in SC.holiday_products()}
 price = lambda page, fallback: hol[page]["price"] if page in hol else fallback
 P = "img/holiday/pages/"
 
 SETS = [  # name, label, kinds, tint, link, price, (back-left, back-right, front), alt
+    *([("A Life", "Funeral & celebration of life", "funeral", "#3a2f2a", "try-a-life.html", LIFE["price"], (A + "sign.jpg", A + "card.jpg", A + "cover.jpg"), "A Life magazine-style memorial suite: program cover, welcome sign and memory card")] if LIFE else []),
+    *([("A Life Tonight Kit", "Program, sign & card tonight", "funeral", "#2e2a26", "try-a-life.html#tonight", TONIGHT["price"], (A + "sign8x10.jpg", A + "card.jpg", A + "onepage.jpg"), "A Life Tonight Kit: one-page program, 8 x 10 welcome sign and memory card")] if TONIGHT else []),
     ("Soft Botanical", "Funeral & celebration of life", "funeral", "#414c39", SOFT_BUY, "$12.99", ("img/welcome-sign.png", "img/memory-card.png", "img/program-cover.png"), "Soft Botanical suite: funeral program, welcome sign and memory card"),
     ("Harvest Table", "Thanksgiving", "holiday", "#5e3718", "harvest-table.html", price("harvest-table.html", "$7.99"), (P + "h-card.jpg", P + "h-place.jpg", P + "h-sign.jpg"), "Harvest Table Thanksgiving set: empty-chair sign, thankful cards, place cards"),
     ("Evergreen & Candlelight", "Christmas", "holiday", "#1f3d2c", "evergreen-candlelight.html", price("evergreen-candlelight.html", "$8.99"), (P + "e-card.jpg", P + "e-orn.jpg", P + "e-sign.jpg"), "Evergreen and Candlelight Christmas set: candle sign, memory cards, ornament cards"),
     ("Longest Night", "Blue Christmas service", "holiday church", "#2c3366", "longest-night.html", price("longest-night.html", "$9.99"), (P + "l-card.jpg", P + "l-prog1.jpg", P + "l-sign.jpg"), "Longest Night service set: program, table sign, candle-lighting cards"),
 ]
 LOOKS = [  # key, name, dot color, stage color, link, price, (sign, pages, keepsake)
+    *([("life", "A Life", "#8e2f25", "#2a2320", "try-a-life.html", LIFE["price"], (A + "sign.jpg", A + "story.jpg", A + "card.jpg"))] if LIFE else []),
     ("sage", "Soft Botanical", "#b9cba7", "#2c3527", SOFT_BUY, "$12.99", ("img/welcome-sign.png", "img/program-cover.png", "img/memory-card.png")),
-    ("harvest", "Harvest Table", "#d8914f", "#3d2514", "harvest-table.html", SETS[1][5], (P + "h-sign.jpg", P + "h-cards.jpg", P + "h-place.jpg")),
-    ("pine", "Evergreen & Candlelight", "#3f7d5c", "#14281e", "evergreen-candlelight.html", SETS[2][5], (P + "e-sign.jpg", P + "e-card.jpg", P + "e-orn.jpg")),
-    ("dusk", "Longest Night", "#8a8fd0", "#1c2244", "longest-night.html", SETS[3][5], (P + "l-sign.jpg", P + "l-prog1.jpg", P + "l-card.jpg")),
+    ("harvest", "Harvest Table", "#d8914f", "#3d2514", "harvest-table.html", price("harvest-table.html", "$7.99"), (P + "h-sign.jpg", P + "h-cards.jpg", P + "h-place.jpg")),
+    ("pine", "Evergreen & Candlelight", "#3f7d5c", "#14281e", "evergreen-candlelight.html", price("evergreen-candlelight.html", "$8.99"), (P + "e-sign.jpg", P + "e-card.jpg", P + "e-orn.jpg")),
+    ("dusk", "Longest Night", "#8a8fd0", "#1c2244", "longest-night.html", price("longest-night.html", "$9.99"), (P + "l-sign.jpg", P + "l-prog1.jpg", P + "l-card.jpg")),
 ]
 ARROW = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
+
+SETS = [x for x in SETS if not x[4].endswith(".html") or x[4].startswith("try-a-life") or x[4] in hol]
 
 def cards():
     out = []
@@ -36,7 +47,7 @@ def cards():
 
 def looks():
     imgs = "".join(f'<img data-look="{k}" data-step="{s}" src="{src}" alt="" loading="lazy">' for k, *_r, pieces in LOOKS for s, src in enumerate(pieces))
-    btns = "".join(f'<button type="button" aria-pressed="false" data-look="{k}" data-name="{H.escape(n)}" data-bg="{bg}" data-href="{href}" data-price="{pr}" style="--c:{dot}" aria-label="{H.escape(n)}"><i></i><span>{H.escape(n.split(" ")[0])}</span></button>' for k, n, dot, bg, href, pr, _p in LOOKS)
+    btns = "".join(f'<button type="button" aria-pressed="false" data-look="{k}" data-name="{H.escape(n)}" data-bg="{bg}" data-href="{href}" data-price="{pr}" style="--c:{dot}" aria-label="{H.escape(n)}"><i></i><span>{H.escape(n if n == "A Life" else n.split(" ")[0])}</span></button>' for k, n, dot, bg, href, pr, _p in LOOKS)
     return imgs, btns
 
 # isometric sheet figures: P(u,v) = O + u*U + v*V
@@ -55,6 +66,7 @@ FIG1 = fig(["", line(.2, .8, .3) + line(.2, .8, .45) + line(.2, .6, .6), line(.2
 FIG2 = fig([line(.15, .85, .5), line(.15, .85, .35) + line(.15, .85, .65), '<path class="hot" d="M%s %s L%s %s L%s %s L%s %sZ"/>' % (*pt(.1, .1), *pt(.9, .1), *pt(.9, .9), *pt(.1, .9)) + line(.25, .75, .5)])
 FIG3 = fig(["", ring(.5, .5, .3), ring(.5, .42, .2, "hot") + line(.3, .7, .78) + '<circle class="hotf" cx="%.1f" cy="%.1f" r="2.4"/>' % pt(.5, .42)])
 
+NUMW = {2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven"}
 IMGS, BTNS = looks()
 PAGE = f'''<!doctype html>
 <html lang="en">
@@ -91,7 +103,8 @@ PAGE = f'''<!doctype html>
     <p class="crumb"><b>✳</b> Forever Held / 01 <span>Memorial printables</span></p>
     <h1>Everything for the service, <em>ready tonight.</em></h1>
     <p class="lead">Funeral programs, welcome signs and memory cards you fill in on your phone and print today. Nothing to ship. Nothing to learn.</p>
-    <div class="ctas"><a class="btn amber" href="{SOFT_BUY}">Get the suite · $12.99</a><a class="btn" href="#collections">See the collections</a></div>
+    <div class="ctas"><a class="btn amber" href="{MAIN_BUY}">{MAIN_CTA}</a><a class="btn" href="try-a-life.html">Try it free with their name</a></div>
+    {f'<p class="lead" style="font-size:15px;margin-top:14px">New: <a href="try-a-life.html" style="color:inherit">A Life</a>, the memorial program made like a magazine. Need it tonight? <a href="try-a-life.html#tonight" style="color:inherit">Tonight Kit · {TONIGHT["price"]}</a></p>' if LIFE and TONIGHT else ''}
     <div class="composer">
       <p class="tag"><span class="fh-orb" aria-hidden="true"></span>Ask our assistant anything</p>
       <form><textarea rows="1" maxlength="600" aria-label="Ask our assistant a question" placeholder="Ask a question…"></textarea><button type="submit" aria-label="Ask">{ARROW}</button></form>
@@ -130,7 +143,7 @@ PAGE = f'''<!doctype html>
 </div></section>
 
 <section class="block" id="looks" aria-labelledby="looks-h"><div class="wrap">
-  <div class="sec-head"><p class="crumb"><b>✳</b> Forever Held / 05 <span>Every look</span></p><h2 id="looks-h">Three kinds of keepsake, <em>four looks.</em></h2></div>
+  <div class="sec-head"><p class="crumb"><b>✳</b> Forever Held / 05 <span>Every look</span></p><h2 id="looks-h">Three kinds of keepsake, <em>{NUMW.get(len(LOOKS), str(len(LOOKS)))} looks.</em></h2></div>
   <div class="story">
     <div class="story-steps">
       <div class="on"><b>01 / SIGN</b><h3>A sign that says their name</h3><p>Welcome signs and table signs, from 8 × 10 in up to 24 × 36 in. Type the name, the dates and your own words.</p></div>
@@ -166,14 +179,14 @@ PAGE = f'''<!doctype html>
 <section class="final" aria-labelledby="final-h"><div class="wrap">
   <h2 id="final-h">For the day <em>you say goodbye.</em></h2>
   <p class="lead">Not ready yet? Our free planning checklist walks you through it, one gentle step at a time.</p>
-  <div class="ctas"><a class="btn amber" href="{SOFT_BUY}">Get the suite · $12.99</a><a class="btn" href="{SC.CHECKLIST}">Free planning checklist</a></div>
+  <div class="ctas"><a class="btn amber" href="{MAIN_BUY}">{MAIN_CTA}</a><a class="btn" href="{SC.CHECKLIST}">Free planning checklist</a></div>
 </div></section>
 </main>
 
 <footer class="v3f"><div class="wrap">
   <div class="cols">
     <div><a class="brand" href="#top" style="color:var(--ink)"><img src="brand/mark.svg" alt="">Forever Held</a><p style="margin-top:12px;max-width:24em">Printable keepsakes for families saying goodbye. Previews show the real files you receive.</p></div>
-    <div><h4>Shop</h4><a href="{SOFT_BUY}">Soft Botanical suite</a><a href="harvest-table.html">Harvest Table</a><a href="evergreen-candlelight.html">Evergreen &amp; Candlelight</a><a href="longest-night.html">Longest Night</a><a href="{SC.CHECKLIST}">Free planning checklist</a></div>
+    <div><h4>Shop</h4>{'<a href="try-a-life.html">A Life</a><a href="try-a-life.html#tonight">A Life Tonight Kit</a>' if LIFE else ''}<a href="{SOFT_BUY}">Soft Botanical suite</a><a href="harvest-table.html">Harvest Table</a><a href="evergreen-candlelight.html">Evergreen &amp; Candlelight</a><a href="longest-night.html">Longest Night</a><a href="{SC.CHECKLIST}">Free planning checklist</a></div>
     <div><h4>Help</h4><a href="guides.html">Planning guides</a><a href="contact.html">Contact us</a><a href="about.html">About us</a><a href="terms.html">Terms of sale</a><a href="refunds.html">Refund policy</a><a href="privacy.html">Privacy policy</a><a href="accessibility.html">Accessibility</a></div>
   </div>
   <p class="legal"><span>© 2026 Forever Held</span><span>Secure checkout by Payhip</span></p>
